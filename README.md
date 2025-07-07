@@ -2,7 +2,7 @@
 
 ## Overview
 
-[Provide a brief overview of your project here. Describe its purpose, goals, and any key features.]
+Chatbot workshop demonstrating usage of CWA
 
 ## Prerequisites
 
@@ -37,19 +37,6 @@ Before you begin, ensure you have met the following requirements:
 
 ## Usage
 
-[Explain how to use your project. Provide examples or code snippets if applicable.]
-
-## Contributing
-
-[Explain how others can contribute to your project. This might include information on:]
-
-*   Reporting bugs
-*   Suggesting enhancements
-*   Submitting pull requests
-
-## License
-
-[Specify the license for your project, e.g., MIT, Apache 2.0, GPLv3. If you don't have one, consider adding one.]
 
 ## Shoulders of Giants
 Context Window Architecture would not be possible if not for all of the great research, development, and thought leadership of others. Please see [SHOULDERS.md](SHOULDERS.md) to see a list of them.
