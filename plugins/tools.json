@@ -1,0 +1,38 @@
+[
+    {
+        "type": "function",
+        "function": {
+            "name": "add_user_info_to_database",
+            "description": "Update the user's information in the database",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "user_id": {"type": "string", "description": "Google OAuth user ID"},
+                    "email": {"type": "string", "description": "User's email address"},
+                    "name": {"type": "string", "description": "User's full name"},
+                    "given_name": {"type": "string", "description": "User's given/first name"},
+                    "family_name": {"type": "string", "description": "User's family/last name"},
+                    "picture": {"type": "string", "description": "URL to user's profile picture"},
+                    "verified_email": {"type": "boolean", "description": "Whether the email is verified"}
+                }
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "search_chat_history",
+            "description": "Search through the user's chat history for relevant information",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "search_term": {
+                        "type": "string",
+                        "description": "The term or phrase to search for in the chat history"
+                    }
+                },
+                "required": ["search_term"]
+            }
+        }
+    }
+]

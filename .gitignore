@@ -1,0 +1,8 @@
+.cursor
+.env
+.idea
+
+db
+tmp
+
+**/__pycache__
