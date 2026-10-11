@@ -83,6 +83,8 @@ Two drafts to write, in [drafts/](drafts/):
 - [case-addition.md](drafts/case-addition.md): the pull request description for the case from Lab A. A worked draft is there; make it yours or tighten it. The maintainer's three questions: what gap does it close, what does it say about the rule as written, what did every listed assembler do with it.
 - [spec-change.md](drafts/spec-change.md): a change proposal in the spec-change template. The worked example proposes allowing an object for a profile's `evaluation.result`, which W4 and W6 found cannot hold a suite's result without flattening it to a string. It is written to be argued with, and the last section argues with it. Then write your own, for something a module of this repository made you want to change.
 
+When the drafts are ready, `uv run upstream.py --into <your fork of the specification>` copies the case into that checkout's `conformance/cases/` and prints the remaining steps: the checker, the generator move, the `CHANGES.md` bullet, the listed assemblers, the signed commit. It never touches git.
+
 **Checkpoint 4.** The two drafts, and the thing from this repository you would propose first.
 
 ## What is here
@@ -91,6 +93,7 @@ Two drafts to write, in [drafts/](drafts/):
 generate.py       the table and the derivation: writes cases/conflict-tiebreak-not-permitted/
 verify.py         the reference passes, the uncovered defect fails, first difference printed
 spec_check.py     the spec sibling copied to scratch with the case added, conformance/check.py run over it
+upstream.py       the case copied into a specification checkout of yours, with the pull request's remaining steps printed
 cases/            the generated case: case.json, snapshot.json, expected.trace.json (no payload: a refusal)
 drafts/           the pull request description and the spec-change proposal
 tests/            the committed case is current, valid, passed by the reference, failed by the defect, and not covered by the corpus
