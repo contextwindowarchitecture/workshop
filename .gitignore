@@ -10,3 +10,9 @@ node_modules/
 .idea/
 .cursor/
 tmp/
+
+# Local AI tool configuration, never committed
+.codex/
+.mcp.json
+.serena/
+.claude/

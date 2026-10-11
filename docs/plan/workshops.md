@@ -418,7 +418,7 @@ Open:
 ## 8. Build order
 
 1. Done. Restructure: legacy deleted, layout created, `shared/` tooling and vendored contract, `docs/setup.md`, CI, W0 written with worksheet and run sheet.
-2. W0, then W1. Together these are the half-day tutorial and the one-week-out talk material.
+2. Done. W0, then W1. Together these are the half-day tutorial and the one-week-out talk material.
 3. W2 and W9 module A, since every later lab needs producers.
 4. W3a, then W4, W5. At this point the "migrate your app" one-day offering exists.
 5. W6, W7, then the first capstone (C2, the support router, is closest to Fernway).

@@ -1,0 +1,25 @@
+[project]
+name = "cwa-workshop-01-cwa-tour"
+version = "0.1.0"
+description = "W1. The CWA tour: planes, slots, snapshot, trace"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+dependencies = [
+    "contextwindowarchitecture-assembler",
+]
+
+[tool.uv]
+package = false
+
+# The assembler is a draft release on GitHub, not yet on PyPI. Pinned to the tag shared/contract/pins.json names, so
+# `uv sync` is all a participant runs.
+[tool.uv.sources]
+contextwindowarchitecture-assembler = { git = "https://github.com/contextwindowarchitecture/assembler-python", tag = "draft-release" }
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

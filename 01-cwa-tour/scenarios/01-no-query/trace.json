@@ -1,0 +1,266 @@
+{
+  "profile": {
+    "id": "policy-first-chat",
+    "version": 1
+  },
+  "budget": {
+    "input": 8192,
+    "reserved_output": 1200,
+    "margin_percent": 15
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "required_slot_missing"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "illustrative/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "82ffec72168e6b8e2f437c83f2fb0d7522a067118b045c0a0bdf1985a878742b"
+  },
+  "defaults_filled": [
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "variants"
+    },
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "lineage"
+    },
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "variants"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "lineage"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "mem:plan-purchase",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "mem:plan-purchase",
+      "field": "variants"
+    },
+    {
+      "item_id": "mem:plan-purchase",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "mem:plan-purchase",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "variants"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "lineage"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "variants"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "lineage"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "variants"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "lineage"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "variants"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "lineage"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "injection_risk"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "variants"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "lineage"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "variants"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "lineage"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "turn:16",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "turn:16",
+      "field": "variants"
+    },
+    {
+      "item_id": "turn:16",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "turn:16",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "turn:17",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "turn:17",
+      "field": "variants"
+    },
+    {
+      "item_id": "turn:17",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "turn:17",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "variants"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "lineage"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "injection_risk"
+    }
+  ]
+}

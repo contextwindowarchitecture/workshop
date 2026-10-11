@@ -1,0 +1,405 @@
+{
+  "assembly_time": "2026-09-22T12:00:00Z",
+  "scope": {
+    "tenant": "northwind",
+    "user": "u_91",
+    "session": "s_7",
+    "task": "refund_request"
+  },
+  "budget": {
+    "input": 8192,
+    "reserved_output": 1200,
+    "margin_percent": 15
+  },
+  "profile": {
+    "spec": "cwa/draft",
+    "id": "policy-first-chat",
+    "version": 1,
+    "route": "support-chat",
+    "model_family": null,
+    "route_policy_version": "illustrative/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "system"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:user_profile"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence"
+      },
+      {
+        "slot": "state.task",
+        "wrap": "xml:task"
+      },
+      {
+        "slot": "interaction.memory",
+        "wrap": "xml:memory"
+      },
+      {
+        "slot": "interaction.history",
+        "wrap": "xml:history"
+      },
+      {
+        "slot": "governance.capabilities",
+        "wrap": "tools"
+      },
+      {
+        "slot": "evidence.tool_results",
+        "wrap": "xml:observation"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "xml:examples"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:format"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  "route_policy": {
+    "route": "support-chat",
+    "version": "illustrative/v1",
+    "clock_skew_seconds": 5,
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions",
+          "governance.examples",
+          "governance.output_contract"
+        ]
+      },
+      "capability-policy": {
+        "kind": "capability_policy",
+        "slots": [
+          "governance.capabilities"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.user",
+          "state.task"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "crm-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "state.user": {
+        "max_age_seconds": 300,
+        "required_scope": [
+          "tenant",
+          "user"
+        ]
+      },
+      "state.task": {
+        "max_age_seconds": 300,
+        "required_scope": [
+          "tenant",
+          "task"
+        ]
+      },
+      "evidence.knowledge": {
+        "min_relevance": 0.5,
+        "max_age_seconds": 7776000,
+        "required_scope": [
+          "tenant"
+        ],
+        "dedupe": "exact",
+        "max_per_source": 3
+      },
+      "evidence.tool_results": {
+        "supersede": "source"
+      },
+      "interaction.memory": {
+        "source_prefix": "turn:",
+        "required_scope": [
+          "tenant",
+          "user"
+        ]
+      }
+    }
+  },
+  "tokenizer": "estimate-utf8/v1",
+  "renderer": "cwa-messages/v1",
+  "batches": [
+    {
+      "producer": {
+        "id": "capability-policy",
+        "kind": "capability_policy"
+      },
+      "items": [
+        {
+          "id": "tool:issue_refund",
+          "slot": "governance.capabilities",
+          "source": "capability-policy:support-chat",
+          "source_version": "v3",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "{\"name\": \"issue_refund\", \"parameters\": {\"order_id\": \"string\", \"amount\": \"number\"}}",
+          "injection_risk": "none"
+        },
+        {
+          "id": "tool:lookup_order",
+          "slot": "governance.capabilities",
+          "source": "capability-policy:support-chat",
+          "source_version": "v3",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "{\"name\": \"lookup_order\", \"parameters\": {\"order_id\": \"string\"}}",
+          "injection_risk": "none"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "conversation",
+        "kind": "interaction"
+      },
+      "items": [
+        {
+          "id": "turn:16",
+          "slot": "interaction.history",
+          "source": "turn:16",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:58:10Z",
+          "body": "Is my order refundable?",
+          "lineage": "verbatim",
+          "injection_risk": "untrusted_content"
+        },
+        {
+          "id": "turn:17",
+          "slot": "interaction.history",
+          "source": "turn:17",
+          "source_version": "1",
+          "authority": "untrusted",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:58:40Z",
+          "body": "Let me check order 8821.",
+          "lineage": "generated",
+          "injection_risk": "untrusted_content"
+        },
+        {
+          "id": "turn:18",
+          "slot": "interaction.query",
+          "source": "turn:18",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:50Z",
+          "body": "Can you just process it now?",
+          "lineage": "verbatim",
+          "injection_risk": "untrusted_content"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "crm-mcp",
+        "kind": "mcp"
+      },
+      "items": [
+        {
+          "id": "obs:order-8821",
+          "slot": "evidence.tool_results",
+          "source": "crm:orders/8821",
+          "source_version": "rev-41",
+          "authority": "observation",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "{\"order_id\": \"8821\", \"total\": 240, \"days_since_purchase\": 12}",
+          "injection_risk": "untrusted_content"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "memory-svc",
+        "kind": "memory"
+      },
+      "items": [
+        {
+          "id": "mem:plan-purchase",
+          "slot": "interaction.memory",
+          "source": "turn:4",
+          "source_version": "1",
+          "authority": "generated",
+          "trust": "unverified",
+          "freshness": "2026-09-20T09:12:00Z",
+          "body": "User bought Pro in March, EU billing.",
+          "lineage": "summarised",
+          "injection_risk": "untrusted_content",
+          "expires": "2026-12-20T09:12:00Z",
+          "scope": {
+            "tenant": "northwind",
+            "user": "u_91"
+          }
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-corpus",
+        "kind": "retrieval"
+      },
+      "items": [
+        {
+          "id": "billing-faq:v3#p1",
+          "slot": "evidence.knowledge",
+          "source": "kb/billing-faq",
+          "source_version": "v3",
+          "authority": "reference_only",
+          "trust": "verified",
+          "freshness": "2026-08-02T10:00:00Z",
+          "body": "Refunds return to the original payment method.",
+          "relevance": 0.71,
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "northwind"
+          }
+        },
+        {
+          "id": "refunds-eu:v17#p4",
+          "slot": "evidence.knowledge",
+          "source": "kb/refunds-eu",
+          "source_version": "v17",
+          "authority": "reference_only",
+          "trust": "verified",
+          "freshness": "2026-09-10T08:00:00Z",
+          "body": "Pro plans refund in full within 30 days of purchase.",
+          "relevance": 0.93,
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "northwind"
+          }
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-registry",
+        "kind": "policy"
+      },
+      "items": [
+        {
+          "id": "format:chat",
+          "slot": "governance.output_contract",
+          "source": "policy-registry:support-chat",
+          "source_version": "v12",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Max 3 sentences. No bullet lists.",
+          "injection_risk": "none"
+        },
+        {
+          "id": "policy:v12",
+          "slot": "governance.instructions",
+          "source": "policy-registry:support-chat",
+          "source_version": "v12",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "You are Ada, a support agent for Northwind.\nNever quote prices you cannot verify with a tool.",
+          "injection_risk": "none"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "state-svc",
+        "kind": "state"
+      },
+      "items": [
+        {
+          "id": "task:refund_request",
+          "slot": "state.task",
+          "source": "state-svc:task",
+          "source_version": "7",
+          "authority": "state",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:40Z",
+          "body": "refund_request: verify_eligibility=done, issue=pending",
+          "scope": {
+            "tenant": "northwind",
+            "task": "refund_request"
+          }
+        },
+        {
+          "id": "user:profile",
+          "slot": "state.user",
+          "source": "state-svc:user",
+          "source_version": "31",
+          "authority": "state",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:40Z",
+          "body": "plan=pro; region=EU; tone=concise",
+          "scope": {
+            "tenant": "northwind",
+            "user": "u_91"
+          }
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "conflicts": [],
+  "capabilities": {
+    "policy_producer": "capability-policy",
+    "allow_list_version": "v3",
+    "allowed_ids": [
+      "tool:issue_refund",
+      "tool:lookup_order"
+    ]
+  }
+}

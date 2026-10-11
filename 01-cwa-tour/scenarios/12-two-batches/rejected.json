@@ -1,0 +1,6 @@
+{
+  "rejected": true,
+  "problems": [
+    "producer ids appear in more than one batch: conversation"
+  ]
+}
