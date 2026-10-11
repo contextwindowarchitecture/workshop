@@ -1,6 +1,6 @@
 # W3a run sheet
 
-Module: [03-integration/README.md](../../03-integration/README.md). A full day self-paced; six hours instructor-led; pairs with W1 as the one-day "migrate your app" offering when participants have done W2 beforehand. Model-free; no siblings; `uv sync` installs the assembler and the OpenAI SDK only.
+Module: [03-integration/README.md](../../03-integration/README.md). A full day self-paced; six hours instructor-led; pairs with W1 as the one-day "migrate your app" offering when participants have done W2 beforehand, which is also its conference cut: W1's tour in the morning and parts 1 to 3 of this module in the afternoon, the guards and the lock left as homework. Model-free; no siblings; `uv sync` installs the assembler and the OpenAI SDK only.
 
 ## Timing, instructor-led
 

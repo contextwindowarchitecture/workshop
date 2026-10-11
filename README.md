@@ -72,7 +72,7 @@ shared/siblings.py, shared/tools/    sibling resolution, vendoring, lint, scenar
 
 - [contextwindowarchitecture](https://github.com/contextwindowarchitecture/contextwindowarchitecture): the specification, its schemas, contract and conformance cases.
 - [examples](https://github.com/contextwindowarchitecture/examples): Fernway, before and after CWA, from a help-center bot to a production-shaped agent. The workshops build on it and link to it; the two repositories stay independent.
-- [assembler-demo](https://github.com/contextwindowarchitecture/assembler-demo): the inspector and the four assemblers compared on the same bytes.
+- [assembler-demo](https://github.com/contextwindowarchitecture/assembler-demo): the inspector and the four assemblers compared on the same bytes. [docs/assemblers.md](docs/assemblers.md) says what changes in each module when the application is TypeScript, Go or Rust.
 - [website](https://github.com/contextwindowarchitecture/website): the pages W0 and W6 use.
 
 ## Shoulders of giants

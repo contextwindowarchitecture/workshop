@@ -409,11 +409,12 @@ Decided:
 12. The restructure started: the legacy tree is deleted, the layout exists, W0 is written, and the shared tooling runs.
 13. The kata fork tracks `draft-release` for now. The general rule is the current release, never a branch, for every pin in this repository.
 14. The blueprint rewrites happen here, under `capstones/`.
+15. The kata's defect manifest lives in this repository, at `08-assembler-kata/defects/`, with `kata.py` as the injector; the participant tree (`work/`) is rebuilt from the sibling at its pin and is never committed. Recorded 2026-10-11, after the kata had been regenerated this way through the build. A private branch of the reference assembler would tie the kata to that repository's history for no gain.
+16. The other-language call-outs the language decision deferred are one page, [docs/assemblers.md](../assemblers.md): the four ports side by side and what changes per module. It is updated in the same commit as any pin move.
 
 Open:
 
-1. **Examples repo linkage.** The lightest link is a "Workshops" section in the examples README and the pointer each workshop README already carries. Anything heavier is left for later.
-2. **Kata defect authoring.** Defects are injected by a script kept outside the participant tree so the kata can be regenerated after each re-vendor; the script's home (this repo or a private branch of the reference assembler) is undecided.
+1. **Examples repo linkage.** The lightest link is a "Workshops" section in the examples README and the pointer each workshop README already carries. Anything heavier is left for later. This is a change to the `examples` repository.
 
 ## 8. Build order
 

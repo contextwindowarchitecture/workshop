@@ -4,7 +4,7 @@ Half a day. For the owners of a host system that already decides who may speak: 
 
 The worked example is [fullsend](https://github.com/contextwindowarchitecture/integrations/tree/main/fullsend), autonomous SDLC agents on Git forges, as the `integrations` repository prototypes it in Go. Today a fullsend agent starts from one prompt, "Run the agent task", and reads the issue thread itself with `gh`: a maintainer's comment, a drive-by's comment, the bot's own earlier comment and an instruction hidden in an HTML comment all arrive in one tool result. The integration moves that reading before the sandbox starts, into producers, and assembles a briefing. Repository permission decides who is `user` in the thread and whose words are evidence; the wording decides nothing.
 
-This module ports the triage briefing's producers to Python and proves the port by digest: the snapshot you freeze has the digest the Go integration committed, and the Python assembler renders the same payload bytes assembler-go did. Then it uses two of the Go integration's review scenarios for the two things a host must do with a trace: score it, and act on a refusal.
+This module ports the triage briefing's producers to Python and proves the port by digest ([docs/assemblers.md](../../docs/assemblers.md) on why the record is language-neutral): the snapshot you freeze has the digest the Go integration committed, and the Python assembler renders the same payload bytes assembler-go did. Then it uses two of the Go integration's review scenarios for the two things a host must do with a trace: score it, and act on a refusal.
 
 ## What you leave with
 

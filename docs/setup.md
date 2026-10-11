@@ -60,6 +60,10 @@ python3 shared/tools/vendor_contract.py              # re-vendor from the siblin
 
 Re-vendor only on purpose, from a clean checkout, with a changelog line, because a contract change can change what a lab's committed scenarios expect.
 
+## 3a. Other languages
+
+The labs are Python. [assemblers.md](assemblers.md) lays the four assemblers side by side and says, module by module, what changes when the application is TypeScript, Go or Rust: the record and the outcomes never do.
+
 ## 4. The model, when you want one
 
 Copy `.env.example` to `.env` at the repository root and fill in an OpenAI-compatible endpoint. With no `.env`, every lab prints the request it would have sent instead of sending it. See [providers/openai-compatible.md](providers/openai-compatible.md) for Ollama, vLLM, omlx, LM Studio, llama.cpp and hosted gateways.

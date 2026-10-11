@@ -12,7 +12,7 @@ Conference cut (two hours): parts 1 and 2 with the first four defects.
 
 ## The form
 
-Four assemblers exist, in Python, TypeScript, Go and Rust, and all pass the published cases. The goal of this module is not a fifth; it is contributors to the four. So the kata is a repair: a copy of the Python reference with ten one-line defects injected, each in a different stage, each breaking at least one published conformance case. You find each by reading the case and the normative text, fix it, and prove the fix with the report. Nothing here is a toy: the copy is the real assembler, the cases are the real cases, and the discipline is the port's own `AGENTS.md`.
+Four assemblers exist, in Python, TypeScript, Go and Rust, and all pass the published cases ([docs/assemblers.md](../docs/assemblers.md) lays them side by side). The goal of this module is not a fifth; it is contributors to the four. So the kata is a repair: a copy of the Python reference with ten one-line defects injected, each in a different stage, each breaking at least one published conformance case. You find each by reading the case and the normative text, fix it, and prove the fix with the report. Nothing here is a toy: the copy is the real assembler, the cases are the real cases, and the discipline is the port's own `AGENTS.md`.
 
 ```sh
 python3 kata.py build        # copy the sibling at its pin into work/, inject, install

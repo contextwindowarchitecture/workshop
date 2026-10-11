@@ -4,7 +4,7 @@ Half a day, self-paced, model-free. You leave able to put any assembler behind t
 
 ## Before you start
 
-- Python 3.12 or later and [uv](https://docs.astral.sh/uv/). `uv sync` installs the reference assembler. No sibling is needed for the lab; the four-way agreement at the end needs `assembler-demo` built.
+- Python 3.12 or later and [uv](https://docs.astral.sh/uv/). `uv sync` installs the reference assembler. No sibling is needed for the lab; the four-way agreement at the end needs `assembler-demo` built. Each port's adapter command is in [docs/assemblers.md](../../docs/assemblers.md).
 - W1. W8 helps: this is the protocol the kata's runner used.
 - Open [worksheet.md](worksheet.md) beside this file.
 

@@ -23,7 +23,7 @@ The specification's own example snapshot, rendered under both renderers, and ref
 
 ## Part 1. Read the reference (20 minutes)
 
-Read [solution/provider.py](solution/provider.py) for the OpenAI-compatible mapping and for `to_anthropic_request()`, the same payload for the Messages API with a cache breakpoint placed on a block boundary. Then:
+The same mapping exists in JavaScript in `assembler-demo/src/provider/` and in Go in fullsend's `handoff.go` ([docs/assemblers.md](../../docs/assemblers.md)). Read [solution/provider.py](solution/provider.py) for the OpenAI-compatible mapping and for `to_anthropic_request()`, the same payload for the Messages API with a cache breakpoint placed on a block boundary. Then:
 
 ```sh
 uv run send.py

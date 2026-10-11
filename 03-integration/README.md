@@ -8,7 +8,7 @@ A full day, self-paced, model-free. You leave with an application you migrated y
 - W1 and W2. W9 module A helps: the producers you wrote there are the ones this application needs.
 - Open [MIGRATION.md](MIGRATION.md), the six steps you follow, and [inventory.md](inventory.md), the worksheet.
 
-This is W3a. W3b, the framework seams, is the [seams/](seams/) module in this directory: it builds on this application and proves, with recording models, that each framework hands the model exactly the payload. One-day offering: W1 in the morning, W3a in the afternoon; W3b is the half day after.
+In another language, the same migration uses that language's port under the names in [docs/assemblers.md](../docs/assemblers.md); the seams and the guards do not move. This is W3a. W3b, the framework seams, is the [seams/](seams/) module in this directory: it builds on this application and proves, with recording models, that each framework hands the model exactly the payload. One-day offering: W1 in the morning, W3a in the afternoon; W3b is the half day after.
 
 ## The application
 
