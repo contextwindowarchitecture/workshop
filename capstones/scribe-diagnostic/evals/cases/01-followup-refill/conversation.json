@@ -1,0 +1,39 @@
+{
+  "encounter": "enc_9001",
+  "clinician": "dr_lee",
+  "session": "s_c1_01",
+  "asked_at": "2026-10-02T09:04:00Z",
+  "turns": [
+    {
+      "speaker": "clinician",
+      "text": "Good morning Rosa, how have you been since the last visit?",
+      "at": "2026-10-02T09:01:00Z"
+    },
+    {
+      "speaker": "patient",
+      "text": "Mostly fine. I have been more thirsty than usual and I get up at night to pass urine.",
+      "at": "2026-10-02T09:01:30Z"
+    },
+    {
+      "speaker": "clinician",
+      "text": "How is the metformin going, any stomach upset?",
+      "at": "2026-10-02T09:02:00Z"
+    },
+    {
+      "speaker": "patient",
+      "text": "No problems, I take it with breakfast and dinner. I am nearly out and need a refill.",
+      "at": "2026-10-02T09:02:30Z"
+    },
+    {
+      "speaker": "clinician",
+      "text": "We will sort the refill. Your blood pressure today reads better than at the intake.",
+      "at": "2026-10-02T09:03:00Z"
+    },
+    {
+      "speaker": "patient",
+      "text": "I started walking every evening after dinner.",
+      "at": "2026-10-02T09:03:30Z"
+    }
+  ],
+  "question": "Draft the SOAP note for this visit and queue the metformin refill."
+}

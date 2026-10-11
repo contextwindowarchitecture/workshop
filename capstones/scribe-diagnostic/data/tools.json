@@ -1,0 +1,13 @@
+{
+  "_comment": "The EHR system's tool specifications, as its integration proposes them. Proposals are not grants: the capability policy decides which reach the model, by the clinician's role (R-15).",
+  "server": "harbor-ehr",
+  "version": "ehr-tools/2026.09",
+  "tools": [
+    { "name": "order_prescription_refill", "description": "Queue a refill of an existing prescription for the clinician to sign.",
+      "input_schema": { "type": "object", "properties": { "patient": { "type": "string" }, "medication": { "type": "string" }, "dose": { "type": "string" } }, "required": ["patient", "medication", "dose"], "additionalProperties": false } },
+    { "name": "add_chart_note", "description": "File the drafted note to the encounter for clinician review.",
+      "input_schema": { "type": "object", "properties": { "encounter": { "type": "string" }, "note_type": { "type": "string", "enum": ["soap", "nursing"] } }, "required": ["encounter", "note_type"], "additionalProperties": false } },
+    { "name": "order_controlled_substance", "description": "Create a new controlled-substance prescription.",
+      "input_schema": { "type": "object", "properties": { "patient": { "type": "string" }, "medication": { "type": "string" }, "dose": { "type": "string" } }, "required": ["patient", "medication", "dose"], "additionalProperties": false } }
+  ]
+}

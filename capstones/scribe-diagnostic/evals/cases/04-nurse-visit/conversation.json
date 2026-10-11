@@ -1,0 +1,24 @@
+{
+  "encounter": "enc_9002",
+  "clinician": "rn_okafor",
+  "session": "s_c1_04",
+  "asked_at": "2026-10-09T14:06:00Z",
+  "turns": [
+    {
+      "speaker": "clinician",
+      "text": "Hello Rosa, I am Chidi, just a blood pressure check today.",
+      "at": "2026-10-09T14:01:00Z"
+    },
+    {
+      "speaker": "patient",
+      "text": "Hello. I have been walking every day and I feel calmer than last time.",
+      "at": "2026-10-09T14:01:30Z"
+    },
+    {
+      "speaker": "clinician",
+      "text": "Sit back for a few minutes and we will take it again.",
+      "at": "2026-10-09T14:02:00Z"
+    }
+  ],
+  "question": "Draft the SOAP note for this nurse visit."
+}

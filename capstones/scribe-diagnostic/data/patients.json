@@ -1,0 +1,10 @@
+{
+  "_comment": "Fictional patients of Harbor Street Family Practice. The chart is the system of record the application writes into state.task; nothing here is real.",
+  "patients": {
+    "p_2001": { "name": "Rosa Delgado", "age": 58, "sex": "F", "problems": ["type 2 diabetes mellitus (2021)", "hypertension"],
+                "medications": [{"name": "metformin", "dose": "500 mg", "frequency": "twice daily", "status": "active", "last_filled": "2026-07-03"}],
+                "allergies": ["penicillin (rash)"], "labs": [{"name": "HbA1c", "value": "7.4%", "at": "2026-09-15"}, {"name": "eGFR", "value": "78 mL/min", "at": "2026-09-15"}],
+                "version": 12 },
+    "p_2002": { "name": "Daniel Mbeki", "age": 34, "sex": "M", "problems": [], "medications": [], "allergies": [], "labs": [], "version": 3 }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_comment": "Prior encounter notes per patient, oldest first: what earlier clinicians wrote, stored by the EHR. They are memory about the patient, not state: fallible, expiring, with a hand-written summary as the precomputed variant (R-18). A note that records a vital asserts vitals.bp, so the application can declare a conflict with today's telemetry.",
+  "notes": [
+    { "id": "note:p_2001:0001", "patient": "p_2001", "author": "dr_lee", "at": "2026-03-12T10:20:00Z", "encounter": "enc_8801",
+      "summary": "March 2026 review: diabetes stable on metformin, foot and eye checks done, no complications.",
+      "text": "Routine diabetes review with Rosa Delgado. HbA1c 7.1% in February. Continues metformin 500 mg twice daily with good tolerance; no hypoglycaemia reported. Annual foot examination normal, monofilament intact bilaterally; retinal screening March 2026 reported no retinopathy. Discussed carbohydrate distribution across meals and encouraged regular walking. Plan: continue current therapy, repeat HbA1c in six months, annual labs in September." },
+    { "id": "note:p_2001:0002", "patient": "p_2001", "author": "rn_okafor", "at": "2026-09-28T09:05:00Z", "encounter": "enc_8990", "fact": "vitals.bp",
+      "summary": "Intake 28 September: BP 150/95 at nurse intake, patient anxious after a rushed arrival; recheck requested at next visit.",
+      "text": "Nurse intake for Rosa Delgado ahead of the October follow-up. Blood pressure 150/95 measured once, seated, after the patient arrived hurried and reported feeling anxious about parking. Heart rate 88. Patient declined a repeat reading because she was late for work. Advised that the reading be repeated at the next visit before any change to treatment. Medication list reconciled: metformin 500 mg twice daily, no new medicines, no over-the-counter products." },
+    { "id": "note:p_2001:0003", "patient": "p_2001", "author": "dr_lee", "at": "2026-09-15T15:40:00Z", "encounter": "enc_8975",
+      "summary": "September labs: HbA1c 7.4%, eGFR 78; metformin dose unchanged pending follow-up.",
+      "text": "Phone call to Rosa Delgado with September results. HbA1c has risen from 7.1% to 7.4%; eGFR 78 mL/min, stable; lipids within target. Discussed that the rise is modest and that the follow-up visit in October will review diet, activity and whether the metformin dose should increase. No change made today. Patient reports no side effects." },
+    { "id": "note:p_2002:0001", "patient": "p_2002", "author": "dr_lee", "at": "2025-11-04T16:00:00Z", "encounter": "enc_8120",
+      "summary": "November 2025: travel vaccinations given, no chronic conditions, no regular medicines.",
+      "text": "Daniel Mbeki attended for travel vaccinations before a trip to Kenya. No chronic conditions, no regular medicines, no known drug allergies. Hepatitis A and typhoid vaccines administered without reaction. Malaria prophylaxis discussed and prescribed as a one-off course." },
+    { "id": "note:p_2001:0004", "patient": "p_2001", "author": "dr_lee", "at": "2025-06-02T09:00:00Z", "encounter": "enc_7320",
+      "summary": "June 2025: discussed statin; patient declined for now.",
+      "text": "Discussed lipid results with Rosa Delgado and the option of a statin given diabetes. Patient wished to try dietary change first and declined for now; to revisit in a year." }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "subjective": "Nurse visit for blood pressure check. Patient reports daily walking and feeling calmer than at the September intake.",
+  "objective": "BP 132/84, HR 70, SpO2 98%, temperature 36.6 C from the room monitor after five minutes seated.",
+  "assessment": "Blood pressure improved from the unconfirmed 150/95 intake reading; just above the 130/80 target for a patient with diabetes.",
+  "plan": "Continue lifestyle measures and home readings for two weeks; record today's reading beside the unconfirmed intake reading with both dates, for physician review at the next visit [guide:hypertension-followup@4#1]. No medication changes: nurse visit.",
+  "citations": [
+    "guide:hypertension-followup@4#1"
+  ],
+  "actions": [
+    {
+      "tool": "add_chart_note",
+      "arguments": {
+        "encounter": "enc_9002",
+        "note_type": "nursing"
+      }
+    }
+  ]
+}

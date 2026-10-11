@@ -1,0 +1,20 @@
+{
+  "route": "consult",
+  "attempts": [
+    "small",
+    "large"
+  ],
+  "first_refusal": "protected_content_over_budget",
+  "guards_pass": true,
+  "outcome_in": [
+    "answered"
+  ],
+  "must_cite_any": [
+    "guide:acute-pharyngitis@5#1"
+  ],
+  "trace": {
+    "source_diversity_cap": [
+      "guide:acute-pharyngitis@5#2"
+    ]
+  }
+}

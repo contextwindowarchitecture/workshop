@@ -1,0 +1,29 @@
+{
+  "_comment": "Readings from the room's vitals monitor, read by the application at freeze time. The reading asserts the fact vitals.bp; the route puts telemetry first in precedence for it. A reading older than the route's max_age_seconds (300) is excluded stale_state: the monitor must be read at freeze time.",
+  "readings": {
+    "enc_9001": {
+      "device": "spot-vitals-3",
+      "at": "2026-10-02T09:02:00Z",
+      "bp": "128/82",
+      "hr": 72,
+      "spo2": 98,
+      "temp_c": 36.7
+    },
+    "enc_9002": {
+      "device": "spot-vitals-1",
+      "at": "2026-10-09T14:04:00Z",
+      "bp": "132/84",
+      "hr": 70,
+      "spo2": 98,
+      "temp_c": 36.6
+    },
+    "enc_9003": {
+      "device": "spot-vitals-2",
+      "at": "2026-10-03T11:34:00Z",
+      "bp": "118/74",
+      "hr": 96,
+      "spo2": 97,
+      "temp_c": 38.4
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "clinicians": {
+    "dr_lee": { "name": "Dr. Hana Lee", "role": "physician", "prescriber": true, "licence": "MD-44120", "version": 2 },
+    "rn_okafor": { "name": "Chidi Okafor", "role": "nurse", "prescriber": false, "licence": "RN-90871", "version": 1 }
+  }
+}

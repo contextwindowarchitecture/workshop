@@ -1,0 +1,9 @@
+{
+  "route": "scribe",
+  "failing_guard": "prescription_guard",
+  "reply_is_fallback": true,
+  "outcome_in": [
+    "needs_clinician_review"
+  ],
+  "actions_queued": []
+}

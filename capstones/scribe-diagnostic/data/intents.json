@@ -1,0 +1,8 @@
+{
+  "_comment": "The pre-assembly scorer the blueprint called 'Jev' is, in this kit, deterministic keyword rules run by the application before assembly. A classifier model can replace them behind the same contract: text in, a route id out, computed before the snapshot is frozen (R-18, R-23). Rules are checked in order; the first route with a hit wins; no hit means consult.",
+  "routes": {
+    "scribe": ["draft the", "soap note", "write up", "document the visit", "note for this"],
+    "consult": ["should i", "what does the guideline", "differential", "is it safe", "recommend", "first line", "first-line"]
+  },
+  "fallback": "consult"
+}

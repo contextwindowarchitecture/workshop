@@ -1,0 +1,14 @@
+{
+  "route": "consult",
+  "attempts": [
+    "small"
+  ],
+  "first_refusal": "evidence_required",
+  "reply_is_fallback": true,
+  "outcome_in": [
+    "needs_clinician_review"
+  ],
+  "trace": {
+    "below_threshold": true
+  }
+}

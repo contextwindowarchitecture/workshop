@@ -1,0 +1,10 @@
+{
+  "_comment": "The capability policy: which of the EHR's proposed tools reach the model, by the clinician's role (R-15). A proposal the policy does not grant is reported capability_not_allowed at stage producer. order_controlled_substance is never granted to the drafting assistant; the guard names it so the reason is in the record.",
+  "policy_producer": "capability-policy",
+  "allow_list_version": "harbor-caps/v1",
+  "grants": {
+    "order_prescription_refill": { "roles": ["physician"], "description": "Queue a refill of a prescription that is active on this patient's chart, for the prescriber to sign. Not for new medicines or dose changes." },
+    "add_chart_note": { "roles": ["physician", "nurse"], "description": "File the drafted note to this encounter for clinician review." }
+  },
+  "never": { "order_controlled_substance": "controlled substances are never ordered by the drafting assistant (opioid stewardship guideline)" }
+}

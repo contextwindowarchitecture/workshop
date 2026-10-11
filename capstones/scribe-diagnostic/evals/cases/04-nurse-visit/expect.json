@@ -1,0 +1,22 @@
+{
+  "route": "scribe",
+  "guards_pass": true,
+  "outcome_in": [
+    "note_drafted"
+  ],
+  "actions_queued": [
+    "add_chart_note"
+  ],
+  "trace": {
+    "capability_not_allowed": [
+      "cap:order_prescription_refill",
+      "cap:order_controlled_substance"
+    ],
+    "conflict_lost": [
+      "note:p_2001:0002"
+    ]
+  },
+  "must_cite_any": [
+    "guide:hypertension-followup@4#1"
+  ]
+}

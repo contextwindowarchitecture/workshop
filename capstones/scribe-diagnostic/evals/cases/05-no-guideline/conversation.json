@@ -1,0 +1,19 @@
+{
+  "encounter": "enc_9003",
+  "clinician": "dr_lee",
+  "session": "s_c1_05",
+  "asked_at": "2026-10-03T11:35:00Z",
+  "turns": [
+    {
+      "speaker": "clinician",
+      "text": "Daniel, tell me about the toe.",
+      "at": "2026-10-03T11:31:00Z"
+    },
+    {
+      "speaker": "patient",
+      "text": "It came on overnight, red, hot and I cannot bear the bedsheet on it.",
+      "at": "2026-10-03T11:31:30Z"
+    }
+  ],
+  "question": "Gout flare: colchicine dosing?"
+}

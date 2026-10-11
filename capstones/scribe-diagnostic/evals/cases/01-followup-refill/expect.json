@@ -1,0 +1,18 @@
+{
+  "route": "scribe",
+  "guards_pass": true,
+  "outcome_in": [
+    "note_drafted"
+  ],
+  "actions_queued": [
+    "order_prescription_refill"
+  ],
+  "must_cite_any": [
+    "guide:metformin-prescribing@2#2"
+  ],
+  "trace": {
+    "conflict_lost": [
+      "note:p_2001:0002"
+    ]
+  }
+}

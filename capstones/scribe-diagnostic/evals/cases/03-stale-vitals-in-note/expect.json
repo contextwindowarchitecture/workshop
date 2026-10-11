@@ -1,0 +1,13 @@
+{
+  "route": "scribe",
+  "failing_guard": "vitals_match_state",
+  "reply_is_fallback": true,
+  "outcome_in": [
+    "needs_clinician_review"
+  ],
+  "trace": {
+    "conflict_lost": [
+      "note:p_2001:0002"
+    ]
+  }
+}
