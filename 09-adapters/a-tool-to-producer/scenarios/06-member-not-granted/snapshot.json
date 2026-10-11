@@ -375,6 +375,27 @@
           "lineage": "summarised",
           "injection_risk": "untrusted_content",
           "body": "Works on the mobile team and mostly uses the iOS app."
+        },
+        {
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "eligibility": "route-policy",
+          "id": "mem:u_ben:0002",
+          "slot": "interaction.memory",
+          "source": "turn:s_c2d81f47:0006",
+          "source_version": "1",
+          "authority": "generated",
+          "trust": "unverified",
+          "freshness": "2026-08-19T14:52:00Z",
+          "expires": "2027-02-19T00:00:00Z",
+          "scope": {
+            "tenant": "w_kitewood",
+            "user": "u_ben"
+          },
+          "lineage": "summarised",
+          "injection_risk": "untrusted_content",
+          "body": "Their workspace is on the Team plan."
         }
       ],
       "excluded": []

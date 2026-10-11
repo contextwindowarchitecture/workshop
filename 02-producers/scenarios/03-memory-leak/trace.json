@@ -9,8 +9,8 @@
     "margin_percent": 15
   },
   "result": {
-    "input_tokens": 300,
-    "hash": "ec4506042df41dfae67d1079dde4ee69cb183e869ded6eb01da027a53987ef7b"
+    "input_tokens": 319,
+    "hash": "1e1354ffd5fe05dbcf709a9f94acab208cb2e02e0e4dd2d6c18d88cdcef37327"
   },
   "included": [
     {
@@ -45,6 +45,13 @@
       "slot": "interaction.memory",
       "item_id": "mem:u_ben:0001",
       "tokens": 14,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_ben:0002",
+      "tokens": 9,
       "source_version": "1",
       "eligibility": "route-policy"
     },
@@ -146,7 +153,7 @@
     "route_policy_version": "w2/v1",
     "tokenizer": "estimate-utf8/v1",
     "renderer": "cwa-messages/v1",
-    "snapshot_digest": "651064e742d2c3c4fd34b91764c80690747dc73c001dcc1a43f93f44e4026350"
+    "snapshot_digest": "148d877ea6402b3c385e3cd2ae2f3743f3fe462da8db682f176b678fd2c06d07"
   },
   "defaults_filled": []
 }

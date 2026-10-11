@@ -1,0 +1,48 @@
+{
+  "user": "u_ada",
+  "session": "s_w3_long",
+  "asked_at": "2026-10-01T10:00:00Z",
+  "turns": [
+    {
+      "role": "user",
+      "text": "We're getting ready to move our whole workspace to a new tool at the end of the month and I want to make sure nothing gets lost along the way, including comments and attachments on every task.",
+      "at": "2026-10-01T09:40:00Z"
+    },
+    {
+      "role": "assistant",
+      "text": "Understood. Fernway can export a single project or the whole workspace, and attachments are exported separately as a ZIP file. Shall I walk you through the workspace export?",
+      "at": "2026-10-01T09:40:30Z"
+    },
+    {
+      "role": "user",
+      "text": "Yes please, and also tell me who on our team is allowed to run that export, because I don't want to find out at the last minute that only one person can do it.",
+      "at": "2026-10-01T09:41:00Z"
+    },
+    {
+      "role": "assistant",
+      "text": "Workspace export is available to Owners and Admins from Settings, Data, Export workspace. Members can export individual projects as CSV.",
+      "at": "2026-10-01T09:41:30Z"
+    },
+    {
+      "role": "user",
+      "text": "Good. And how long does it usually take for a workspace of our size? We have a lot of history and I'd like to schedule the cutover properly.",
+      "at": "2026-10-01T09:42:00Z"
+    },
+    {
+      "role": "assistant",
+      "text": "Exports are prepared in the background and the download link is emailed when ready, usually within an hour for large workspaces. The link is valid for 24 hours.",
+      "at": "2026-10-01T09:42:30Z"
+    },
+    {
+      "role": "user",
+      "text": "One more thing before my actual question: does the JSON export keep task dependencies and the full history, or just the current state of each task?",
+      "at": "2026-10-01T09:43:00Z"
+    },
+    {
+      "role": "assistant",
+      "text": "The JSON export keeps project structure, task dependencies and history, so it is the format to use for a migration or a backup.",
+      "at": "2026-10-01T09:43:30Z"
+    }
+  ],
+  "question": "So, to confirm: can I export attachments together with the workspace JSON, or do I download them separately?"
+}

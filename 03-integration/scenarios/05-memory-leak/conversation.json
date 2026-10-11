@@ -1,0 +1,10 @@
+{
+  "user": "u_ben",
+  "session": "s_w3_leak",
+  "asked_at": "2026-10-01T10:15:00Z",
+  "turns": [],
+  "question": "Do we use single sign-on?",
+  "faults": [
+    "memory-store-ignores-user"
+  ]
+}

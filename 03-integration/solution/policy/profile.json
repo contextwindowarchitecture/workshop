@@ -1,0 +1,17 @@
+{
+  "spec": "cwa/draft",
+  "id": "account-help-messages",
+  "version": 1,
+  "route": "account-help",
+  "model_family": null,
+  "route_policy_version": "w3/v1",
+  "placement": [
+    { "slot": "governance.instructions", "wrap": "system" },
+    { "slot": "state.user", "wrap": "xml:account" },
+    { "slot": "evidence.knowledge", "wrap": "xml:article" },
+    { "slot": "interaction.memory", "wrap": "xml:memory" },
+    { "slot": "interaction.history", "wrap": "xml:history" },
+    { "slot": "interaction.query", "wrap": "xml:question" }
+  ],
+  "evaluation": { "status": "unevaluated", "suite": null, "date": null, "result": null, "artifact": null }
+}

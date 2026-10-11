@@ -1,12 +1,13 @@
 {
   "memories": [
-    { "id": "mem:u_ada:0003", "workspace": "w_kitewood", "user": "u_ada", "text": "Their workspace is on the Team plan.", "from_turn": "turn:s_4b1c09e2:0002", "saved_at": "2026-07-02T09:12:00Z", "expires": "2027-01-02T00:00:00Z", "revoked_by": "turn:s_9f0e11aa:0004" },
-    { "id": "mem:u_ada:0005", "workspace": "w_kitewood", "user": "u_ada", "text": "Uses Okta as their identity provider.", "from_turn": "turn:s_4b1c09e2:0006", "saved_at": "2026-07-02T09:20:00Z", "expires": "2027-01-02T00:00:00Z" },
-    { "id": "mem:u_ada:0007", "workspace": "w_kitewood", "user": "u_ada", "text": "Asked about exporting the whole workspace before a migration, planned for October.", "from_turn": "turn:s_9f0e11aa:0002", "saved_at": "2026-09-30T11:05:00Z", "expires": "2026-11-30T00:00:00Z" },
-    { "id": "mem:u_ada:0001", "workspace": "w_kitewood", "user": "u_ada", "text": "Evaluating Fernway on a trial; has not chosen a plan.", "from_turn": "turn:s_11aa22bb:0001", "saved_at": "2025-12-01T10:00:00Z", "expires": "2026-03-01T00:00:00Z" },
-    { "id": "mem:u_ben:0001", "workspace": "w_kitewood", "user": "u_ben", "text": "Works on the mobile team and mostly uses the iOS app.", "from_turn": "turn:s_c2d81f47:0004", "saved_at": "2026-08-19T14:40:00Z", "expires": "2027-02-19T00:00:00Z" },
-    { "id": "mem:u_cho:0001", "workspace": "w_larkspur", "user": "u_cho", "text": "Prefers short answers with numbered steps.", "from_turn": "turn:s_77e0a3b9:0003", "saved_at": "2026-06-11T16:05:00Z", "expires": "2026-12-11T00:00:00Z" },
-    { "id": "mem:u_cho:0002", "workspace": "w_larkspur", "user": "u_cho", "text": "Was comparing Fernway with another task tracker during a 30-day trial.", "from_turn": "turn:s_1a5e6c02:0001", "saved_at": "2025-10-25T10:00:00Z", "expires": "2026-01-25T00:00:00Z" },
-    { "id": "mem:u_cho:0003", "workspace": "w_larkspur", "user": "u_cho", "text": "Wanted to know whether refunds are possible on a monthly plan.", "from_turn": "turn:s_1a5e6c02:0005", "saved_at": "2025-10-25T10:20:00Z", "expires": "2026-04-25T00:00:00Z" }
+    {"id": "mem:u_ada:0003", "workspace": "w_kitewood", "user": "u_ada", "text": "Their workspace is on the Team plan.", "from_turn": "turn:s_4b1c09e2:0002", "saved_at": "2026-07-02T09:12:00Z", "expires": "2027-01-02T00:00:00Z", "revoked_by": "turn:s_9f0e11aa:0004", "fact": "plan"},
+    {"id": "mem:u_ada:0005", "workspace": "w_kitewood", "user": "u_ada", "text": "Uses Okta as their identity provider.", "from_turn": "turn:s_4b1c09e2:0006", "saved_at": "2026-07-02T09:20:00Z", "expires": "2027-01-02T00:00:00Z"},
+    {"id": "mem:u_ada:0007", "workspace": "w_kitewood", "user": "u_ada", "text": "Asked about exporting the whole workspace before a migration, planned for October.", "from_turn": "turn:s_9f0e11aa:0002", "saved_at": "2026-09-30T11:05:00Z", "expires": "2026-11-30T00:00:00Z"},
+    {"id": "mem:u_ada:0001", "workspace": "w_kitewood", "user": "u_ada", "text": "Evaluating Fernway on a trial; has not chosen a plan.", "from_turn": "turn:s_11aa22bb:0001", "saved_at": "2025-12-01T10:00:00Z", "expires": "2026-03-01T00:00:00Z"},
+    {"id": "mem:u_ben:0001", "workspace": "w_kitewood", "user": "u_ben", "text": "Works on the mobile team and mostly uses the iOS app.", "from_turn": "turn:s_c2d81f47:0004", "saved_at": "2026-08-19T14:40:00Z", "expires": "2027-02-19T00:00:00Z"},
+    {"id": "mem:u_ben:0002", "workspace": "w_kitewood", "user": "u_ben", "fact": "plan", "text": "Their workspace is on the Team plan.", "from_turn": "turn:s_c2d81f47:0006", "saved_at": "2026-08-19T14:52:00Z", "expires": "2027-02-19T00:00:00Z"},
+    {"id": "mem:u_cho:0001", "workspace": "w_larkspur", "user": "u_cho", "text": "Prefers short answers with numbered steps.", "from_turn": "turn:s_77e0a3b9:0003", "saved_at": "2026-06-11T16:05:00Z", "expires": "2026-12-11T00:00:00Z"},
+    {"id": "mem:u_cho:0002", "workspace": "w_larkspur", "user": "u_cho", "text": "Was comparing Fernway with another task tracker during a 30-day trial.", "from_turn": "turn:s_1a5e6c02:0001", "saved_at": "2025-10-25T10:00:00Z", "expires": "2026-01-25T00:00:00Z"},
+    {"id": "mem:u_cho:0003", "workspace": "w_larkspur", "user": "u_cho", "text": "Wanted to know whether refunds are possible on a monthly plan.", "from_turn": "turn:s_1a5e6c02:0005", "saved_at": "2025-10-25T10:20:00Z", "expires": "2026-04-25T00:00:00Z"}
   ]
 }
