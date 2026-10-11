@@ -1,0 +1,47 @@
+{
+  "01-ada-export": {
+    "payload_texts": "58b5061d3be48928d604635a4b1b349927ccbd664c37303cce622372ea5ae450",
+    "refused": null,
+    "received": {
+      "agents-sdk": "58b5061d3be48928d604635a4b1b349927ccbd664c37303cce622372ea5ae450",
+      "langgraph": "58b5061d3be48928d604635a4b1b349927ccbd664c37303cce622372ea5ae450",
+      "langchain-middleware": "58b5061d3be48928d604635a4b1b349927ccbd664c37303cce622372ea5ae450"
+    }
+  },
+  "02-ben-plan-conflict": {
+    "payload_texts": "4e4c0a4ab2a41993cfdceb9ca93e96fed1fdb037328b65ae24985389a1500926",
+    "refused": null,
+    "received": {
+      "agents-sdk": "4e4c0a4ab2a41993cfdceb9ca93e96fed1fdb037328b65ae24985389a1500926",
+      "langgraph": "4e4c0a4ab2a41993cfdceb9ca93e96fed1fdb037328b65ae24985389a1500926",
+      "langchain-middleware": "4e4c0a4ab2a41993cfdceb9ca93e96fed1fdb037328b65ae24985389a1500926"
+    }
+  },
+  "03-off-topic": {
+    "payload_texts": null,
+    "refused": "evidence_required",
+    "received": {
+      "agents-sdk": null,
+      "langgraph": null,
+      "langchain-middleware": null
+    }
+  },
+  "04-long-conversation": {
+    "payload_texts": "e2c568bae4204ed9c12f04b33c8a8809ebe001f50053157fb56626fba58e6f2d",
+    "refused": null,
+    "received": {
+      "agents-sdk": "e2c568bae4204ed9c12f04b33c8a8809ebe001f50053157fb56626fba58e6f2d",
+      "langgraph": "e2c568bae4204ed9c12f04b33c8a8809ebe001f50053157fb56626fba58e6f2d",
+      "langchain-middleware": "e2c568bae4204ed9c12f04b33c8a8809ebe001f50053157fb56626fba58e6f2d"
+    }
+  },
+  "05-memory-leak": {
+    "payload_texts": "b0966cdb256ba0a0eb54515807efc282494663a569599d3a93e38ea4fe9f7b3f",
+    "refused": null,
+    "received": {
+      "agents-sdk": "b0966cdb256ba0a0eb54515807efc282494663a569599d3a93e38ea4fe9f7b3f",
+      "langgraph": "b0966cdb256ba0a0eb54515807efc282494663a569599d3a93e38ea4fe9f7b3f",
+      "langchain-middleware": "b0966cdb256ba0a0eb54515807efc282494663a569599d3a93e38ea4fe9f7b3f"
+    }
+  }
+}

@@ -20,6 +20,7 @@ One run sheet per workshop. Each gives the timing, the conference cut, the check
 | W10 Conformance and contributing | [10-conformance-contribution.md](10-conformance-contribution.md) | ready |
 | W11 Benchmarking | [11-benchmarking.md](11-benchmarking.md) | ready |
 | W9 module D Host and framework seams | [09d-host-seam.md](09d-host-seam.md) | ready |
-| W3b, C1, C3 | | written with each module |
+| W3b Framework seams | [03b-framework-seams.md](03b-framework-seams.md) | ready |
+| C1, C3 | | written with each capstone |
 
 Before any session, run the checks in [docs/setup.md](../setup.md) section 5.

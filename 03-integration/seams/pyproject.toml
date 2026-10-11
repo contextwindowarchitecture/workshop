@@ -1,0 +1,28 @@
+[project]
+name = "cwa-workshop-03b-framework-seams"
+version = "0.1.0"
+description = "W3b. Framework seams: where assembly sits in an agent framework, proven by hash with no model"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+dependencies = [
+    "contextwindowarchitecture-assembler",
+    "openai>=2",
+    "openai-agents>=0.23",
+    "langgraph>=1.2",
+    "langchain>=1.4",
+    "langchain-core>=1.6",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+contextwindowarchitecture-assembler = { git = "https://github.com/contextwindowarchitecture/assembler-python", tag = "draft-release" }
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
