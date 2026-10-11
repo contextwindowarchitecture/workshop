@@ -1,0 +1,25 @@
+[project]
+name = "cwa-workshop-10-conformance-contribution"
+version = "0.1.0"
+description = "W10. Conformance and contributing to the specification"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+dependencies = [
+    "contextwindowarchitecture-assembler",
+    "jsonschema>=4.23",
+    "rfc3339-validator>=0.1.4",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+contextwindowarchitecture-assembler = { git = "https://github.com/contextwindowarchitecture/assembler-python", tag = "draft-release" }
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

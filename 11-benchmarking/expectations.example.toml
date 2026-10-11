@@ -1,0 +1,35 @@
+# Two constructs from this repository's committed scenarios, written as the examples bench writes its expectations.toml.
+# A key names the scenario; the comment names the CWA decision the case exercises and the trace row that records it.
+# Phrases match anywhere in the answer, ignoring case. These are patterns, so each entry also says what it would miss.
+#
+#   answer     the question was answered                  mentions_any: at least one of these
+#   grounding  the answer rests on the article that        must_cite: every one of these ids is cited
+#              answers it
+#   conflict   the answer sides with the conflict's        winner: mentions one of these; loser: mentions none
+#              winner (R-11)
+#   excluded   the answer uses nothing CWA left out        mentions_none: text only the left-out items hold
+#              (R-2, R-9, R-14)
+
+# W3a · Ben asks which plan the workspace is on. Ben's memory says Team; the account service says Business. The
+# conflict group fact:plan is decided by policy (precedence: account before memory), the account wins, and the memory
+# is excluded conflict_lost. Trace rows: conflicts[fact:plan].winner = account:w_kitewood:plan;
+# excluded mem:u_ben:0002 conflict_lost. A model that answers "Team" read something it was not sent, or guessed.
+# Misses: an answer that says "your current plan" without naming it passes `loser` and fails `winner` on a technicality;
+# an answer that says "not the Team plan" fails `loser` while siding with the winner. Read the answer when either fires.
+["03-integration/02-ben-plan-conflict"]
+answer = { mentions_any = ["Business"] }
+conflict = { winner = ["Business"], loser = ["you are on the Team plan", "you're on the Team plan", "workspace is on the Team plan", "your Team plan"] }
+excluded = { mentions_none = ["on the Team plan"] }
+
+# W4 · Ada asks how to export the whole workspace, on the squeezed small route. Fitting sent help:data-export@6#0 and
+# help:exports-faq@2#1 as their precomputed summaries (compressed[] rows), kept help:data-export@6#2 whole, and omitted
+# help:data-export@6#1 over_budget. Ada's expired and revoked memories were excluded at the producer (expired, revoked).
+# A grounded answer cites the export article that was sent; an answer that cites @6#1 cites a chunk the request did
+# not carry, and the grounding check reports it. Misses: an answer that paraphrases @6#2 without a citation fails
+# must_cite although it is grounded; the bench's grounding check reports the citations it finds, so look at the
+# answer before calling it a failure. Nothing here can tell whether the summary lost a detail the model needed: that
+# is W4's calibration question, and a construct for a later entry (compare the same question on the large route).
+["04-budgets-routes/02-export-squeezed/small"]
+answer = { mentions_any = ["Export workspace", "export"] }
+grounding = { must_cite = ["help:data-export@6#2"] }
+excluded = { mentions_none = ["trial", "has not chosen a plan"] }

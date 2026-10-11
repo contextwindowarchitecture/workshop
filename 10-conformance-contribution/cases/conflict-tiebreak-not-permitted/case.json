@@ -1,0 +1,9 @@
+{
+  "id": "conflict-tiebreak-not-permitted",
+  "rules": [
+    "R-11",
+    "R-17",
+    "R-21"
+  ],
+  "description": "Two leaders from the top-ranked producer differ in freshness and the fact policy sets no freshness_tiebreak, so the tie is not broken by the clock: the group escalates and the route's on_unresolved refuses with conflict_unresolved. An assembler that applies the tie-break without the policy's permission assembles instead."
+}

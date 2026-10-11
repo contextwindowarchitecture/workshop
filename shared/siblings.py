@@ -11,9 +11,12 @@ repository, the way assembler-demo and the viability benchmark do, so each repos
       examples/                     Fernway, the help-center bot and agent the labs build on
       website/                      the pages W0 and W6 use; serve it locally or use the live site
       integrations/                 the fullsend seam W9 module D studies
+      benchmark/                    the viability benchmark, Domains 1 and 2, whose committed runs W11 reads
 
 The root defaults to the parent of this repository. Set CWA_SIBLINGS_ROOT to an absolute or relative path to put the
-siblings anywhere else; a relative path is resolved against the current working directory. Standard library only.
+siblings anywhere else; a relative path is resolved against the current working directory. One sibling that lives
+elsewhere is named by CWA_SIBLING_<NAME> with the name upper-cased and dashes as underscores, for example
+CWA_SIBLING_BENCHMARK=../cwa-extended/benchmark. Standard library only.
 
     from siblings import sibling, root
     sibling("examples") / "01-docs-qa"
@@ -41,6 +44,7 @@ SIBLINGS = {
     "examples": "Fernway: 01-docs-qa to 05-production and bench",
     "website": "the pages W0 and W6 use (optional: the live site works too)",
     "integrations": "the fullsend seam (W9 module D only)",
+    "benchmark": "the viability benchmark's committed Domain 1 and 2 runs (W11 only)",
 }
 
 
@@ -53,9 +57,12 @@ def root() -> Path:
 
 
 def sibling(name: str) -> Path:
-    """The path a sibling would have, whether or not it is checked out."""
+    """The path a sibling would have, whether or not it is checked out: its own override, else under the root."""
     if name not in SIBLINGS:
         raise KeyError(f"{name!r} is not a sibling this repository names: {', '.join(SIBLINGS)}")
+    override = os.environ.get(f"CWA_SIBLING_{name.upper().replace('-', '_')}")
+    if override:
+        return Path(override).expanduser().resolve()
     return root() / name
 
 

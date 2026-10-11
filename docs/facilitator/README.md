@@ -17,6 +17,8 @@ One run sheet per workshop. Each gives the timing, the conference cut, the check
 | W9 module B Assembler adapter protocol | [09b-assembler-protocol.md](09b-assembler-protocol.md) | ready |
 | W9 module C Provider adapter | [09c-provider.md](09c-provider.md) | ready |
 | W9 module A Tool-to-producer adapters | [09a-tool-to-producer.md](09a-tool-to-producer.md) | ready |
-| W3b, W10, W11, W9 D, C1, C3 | | written with each module |
+| W10 Conformance and contributing | [10-conformance-contribution.md](10-conformance-contribution.md) | ready |
+| W11 Benchmarking | [11-benchmarking.md](11-benchmarking.md) | ready |
+| W3b, W9 D, C1, C3 | | written with each module |
 
 Before any session, run the checks in [docs/setup.md](../setup.md) section 5.

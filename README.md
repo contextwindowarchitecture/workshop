@@ -20,8 +20,8 @@ Every lab runs without a model: committed snapshots, traces and recorded runs re
 | [W7](07-production/) | Production: snapshot store, telemetry, evals and the promotion gate | half day, model-free | ready |
 | [W8](08-assembler-kata/) | Inside the assembler: the repair kata | full day, model-free | ready |
 | [W9](09-adapters/) | Adapters: tool-to-producer, assembler protocol, provider, host seam | half day per module | modules A to C ready, D planned |
-| [W10](10-conformance-contribution/) | Conformance and contributing to the specification | half day | planned |
-| [W11](11-benchmarking/) | Benchmarking CWA: does it help, and what does the number mean | half day | planned |
+| [W10](10-conformance-contribution/) | Conformance and contributing to the specification | half day, model-free | ready |
+| [W11](11-benchmarking/) | Benchmarking CWA: does it help, and what does the number mean | half day, model-free | ready |
 | [C1 to C3](capstones/) | Capstones: build a conformant application in a domain | one day each, teams | C2 ready, C1 and C3 planned |
 
 Each workshop's README states its objectives, goals, outcomes, calls to action and the requirements it covers. The full catalog with the reasoning behind it is [docs/plan/workshops.md](docs/plan/workshops.md).

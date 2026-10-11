@@ -5,5 +5,6 @@
   "assembler-demo": {"ref": "main", "why": "no release yet; move to a tag when one exists"},
   "examples": {"ref": "main", "why": "no release yet; move to a tag when one exists"},
   "website": {"ref": "main", "why": "optional; the live site is equivalent"},
-  "integrations": {"ref": "main", "why": "W9 module D only"}
+  "integrations": {"ref": "main", "why": "W9 module D only"},
+  "benchmark": {"ref": "main", "why": "W11 only; its committed runs are read, nothing is run"}
 }

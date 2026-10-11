@@ -27,6 +27,7 @@ The workshops do not vendor the examples, the assemblers or the website. They ex
   examples/                    Fernway: the help-center bot and agent the labs build on
   website/                     optional; the live site at contextwindowarchitecture.io works too
   integrations/                W9 module D only
+  benchmark/                   W11 only; its committed Domain 1 and 2 runs are read, nothing is run
 ```
 
 The root is the parent of this repository by default. To put the siblings anywhere else, set one environment variable to an absolute or relative path:
@@ -34,6 +35,8 @@ The root is the parent of this repository by default. To put the siblings anywhe
 ```sh
 export CWA_SIBLINGS_ROOT=/path/to/the/directory/that/holds/them
 ```
+
+One sibling that lives somewhere else is named on its own with `CWA_SIBLING_<NAME>`, the name upper-cased and dashes as underscores: `export CWA_SIBLING_BENCHMARK=../cwa-extended/benchmark`. The override is a path, absolute or relative, and it wins over the root for that sibling alone.
 
 Clone whatever is missing at the pinned release:
 
