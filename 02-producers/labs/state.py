@@ -4,7 +4,7 @@ Fill in accounts_db() until `CWA_W2_IMPL=labs uv run pytest tests/test_lab_c.py`
 
 What a conformant state producer does (guides/producers.md, R-8):
 
-1. Read the workspace and the user from data/accounts.json for request.tenant and request.user. State is read at
+1. Read the workspace and the user from the accounts store, `common.ACCOUNTS` (shared/fixtures/accounts.json), for request.tenant and request.user. State is read at
    request time from the system of record; the application owns it and the model never writes it.
 2. Emit one typed item per fact, both in state.user: the workspace's plan (id `account:<tenant>:plan`, scope
    `{"tenant": ...}`) and the user's membership (id `account:<tenant>:<user>`, scope tenant and user). Authority

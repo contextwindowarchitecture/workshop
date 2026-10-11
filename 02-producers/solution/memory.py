@@ -4,14 +4,14 @@ from __future__ import annotations
 
 import json
 
-from common import DATA, Batch, Request, instant, item
+from common import MEMORIES, Batch, Request, instant, item
 
 
 def memory_store(request: Request) -> Batch:
     asked = instant(request.asked_at)
     ignores_user = "memory-store-ignores-user" in request.faults
     items, excluded = [], []
-    for memory in json.loads((DATA / "memories.json").read_text(encoding="utf-8"))["memories"]:
+    for memory in json.loads(MEMORIES.read_text(encoding="utf-8"))["memories"]:
         if memory["workspace"] != request.tenant:
             continue
         if memory["user"] != request.user and not ignores_user:

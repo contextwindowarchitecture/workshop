@@ -10,12 +10,9 @@ from __future__ import annotations
 
 import hashlib
 import json
-import math
-import re
 import sys
 from dataclasses import dataclass, field
 from datetime import datetime
-from functools import cache
 from pathlib import Path
 from typing import Any, TextIO
 
@@ -24,9 +21,8 @@ from cwa import AssemblyResult, Snapshot, assemble
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 CONTRACT = ROOT / "shared" / "contract" / "cwa"
-DATA = HERE / "data"
+DATA = HERE / "data"  # this workshop's own precomputed table; the Fernway fixtures live in shared/fixtures
 POLICY = HERE / "policy"
-HELP_CENTER = DATA / "help-center"
 
 Item = dict[str, Any]
 Batch = dict[str, Any]
@@ -83,80 +79,11 @@ def content_hash(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-# --- the corpus ------------------------------------------------------------------------------------------------------
+# --- the corpus (shared/fernway) ---------------------------------------------------------------------------------
 
-
-@dataclass(frozen=True)
-class Chunk:
-    id: str  # help:<article>@<version>#<paragraph>
-    article: str
-    title: str
-    version: str
-    updated: str
-    text: str
-
-
-def front_matter(text: str) -> tuple[dict[str, str], str]:
-    """Split a leading `---` block of `key: value` lines from the body that follows it."""
-    head, sep, body = text.partition("\n---\n")
-    if not text.startswith("---\n") or not sep:
-        raise ValueError("expected a --- front matter block")
-    fields: dict[str, str] = {}
-    for line in head.splitlines()[1:]:
-        key, _, value = line.partition(":")
-        fields[key.strip()] = value.strip()
-    return fields, body.strip()
-
-
-@cache
-def chunks() -> tuple[Chunk, ...]:
-    """Every paragraph of every article, in file order. A chunk id names the article, its version and the paragraph,
-    so an edited article gets new ids and a cited id always means the text it was cited for."""
-    found = []
-    for path in sorted(HELP_CENTER.glob("*.md")):
-        meta, body = front_matter(path.read_text(encoding="utf-8"))
-        for index, paragraph in enumerate(p.strip() for p in body.split("\n\n") if p.strip()):
-            found.append(Chunk(f"help:{meta['id']}@{meta['version']}#{index}", meta["id"], meta["title"],
-                               meta["version"], meta["updated"], paragraph))
-    return tuple(found)
-
-
-_WORD = re.compile(r"[a-z0-9]+")
-
-
-def words(text: str) -> list[str]:
-    return _WORD.findall(text.lower())
-
-
-def bm25(question: str, k1: float = 1.5, b: float = 0.75) -> list[tuple[Chunk, float]]:
-    """Every chunk scored against the question by BM25 over its text, best first, ties broken by id so the
-    order is the same on every machine. A plain implementation, with no dependencies, so the committed scenarios hold
-    everywhere. Scoring is the retriever's job and not the lesson; packaging the scores is."""
-    docs = [(chunk, words(chunk.text)) for chunk in chunks()]
-    n = len(docs)
-    avg = sum(len(terms) for _, terms in docs) / n
-    df: dict[str, int] = {}
-    for _, terms in docs:
-        for term in set(terms):
-            df[term] = df.get(term, 0) + 1
-    query = words(question)
-    scored = []
-    for chunk, terms in docs:
-        score = 0.0
-        for term in set(query):
-            tf = terms.count(term)
-            if not tf:
-                continue
-            idf = math.log(1 + (n - df[term] + 0.5) / (df[term] + 0.5))
-            score += idf * tf * (k1 + 1) / (tf + k1 * (1 - b + b * len(terms) / avg))
-        scored.append((chunk, round(score, 3)))
-    return sorted(scored, key=lambda pair: (-pair[1], pair[0].id))
-
-
-def jaccard(a: str, b: str) -> float:
-    """Word-set overlap, the near-duplicate measure the retrieval lab uses. 1.0 means the same words."""
-    x, y = set(words(a)), set(words(b))
-    return len(x & y) / len(x | y) if x | y else 1.0
+sys.path.insert(0, str(ROOT / "shared"))
+from fernway import ACCOUNTS, MEMORIES  # noqa: E402
+from fernway.corpus import Chunk, bm25, chunks, front_matter, jaccard, words  # noqa: E402,F401
 
 
 # --- the policy and the freeze ---------------------------------------------------------------------------------------

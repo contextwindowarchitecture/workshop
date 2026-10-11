@@ -4,7 +4,7 @@ Fill in memory_store() until `CWA_W2_IMPL=labs uv run pytest tests/test_lab_b.py
 
 What a conformant memory producer does (guides/producers.md, R-9, R-14, R-2):
 
-1. Read data/memories.json. Keep only rows for the request's tenant and user. If "memory-store-ignores-user" is in
+1. Read the memory store, `common.MEMORIES` (shared/fixtures/memories.json). Keep only rows for the request's tenant and user. If "memory-store-ignores-user" is in
    request.faults, skip the user filter: that is the bug a scenario injects to show that the item's own scope still
    keeps another user's memory out of the payload.
 2. Never emit an expired or revoked entry. A row with `revoked_by` is reported as

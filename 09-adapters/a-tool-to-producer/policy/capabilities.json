@@ -1,0 +1,23 @@
+{
+  "$comment": "Which of the tools fernway-accounts proposes the model may be offered, to whom, with the policy's own wording and the server's input schema pinned by the SHA-256 of its canonical JSON. Only this policy emits governance.capabilities (R-15). list_members is granted to Owners and Admins only; a Member's request reports it as capability_not_allowed.",
+  "policy_producer": "capability-policy",
+  "allow_list_version": "account-assistant/v1",
+  "server": "fernway-accounts",
+  "grants": {
+    "get_account": {
+      "roles": ["Owner", "Admin", "Member"],
+      "description": "Get the signed-in workspace's plan, billing cycle, seat count and data region. workspace is the signed-in workspace id.",
+      "schema_sha256": "707a1cc448185c0fccb1fa0273937101d791c486ad6a31bb063ce775b9de23a3"
+    },
+    "list_members": {
+      "roles": ["Owner", "Admin"],
+      "description": "List the signed-in workspace's members with their role and billing-admin flag.",
+      "schema_sha256": "e3e0be3fcd54851a2fc385575a561f6e2452f2262ed3f5bd7d5060531b9a4fa7"
+    },
+    "get_service_status": {
+      "roles": ["Owner", "Admin", "Member"],
+      "description": "Current service status for the workspace's data region, EU or US.",
+      "schema_sha256": "e13a060fa8b4142d38791565ecc73da4c0af7a28cebbdbb03bd2730b6d630849"
+    }
+  }
+}

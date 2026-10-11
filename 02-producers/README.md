@@ -47,7 +47,7 @@ Read the table. Five producers ran. Three rows carry stage `producer`: the retri
 
 ## Lab A. A retrieval producer (60 minutes)
 
-Open [labs/retrieval.py](labs/retrieval.py). Its docstring is the specification for `help_center_search()`. The retrieval itself is given: `common.bm25(request.question)` scores every paragraph of the nine Fernway help-centre articles in `data/help-center/`. Your job is everything after the score.
+Open [labs/retrieval.py](labs/retrieval.py). Its docstring is the specification for `help_center_search()`. The retrieval itself is given: `common.bm25(request.question)` scores every paragraph of the nine Fernway help-centre articles in `shared/fixtures/help-center/`. Your job is everything after the score.
 
 Work until these pass:
 
@@ -67,7 +67,7 @@ When the tests pass, do two more things. Remove `lineage` from your items and ru
 
 ## Lab B. A memory producer (40 minutes)
 
-Open [labs/memory.py](labs/memory.py). `data/memories.json` holds eight memories across three users. For Ada, one is revoked and one has expired; your producer sends neither body and reports both by id (R-9, R-14). Every memory you do send carries `expires`, a `turn:` source and its own `scope`.
+Open [labs/memory.py](labs/memory.py). `shared/fixtures/memories.json` holds eight memories across three users. For Ada, one is revoked and one has expired; your producer sends neither body and reports both by id (R-9, R-14). Every memory you do send carries `expires`, a `turn:` source and its own `scope`.
 
 ```sh
 CWA_W2_IMPL=labs uv run pytest tests/test_lab_b.py
@@ -81,7 +81,7 @@ The last command injects a bug: your producer stops filtering by user and sends 
 
 ## Lab C. A state producer (30 minutes)
 
-Open [labs/state.py](labs/state.py). `data/accounts.json` is the system of record for workspaces and members. Your producer emits one typed item per fact into `state.user`, with `freshness` set to when the row was read, not when the plan last changed (R-8).
+Open [labs/state.py](labs/state.py). `shared/fixtures/accounts.json` is the system of record for workspaces and members. Your producer emits one typed item per fact into `state.user`, with `freshness` set to when the row was read, not when the plan last changed (R-8).
 
 ```sh
 CWA_W2_IMPL=labs uv run pytest tests/test_lab_c.py
@@ -135,5 +135,5 @@ R-1, R-2, R-3, R-8, R-9, R-10, R-13, R-14, R-15, R-16, R-18, R-24; R-26 through 
 - `labs/`: the four lab stubs. `solution/`: finished versions, which CI tests.
 - `common.py`: the request, the corpus, BM25, Jaccard, the policy, the freeze and the decisions table. `fixed.py`: the two given producers. `impl.py`: the `CWA_W2_IMPL` switch.
 - `freeze.py`: run the producers, freeze, assemble, read. `lint.py`: local checks in the assembler's vocabulary. `variants.py`: precompute the variants table.
-- `policy/`: the route policy, the profile, the budget and the instructions. `data/`: nine help-centre articles from the Fernway examples, the memories, the accounts and the variants table.
+- `policy/`: the route policy, the profile, the budget and the instructions. `data/variants.json`: the precomputed variants table. The articles, memories and accounts are the Fernway fixtures in `shared/fixtures/`, read through `shared/fernway/`.
 - `scenarios.py`, `scenarios/`, `tests/`: the regression check and the answer key.

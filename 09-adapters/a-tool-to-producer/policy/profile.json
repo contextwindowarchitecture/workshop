@@ -1,0 +1,17 @@
+{
+  "spec": "cwa/draft",
+  "id": "account-assistant-messages",
+  "version": 1,
+  "route": "account-assistant",
+  "model_family": null,
+  "route_policy_version": "w9a/v1",
+  "placement": [
+    { "slot": "governance.instructions", "wrap": "system" },
+    { "slot": "governance.capabilities", "wrap": "tools" },
+    { "slot": "evidence.knowledge", "wrap": "xml:article" },
+    { "slot": "evidence.tool_results", "wrap": "xml:observation" },
+    { "slot": "interaction.memory", "wrap": "xml:memory" },
+    { "slot": "interaction.query", "wrap": "xml:question" }
+  ],
+  "evaluation": { "status": "unevaluated", "suite": null, "date": null, "result": null, "artifact": null }
+}

@@ -419,8 +419,8 @@ Open:
 
 1. Done. Restructure: legacy deleted, layout created, `shared/` tooling and vendored contract, `docs/setup.md`, CI, W0 written with worksheet and run sheet.
 2. Done. W0, then W1. Together these are the half-day tutorial and the one-week-out talk material.
-3. W2 done; W9 module A next, since every later lab needs producers.
-4. W3a, then W4, W5. At this point the "migrate your app" one-day offering exists.
+3. Done. W2 and W9 module A.
+4. W3a next, then W4, W5. At this point the "migrate your app" one-day offering exists.
 5. W6, W7, then the first capstone (C2, the support router, is closest to Fernway).
 6. W8, W9 modules B and C, W10, W11.
 7. W3b and W9 module D, the two remaining capstones, and the Anthropic provider notes.

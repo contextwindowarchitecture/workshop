@@ -1,0 +1,166 @@
+{
+  "profile": {
+    "id": "account-assistant-messages",
+    "version": 1
+  },
+  "budget": {
+    "input": 3000,
+    "reserved_output": 800,
+    "margin_percent": 15
+  },
+  "result": {
+    "input_tokens": 482,
+    "hash": "8cbb607c7358d298cb734274328419eaf96945e55d89655dcc844e989a590295"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:instructions",
+      "tokens": 119,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.capabilities",
+      "item_id": "cap:get_account",
+      "tokens": 82,
+      "source_version": "account-assistant/v1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.capabilities",
+      "item_id": "cap:get_service_status",
+      "tokens": 70,
+      "source_version": "account-assistant/v1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.capabilities",
+      "item_id": "cap:list_members",
+      "tokens": 73,
+      "source_version": "account-assistant/v1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:1",
+      "tokens": 62,
+      "source_version": "1.2.0",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_ada:0005",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_ada:0007",
+      "tokens": 21,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:s_w9a:0001",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "mem:u_ada:0001",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mem:u_ada:0003",
+      "reason": "revoked",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mcp-cap:get_account",
+      "reason": "producer_slot_not_allowed",
+      "stage": "assembler",
+      "slot": "governance.capabilities"
+    },
+    {
+      "item_id": "mcp-cap:get_service_status",
+      "reason": "producer_slot_not_allowed",
+      "stage": "assembler",
+      "slot": "governance.capabilities"
+    },
+    {
+      "item_id": "mcp-cap:list_members",
+      "reason": "producer_slot_not_allowed",
+      "stage": "assembler",
+      "slot": "governance.capabilities"
+    },
+    {
+      "item_id": "help:plans@9#0",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:plans@9#1",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:plans@9#2",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:plans@9#3",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:plans@9#4",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:projects@4#3",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:refunds@4#1",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:refunds@4#2",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-01T10:00:00Z",
+    "route_policy_version": "w9a/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "582c0c25798919ad86828177e1fc61beb0756de0b4133ed16bc0997ff3cde873"
+  },
+  "defaults_filled": []
+}

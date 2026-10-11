@@ -1,0 +1,19 @@
+{
+  "route": "account-assistant",
+  "version": "w9a/v1",
+  "clock_skew_seconds": 5,
+  "producers": {
+    "app-policy": { "kind": "policy", "slots": ["governance.instructions"] },
+    "capability-policy": { "kind": "capability_policy", "slots": ["governance.capabilities"] },
+    "help-center-search": { "kind": "retrieval", "slots": ["evidence.knowledge"] },
+    "memory-store": { "kind": "memory", "slots": ["interaction.memory"] },
+    "fernway-accounts": { "kind": "mcp", "slots": ["evidence.tool_results"] },
+    "chat-session": { "kind": "interaction", "slots": ["interaction.query"] }
+  },
+  "slots": {
+    "evidence.knowledge": { "min_relevance": 1.5, "dedupe": "exact", "max_per_source": 3, "order_by": ["-relevance", "-freshness"] },
+    "evidence.tool_results": { "supersede": "source", "required_scope": ["tenant"], "order_by": ["-freshness"] },
+    "interaction.memory": { "source_prefix": "turn:", "required_scope": ["tenant", "user"], "order_by": ["-freshness"] },
+    "interaction.query": { "required_scope": ["session"] }
+  }
+}

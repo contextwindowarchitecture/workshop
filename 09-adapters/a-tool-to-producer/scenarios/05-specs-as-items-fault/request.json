@@ -1,0 +1,10 @@
+{
+  "user": "u_ada",
+  "question": "What plan are we on?",
+  "calls": [
+    "account"
+  ],
+  "faults": [
+    "specs-as-items"
+  ]
+}
