@@ -1,0 +1,9 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy, cite the evidence you use, and never promise a refund the tools have not confirmed.
+</governance.instructions>
+<state.user id="user:plan">
+plan=pro since 2026-09-01, seats=4, billing=monthly, region=eu
+</state.user>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

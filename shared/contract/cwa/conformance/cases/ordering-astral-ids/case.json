@@ -1,0 +1,11 @@
+{
+  "id": "ordering-astral-ids",
+  "rules": [
+    "R-3",
+    "R-16",
+    "R-21",
+    "R-22",
+    "R-23"
+  ],
+  "description": "Ids holding characters outside the Basic Multilingual Plane order by UTF-16 code units, not code points: in the payload, in admission and fitting rows, in defaults_filled, and in the id tie-break that decides which of two equally ranked items is shed."
+}

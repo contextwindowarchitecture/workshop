@@ -1,0 +1,69 @@
+{
+  "trace_id": "tokenizer-estimate-utf8",
+  "profile": {
+    "id": "tokenizer-estimate-utf8",
+    "version": 1
+  },
+  "budget": {
+    "input": 150,
+    "reserved_output": 1024,
+    "margin_percent": 20
+  },
+  "result": {
+    "input_tokens": 116,
+    "hash": "ab80692164867aa12cabec2f37ebaa26d614276dbfb9728e6e4070bfbebed920"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 14,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:1",
+      "tokens": 15,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 16,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 13,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "user:plan",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "state.user"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "tokenizer-estimate-utf8/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "24629386ef1a94f6cb9659d83c862847135ebdf3069b234d797ccb764676ebc0"
+  },
+  "defaults_filled": []
+}

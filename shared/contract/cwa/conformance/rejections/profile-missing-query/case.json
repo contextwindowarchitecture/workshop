@@ -1,0 +1,9 @@
+{
+  "id": "profile-missing-query",
+  "rules": [
+    "R-4",
+    "R-17",
+    "R-20"
+  ],
+  "description": "The profile does not place interaction.query, which every assembly needs."
+}

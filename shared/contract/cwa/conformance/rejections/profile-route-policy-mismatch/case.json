@@ -1,0 +1,8 @@
+{
+  "id": "profile-route-policy-mismatch",
+  "rules": [
+    "R-17",
+    "R-20"
+  ],
+  "description": "The profile expects route policy fixture/v2, and the snapshot carries fixture/v1."
+}

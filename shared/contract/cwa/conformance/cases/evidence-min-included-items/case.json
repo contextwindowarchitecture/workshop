@@ -1,0 +1,9 @@
+{
+  "id": "evidence-min-included-items",
+  "rules": [
+    "R-12",
+    "R-17",
+    "R-21"
+  ],
+  "description": "The profile places evidence.knowledge twice and the route asks for at least two knowledge items. One chunk is admitted and would render twice, but min_included counts items, not occurrences, so the route refuses with recovery request_context."
+}

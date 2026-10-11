@@ -1,0 +1,8 @@
+{
+  "id": "conflict-group-repeated-id",
+  "rules": [
+    "R-11",
+    "R-17"
+  ],
+  "description": "Two conflict groups share the id g1."
+}

@@ -1,0 +1,29 @@
+{
+  "spec": "cwa/draft",
+  "id": "fixture-three-slot",
+  "version": 1,
+  "route": "contract-fixture",
+  "model_family": null,
+  "route_policy_version": "fixture/v1",
+  "placement": [
+    {
+      "slot": "governance.instructions",
+      "wrap": "xml:governance.instructions"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "wrap": "xml:evidence.knowledge"
+    },
+    {
+      "slot": "interaction.query",
+      "wrap": "xml:interaction.query"
+    }
+  ],
+  "evaluation": {
+    "status": "unevaluated",
+    "suite": null,
+    "date": null,
+    "result": null,
+    "artifact": null
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "capability-policy-kind",
+  "rules": [
+    "R-15",
+    "R-21",
+    "R-22"
+  ],
+  "description": "The capability grant names a producer the route lists with kind policy, so its tool is excluded with capability_not_allowed although the allow-list names it: the route capability policy is the grant's producer listed with kind capability_policy."
+}

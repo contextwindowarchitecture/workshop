@@ -1,0 +1,36 @@
+{
+  "trace_id": "required-instructions-missing",
+  "profile": {
+    "id": "required-instructions-missing",
+    "version": 1
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "policy:v12",
+      "reason": "untrusted_in_governance",
+      "stage": "assembler",
+      "slot": "governance.instructions"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "required_slot_missing"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "required-instructions-missing/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "b2ecf2cf1afec02c6ad57a79b012885fa58f971c296fa416585fa52e43703844"
+  },
+  "defaults_filled": []
+}

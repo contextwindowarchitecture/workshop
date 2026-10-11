@@ -1,0 +1,10 @@
+{
+  "id": "dedupe-producer-reported",
+  "rules": [
+    "R-13",
+    "R-21",
+    "R-22",
+    "R-24"
+  ],
+  "description": "A retriever that dropped a near-duplicate reports it as duplicate_content at stage producer, naming the candidate it kept, and the trace carries that row as reported ahead of the assembler's rows; the kept candidate can still be removed later by the route's own exact dedupe."
+}

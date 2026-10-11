@@ -1,0 +1,369 @@
+[
+  {
+    "spec": "cwa/draft",
+    "id": "policy-first-chat",
+    "version": 1,
+    "route": "support-chat",
+    "model_family": null,
+    "route_policy_version": "illustrative/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "system"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:user_profile"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence"
+      },
+      {
+        "slot": "state.task",
+        "wrap": "xml:task"
+      },
+      {
+        "slot": "interaction.memory",
+        "wrap": "xml:memory"
+      },
+      {
+        "slot": "interaction.history",
+        "wrap": "xml:history"
+      },
+      {
+        "slot": "governance.capabilities",
+        "wrap": "tools"
+      },
+      {
+        "slot": "evidence.tool_results",
+        "wrap": "xml:observation"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "xml:examples"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:format"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  {
+    "spec": "cwa/draft",
+    "id": "document-analysis",
+    "version": 1,
+    "route": "document-qa",
+    "model_family": null,
+    "route_policy_version": "illustrative/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "system"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence"
+      },
+      {
+        "slot": "governance.instructions",
+        "wrap": "xml:instructions"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:user_profile"
+      },
+      {
+        "slot": "state.task",
+        "wrap": "xml:task"
+      },
+      {
+        "slot": "interaction.memory",
+        "wrap": "xml:memory"
+      },
+      {
+        "slot": "interaction.history",
+        "wrap": "xml:history"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "xml:examples"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:format"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  {
+    "spec": "cwa/draft",
+    "id": "long-context-reinforced",
+    "version": 1,
+    "route": "long-context-qa",
+    "model_family": null,
+    "route_policy_version": "illustrative/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "system"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence"
+      },
+      {
+        "slot": "evidence.tool_results",
+        "wrap": "xml:observation"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:user_profile"
+      },
+      {
+        "slot": "state.task",
+        "wrap": "xml:task"
+      },
+      {
+        "slot": "interaction.memory",
+        "wrap": "xml:memory"
+      },
+      {
+        "slot": "interaction.history",
+        "wrap": "xml:history"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:format"
+      },
+      {
+        "slot": "governance.instructions",
+        "wrap": "xml:instructions"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  {
+    "spec": "cwa/draft",
+    "id": "tool-agent",
+    "version": 1,
+    "route": "agent-loop",
+    "model_family": null,
+    "route_policy_version": "illustrative/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "system"
+      },
+      {
+        "slot": "governance.capabilities",
+        "wrap": "tools"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:user_profile"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence"
+      },
+      {
+        "slot": "interaction.memory",
+        "wrap": "xml:memory"
+      },
+      {
+        "slot": "interaction.history",
+        "wrap": "xml:history"
+      },
+      {
+        "slot": "state.task",
+        "wrap": "xml:task"
+      },
+      {
+        "slot": "evidence.tool_results",
+        "wrap": "xml:observation"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:format"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  {
+    "spec": "cwa/draft",
+    "id": "extraction",
+    "version": 1,
+    "route": "extract",
+    "model_family": null,
+    "route_policy_version": "illustrative/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "system"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:format"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:user_profile"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "xml:examples"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:format"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  {
+    "spec": "cwa/draft",
+    "id": "cache-first-chat",
+    "version": 1,
+    "route": "support-chat",
+    "model_family": null,
+    "route_policy_version": "illustrative/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "system"
+      },
+      {
+        "slot": "governance.capabilities",
+        "wrap": "tools"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "xml:examples"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:format"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:user_profile"
+      },
+      {
+        "slot": "interaction.memory",
+        "wrap": "xml:memory"
+      },
+      {
+        "slot": "interaction.history",
+        "wrap": "xml:history"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence"
+      },
+      {
+        "slot": "evidence.tool_results",
+        "wrap": "xml:observation"
+      },
+      {
+        "slot": "state.task",
+        "wrap": "xml:task"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  {
+    "spec": "cwa/draft",
+    "id": "fixture-three-slot",
+    "version": 1,
+    "route": "contract-fixture",
+    "model_family": null,
+    "route_policy_version": "fixture/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "xml:governance.instructions"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence.knowledge"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:interaction.query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  }
+]

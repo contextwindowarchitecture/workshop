@@ -1,0 +1,9 @@
+{
+  "id": "budget-protected-variants",
+  "rules": [
+    "R-16",
+    "R-18",
+    "R-21"
+  ],
+  "description": "Protected items are never compressed, even when they carry variants and a variant would make the payload fit: the instruction and the user fact the route raised to protected stay whole, and the knowledge item is compressed and then omitted instead."
+}

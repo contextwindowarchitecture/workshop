@@ -1,0 +1,11 @@
+{
+  "id": "evidence-precompute-summary",
+  "rules": [
+    "R-12",
+    "R-16",
+    "R-17",
+    "R-21",
+    "R-22"
+  ],
+  "description": "Fitting leaves fewer knowledge items than the route's min_included, and an omitted item had no variants, so the refusal recommends precompute_summary and keeps the fitting rows."
+}

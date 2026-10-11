@@ -1,0 +1,9 @@
+{
+  "id": "protected-over-cap",
+  "rules": [
+    "R-16",
+    "R-17",
+    "R-21"
+  ],
+  "description": "A protected item whose body exceeds its own token_budget refuses the assembly, although the payload fits budget.input; nothing is truncated or shed, and the knowledge item over its own cap gets no row."
+}

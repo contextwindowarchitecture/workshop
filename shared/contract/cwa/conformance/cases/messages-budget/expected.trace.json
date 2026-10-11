@@ -1,0 +1,81 @@
+{
+  "trace_id": "messages-budget",
+  "profile": {
+    "id": "messages-budget",
+    "version": 1
+  },
+  "budget": {
+    "input": 60,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 56,
+    "hash": "42c8242bbae0c4e69033fa84f68dde8c1608128cf0d98e327df4651da2c9d176"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 14,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:16",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:17",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "user:plan",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "state.user"
+    },
+    {
+      "item_id": "turn:14",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "interaction.history"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "messages-budget/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "2dd08321d873741f6bee389659ca544d6f518bb80a10cfaa2ba9a3a1d80b178f"
+  },
+  "defaults_filled": []
+}

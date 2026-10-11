@@ -1,0 +1,123 @@
+{
+  "governance.instructions": {
+    "plane": "gov",
+    "authority": "governing",
+    "tier": "protected",
+    "lineage": "verbatim",
+    "injection_risk": "none",
+    "conflict_policy": "governs",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "governance.capabilities": {
+    "plane": "gov",
+    "authority": "governing",
+    "tier": "protected",
+    "lineage": "verbatim",
+    "injection_risk": "none",
+    "conflict_policy": "governs",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "governance.examples": {
+    "plane": "gov",
+    "authority": "governing",
+    "tier": "droppable",
+    "lineage": "verbatim",
+    "injection_risk": "none",
+    "conflict_policy": "defers",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "governance.output_contract": {
+    "plane": "gov",
+    "authority": "governing",
+    "tier": "protected",
+    "lineage": "verbatim",
+    "injection_risk": "none",
+    "conflict_policy": "governs",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "state.user": {
+    "plane": "state",
+    "authority": "state",
+    "tier": "droppable",
+    "lineage": "extracted",
+    "injection_risk": "none",
+    "conflict_policy": "governs",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "state.task": {
+    "plane": "state",
+    "authority": "state",
+    "tier": "protected",
+    "lineage": "extracted",
+    "injection_risk": "none",
+    "conflict_policy": "governs",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "evidence.knowledge": {
+    "plane": "evid",
+    "authority": "reference_only",
+    "tier": "compressible",
+    "lineage": "verbatim",
+    "injection_risk": "untrusted_content",
+    "conflict_policy": "defers",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "evidence.tool_results": {
+    "plane": "evid",
+    "authority": "observation",
+    "tier": "compressible",
+    "lineage": "verbatim",
+    "injection_risk": "untrusted_content",
+    "conflict_policy": "governs",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "interaction.memory": {
+    "plane": "inter",
+    "authority": "generated",
+    "tier": "compressible",
+    "lineage": "summarised",
+    "injection_risk": "untrusted_content",
+    "conflict_policy": "defers",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "interaction.history": {
+    "plane": "inter",
+    "authority": "user",
+    "tier": "compressible",
+    "lineage": "verbatim",
+    "injection_risk": "untrusted_content",
+    "conflict_policy": "defers",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  },
+  "interaction.query": {
+    "plane": "inter",
+    "authority": "user",
+    "tier": "protected",
+    "lineage": "verbatim",
+    "injection_risk": "untrusted_content",
+    "conflict_policy": "defers",
+    "token_budget": null,
+    "variants": [],
+    "eligibility": "route-policy"
+  }
+}

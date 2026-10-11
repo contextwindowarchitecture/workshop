@@ -1,0 +1,9 @@
+{
+  "id": "messages-system-on-evidence",
+  "rules": [
+    "R-7",
+    "R-17",
+    "R-20"
+  ],
+  "description": "Under cwa-messages/v1 the profile puts evidence.knowledge in system, a platform role only governance slots may take."
+}

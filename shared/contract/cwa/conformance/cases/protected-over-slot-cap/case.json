@@ -1,0 +1,9 @@
+{
+  "id": "protected-over-slot-cap",
+  "rules": [
+    "R-16",
+    "R-17",
+    "R-21"
+  ],
+  "description": "A protected item within its own token_budget still refuses the assembly when its slot, placed twice, renders it past the route's max_tokens; the payload fits budget.input, and the knowledge slot over its own cap gets no row."
+}

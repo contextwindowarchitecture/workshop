@@ -1,0 +1,10 @@
+{
+  "id": "conflict-instruction-request-context",
+  "rules": [
+    "R-6",
+    "R-11",
+    "R-17",
+    "R-21"
+  ],
+  "description": "Two governing instructions both govern, so their group escalates, and the route's on_unresolved_instruction asks for more context: assembly refuses with conflict_unresolved and recovery.action request_context."
+}

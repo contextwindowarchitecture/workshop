@@ -1,0 +1,9 @@
+{
+  "id": "budget-route-tiers",
+  "rules": [
+    "R-16",
+    "R-18",
+    "R-21"
+  ],
+  "description": "The route raises state.user to protected and governance.examples to compressible: an item that volunteers droppable sheds first, the examples take variants instead of being dropped, and the user fact is never shed."
+}

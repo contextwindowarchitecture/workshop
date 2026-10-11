@@ -1,0 +1,21 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<interaction.history id="turn:9">
+I bought the Pro plan last week.
+</interaction.history>
+<interaction.history id="turn:10">
+Which order should I look at?
+</interaction.history>
+<interaction.history id="turn:12">
+Order 8821.
+</interaction.history>
+<interaction.history id="turn:11">
+Order 8821 is within the 30-day refund window.
+</interaction.history>
+<interaction.history id="turn:11b">
+Then please refund it.
+</interaction.history>
+<interaction.query id="turn:13">
+How long will the refund take?
+</interaction.query>

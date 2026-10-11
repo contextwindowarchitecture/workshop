@@ -1,0 +1,8 @@
+{
+  "id": "conflict-group-overlap",
+  "rules": [
+    "R-11",
+    "R-17"
+  ],
+  "description": "turn:18 belongs to two conflict groups; an item belongs to at most one."
+}

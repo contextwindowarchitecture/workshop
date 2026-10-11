@@ -1,0 +1,8 @@
+{
+  "id": "unpaired-surrogate",
+  "rules": [
+    "R-17",
+    "R-23"
+  ],
+  "description": "An item body ends in an unpaired surrogate, so the snapshot is not well-formed Unicode and has no digest."
+}

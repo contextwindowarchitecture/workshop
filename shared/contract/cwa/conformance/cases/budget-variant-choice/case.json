@@ -1,0 +1,9 @@
+{
+  "id": "budget-variant-choice",
+  "rules": [
+    "R-16",
+    "R-18",
+    "R-21"
+  ],
+  "description": "Once droppable items are gone, compressible items take variants lowest rank first: the longest variant that makes the payload fit, else the shortest; fitting stops before later slots are reached."
+}

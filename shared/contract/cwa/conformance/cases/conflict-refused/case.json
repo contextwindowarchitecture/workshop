@@ -1,0 +1,10 @@
+{
+  "id": "conflict-refused",
+  "rules": [
+    "R-6",
+    "R-11",
+    "R-17",
+    "R-21"
+  ],
+  "description": "An instruction group escalates to the default refuse and a fact group to request_context, so assembly refuses with conflict_unresolved and no recovery; decided groups and their exclusions stay in the trace."
+}

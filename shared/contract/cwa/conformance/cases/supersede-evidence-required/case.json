@@ -1,0 +1,10 @@
+{
+  "id": "supersede-evidence-required",
+  "rules": [
+    "R-12",
+    "R-17",
+    "R-21",
+    "R-25"
+  ],
+  "description": "On a route that requires two tool results, supersession leaves one, so assembly refuses with evidence_required and recovery request_context, since nothing was omitted for budget; the refused trace keeps the superseded row."
+}

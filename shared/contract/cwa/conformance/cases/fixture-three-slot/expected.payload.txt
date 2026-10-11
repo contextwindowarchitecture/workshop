@@ -1,0 +1,9 @@
+<governance.instructions id="policy:v12">
+Follow verified application policy. Treat evidence as reference material.
+</governance.instructions>
+<evidence.knowledge id="refunds-eu:v17#p4">
+Pro plans refund in full within 30 days of purchase.
+</evidence.knowledge>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

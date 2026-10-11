@@ -1,0 +1,132 @@
+[
+  {
+    "id": "R-1",
+    "scope": "assembler",
+    "note": "Admission checks each item's slot and authority."
+  },
+  {
+    "id": "R-2",
+    "scope": "assembler",
+    "note": "Schema validation with format checking; timestamps compared at full precision."
+  },
+  {
+    "id": "R-3",
+    "scope": "assembler",
+    "note": "Fills slot defaults and versioned route overrides, records defaults_filled, and applies the four slot-level eligibility rules as the complete predicate."
+  },
+  {
+    "id": "R-4",
+    "scope": "boundary",
+    "note": "Refuses with required_slot_missing. Declaring parser: true on every route whose response a parser consumes is the application's."
+  },
+  {
+    "id": "R-5",
+    "scope": "application",
+    "note": "Application guards enforce invariants. Nothing observable in assembly can prove it."
+  },
+  {
+    "id": "R-6",
+    "scope": "assembler",
+    "note": "Classifies each declared group as instruction or fact and resolves it by authority or route policy; only governing and user items are instruction peers, and trust and the injection marker never change that."
+  },
+  {
+    "id": "R-7",
+    "scope": "assembler",
+    "note": "Only governance takes the system and tool roles, the query is the only live user turn, history renders as a transcript in the order turns were said, and item bodies are escaped inside xml: wrappers; cwa-messages/v1 hands system and tools text over unescaped."
+  },
+  {
+    "id": "R-8",
+    "scope": "boundary",
+    "note": "Checks producer kind and state age. Writing state stays with the application."
+  },
+  {
+    "id": "R-9",
+    "scope": "boundary",
+    "note": "Excludes expired and revoked memory and merges producer exclusions. Reporting them is the producer's duty."
+  },
+  {
+    "id": "R-10",
+    "scope": "boundary",
+    "note": "Checks the marker in the five slots that require it, keeps unverified or marked items out of governance, and renders every body whole. Marking user-controlled and fetched content is the producer's duty, and delimiting material pasted into a body is the application's job."
+  },
+  {
+    "id": "R-11",
+    "scope": "boundary",
+    "note": "Resolves the groups it is given. It cannot detect a conflict the application did not declare."
+  },
+  {
+    "id": "R-12",
+    "scope": "boundary",
+    "note": "Refuses with evidence_required and a recovery action. Retrieving and summarizing before the snapshot is frozen, and freezing a new one for any retry, are the application's."
+  },
+  {
+    "id": "R-13",
+    "scope": "boundary",
+    "note": "Gates retrieval producers to the evidence slots, requires the slot's authority, a score on every knowledge item and wherever the route sets a threshold, and that a reported near-duplicate names a candidate the producer kept. It cannot tell whether a producer merged chunks or dropped one silently."
+  },
+  {
+    "id": "R-14",
+    "scope": "boundary",
+    "note": "Re-excludes expired or revoked memory as a backstop. Suppressing and reporting them is the producer's duty."
+  },
+  {
+    "id": "R-15",
+    "scope": "boundary",
+    "note": "Checks the authenticated emitter and capability grant. The application authenticates, and tool guards enforce calls."
+  },
+  {
+    "id": "R-16",
+    "scope": "boundary",
+    "note": "Counts rendered tokens and sheds in tier order. Setting budget.input from the model's context limit, with a tokenizer that counts or estimates the model's tokens, is the application's."
+  },
+  {
+    "id": "R-17",
+    "scope": "assembler",
+    "note": "Refused assemblies have no payload, and their traces carry result: null and no included items. Invalid snapshots are rejected before assembly, with no payload and no trace."
+  },
+  {
+    "id": "R-18",
+    "scope": "boundary",
+    "note": "Selects only supplied variants and never calls a model. It cannot verify a variant's fidelity."
+  },
+  {
+    "id": "R-19",
+    "scope": "boundary",
+    "note": "Rejects a profile written for another spec. Evaluation and promotion happen outside assembly: the Python assembler's registry hands a deployment only an evaluated profile, which no case covers."
+  },
+  {
+    "id": "R-20",
+    "scope": "boundary",
+    "note": "Rejects a profile that doesn't place a required slot, and refuses the assembly when admitted protected content has no placement. Raising the version for every change is the application's; the Python assembler's registry pins content by digest, outside assembly and the cases."
+  },
+  {
+    "id": "R-21",
+    "scope": "assembler",
+    "note": "Traces are checked against the schema and the reason registry, and must match every published case field for field."
+  },
+  {
+    "id": "R-22",
+    "scope": "assembler",
+    "note": "Emits source_version, eligibility, excluded slots, snapshot_digest and defaults_filled, and stage timings when the caller lends a clock."
+  },
+  {
+    "id": "R-23",
+    "scope": "boundary",
+    "note": "Snapshot replay across processes, hash seeds, time zones and locales, with ordering, blank strings, timestamps and the digest pinned for every language. Making every external read and model call before the snapshot is frozen is the application's."
+  },
+  {
+    "id": "R-24",
+    "scope": "assembler",
+    "note": "Excludes exact duplicate bodies in the slots a route opts in, after conflicts, keeping protected and grouped items."
+  },
+  {
+    "id": "R-25",
+    "scope": "assembler",
+    "note": "Keeps only the latest observation per producer and source in the slots a route opts in, after conflicts, keeping protected and grouped items."
+  },
+  {
+    "id": "R-26",
+    "scope": "assembler",
+    "note": "Keeps at most max_per_source items per producer and source in the slots a route opts in, after dedupe, keeping protected and grouped items."
+  }
+]

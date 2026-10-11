@@ -1,0 +1,45 @@
+{
+  "trace_id": "evidence-request-context",
+  "profile": {
+    "id": "evidence-request-context",
+    "version": 1
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:low",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:other",
+      "reason": "out_of_scope",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "evidence_required"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "evidence-request-context/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "0ce08e1e8e4c5ad3384cd7cb158464d9fb2db9e33af20fd891bf3f1b1357c26c"
+  },
+  "defaults_filled": [],
+  "recovery": {
+    "action": "request_context"
+  }
+}

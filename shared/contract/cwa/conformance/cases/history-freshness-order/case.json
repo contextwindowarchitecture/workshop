@@ -1,0 +1,7 @@
+{
+  "id": "history-freshness-order",
+  "rules": [
+    "R-7"
+  ],
+  "description": "History turns render in the order they were said, by freshness compared as instants at full precision, and by id only among turns said at the same instant, whatever order their ids sort in."
+}

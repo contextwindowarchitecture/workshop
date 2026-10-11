@@ -1,0 +1,8 @@
+{
+  "id": "superseded-by-unknown",
+  "rules": [
+    "R-9",
+    "R-17"
+  ],
+  "description": "A producer exclusion's superseded_by names an item that is not a candidate in its batch."
+}

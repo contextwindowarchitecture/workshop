@@ -1,0 +1,10 @@
+{
+  "id": "doubles-largest",
+  "rules": [
+    "R-2",
+    "R-13",
+    "R-17",
+    "R-22"
+  ],
+  "description": "Every number is read as the nearest double, up to the largest: 1797693134862315700E290 is the largest double, and 1.7976931348623158e308, above it by less than half a step, rounds to it rather than out of range, so the snapshot is valid and both pass min_relevance 1.7976931348623155e308, the double below, which a score equal to it also passes, while 1.7976931348623153e308 is below_threshold."
+}

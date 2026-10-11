@@ -1,0 +1,68 @@
+{
+  "trace_id": "conflict-refused",
+  "profile": {
+    "id": "conflict-refused",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:fee",
+      "reason": "conflict_lost",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [
+    {
+      "group_id": "f-fee",
+      "kind": "fact",
+      "items": [
+        "kb:fee",
+        "obs:fee"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "obs:fee"
+    },
+    {
+      "group_id": "f-window",
+      "kind": "fact",
+      "items": [
+        "kb:window-1",
+        "kb:window-2"
+      ],
+      "decided_by": "escalated",
+      "resolution": "context_requested"
+    },
+    {
+      "group_id": "g-cite",
+      "kind": "instruction",
+      "items": [
+        "policy:nocite",
+        "policy:v12"
+      ],
+      "decided_by": "escalated",
+      "resolution": "refused"
+    }
+  ],
+  "refused": {
+    "bool": true,
+    "reason": "conflict_unresolved"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "conflict-refused/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "03ae8585f565f376f621a46093a2accb4f55cf56233588dd178477845585a350"
+  },
+  "defaults_filled": []
+}

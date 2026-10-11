@@ -1,0 +1,10 @@
+{
+  "id": "diversity-evidence-required",
+  "rules": [
+    "R-12",
+    "R-17",
+    "R-21",
+    "R-26"
+  ],
+  "description": "On a route that requires two knowledge items, a cap of one per source leaves one, so assembly refuses with evidence_required and recovery request_context, since nothing was omitted for budget; the refused trace keeps the source_diversity_cap row."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "evidence-cap-omitted",
+  "rules": [
+    "R-12",
+    "R-16",
+    "R-17",
+    "R-21",
+    "R-22"
+  ],
+  "description": "An evidence item omitted for exceeding its own token_budget counts as omitted for budget: the route requires evidence, the only knowledge item has no variant within its cap, so the cap step omits it although the payload fits, and the refusal recommends precompute_summary and keeps the over_budget row."
+}

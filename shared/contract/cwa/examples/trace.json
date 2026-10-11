@@ -1,0 +1,60 @@
+{
+  "trace_id": "example-assembly",
+  "profile": {
+    "id": "fixture-three-slot",
+    "version": 1
+  },
+  "budget": {
+    "input": 8192,
+    "reserved_output": 1200
+  },
+  "result": {
+    "input_tokens": 34,
+    "hash": "4cf0b083e167bb952c1ba0f9a93bf3ed3c64b178c063c259b49cdace1b86972f"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 9,
+      "source_version": "v12",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "refunds-eu:v17#p4",
+      "tokens": 10,
+      "source_version": "2026-09-10",
+      "eligibility": "support-chat/illustrative/v1: tenant acme; rerank at least 0.5"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "memory:expired",
+      "reason": "expired",
+      "stage": "producer"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "fixture/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "7d71a873c4b6baafcf26f7ae8f74b75bedf27a2e77a859ff5729e6b658776cb6"
+  },
+  "defaults_filled": []
+}

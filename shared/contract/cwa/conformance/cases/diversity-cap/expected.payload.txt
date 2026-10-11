@@ -1,0 +1,30 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<evidence.knowledge id="kb:a1-copy">
+Pro plans refund in full within 30 days.
+</evidence.knowledge>
+<evidence.knowledge id="kb:a2">
+Annual plans refund pro rata.
+</evidence.knowledge>
+<evidence.knowledge id="kb:b1">
+Invoices are issued monthly.
+</evidence.knowledge>
+<evidence.knowledge id="wiki:a1">
+Refund requests need the order number.
+</evidence.knowledge>
+<evidence.knowledge id="wiki:a2">
+Gift cards are not refundable.
+</evidence.knowledge>
+<evidence.tool_results id="obs:1">
+order 42: processing
+</evidence.tool_results>
+<evidence.tool_results id="obs:2">
+order 42: packed
+</evidence.tool_results>
+<evidence.tool_results id="obs:3">
+order 42: shipped
+</evidence.tool_results>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

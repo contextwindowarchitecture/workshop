@@ -1,0 +1,8 @@
+{
+  "id": "profile-invalid-tag",
+  "rules": [
+    "R-17",
+    "R-20"
+  ],
+  "description": "The profile wraps evidence.knowledge as xml:1evidence, and an xml: tag must start with a letter or underscore."
+}

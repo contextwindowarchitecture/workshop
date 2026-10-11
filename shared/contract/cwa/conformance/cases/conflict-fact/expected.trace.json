@@ -1,0 +1,247 @@
+{
+  "trace_id": "conflict-fact",
+  "profile": {
+    "id": "conflict-fact",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 124,
+    "hash": "b7a074a6aca0d970440ad59178a1450703558f73a7038b82cdab1c8917eaa2b5"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.task",
+      "item_id": "task:8821",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:channel-1",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:limit",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:price-1",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:price-2",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:status",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:window",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "wiki:channel-2",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:fee-b",
+      "tokens": 3,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:method-b",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:stage",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:limit-old",
+      "reason": "expired",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:fee",
+      "reason": "conflict_lost",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "obs:fee-a",
+      "reason": "conflict_lost",
+      "stage": "assembler",
+      "slot": "evidence.tool_results"
+    },
+    {
+      "item_id": "obs:method-a",
+      "reason": "conflict_lost",
+      "stage": "assembler",
+      "slot": "evidence.tool_results"
+    },
+    {
+      "item_id": "obs:status",
+      "reason": "conflict_lost",
+      "stage": "assembler",
+      "slot": "evidence.tool_results"
+    },
+    {
+      "item_id": "wiki:window",
+      "reason": "conflict_lost",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [
+    {
+      "group_id": "f-freshness",
+      "kind": "fact",
+      "items": [
+        "kb:fee",
+        "obs:fee-a",
+        "obs:fee-b"
+      ],
+      "decided_by": "freshness",
+      "resolution": "resolved",
+      "winner": "obs:fee-b"
+    },
+    {
+      "group_id": "f-ineligible",
+      "kind": "fact",
+      "items": [
+        "kb:channel-1",
+        "wiki:channel-2"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    },
+    {
+      "group_id": "f-moot",
+      "kind": "fact",
+      "items": [
+        "kb:limit",
+        "kb:limit-old"
+      ],
+      "decided_by": "moot",
+      "resolution": "moot"
+    },
+    {
+      "group_id": "f-precedence",
+      "kind": "fact",
+      "items": [
+        "kb:window",
+        "wiki:window"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "kb:window"
+    },
+    {
+      "group_id": "f-protected",
+      "kind": "fact",
+      "items": [
+        "obs:stage",
+        "task:8821"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    },
+    {
+      "group_id": "f-scope",
+      "kind": "fact",
+      "items": [
+        "kb:status",
+        "obs:status"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "kb:status"
+    },
+    {
+      "group_id": "f-tie",
+      "kind": "fact",
+      "items": [
+        "kb:price-1",
+        "kb:price-2"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    },
+    {
+      "group_id": "f-trust-blind",
+      "kind": "fact",
+      "items": [
+        "obs:method-a",
+        "obs:method-b"
+      ],
+      "decided_by": "freshness",
+      "resolution": "resolved",
+      "winner": "obs:method-b"
+    }
+  ],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "conflict-fact/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "28e3d24764b1437c6fc32e8951353326c5ec17d6a75ff9c6ba2ca0370e64031b"
+  },
+  "defaults_filled": []
+}

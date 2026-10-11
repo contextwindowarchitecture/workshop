@@ -1,0 +1,18 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<state.user id="user:plan">
+plan=pro since 2026-09-01
+</state.user>
+<state.user id="user:plan-sync">
+plan=pro since 2026-09-01
+</state.user>
+<evidence.knowledge id="kb:fee">
+Refunds carry no processing fee.
+</evidence.knowledge>
+<evidence.knowledge id="kb:window">
+Refunds are accepted within 30 days of purchase.
+</evidence.knowledge>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

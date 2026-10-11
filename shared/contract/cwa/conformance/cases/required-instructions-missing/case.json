@@ -1,0 +1,10 @@
+{
+  "id": "required-instructions-missing",
+  "rules": [
+    "R-4",
+    "R-10",
+    "R-17",
+    "R-21"
+  ],
+  "description": "When the only governance.instructions item fails admission, assembly refuses with required_slot_missing although the query is there and everything fits."
+}

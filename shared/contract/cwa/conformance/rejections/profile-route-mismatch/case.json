@@ -1,0 +1,8 @@
+{
+  "id": "profile-route-mismatch",
+  "rules": [
+    "R-17",
+    "R-20"
+  ],
+  "description": "The profile is for route another-route, and the route policy for contract-fixture."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "render-attribute-escaping",
+  "rules": [
+    "R-11",
+    "R-21"
+  ],
+  "description": "fixture-xml/v1 escapes &, < and > everywhere and \" as well in attribute values: an item id and a surfaced group id holding all four render escaped in id and conflict, while the trace records them as given and a body's quotes stay as they are."
+}

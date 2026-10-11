@@ -1,0 +1,8 @@
+{
+  "id": "producer-in-two-batches",
+  "rules": [
+    "R-15",
+    "R-17"
+  ],
+  "description": "Two batches name the same producer, policy-registry; a batch is one authenticated producer's output for the call."
+}

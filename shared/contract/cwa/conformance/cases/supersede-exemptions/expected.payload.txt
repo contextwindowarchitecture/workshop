@@ -1,0 +1,21 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<state.user id="user:plan-new">
+plan=pro
+</state.user>
+<state.user id="user:plan-old">
+plan=basic
+</state.user>
+<evidence.tool_results id="obs:ship-new">
+shipment 1: in transit
+</evidence.tool_results>
+<evidence.tool_results id="obs:status-new">
+order 42 status: shipped
+</evidence.tool_results>
+<evidence.tool_results id="obs:status-old">
+order 42 status: packed
+</evidence.tool_results>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

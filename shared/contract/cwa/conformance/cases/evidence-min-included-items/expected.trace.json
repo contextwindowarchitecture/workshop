@@ -1,0 +1,32 @@
+{
+  "trace_id": "evidence-min-included-items",
+  "profile": {
+    "id": "evidence-min-included-items",
+    "version": 1
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "evidence_required"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "evidence-min-included-items/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "5f600ca561f559be54d03b50564d275a235c99bc2dca34bbb169b719bbc0eb27"
+  },
+  "defaults_filled": [],
+  "recovery": {
+    "action": "request_context"
+  }
+}

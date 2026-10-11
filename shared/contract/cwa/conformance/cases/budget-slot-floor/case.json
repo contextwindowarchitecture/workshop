@@ -1,0 +1,9 @@
+{
+  "id": "budget-slot-floor",
+  "rules": [
+    "R-16",
+    "R-18",
+    "R-21"
+  ],
+  "description": "Budget pressure never leaves a slot below the route's min_tokens: a droppable example its floor holds stays while knowledge is compressed, and history, whose oldest turn would take it below its floor, freezes, so its small newer turn stays although omitting it alone would have kept the floor."
+}

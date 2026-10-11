@@ -1,0 +1,76 @@
+{
+  "trace_id": "budget-margin",
+  "profile": {
+    "id": "budget-margin",
+    "version": 1
+  },
+  "budget": {
+    "input": 60,
+    "reserved_output": 1024,
+    "margin_percent": 10
+  },
+  "result": {
+    "input_tokens": 52,
+    "hash": "38b03700c8c1ef70b42cc7348a05c4c7d121aa0b98b031de6bf291489999d871"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:1",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:2",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "user:plan",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "state.user"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "budget-margin/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "5727671adb84a648736df0c0f63df8d798be1e7dc2fc2f03b62286e0dd13030b"
+  },
+  "defaults_filled": []
+}

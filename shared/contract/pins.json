@@ -1,0 +1,9 @@
+{
+  "_comment": "The release each sibling should be at. Pin to a release, never to a branch; move every pin together and re-vendor shared/contract/ in the same commit.",
+  "contextwindowarchitecture": {"ref": "c252494af79720d23c95d54c0cf9c638d3e43557", "why": "the spec commit assembler-python's draft-release vendors"},
+  "assembler-python": {"ref": "draft-release", "why": "the tag the examples pin"},
+  "assembler-demo": {"ref": "main", "why": "no release yet; move to a tag when one exists"},
+  "examples": {"ref": "main", "why": "no release yet; move to a tag when one exists"},
+  "website": {"ref": "main", "why": "optional; the live site is equivalent"},
+  "integrations": {"ref": "main", "why": "W9 module D only"}
+}

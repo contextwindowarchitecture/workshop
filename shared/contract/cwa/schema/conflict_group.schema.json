@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contextwindowarchitecture.io/schema/conflict_group.schema.json",
+  "title": "CWA conflict group",
+  "description": "An application-declared conflict among items. The assembler resolves declared groups; it never discovers contradictions by interpreting prose. Every item id must name a candidate or producer exclusion in the snapshot, an item belongs to at most one group, and a fact group's fact must be a key of the route policy's facts; a snapshot that breaks these is rejected before assembly.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "kind",
+    "items"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "instruction",
+        "fact"
+      ]
+    },
+    "fact": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]",
+      "description": "Route-policy key identifying the fact in dispute; required for fact groups."
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+      },
+      "minItems": 2,
+      "uniqueItems": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "fact"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "fact"
+        ],
+        "properties": {
+          "fact": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          }
+        }
+      }
+    }
+  ]
+}

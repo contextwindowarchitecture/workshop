@@ -1,0 +1,11 @@
+{
+  "id": "budget-token-caps",
+  "rules": [
+    "R-3",
+    "R-16",
+    "R-18",
+    "R-21",
+    "R-22"
+  ],
+  "description": "Items over their token_budget are reduced before shedding: a compressible item takes its longest variant within the cap or is omitted, a droppable item is omitted; budget pressure then takes a still shorter variant, and from counts the original body."
+}

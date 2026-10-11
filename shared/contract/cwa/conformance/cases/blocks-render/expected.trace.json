@@ -1,0 +1,131 @@
+{
+  "trace_id": "blocks-render",
+  "profile": {
+    "id": "blocks-render",
+    "version": 1
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 97,
+    "hash": "e4e9a4e2cbbcbf01459e9a15f175b16d86ad9be4f843cc9c4d60e8886081b6a5"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:cite",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:nocite",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 14,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.capabilities",
+      "item_id": "cap:issue_refund",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:casual",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:formal",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "user:plan",
+      "tokens": 2,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:inject",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:16",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:17",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [
+    {
+      "group_id": "g-cite",
+      "kind": "instruction",
+      "items": [
+        "policy:cite",
+        "policy:nocite"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    },
+    {
+      "group_id": "g-register",
+      "kind": "instruction",
+      "items": [
+        "ex:casual",
+        "ex:formal"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    }
+  ],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "blocks-render/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "cwa-message-blocks/v1",
+    "snapshot_digest": "fd5f8925ba661c5fbc580319f8c280d56d0f0c4785ae03a13eda239ad55727d0"
+  },
+  "defaults_filled": []
+}

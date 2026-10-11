@@ -1,0 +1,9 @@
+{
+  "id": "profile-missing-output-contract",
+  "rules": [
+    "R-4",
+    "R-17",
+    "R-20"
+  ],
+  "description": "The route sets parser: true, and the profile does not place governance.output_contract."
+}

@@ -1,0 +1,15 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<governance.output_contract id="contract:json">
+Answer as JSON with fields decision and citations.
+</governance.output_contract>
+<evidence.knowledge id="kb:a">
+Pro: full refund within 30 days.
+</evidence.knowledge>
+<interaction.history id="turn:16">
+Support said seats cannot be changed mid-cycle.
+</interaction.history>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

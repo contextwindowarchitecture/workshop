@@ -1,0 +1,40 @@
+{
+  "trace_id": "supersede-evidence-required",
+  "profile": {
+    "id": "supersede-evidence-required",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "obs:order-1",
+      "reason": "superseded",
+      "stage": "assembler",
+      "slot": "evidence.tool_results",
+      "superseded_by": "obs:order-2"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "evidence_required"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "supersede-evidence-required/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "c58efd455e7c29938f2d5b01126127cceac3a61c5a7cc08747625200ac53d160"
+  },
+  "defaults_filled": [],
+  "recovery": {
+    "action": "request_context"
+  }
+}

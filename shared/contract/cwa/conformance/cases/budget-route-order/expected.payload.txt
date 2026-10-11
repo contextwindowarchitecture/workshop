@@ -1,0 +1,15 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<evidence.knowledge id="kb:new">
+Since September, Pro plans refund in full within thirty days of purchase.
+</evidence.knowledge>
+<interaction.history id="turn:17">
+I bought the Pro plan on the first of September.
+</interaction.history>
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

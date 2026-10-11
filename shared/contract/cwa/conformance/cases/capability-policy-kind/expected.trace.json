@@ -1,0 +1,54 @@
+{
+  "trace_id": "capability-policy-kind",
+  "profile": {
+    "id": "capability-kind-fixture",
+    "version": 1
+  },
+  "budget": {
+    "input": 8192,
+    "reserved_output": 1200
+  },
+  "result": {
+    "input_tokens": 16,
+    "hash": "96a3388c84665d9766395cc311a3b48b5124e35b16851e5daa86eb3c819b196c"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "cap:issue_refund",
+      "reason": "capability_not_allowed",
+      "stage": "assembler",
+      "slot": "governance.capabilities"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "capability-kind/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "7381359c1ffb92467cc06bd236e8044d9c2669e3fafd974037482610cbbdae2f"
+  },
+  "defaults_filled": []
+}

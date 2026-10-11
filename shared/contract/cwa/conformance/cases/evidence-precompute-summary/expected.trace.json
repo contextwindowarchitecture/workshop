@@ -1,0 +1,45 @@
+{
+  "trace_id": "evidence-precompute-summary",
+  "profile": {
+    "id": "evidence-precompute-summary",
+    "version": 1
+  },
+  "budget": {
+    "input": 40,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:c",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:b",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "evidence_required"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "evidence-precompute-summary/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "87b48893e78fe10ba3a71d2b0bef1f968f42cc8c0e7a1722a733a7ffc8b90fd2"
+  },
+  "defaults_filled": [],
+  "recovery": {
+    "action": "precompute_summary"
+  }
+}

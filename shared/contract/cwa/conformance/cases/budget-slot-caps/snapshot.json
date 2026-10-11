@@ -1,0 +1,393 @@
+{
+  "assembly_time": "2026-09-22T12:00:00Z",
+  "scope": {
+    "tenant": "acme",
+    "user": "u_91",
+    "session": "s_7",
+    "task": "refund_request"
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "profile": {
+    "spec": "cwa/draft",
+    "id": "budget-slot-caps",
+    "version": 1,
+    "route": "support-chat",
+    "model_family": null,
+    "route_policy_version": "budget-slot-caps/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "xml:governance.instructions"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "xml:governance.examples"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:governance.output_contract"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:state.user"
+      },
+      {
+        "slot": "state.task",
+        "wrap": "xml:state.task"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence.knowledge"
+      },
+      {
+        "slot": "evidence.tool_results",
+        "wrap": "xml:evidence.tool_results"
+      },
+      {
+        "slot": "interaction.memory",
+        "wrap": "xml:interaction.memory"
+      },
+      {
+        "slot": "interaction.history",
+        "wrap": "xml:interaction.history"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:interaction.query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  "route_policy": {
+    "route": "support-chat",
+    "version": "budget-slot-caps/v1",
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.examples",
+          "governance.instructions",
+          "governance.output_contract"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.task",
+          "state.user"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "crm-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.5,
+        "required_scope": [
+          "tenant"
+        ],
+        "max_tokens": 12
+      },
+      "interaction.history": {
+        "max_tokens": 13,
+        "priority": -1,
+        "order_by": [
+          "-freshness"
+        ]
+      }
+    },
+    "fitting_order": [
+      {
+        "slot": "interaction.history",
+        "action": "omit"
+      }
+    ]
+  },
+  "tokenizer": "fixture-whitespace/v1",
+  "renderer": "fixture-xml/v1",
+  "batches": [
+    {
+      "producer": {
+        "id": "conversation",
+        "kind": "interaction"
+      },
+      "items": [
+        {
+          "id": "turn:15",
+          "slot": "interaction.history",
+          "source": "src:turn:15",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:52:00Z",
+          "body": "We upgraded to Pro two weeks ago but the seats are wrong.",
+          "token_budget": null,
+          "variants": [
+            {
+              "id": "turn:15~sum",
+              "body": "User upgraded to Pro; seats wrong.",
+              "method": "summary",
+              "lineage": "extracted"
+            }
+          ],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        },
+        {
+          "id": "turn:16",
+          "slot": "interaction.history",
+          "source": "src:turn:16",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:54:00Z",
+          "body": "Support said seats cannot be changed mid-cycle.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        },
+        {
+          "id": "turn:18",
+          "slot": "interaction.query",
+          "source": "src:turn:18",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Can I refund my Pro plan?",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-corpus",
+        "kind": "retrieval"
+      },
+      "items": [
+        {
+          "id": "kb:a",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:a",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Pro plans refund in full within thirty days of purchase when no prior refund was issued.",
+          "token_budget": 12,
+          "variants": [
+            {
+              "id": "kb:a~mid",
+              "body": "Pro plans refund in full within thirty days of purchase.",
+              "method": "extract",
+              "lineage": "extracted"
+            },
+            {
+              "id": "kb:a~short",
+              "body": "Pro: full refund, 30 days.",
+              "method": "extract",
+              "lineage": "extracted"
+            }
+          ],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.9
+        },
+        {
+          "id": "kb:b",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:b",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Annual plans refund pro rata for unused months, less any discount applied at purchase time.",
+          "token_budget": null,
+          "variants": [
+            {
+              "id": "kb:b~mid",
+              "body": "Annual plans refund pro rata for unused months.",
+              "method": "extract",
+              "lineage": "extracted"
+            },
+            {
+              "id": "kb:b~short",
+              "body": "Annual: pro rata.",
+              "method": "extract",
+              "lineage": "extracted"
+            }
+          ],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.7
+        },
+        {
+          "id": "kb:faq",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:faq",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Refunds are issued to the original payment method within ten business days.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.95,
+          "tier": "droppable"
+        },
+        {
+          "id": "kb:gift",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:gift",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Gift cards are not refundable.",
+          "token_budget": 3,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.6
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-registry",
+        "kind": "policy"
+      },
+      "items": [
+        {
+          "id": "policy:v12",
+          "slot": "governance.instructions",
+          "source": "src:policy:v12",
+          "source_version": "1",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Follow verified refund policy and cite the evidence you use.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none"
+        },
+        {
+          "id": "ex:1",
+          "slot": "governance.examples",
+          "source": "src:ex:1",
+          "source_version": "1",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Example: refunds within thirty days are approved.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "state-svc",
+        "kind": "state"
+      },
+      "items": [
+        {
+          "id": "user:plan",
+          "slot": "state.user",
+          "source": "src:user:plan",
+          "source_version": "1",
+          "authority": "state",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "plan=pro since 2026-09-01",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "extracted",
+          "eligibility": "route-policy",
+          "injection_risk": "none",
+          "scope": {
+            "tenant": "acme",
+            "user": "u_91"
+          }
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "conflicts": []
+}

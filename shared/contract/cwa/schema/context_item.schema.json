@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contextwindowarchitecture.io/schema/context_item.schema.json",
+  "title": "CWA context item",
+  "description": "CWA draft item structure. Admission additionally requires authenticated producer identity, route policy, scope, and an explicit assembly clock.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "slot",
+    "source",
+    "source_version",
+    "authority",
+    "trust",
+    "freshness",
+    "body"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "slot": {
+      "type": "string",
+      "enum": [
+        "governance.instructions",
+        "governance.capabilities",
+        "governance.examples",
+        "governance.output_contract",
+        "state.user",
+        "state.task",
+        "evidence.knowledge",
+        "evidence.tool_results",
+        "interaction.memory",
+        "interaction.history",
+        "interaction.query"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "source_version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "authority": {
+      "type": "string",
+      "enum": [
+        "governing",
+        "user",
+        "state",
+        "reference_only",
+        "observation",
+        "generated",
+        "untrusted"
+      ]
+    },
+    "trust": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "unverified",
+        "untrusted"
+      ]
+    },
+    "freshness": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}[Tt]([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?([Zz]|[+-]([01][0-9]|2[0-3]):[0-5][0-9])(?![\\s\\S])",
+      "description": "When it was true (as_of)"
+    },
+    "expires": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}[Tt]([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?([Zz]|[+-]([01][0-9]|2[0-3]):[0-5][0-9])(?![\\s\\S])",
+      "description": "When it must be revalidated; expired items are excluded, not aged silently"
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "tenant": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        },
+        "user": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        },
+        "session": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        },
+        "task": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        },
+        "locale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        },
+        "step": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "eligibility": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]",
+      "description": "Human-readable admission rule description. Never evaluate this string as code; the route owns the executable predicate. It is never blank, since the trace repeats it for every included occurrence (R-22)."
+    },
+    "token_budget": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Cap on the tokens of the item's rendered body in each occurrence (R-3, R-16). An item over its cap is reduced before shedding: a compressible item to a supplied variant within the cap, otherwise it is omitted, and a protected item over its cap refuses the assembly. Null sets no per-item cap; budget.input still bounds the item."
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "protected",
+        "compressible",
+        "droppable"
+      ]
+    },
+    "conflict_policy": {
+      "type": "string",
+      "enum": [
+        "defers",
+        "governs",
+        "escalate"
+      ]
+    },
+    "injection_risk": {
+      "type": "string",
+      "enum": [
+        "none",
+        "untrusted_content"
+      ]
+    },
+    "lineage": {
+      "type": "string",
+      "enum": [
+        "verbatim",
+        "summarised",
+        "redacted",
+        "translated",
+        "extracted",
+        "generated"
+      ]
+    },
+    "body": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          },
+          "body": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          },
+          "method": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          },
+          "lineage": {
+            "type": "string",
+            "enum": [
+              "verbatim",
+              "summarised",
+              "redacted",
+              "translated",
+              "extracted",
+              "generated"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "body",
+          "method",
+          "lineage"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "relevance": {
+      "type": "number",
+      "description": "Finite rerank score; the scale and threshold belong to versioned route policy. Required in evidence.knowledge (R-13)."
+    },
+    "revoked_by": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "slot"
+        ],
+        "properties": {
+          "slot": {
+            "const": "interaction.memory"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "expires"
+        ],
+        "properties": {
+          "expires": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}[Tt]([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?([Zz]|[+-]([01][0-9]|2[0-3]):[0-5][0-9])(?![\\s\\S])",
+            "description": "When it must be revalidated; expired items are excluded, not aged silently"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "slot"
+        ],
+        "properties": {
+          "slot": {
+            "const": "evidence.knowledge"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "relevance"
+        ],
+        "properties": {
+          "relevance": {
+            "type": "number",
+            "description": "Finite rerank score; the scale and threshold belong to versioned route policy. Required in evidence.knowledge (R-13)."
+          }
+        }
+      }
+    }
+  ]
+}

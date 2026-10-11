@@ -1,0 +1,123 @@
+{
+  "trace_id": "diversity-cap",
+  "profile": {
+    "id": "diversity-cap",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 83,
+    "hash": "a8e1a4ca869474edfd0f69f6c2eeab418db8e9210df19b8fa5461844a8e3f4be"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a1-copy",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a2",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:b1",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "wiki:a1",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "wiki:a2",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:1",
+      "tokens": 3,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:2",
+      "tokens": 3,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:3",
+      "tokens": 3,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:a1",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.knowledge",
+      "duplicate_of": "kb:a1-copy"
+    },
+    {
+      "item_id": "kb:a3",
+      "reason": "source_diversity_cap",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:a4",
+      "reason": "source_diversity_cap",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "diversity-cap/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "a56986bdbca68bc1d3d913755053ea2ed8101538279e63745d6b5b5bc7a09b1d"
+  },
+  "defaults_filled": []
+}

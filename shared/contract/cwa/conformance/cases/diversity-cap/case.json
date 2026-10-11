@@ -1,0 +1,12 @@
+{
+  "id": "diversity-cap",
+  "rules": [
+    "R-13",
+    "R-15",
+    "R-21",
+    "R-22",
+    "R-24",
+    "R-26"
+  ],
+  "description": "A slot capped at two items per producer and source keeps each document's two highest-ranked chunks, after deduplication so a duplicate never takes a place; another producer's chunks from the same source are counted apart, a one-chunk document is untouched, and an uncapped slot keeps every item."
+}

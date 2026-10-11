@@ -1,0 +1,78 @@
+{
+  "trace_id": "messages-repeated-slot",
+  "profile": {
+    "id": "messages-repeated-slot",
+    "version": 1
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 65,
+    "hash": "fc987adf7e260862807dcd9c5e2795987ea8b61a354d9ea294af90aa5cf9851b"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 22,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:qa",
+      "tokens": 9,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:qa",
+      "tokens": 11,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:qa",
+      "from": 24,
+      "to": 9,
+      "method": "extract",
+      "variant_id": "ex:qa~short"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:qa",
+      "from": 31,
+      "to": 11,
+      "method": "extract",
+      "variant_id": "ex:qa~short"
+    }
+  ],
+  "excluded": [],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "messages-repeated-slot/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "f59fc2d28188e6806644b56f9a016a771196477c7e082f684af95e73c3f409ae"
+  },
+  "defaults_filled": []
+}

@@ -1,0 +1,9 @@
+{
+  "id": "blocks-budget",
+  "rules": [
+    "R-7",
+    "R-16",
+    "R-21"
+  ],
+  "description": "Under cwa-message-blocks/v1 the payload's size is the sum of the counts of every system, tool and message entry. estimate-utf8/v1 rounds each entry up, so that sum exceeds the count of the same text as one string: the joined text would fit once the droppable profile and the two oldest turns are shed, but the entries need the next-oldest turn shed as well. The route's lowest priority puts history first."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "batch-entry-not-object",
+  "rules": [
+    "R-2",
+    "R-17"
+  ],
+  "description": "A batch holds null beside its items. An entry that is not a JSON object is not an item, so the snapshot fails its schema rather than admission excluding it."
+}

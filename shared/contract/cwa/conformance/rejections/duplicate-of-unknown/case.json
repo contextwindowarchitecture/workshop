@@ -1,0 +1,8 @@
+{
+  "id": "duplicate-of-unknown",
+  "rules": [
+    "R-13",
+    "R-17"
+  ],
+  "description": "A producer exclusion's duplicate_of names an item that is not a candidate in its batch."
+}

@@ -1,0 +1,378 @@
+{
+  "trace_id": "example-messages-assembly",
+  "profile": {
+    "id": "policy-first-chat",
+    "version": 1
+  },
+  "budget": {
+    "input": 8192,
+    "reserved_output": 1200,
+    "margin_percent": 15
+  },
+  "result": {
+    "input_tokens": 272,
+    "hash": "b8e42c7b290b25bc8461ba76b85ba68b808a33c2d4684c7c3d82fe80b9ffde09"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 24,
+      "source_version": "v12",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "user:profile",
+      "tokens": 9,
+      "source_version": "31",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "billing-faq:v3#p1",
+      "tokens": 12,
+      "source_version": "v3",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "refunds-eu:v17#p4",
+      "tokens": 13,
+      "source_version": "v17",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.task",
+      "item_id": "task:refund_request",
+      "tokens": 14,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:plan-purchase",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:16",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:17",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.capabilities",
+      "item_id": "tool:issue_refund",
+      "tokens": 21,
+      "source_version": "v3",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.capabilities",
+      "item_id": "tool:lookup_order",
+      "tokens": 16,
+      "source_version": "v3",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:order-8821",
+      "tokens": 16,
+      "source_version": "rev-41",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.output_contract",
+      "item_id": "format:chat",
+      "tokens": 9,
+      "source_version": "v12",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "illustrative/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "c4efedf3742c29e801a4acd552d5fc70aee75d69dd1487449a97e46a07f865c6"
+  },
+  "defaults_filled": [
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "variants"
+    },
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "lineage"
+    },
+    {
+      "item_id": "billing-faq:v3#p1",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "variants"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "lineage"
+    },
+    {
+      "item_id": "format:chat",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "mem:plan-purchase",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "mem:plan-purchase",
+      "field": "variants"
+    },
+    {
+      "item_id": "mem:plan-purchase",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "mem:plan-purchase",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "variants"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "lineage"
+    },
+    {
+      "item_id": "obs:order-8821",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "variants"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "lineage"
+    },
+    {
+      "item_id": "policy:v12",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "variants"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "lineage"
+    },
+    {
+      "item_id": "refunds-eu:v17#p4",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "variants"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "lineage"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "task:refund_request",
+      "field": "injection_risk"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "variants"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "lineage"
+    },
+    {
+      "item_id": "tool:issue_refund",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "variants"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "lineage"
+    },
+    {
+      "item_id": "tool:lookup_order",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "turn:16",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "turn:16",
+      "field": "variants"
+    },
+    {
+      "item_id": "turn:16",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "turn:16",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "turn:17",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "turn:17",
+      "field": "variants"
+    },
+    {
+      "item_id": "turn:17",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "turn:17",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "turn:18",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "turn:18",
+      "field": "variants"
+    },
+    {
+      "item_id": "turn:18",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "turn:18",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "variants"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "lineage"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "eligibility"
+    },
+    {
+      "item_id": "user:profile",
+      "field": "injection_risk"
+    }
+  ]
+}

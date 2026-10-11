@@ -1,0 +1,39 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<state.task id="task:8821" conflict="f-protected">
+refund request 8821: awaiting approval
+</state.task>
+<evidence.knowledge id="kb:channel-1" conflict="f-ineligible">
+Refunds go back to the original card.
+</evidence.knowledge>
+<evidence.knowledge id="kb:limit">
+Refunds are capped at 500 EUR.
+</evidence.knowledge>
+<evidence.knowledge id="kb:price-1" conflict="f-tie">
+Pro costs 20 EUR a month.
+</evidence.knowledge>
+<evidence.knowledge id="kb:price-2" conflict="f-tie">
+Pro costs 24 EUR a month.
+</evidence.knowledge>
+<evidence.knowledge id="kb:status">
+Order 42 for this customer is awaiting pickup.
+</evidence.knowledge>
+<evidence.knowledge id="kb:window">
+Pro plans refund in full within 30 days.
+</evidence.knowledge>
+<evidence.knowledge id="wiki:channel-2" conflict="f-ineligible">
+Refunds are paid as store credit.
+</evidence.knowledge>
+<evidence.tool_results id="obs:fee-b">
+refund fee: none
+</evidence.tool_results>
+<evidence.tool_results id="obs:method-b">
+refund method: original card
+</evidence.tool_results>
+<evidence.tool_results id="obs:stage" conflict="f-protected">
+refund request 8821: approved
+</evidence.tool_results>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

@@ -1,0 +1,40 @@
+{
+  "trace_id": "dedupe-evidence-required",
+  "profile": {
+    "id": "dedupe-evidence-required",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:b",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.knowledge",
+      "duplicate_of": "kb:a"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "evidence_required"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "dedupe-evidence-required/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "fcd79fdf4d0ff23a4b3187011b6814b3098c5184228a7a453b9c73f61123e66d"
+  },
+  "defaults_filled": [],
+  "recovery": {
+    "action": "request_context"
+  }
+}

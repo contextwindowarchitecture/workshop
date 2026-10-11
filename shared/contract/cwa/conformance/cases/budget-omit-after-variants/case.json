@@ -1,0 +1,12 @@
+{
+  "id": "budget-omit-after-variants",
+  "rules": [
+    "R-4",
+    "R-12",
+    "R-16",
+    "R-18",
+    "R-21",
+    "R-22"
+  ],
+  "description": "With no route order, every compress step runs before any omit step; history sheds oldest first, a compressed item can still be omitted, and a parser route that keeps its evidence minimum is not refused."
+}

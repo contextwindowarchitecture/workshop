@@ -1,0 +1,9 @@
+{
+  "id": "profile-missing-instructions",
+  "rules": [
+    "R-4",
+    "R-17",
+    "R-20"
+  ],
+  "description": "The profile does not place governance.instructions, which every assembly needs."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "supersede-observations",
+  "rules": [
+    "R-2",
+    "R-15",
+    "R-21",
+    "R-22",
+    "R-25"
+  ],
+  "description": "In a slot the route asks, only the latest observation per authenticated producer and source is kept: instants compare at full precision, so equal instants written differently tie and all stay while a microsecond later wins; another producer's item with the same source is untouched, and a slot without supersede keeps an older version."
+}

@@ -1,0 +1,364 @@
+{
+  "trace_id": "conflict-instruction",
+  "profile": {
+    "id": "conflict-instruction",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 227,
+    "hash": "57bf8e2f92b536f55d61930dcbeeceb46af1e55d5ae8ecdf87631d22b26c6283"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:cite",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:format",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:nocite",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:plain",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:tone",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:apology",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:casual",
+      "tokens": 9,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:formal",
+      "tokens": 9,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:refund-no",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:refund-yes",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:short",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "ex:sign",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.output_contract",
+      "item_id": "contract:json",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:inject",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:order-42",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:9",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:10",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:11",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:13",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 9,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "ex:unverified",
+      "reason": "untrusted_in_governance",
+      "stage": "assembler",
+      "slot": "governance.examples"
+    },
+    {
+      "item_id": "ex:bullets",
+      "reason": "conflict_deferred",
+      "stage": "assembler",
+      "slot": "governance.examples"
+    },
+    {
+      "item_id": "ex:long",
+      "reason": "conflict_deferred",
+      "stage": "assembler",
+      "slot": "governance.examples"
+    },
+    {
+      "item_id": "ex:unsigned",
+      "reason": "conflict_deferred",
+      "stage": "assembler",
+      "slot": "governance.examples"
+    },
+    {
+      "item_id": "turn:12",
+      "reason": "conflict_deferred",
+      "stage": "assembler",
+      "slot": "interaction.history"
+    },
+    {
+      "item_id": "turn:14",
+      "reason": "conflict_deferred",
+      "stage": "assembler",
+      "slot": "interaction.history"
+    }
+  ],
+  "conflicts": [
+    {
+      "group_id": "g-all-defer",
+      "kind": "instruction",
+      "items": [
+        "ex:refund-no",
+        "ex:refund-yes"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    },
+    {
+      "group_id": "g-authority",
+      "kind": "instruction",
+      "items": [
+        "policy:v12",
+        "turn:18"
+      ],
+      "decided_by": "authority",
+      "resolution": "resolved",
+      "winner": "policy:v12"
+    },
+    {
+      "group_id": "g-escalate",
+      "kind": "instruction",
+      "items": [
+        "ex:casual",
+        "ex:formal"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    },
+    {
+      "group_id": "g-lone-escalate",
+      "kind": "instruction",
+      "items": [
+        "ex:apology",
+        "turn:9"
+      ],
+      "decided_by": "authority",
+      "resolution": "resolved",
+      "winner": "ex:apology"
+    },
+    {
+      "group_id": "g-material",
+      "kind": "instruction",
+      "items": [
+        "kb:inject",
+        "policy:tone"
+      ],
+      "decided_by": "authority",
+      "resolution": "resolved",
+      "winner": "policy:tone"
+    },
+    {
+      "group_id": "g-mixed",
+      "kind": "instruction",
+      "items": [
+        "ex:sign",
+        "ex:unsigned",
+        "turn:11"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "ex:sign"
+    },
+    {
+      "group_id": "g-moot",
+      "kind": "instruction",
+      "items": [
+        "ex:short",
+        "ex:unverified"
+      ],
+      "decided_by": "moot",
+      "resolution": "moot"
+    },
+    {
+      "group_id": "g-no-instructor",
+      "kind": "instruction",
+      "items": [
+        "kb:a",
+        "obs:order-42"
+      ],
+      "decided_by": "authority",
+      "resolution": "resolved"
+    },
+    {
+      "group_id": "g-peers",
+      "kind": "instruction",
+      "items": [
+        "ex:bullets",
+        "ex:long",
+        "policy:format"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "policy:format"
+    },
+    {
+      "group_id": "g-protected",
+      "kind": "instruction",
+      "items": [
+        "contract:json",
+        "policy:plain"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    },
+    {
+      "group_id": "g-trust-blind",
+      "kind": "instruction",
+      "items": [
+        "turn:13",
+        "turn:14"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "turn:13"
+    },
+    {
+      "group_id": "g-two-govern",
+      "kind": "instruction",
+      "items": [
+        "policy:cite",
+        "policy:nocite"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    },
+    {
+      "group_id": "g-user-peers",
+      "kind": "instruction",
+      "items": [
+        "turn:10",
+        "turn:12"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "turn:10"
+    }
+  ],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "conflict-instruction/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "c61c4eeae1d152a59ec61a2906602cb2126cf14750a70acc0582bb3416d978cb"
+  },
+  "defaults_filled": []
+}

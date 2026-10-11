@@ -1,0 +1,9 @@
+{
+  "id": "protected-over-budget",
+  "rules": [
+    "R-16",
+    "R-17",
+    "R-21"
+  ],
+  "description": "When protected items alone exceed budget.input, assembly refuses without shedding anything: no payload and no over_budget rows."
+}

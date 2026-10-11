@@ -1,0 +1,10 @@
+{
+  "id": "dedupe-evidence-required",
+  "rules": [
+    "R-12",
+    "R-17",
+    "R-21",
+    "R-24"
+  ],
+  "description": "On a route that requires two knowledge items, deduplication leaves one, so assembly refuses with evidence_required and recovery request_context, since nothing was omitted for budget; the refused trace keeps the duplicate_content row."
+}

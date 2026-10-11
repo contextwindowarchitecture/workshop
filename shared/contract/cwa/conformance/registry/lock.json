@@ -1,0 +1,86 @@
+{
+  "profiles": [
+    {
+      "id": "policy-first-chat",
+      "version": 1,
+      "sha256": "f4cafe316b5c6b03e286113a0eac332f546ee46da4e2c9fc2217ce723165b03f"
+    },
+    {
+      "id": "document-analysis",
+      "version": 1,
+      "sha256": "e8ddea5453ad7a78aca9fc6b6ded7f99e1f3305279812dec05e1ac813b2014ea"
+    },
+    {
+      "id": "long-context-reinforced",
+      "version": 1,
+      "sha256": "b2669043c466ec49ee717936ad0fa820555cf5e506e3e0e1f19611e6395487cf"
+    },
+    {
+      "id": "tool-agent",
+      "version": 1,
+      "sha256": "dfbe92103bdbc21fe5635a09468700635e43ee00ed3a0e280491130f8157721e"
+    },
+    {
+      "id": "extraction",
+      "version": 1,
+      "sha256": "3ca3642d6f9b7f98ebd8855521c441ac334fd7bf60af1fdabe68a1e0edd9e41e"
+    },
+    {
+      "id": "cache-first-chat",
+      "version": 1,
+      "sha256": "5b86d884b783533f3b9b75080be79cbed63a5e5efb35afe864fd34ffdf7c1fcf"
+    },
+    {
+      "id": "fixture-three-slot",
+      "version": 1,
+      "sha256": "e3cecc1ac42022ec3d9edbacdb55b6a9bbb535b635480ba6b87cc93cb8569640"
+    }
+  ],
+  "route_policies": [
+    {
+      "route": "contract-fixture",
+      "version": "fixture/v1",
+      "sha256": "1ca69ddb57501a0b5dedd648c45ad2f46c15eedfc339892ae7146bd2e6053129"
+    },
+    {
+      "route": "support-chat",
+      "version": "admission/v1",
+      "sha256": "6671b11f9fa407f107212d8e1243c28e7037d3b4179d4b0a6442248a66c6b73f"
+    },
+    {
+      "route": "support-chat",
+      "version": "budget-route-order/v1",
+      "sha256": "6540ee7b3afc7a4360ee54b780e1d240cf50251474f424e7ec19589207094f40"
+    },
+    {
+      "route": "support-chat",
+      "version": "conflict-fact/v1",
+      "sha256": "093535f85301ea6f3a5b07be7fb6f9ebd37e58a060faf042c63475ea7b5f4e31"
+    },
+    {
+      "route": "support-chat",
+      "version": "illustrative/v1",
+      "sha256": "474d6e1fb8563eb94e39663976c19682317e30e8cf952955b5505b8c17a91191"
+    },
+    {
+      "route": "document-qa",
+      "version": "illustrative/v1",
+      "sha256": "54c297f1270c2f26b815f9bc9f8dca25f5b68d70a5ae57a42f5af8a9141b6e71"
+    },
+    {
+      "route": "long-context-qa",
+      "version": "illustrative/v1",
+      "sha256": "4b25b81d923d6e9ddab1a52c4451ce0a4f33dc2bba356c1a00b3bd066a3f48ee"
+    },
+    {
+      "route": "agent-loop",
+      "version": "illustrative/v1",
+      "sha256": "f9fd153ee1e346c879f3bd96fa989159d5c09cde20c9d83e2cf607d2ac29451f"
+    },
+    {
+      "route": "extract",
+      "version": "illustrative/v1",
+      "sha256": "86ae19a39b56321205dbbbb3d67cae9caa347e0ff0da69d018123420026b8e8c"
+    }
+  ]
+}

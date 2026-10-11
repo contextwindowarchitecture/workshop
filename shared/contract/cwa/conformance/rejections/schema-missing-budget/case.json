@@ -1,0 +1,7 @@
+{
+  "id": "schema-missing-budget",
+  "rules": [
+    "R-17"
+  ],
+  "description": "The snapshot has no budget, which its schema requires."
+}

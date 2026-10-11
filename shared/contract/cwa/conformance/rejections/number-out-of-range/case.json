@@ -1,0 +1,8 @@
+{
+  "id": "number-out-of-range",
+  "rules": [
+    "R-17",
+    "R-23"
+  ],
+  "description": "An item's relevance is 1e400, beyond the IEEE 754 double range, so the snapshot is not I-JSON and has no digest."
+}

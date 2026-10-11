@@ -1,0 +1,30 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<evidence.knowledge id="kb:policy-v1">
+Refunds are accepted within 14 days.
+</evidence.knowledge>
+<evidence.knowledge id="kb:policy-v2">
+Refunds are accepted within 30 days.
+</evidence.knowledge>
+<evidence.tool_results id="obs:billing-42">
+order 42: paid by card
+</evidence.tool_results>
+<evidence.tool_results id="obs:customer">
+customer 91: pro plan
+</evidence.tool_results>
+<evidence.tool_results id="obs:order-3">
+order 42: shipped
+</evidence.tool_results>
+<evidence.tool_results id="obs:order-3b">
+order 42: shipped, carrier assigned
+</evidence.tool_results>
+<evidence.tool_results id="obs:order-3c">
+order 42: shipped from Berlin
+</evidence.tool_results>
+<evidence.tool_results id="obs:refund-b">
+refund 7: approved
+</evidence.tool_results>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

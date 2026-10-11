@@ -1,0 +1,67 @@
+{
+  "trace_id": "threshold-beyond-2-53",
+  "profile": {
+    "id": "numbers-fixture",
+    "version": 1
+  },
+  "budget": {
+    "input": 28,
+    "reserved_output": 1200
+  },
+  "result": {
+    "input_tokens": 28,
+    "hash": "c3f7565ef202df8072fb358bf5b4c11b149c97c493a0e4d73dfa8743b338d397"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 9,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:c",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:b",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "numbers/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "8a159a1c82a6de584a096ccb309e26d0c052b7e185bba1e6d7cd14856bb6a547"
+  },
+  "defaults_filled": []
+}

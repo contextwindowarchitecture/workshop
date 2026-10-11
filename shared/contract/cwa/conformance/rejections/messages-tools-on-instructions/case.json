@@ -1,0 +1,9 @@
+{
+  "id": "messages-tools-on-instructions",
+  "rules": [
+    "R-7",
+    "R-17",
+    "R-20"
+  ],
+  "description": "Under cwa-messages/v1 the profile puts governance.instructions in tools, which only governance.capabilities may use."
+}

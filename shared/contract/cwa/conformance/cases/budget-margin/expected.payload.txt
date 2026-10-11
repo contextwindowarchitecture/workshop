@@ -1,0 +1,15 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<governance.examples id="ex:1">
+Example: refunds within thirty days are approved.
+</governance.examples>
+<governance.examples id="ex:2">
+Example: annual plans refund pro rata.
+</governance.examples>
+<evidence.knowledge id="kb:a">
+Pro plans refund in full within 30 days.
+</evidence.knowledge>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

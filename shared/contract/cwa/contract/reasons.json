@@ -1,0 +1,212 @@
+[
+  {
+    "code": "producer_not_authenticated",
+    "kind": "exclusion",
+    "rule": "R-15",
+    "text": "The route policy does not list this batch's producer, or lists it with a different kind. Identity comes from the application's authentication and the route, never from item fields. A snapshot with two batches from one producer is rejected before assembly."
+  },
+  {
+    "code": "missing_field:<name>",
+    "kind": "exclusion",
+    "rule": "R-2",
+    "text": "A required field of the item itself is absent: one of the eight minimum fields, or a slot-specific one such as expires for memory or relevance for knowledge. A variant missing one of its fields is invalid_structure. Fix the producer; the assembler will not guess."
+  },
+  {
+    "code": "unknown_slot",
+    "kind": "exclusion",
+    "rule": "R-1",
+    "text": "The slot is not one of the eleven slot names, whatever its JSON type: a number, null, an array or an object is unknown_slot too, not invalid_structure, since this code comes first (R-21). Check spelling and plane prefix."
+  },
+  {
+    "code": "unknown_authority",
+    "kind": "exclusion",
+    "rule": "R-1",
+    "text": "The authority is not one of the seven roles, whatever its JSON type: a number, null, an array or an object is unknown_authority too, not invalid_structure, since this code comes first (R-21). capability and steering are not authority values; use governing with a conflict_policy."
+  },
+  {
+    "code": "invalid_structure",
+    "kind": "exclusion",
+    "rule": "R-2",
+    "text": "The item fails the published schema for another reason, such as a wrong type, an undeclared field or a malformed timestamp."
+  },
+  {
+    "code": "duplicate_item_id",
+    "kind": "exclusion",
+    "rule": "R-2",
+    "text": "Another candidate, in any batch and whatever its own outcome, or a producer exclusion from any batch uses this ID. Each candidate sharing it is excluded with the earliest code that applies to it."
+  },
+  {
+    "code": "producer_slot_not_allowed",
+    "kind": "exclusion",
+    "rule": "R-15",
+    "text": "The authenticated producer is not permitted to emit into this slot: the route does not list the slot for it, or its kind rules the slot out whatever the route lists. State slots take only kind state (R-8), a memory producer only interaction.memory (R-14), a retrieval producer only the evidence slots (R-13), and an mcp producer only the evidence slots, plus governance.capabilities when the route lists it for the producer, where capability_not_allowed applies (R-15)."
+  },
+  {
+    "code": "authority_not_allowed",
+    "kind": "exclusion",
+    "rule": "R-1",
+    "text": "The authority value is not allowed for this slot. Each slot takes its own role, a prior model turn in history takes untrusted, and only other items in tool results, memory and history may carry untrusted instead (R-1): never governance, knowledge, state or the query. These roles are not a factual ranking."
+  },
+  {
+    "code": "capability_not_allowed",
+    "kind": "exclusion",
+    "rule": "R-15",
+    "text": "The snapshot carries no capability grant, the authenticated emitter is not the producer the grant names as policy_producer listed by the route with kind capability_policy, or the tool is not on the grant's allow-list. Item source strings cannot prove permission."
+  },
+  {
+    "code": "untrusted_in_governance",
+    "kind": "exclusion",
+    "rule": "R-10",
+    "text": "A governance item is not verified or is marked untrusted_content."
+  },
+  {
+    "code": "untrusted_content_unmarked",
+    "kind": "exclusion",
+    "rule": "R-10",
+    "text": "The item is in a slot whose published injection_risk default is untrusted_content (evidence.knowledge, evidence.tool_results, interaction.memory, interaction.history or interaction.query) but is not marked untrusted_content, and no MCP server the route verified produced it (R-10, R-15)."
+  },
+  {
+    "code": "protected_tier_changed",
+    "kind": "exclusion",
+    "rule": "R-16",
+    "text": "The item sets a tier below protected in a slot whose default tier is protected. In a slot only the route raised, an item may lower its own tier."
+  },
+  {
+    "code": "tier_upgrade_not_allowed",
+    "kind": "exclusion",
+    "rule": "R-16",
+    "text": "The item claims a tier above its slot's effective tier. Only the route's versioned policy can raise a tier; a producer cannot protect its own items."
+  },
+  {
+    "code": "duplicate_variant_id",
+    "kind": "exclusion",
+    "rule": "R-18",
+    "text": "Variant IDs repeat, or a variant reuses its parent item's ID."
+  },
+  {
+    "code": "revoked",
+    "kind": "exclusion",
+    "rule": "R-9",
+    "text": "revoked_by is set. The item was contradicted or withdrawn."
+  },
+  {
+    "code": "expired",
+    "kind": "exclusion",
+    "rule": "R-9",
+    "text": "expires is at or before assembly_time. freshness describes when content was true; a past freshness is not itself expiration."
+  },
+  {
+    "code": "future_freshness",
+    "kind": "exclusion",
+    "rule": "R-2",
+    "text": "freshness is later than assembly_time by more than the route's clock_skew_seconds (default 0), compared at full precision."
+  },
+  {
+    "code": "stale_state",
+    "kind": "exclusion",
+    "rule": "R-8",
+    "text": "A state item was observed longer ago than its slot's max_age_seconds. State must be current at assembly time."
+  },
+  {
+    "code": "source_invalid",
+    "kind": "exclusion",
+    "rule": "R-3",
+    "text": "The item's source does not start with its slot's source_prefix. For memory, this is how the source turn is identified (R-9)."
+  },
+  {
+    "code": "out_of_scope",
+    "kind": "exclusion",
+    "rule": "R-2",
+    "text": "A scope key the item carries has a value other than the request's, or the request lacks that key, or the item lacks a key its slot's required_scope lists. A missing key is never a wildcard."
+  },
+  {
+    "code": "below_threshold",
+    "kind": "exclusion",
+    "rule": "R-13",
+    "text": "The rerank score is under its slot's min_relevance, or the item has no score in a slot that sets one. A score equal to the threshold passes. An evidence.knowledge item always needs a score, so one without it is missing_field:relevance instead (R-13)."
+  },
+  {
+    "code": "not_eligible",
+    "kind": "exclusion",
+    "rule": "R-3",
+    "text": "The item was observed longer ago than its slot's max_age_seconds, in a slot other than a state slot, where the code is stale_state. The slot-level eligibility rules are the complete predicate (R-3); no other rule excludes an item this way."
+  },
+  {
+    "code": "slot_unplaced",
+    "kind": "exclusion",
+    "rule": "R-20",
+    "text": "The profile has no placement for the item's slot, and the item is not protected. A protected item in an unplaced slot is never excluded; assembly refuses with protected_slot_unplaced. A profile that does not place instructions and query, or the output contract on a parser route, is rejected with its snapshot before assembly."
+  },
+  {
+    "code": "conflict_deferred",
+    "kind": "exclusion",
+    "rule": "R-11",
+    "text": "The item is a peer instruction with conflict_policy defers, and the one peer in its declared conflict group that governs prevailed. A protected item is never excluded this way; its group escalates."
+  },
+  {
+    "code": "conflict_lost",
+    "kind": "exclusion",
+    "rule": "R-11",
+    "text": "Route fact policy chose another member of the item's declared fact conflict group, by authenticated producer precedence or an allowed freshness tie-break. A protected item is never excluded this way; its group escalates."
+  },
+  {
+    "code": "superseded",
+    "kind": "exclusion",
+    "rule": "R-25",
+    "text": "The route asked this slot to supersede by source, and the same producer sent a later observation with the same source. superseded_by names the item kept."
+  },
+  {
+    "code": "duplicate_content",
+    "kind": "exclusion",
+    "rule": "R-24",
+    "text": "The item's body duplicates a kept item's: either the route asked this slot for exact deduplication and the bodies match once whitespace is collapsed (R-24), or a retriever dropped it as a near-duplicate and reported it at stage producer (R-13). duplicate_of names the item kept."
+  },
+  {
+    "code": "source_diversity_cap",
+    "kind": "exclusion",
+    "rule": "R-26",
+    "text": "The route caps this slot at max_per_source items per producer and source, and higher-ranked or exempt items from the same source filled every place."
+  },
+  {
+    "code": "over_budget",
+    "kind": "exclusion",
+    "rule": "R-16",
+    "text": "The item was omitted to fit the rendered budget, its own token_budget or its slot's max_tokens, in tier order and by the route's fitting policy."
+  },
+  {
+    "code": "required_slot_missing",
+    "kind": "refusal",
+    "rule": "R-4",
+    "text": "governance.instructions or interaction.query, or governance.output_contract on a parser route, has no admitted item."
+  },
+  {
+    "code": "protected_slot_unplaced",
+    "kind": "refusal",
+    "rule": "R-20",
+    "text": "An admitted protected item's slot has no placement in the profile. The profile must not omit protected content, so the assembler refuses rather than drop it."
+  },
+  {
+    "code": "conflict_unresolved",
+    "kind": "refusal",
+    "rule": "R-11",
+    "text": "A declared conflict group has no unique supported resolution, and route policy says to refuse or request context. The trace records recovery.action request_context when every such group asked for context."
+  },
+  {
+    "code": "protected_content_over_budget",
+    "kind": "refusal",
+    "rule": "R-17",
+    "text": "The payload rendered from protected content alone does not fit budget.input, charged with any margin_percent, or protected items exceed their slot's max_tokens, or a protected item exceeds its own token_budget. The assembler refuses rather than truncating."
+  },
+  {
+    "code": "slot_floor_over_budget",
+    "kind": "refusal",
+    "rule": "R-17",
+    "text": "The payload does not fit budget.input without shedding a slot below the route's min_tokens. The assembler refuses rather than break the floor."
+  },
+  {
+    "code": "evidence_required",
+    "kind": "refusal",
+    "rule": "R-12",
+    "text": "The route requires evidence and too little survived admission and fitting. The trace records recovery.action."
+  }
+]

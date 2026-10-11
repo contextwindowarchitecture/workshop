@@ -1,0 +1,303 @@
+{
+  "planes": [
+    {
+      "id": "governance",
+      "name": "Governance",
+      "answers": "Who may direct the model"
+    },
+    {
+      "id": "state",
+      "name": "State",
+      "answers": "What is true right now"
+    },
+    {
+      "id": "evidence",
+      "name": "Evidence",
+      "answers": "What the model may ground on"
+    },
+    {
+      "id": "interaction",
+      "name": "Interaction",
+      "answers": "What has happened, and what is asked"
+    }
+  ],
+  "slots": [
+    {
+      "id": "governance.instructions",
+      "holds": "Identity, goals, refusals, and safety boundaries: the system's constitution.",
+      "rule": "This slot is never omitted and admits only governing-authority items. Items that aren't verified, or that carry the injection marker, are excluded here."
+    },
+    {
+      "id": "state.user",
+      "holds": "Durable profile, entitlements, locale, permissions, session preferences, each a separate item with its own freshness.",
+      "rule": "Items are scoped to the current tenant and user. Unverified user claims remain source-linked memory; only application-confirmed facts enter state."
+    },
+    {
+      "id": "evidence.knowledge",
+      "holds": "Retrieved chunks, each sent as its own evidence item with source, version, relevance and trust.",
+      "rule": "Each one has to clear admission: a relevance score at or above the route's min_relevance, and inside its freshness limits. Where the route asks for it, exact duplicates go after conflicts are resolved (R-24). An empty result is recorded as an outcome, not treated as an error."
+    },
+    {
+      "id": "state.task",
+      "holds": "Workflow stage, approval status, selected entity IDs, pending action, retry count.",
+      "rule": "Task state is written by the application's state machine and never inferred from conversation."
+    },
+    {
+      "id": "interaction.memory",
+      "holds": "Condensed summaries of older turns and inferred long-term facts, each linked to the turn it came from.",
+      "rule": "Every entry carries an expires deadline and a source naming the turn it came from. Entries whose expires is at or before assembly_time, or that carry revoked_by, are excluded and show up in the trace (R-9). The assembler doesn't decide what's been contradicted; the application revokes it."
+    },
+    {
+      "id": "interaction.history",
+      "holds": "A verbatim transcript of the most recent turns, bounded by turn count and tokens.",
+      "rule": "Before assembly, overflow gets summarised into memory rather than cut mid-thought. Under budget pressure, when the route declares no fitting order, turns with a shorter variant switch to it first; after that, whole turns are dropped, oldest first unless the turns carry relevance scores or the route ranks the slot differently. Prior model turns carry lineage: generated and untrusted authority, and every prior turn renders inside the history transcript, never as a platform message. Turns render in the order they were said: by freshness, then id (R-7)."
+    },
+    {
+      "id": "governance.capabilities",
+      "holds": "The tools, functions and resources the model is permitted to invoke, with their contracts.",
+      "rule": "Only tools the route's capability policy allows for this user are admitted, against a versioned allow-list. Permission is decided outside the model."
+    },
+    {
+      "id": "evidence.tool_results",
+      "holds": "Observations returned by tools already called, possibly several per loop, and any retrieved chunks a route sends here.",
+      "rule": "When the route sets supersede: source, the newest observation from each producer and source stays and the older ones go (R-25). That's keyed on source, not on the tool call. An observation is evidence, not permission to act."
+    },
+    {
+      "id": "governance.examples",
+      "holds": "Developer-owned input/output pairs that steer reasoning, tone or format, ranked by task similarity.",
+      "rule": "A route that wants them places the slot and lists a producer for it; admission applies the same four slot rules as anywhere else (R-3). They defer to instructions and the output contract. They're droppable, so under budget pressure they go before anything compressible."
+    },
+    {
+      "id": "governance.output_contract",
+      "holds": "Structure, style, length and schema of the response about to be generated.",
+      "rule": "The contract is never omitted when a downstream parser exists. If a safety disclosure has to appear, make room for it in the contract itself. Conflict resolution can't drop a protected item, so a clash between the two escalates."
+    },
+    {
+      "id": "interaction.query",
+      "holds": "The most recent, unprocessed input the model must respond to.",
+      "rule": "The query is never omitted and always carries user authority. It is the trigger for generation, placed wherever the route's profile puts it."
+    }
+  ],
+  "item_fields": {
+    "must": [
+      "id",
+      "slot",
+      "source",
+      "source_version",
+      "authority",
+      "freshness",
+      "trust",
+      "body"
+    ],
+    "should": [
+      "token_budget",
+      "variants",
+      "conflict_policy",
+      "lineage",
+      "eligibility",
+      "injection_risk"
+    ],
+    "described": [
+      {
+        "key": "provenance",
+        "text": "source and source_version: which document, turn, tool call, database field or memory write it came from, and which version."
+      },
+      {
+        "key": "authority",
+        "text": "Exactly one of the seven roles in section 3.1: governing instruction, user intent, state, reference evidence, observation, generated memory, or untrusted. Each slot takes its own role; tool results, memory and history may take untrusted instead (R-1). Only governing and user can instruct. No other value is valid."
+      },
+      {
+        "key": "freshness",
+        "text": "freshness records when content was observed or true; expires is the separate expiration deadline. as_of is prose, not a JSON alias."
+      },
+      {
+        "key": "scope",
+        "text": "Tenant, user, session, task, locale, workflow step. Out-of-scope items never reach the payload."
+      },
+      {
+        "key": "eligibility",
+        "text": "A short note on why this item belongs in the request, for whoever reads the trace. It isn't code; the route owns the rule that actually decides (R-3)."
+      },
+      {
+        "key": "budget",
+        "text": "token_budget and tier: how much it may consume, which tier it sits in, and what shortens first under pressure."
+      },
+      {
+        "key": "conflict_policy",
+        "text": "What wins if another item disagrees: this one defers, governs, or forces escalation. Applied only to permitted instruction peers; factual precedence belongs to route policy."
+      },
+      {
+        "key": "lineage",
+        "text": "Verbatim, summarised, redacted, translated, extracted, or model-generated."
+      },
+      {
+        "key": "trust",
+        "text": "Verified, unverified, or untrusted: the producer's own claim about its source, so it proves nothing (R-15). Only the governance gate reads it, which admits verified items alone (R-10). It never decides who can instruct or which fact wins."
+      },
+      {
+        "key": "variants",
+        "text": "Shorter versions the producer computed ahead of time, each with its own id, body, method and lineage. Fitting can swap one in but never writes its own (R-18)."
+      },
+      {
+        "key": "injection_risk",
+        "text": "untrusted_content when the body might carry an injection, whatever its authority. A retrieved chunk is reference_only in knowledge and observation in tool results, and untrusted_content in both (R-10). The marker never changes authority or where an item renders: a query or history turn keeps user authority although marked, and material pasted into its body renders with it, because the assembler never splits a body."
+      }
+    ]
+  },
+  "authority": [
+    {
+      "name": "Governing instruction",
+      "value": "governing",
+      "text": "System and developer policy, safety constraints, the output contract, admitted capabilities, and steering examples."
+    },
+    {
+      "name": "User intent / preference",
+      "value": "user",
+      "text": "What the user asks for and how they want it. It cannot lift a constraint set above it."
+    },
+    {
+      "name": "Canonical state",
+      "value": "state",
+      "text": "Application-owned facts about the task and session. The route defines the facts for which this source is canonical."
+    },
+    {
+      "name": "Reference evidence",
+      "value": "reference_only",
+      "text": "Retrieved chunks in knowledge, which inform the answer but never direct behaviour."
+    },
+    {
+      "name": "Tool observation",
+      "value": "observation",
+      "text": "What a tool returned, and any retrieved chunk a route sends to tool results: evidence about the world, not permission to act on it."
+    },
+    {
+      "name": "Generated memory",
+      "value": "generated",
+      "text": "Summaries and inferences the system wrote. They are fallible, they expire, and they can be revoked."
+    },
+    {
+      "name": "Untrusted (least privilege)",
+      "value": "untrusted",
+      "text": "Prior model turns in history, which must carry it, and any other item in tool results, memory or history whose producer wants it handled with the least privilege. It keeps the item out of an instruction group's peers and changes nothing else. Governance, knowledge, state and the query never carry it. Not the same as injection_risk: untrusted_content, which flags content that might carry an injection."
+    }
+  ],
+  "conflicts": [
+    {
+      "when": "System or developer policy vs user request",
+      "then": "Higher-authority policy governs."
+    },
+    {
+      "when": "Fresh verified tool output vs retrieved document",
+      "then": "The route may prefer the verified observation for the same current fact by listing its producer first; trust is never read, and unresolved conflicts escalate."
+    },
+    {
+      "when": "Canonical task state vs conversational recollection",
+      "then": "The route selects current application state for its owned facts; the model never writes that state."
+    },
+    {
+      "when": "User correction vs inferred memory",
+      "then": "The application processes the correction and explicitly revokes affected memory; the trace records the exclusion."
+    },
+    {
+      "when": "Conflicting retrieved sources",
+      "then": "The route's fact policy picks by producer precedence, and the loser shows up as conflict_lost. If it can't pick, the conflict is surfaced, more context is requested, or the assembly is refused."
+    },
+    {
+      "when": "Format constraint vs required safety disclosure",
+      "then": "Both are governing and protected, so if you group them the conflict escalates. Write the disclosure into the contract so they never collide."
+    },
+    {
+      "when": "Steering example vs instruction or output contract",
+      "then": "The instruction or contract governs. Examples defer to other governing items."
+    }
+  ],
+  "stages": [
+    {
+      "name": "Rewrite",
+      "owner": "producer",
+      "text": "Decide whether to rewrite the query for retrieval, and keep the rewritten form so you can explain the results later."
+    },
+    {
+      "name": "Retrieve",
+      "owner": "producer",
+      "text": "Pull candidate chunks from sources whose provenance you can name."
+    },
+    {
+      "name": "Rerank",
+      "owner": "producer",
+      "text": "Score each candidate against the query and put the score in relevance. If you drop a near-duplicate, report it as duplicate_content, with duplicate_of naming the one you kept (R-13)."
+    },
+    {
+      "name": "Package",
+      "owner": "producer",
+      "text": "Send each chunk as its own evidence item with source, source_version, relevance and the authority its evidence slot takes (R-1). Never one merged blob (R-13)."
+    },
+    {
+      "name": "Admit",
+      "owner": "assembler",
+      "text": "Check each item against its schema and the route: who sent it, which slot, what authority, its scope, age and expiry, and the route's min_relevance. Anything that fails is excluded with a reason code."
+    },
+    {
+      "name": "Resolve",
+      "owner": "assembler",
+      "text": "Settle the conflict groups the application declared (R-11). Then, in the slots where the route asks, drop superseded observations (R-25), exact duplicates (R-24) and anything past max_per_source (R-26), in that order."
+    },
+    {
+      "name": "Fit",
+      "owner": "assembler",
+      "text": "Refuse before any reduction if protected content can't fit (R-16, R-17). Otherwise apply item and slot caps, then shed in tier order under budget pressure: droppable first, then compressible (R-16). If too little evidence is left on a route that requires it, refuse instead (R-12)."
+    },
+    {
+      "name": "Render & trace",
+      "owner": "assembler",
+      "text": "Render the payload in the profile's order, hash it, and write a trace that accounts for every decision above (R-21)."
+    }
+  ],
+  "tests": [
+    {
+      "name": "Assembly snapshot",
+      "text": "Identical immutable assembly snapshots produce identical rendered bytes and hashes.",
+      "requirement": "R-23"
+    },
+    {
+      "name": "Golden task",
+      "text": "The right evidence item appears in the final context for a known request.",
+      "requirement": "R-21"
+    },
+    {
+      "name": "Counterfactual ablation",
+      "text": "Remove evidence, task state or tool results and confirm what fails, and that the trace explains it.",
+      "requirement": "R-21"
+    },
+    {
+      "name": "Conflict",
+      "text": "A malicious retrieved chunk with imperative text does not alter governing instructions.",
+      "requirement": "R-7"
+    },
+    {
+      "name": "Budget pressure",
+      "text": "At half the window, protected slots survive intact and shedding follows tier order: droppable first, then compressible.",
+      "requirement": "R-16"
+    },
+    {
+      "name": "Freshness",
+      "text": "Memory expired at assembly_time is excluded and the producer's exclusion reaches the trace.",
+      "requirement": "R-9"
+    },
+    {
+      "name": "Refusal",
+      "text": "When the evidence a route needs doesn't survive fitting, the assembler refuses with evidence_required instead of answering without it.",
+      "requirement": "R-12"
+    },
+    {
+      "name": "Capability source",
+      "text": "A tool specification emitted directly by an MCP adapter into governance.capabilities is excluded: as producer_slot_not_allowed, or as capability_not_allowed where the route lists that slot for the adapter.",
+      "requirement": "R-15"
+    },
+    {
+      "name": "Cache reuse",
+      "text": "Two consecutive turns of a frozen conversation under a cache-ordered profile render the same leading bytes through the last turn the earlier call held, so a breakpoint placed there on one call is still valid on the next.",
+      "requirement": "R-7"
+    }
+  ]
+}

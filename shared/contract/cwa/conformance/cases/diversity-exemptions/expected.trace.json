@@ -1,0 +1,121 @@
+{
+  "trace_id": "diversity-exemptions",
+  "profile": {
+    "id": "diversity-exemptions",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 55,
+    "hash": "842af445069f765462f21958339de86b27bbfba1b0848a28c0c627de62195465"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "user:plan",
+      "tokens": 1,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "user:region",
+      "tokens": 1,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:w1",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:w2",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:new",
+      "tokens": 3,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "wiki:w",
+      "reason": "conflict_lost",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "obs:old",
+      "reason": "superseded",
+      "stage": "assembler",
+      "slot": "evidence.tool_results",
+      "superseded_by": "obs:new"
+    },
+    {
+      "item_id": "kb:w2-copy",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.knowledge",
+      "duplicate_of": "kb:w2"
+    },
+    {
+      "item_id": "kb:w3",
+      "reason": "source_diversity_cap",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [
+    {
+      "group_id": "f-window",
+      "kind": "fact",
+      "items": [
+        "kb:w1",
+        "wiki:w"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "kb:w1"
+    }
+  ],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "diversity-exemptions/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "d8f0284827cff062a01f422bc56224274842ee892ee64591f0a22d1f22f6a59b"
+  },
+  "defaults_filled": []
+}

@@ -1,0 +1,132 @@
+{
+  "trace_id": "dedupe-exact",
+  "profile": {
+    "id": "dedupe-exact",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 93,
+    "hash": "8ab05728a33a006dc72555449bbeebcb7ae19f47eeee5e0568952a09a38ee23f"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:cafe-nfc",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:cafe-nfd",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:case",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:mirror",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:tie-1",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:new",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:15",
+      "tokens": 2,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:17",
+      "tokens": 2,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:a",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.knowledge",
+      "duplicate_of": "kb:mirror"
+    },
+    {
+      "item_id": "kb:spaced",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.knowledge",
+      "duplicate_of": "kb:mirror"
+    },
+    {
+      "item_id": "kb:tie-2",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.knowledge",
+      "duplicate_of": "kb:tie-1"
+    },
+    {
+      "item_id": "obs:old",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.tool_results",
+      "duplicate_of": "obs:new"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "dedupe-exact/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "765ec190ba759de853a6ab73aa2c9f0ce13c760d3c841bc6582749f98f363361"
+  },
+  "defaults_filled": []
+}

@@ -1,0 +1,90 @@
+{
+  "trace_id": "budget-omit-after-variants",
+  "profile": {
+    "id": "budget-omit-after-variants",
+    "version": 1
+  },
+  "budget": {
+    "input": 60,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 52,
+    "hash": "db8fc967e9c3896395390703b4cacc8d5a3d27949cb98b3b502cfd0d1d037ba1"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.output_contract",
+      "item_id": "contract:json",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:16",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "from": 16,
+      "to": 6,
+      "method": "extract",
+      "variant_id": "kb:a~short"
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "turn:14",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "interaction.history"
+    },
+    {
+      "item_id": "turn:15",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "interaction.history"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "budget-omit-after-variants/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "285acce4c4139e5aa1e7be3f1e2a55a04ddf985d6dd24de9896e88d3c02605c5"
+  },
+  "defaults_filled": []
+}

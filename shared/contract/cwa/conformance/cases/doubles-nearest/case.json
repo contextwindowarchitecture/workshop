@@ -1,0 +1,9 @@
+{
+  "id": "doubles-nearest",
+  "rules": [
+    "R-2",
+    "R-13",
+    "R-22"
+  ],
+  "description": "Every number is read as the nearest double however it is written: min_relevance 9007199254740993.0 is halfway between 2^53 and the double above and rounds to even, 2^53, so scores written 9007199254740992.0 and 90071992547409930E-1 are equal and pass, 9007199254740991.0 is below_threshold, and 4503599627370496.5 rounds to 4503599627370496, which the snapshot digest writes. A parser that is not correctly rounded reads some of these as a neighbouring double."
+}

@@ -1,0 +1,72 @@
+{
+  "trace_id": "render-attribute-escaping",
+  "profile": {
+    "id": "render-attribute-escaping",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 41,
+    "hash": "d0aafe4b3a5f65551d15c1e160f8ad819e6a556c002fd22538680b75974bfc6c"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:\"tone\"&<v2>",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:\"a\"",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [
+    {
+      "group_id": "g\"tone\"&<1>",
+      "kind": "instruction",
+      "items": [
+        "policy:\"tone\"&<v2>",
+        "policy:v12"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    }
+  ],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "render-attribute-escaping/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "54a0e2d4824463db45a45398cc6e791d116d2ec0e55744402cf57679922400e0"
+  },
+  "defaults_filled": []
+}

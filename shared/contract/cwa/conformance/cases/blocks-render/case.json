@@ -1,0 +1,10 @@
+{
+  "id": "blocks-render",
+  "rules": [
+    "R-7",
+    "R-10",
+    "R-11",
+    "R-21"
+  ],
+  "description": "cwa-message-blocks/v1 renders the request cwa-messages/v1 renders, except that the user message is one {id, text} entry per placed item, each entry's text exactly as cwa-messages/v1 writes that item, so the joined texts are its content. Prior turns stay entries of the one user message, never messages of their own. A surfaced member keeps its mark in its text and also names its group in a conflict member, in a message entry as in a system entry."
+}

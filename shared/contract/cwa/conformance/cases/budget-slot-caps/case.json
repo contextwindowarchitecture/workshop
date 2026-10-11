@@ -1,0 +1,11 @@
+{
+  "id": "budget-slot-caps",
+  "rules": [
+    "R-3",
+    "R-16",
+    "R-18",
+    "R-21",
+    "R-22"
+  ],
+  "description": "Slots over the route's max_tokens shed their own items although the payload fits, slot by slot in shedding order: droppable items first, then the slot's route steps, then variants, the longest that brings the slot within its cap or else the shortest; a slot cap follows an item's own cap, and uncapped slots are untouched."
+}

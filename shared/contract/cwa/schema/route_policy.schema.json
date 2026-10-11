@@ -1,0 +1,383 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contextwindowarchitecture.io/schema/route_policy.schema.json",
+  "title": "CWA route policy",
+  "description": "Versioned, application-owned policy for one route. Admission, conflict resolution, fitting and refusal read it, and it travels inside the snapshot (R-23).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "route",
+    "version",
+    "producers"
+  ],
+  "properties": {
+    "route": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "clock_skew_seconds": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Tolerance for producer clocks: freshness may exceed assembly_time by this much before the item is excluded as future_freshness. Default 0."
+    },
+    "parser": {
+      "type": "boolean",
+      "description": "A downstream parser consumes this route's responses, so assembly refuses with required_slot_missing when no governance.output_contract item is admitted (R-4). Default false."
+    },
+    "requires_evidence": {
+      "type": "boolean",
+      "description": "Assembly refuses with evidence_required when fitting leaves no evidence.knowledge or evidence.tool_results item, or fewer items in an evidence slot than its min_included (R-12). Default false."
+    },
+    "on_unresolved_instruction": {
+      "enum": [
+        "surface",
+        "request_context",
+        "refuse"
+      ],
+      "description": "What assembly does with an instruction conflict group that has no unique supported resolution (R-11): surface keeps every member and marks it in the payload, request_context and refuse refuse with conflict_unresolved. Default refuse."
+    },
+    "producers": {
+      "type": "object",
+      "description": "Producers this route admits, keyed by the identity the application authenticated. Items from any other producer, or from a producer listed with another kind, are excluded with producer_not_authenticated (R-15).",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "slots"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "policy",
+              "state",
+              "retrieval",
+              "memory",
+              "mcp",
+              "capability_policy",
+              "interaction"
+            ]
+          },
+          "slots": {
+            "type": "array",
+            "description": "Slots this producer may send. An item in any other slot is excluded with producer_slot_not_allowed (R-15). The producer's kind limits its slots further, whatever this list holds (R-8, R-13, R-14, R-15).",
+            "items": {
+              "$ref": "context_item.schema.json#/properties/slot"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "For kind mcp only: the route has verified this server, so its output need not be marked untrusted_content (R-15). It does nothing else: it never ranks the server's claims in a fact group (R-11). Default false."
+          }
+        }
+      }
+    },
+    "slots": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "context_item.schema.json#/properties/slot"
+      },
+      "description": "Per-slot rules: the route's executable eligibility predicate (R-3) and its fitting policy (R-16).",
+      "properties": {
+        "evidence.knowledge": {
+          "$ref": "#/$defs/slot_rules"
+        },
+        "evidence.tool_results": {
+          "$ref": "#/$defs/slot_rules"
+        }
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/slot_rules",
+        "not": {
+          "type": "object",
+          "required": [
+            "min_included"
+          ],
+          "properties": {
+            "min_included": true
+          }
+        }
+      }
+    },
+    "default_overrides": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "context_item.schema.json#/properties/slot"
+      },
+      "description": "Route replacements for slot defaults, applied when an item omits a policy field (R-3).",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "minProperties": 1,
+        "properties": {
+          "token_budget": {
+            "$ref": "context_item.schema.json#/properties/token_budget"
+          },
+          "variants": {
+            "$ref": "context_item.schema.json#/properties/variants"
+          },
+          "conflict_policy": {
+            "$ref": "context_item.schema.json#/properties/conflict_policy"
+          },
+          "lineage": {
+            "$ref": "context_item.schema.json#/properties/lineage"
+          },
+          "eligibility": {
+            "$ref": "context_item.schema.json#/properties/eligibility"
+          },
+          "injection_risk": {
+            "$ref": "context_item.schema.json#/properties/injection_risk"
+          }
+        }
+      }
+    },
+    "tier_upgrades": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "context_item.schema.json#/properties/slot"
+      },
+      "description": "Tiers this route raises above the slot default; items cannot raise their own (R-16). A value at or below the default changes nothing: the effective tier is the higher of the two.",
+      "additionalProperties": {
+        "type": "string",
+        "enum": [
+          "compressible",
+          "protected"
+        ]
+      }
+    },
+    "fitting_order": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "The order in which compressible items are reduced: under budget pressure, once every droppable item a slot floor does not hold is gone, and, for the steps that name a slot, while that slot's max_tokens cap is enforced (R-16). Item token_budget caps apply first, whether or not the payload fits. Each step compresses (selects supplied variants for) or omits one slot's compressible items, lowest-ranked first, until the payload fits or the slot is within its cap; under budget pressure a slot floor can withhold a reduction (conformance/README.md, Fitting). Steps the route does not list follow in the default order: compress each slot, then omit each slot, both in shedding order. With no steps, variants always come before omission.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slot",
+          "action"
+        ],
+        "properties": {
+          "slot": {
+            "$ref": "context_item.schema.json#/properties/slot"
+          },
+          "action": {
+            "enum": [
+              "compress",
+              "omit"
+            ]
+          }
+        }
+      }
+    },
+    "facts": {
+      "type": "object",
+      "description": "Factual precedence, keyed by the fact key that fact conflict groups name (R-6, R-11). Instruction authority never ranks facts.",
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "precedence",
+          "on_unresolved"
+        ],
+        "properties": {
+          "precedence": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+            },
+            "description": "Producers whose claims about this fact are eligible, by the identity the application authenticated, most authoritative first. A member from any other producer is ineligible: it cannot win and is excluded when another member does. item.source never counts (R-15), and neither do a member's trust and injection_risk or the producer's verified flag (R-11): a route that prefers a verified server lists it earlier."
+          },
+          "scope": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "tenant",
+                "user",
+                "session",
+                "task",
+                "locale",
+                "step"
+              ]
+            },
+            "description": "Scope keys a member must carry to be eligible. Admission already requires every key an item carries to equal the request's value, so eligible members share this scope. Default []."
+          },
+          "freshness_tiebreak": {
+            "type": "boolean",
+            "description": "When several eligible members share the highest-ranked producer, the single newest by freshness wins, comparing instants at full precision. Without it, or when the newest is tied, the group escalates. Default false."
+          },
+          "on_unresolved": {
+            "enum": [
+              "surface",
+              "request_context",
+              "refuse"
+            ],
+            "description": "What assembly does when this fact's policy cannot pick a unique winner: surface keeps every member and marks it in the payload, request_context and refuse refuse with conflict_unresolved (R-11)."
+          }
+        }
+      }
+    }
+  },
+  "if": {
+    "type": "object",
+    "required": [
+      "slots"
+    ],
+    "properties": {
+      "slots": {
+        "anyOf": [
+          {
+            "type": "object",
+            "required": [
+              "evidence.knowledge"
+            ],
+            "properties": {
+              "evidence.knowledge": {
+                "type": "object",
+                "required": [
+                  "min_included"
+                ],
+                "properties": {
+                  "min_included": true
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "evidence.tool_results"
+            ],
+            "properties": {
+              "evidence.tool_results": {
+                "type": "object",
+                "required": [
+                  "min_included"
+                ],
+                "properties": {
+                  "min_included": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "then": {
+    "type": "object",
+    "required": [
+      "requires_evidence"
+    ],
+    "properties": {
+      "requires_evidence": {
+        "const": true
+      }
+    }
+  },
+  "$defs": {
+    "slot_rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min_relevance": {
+          "type": "number",
+          "description": "Items scoring below this rerank threshold are excluded as below_threshold (R-13). An item with no relevance cannot clear a threshold and is excluded the same way, except in evidence.knowledge, where relevance is required and an item without it is missing_field:relevance (R-13). A score equal to the threshold passes."
+        },
+        "max_age_seconds": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Items observed longer ago than this are excluded: stale_state for state slots (R-8), not_eligible elsewhere. An item exactly this old is still admitted."
+        },
+        "required_scope": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "tenant",
+              "user",
+              "session",
+              "task",
+              "locale",
+              "step"
+            ]
+          },
+          "description": "Scope keys an item must carry. Independently of this list, every key an item's scope does carry must equal the request's value for that key; a key the request lacks never matches. A missing key is out_of_scope, never a wildcard."
+        },
+        "source_prefix": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]",
+          "description": "Prefix every item source must start with, e.g. turn: for memory's source turn (R-9)."
+        },
+        "priority": {
+          "type": "integer",
+          "description": "Shedding order across slots under budget pressure (R-16): lower priorities shed first, and equal priorities shed in slot-name order. Default 0."
+        },
+        "order_by": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "-relevance",
+              "-freshness",
+              "freshness"
+            ]
+          },
+          "description": "Rank within the slot; the lowest-ranked item sheds first (R-16). Keys compare in order, then id ascending. -relevance ranks higher scores first and unscored items last; -freshness ranks newer items first and freshness older ones, comparing instants at full precision. Default [\"-relevance\", \"-freshness\"]."
+        },
+        "min_included": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Evidence slots only, on a route with requires_evidence: assembly refuses with evidence_required when fitting leaves fewer items than this in the slot (R-12). An item the profile places twice counts once."
+        },
+        "max_tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Cap on the slot's share of the payload: the tokens of its included items' rendered bodies, every occurrence counted (R-16). It holds whether or not the payload fits. Protected items alone over it refuse the assembly with protected_content_over_budget before anything is reduced. Otherwise, after token_budget caps and before budget pressure, the slot sheds its own items in tier order until it is within the cap. Absent, the slot has no cap and budget.input still bounds it."
+        },
+        "min_tokens": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Floor on the slot's share under budget pressure: the tokens of its included items' rendered bodies, every occurrence counted (R-16). Budget pressure never makes a reduction that leaves the slot below it, and once one is withheld the slot is not reduced again; a slot already below it is shielded whole. When the payload then cannot fit, assembly refuses with slot_floor_over_budget (R-17). It does not guard token_budget or max_tokens caps. Absent, the slot has no floor."
+        },
+        "supersede": {
+          "enum": [
+            "source"
+          ],
+          "description": "source: after conflict resolution, exclude each item for which the same authenticated producer sent an item with the same source and a later freshness, compared as instants at full precision, with reason superseded (R-25). Items tied for the latest freshness are all kept; protected items and items a conflict group names are never excluded. Absent, the slot keeps every observation."
+        },
+        "dedupe": {
+          "enum": [
+            "exact"
+          ],
+          "description": "exact: after conflict resolution and any supersession (R-25), exclude each item whose body equals a kept item's body in this slot once whitespace runs are collapsed and the ends trimmed, with reason duplicate_content (R-24). Protected items and items a conflict group names are never excluded. Absent, the slot keeps equal bodies."
+        },
+        "max_per_source": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "After deduplication, keep at most this many items in the slot from each pair of authenticated producer and source, excluding the rest with reason source_diversity_cap (R-26). Protected items and items a conflict group names are never excluded and fill places first; the others fill what is left in rank order. Absent, the slot is not capped."
+        }
+      }
+    }
+  }
+}

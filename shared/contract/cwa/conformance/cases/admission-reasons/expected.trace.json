@@ -1,0 +1,576 @@
+{
+  "trace_id": "admission-reasons",
+  "profile": {
+    "id": "admission-fixture",
+    "version": 1
+  },
+  "budget": {
+    "input": 8192,
+    "reserved_output": 1200
+  },
+  "result": {
+    "input_tokens": 153,
+    "hash": "06179cbc8206a76ab393bfab41e5b5eb4f3f0e7c15842b720fa45a1b34a7d695"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 9,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "governance.capabilities",
+      "item_id": "cap:issue_refund",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "user:plan",
+      "tokens": 1,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "user:seats",
+      "tokens": 1,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.task",
+      "item_id": "task:8821",
+      "tokens": 2,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.task",
+      "item_id": "task:at-limit",
+      "tokens": 1,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:ok",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:skew-ok",
+      "tokens": 5,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:sub-ms",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "kb:obs",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:docs",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:order-42",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:untrusted",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "m:ok",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "m:untrusted",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:16",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:17",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:17b",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "m:expired",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "m:revoked",
+      "reason": "revoked",
+      "stage": "producer"
+    },
+    {
+      "item_id": "rogue:0",
+      "reason": "below_threshold",
+      "stage": "producer"
+    },
+    {
+      "item_id": "cap:delete_account",
+      "reason": "capability_not_allowed",
+      "stage": "assembler",
+      "slot": "governance.capabilities"
+    },
+    {
+      "item_id": "turn:17a",
+      "reason": "authority_not_allowed",
+      "stage": "assembler",
+      "slot": "interaction.history"
+    },
+    {
+      "item_id": "turn:18u",
+      "reason": "authority_not_allowed",
+      "stage": "assembler",
+      "slot": "interaction.query"
+    },
+    {
+      "item_id": "cap:refund-direct",
+      "reason": "capability_not_allowed",
+      "stage": "assembler",
+      "slot": "governance.capabilities"
+    },
+    {
+      "item_id": "obs:unmarked",
+      "reason": "untrusted_content_unmarked",
+      "stage": "assembler",
+      "slot": "evidence.tool_results"
+    },
+    {
+      "item_id": "docs:policy",
+      "reason": "producer_slot_not_allowed",
+      "stage": "assembler",
+      "slot": "governance.instructions"
+    },
+    {
+      "item_id": "legacy:1",
+      "reason": "producer_not_authenticated",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "m:bad-source",
+      "reason": "source_invalid",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "m:expired-late",
+      "reason": "expired",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "m:no-expires",
+      "reason": "missing_field:expires",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "m:revoked-late",
+      "reason": "revoked",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "m:turn",
+      "reason": "producer_slot_not_allowed",
+      "stage": "assembler",
+      "slot": "interaction.history"
+    },
+    {
+      "item_id": "\u001c",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:authority",
+      "reason": "authority_not_allowed",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:authority-null",
+      "reason": "unknown_authority",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:authority-number",
+      "reason": "unknown_authority",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:bad-authority",
+      "reason": "unknown_authority",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:bad-date",
+      "reason": "invalid_structure",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:bad-slot",
+      "reason": "unknown_slot",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "kb:bare-offset",
+      "reason": "invalid_structure",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:blank-eligibility",
+      "reason": "invalid_structure",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:dup",
+      "reason": "duplicate_item_id",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:dup",
+      "reason": "duplicate_item_id",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:dup-invalid",
+      "reason": "duplicate_item_id",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:dup-invalid",
+      "reason": "missing_field:body",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:example",
+      "reason": "producer_slot_not_allowed",
+      "stage": "assembler",
+      "slot": "governance.examples"
+    },
+    {
+      "item_id": "kb:expired",
+      "reason": "expired",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:future",
+      "reason": "future_freshness",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:leap-second",
+      "reason": "invalid_structure",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:low",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:missing-body",
+      "reason": "missing_field:body",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:newline-date",
+      "reason": "invalid_structure",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:no-relevance",
+      "reason": "missing_field:relevance",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:no-slot",
+      "reason": "missing_field:slot",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "kb:obs-ref",
+      "reason": "authority_not_allowed",
+      "stage": "assembler",
+      "slot": "evidence.tool_results"
+    },
+    {
+      "item_id": "kb:old",
+      "reason": "not_eligible",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:out-of-scope",
+      "reason": "out_of_scope",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:protected",
+      "reason": "tier_upgrade_not_allowed",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:revoked",
+      "reason": "revoked",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:session",
+      "reason": "out_of_scope",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:slot-array",
+      "reason": "unknown_slot",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "kb:slot-null",
+      "reason": "unknown_slot",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "kb:slot-number",
+      "reason": "unknown_slot",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "kb:space-date",
+      "reason": "invalid_structure",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:unmarked",
+      "reason": "untrusted_content_unmarked",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:unscoped",
+      "reason": "out_of_scope",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:variant-no-method",
+      "reason": "invalid_structure",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:variant-twins",
+      "reason": "duplicate_variant_id",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:variants",
+      "reason": "duplicate_variant_id",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:wrong-slot",
+      "reason": "producer_slot_not_allowed",
+      "stage": "assembler",
+      "slot": "state.user"
+    },
+    {
+      "item_id": "m:expired",
+      "reason": "duplicate_item_id",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "policy-corpus#invalid-0",
+      "reason": "missing_field:id",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "policy-corpus#invalid-1",
+      "reason": "invalid_structure",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "rogue:1",
+      "reason": "duplicate_item_id",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "policy:injectable",
+      "reason": "untrusted_in_governance",
+      "stage": "assembler",
+      "slot": "governance.instructions"
+    },
+    {
+      "item_id": "policy:plan",
+      "reason": "producer_slot_not_allowed",
+      "stage": "assembler",
+      "slot": "state.user"
+    },
+    {
+      "item_id": "policy:unverified",
+      "reason": "untrusted_in_governance",
+      "stage": "assembler",
+      "slot": "governance.instructions"
+    },
+    {
+      "item_id": "rogue:1",
+      "reason": "producer_not_authenticated",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "task:droppable",
+      "reason": "protected_tier_changed",
+      "stage": "assembler",
+      "slot": "state.task"
+    },
+    {
+      "item_id": "task:past-limit",
+      "reason": "stale_state",
+      "stage": "assembler",
+      "slot": "state.task"
+    },
+    {
+      "item_id": "task:stale",
+      "reason": "stale_state",
+      "stage": "assembler",
+      "slot": "state.task"
+    },
+    {
+      "item_id": "task:untrusted",
+      "reason": "authority_not_allowed",
+      "stage": "assembler",
+      "slot": "state.task"
+    },
+    {
+      "item_id": "user:other",
+      "reason": "out_of_scope",
+      "stage": "assembler",
+      "slot": "state.user"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "admission/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "5bfe0df012314da7b976ac9b0b302954f5f5fced1e8ef2ca75bde4fd715808a8"
+  },
+  "defaults_filled": [
+    {
+      "item_id": "kb:low",
+      "field": "lineage"
+    },
+    {
+      "item_id": "kb:ok",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "m:expired",
+      "field": "lineage"
+    },
+    {
+      "item_id": "obs:order-42",
+      "field": "injection_risk"
+    },
+    {
+      "item_id": "rogue:1",
+      "field": "lineage"
+    }
+  ]
+}

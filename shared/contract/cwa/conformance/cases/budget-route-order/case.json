@@ -1,0 +1,8 @@
+{
+  "id": "budget-route-order",
+  "rules": [
+    "R-16",
+    "R-21"
+  ],
+  "description": "A route fitting_order omits older knowledge before any variant is selected, and a slot the profile places twice counts both occurrences."
+}

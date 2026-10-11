@@ -1,0 +1,43 @@
+{
+  "trace_id": "conflict-instruction-request-context",
+  "profile": {
+    "id": "conflict-instruction-request-context",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [
+    {
+      "group_id": "g-cite",
+      "kind": "instruction",
+      "items": [
+        "policy:nocite",
+        "policy:v12"
+      ],
+      "decided_by": "escalated",
+      "resolution": "context_requested"
+    }
+  ],
+  "refused": {
+    "bool": true,
+    "reason": "conflict_unresolved"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "conflict-instruction-request-context/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "401e83a3ad8d7de380912cdad32aba910a972129c1a0edb449631f0fa569cbf1"
+  },
+  "defaults_filled": [],
+  "recovery": {
+    "action": "request_context"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "messages-budget",
+  "rules": [
+    "R-7",
+    "R-16",
+    "R-21"
+  ],
+  "description": "Under cwa-messages/v1 the payload's size is the sum of its system texts, tool texts and message content, so fitting sheds the droppable profile and then the oldest turn, whose route priority is lowest, until that sum fits."
+}

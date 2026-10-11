@@ -1,0 +1,405 @@
+{
+  "assembly_time": "2026-09-22T12:00:00Z",
+  "scope": {
+    "tenant": "acme",
+    "user": "u_91",
+    "session": "s_7",
+    "task": "refund_request"
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "profile": {
+    "spec": "cwa/draft",
+    "id": "dedupe-exemptions",
+    "version": 1,
+    "route": "support-chat",
+    "model_family": null,
+    "route_policy_version": "dedupe-exemptions/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "xml:governance.instructions"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "xml:governance.examples"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:governance.output_contract"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:state.user"
+      },
+      {
+        "slot": "state.task",
+        "wrap": "xml:state.task"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence.knowledge"
+      },
+      {
+        "slot": "evidence.tool_results",
+        "wrap": "xml:evidence.tool_results"
+      },
+      {
+        "slot": "interaction.memory",
+        "wrap": "xml:interaction.memory"
+      },
+      {
+        "slot": "interaction.history",
+        "wrap": "xml:interaction.history"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:interaction.query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  "route_policy": {
+    "route": "support-chat",
+    "version": "dedupe-exemptions/v1",
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.examples",
+          "governance.instructions",
+          "governance.output_contract"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.task",
+          "state.user"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "wiki-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "crm-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.5,
+        "required_scope": [
+          "tenant"
+        ],
+        "dedupe": "exact"
+      },
+      "state.user": {
+        "dedupe": "exact"
+      }
+    },
+    "tier_upgrades": {
+      "state.user": "protected"
+    },
+    "facts": {
+      "refund.window": {
+        "precedence": [
+          "policy-corpus"
+        ],
+        "on_unresolved": "refuse"
+      }
+    }
+  },
+  "tokenizer": "fixture-whitespace/v1",
+  "renderer": "fixture-xml/v1",
+  "batches": [
+    {
+      "producer": {
+        "id": "conversation",
+        "kind": "interaction"
+      },
+      "items": [
+        {
+          "id": "turn:18",
+          "slot": "interaction.query",
+          "source": "src:turn:18",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Can I refund my Pro plan?",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-corpus",
+        "kind": "retrieval"
+      },
+      "items": [
+        {
+          "id": "kb:window",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:window",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Refunds are accepted within 30 days of purchase.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.7
+        },
+        {
+          "id": "kb:window-copy",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:window-copy",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Refunds are accepted within 30 days of purchase.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.99
+        },
+        {
+          "id": "kb:fee",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:fee",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Refunds carry no processing fee.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.6
+        },
+        {
+          "id": "kb:fee-copy",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:fee-copy",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Refunds carry no processing fee.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.95
+        },
+        {
+          "id": "kb:stale",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:stale",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Refunds carry a 5% processing fee.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.2
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-registry",
+        "kind": "policy"
+      },
+      "items": [
+        {
+          "id": "policy:v12",
+          "slot": "governance.instructions",
+          "source": "src:policy:v12",
+          "source_version": "1",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Follow verified refund policy and cite the evidence you use.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "state-svc",
+        "kind": "state"
+      },
+      "items": [
+        {
+          "id": "user:plan",
+          "slot": "state.user",
+          "source": "src:user:plan",
+          "source_version": "1",
+          "authority": "state",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "plan=pro since 2026-09-01",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "extracted",
+          "eligibility": "route-policy",
+          "injection_risk": "none",
+          "scope": {
+            "tenant": "acme",
+            "user": "u_91"
+          }
+        },
+        {
+          "id": "user:plan-sync",
+          "slot": "state.user",
+          "source": "src:user:plan-sync",
+          "source_version": "1",
+          "authority": "state",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "plan=pro since 2026-09-01",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "extracted",
+          "eligibility": "route-policy",
+          "injection_risk": "none",
+          "scope": {
+            "tenant": "acme",
+            "user": "u_91"
+          }
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "wiki-corpus",
+        "kind": "retrieval"
+      },
+      "items": [
+        {
+          "id": "wiki:window",
+          "slot": "evidence.knowledge",
+          "source": "src:wiki:window",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "body": "Refunds are accepted within 14 days of purchase.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "scope": {
+            "tenant": "acme"
+          },
+          "relevance": 0.9
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "f-window",
+      "kind": "fact",
+      "fact": "refund.window",
+      "items": [
+        "kb:window",
+        "wiki:window"
+      ]
+    },
+    {
+      "id": "g-fee",
+      "kind": "instruction",
+      "items": [
+        "kb:fee",
+        "kb:stale"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "assembly_time": "2026-09-22T12:00:00Z",
+  "scope": {
+    "tenant": "acme",
+    "user": "u_91"
+  },
+  "budget": {
+    "input": 8192,
+    "reserved_output": 1200
+  },
+  "profile": {
+    "spec": "cwa/draft",
+    "id": "capability-kind-fixture",
+    "version": 1,
+    "route": "support-chat",
+    "model_family": null,
+    "route_policy_version": "capability-kind/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "xml:governance.instructions"
+      },
+      {
+        "slot": "governance.capabilities",
+        "wrap": "xml:governance.capabilities"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:interaction.query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  "route_policy": {
+    "route": "support-chat",
+    "version": "capability-kind/v1",
+    "producers": {
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.query"
+        ]
+      },
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions"
+        ]
+      },
+      "tool-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.capabilities"
+        ]
+      }
+    }
+  },
+  "tokenizer": "fixture-whitespace/v1",
+  "renderer": "fixture-xml/v1",
+  "batches": [
+    {
+      "producer": {
+        "id": "conversation",
+        "kind": "interaction"
+      },
+      "items": [
+        {
+          "id": "turn:18",
+          "slot": "interaction.query",
+          "source": "src:turn:18",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "Can I refund my Pro plan?",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-registry",
+        "kind": "policy"
+      },
+      "items": [
+        {
+          "id": "policy:v12",
+          "slot": "governance.instructions",
+          "source": "src:policy:v12",
+          "source_version": "1",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "Follow verified application policy.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "tool-registry",
+        "kind": "policy"
+      },
+      "items": [
+        {
+          "id": "cap:issue_refund",
+          "slot": "governance.capabilities",
+          "source": "capability-policy:support-chat@v3",
+          "source_version": "v3",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "issue_refund(order_id: string, amount: number)",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none"
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "capabilities": {
+    "policy_producer": "tool-registry",
+    "allow_list_version": "v3",
+    "allowed_ids": [
+      "cap:issue_refund"
+    ]
+  },
+  "conflicts": []
+}

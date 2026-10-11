@@ -1,0 +1,36 @@
+{
+  "trace_id": "placement-protected-unplaced",
+  "profile": {
+    "id": "placement-protected-unplaced",
+    "version": 1
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "ex:tone",
+      "reason": "slot_unplaced",
+      "stage": "assembler",
+      "slot": "governance.examples"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "protected_slot_unplaced"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "placement-protected-unplaced/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "0b06dfe71bed87e6f261a63e621eb04385dc09b024f11d21aa04d55d5e56c178"
+  },
+  "defaults_filled": []
+}

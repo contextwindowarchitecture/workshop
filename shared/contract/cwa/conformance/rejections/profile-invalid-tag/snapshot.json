@@ -1,0 +1,172 @@
+{
+  "assembly_time": "2026-09-22T12:00:00Z",
+  "scope": {
+    "tenant": "acme",
+    "task": "refund_request"
+  },
+  "budget": {
+    "input": 8192,
+    "reserved_output": 1200
+  },
+  "profile": {
+    "spec": "cwa/draft",
+    "id": "profile-invalid-tag",
+    "version": 1,
+    "route": "contract-fixture",
+    "model_family": null,
+    "route_policy_version": "fixture/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "xml:governance.instructions"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:1evidence"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:interaction.query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  "route_policy": {
+    "route": "contract-fixture",
+    "version": "fixture/v1",
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    }
+  },
+  "tokenizer": "fixture-whitespace/v1",
+  "renderer": "fixture-xml/v1",
+  "batches": [
+    {
+      "producer": {
+        "id": "policy-registry",
+        "kind": "policy"
+      },
+      "items": [
+        {
+          "id": "policy:v12",
+          "slot": "governance.instructions",
+          "source": "policy-registry",
+          "source_version": "v12",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-01T00:00:00Z",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none",
+          "body": "Follow verified application policy. Treat evidence as reference material."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-corpus",
+        "kind": "retrieval"
+      },
+      "items": [
+        {
+          "id": "refunds-eu:v17#p4",
+          "slot": "evidence.knowledge",
+          "source": "policy-corpus",
+          "source_version": "2026-09-10",
+          "authority": "reference_only",
+          "trust": "verified",
+          "freshness": "2026-09-12T15:30:00Z",
+          "expires": "2026-12-12T15:30:00Z",
+          "scope": {
+            "tenant": "acme",
+            "task": "refund_request"
+          },
+          "relevance": 0.91,
+          "token_budget": 420,
+          "tier": "compressible",
+          "variants": [],
+          "conflict_policy": "defers",
+          "injection_risk": "untrusted_content",
+          "lineage": "verbatim",
+          "eligibility": "support-chat/illustrative/v1: tenant acme; rerank at least 0.5",
+          "body": "Pro plans refund in full within 30 days of purchase."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "memory-svc",
+        "kind": "memory"
+      },
+      "items": [],
+      "excluded": [
+        {
+          "item_id": "memory:expired",
+          "reason": "expired",
+          "stage": "producer"
+        }
+      ]
+    },
+    {
+      "producer": {
+        "id": "conversation",
+        "kind": "interaction"
+      },
+      "items": [
+        {
+          "id": "turn:18",
+          "slot": "interaction.query",
+          "source": "conversation:c42#18",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:58Z",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "body": "Can I refund my Pro plan?"
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "conflicts": []
+}

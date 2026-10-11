@@ -1,0 +1,156 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "https://contextwindowarchitecture.io/schema/context_item.schema.json"
+      }
+    },
+    "excluded": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          },
+          "reason": {
+            "description": "An exclusion code from contract/reasons.json (R-9, R-21): one of these, or missing_field:<name> with a non-blank name.",
+            "anyOf": [
+              {
+                "enum": [
+                  "producer_not_authenticated",
+                  "unknown_slot",
+                  "unknown_authority",
+                  "invalid_structure",
+                  "duplicate_item_id",
+                  "producer_slot_not_allowed",
+                  "authority_not_allowed",
+                  "capability_not_allowed",
+                  "untrusted_in_governance",
+                  "untrusted_content_unmarked",
+                  "protected_tier_changed",
+                  "tier_upgrade_not_allowed",
+                  "duplicate_variant_id",
+                  "revoked",
+                  "expired",
+                  "future_freshness",
+                  "stale_state",
+                  "source_invalid",
+                  "out_of_scope",
+                  "below_threshold",
+                  "not_eligible",
+                  "slot_unplaced",
+                  "conflict_deferred",
+                  "conflict_lost",
+                  "superseded",
+                  "duplicate_content",
+                  "source_diversity_cap",
+                  "over_budget"
+                ]
+              },
+              {
+                "type": "string",
+                "pattern": "^missing_field:[\\s\\S]*[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+              }
+            ]
+          },
+          "stage": {
+            "const": "producer"
+          },
+          "duplicate_of": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]",
+            "description": "For duplicate_content only: the id of the candidate in this batch the producer kept in the dropped item's place (R-13)."
+          },
+          "superseded_by": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]",
+            "description": "For superseded only: the id of the candidate in this batch the producer kept in the superseded item's place (R-9)."
+          }
+        },
+        "required": [
+          "item_id",
+          "reason",
+          "stage"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "reason": {
+                  "const": "duplicate_content"
+                }
+              },
+              "required": [
+                "reason"
+              ]
+            },
+            "then": {
+              "required": [
+                "duplicate_of"
+              ],
+              "properties": {
+                "duplicate_of": true
+              }
+            },
+            "else": {
+              "not": {
+                "required": [
+                  "duplicate_of"
+                ],
+                "properties": {
+                  "duplicate_of": true
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "reason": {
+                  "const": "superseded"
+                }
+              },
+              "required": [
+                "reason"
+              ]
+            },
+            "then": {
+              "required": [
+                "superseded_by"
+              ],
+              "properties": {
+                "superseded_by": true
+              }
+            },
+            "else": {
+              "not": {
+                "required": [
+                  "superseded_by"
+                ],
+                "properties": {
+                  "superseded_by": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "items",
+    "excluded"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contextwindowarchitecture.io/schema/producer_batch.schema.json",
+  "title": "CWA producer handoff"
+}

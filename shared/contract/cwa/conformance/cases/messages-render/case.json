@@ -1,0 +1,10 @@
+{
+  "id": "messages-render",
+  "rules": [
+    "R-7",
+    "R-10",
+    "R-11",
+    "R-21"
+  ],
+  "description": "cwa-messages/v1 puts governing instructions in system and the granted tool in tools, unescaped; everything else, including every prior turn marked with its speaker, renders escaped inside the one user message, so no history turn becomes a platform message and an injected closing tag stays material. Surfaced members in system are marked in their text, which is all the model receives."
+}

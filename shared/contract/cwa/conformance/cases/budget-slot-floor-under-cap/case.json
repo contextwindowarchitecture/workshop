@@ -1,0 +1,9 @@
+{
+  "id": "budget-slot-floor-under-cap",
+  "rules": [
+    "R-16",
+    "R-18",
+    "R-21"
+  ],
+  "description": "Floors do not guard slot caps: history's max_tokens, below its min_tokens, omits the oldest turn first, and budget pressure then leaves the rest of history whole, since any reduction would take it further below its floor."
+}

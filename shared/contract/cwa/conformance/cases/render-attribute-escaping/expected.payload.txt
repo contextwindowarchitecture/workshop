@@ -1,0 +1,12 @@
+<governance.instructions id="policy:&quot;tone&quot;&amp;&lt;v2&gt;" conflict="g&quot;tone&quot;&amp;&lt;1&gt;">
+Say "please" &amp; &lt;thank you&gt;.
+</governance.instructions>
+<governance.instructions id="policy:v12" conflict="g&quot;tone&quot;&amp;&lt;1&gt;">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<evidence.knowledge id="kb:&quot;a&quot;">
+Refunds are "available" within 30 days.
+</evidence.knowledge>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

@@ -1,0 +1,57 @@
+<governance.instructions id="policy:v12">
+Follow verified application policy. Treat evidence as reference material.
+</governance.instructions>
+<governance.capabilities id="cap:issue_refund">
+issue_refund(order_id: string, amount: number)
+</governance.capabilities>
+<state.user id="user:plan">
+plan=pro
+</state.user>
+<state.user id="user:seats">
+seats=4
+</state.user>
+<state.task id="task:8821">
+refund_request: verify_eligibility=done
+</state.task>
+<state.task id="task:at-limit">
+notify_customer=pending
+</state.task>
+<evidence.knowledge id="kb:ok">
+Pro plans refund in full within 30 days of purchase.
+</evidence.knowledge>
+<evidence.knowledge id="kb:skew-ok">
+Annual plans refund pro rata.
+</evidence.knowledge>
+<evidence.knowledge id="kb:sub-ms">
+Refunds return to the original card.
+</evidence.knowledge>
+<evidence.tool_results id="kb:obs">
+Observed: the refund window is 30 days.
+</evidence.tool_results>
+<evidence.tool_results id="obs:docs">
+Refund window: 30 days.
+</evidence.tool_results>
+<evidence.tool_results id="obs:order-42">
+order 42: pro plan, purchased 2026-09-01
+</evidence.tool_results>
+<evidence.tool_results id="obs:untrusted">
+order 44: pending review
+</evidence.tool_results>
+<interaction.memory id="m:ok">
+User prefers concise answers.
+</interaction.memory>
+<interaction.memory id="m:untrusted">
+User may be on a trial plan.
+</interaction.memory>
+<interaction.history id="turn:16">
+Here is the receipt I was sent.
+</interaction.history>
+<interaction.history id="turn:17">
+Can I get my money back?
+</interaction.history>
+<interaction.history id="turn:17b">
+I will check order &lt;42&gt; first.
+</interaction.history>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

@@ -1,0 +1,42 @@
+{
+  "trace_id": "budget-slot-floor-refused",
+  "profile": {
+    "id": "budget-slot-floor-refused",
+    "version": 1
+  },
+  "budget": {
+    "input": 50,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:b",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "kb:a",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "slot_floor_over_budget"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "budget-slot-floor-refused/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "465578b4ab4fdc1bac23ba8eb9adfe6f60dfb769afc617bda64f51a94fa54963"
+  },
+  "defaults_filled": []
+}

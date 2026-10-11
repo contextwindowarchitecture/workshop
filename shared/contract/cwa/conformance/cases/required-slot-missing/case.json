@@ -1,0 +1,10 @@
+{
+  "id": "required-slot-missing",
+  "rules": [
+    "R-4",
+    "R-17",
+    "R-21",
+    "R-22"
+  ],
+  "description": "On a parser route whose only output contract fails admission, assembly refuses before fitting: no payload, result null, included empty, admission rows kept."
+}

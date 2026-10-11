@@ -1,0 +1,200 @@
+{
+  "assembly_time": "2026-09-22T12:00:00Z",
+  "scope": {
+    "tenant": "acme"
+  },
+  "budget": {
+    "input": 48,
+    "reserved_output": 1200
+  },
+  "profile": {
+    "spec": "cwa/draft",
+    "id": "digest-beyond-2-53",
+    "version": 1,
+    "route": "support-chat",
+    "model_family": null,
+    "route_policy_version": "digest-beyond-2-53/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "xml:governance.instructions"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence.knowledge"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:interaction.query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  "route_policy": {
+    "route": "support-chat",
+    "version": "digest-beyond-2-53/v1",
+    "producers": {
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.query"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 12345678901234567000
+      }
+    }
+  },
+  "tokenizer": "fixture-whitespace/v1",
+  "renderer": "fixture-xml/v1",
+  "batches": [
+    {
+      "producer": {
+        "id": "conversation",
+        "kind": "interaction"
+      },
+      "items": [
+        {
+          "id": "turn:18",
+          "slot": "interaction.query",
+          "source": "src:turn:18",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "Can I refund my Pro plan?",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-corpus",
+        "kind": "retrieval"
+      },
+      "items": [
+        {
+          "id": "kb:a",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:a",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "Refunds within 30 days return to the original card.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "relevance": 12345678901234567890
+        },
+        {
+          "id": "kb:b",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:b",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "Annual plans refund pro rata after 30 days end.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "relevance": 1.2345678901234567e+19
+        },
+        {
+          "id": "kb:c",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:c",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "Refunds take five business days.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "relevance": 12345678901234566500
+        },
+        {
+          "id": "kb:d",
+          "slot": "evidence.knowledge",
+          "source": "src:kb:d",
+          "source_version": "1",
+          "authority": "reference_only",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "Refunds reach debit cards within ten days.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content",
+          "relevance": 12345678901234566000
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-registry",
+        "kind": "policy"
+      },
+      "items": [
+        {
+          "id": "policy:v12",
+          "slot": "governance.instructions",
+          "source": "src:policy:v12",
+          "source_version": "1",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:30Z",
+          "body": "Follow verified application policy.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none"
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "conflicts": []
+}

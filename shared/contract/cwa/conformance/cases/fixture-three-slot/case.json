@@ -1,0 +1,10 @@
+{
+  "id": "fixture-three-slot",
+  "rules": [
+    "R-9",
+    "R-21",
+    "R-22",
+    "R-23"
+  ],
+  "description": "Three admitted items render in profile order with the fixture renderer; a producer's expired-memory exclusion reaches the trace without its body; the payload hash and whitespace token count match the published example."
+}

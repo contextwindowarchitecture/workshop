@@ -1,0 +1,259 @@
+{
+  "assembly_time": "2026-09-22T12:00:00Z",
+  "scope": {
+    "tenant": "acme",
+    "user": "u_91",
+    "session": "s_7",
+    "task": "refund_request"
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "profile": {
+    "spec": "cwa/draft",
+    "id": "history-freshness-order",
+    "version": 1,
+    "route": "support-chat",
+    "model_family": null,
+    "route_policy_version": "history-freshness-order/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "xml:governance.instructions"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "xml:governance.examples"
+      },
+      {
+        "slot": "governance.output_contract",
+        "wrap": "xml:governance.output_contract"
+      },
+      {
+        "slot": "state.user",
+        "wrap": "xml:state.user"
+      },
+      {
+        "slot": "state.task",
+        "wrap": "xml:state.task"
+      },
+      {
+        "slot": "evidence.knowledge",
+        "wrap": "xml:evidence.knowledge"
+      },
+      {
+        "slot": "evidence.tool_results",
+        "wrap": "xml:evidence.tool_results"
+      },
+      {
+        "slot": "interaction.memory",
+        "wrap": "xml:interaction.memory"
+      },
+      {
+        "slot": "interaction.history",
+        "wrap": "xml:interaction.history"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:interaction.query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  "route_policy": {
+    "route": "support-chat",
+    "version": "history-freshness-order/v1",
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.examples",
+          "governance.instructions",
+          "governance.output_contract"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.task",
+          "state.user"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "crm-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.5,
+        "required_scope": [
+          "tenant"
+        ]
+      }
+    }
+  },
+  "tokenizer": "fixture-whitespace/v1",
+  "renderer": "fixture-xml/v1",
+  "batches": [
+    {
+      "producer": {
+        "id": "conversation",
+        "kind": "interaction"
+      },
+      "items": [
+        {
+          "id": "turn:9",
+          "slot": "interaction.history",
+          "source": "src:turn:9",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:46:00Z",
+          "body": "I bought the Pro plan last week.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        },
+        {
+          "id": "turn:10",
+          "slot": "interaction.history",
+          "source": "src:turn:10",
+          "source_version": "1",
+          "authority": "untrusted",
+          "trust": "unverified",
+          "freshness": "2026-09-22T13:47:00+02:00",
+          "body": "Which order should I look at?",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "generated",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        },
+        {
+          "id": "turn:12",
+          "slot": "interaction.history",
+          "source": "src:turn:12",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:48:00.25Z",
+          "body": "Order 8821.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        },
+        {
+          "id": "turn:11",
+          "slot": "interaction.history",
+          "source": "src:turn:11",
+          "source_version": "1",
+          "authority": "untrusted",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:48:00.5Z",
+          "body": "Order 8821 is within the 30-day refund window.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "generated",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        },
+        {
+          "id": "turn:11b",
+          "slot": "interaction.history",
+          "source": "src:turn:11b",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:48:00.500Z",
+          "body": "Then please refund it.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        },
+        {
+          "id": "turn:13",
+          "slot": "interaction.query",
+          "source": "src:turn:13",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "How long will the refund take?",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-registry",
+        "kind": "policy"
+      },
+      "items": [
+        {
+          "id": "policy:v12",
+          "slot": "governance.instructions",
+          "source": "src:policy:v12",
+          "source_version": "1",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Follow verified refund policy and cite the evidence you use.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none"
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "conflicts": []
+}

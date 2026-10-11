@@ -1,0 +1,9 @@
+{
+  "id": "budget-droppable-order",
+  "rules": [
+    "R-16",
+    "R-21",
+    "R-22"
+  ],
+  "description": "Droppable items shed one at a time by slot priority, then oldest first, and shedding stops as soon as the payload fits; compressible and protected items are untouched."
+}

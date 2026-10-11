@@ -1,0 +1,206 @@
+{
+  "type": "object",
+  "properties": {
+    "spec": {
+      "const": "cwa/draft",
+      "description": "The specification this profile was written for: \"cwa/draft\" until the first release, then \"cwa/1\". A profile for another specification is invalid (R-19)."
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "route": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "model_family": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "route_policy_version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "placement": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "properties": {
+          "slot": {
+            "type": "string",
+            "enum": [
+              "governance.instructions",
+              "governance.capabilities",
+              "governance.examples",
+              "governance.output_contract",
+              "state.user",
+              "state.task",
+              "evidence.knowledge",
+              "evidence.tool_results",
+              "interaction.memory",
+              "interaction.history",
+              "interaction.query"
+            ]
+          },
+          "wrap": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          }
+        },
+        "required": [
+          "slot",
+          "wrap"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "unevaluated",
+            "evaluated"
+          ]
+        },
+        "suite": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(?![\\s\\S])"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "result": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artifact": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "suite",
+        "date",
+        "result",
+        "artifact"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "spec",
+    "id",
+    "version",
+    "route",
+    "model_family",
+    "route_policy_version",
+    "placement",
+    "evaluation"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contextwindowarchitecture.io/schema/profile.schema.json",
+  "title": "CWA placement profile",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "evaluation": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "evaluated"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "model_family": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          },
+          "evaluation": {
+            "type": "object",
+            "properties": {
+              "suite": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+              },
+              "date": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+              },
+              "result": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+              },
+              "artifact": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

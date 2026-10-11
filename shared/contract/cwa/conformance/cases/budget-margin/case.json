@@ -1,0 +1,8 @@
+{
+  "id": "budget-margin",
+  "rules": [
+    "R-16",
+    "R-21"
+  ],
+  "description": "budget.margin_percent charges the payload 10% more: 58 tokens fit budget.input 60 unscaled but charge 64, so a droppable item is shed until the charged count fits; traced counts stay unscaled and the trace's budget repeats the margin."
+}

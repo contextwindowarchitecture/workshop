@@ -1,0 +1,9 @@
+{
+  "id": "dedupe-exact",
+  "rules": [
+    "R-21",
+    "R-22",
+    "R-24"
+  ],
+  "description": "In the slots a route asks, bodies equal once whitespace runs collapse are excluded as duplicate_content, keeping the highest-ranked copy (relevance before id, id on a tie); normalization forms and case still differ, equal bodies in different slots are both kept, and a slot without dedupe keeps repeated turns."
+}

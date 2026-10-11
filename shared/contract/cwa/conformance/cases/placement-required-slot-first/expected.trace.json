@@ -1,0 +1,29 @@
+{
+  "trace_id": "placement-required-slot-first",
+  "profile": {
+    "id": "placement-required-slot-first",
+    "version": 1
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "required_slot_missing"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "placement-required-slot-first/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "842e441841150cad7d8e96b7405b1989c6ff1d4f7ede3e8448d0f83499510172"
+  },
+  "defaults_filled": []
+}

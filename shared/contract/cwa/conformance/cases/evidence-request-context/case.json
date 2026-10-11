@@ -1,0 +1,10 @@
+{
+  "id": "evidence-request-context",
+  "rules": [
+    "R-12",
+    "R-17",
+    "R-21",
+    "R-22"
+  ],
+  "description": "A route that requires evidence refuses with recovery request_context when admission leaves no evidence, although everything else fits."
+}

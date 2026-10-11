@@ -1,0 +1,115 @@
+{
+  "trace_id": "supersede-exemptions",
+  "profile": {
+    "id": "supersede-exemptions",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 51,
+    "hash": "e187262cb163c1528caff137006cdf3900d55d34b7602757b00bae4211a81854"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "user:plan-new",
+      "tokens": 1,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "user:plan-old",
+      "tokens": 1,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:ship-new",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:status-new",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:status-old",
+      "tokens": 4,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "kb:status",
+      "reason": "conflict_lost",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "obs:ship-old",
+      "reason": "superseded",
+      "stage": "assembler",
+      "slot": "evidence.tool_results",
+      "superseded_by": "obs:ship-new"
+    },
+    {
+      "item_id": "obs:ship-mirror",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.tool_results",
+      "duplicate_of": "obs:ship-new"
+    }
+  ],
+  "conflicts": [
+    {
+      "group_id": "f-status",
+      "kind": "fact",
+      "items": [
+        "kb:status",
+        "obs:status-old"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "obs:status-old"
+    }
+  ],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "supersede-exemptions/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "3c4bb7f41fbdf29649532a503e07fed6ee7c755c7bfd3a42f248f7a6462e1782"
+  },
+  "defaults_filled": []
+}

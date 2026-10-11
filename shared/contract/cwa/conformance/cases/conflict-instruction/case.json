@@ -1,0 +1,11 @@
+{
+  "id": "conflict-instruction",
+  "rules": [
+    "R-3",
+    "R-6",
+    "R-7",
+    "R-11",
+    "R-21"
+  ],
+  "description": "Instruction groups: authority records without excluding, one governing peer excludes the peers that defer, evidence never instructs, and a group with two governing peers, a peer that says escalate, peers that all defer or a protected deferring peer is surfaced and marked; a lone peer wins by authority whatever its conflict_policy, a user member below peers resolved by policy stays, and trust and the injection marker never decide who may instruct."
+}

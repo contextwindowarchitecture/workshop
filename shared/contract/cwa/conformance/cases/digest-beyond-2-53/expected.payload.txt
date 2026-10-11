@@ -1,0 +1,15 @@
+<governance.instructions id="policy:v12">
+Follow verified application policy.
+</governance.instructions>
+<evidence.knowledge id="kb:a">
+Refunds within 30 days return to the original card.
+</evidence.knowledge>
+<evidence.knowledge id="kb:b">
+Annual plans refund pro rata after 30 days end.
+</evidence.knowledge>
+<evidence.knowledge id="kb:c">
+Refunds take five business days.
+</evidence.knowledge>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

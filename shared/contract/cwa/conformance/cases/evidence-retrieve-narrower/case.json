@@ -1,0 +1,11 @@
+{
+  "id": "evidence-retrieve-narrower",
+  "rules": [
+    "R-12",
+    "R-16",
+    "R-17",
+    "R-21",
+    "R-22"
+  ],
+  "description": "Every evidence item had variants and none fit beside the protected items, so fitting omits all evidence and the refusal recommends retrieve_narrower."
+}

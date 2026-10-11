@@ -1,0 +1,6 @@
+<governance.instructions id="policy:v12">
+Follow verified application policy.
+</governance.instructions>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

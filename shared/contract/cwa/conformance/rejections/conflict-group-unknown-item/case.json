@@ -1,0 +1,8 @@
+{
+  "id": "conflict-group-unknown-item",
+  "rules": [
+    "R-11",
+    "R-17"
+  ],
+  "description": "A conflict group names an item id that is neither a candidate nor a producer exclusion in the snapshot."
+}

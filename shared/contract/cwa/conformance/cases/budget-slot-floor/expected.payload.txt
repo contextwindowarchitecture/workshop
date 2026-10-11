@@ -1,0 +1,18 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<governance.examples id="ex:1">
+Example: refunds within thirty days are approved.
+</governance.examples>
+<evidence.knowledge id="kb:a">
+Pro: full refund, 30 days.
+</evidence.knowledge>
+<interaction.history id="turn:15">
+We upgraded to Pro two weeks ago but the seats are wrong.
+</interaction.history>
+<interaction.history id="turn:16">
+Seats cannot change.
+</interaction.history>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

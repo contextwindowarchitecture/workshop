@@ -1,0 +1,62 @@
+{
+  "trace_id": "budget-margin-rounding",
+  "profile": {
+    "id": "budget-margin-rounding",
+    "version": 1
+  },
+  "budget": {
+    "input": 39,
+    "reserved_output": 1024,
+    "margin_percent": 1
+  },
+  "result": {
+    "input_tokens": 33,
+    "hash": "2f1b837a9b2a7930418df9f27191cb3471f0f9ee5a8da5795b900d09b44c65d6"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "user:plan",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "state.user"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "budget-margin-rounding/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "89961f42377535f5450e8482f691d6833ada8f7813016ca81d004f725cb68fa6"
+  },
+  "defaults_filled": []
+}

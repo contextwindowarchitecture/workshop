@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contextwindowarchitecture.io/schema/snapshot.schema.json",
+  "title": "CWA assembly snapshot",
+  "description": "Everything that can affect an assembly, frozen before assembly begins (R-23). Conformance cases use this shape so implementations in any language replay the same input. Batch items are raw producer output: admission validates each one and records an invalid item as an exclusion rather than rejecting the snapshot (R-2). An entry that is not a JSON object is not an item, and rejects the snapshot (R-17).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "assembly_time",
+    "scope",
+    "budget",
+    "profile",
+    "route_policy",
+    "tokenizer",
+    "renderer",
+    "batches",
+    "conflicts"
+  ],
+  "properties": {
+    "assembly_time": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}[Tt]([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?([Zz]|[+-]([01][0-9]|2[0-3]):[0-5][0-9])(?![\\s\\S])"
+    },
+    "scope": {
+      "$ref": "context_item.schema.json#/properties/scope"
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "input",
+        "reserved_output"
+      ],
+      "properties": {
+        "input": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reserved_output": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "margin_percent": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Optional safety margin, in percent, for a tokenizer that estimates: the payload fits only when its token count times (100 + margin_percent) / 100, rounded up, is at most input (R-16). Absent means 0."
+        }
+      }
+    },
+    "profile": {
+      "$ref": "profile.schema.json"
+    },
+    "route_policy": {
+      "$ref": "route_policy.schema.json"
+    },
+    "tokenizer": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "renderer": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+    },
+    "batches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "producer",
+          "items",
+          "excluded"
+        ],
+        "properties": {
+          "producer": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "kind"
+            ],
+            "description": "The identity the application authenticated for this batch. Never derived from item fields.",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "policy",
+                  "state",
+                  "retrieval",
+                  "memory",
+                  "mcp",
+                  "capability_policy",
+                  "interaction"
+                ]
+              }
+            }
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "Candidate items exactly as the producer emitted them. Validated per item at admission against context_item.schema.json; only an entry that is not an object fails this schema (R-2, R-17)."
+          },
+          "excluded": {
+            "$ref": "producer_batch.schema.json#/properties/excluded"
+          }
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy_producer",
+        "allow_list_version",
+        "allowed_ids"
+      ],
+      "properties": {
+        "policy_producer": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]",
+          "description": "The authenticated producer id of the route capability policy, which the route lists with kind capability_policy. Only its batch may carry governance.capabilities items, and only those in allowed_ids (R-15)."
+        },
+        "allow_list_version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        },
+        "allowed_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "description": "Declared conflict groups. Group ids are unique, every item id names a candidate or producer exclusion in this snapshot, no item belongs to two groups, and each fact group's fact is a key of route_policy.facts (R-11). The schema cannot express these cross-references; an assembler checks them before assembly.",
+      "items": {
+        "$ref": "conflict_group.schema.json"
+      }
+    }
+  }
+}

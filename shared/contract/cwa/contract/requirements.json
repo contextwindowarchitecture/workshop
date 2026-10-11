@@ -1,0 +1,184 @@
+[
+  {
+    "id": "R-1",
+    "section": "model",
+    "keyword": "MUST",
+    "summary": "One slot and one authority role per item",
+    "text": "Every item MUST name exactly one slot and one authority value from the closed set in section 3.1. Governing slots MUST carry governing; state slots state; knowledge reference_only; tool results observation; memory generated; history and query user, with two exceptions: prior model turns in history, marked lineage: generated, MUST carry untrusted, and any other item in evidence.tool_results, interaction.memory or interaction.history MAY carry untrusted instead. An item whose slot is not one of the eleven, whatever its JSON type, MUST be excluded with unknown_slot, one whose authority is outside the set, whatever its JSON type, with unknown_authority, and one whose authority is in the set but not permitted for its slot with authority_not_allowed. untrusted only keeps an item out of an instruction group's peers, so that group neither lets it prevail nor excludes it (R-6, R-11); a fact group ranks it like any other member, and every other rule of its slot still applies. These values classify instruction authority or data provenance; they MUST NOT form a global factual ranking."
+  },
+  {
+    "id": "R-2",
+    "section": "model",
+    "keyword": "MUST",
+    "summary": "Required fields and canonical JSON shape",
+    "text": "Every item MUST carry id, slot, source, source_version, authority, freshness, trust and body and MUST satisfy the published context_item.schema.json. freshness is an RFC 3339 date-time recording when the fact was observed or true; it is not an expiration time. expires is a separate deadline: an item whose expires is at or before assembly_time is expired (R-9). as_of is explanatory terminology, not a JSON alias. An item with invalid structure MUST be excluded and recorded: with missing_field:<name> when a required field of the item itself is absent, and otherwise with invalid_structure. A batch entry that is not a JSON object is not an item: the snapshot holding it fails its published schema and is rejected (R-17). An item MUST be excluded with duplicate_item_id when another candidate or producer exclusion in the snapshot uses its id. An item MUST be excluded as out_of_scope when a scope key it carries has a value other than the request's, including a key the request lacks, or when it lacks a key its slot's required_scope lists; a missing key is never a wildcard. An item whose freshness is later than assembly_time by more than the route's clock_skew_seconds MUST be excluded with future_freshness. An item without a non-blank string id MUST be recorded as {producer id}#invalid-{n}, where n counts such items from 0 in the order their batch supplied them. Assemblers and validators MUST compare timestamps as instants at their full stated precision and MUST NOT truncate fractional seconds. Every number in a snapshot is an IEEE 754 double (I-JSON): an assembler MUST read each number as the nearest double before comparing it with anything, so an integer beyond 2^53 compares in every language as the double it rounds to, which is the value the snapshot digest serializes (R-22)."
+  },
+  {
+    "id": "R-3",
+    "section": "model",
+    "keyword": "SHOULD",
+    "summary": "Declared policy defaults, filled and traced",
+    "text": "An item SHOULD carry token_budget, variants, conflict_policy, lineage, eligibility and injection_risk. When omitted, the assembler MUST apply the defaults published in contract/slot-defaults.json, with any route overrides versioned and recorded, and MUST trace every filled field. variants defaults to an empty list; token_budget caps the tokens of the item's rendered body; null sets no per-item cap, and budget.input and any max_tokens the route sets for the item's slot still bound it. eligibility is descriptive text, not executable code; the route's versioned slot rules are the executable eligibility predicate. The slot-level eligibility rules min_relevance (R-13), max_age_seconds, required_scope (R-2) and source_prefix are the complete set: an assembler MUST NOT apply any other eligibility rule, while every other admission check, such as producer authentication (R-15), still applies. An item observed longer ago than its slot's max_age_seconds MUST be excluded, as stale_state in a state slot (R-8) and as not_eligible elsewhere, and an item whose source does not start with its slot's source_prefix MUST be excluded with source_invalid. conflict_policy applies only among the peers of an instruction group (R-11) and is ignored for factual precedence."
+  },
+  {
+    "id": "R-4",
+    "section": "model",
+    "keyword": "MUST",
+    "summary": "Slots that are never omitted",
+    "text": "governance.instructions and interaction.query MUST NOT be omitted from any assembly. governance.output_contract MUST NOT be omitted when a downstream parser consumes the response, which the route policy declares with parser: true. When one of these slots has no admitted item, the assembler MUST refuse with required_slot_missing (R-17)."
+  },
+  {
+    "id": "R-5",
+    "section": "gov",
+    "keyword": "MUST NOT",
+    "summary": "Rule zero: enforce outside the model",
+    "text": "An assembler MUST NOT rely on context to enforce an invariant. Governance items MAY state a rule; the application MUST enforce it outside the model."
+  },
+  {
+    "id": "R-6",
+    "section": "gov",
+    "keyword": "MUST",
+    "summary": "Separate instruction authority from factual precedence",
+    "text": "An assembler MUST classify supplied conflict groups as instruction or fact before resolution. For instructions, platform message roles and application controls govern first; governing instructions outrank user requests. Only items whose authority is governing or user may issue behavioral instructions; items with any other authority, which include every state, evidence and memory item (R-1), MUST NOT. Among admitted items, trust and injection_risk never change which items may; they act only at admission (R-10). For facts, an assembler MUST use explicit, versioned route policy over the same fact and scope, MUST NOT use authority values as a truth ranking, and MUST escalate if policy cannot establish precedence."
+  },
+  {
+    "id": "R-7",
+    "section": "gov",
+    "keyword": "MUST NOT",
+    "summary": "No slot overrides platform roles; no authority from wording",
+    "text": "An assembler MUST NOT let any slot override platform message roles or application controls. An item MUST NOT gain authority from imperative wording in its body. Prior turns in interaction.history MUST render inside the profile's history wrapper as a transcript, in the order they were said: by freshness, which for a turn records when it was said (R-2), compared as instants at full precision, and by id among turns said at the same instant. They never render as platform user or assistant messages; only interaction.query renders as the live user turn."
+  },
+  {
+    "id": "R-8",
+    "section": "gov",
+    "keyword": "MUST",
+    "summary": "State is application-written and current",
+    "text": "state.* items MUST be written by the application and MUST be current at assembly time: a state item observed longer ago than its slot's max_age_seconds MUST be excluded with stale_state (R-3). An assembler MUST admit state items only from producers of kind state, whatever else a route policy lists. An assembler MUST NOT write state from model output."
+  },
+  {
+    "id": "R-9",
+    "section": "gov",
+    "keyword": "MUST",
+    "summary": "Memory lifetime and producer exclusion reporting",
+    "text": "interaction.memory items MUST carry expires and a source identifying the source turn. Any item expired at assembly_time, that is, whose expires is at or before it, MUST be excluded with expired, and any item carrying revoked_by with revoked, memory or not. Producers MUST report suppressed entries as excluded records containing item_id, reason and stage: producer, with reason one of the exclusion codes in contract/reasons.json; a record with reason superseded MUST carry superseded_by naming a candidate in the same batch, as R-13 requires duplicate_of; the assembler MUST merge those records into its trace, including those from a batch whose producer the route does not admit. Expiration MUST use the explicit assembly_time snapshot, not an ambient clock."
+  },
+  {
+    "id": "R-10",
+    "section": "gov",
+    "keyword": "MUST",
+    "summary": "User and fetched content is marked, never elevated, kept out of governance",
+    "text": "User-controlled quoted material, attachments, retrieved chunks, memory and tool output MUST be marked injection_risk: untrusted_content, except output from an MCP server the route policy verifies (R-15), and, when supplied as items of their own, rendered inside their slot's wrapper, never in a platform system or tool role (R-7). An assembler MUST exclude with untrusted_content_unmarked any item that is not so marked, as given or as filled (R-3), in a slot whose published injection_risk default is untrusted_content, unless that exception applies. The marker never changes authority (R-6): the interaction.query item carries user authority (R-1) and keeps it although it is marked, as do user turns in history. Material pasted or attached into the body of a query or history item renders with that body, since assembly never splits a body, and gains no instruction authority from the item; its marking does not change what the model sees, so an application SHOULD delimit such material inside the body in a form the material cannot imitate. An assembler MUST exclude with untrusted_in_governance any governance item whose trust is not verified or that is marked untrusted_content. Only an authenticated route policy may grant the verified-MCP exception in R-15."
+  },
+  {
+    "id": "R-11",
+    "section": "gov",
+    "keyword": "MUST",
+    "summary": "Explicit conflict groups and traceable resolution",
+    "text": "The application MUST supply conflict groups satisfying schema/conflict_group.schema.json: a group id unique in the snapshot, kind: instruction or fact, the IDs of candidates or producer exclusions in the snapshot, each in at most one group, and, for fact groups, a fact key that the route policy defines; assembly MUST NOT infer semantic contradictions by calling a model. A group left with fewer than two admitted members is moot and excludes nothing; the rules below decide every other group. Instruction conflicts follow platform roles, governing over user, then conflict_policy for permitted peers: resolving authority excludes nothing, and members that cannot instruct (R-6) remain as material. An instruction group's peers are its members at the highest authority present among those that may instruct: governing, or else user. With one peer or none, authority decides the group and nothing is excluded. With two or more, when exactly one governs and the rest defer, the assembler MUST exclude the deferring peers with reason conflict_deferred; any other pattern escalates. Factual conflicts use the route policy for that fact key, which lists eligible producers by authenticated identity in precedence order, the scope keys members must carry and any freshness tie-break. A member is eligible exactly when its producer is listed and it carries those scope keys. The leaders are the eligible members whose producer ranks first, so they all come from one producer; a single leader wins by policy, and a freshness tie-break, when the policy sets one, decides only among several leaders, so freshness never makes an ineligible member win. A member's trust and injection_risk, and the route's producers.<id>.verified flag, are not consulted; a route that prefers a verified source lists its producer earlier. When a member of a fact group wins, every other member is excluded with reason conflict_lost. Conflict resolution MUST NOT exclude a protected item; such a group escalates. The trace MUST hold one conflict record per declared group, recording group_id, kind, items, resolution and decided_by: authority, policy, freshness, escalated or moot, and, when one member prevails, winner. policy means the peers' conflict_policy for instruction groups and the route's fact policy for fact groups. authority MUST NOT decide a factual conflict. moot records a group left with fewer than two admitted items and MUST NOT be used while two or more remain. A group lacking a unique supported resolution MUST be surfaced, routed for more context or refused as route policy directs, never silently discarded; a surfaced group's members are marked as conflicting in the payload. Fitting may still omit a surfaced member under R-16; its over_budget row records the omission, and the members kept stay marked. When assembly refuses with conflict_unresolved and every group that caused it asked for more context, the trace MUST record recovery.action: request_context."
+  },
+  {
+    "id": "R-12",
+    "section": "fit",
+    "keyword": "MUST NOT",
+    "summary": "Never answer from nothing",
+    "text": "When admission and fitting leave no valid evidence, or fewer items in an evidence slot than that slot's versioned min_included, for a route that requires evidence, an assembler MUST NOT render a payload as though sufficient evidence were present. It MUST emit a refusal with reason evidence_required and record recovery.action: request_context when no evidence item was omitted for budget, precompute_summary when one that was had no variants, and retrieve_narrower otherwise. An evidence item was omitted for budget when its exclusion is recorded with reason over_budget, whether for the payload budget, its own token_budget or its slot's max_tokens (R-16). Retrieval or model-based summarization MUST occur outside assembly; any retry MUST create a new immutable snapshot."
+  },
+  {
+    "id": "R-13",
+    "section": "fit",
+    "keyword": "MUST NOT",
+    "summary": "Retrievers emit one scored item per chunk, never a blob",
+    "text": "A retrieval producer MUST NOT emit a merged blob. Each candidate MUST be a separate item in evidence.knowledge or evidence.tool_results, carrying the authority R-1 permits in that slot and its rerank score as relevance; an assembler MUST exclude with producer_slot_not_allowed any item a producer of kind retrieval sends to any other slot, whatever the route lists. Every evidence.knowledge item, from any producer, MUST carry relevance, and one without it is excluded with missing_field:relevance (R-2). An assembler MUST exclude with below_threshold an item scoring below its slot's min_relevance, or carrying no score in any other slot that sets one; a score equal to the threshold passes. A retrieval producer that drops a candidate as a near-duplicate of another MUST report it in its batch's excluded list with reason duplicate_content, stage producer and duplicate_of naming the candidate it kept, which MUST be a candidate in the same batch."
+  },
+  {
+    "id": "R-14",
+    "section": "fit",
+    "keyword": "MUST NOT",
+    "summary": "Memory producers suppress and report expired or revoked items",
+    "text": "A memory producer MUST emit only generated or untrusted memory items, and an assembler MUST exclude with producer_slot_not_allowed any item a producer of kind memory sends to a slot other than interaction.memory, whatever the route lists. It MUST NOT emit expired or revoked entries as candidate items. It MUST report them in its producer-batch excluded list with reason expired or revoked and stage: producer, so R-9 can be satisfied without re-emitting their bodies."
+  },
+  {
+    "id": "R-15",
+    "section": "fit",
+    "keyword": "MUST",
+    "summary": "Authenticated capability admission; MCP output is evidence",
+    "text": "MCP results and resources MUST be marked injection_risk: untrusted_content unless the route policy verifies that server. They MUST enter evidence slots, never governance: an assembler MUST exclude with producer_slot_not_allowed any item a producer of kind mcp sends to a slot other than evidence.knowledge, evidence.tool_results or governance.capabilities, whatever the route lists, and a tool specification it sends to governance.capabilities, where the route lists that slot for it, is excluded with capability_not_allowed. Adapters MAY propose tool specifications to the route capability policy. Only that authenticated application policy may emit governance.capabilities with authority: governing, trust: verified and injection_risk: none, after checking the versioned allow-list for the route and user. The application MUST bind producer identity outside item-controlled fields, and a snapshot MUST hold at most one batch per producer; items from a producer the route does not list, or lists with another kind, MUST be excluded with producer_not_authenticated, and an item in a slot the route does not list for its producer with producer_slot_not_allowed; a source prefix or self-declared trust MUST NOT prove authorization. A governance.capabilities item is authorized only when the snapshot carries a capability grant, its batch comes from the producer the grant names as policy_producer, the route lists that producer with kind capability_policy, and the grant's allow-list names the item's id; any other governance.capabilities item MUST be excluded with reason capability_not_allowed. Tool guards MUST still enforce invocation permissions."
+  },
+  {
+    "id": "R-16",
+    "section": "fit",
+    "keyword": "MUST",
+    "summary": "Account for rendered tokens; shed in tier order",
+    "text": "budget.input MUST be the maximum rendered input tokens after reserving budget.reserved_output from the model context limit. The assembler MUST count everything the renderer emits as text, including profile wrappers, separators, tool schemas and repeated slots, with the declared tokenizer. An assembler MUST NOT accept a tokenizer the application supplies under the ID of a published tokenizer, or a renderer under the ID of a published renderer (conformance/README.md, Tokenizers and renderers): it stops before assembly, with no payload and no trace, so a trace that names a published tokenizer or renderer always means its published count or rendering. Structure a renderer does not emit as text, such as a message request's roles, is outside the count, and the route covers it with budget.margin_percent. budget.margin_percent MAY reserve a safety margin for a tokenizer that estimates: the payload then fits only when its token count times (100 + margin_percent) / 100, rounded up, is at most budget.input, and the trace's budget MUST repeat it. Token caps, slot caps and floors, and traced token counts are not scaled by the margin. Under budget pressure it MUST shed in tier order: it MUST omit droppable items before reducing any compressible item, except droppable items a slot floor holds, and it MAY then reduce compressible items by selecting supplied variants or by omitting items, in the order given by the route's versioned fitting policy with a stable tie-break. When the route declares no order, the assembler MUST select variants before omitting any compressible item. It MUST NOT compress, truncate or omit protected items. Before any reduction, the assembler MUST refuse with protected_content_over_budget when a protected item's rendered body exceeds its token_budget, a slot's protected items alone exceed the slot's max_tokens, or the payload rendered from the protected items alone does not fit; nothing is omitted first. An item whose rendered body exceeds its token_budget MUST be reduced whether or not the payload fits: a compressible item to a supplied variant within the cap, and otherwise it is omitted; a droppable item is omitted; a protected item over its cap is never truncated. The route MAY cap a slot with max_tokens: the rendered bodies of the slot's included items, every occurrence counted, MUST then total at most max_tokens whether or not the payload fits. After token_budget caps and before budget pressure, the assembler MUST reduce the slot's own items in the same tier order until the slot is within its cap. The route MAY set a slot's min_tokens: during budget pressure the assembler MUST NOT make a reduction that leaves the slot's included tokens below it, and MUST NOT reduce that slot again once such a reduction is withheld; tier order still holds within the slot. Each omission for budget MUST be recorded in excluded with reason over_budget and stage assembler. The slot defaults set the minimum protection: in a slot that is protected by default, item metadata MUST NOT lower an item below protected, and an item that sets a lower tier there MUST be excluded with protected_tier_changed. In a slot that only the route raised to protected, an item MAY still lower its own tier. Only the route's versioned policy MAY raise a slot's tier. An item MUST NOT claim a tier above its slot's effective tier, and such an item MUST be excluded with reason tier_upgrade_not_allowed. Repeated occurrences count and are traced separately."
+  },
+  {
+    "id": "R-17",
+    "section": "fit",
+    "keyword": "MUST",
+    "summary": "Refused assembly has no rendered payload",
+    "text": "When required protected content cannot fit, the assembler MUST refuse with protected_content_over_budget (R-16) rather than silently truncate. When the payload cannot fit without a reduction a slot's min_tokens withholds, the assembler MUST refuse with slot_floor_over_budget. A refused result MUST have no payload; its trace MUST set refused.bool: true, a non-empty reason, result: null, included: [] and compressed: [], and MUST keep every exclusion, conflict record and filled default recorded before the refusal. A successful trace MUST set refused.bool: false and refused.reason: null. A snapshot that fails its published schemas or the snapshot checks listed in conformance/README.md, or holds a string that is not well-formed Unicode or a number outside the IEEE 754 double range (I-JSON, RFC 7493), MUST be rejected before assembly, with no payload and no trace, because its profile, budget or context may be missing or contradictory. Rejection reports the application's error in building the snapshot; refusals are outcomes of valid snapshots."
+  },
+  {
+    "id": "R-18",
+    "section": "fit",
+    "keyword": "MUST NOT",
+    "summary": "Precomputed variants; no model calls during assembly",
+    "text": "Producers MUST compute rerank scores and any compression variants before assembly and SHOULD cache them by content hash. Each variant MUST have its own id, body, method and lineage, inherit its parent provenance, scope and authority, and MUST NOT introduce a new instruction or unsupported fact; an item whose variants repeat an id or reuse the item's own id MUST be excluded with duplicate_variant_id. Assembly MUST select only supplied variants and MUST NOT call a model. For each rendered occurrence of a variant, the trace MUST identify the parent item and the selected variant."
+  },
+  {
+    "id": "R-19",
+    "section": "prof",
+    "keyword": "MUST",
+    "summary": "Draft profiles versus evaluated profiles",
+    "text": "A profile MUST carry spec, id, version, route, model_family, ordered placement with wrapper rules, route_policy_version and an evaluation object. spec names the specification the profile was written for, cwa/draft until the first release; a profile for another specification MUST be rejected. Draft profiles MAY use model_family: null and evaluation.status: unevaluated. Promotion for a deployment MUST require a concrete model family/version and evaluation.status: evaluated with a suite/version, date, result and reproducible artifact location. Descriptive benchmark numbers without artifacts MUST NOT count as validation."
+  },
+  {
+    "id": "R-20",
+    "section": "prof",
+    "keyword": "MUST",
+    "summary": "Profile version and mandatory-slot validation",
+    "text": "Every trace MUST record profile id and version. Any change to placement, repetition, wrapper rules, model target or referenced route policy MUST increment the profile version. A profile MUST include instructions and query, MUST include output_contract for parser routes, and MUST NOT omit any admitted protected content: when an admitted protected item's slot has no placement, the assembler MUST refuse with protected_slot_unplaced, and it MUST exclude an unprotected item in an unplaced slot with slot_unplaced. A profile's route and route_policy_version MUST equal the snapshot's route policy's route and version, and the snapshot's renderer MUST be able to realize its placements. Evaluation status changes alone MAY retain the version when the evaluated payload configuration is identical."
+  },
+  {
+    "id": "R-21",
+    "section": "trace",
+    "keyword": "MUST",
+    "summary": "Trace JSON matches the published schema",
+    "text": "A conformant assembler MUST emit trace JSON satisfying schema/trace.schema.json: trace_id; profile {id, version}; budget {input, reserved_output, and margin_percent when the snapshot sets it}; context {spec, assembly_time, route_policy_version, tokenizer, renderer, snapshot_digest}, where context.spec equals the profile's spec; result {input_tokens, hash} or null on refusal; included[] {slot, item_id, tokens, source_version, eligibility}; compressed[] {slot, item_id, from, to, method, variant_id}; excluded[] {item_id, reason, stage}, plus duplicate_of or superseded_by when the reason is duplicate_content or superseded; conflicts[] {group_id, kind, items, resolution, decided_by}; refused {bool, reason}; defaults_filled[] {item_id, field}; and recovery.action when a refusal records one (R-11, R-12). included records represent rendered occurrences. result.input_tokens includes rendering overhead; hash is lowercase SHA-256 of the exact rendered UTF-8 payload. Exclusion and refusal reasons MUST use the codes published in contract/reasons.json for the conditions those codes name. When an item fails several checks, the recorded reason MUST be the earliest applicable exclusion code in that file's order; among several missing_field codes, the alphabetically first field name is recorded. When several refusal conditions hold, the recorded reason MUST be the earliest refusal code in that file's order. Where these requirements leave an ordering, tie-break, boundary or algorithm step open, conformance/README.md is normative. Schema validation alone MUST NOT be described as implementation conformance."
+  },
+  {
+    "id": "R-22",
+    "section": "trace",
+    "keyword": "MUST",
+    "summary": "Provenance, snapshot digest and filled defaults in the trace",
+    "text": "A trace MUST include source_version and eligibility for each included occurrence, the slot of each assembler-stage excluded item whose candidate names one of the eleven slots, and context.snapshot_digest as a lowercase SHA-256 identifying the frozen assembly snapshot. defaults_filled MUST list one {item_id, field} record per item and field filled under R-3, and MUST be an empty list when no defaults were applied. A trace SHOULD include non-negative admission-stage timings."
+  },
+  {
+    "id": "R-23",
+    "section": "trace",
+    "keyword": "MUST",
+    "summary": "Determinism includes the clock and policy snapshot",
+    "text": "Given identical items, variants, producer exclusions, conflict groups, authenticated producer context, capability allow-list, scope, route-policy version and configuration, profile, tokenizer, renderer, assembly_time and budget, an assembler MUST produce identical rendered UTF-8 payload bytes and the same SHA-256 result hash, or the same refusal decision. Any mutable external reads or model calls MUST occur before that immutable assembly snapshot. Trace IDs and measured timing fields MAY differ; they are not part of the payload hash."
+  },
+  {
+    "id": "R-24",
+    "section": "fit",
+    "keyword": "MUST",
+    "summary": "Route-requested exact deduplication",
+    "text": "When a route sets dedupe: exact on a slot, the assembler MUST, after conflict resolution and any supersession (R-25) and before any refusal check or fitting, exclude each item in that slot whose body equals the body of an item it keeps in the slot, with reason duplicate_content, stage assembler and duplicate_of naming the kept item. Bodies MUST be compared code unit for code unit after collapsing each run of whitespace to one space and trimming both ends, without Unicode normalization or case folding. The assembler MUST NOT exclude a protected item or an item a conflict group names: a set of equal bodies that contains one keeps every such item, and otherwise keeps its highest-ranked item by the slot's fitting rank. Deduplication never compares items across slots, and a slot without dedupe keeps equal bodies."
+  },
+  {
+    "id": "R-25",
+    "section": "fit",
+    "keyword": "MUST",
+    "summary": "Route-requested supersession of stale observations",
+    "text": "When a route sets supersede: source on a slot, the assembler MUST, after conflict resolution and before deduplication, exclude each item in that slot that is neither protected nor named by a conflict group and for which another item in the slot, from the same authenticated producer and with the same source, has a later freshness, compared as instants at full precision. It MUST record each such exclusion with reason superseded, stage assembler and superseded_by naming the highest-ranked of the latest items by the slot's fitting rank. Items tied for the latest freshness are all kept. source and freshness decide alone: bodies, variants and source_version are not compared, and a slot without supersede keeps every observation."
+  },
+  {
+    "id": "R-26",
+    "section": "fit",
+    "keyword": "MUST",
+    "summary": "Route-requested source diversity",
+    "text": "When a route sets max_per_source on a slot, the assembler MUST, after deduplication and before any refusal check or fitting, cap each pair of authenticated producer and source in the slot at that many items. Protected items and items a conflict group names are never excluded and take places first, even beyond the cap; the other items fill any places left in the slot's fitting rank, and the rest MUST be excluded with reason source_diversity_cap and stage assembler. Each slot is capped on its own, and a slot without max_per_source is not capped."
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "id": "blocks-system-after-xml",
+  "rules": [
+    "R-7",
+    "R-17",
+    "R-20"
+  ],
+  "description": "Under cwa-message-blocks/v1, which realizes the placements cwa-messages/v1 does, a system placement follows an xml: one. An implementation without the optional renderer skips the case."
+}

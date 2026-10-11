@@ -1,0 +1,8 @@
+{
+  "id": "integer-written-as-double",
+  "rules": [
+    "R-2",
+    "R-26"
+  ],
+  "description": "Every number is a double: a slot capped at max_per_source 2.0 is capped at 2, as in diversity-cap, whose candidates and decisions this case repeats, so each document keeps its two highest-ranked chunks."
+}

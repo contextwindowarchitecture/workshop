@@ -1,0 +1,9 @@
+<governance.instructions id="policy:v12">
+Follow verified application policy.
+</governance.instructions>
+<evidence.knowledge id="kb:a">
+Refunds within 30 days return to the original card.
+</evidence.knowledge>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

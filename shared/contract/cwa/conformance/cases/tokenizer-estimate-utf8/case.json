@@ -1,0 +1,8 @@
+{
+  "id": "tokenizer-estimate-utf8",
+  "rules": [
+    "R-16",
+    "R-21"
+  ],
+  "description": "estimate-utf8/v1 counts UTF-8 bytes divided by 4, rounded up, per rendered text: accented Latin, Japanese and an emoji take 2, 3 and 4 bytes a character. The payload counts 134 and charges 161 under a 20% margin, over budget.input 150, so a droppable item is shed."
+}

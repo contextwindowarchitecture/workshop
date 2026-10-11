@@ -1,0 +1,30 @@
+<governance.instructions id="policy:v12">
+Follow verified refund policy and cite the evidence you use.
+</governance.instructions>
+<evidence.knowledge id="kb:cafe-nfc">
+Café purchases refund to store credit.
+</evidence.knowledge>
+<evidence.knowledge id="kb:cafe-nfd">
+Café purchases refund to store credit.
+</evidence.knowledge>
+<evidence.knowledge id="kb:case">
+pro plans refund in full within 30 days.
+</evidence.knowledge>
+<evidence.knowledge id="kb:mirror">
+Pro plans refund in full within 30 days.
+</evidence.knowledge>
+<evidence.knowledge id="kb:tie-1">
+Refunds go to the original payment method.
+</evidence.knowledge>
+<evidence.tool_results id="obs:new">
+Pro plans refund in full within 30 days.
+</evidence.tool_results>
+<interaction.history id="turn:15">
+Yes, please.
+</interaction.history>
+<interaction.history id="turn:17">
+Yes, please.
+</interaction.history>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

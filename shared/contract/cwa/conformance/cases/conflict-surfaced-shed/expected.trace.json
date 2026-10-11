@@ -1,0 +1,78 @@
+{
+  "trace_id": "conflict-surfaced-shed",
+  "profile": {
+    "id": "conflict-surfaced-shed",
+    "version": 1
+  },
+  "budget": {
+    "input": 40,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 32,
+    "hash": "7d3255419c5eed1c2509c7092724fba28afc054743ebfe60dfe375f6e448df73"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:price-1",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "ex:1",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "governance.examples"
+    },
+    {
+      "item_id": "kb:price-2",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [
+    {
+      "group_id": "f-price",
+      "kind": "fact",
+      "items": [
+        "kb:price-1",
+        "kb:price-2"
+      ],
+      "decided_by": "escalated",
+      "resolution": "surfaced"
+    }
+  ],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "conflict-surfaced-shed/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "9bc14c5d2d66f711d73c66a1bc98abd0609b8cf4500b70213d3706ea1dbdedc6"
+  },
+  "defaults_filled": []
+}

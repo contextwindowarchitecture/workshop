@@ -1,0 +1,9 @@
+{
+  "id": "budget-slot-floor-refused",
+  "rules": [
+    "R-16",
+    "R-17",
+    "R-21"
+  ],
+  "description": "When every reduction the floors allow is made and the payload still exceeds budget.input, assembly refuses with slot_floor_over_budget rather than break a floor; the refused trace keeps the fitting rows."
+}

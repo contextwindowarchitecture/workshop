@@ -1,0 +1,78 @@
+{
+  "trace_id": "budget-repeated-compress",
+  "profile": {
+    "id": "budget-repeated-compress",
+    "version": 1
+  },
+  "budget": {
+    "input": 55,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 44,
+    "hash": "2bcc88ae3f5daad9c34f1a7fa6c28520d91d92c427327e2b2505e7af5b82ae78"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "from": 18,
+      "to": 8,
+      "method": "extract",
+      "variant_id": "kb:a~short"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "from": 18,
+      "to": 8,
+      "method": "extract",
+      "variant_id": "kb:a~short"
+    }
+  ],
+  "excluded": [],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "budget-repeated-compress/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "0b353d74acdf800c9f03989159887eab3f4b2e2818dbd70307d2e0c6db93cd4f"
+  },
+  "defaults_filled": []
+}

@@ -1,0 +1,9 @@
+{
+  "id": "conflict-surfaced-shed",
+  "rules": [
+    "R-11",
+    "R-16",
+    "R-21"
+  ],
+  "description": "A surfaced fact group keeps both members through resolution, but budget pressure may still omit one: the lower-ranked member is traced as over_budget and the member that stays is still marked as conflicting."
+}

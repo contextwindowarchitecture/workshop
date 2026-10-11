@@ -1,0 +1,175 @@
+{
+  "assembly_time": "2026-09-22T12:00:00Z",
+  "scope": {
+    "tenant": "acme",
+    "user": "u_91",
+    "session": "s_7",
+    "task": "refund_request"
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "profile": {
+    "spec": "cwa/draft",
+    "id": "messages-repeated-slot",
+    "version": 1,
+    "route": "support-chat",
+    "model_family": null,
+    "route_policy_version": "messages-repeated-slot/v1",
+    "placement": [
+      {
+        "slot": "governance.instructions",
+        "wrap": "system"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "system"
+      },
+      {
+        "slot": "governance.examples",
+        "wrap": "xml:examples"
+      },
+      {
+        "slot": "interaction.query",
+        "wrap": "xml:query"
+      }
+    ],
+    "evaluation": {
+      "status": "unevaluated",
+      "suite": null,
+      "date": null,
+      "result": null,
+      "artifact": null
+    }
+  },
+  "route_policy": {
+    "route": "support-chat",
+    "version": "messages-repeated-slot/v1",
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.examples",
+          "governance.instructions",
+          "governance.output_contract"
+        ]
+      },
+      "cap-policy": {
+        "kind": "capability_policy",
+        "slots": [
+          "governance.capabilities"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.task",
+          "state.user"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.5,
+        "required_scope": [
+          "tenant"
+        ]
+      }
+    },
+    "tier_upgrades": {
+      "governance.examples": "compressible"
+    }
+  },
+  "tokenizer": "estimate-utf8/v1",
+  "renderer": "cwa-messages/v1",
+  "batches": [
+    {
+      "producer": {
+        "id": "conversation",
+        "kind": "interaction"
+      },
+      "items": [
+        {
+          "id": "turn:18",
+          "slot": "interaction.query",
+          "source": "src:turn:18",
+          "source_version": "1",
+          "authority": "user",
+          "trust": "unverified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Can I refund my Pro plan?",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "untrusted_content"
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "producer": {
+        "id": "policy-registry",
+        "kind": "policy"
+      },
+      "items": [
+        {
+          "id": "policy:v12",
+          "slot": "governance.instructions",
+          "source": "src:policy:v12",
+          "source_version": "1",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Follow verified refund policy & cite the evidence you use. Never quote <internal> notes.",
+          "token_budget": null,
+          "variants": [],
+          "conflict_policy": "governs",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none"
+        },
+        {
+          "id": "ex:qa",
+          "slot": "governance.examples",
+          "source": "src:ex:qa",
+          "source_version": "1",
+          "authority": "governing",
+          "trust": "verified",
+          "freshness": "2026-09-22T11:59:00Z",
+          "body": "Example: Q&A on refunds & returns & exchanges & store credit & fees & disputes & chargebacks.",
+          "token_budget": 28,
+          "variants": [
+            {
+              "id": "ex:qa~short",
+              "body": "Example: Q&A on refunds & returns.",
+              "method": "extract",
+              "lineage": "extracted"
+            }
+          ],
+          "conflict_policy": "defers",
+          "lineage": "verbatim",
+          "eligibility": "route-policy",
+          "injection_risk": "none"
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "conflicts": []
+}

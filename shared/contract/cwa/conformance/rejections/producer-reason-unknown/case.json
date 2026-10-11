@@ -1,0 +1,9 @@
+{
+  "id": "producer-reason-unknown",
+  "rules": [
+    "R-9",
+    "R-17",
+    "R-21"
+  ],
+  "description": "A producer exclusion's reason, rate_limited, is not an exclusion code in contract/reasons.json."
+}

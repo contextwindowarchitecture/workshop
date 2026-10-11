@@ -1,0 +1,44 @@
+{
+  "trace_id": "conflict-request-context",
+  "profile": {
+    "id": "conflict-request-context",
+    "version": 1
+  },
+  "budget": {
+    "input": 4000,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [
+    {
+      "group_id": "f-window",
+      "kind": "fact",
+      "items": [
+        "kb:window-1",
+        "kb:window-2",
+        "wiki:window"
+      ],
+      "decided_by": "escalated",
+      "resolution": "context_requested"
+    }
+  ],
+  "refused": {
+    "bool": true,
+    "reason": "conflict_unresolved"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "conflict-request-context/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "0ae5b42e96660576481d4d9b54332b246ddad232329b13d737d552263ed82987"
+  },
+  "defaults_filled": [],
+  "recovery": {
+    "action": "request_context"
+  }
+}

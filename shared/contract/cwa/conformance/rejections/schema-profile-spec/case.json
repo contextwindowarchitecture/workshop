@@ -1,0 +1,8 @@
+{
+  "id": "schema-profile-spec",
+  "rules": [
+    "R-17",
+    "R-19"
+  ],
+  "description": "The profile was written for another specification: its spec is cwa/1, and the profile schema fixes cwa/draft."
+}

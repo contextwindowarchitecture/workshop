@@ -1,0 +1,10 @@
+{
+  "id": "messages-repeated-slot",
+  "rules": [
+    "R-7",
+    "R-16",
+    "R-18",
+    "R-21"
+  ],
+  "description": "The profile places governance.examples as system and again as xml:examples, which cwa-messages/v1 renders unescaped and escaped. Under estimate-utf8/v1 the example's escaped rendering exceeds its token_budget though the unescaped one does not, and a cap bounds a body however it renders, so the example takes its variant in both occurrences, with one compressed row for each, counted as that occurrence renders."
+}

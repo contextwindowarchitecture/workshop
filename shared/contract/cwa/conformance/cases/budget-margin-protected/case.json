@@ -1,0 +1,9 @@
+{
+  "id": "budget-margin-protected",
+  "rules": [
+    "R-16",
+    "R-17",
+    "R-21"
+  ],
+  "description": "The margin applies to the protected-content test too: the protected items alone count 29, within budget.input 30, but charge 32 under a 10% margin, so assembly refuses with protected_content_over_budget."
+}

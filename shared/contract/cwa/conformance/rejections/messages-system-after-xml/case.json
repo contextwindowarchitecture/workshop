@@ -1,0 +1,9 @@
+{
+  "id": "messages-system-after-xml",
+  "rules": [
+    "R-7",
+    "R-17",
+    "R-20"
+  ],
+  "description": "Under cwa-messages/v1 a system placement follows an xml: one, and a message request cannot put material ahead of its system text."
+}

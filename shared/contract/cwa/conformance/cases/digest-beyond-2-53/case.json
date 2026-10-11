@@ -1,0 +1,9 @@
+{
+  "id": "digest-beyond-2-53",
+  "rules": [
+    "R-2",
+    "R-13",
+    "R-22"
+  ],
+  "description": "Every number is a double, and the snapshot digest writes each as JavaScript does: 12345678901234567890, 12345678901234566500 and 1.2345678901234567e+19 are all the double 12345678901234567168, which RFC 8785 writes as 12345678901234567000, so each meets min_relevance 12345678901234567000, while 12345678901234566000 rounds to the double below and is below_threshold."
+}

@@ -1,0 +1,29 @@
+{
+  "trace_id": "protected-over-budget",
+  "profile": {
+    "id": "protected-over-budget",
+    "version": 1
+  },
+  "budget": {
+    "input": 25,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "protected_content_over_budget"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "protected-over-budget/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "d564f0170032189fcd1eff5abfd16873f072534a135586e2fb0f9222cc13c6e1"
+  },
+  "defaults_filled": []
+}

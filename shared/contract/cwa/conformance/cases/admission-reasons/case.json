@@ -1,0 +1,19 @@
+{
+  "id": "admission-reasons",
+  "rules": [
+    "R-1",
+    "R-2",
+    "R-3",
+    "R-8",
+    "R-9",
+    "R-10",
+    "R-13",
+    "R-14",
+    "R-15",
+    "R-16",
+    "R-18",
+    "R-21",
+    "R-22"
+  ],
+  "description": "One candidate per admission reason, each failing exactly its intended check first, memory a producer should have suppressed, plus admitted items at the boundaries: clock skew, sub-millisecond expiry, route tier upgrade, verified MCP server, escaped history, untrusted authority where R-1 allows it, and a retrieval chunk admitted in tool results with that slot's authority while retrieval producers stay gated to the evidence slots."
+}

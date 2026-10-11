@@ -1,0 +1,9 @@
+{
+  "id": "budget-slot-cap-before-pressure",
+  "rules": [
+    "R-16",
+    "R-18",
+    "R-21"
+  ],
+  "description": "A slot cap is enforced before budget pressure, so the tokens it frees count: the knowledge slot takes the variant that brings it within max_tokens, the payload then fits, and the droppable example that budget pressure would have omitted first stays."
+}

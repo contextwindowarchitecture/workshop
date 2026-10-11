@@ -1,0 +1,11 @@
+{
+  "id": "placement-protected-unplaced",
+  "rules": [
+    "R-16",
+    "R-17",
+    "R-20",
+    "R-21",
+    "R-22"
+  ],
+  "description": "An admitted protected item whose slot the profile does not place refuses with protected_slot_unplaced, whether its slot is protected by default or raised by the route; unprotected unplaced items keep their slot_unplaced rows."
+}

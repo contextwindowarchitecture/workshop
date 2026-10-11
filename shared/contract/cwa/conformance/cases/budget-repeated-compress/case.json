@@ -1,0 +1,9 @@
+{
+  "id": "budget-repeated-compress",
+  "rules": [
+    "R-16",
+    "R-18",
+    "R-21"
+  ],
+  "description": "The profile places evidence.knowledge twice. Fitting decides per item, so compressing the chunk replaces both occurrences at once: one occurrence alone would already fit (54 of 55), but the chunk's two occurrences take the variant together (44), and included[] and compressed[] each hold one row per occurrence."
+}

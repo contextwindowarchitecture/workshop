@@ -1,0 +1,92 @@
+{
+  "trace_id": "placement-unplaced-slot",
+  "profile": {
+    "id": "placement-unplaced-slot",
+    "version": 1
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "result": {
+    "input_tokens": 43,
+    "hash": "1cdff3f308315a1c8888c3839be40b17151c34d9772054ebcf59f6c25d6dd929"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:v12",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "kb:a",
+      "tokens": 8,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:17",
+      "tokens": 7,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:18",
+      "tokens": 6,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "mem:old",
+      "reason": "expired",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "mem:tone",
+      "reason": "slot_unplaced",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "ex:tone",
+      "reason": "slot_unplaced",
+      "stage": "assembler",
+      "slot": "governance.examples"
+    },
+    {
+      "item_id": "ex:unverified",
+      "reason": "untrusted_in_governance",
+      "stage": "assembler",
+      "slot": "governance.examples"
+    },
+    {
+      "item_id": "user:plan",
+      "reason": "slot_unplaced",
+      "stage": "assembler",
+      "slot": "state.user"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "placement-unplaced-slot/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "8f763d055c07b506bc060756507aab613c5a5b27a77ba4cc4d7536e9874d14e5"
+  },
+  "defaults_filled": []
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "g-refund-window",
+    "kind": "fact",
+    "fact": "refund.window",
+    "items": [
+      "refunds-eu:v17#p4",
+      "crm:order#42"
+    ]
+  },
+  {
+    "id": "g-format",
+    "kind": "instruction",
+    "items": [
+      "policy:v12",
+      "example:tone-3"
+    ]
+  }
+]

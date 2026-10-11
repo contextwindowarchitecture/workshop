@@ -1,0 +1,8 @@
+{
+  "id": "budget-margin-rounding",
+  "rules": [
+    "R-16",
+    "R-21"
+  ],
+  "description": "The margin charge rounds up, however small its fraction: the payload counts 39 and charges 39 × 101 / 100 = 39.39, rounded up to 40, over budget.input 39, so the droppable item is shed. Rounding down or to the nearest integer would charge 39 and keep it."
+}

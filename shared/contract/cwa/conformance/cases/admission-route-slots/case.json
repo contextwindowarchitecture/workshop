@@ -1,0 +1,9 @@
+{
+  "id": "admission-route-slots",
+  "rules": [
+    "R-15",
+    "R-21",
+    "R-22"
+  ],
+  "description": "An item in a slot its producer's kind permits but the route does not list for that producer is excluded with producer_slot_not_allowed, an mcp tool specification included: only where the route lists governance.capabilities for the producer does its tool reach the capability check and capability_not_allowed."
+}

@@ -1,0 +1,12 @@
+<governance.instructions id="policy:v12">
+Répondez en français ; citez la politique vérifiée.
+</governance.instructions>
+<governance.examples id="ex:1">
+例：購入後30日以内の返金は承認されます。
+</governance.examples>
+<evidence.knowledge id="kb:a">
+Les forfaits Pro sont remboursés intégralement sous 30 jours.
+</evidence.knowledge>
+<interaction.query id="turn:18">
+Puis-je être remboursé ? 返金できますか？
+</interaction.query>

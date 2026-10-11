@@ -1,0 +1,10 @@
+{
+  "id": "placement-required-slot-first",
+  "rules": [
+    "R-4",
+    "R-17",
+    "R-20",
+    "R-21"
+  ],
+  "description": "A missing query is reported before a protected item the profile does not place: required_slot_missing comes first in contract/reasons.json."
+}

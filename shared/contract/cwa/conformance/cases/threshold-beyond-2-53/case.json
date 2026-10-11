@@ -1,0 +1,11 @@
+{
+  "id": "threshold-beyond-2-53",
+  "rules": [
+    "R-2",
+    "R-13",
+    "R-16",
+    "R-21",
+    "R-22"
+  ],
+  "description": "Every number is a double: against min_relevance 9007199254740993, a score of 9007199254740992 is equal and passes, 9007199254740991 is below_threshold, and 9007199254740993 ties with 9007199254740992 on rank, so budget pressure omits the tied item with the later id."
+}

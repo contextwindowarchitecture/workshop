@@ -1,0 +1,9 @@
+{
+  "id": "budget-tier-lowering-ignored",
+  "rules": [
+    "R-16",
+    "R-17",
+    "R-21"
+  ],
+  "description": "The route's tier_upgrades names compressible for state.task, whose default is protected. A value at or below the default changes nothing, so the task stays protected; the protected items alone exceed budget.input, and assembly refuses rather than omitting the task."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "conflict-group-unknown-fact",
+  "rules": [
+    "R-11",
+    "R-17"
+  ],
+  "description": "A fact group names refund_window, which the route policy's facts do not define."
+}

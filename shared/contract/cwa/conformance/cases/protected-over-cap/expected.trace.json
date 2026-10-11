@@ -1,0 +1,29 @@
+{
+  "trace_id": "protected-over-cap",
+  "profile": {
+    "id": "protected-over-cap",
+    "version": 1
+  },
+  "budget": {
+    "input": 4096,
+    "reserved_output": 1024
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "protected_content_over_budget"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-09-22T12:00:00Z",
+    "route_policy_version": "protected-over-cap/v1",
+    "tokenizer": "fixture-whitespace/v1",
+    "renderer": "fixture-xml/v1",
+    "snapshot_digest": "86d2dce2ce0b1dc80dba4bd5a56827b4d8d96804829656292b1db2706936a3ae"
+  },
+  "defaults_filled": []
+}

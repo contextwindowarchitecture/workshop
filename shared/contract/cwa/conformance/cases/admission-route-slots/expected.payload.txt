@@ -1,0 +1,12 @@
+<governance.instructions id="policy:v12">
+Follow verified application policy.
+</governance.instructions>
+<evidence.knowledge id="kb:refunds">
+Refunds within 30 days are returned in full.
+</evidence.knowledge>
+<evidence.tool_results id="crm:order-4417">
+Order 4417: Pro plan, paid 2026-09-10.
+</evidence.tool_results>
+<interaction.query id="turn:18">
+Can I refund my Pro plan?
+</interaction.query>

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contextwindowarchitecture.io/schema/registry_lock.schema.json",
+  "title": "CWA registry lock",
+  "description": "Pins each profile version and route policy version to the SHA-256 of its content, so that content cannot change under an unchanged version (R-20). conformance/README.md defines the digests. Each profile id and version, and each route and version, appears at most once; the schema cannot express that, so a registry checks it when it loads the lock.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profiles",
+    "route_policies"
+  ],
+  "properties": {
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "version",
+          "sha256"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "profile.schema.json#/properties/id"
+          },
+          "version": {
+            "$ref": "profile.schema.json#/properties/version"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "minLength": 64,
+            "maxLength": 64,
+            "description": "Lowercase SHA-256 of the RFC 8785 serialization of the profile without its evaluation member."
+          }
+        }
+      }
+    },
+    "route_policies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "route",
+          "version",
+          "sha256"
+        ],
+        "properties": {
+          "route": {
+            "$ref": "route_policy.schema.json#/properties/route"
+          },
+          "version": {
+            "$ref": "route_policy.schema.json#/properties/version"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "minLength": 64,
+            "maxLength": 64,
+            "description": "Lowercase SHA-256 of the RFC 8785 serialization of the whole route policy."
+          }
+        }
+      }
+    }
+  }
+}

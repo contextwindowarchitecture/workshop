@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contextwindowarchitecture.io/schema/conformance_report.schema.json",
+  "title": "CWA conformance report",
+  "description": "One implementation's run of the conformance cases (conformance/README.md, Reporting results). A case passes only when its payload bytes and trace match; validating traces against the schema alone is not conformance (R-21).",
+  "type": "object",
+  "properties": {
+    "implementation": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        },
+        "language": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+        }
+      },
+      "required": [
+        "name",
+        "version"
+      ],
+      "additionalProperties": false
+    },
+    "contract": {
+      "type": "object",
+      "description": "The repository and commit the cases were taken from, and whether that working tree had uncommitted changes.",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "description": "The repository as owner/name on GitHub.",
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(?![\\s\\S])"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$",
+          "minLength": 40,
+          "maxLength": 40
+        },
+        "dirty": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "repository",
+        "commit",
+        "dirty"
+      ],
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "description": "One entry per case directory, ordered by id.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          },
+          "rules": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^R-([1-9]|1[0-9]|2[0-6])(?![\\s\\S])"
+            }
+          },
+          "outcome": {
+            "enum": [
+              "passed",
+              "failed",
+              "skipped"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "rules",
+          "outcome"
+        ],
+        "additionalProperties": false,
+        "if": {
+          "properties": {
+            "outcome": {
+              "enum": [
+                "failed",
+                "skipped"
+              ]
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "detail": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "detail"
+          ]
+        }
+      }
+    },
+    "rejections": {
+      "type": "array",
+      "description": "One entry per directory under rejections/, ordered by id. A report without this list has not run the rejection cases, and none of them counts (R-17).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "[^\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]"
+          },
+          "rules": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^R-([1-9]|1[0-9]|2[0-6])(?![\\s\\S])"
+            }
+          },
+          "outcome": {
+            "enum": [
+              "rejected",
+              "failed",
+              "skipped"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "rules",
+          "outcome"
+        ],
+        "additionalProperties": false,
+        "if": {
+          "properties": {
+            "outcome": {
+              "enum": [
+                "failed",
+                "skipped"
+              ]
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "detail": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "detail"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "implementation",
+    "contract",
+    "cases"
+  ],
+  "additionalProperties": false
+}

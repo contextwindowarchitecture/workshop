@@ -1,0 +1,8 @@
+{
+  "id": "integer-out-of-range",
+  "rules": [
+    "R-17",
+    "R-23"
+  ],
+  "description": "An item's relevance is the integer literal 1 followed by 400 zeros. Like 1e400 it is beyond the IEEE 754 double range, though a language with big integers reads it exactly, so the snapshot is not I-JSON and has no digest."
+}

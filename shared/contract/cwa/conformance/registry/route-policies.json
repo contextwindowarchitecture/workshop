@@ -1,0 +1,637 @@
+[
+  {
+    "route": "contract-fixture",
+    "version": "fixture/v1",
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    }
+  },
+  {
+    "route": "support-chat",
+    "version": "admission/v1",
+    "clock_skew_seconds": 5,
+    "producers": {
+      "capability-policy": {
+        "kind": "capability_policy",
+        "slots": [
+          "governance.capabilities"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      },
+      "crm-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results",
+          "governance.capabilities"
+        ]
+      },
+      "docs-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results",
+          "governance.instructions"
+        ],
+        "verified": true
+      },
+      "legacy-search": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory",
+          "interaction.history"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge",
+          "evidence.tool_results",
+          "governance.examples"
+        ]
+      },
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions",
+          "state.user"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.user",
+          "state.task"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.8,
+        "max_age_seconds": 7776000,
+        "required_scope": [
+          "tenant"
+        ]
+      },
+      "state.task": {
+        "max_age_seconds": 60
+      },
+      "interaction.memory": {
+        "source_prefix": "turn:"
+      }
+    },
+    "default_overrides": {
+      "evidence.knowledge": {
+        "token_budget": 420
+      }
+    },
+    "tier_upgrades": {
+      "state.user": "protected"
+    }
+  },
+  {
+    "route": "support-chat",
+    "version": "budget-route-order/v1",
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.examples",
+          "governance.instructions",
+          "governance.output_contract"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.task",
+          "state.user"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "crm-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.5,
+        "required_scope": [
+          "tenant"
+        ],
+        "order_by": [
+          "-freshness"
+        ]
+      }
+    },
+    "fitting_order": [
+      {
+        "slot": "evidence.knowledge",
+        "action": "omit"
+      }
+    ]
+  },
+  {
+    "route": "support-chat",
+    "version": "conflict-fact/v1",
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.examples",
+          "governance.instructions",
+          "governance.output_contract"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.task",
+          "state.user"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "wiki-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "crm-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.5,
+        "required_scope": [
+          "tenant"
+        ]
+      }
+    },
+    "facts": {
+      "refund.window": {
+        "precedence": [
+          "policy-corpus",
+          "wiki-corpus"
+        ],
+        "scope": [
+          "tenant"
+        ],
+        "on_unresolved": "surface"
+      },
+      "refund.fee": {
+        "precedence": [
+          "crm-mcp"
+        ],
+        "freshness_tiebreak": true,
+        "on_unresolved": "surface"
+      },
+      "order.status": {
+        "precedence": [
+          "crm-mcp",
+          "policy-corpus"
+        ],
+        "scope": [
+          "user"
+        ],
+        "on_unresolved": "surface"
+      },
+      "plan.price": {
+        "precedence": [
+          "policy-corpus"
+        ],
+        "on_unresolved": "surface"
+      },
+      "refund.channel": {
+        "precedence": [
+          "crm-mcp"
+        ],
+        "on_unresolved": "surface"
+      },
+      "task.stage": {
+        "precedence": [
+          "crm-mcp",
+          "state-svc"
+        ],
+        "on_unresolved": "surface"
+      },
+      "refund.limit": {
+        "precedence": [
+          "policy-corpus"
+        ],
+        "on_unresolved": "surface"
+      },
+      "refund.method": {
+        "precedence": [
+          "crm-mcp"
+        ],
+        "freshness_tiebreak": true,
+        "on_unresolved": "surface"
+      }
+    }
+  },
+  {
+    "route": "support-chat",
+    "version": "illustrative/v1",
+    "clock_skew_seconds": 5,
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions",
+          "governance.examples",
+          "governance.output_contract"
+        ]
+      },
+      "capability-policy": {
+        "kind": "capability_policy",
+        "slots": [
+          "governance.capabilities"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.user",
+          "state.task"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "crm-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "state.user": {
+        "max_age_seconds": 300,
+        "required_scope": [
+          "tenant",
+          "user"
+        ]
+      },
+      "state.task": {
+        "max_age_seconds": 300,
+        "required_scope": [
+          "tenant",
+          "task"
+        ]
+      },
+      "evidence.knowledge": {
+        "min_relevance": 0.5,
+        "max_age_seconds": 7776000,
+        "required_scope": [
+          "tenant"
+        ],
+        "dedupe": "exact",
+        "max_per_source": 3
+      },
+      "evidence.tool_results": {
+        "supersede": "source"
+      },
+      "interaction.memory": {
+        "source_prefix": "turn:",
+        "required_scope": [
+          "tenant",
+          "user"
+        ]
+      }
+    }
+  },
+  {
+    "route": "document-qa",
+    "version": "illustrative/v1",
+    "requires_evidence": true,
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions",
+          "governance.examples",
+          "governance.output_contract"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.user",
+          "state.task"
+        ]
+      },
+      "document-index": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.3,
+        "min_included": 1,
+        "required_scope": [
+          "tenant"
+        ],
+        "order_by": [
+          "-relevance"
+        ],
+        "dedupe": "exact",
+        "max_per_source": 5
+      },
+      "interaction.memory": {
+        "source_prefix": "turn:"
+      }
+    }
+  },
+  {
+    "route": "long-context-qa",
+    "version": "illustrative/v1",
+    "requires_evidence": true,
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions",
+          "governance.output_contract"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.user",
+          "state.task"
+        ]
+      },
+      "document-index": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "docs-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.2,
+        "min_included": 1,
+        "required_scope": [
+          "tenant"
+        ],
+        "dedupe": "exact",
+        "max_per_source": 8
+      },
+      "evidence.tool_results": {
+        "supersede": "source"
+      },
+      "interaction.memory": {
+        "source_prefix": "turn:"
+      }
+    }
+  },
+  {
+    "route": "agent-loop",
+    "version": "illustrative/v1",
+    "clock_skew_seconds": 5,
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions",
+          "governance.output_contract"
+        ]
+      },
+      "capability-policy": {
+        "kind": "capability_policy",
+        "slots": [
+          "governance.capabilities"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.user",
+          "state.task"
+        ]
+      },
+      "policy-corpus": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "tools-mcp": {
+        "kind": "mcp",
+        "slots": [
+          "evidence.tool_results"
+        ]
+      },
+      "memory-svc": {
+        "kind": "memory",
+        "slots": [
+          "interaction.memory"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.history",
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "state.task": {
+        "max_age_seconds": 60,
+        "required_scope": [
+          "tenant",
+          "task"
+        ]
+      },
+      "evidence.knowledge": {
+        "min_relevance": 0.5,
+        "required_scope": [
+          "tenant"
+        ]
+      },
+      "evidence.tool_results": {
+        "max_age_seconds": 3600,
+        "supersede": "source"
+      },
+      "interaction.memory": {
+        "source_prefix": "turn:"
+      }
+    }
+  },
+  {
+    "route": "extract",
+    "version": "illustrative/v1",
+    "parser": true,
+    "requires_evidence": true,
+    "producers": {
+      "policy-registry": {
+        "kind": "policy",
+        "slots": [
+          "governance.instructions",
+          "governance.examples",
+          "governance.output_contract"
+        ]
+      },
+      "state-svc": {
+        "kind": "state",
+        "slots": [
+          "state.user"
+        ]
+      },
+      "document-index": {
+        "kind": "retrieval",
+        "slots": [
+          "evidence.knowledge"
+        ]
+      },
+      "conversation": {
+        "kind": "interaction",
+        "slots": [
+          "interaction.query"
+        ]
+      }
+    },
+    "slots": {
+      "evidence.knowledge": {
+        "min_relevance": 0.3,
+        "min_included": 1,
+        "required_scope": [
+          "tenant"
+        ],
+        "dedupe": "exact"
+      }
+    }
+  }
+]

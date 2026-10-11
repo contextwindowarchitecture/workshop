@@ -1,0 +1,9 @@
+{
+  "id": "placement-unplaced-slot",
+  "rules": [
+    "R-20",
+    "R-21",
+    "R-22"
+  ],
+  "description": "Items in slots the profile does not place are excluded with slot_unplaced after every other admission check, and the placed items render as usual."
+}
