@@ -1,0 +1,141 @@
+{
+  "profile": {
+    "id": "evidence-first",
+    "version": 1
+  },
+  "budget": {
+    "input": 7168,
+    "reserved_output": 1024,
+    "margin_percent": 15
+  },
+  "result": {
+    "input_tokens": 754,
+    "hash": "9f4a1defd2ee00b11e9ab40f85620e9c7bf11194886704995f3fe3223db4b0a2"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:instructions",
+      "tokens": 196,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#2",
+      "tokens": 77,
+      "source_version": "6",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#3",
+      "tokens": 57,
+      "source_version": "6",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:plans@9#3",
+      "tokens": 76,
+      "source_version": "9",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:plans@9#4",
+      "tokens": 30,
+      "source_version": "9",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:projects@4#3",
+      "tokens": 36,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:plan",
+      "tokens": 28,
+      "source_version": "18",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:u_ada",
+      "tokens": 12,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_ada:0005",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_ada:0007",
+      "tokens": 21,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w6_a:0001",
+      "tokens": 15,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w6_a:0002",
+      "tokens": 43,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:s_w6_a:0003",
+      "tokens": 9,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "mem:u_ada:0001",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mem:u_ada:0003",
+      "reason": "revoked",
+      "stage": "producer"
+    },
+    {
+      "item_id": "help:data-export@6#1",
+      "reason": "source_diversity_cap",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-01T10:02:00Z",
+    "route_policy_version": "w6/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-message-blocks/v1",
+    "snapshot_digest": "e128465b9edcc8cb4332f1518f72a28e3ce2d4663b9d7c9a75c5d1a0301a68d5"
+  },
+  "defaults_filled": []
+}

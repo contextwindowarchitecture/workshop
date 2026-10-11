@@ -1,0 +1,26 @@
+{
+  "profiles": [
+    {
+      "id": "cache-first",
+      "version": 1,
+      "sha256": "9c33e0e16eb6c393e863bccb072dce54fa63da2e52a60e5ffd01ea9f2585b8bd"
+    },
+    {
+      "id": "evidence-first",
+      "version": 1,
+      "sha256": "326ad45e0078a4062df9ecdd33928c09a95e6e1e1c1218e3a6f451c1f9bfd563"
+    },
+    {
+      "id": "policy-first",
+      "version": 1,
+      "sha256": "469af64c05f6ed67e879d832f10db583356cc67302599c3bcbea1b1550e74998"
+    }
+  ],
+  "route_policies": [
+    {
+      "route": "account-help",
+      "version": "w6/v1",
+      "sha256": "303a188806484d58b17ada200a23b4814e881e4a30833e63b8dc430df217e9a1"
+    }
+  ]
+}

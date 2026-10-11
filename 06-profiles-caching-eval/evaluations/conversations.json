@@ -1,0 +1,76 @@
+{
+  "conversations": [
+    {
+      "id": "export-then-roles",
+      "user": "u_ada",
+      "session": "s_w6_a",
+      "started_at": "2026-10-01T10:00:00Z",
+      "exchanges": [
+        {
+          "q": "How do I export the whole workspace, including attachments?",
+          "a": "An Owner or Admin exports it as JSON from Settings, then Data, then Export workspace [help:data-export@6#2]; attachments come separately as a ZIP [help:data-export@6#0]."
+        },
+        {
+          "q": "Who on our team can run that export?",
+          "a": "Owners and Admins can export the workspace; any member can export a single project as CSV [help:roles@4#1] [help:data-export@6#1]."
+        },
+        {
+          "q": "How long does the export usually take?",
+          "a": "Usually within an hour for large workspaces; the link is emailed and valid for 24 hours [help:data-export@6#3]."
+        },
+        {
+          "q": "Can I change a member's role to Admin myself?",
+          "a": "Yes, as an Owner: Settings, then Members, then the role menu next to their name [help:roles@4#3]."
+        }
+      ]
+    },
+    {
+      "id": "refund-questions",
+      "user": "u_cho",
+      "session": "s_w6_b",
+      "started_at": "2026-10-01T11:00:00Z",
+      "exchanges": [
+        {
+          "q": "Can I get a refund on a monthly plan?",
+          "a": "Monthly plans are not refunded, but you can cancel at any time and keep paid features until the period ends [help:refunds@4#1]."
+        },
+        {
+          "q": "What about an annual plan?",
+          "a": "Annual plans can be refunded within 30 days of the first payment or a renewal, prorated [help:refunds@4#0]."
+        },
+        {
+          "q": "How do I cancel, then?",
+          "a": "The workspace owner opens Settings, then Billing, and chooses Cancel plan [help:refunds@4#2]."
+        },
+        {
+          "q": "Will removing members give us money back?",
+          "a": "No; unused time becomes a credit on the next invoice, not a refund [help:billing@5#3]."
+        }
+      ]
+    },
+    {
+      "id": "sso-setup",
+      "user": "u_ada",
+      "session": "s_w6_c",
+      "started_at": "2026-10-01T12:00:00Z",
+      "exchanges": [
+        {
+          "q": "How do we set up single sign-on with Okta?",
+          "a": "Under Settings, then Security, then Single sign-on, copy Fernway's ACS URL and entity ID into a SAML app in Okta, paste the metadata URL back and test [help:sso@8#1]."
+        },
+        {
+          "q": "Do we need to verify our domain first?",
+          "a": "Yes: add the TXT record under Settings, then Domains, before enforcing SSO [help:sso@8#2]."
+        },
+        {
+          "q": "What happens to password sign-in after that?",
+          "a": "Require SSO disables it for members; owners keep a password as a recovery path [help:sso@8#3]."
+        },
+        {
+          "q": "And can SCIM remove people automatically?",
+          "a": "Yes: deactivating a user in the identity provider removes their seat within minutes [help:sso@8#4]."
+        }
+      ]
+    }
+  ]
+}

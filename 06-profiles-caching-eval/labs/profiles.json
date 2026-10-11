@@ -1,0 +1,128 @@
+{
+  "_comment": "Lab C: three candidate placements for the account-help route, all unevaluated. Evaluate them, pick one, promote it with evaluate.py promote, and lock the registry. The others stay unevaluated and cannot be deployed.",
+  "profiles": [
+    {
+      "spec": "cwa/draft",
+      "id": "policy-first",
+      "version": 1,
+      "route": "account-help",
+      "model_family": null,
+      "route_policy_version": "w6/v1",
+      "placement": [
+        {
+          "slot": "governance.instructions",
+          "wrap": "system"
+        },
+        {
+          "slot": "state.user",
+          "wrap": "xml:account"
+        },
+        {
+          "slot": "evidence.knowledge",
+          "wrap": "xml:article"
+        },
+        {
+          "slot": "interaction.memory",
+          "wrap": "xml:memory"
+        },
+        {
+          "slot": "interaction.history",
+          "wrap": "xml:history"
+        },
+        {
+          "slot": "interaction.query",
+          "wrap": "xml:question"
+        }
+      ],
+      "evaluation": {
+        "status": "unevaluated",
+        "suite": null,
+        "date": null,
+        "result": null,
+        "artifact": null
+      }
+    },
+    {
+      "spec": "cwa/draft",
+      "id": "evidence-first",
+      "version": 1,
+      "route": "account-help",
+      "model_family": null,
+      "route_policy_version": "w6/v1",
+      "placement": [
+        {
+          "slot": "governance.instructions",
+          "wrap": "system"
+        },
+        {
+          "slot": "evidence.knowledge",
+          "wrap": "xml:article"
+        },
+        {
+          "slot": "state.user",
+          "wrap": "xml:account"
+        },
+        {
+          "slot": "interaction.memory",
+          "wrap": "xml:memory"
+        },
+        {
+          "slot": "interaction.history",
+          "wrap": "xml:history"
+        },
+        {
+          "slot": "interaction.query",
+          "wrap": "xml:question"
+        }
+      ],
+      "evaluation": {
+        "status": "unevaluated",
+        "suite": null,
+        "date": null,
+        "result": null,
+        "artifact": null
+      }
+    },
+    {
+      "spec": "cwa/draft",
+      "id": "cache-first",
+      "version": 1,
+      "route": "account-help",
+      "model_family": null,
+      "route_policy_version": "w6/v1",
+      "placement": [
+        {
+          "slot": "governance.instructions",
+          "wrap": "system"
+        },
+        {
+          "slot": "state.user",
+          "wrap": "xml:account"
+        },
+        {
+          "slot": "interaction.memory",
+          "wrap": "xml:memory"
+        },
+        {
+          "slot": "interaction.history",
+          "wrap": "xml:history"
+        },
+        {
+          "slot": "evidence.knowledge",
+          "wrap": "xml:article"
+        },
+        {
+          "slot": "interaction.query",
+          "wrap": "xml:question"
+        }
+      ],
+      "evaluation": {
+        "status": "unevaluated",
+        "suite": null,
+        "date": null,
+        "result": null,
+        "artifact": null
+      }
+    }
+  ]
+}

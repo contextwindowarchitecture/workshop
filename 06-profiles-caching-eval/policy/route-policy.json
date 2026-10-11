@@ -1,0 +1,27 @@
+{
+  "route": "account-help",
+  "version": "w6/v1",
+  "clock_skew_seconds": 5,
+  "requires_evidence": false,
+  "producers": {
+    "app-policy": { "kind": "policy", "slots": ["governance.instructions"] },
+    "accounts-db": { "kind": "state", "slots": ["state.user"] },
+    "memory-store": { "kind": "memory", "slots": ["interaction.memory"] },
+    "help-center-search": { "kind": "retrieval", "slots": ["evidence.knowledge"] },
+    "chat-session": { "kind": "interaction", "slots": ["interaction.history", "interaction.query"] }
+  },
+  "slots": {
+    "state.user": { "max_age_seconds": 300, "required_scope": ["tenant"] },
+    "evidence.knowledge": { "min_relevance": 3.0, "dedupe": "exact", "max_per_source": 2, "order_by": ["-relevance", "-freshness"] },
+    "interaction.memory": { "source_prefix": "turn:", "required_scope": ["tenant", "user"], "order_by": ["-freshness"] },
+    "interaction.history": { "required_scope": ["session"], "order_by": ["-freshness"], "max_tokens": 1200 },
+    "interaction.query": { "required_scope": ["session"] }
+  },
+  "tier_upgrades": { "state.user": "protected" },
+  "facts": { "plan": { "precedence": ["accounts-db", "memory-store"], "scope": ["tenant"], "on_unresolved": "refuse" } },
+  "fitting_order": [
+    { "slot": "evidence.knowledge", "action": "omit" },
+    { "slot": "interaction.memory", "action": "omit" },
+    { "slot": "interaction.history", "action": "omit" }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "_comment": "After evaluation: cache-first v1 is evaluated on the structural suite and points at its artifact; the others stay unevaluated.",
+  "profiles": [
+    {
+      "spec": "cwa/draft",
+      "id": "policy-first",
+      "version": 1,
+      "route": "account-help",
+      "model_family": null,
+      "route_policy_version": "w6/v1",
+      "placement": [
+        {
+          "slot": "governance.instructions",
+          "wrap": "system"
+        },
+        {
+          "slot": "state.user",
+          "wrap": "xml:account"
+        },
+        {
+          "slot": "evidence.knowledge",
+          "wrap": "xml:article"
+        },
+        {
+          "slot": "interaction.memory",
+          "wrap": "xml:memory"
+        },
+        {
+          "slot": "interaction.history",
+          "wrap": "xml:history"
+        },
+        {
+          "slot": "interaction.query",
+          "wrap": "xml:question"
+        }
+      ],
+      "evaluation": {
+        "status": "unevaluated",
+        "suite": null,
+        "date": null,
+        "result": null,
+        "artifact": null
+      }
+    },
+    {
+      "spec": "cwa/draft",
+      "id": "evidence-first",
+      "version": 1,
+      "route": "account-help",
+      "model_family": null,
+      "route_policy_version": "w6/v1",
+      "placement": [
+        {
+          "slot": "governance.instructions",
+          "wrap": "system"
+        },
+        {
+          "slot": "evidence.knowledge",
+          "wrap": "xml:article"
+        },
+        {
+          "slot": "state.user",
+          "wrap": "xml:account"
+        },
+        {
+          "slot": "interaction.memory",
+          "wrap": "xml:memory"
+        },
+        {
+          "slot": "interaction.history",
+          "wrap": "xml:history"
+        },
+        {
+          "slot": "interaction.query",
+          "wrap": "xml:question"
+        }
+      ],
+      "evaluation": {
+        "status": "unevaluated",
+        "suite": null,
+        "date": null,
+        "result": null,
+        "artifact": null
+      }
+    },
+    {
+      "spec": "cwa/draft",
+      "id": "cache-first",
+      "version": 1,
+      "route": "account-help",
+      "model_family": "gpt-oss:20b",
+      "route_policy_version": "w6/v1",
+      "placement": [
+        {
+          "slot": "governance.instructions",
+          "wrap": "system"
+        },
+        {
+          "slot": "state.user",
+          "wrap": "xml:account"
+        },
+        {
+          "slot": "interaction.memory",
+          "wrap": "xml:memory"
+        },
+        {
+          "slot": "interaction.history",
+          "wrap": "xml:history"
+        },
+        {
+          "slot": "evidence.knowledge",
+          "wrap": "xml:article"
+        },
+        {
+          "slot": "interaction.query",
+          "wrap": "xml:question"
+        }
+      ],
+      "evaluation": {
+        "status": "evaluated",
+        "suite": "w6-structural/v1",
+        "date": "2026-10-11",
+        "result": "block_reuse 0.572; byte_reuse 0.319; evidence_distance_tokens 0.0; mean_input_tokens 661.2; grounded_answers not run",
+        "artifact": "evaluations/cache-first-v1-w6-structural-v1.json"
+      }
+    }
+  ]
+}

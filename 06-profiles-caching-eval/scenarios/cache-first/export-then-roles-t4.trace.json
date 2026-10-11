@@ -1,0 +1,169 @@
+{
+  "profile": {
+    "id": "cache-first",
+    "version": 1
+  },
+  "budget": {
+    "input": 7168,
+    "reserved_output": 1024,
+    "margin_percent": 15
+  },
+  "result": {
+    "input_tokens": 867,
+    "hash": "6d627a07483120c002f0ce2194ca3e76aaf49f42bab4dd45063f5f9fe0f4504f"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:instructions",
+      "tokens": 196,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:plan",
+      "tokens": 28,
+      "source_version": "18",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:u_ada",
+      "tokens": 12,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_ada:0005",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_ada:0007",
+      "tokens": 21,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w6_a:0001",
+      "tokens": 15,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w6_a:0002",
+      "tokens": 43,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w6_a:0003",
+      "tokens": 9,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w6_a:0004",
+      "tokens": 33,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w6_a:0005",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w6_a:0006",
+      "tokens": 28,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#1",
+      "tokens": 53,
+      "source_version": "6",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:projects@4#1",
+      "tokens": 50,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:roles@4#0",
+      "tokens": 46,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:roles@4#3",
+      "tokens": 33,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:sso@8#1",
+      "tokens": 65,
+      "source_version": "8",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:s_w6_a:0007",
+      "tokens": 12,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "mem:u_ada:0001",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mem:u_ada:0003",
+      "reason": "revoked",
+      "stage": "producer"
+    },
+    {
+      "item_id": "help:roles@4#1",
+      "reason": "source_diversity_cap",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-01T10:06:00Z",
+    "route_policy_version": "w6/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-message-blocks/v1",
+    "snapshot_digest": "e2ba474c89c82d7d5c23925df5a679bd11068d2d21ad9a58f7499bbab907e61e"
+  },
+  "defaults_filled": []
+}

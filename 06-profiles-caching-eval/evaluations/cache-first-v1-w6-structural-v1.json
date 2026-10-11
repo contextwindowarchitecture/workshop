@@ -1,0 +1,136 @@
+{
+  "suite": "w6-structural/v1",
+  "profile": {
+    "id": "cache-first",
+    "version": 1
+  },
+  "route_policy_version": "w6/v1",
+  "renderer": "cwa-message-blocks/v1",
+  "tokenizer": "estimate-utf8/v1",
+  "date": "2026-10-11",
+  "live": {
+    "ran": false,
+    "model": null,
+    "answers": []
+  },
+  "result": {
+    "block_reuse": 0.572,
+    "byte_reuse": 0.319,
+    "mean_evidence_distance_tokens": 0.0,
+    "mean_input_tokens": 661.2,
+    "grounded_answers": null
+  },
+  "per_conversation": [
+    {
+      "conversation": "export-then-roles",
+      "pairs": [
+        {
+          "blocks_shared": 5,
+          "blocks_in_earlier": 10,
+          "bytes_shared": 666,
+          "bytes_in_earlier": 2882
+        },
+        {
+          "blocks_shared": 7,
+          "blocks_in_earlier": 13,
+          "bytes_shared": 1103,
+          "bytes_in_earlier": 3620
+        },
+        {
+          "blocks_shared": 9,
+          "blocks_in_earlier": 13,
+          "bytes_shared": 1478,
+          "bytes_in_earlier": 3249
+        }
+      ],
+      "block_reuse": 0.583,
+      "byte_reuse": 0.333,
+      "tokens": [
+        600,
+        754,
+        660,
+        867
+      ],
+      "evidence_distance_tokens": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "conversation": "refund-questions",
+      "pairs": [
+        {
+          "blocks_shared": 4,
+          "blocks_in_earlier": 11,
+          "bytes_shared": 504,
+          "bytes_in_earlier": 3196
+        },
+        {
+          "blocks_shared": 6,
+          "blocks_in_earlier": 8,
+          "bytes_shared": 877,
+          "bytes_in_earlier": 2124
+        },
+        {
+          "blocks_shared": 8,
+          "blocks_in_earlier": 12,
+          "bytes_shared": 1219,
+          "bytes_in_earlier": 3000
+        }
+      ],
+      "block_reuse": 0.581,
+      "byte_reuse": 0.312,
+      "tokens": [
+        670,
+        430,
+        609,
+        502
+      ],
+      "evidence_distance_tokens": [
+        0,
+        0,
+        0,
+        null
+      ]
+    },
+    {
+      "conversation": "sso-setup",
+      "pairs": [
+        {
+          "blocks_shared": 5,
+          "blocks_in_earlier": 11,
+          "bytes_shared": 666,
+          "bytes_in_earlier": 3025
+        },
+        {
+          "blocks_shared": 7,
+          "blocks_in_earlier": 12,
+          "bytes_shared": 1083,
+          "bytes_in_earlier": 3225
+        },
+        {
+          "blocks_shared": 9,
+          "blocks_in_earlier": 15,
+          "bytes_shared": 1420,
+          "bytes_in_earlier": 3910
+        }
+      ],
+      "block_reuse": 0.553,
+      "byte_reuse": 0.312,
+      "tokens": [
+        629,
+        668,
+        811,
+        734
+      ],
+      "evidence_distance_tokens": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}
