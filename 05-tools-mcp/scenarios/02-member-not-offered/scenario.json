@@ -1,0 +1,5 @@
+{
+  "user": "u_ben",
+  "question": "Who are the billing admins of our workspace?",
+  "script": "02-member-not-offered"
+}

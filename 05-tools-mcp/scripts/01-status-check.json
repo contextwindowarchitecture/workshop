@@ -1,0 +1,9 @@
+{
+  "name": "scripted:status-check",
+  "turns": [
+    { "tool_calls": [ { "name": "get_account", "arguments": { "workspace": "w_kitewood" } } ] },
+    { "tool_calls": [ { "name": "get_service_status", "arguments": { "region": "EU" } } ] },
+    { "tool_calls": [ { "name": "get_service_status", "arguments": { "region": "EU" } } ] },
+    { "answer": "There was an incident in your EU region, elevated webhook delivery latency since 09:41 UTC, and the latest status shows it resolved at 10:03 UTC. No action is needed on your side." }
+  ]
+}

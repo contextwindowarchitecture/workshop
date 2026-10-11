@@ -1,0 +1,26 @@
+[project]
+name = "cwa-workshop-05-tools-mcp"
+version = "0.1.0"
+description = "W5. Tools, MCP and capability policy: agents under CWA"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+dependencies = [
+    "contextwindowarchitecture-assembler",
+    "mcp>=2.2",
+    "jsonschema>=4.23",
+    "openai>=2",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+contextwindowarchitecture-assembler = { git = "https://github.com/contextwindowarchitecture/assembler-python", tag = "draft-release" }
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

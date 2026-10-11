@@ -9,7 +9,8 @@ One run sheet per workshop. Each gives the timing, the conference cut, the check
 | W2 Producers | [02-producers.md](02-producers.md) | ready |
 | W3a Integration, the migration | [03-integration.md](03-integration.md) | ready |
 | W4 Budgets, variants, routes and refusals | [04-budgets-routes.md](04-budgets-routes.md) | ready |
+| W5 Tools, MCP and capability policy | [05-tools-mcp.md](05-tools-mcp.md) | ready |
 | W9 module A Tool-to-producer adapters | [09a-tool-to-producer.md](09a-tool-to-producer.md) | ready |
-| W3b, W5 to W11, W9 B to D, capstones | | written with each module |
+| W3b, W6 to W11, W9 B to D, capstones | | written with each module |
 
 Before any session, run the checks in [docs/setup.md](../setup.md) section 5.

@@ -1,0 +1,9 @@
+{
+  "model_context_limit": 8192,
+  "reserved_output": 1024,
+  "margin_percent": 15,
+  "tokenizer": "estimate-utf8/v1",
+  "renderer": "cwa-messages/v1",
+  "max_turns": 5,
+  "tool_timeout_seconds": 5
+}

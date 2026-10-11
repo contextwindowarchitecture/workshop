@@ -1,0 +1,7 @@
+{
+  "name": "scripted:status-error",
+  "turns": [
+    { "tool_calls": [ { "name": "get_service_status", "arguments": { "region": "EU" } } ] },
+    { "answer": "The status service didn't answer (it returned an error), so I can't confirm whether there is an incident right now. Check status.fernway.example or try again in a few minutes." }
+  ]
+}

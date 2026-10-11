@@ -1,0 +1,7 @@
+{
+  "name": "scripted:member-not-offered",
+  "turns": [
+    { "tool_calls": [ { "name": "list_members", "arguments": { "workspace": "w_kitewood" } } ] },
+    { "answer": "I can't list the workspace's members from here: that tool isn't offered for your role. An Owner or Admin can see billing admins under Settings, then Members, or ask one of them directly." }
+  ]
+}

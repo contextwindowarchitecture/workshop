@@ -1,0 +1,10 @@
+{
+  "name": "scripted:never-stops-polling",
+  "turns": [
+    { "tool_calls": [ { "name": "get_service_status", "arguments": { "region": "EU" } } ] },
+    { "tool_calls": [ { "name": "get_service_status", "arguments": { "region": "EU" } } ] },
+    { "tool_calls": [ { "name": "get_service_status", "arguments": { "region": "EU" } } ] },
+    { "tool_calls": [ { "name": "get_service_status", "arguments": { "region": "EU" } } ] },
+    { "answer": "The incident in your EU region is resolved as of 10:03 UTC." }
+  ]
+}
