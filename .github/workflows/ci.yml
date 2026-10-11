@@ -1,7 +1,9 @@
 # Model-free checks: the vendored contract matches its lock, no participant code assembles or patches a payload,
-# the glossary is current against the website sibling, and every workshop that has committed scenarios still
-# assembles them to the same bytes. Siblings are cloned beside the checkout at the refs shared/contract/pins.json
-# names, which is the layout participants use. No model is called.
+# every relative link resolves, the glossary is current against the website sibling, every workshop that has
+# committed scenarios still assembles them to the same bytes, every module's suite passes with the solution and fails
+# with the stubs, and every committed snapshot holds the invariants. Siblings are cloned beside the checkout at the
+# refs shared/contract/pins.json names, which is the layout participants use. No model is called.
+# shared/tools/check_all.py runs the same steps locally.
 name: ci
 
 on:
@@ -20,6 +22,7 @@ jobs:
       - uses: actions/checkout@v5
       - run: python3 shared/tools/vendor_contract.py --verify
       - run: python3 shared/tools/lint_no_assemble.py
+      - run: python3 shared/tools/check_links.py
       - run: python3 shared/siblings.py
 
   scenarios:
@@ -38,10 +41,37 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: clone the siblings the labs read
         working-directory: workshop
-        run: python3 shared/tools/clone_siblings.py examples assembler-python website
+        run: python3 shared/tools/clone_siblings.py examples assembler-python website contextwindowarchitecture
       - name: glossary is current
         working-directory: workshop
         run: python3 shared/tools/glossary.py --check
       - name: every committed scenario still assembles to the same bytes
         working-directory: workshop
         run: python3 shared/tools/check_scenarios.py
+
+  tests:
+    name: every suite (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          path: workshop
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: clone the siblings the suites read
+        working-directory: workshop
+        run: python3 shared/tools/clone_siblings.py examples assembler-python contextwindowarchitecture
+      - name: every module's suite passes with the solution
+        working-directory: workshop
+        run: python3 shared/tools/run_tests.py
+      - name: every module's suite fails with the stubs selected
+        working-directory: workshop
+        run: python3 shared/tools/run_tests.py --labs
+      - name: every committed snapshot holds the invariants
+        working-directory: workshop/11-benchmarking
+        run: uv run --quiet invariants.py

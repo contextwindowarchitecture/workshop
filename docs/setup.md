@@ -67,11 +67,24 @@ Copy `.env.example` to `.env` at the repository root and fill in an OpenAI-compa
 ## 5. Checks a facilitator runs before a session
 
 ```sh
+python3 shared/tools/check_all.py --quick           # contract, lint, links, glossary, scenarios: a minute or two
+python3 shared/tools/check_all.py                   # the same plus every module's suite, with the solution and with the stubs, and the invariants
+```
+
+The steps are scripts of their own, for when one is enough:
+
+```sh
 python3 shared/siblings.py                          # every needed sibling present
 python3 shared/tools/vendor_contract.py --verify    # contract intact
 python3 shared/tools/lint_no_assemble.py            # no participant code assembles or patches a payload
+python3 shared/tools/check_links.py                 # every relative link in the Markdown resolves
+python3 shared/tools/glossary.py --check            # the glossary matches the website sibling
 python3 shared/tools/check_scenarios.py             # every workshop's committed scenarios still assemble to the same bytes
+python3 shared/tools/run_tests.py                   # every module's suite in its own environment; --labs proves the stubs fail
+cd 11-benchmarking && uv run invariants.py          # every committed snapshot replays and validates
 ```
+
+A module with no scenarios yet is listed and skipped, so a scaffold never fails the build. `run_tests.py --labs` selects each module's stub implementation through its `CWA_<MODULE>_IMPL` switch and expects the suite to fail: a gate the stubs pass is checking nothing.
 
 ## 6. Offline venues
 

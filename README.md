@@ -52,7 +52,7 @@ The siblings live beside this repository by default; set `CWA_SIBLINGS_ROOT` to 
 
 ## Two rules
 
-Participant code in this repository never assembles, and never patches an assembler's output. Assembly belongs to a conformant assembler; the payload goes to the provider as rendered. `shared/tools/lint_no_assemble.py` enforces both.
+Participant code in this repository never assembles, and never patches an assembler's output. Assembly belongs to a conformant assembler; the payload goes to the provider as rendered. `shared/tools/lint_no_assemble.py` enforces both, and `shared/tools/check_all.py` runs it with every other repository check ([docs/setup.md](docs/setup.md), section 5).
 
 ## Layout
 
