@@ -1,0 +1,8 @@
+{
+  "reply": "Tracking can lag the carrier by up to 12 hours, and a parcel marked delivered is usually with a neighbour or in a safe place, so please check for 24 hours [kb:shipping@7#1] [kb:shipping@7#2]. After that, report it from the order page and we open a carrier investigation, which takes up to 5 business days [kb:shipping@7#2].",
+  "next_stage": "open",
+  "citations": [
+    "kb:shipping@7#1",
+    "kb:shipping@7#2"
+  ]
+}

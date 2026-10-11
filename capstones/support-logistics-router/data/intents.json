@@ -1,0 +1,9 @@
+{
+  "_comment": "The intent classifier the blueprint drew as 'Jev: category classifier' is, in this kit, deterministic keyword rules run by the application before assembly. A real classifier model can replace the rules: the contract is the same, text in, a route id and a confidence out, computed before the snapshot is frozen (R-18, R-23). Rules are checked in order; the first route with a hit wins; no hit means general.",
+  "routes": {
+    "damaged": ["damaged", "broken", "torn", "defective", "ripped", "cracked", "doesn't work", "does not work", "faulty", "crushed"],
+    "returns": ["return", "refund", "send back", "send it back", "exchange", "wrong size", "too small", "too big", "money back"],
+    "shipping": ["where is my", "not arrived", "hasn't arrived", "has not arrived", "tracking", "delivered but", "not delivered", "late", "lost"]
+  },
+  "fallback": "general"
+}

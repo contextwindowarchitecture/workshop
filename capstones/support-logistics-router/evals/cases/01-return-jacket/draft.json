@@ -1,0 +1,8 @@
+{
+  "reply": "You can start a return from the order page within 30 days of delivery, so until 20 October for this order; the jacket needs to be unused with tags attached [kb:returns-policy@5#0]. A worn jacket is inspected case by case. Refunds reach your original payment method within 5 business days of arrival at our warehouse [kb:returns-policy@5#3].",
+  "next_stage": "return_requested",
+  "citations": [
+    "kb:returns-policy@5#0",
+    "kb:returns-policy@5#3"
+  ]
+}

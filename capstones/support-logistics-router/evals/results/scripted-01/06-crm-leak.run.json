@@ -1,0 +1,818 @@
+{
+  "request": {
+    "customer": "c_1003",
+    "ticket": "t_5003",
+    "session": "s_c2_06",
+    "asked_at": "2026-10-01T10:25:00Z",
+    "question": "Can I return the gloves if they're the wrong size?",
+    "faults": [
+      "crm-ignores-customer"
+    ]
+  },
+  "intent": {
+    "route": "returns",
+    "matched": "return"
+  },
+  "route": "returns",
+  "attempts": [
+    {
+      "tier": "small",
+      "snapshot": {
+        "assembly_time": "2026-10-01T10:25:00Z",
+        "scope": {
+          "tenant": "northwind",
+          "user": "c_1003",
+          "session": "s_c2_06",
+          "task": "t_5003"
+        },
+        "budget": {
+          "input": 1648,
+          "reserved_output": 400,
+          "margin_percent": 15
+        },
+        "profile": {
+          "spec": "cwa/draft",
+          "id": "c2-returns-messages",
+          "version": 1,
+          "route": "returns",
+          "model_family": null,
+          "route_policy_version": "c2-returns/v1",
+          "placement": [
+            {
+              "slot": "governance.instructions",
+              "wrap": "system"
+            },
+            {
+              "slot": "state.user",
+              "wrap": "xml:customer"
+            },
+            {
+              "slot": "state.task",
+              "wrap": "xml:ticket"
+            },
+            {
+              "slot": "interaction.memory",
+              "wrap": "xml:crm_note"
+            },
+            {
+              "slot": "interaction.history",
+              "wrap": "xml:history"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "wrap": "xml:policy"
+            },
+            {
+              "slot": "governance.output_contract",
+              "wrap": "xml:format"
+            },
+            {
+              "slot": "interaction.query",
+              "wrap": "xml:message"
+            }
+          ],
+          "evaluation": {
+            "status": "unevaluated",
+            "suite": null,
+            "date": null,
+            "result": null,
+            "artifact": null
+          }
+        },
+        "route_policy": {
+          "route": "returns",
+          "version": "c2-returns/v1",
+          "clock_skew_seconds": 5,
+          "requires_evidence": true,
+          "producers": {
+            "support-policy": {
+              "kind": "policy",
+              "slots": [
+                "governance.instructions",
+                "governance.output_contract"
+              ]
+            },
+            "ticket-state": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "customer-state": {
+              "kind": "state",
+              "slots": [
+                "state.user"
+              ]
+            },
+            "orders-db": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "crm-notes": {
+              "kind": "memory",
+              "slots": [
+                "interaction.memory"
+              ]
+            },
+            "kb-search": {
+              "kind": "retrieval",
+              "slots": [
+                "evidence.knowledge"
+              ]
+            },
+            "web-chat": {
+              "kind": "interaction",
+              "slots": [
+                "interaction.history",
+                "interaction.query"
+              ]
+            }
+          },
+          "slots": {
+            "state.task": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "task"
+              ]
+            },
+            "state.user": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "user"
+              ]
+            },
+            "evidence.knowledge": {
+              "min_relevance": 2.5,
+              "min_included": 1,
+              "dedupe": "exact",
+              "max_per_source": 2,
+              "order_by": [
+                "-relevance",
+                "-freshness"
+              ]
+            },
+            "interaction.memory": {
+              "source_prefix": "crm:",
+              "required_scope": [
+                "tenant",
+                "user"
+              ],
+              "order_by": [
+                "-freshness"
+              ]
+            },
+            "interaction.history": {
+              "required_scope": [
+                "session"
+              ],
+              "order_by": [
+                "-freshness"
+              ],
+              "max_tokens": 300
+            },
+            "interaction.query": {
+              "required_scope": [
+                "session"
+              ]
+            }
+          },
+          "tier_upgrades": {
+            "state.user": "protected"
+          },
+          "facts": {
+            "delivery_status:o_7781": {
+              "precedence": [
+                "orders-db",
+                "crm-notes"
+              ],
+              "scope": [
+                "tenant"
+              ],
+              "on_unresolved": "refuse"
+            }
+          },
+          "fitting_order": [
+            {
+              "slot": "interaction.history",
+              "action": "omit"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "compress"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "omit"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "action": "omit"
+            }
+          ],
+          "parser": true
+        },
+        "tokenizer": "estimate-utf8/v1",
+        "renderer": "cwa-messages/v1",
+        "batches": [
+          {
+            "producer": {
+              "id": "support-policy",
+              "kind": "policy"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "policy:returns",
+                "slot": "governance.instructions",
+                "source": "app:policy/returns/instructions.md",
+                "source_version": "2",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "You are the Northwind Outdoors support assistant, handling a return or refund request. Use only the customer and ticket facts, the CRM notes, the policy articles and the conversation you are given.\n\nExplain what the customer can do next in plain steps, cite the policy article id for every rule you state, and never promise a refund amount or date the articles do not state.\n\nNever include the customer's phone number, email address, postal address or any payment detail in your reply, and never mention another customer or another order than the one on this ticket.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "contract:json-reply",
+                "slot": "governance.output_contract",
+                "source": "app:policy/output-contract.md",
+                "source_version": "1",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "Reply as JSON with exactly these keys: \"reply\" (the message to the customer, at most 120 words, plain text), \"next_stage\" (one of: open, awaiting_photos, return_requested, label_sent, refund_pending, resolved, needs_agent), \"citations\" (the list of policy article ids you relied on). No other keys, no text outside the JSON.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "customer-state",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "customer:c_1003",
+                "slot": "state.user",
+                "source": "customers-db:c_1003",
+                "source_version": "5",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-01T10:25:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "user": "c_1003"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Customer Priya Nair (c_1003), member, country UK."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ticket-state",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "ticket:t_5003",
+                "slot": "state.task",
+                "source": "tickets-db:t_5003",
+                "source_version": "2026-10-01T10:00:00Z",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-01T10:25:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "task": "t_5003"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Ticket t_5003 for order o_7815: stage open, routed as returns, return requested False, label sent False, refund none, attempts 0."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "orders-db",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "order:o_7815",
+                "slot": "state.task",
+                "source": "orders-db:o_7815",
+                "source_version": "2",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-01T10:25:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "task": "t_5003"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Order o_7815 placed 2026-09-29, standard shipping, status delivered, delivered 2026-10-01T09:30:00Z. Items: Winter gloves, S (39.00)."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "crm-notes",
+              "kind": "memory"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [
+                  {
+                    "id": "crm:c_1001:0001~summary",
+                    "body": "Customer confirmed the jacket arrived on 20 September and asked about waterproofing care.",
+                    "method": "agent-written summary",
+                    "lineage": "summarised"
+                  }
+                ],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "crm:c_1001:0001",
+                "slot": "interaction.memory",
+                "source": "crm:c_1001:0001",
+                "source_version": "1",
+                "authority": "generated",
+                "trust": "unverified",
+                "freshness": "2026-09-21T08:15:00Z",
+                "expires": "2027-03-20T08:15:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "user": "c_1001"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Chat with Maya Lindqvist regarding order o_7781 (Alpine shell jacket, M). Customer confirmed the parcel arrived yesterday afternoon, 20 September, and the jacket fits well. She asked how to re-proof the shell after washing and whether the DWR treatment is covered by warranty if it wears off within a season. Agent explained the care label instructions (wash cool, tumble low to reactivate the DWR, re-proof with a spray-on product after two or three washes) and that normal wear of the DWR is not a warranty matter but a defect in the membrane would be. Customer was satisfied. No action required."
+              },
+              {
+                "token_budget": null,
+                "variants": [
+                  {
+                    "id": "crm:c_1001:0002~summary",
+                    "body": "Customer wrote that the jacket had not been delivered and asked for tracking; the agent sent the tracking link.",
+                    "method": "agent-written summary",
+                    "lineage": "summarised"
+                  }
+                ],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "crm:c_1001:0002",
+                "slot": "interaction.memory",
+                "source": "crm:c_1001:0002",
+                "source_version": "1",
+                "authority": "generated",
+                "trust": "unverified",
+                "freshness": "2026-09-28T16:40:00Z",
+                "expires": "2027-03-27T16:40:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "user": "c_1001"
+                },
+                "lineage": "redacted",
+                "injection_risk": "untrusted_content",
+                "body": "Email from Maya Lindqvist: 'Hi, I still have not received my jacket from order o_7781, can you tell me where it is?' Agent reply: sent the tracking link SE[phone redacted] showing delivered on 20 September at 14:12 to the parcel locker at Storgatan 12, and asked the customer to check the locker code sent by SMS. Note: the customer's earlier chat on 21 September confirmed receipt of this very order, so this email may concern the newer order o_7790 (boots) which is still in transit; the agent did not clarify. Flagged for follow-up."
+              },
+              {
+                "token_budget": null,
+                "variants": [
+                  {
+                    "id": "crm:c_1001:0003~summary",
+                    "body": "Customer asked whether the jacket can still be returned after being worn once outdoors; the agent said tried-on only, and pointed to the 30-day window ending 20 October.",
+                    "method": "agent-written summary",
+                    "lineage": "summarised"
+                  }
+                ],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "crm:c_1001:0003",
+                "slot": "interaction.memory",
+                "source": "crm:c_1001:0003",
+                "source_version": "1",
+                "authority": "generated",
+                "trust": "unverified",
+                "freshness": "2026-09-30T11:05:00Z",
+                "expires": "2027-03-29T11:05:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "user": "c_1001"
+                },
+                "lineage": "redacted",
+                "injection_risk": "untrusted_content",
+                "body": "Chat with Maya Lindqvist about order o_7781. Customer said she wore the Alpine shell jacket once on a short hike and it felt too warm for her use, and asked whether she can still return it. Agent explained the returns policy: items must be unused with tags attached, footwear excepted for indoor try-on; a jacket worn outdoors would normally not qualify for a refund, though if it is in perfect condition the warehouse inspects case by case. The 30-day window from delivery on 20 September ends on 20 October. Customer said she would think about it. Agent recorded her phone [phone redacted] for a callback she requested regarding the boots order."
+              },
+              {
+                "token_budget": null,
+                "variants": [
+                  {
+                    "id": "crm:c_1002:0001~summary",
+                    "body": "Customer reported the tent arrived with a torn flysheet and was asked for two photos; none received yet.",
+                    "method": "agent-written summary",
+                    "lineage": "summarised"
+                  }
+                ],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "crm:c_1002:0001",
+                "slot": "interaction.memory",
+                "source": "crm:c_1002:0001",
+                "source_version": "1",
+                "authority": "generated",
+                "trust": "unverified",
+                "freshness": "2026-09-30T18:20:00Z",
+                "expires": "2027-03-29T18:20:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "user": "c_1002"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Email from Tomas Reyes about order o_7802 (two-person tent, green), delivered 30 September. Customer reports the flysheet has a tear of about 20 cm near a seam, visible on unpacking, and the outer box was crushed on one corner. Agent replied with the damaged-items procedure: report from the order page with two photos (item and outer packaging) within 14 days of delivery; a replacement ships first when in stock. Ticket t_5002 moved to awaiting photos. No photos received as of this note."
+              },
+              {
+                "token_budget": null,
+                "variants": [
+                  {
+                    "id": "crm:c_1003:0001~summary",
+                    "body": "Customer asked about UK duties on a previous order; the agent confirmed duties are included at checkout.",
+                    "method": "agent-written summary",
+                    "lineage": "summarised"
+                  }
+                ],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "crm:c_1003:0001",
+                "slot": "interaction.memory",
+                "source": "crm:c_1003:0001",
+                "source_version": "1",
+                "authority": "generated",
+                "trust": "unverified",
+                "freshness": "2026-09-12T10:00:00Z",
+                "expires": "2027-03-11T10:00:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "user": "c_1003"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Chat with Priya Nair, prior to the current order. Customer asked whether she would be charged import duties on delivery to the UK, having had a bad experience with another retailer. Agent confirmed that for UK orders duties and taxes are included at checkout and nothing is payable on delivery. Customer thanked the agent and said she would order gloves for the winter."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "kb-search",
+              "kind": "retrieval"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:refunds-and-exchanges@4#3",
+                "slot": "evidence.knowledge",
+                "source": "kb:refunds-and-exchanges",
+                "source_version": "4",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-07-30T09:00:00Z",
+                "relevance": 5.252,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Shipping charges are refunded only when the return is our fault: a damaged, defective or wrong item."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:refunds-and-exchanges@4#1",
+                "slot": "evidence.knowledge",
+                "source": "kb:refunds-and-exchanges",
+                "source_version": "4",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-07-30T09:00:00Z",
+                "relevance": 4.624,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "To exchange a size or colour, start a return for the original and place a new order; the new order ships immediately and the return is refunded when it arrives. Exchanges are not held in stock."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:returns-policy@5#1",
+                "slot": "evidence.knowledge",
+                "source": "kb:returns-policy",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-08-20T09:00:00Z",
+                "relevance": 3.014,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Final-sale items, gift cards and personalised products cannot be returned. Footwear can be returned if it has only been tried on indoors."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:returns-policy@5#2",
+                "slot": "evidence.knowledge",
+                "source": "kb:returns-policy",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-08-20T09:00:00Z",
+                "relevance": 2.732,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "To start a return, open the order in your account and choose Return items. We email a prepaid label within minutes; drop the parcel at any carrier point within 14 days of requesting the return."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:account-and-privacy@2#1",
+                "slot": "evidence.knowledge",
+                "source": "kb:account-and-privacy",
+                "source_version": "2",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-06-10T09:00:00Z",
+                "relevance": 1.821,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Support agents will never ask for your password, a one-time code or your full card number. If someone does, end the conversation and contact us from the website."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:damaged-items@3#0",
+                "slot": "evidence.knowledge",
+                "source": "kb:damaged-items",
+                "source_version": "3",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-09-02T09:00:00Z",
+                "relevance": 1.804,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "If an item arrives damaged or defective, report it within 14 days of delivery from the order page with Report a problem, and attach two photos: the item and the outer packaging."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "web-chat",
+              "kind": "interaction"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c2_06:0001",
+                "slot": "interaction.query",
+                "source": "chat:s_c2_06",
+                "source_version": "1",
+                "authority": "user",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-01T10:25:00Z",
+                "scope": {
+                  "session": "s_c2_06"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "Can I return the gloves if they're the wrong size?"
+              }
+            ],
+            "excluded": []
+          }
+        ],
+        "conflicts": []
+      },
+      "trace": {
+        "profile": {
+          "id": "c2-returns-messages",
+          "version": 1
+        },
+        "budget": {
+          "input": 1648,
+          "reserved_output": 400,
+          "margin_percent": 15
+        },
+        "result": {
+          "input_tokens": 676,
+          "hash": "f291c23a20b4281fa966e56da94516fb69fc57c87ae4796a0189af294324284c"
+        },
+        "included": [
+          {
+            "slot": "governance.instructions",
+            "item_id": "policy:returns",
+            "tokens": 142,
+            "source_version": "2",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.user",
+            "item_id": "customer:c_1003",
+            "tokens": 13,
+            "source_version": "5",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.task",
+            "item_id": "order:o_7815",
+            "tokens": 34,
+            "source_version": "2",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.task",
+            "item_id": "ticket:t_5003",
+            "tokens": 33,
+            "source_version": "2026-10-01T10:00:00Z",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "interaction.memory",
+            "item_id": "crm:c_1003:0001",
+            "tokens": 93,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:refunds-and-exchanges@4#1",
+            "tokens": 49,
+            "source_version": "4",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:refunds-and-exchanges@4#3",
+            "tokens": 25,
+            "source_version": "4",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:returns-policy@5#1",
+            "tokens": 35,
+            "source_version": "5",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:returns-policy@5#2",
+            "tokens": 49,
+            "source_version": "5",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "governance.output_contract",
+            "item_id": "contract:json-reply",
+            "tokens": 81,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "interaction.query",
+            "item_id": "turn:s_c2_06:0001",
+            "tokens": 13,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          }
+        ],
+        "compressed": [],
+        "excluded": [
+          {
+            "item_id": "crm:c_1001:0001",
+            "reason": "out_of_scope",
+            "stage": "assembler",
+            "slot": "interaction.memory"
+          },
+          {
+            "item_id": "crm:c_1001:0002",
+            "reason": "out_of_scope",
+            "stage": "assembler",
+            "slot": "interaction.memory"
+          },
+          {
+            "item_id": "crm:c_1001:0003",
+            "reason": "out_of_scope",
+            "stage": "assembler",
+            "slot": "interaction.memory"
+          },
+          {
+            "item_id": "crm:c_1002:0001",
+            "reason": "out_of_scope",
+            "stage": "assembler",
+            "slot": "interaction.memory"
+          },
+          {
+            "item_id": "kb:account-and-privacy@2#1",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          },
+          {
+            "item_id": "kb:damaged-items@3#0",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          }
+        ],
+        "conflicts": [],
+        "refused": {
+          "bool": false,
+          "reason": null
+        },
+        "context": {
+          "spec": "cwa/draft",
+          "assembly_time": "2026-10-01T10:25:00Z",
+          "route_policy_version": "c2-returns/v1",
+          "tokenizer": "estimate-utf8/v1",
+          "renderer": "cwa-messages/v1",
+          "snapshot_digest": "69e856d9c450d905655f6273930026fa6a633050a6eec29d37f1b3832b4bf9e7"
+        },
+        "defaults_filled": []
+      },
+      "payload": "{\"messages\":[{\"content\":\"<customer id=\\\"customer:c_1003\\\">\\nCustomer Priya Nair (c_1003), member, country UK.\\n</customer>\\n<ticket id=\\\"order:o_7815\\\">\\nOrder o_7815 placed 2026-09-29, standard shipping, status delivered, delivered 2026-10-01T09:30:00Z. Items: Winter gloves, S (39.00).\\n</ticket>\\n<ticket id=\\\"ticket:t_5003\\\">\\nTicket t_5003 for order o_7815: stage open, routed as returns, return requested False, label sent False, refund none, attempts 0.\\n</ticket>\\n<crm_note id=\\\"crm:c_1003:0001\\\">\\nChat with Priya Nair, prior to the current order. Customer asked whether she would be charged import duties on delivery to the UK, having had a bad experience with another retailer. Agent confirmed that for UK orders duties and taxes are included at checkout and nothing is payable on delivery. Customer thanked the agent and said she would order gloves for the winter.\\n</crm_note>\\n<policy id=\\\"kb:refunds-and-exchanges@4#1\\\">\\nTo exchange a size or colour, start a return for the original and place a new order; the new order ships immediately and the return is refunded when it arrives. Exchanges are not held in stock.\\n</policy>\\n<policy id=\\\"kb:refunds-and-exchanges@4#3\\\">\\nShipping charges are refunded only when the return is our fault: a damaged, defective or wrong item.\\n</policy>\\n<policy id=\\\"kb:returns-policy@5#1\\\">\\nFinal-sale items, gift cards and personalised products cannot be returned. Footwear can be returned if it has only been tried on indoors.\\n</policy>\\n<policy id=\\\"kb:returns-policy@5#2\\\">\\nTo start a return, open the order in your account and choose Return items. We email a prepaid label within minutes; drop the parcel at any carrier point within 14 days of requesting the return.\\n</policy>\\n<format id=\\\"contract:json-reply\\\">\\nReply as JSON with exactly these keys: \\\"reply\\\" (the message to the customer, at most 120 words, plain text), \\\"next_stage\\\" (one of: open, awaiting_photos, return_requested, label_sent, refund_pending, resolved, needs_agent), \\\"citations\\\" (the list of policy article ids you relied on). No other keys, no text outside the JSON.\\n</format>\\n<message id=\\\"turn:s_c2_06:0001\\\">\\nCan I return the gloves if they're the wrong size?\\n</message>\\n\",\"role\":\"user\"}],\"system\":[{\"id\":\"policy:returns\",\"text\":\"You are the Northwind Outdoors support assistant, handling a return or refund request. Use only the customer and ticket facts, the CRM notes, the policy articles and the conversation you are given.\\n\\nExplain what the customer can do next in plain steps, cite the policy article id for every rule you state, and never promise a refund amount or date the articles do not state.\\n\\nNever include the customer's phone number, email address, postal address or any payment detail in your reply, and never mention another customer or another order than the one on this ticket.\"}],\"tools\":[]}"
+    }
+  ],
+  "draft": "{\"reply\": \"Yes: items can be returned within 30 days of delivery, unused and with tags. To exchange a size, start a return and place a new order [kb:refunds-and-exchanges@4#1].\", \"next_stage\": \"return_requested\", \"citations\": [\"kb:refunds-and-exchanges@4#1\"]}",
+  "parsed": {
+    "reply": "Yes: items can be returned within 30 days of delivery, unused and with tags. To exchange a size, start a return and place a new order [kb:refunds-and-exchanges@4#1].",
+    "next_stage": "return_requested",
+    "citations": [
+      "kb:refunds-and-exchanges@4#1"
+    ]
+  },
+  "guards": [
+    {
+      "name": "pii_screen",
+      "ok": true,
+      "reason": "no contact or payment detail in the reply"
+    },
+    {
+      "name": "only_this_customer",
+      "ok": true,
+      "reason": "the reply names only this customer's ticket and order"
+    },
+    {
+      "name": "citations_were_sent",
+      "ok": true,
+      "reason": "1 citation(s), all sent"
+    }
+  ],
+  "reply": "Yes: items can be returned within 30 days of delivery, unused and with tags. To exchange a size, start a return and place a new order [kb:refunds-and-exchanges@4#1].",
+  "next_stage": "return_requested",
+  "model": "scripted:06-crm-leak"
+}

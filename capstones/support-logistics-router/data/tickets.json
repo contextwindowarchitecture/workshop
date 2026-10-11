@@ -1,0 +1,7 @@
+{
+  "tickets": {
+    "t_5001": { "customer": "c_1001", "order": "o_7781", "stage": "open", "intent": null, "return_requested": false, "label_sent": false, "refund_status": "none", "attempts": 0, "updated_at": "2026-10-01T10:00:00Z" },
+    "t_5002": { "customer": "c_1002", "order": "o_7802", "stage": "awaiting_photos", "intent": "damaged", "return_requested": false, "label_sent": false, "refund_status": "none", "attempts": 1, "updated_at": "2026-10-01T09:40:00Z" },
+    "t_5003": { "customer": "c_1003", "order": "o_7815", "stage": "open", "intent": null, "return_requested": false, "label_sent": false, "refund_status": "none", "attempts": 0, "updated_at": "2026-10-01T10:00:00Z" }
+  }
+}

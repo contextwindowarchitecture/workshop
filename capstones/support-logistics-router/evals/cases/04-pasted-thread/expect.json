@@ -1,0 +1,12 @@
+{
+  "route": "returns",
+  "next_stage_in": [
+    "return_requested"
+  ],
+  "guards_pass": true,
+  "attempts": [
+    "small",
+    "large"
+  ],
+  "first_refusal": "protected_content_over_budget"
+}

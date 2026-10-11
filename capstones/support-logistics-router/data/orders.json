@@ -1,0 +1,8 @@
+{
+  "orders": {
+    "o_7781": { "customer": "c_1001", "placed": "2026-09-18", "items": [{"sku": "JK-ALP-M", "name": "Alpine shell jacket, M", "price": 189.0}], "shipping": "express", "status": "delivered", "delivered_at": "2026-09-20T14:12:00Z", "tracking": "SE771002345", "version": 6 },
+    "o_7790": { "customer": "c_1001", "placed": "2026-09-25", "items": [{"sku": "BT-TRK-41", "name": "Trail boots, 41", "price": 139.0}], "shipping": "standard", "status": "in_transit", "delivered_at": null, "tracking": "SE771009911", "version": 3 },
+    "o_7802": { "customer": "c_1002", "placed": "2026-09-27", "items": [{"sku": "TN-2P-GRN", "name": "Two-person tent, green", "price": 249.0}], "shipping": "standard", "status": "delivered", "delivered_at": "2026-09-30T10:05:00Z", "tracking": "ES880012001", "version": 4 },
+    "o_7815": { "customer": "c_1003", "placed": "2026-09-29", "items": [{"sku": "GL-WNT-S", "name": "Winter gloves, S", "price": 39.0}], "shipping": "standard", "status": "delivered", "delivered_at": "2026-10-01T09:30:00Z", "tracking": "UK990044321", "version": 2 }
+  }
+}

@@ -22,7 +22,7 @@ Every lab runs without a model: committed snapshots, traces and recorded runs re
 | [W9](09-adapters/) | Adapters: tool-to-producer, assembler protocol, provider, host seam | half day per module | module A ready, B to D planned |
 | [W10](10-conformance-contribution/) | Conformance and contributing to the specification | half day | planned |
 | [W11](11-benchmarking/) | Benchmarking CWA: does it help, and what does the number mean | half day | planned |
-| [C1 to C3](capstones/) | Capstones: build a conformant application in a domain | one day each, teams | planned |
+| [C1 to C3](capstones/) | Capstones: build a conformant application in a domain | one day each, teams | C2 ready, C1 and C3 planned |
 
 Each workshop's README states its objectives, goals, outcomes, calls to action and the requirements it covers. The full catalog with the reasoning behind it is [docs/plan/workshops.md](docs/plan/workshops.md).
 

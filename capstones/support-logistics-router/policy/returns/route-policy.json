@@ -1,0 +1,136 @@
+{
+  "route": "returns",
+  "version": "c2-returns/v1",
+  "clock_skew_seconds": 5,
+  "requires_evidence": true,
+  "producers": {
+    "support-policy": {
+      "kind": "policy",
+      "slots": [
+        "governance.instructions",
+        "governance.output_contract"
+      ]
+    },
+    "ticket-state": {
+      "kind": "state",
+      "slots": [
+        "state.task"
+      ]
+    },
+    "customer-state": {
+      "kind": "state",
+      "slots": [
+        "state.user"
+      ]
+    },
+    "orders-db": {
+      "kind": "state",
+      "slots": [
+        "state.task"
+      ]
+    },
+    "crm-notes": {
+      "kind": "memory",
+      "slots": [
+        "interaction.memory"
+      ]
+    },
+    "kb-search": {
+      "kind": "retrieval",
+      "slots": [
+        "evidence.knowledge"
+      ]
+    },
+    "web-chat": {
+      "kind": "interaction",
+      "slots": [
+        "interaction.history",
+        "interaction.query"
+      ]
+    }
+  },
+  "slots": {
+    "state.task": {
+      "max_age_seconds": 300,
+      "required_scope": [
+        "tenant",
+        "task"
+      ]
+    },
+    "state.user": {
+      "max_age_seconds": 300,
+      "required_scope": [
+        "tenant",
+        "user"
+      ]
+    },
+    "evidence.knowledge": {
+      "min_relevance": 2.5,
+      "min_included": 1,
+      "dedupe": "exact",
+      "max_per_source": 2,
+      "order_by": [
+        "-relevance",
+        "-freshness"
+      ]
+    },
+    "interaction.memory": {
+      "source_prefix": "crm:",
+      "required_scope": [
+        "tenant",
+        "user"
+      ],
+      "order_by": [
+        "-freshness"
+      ]
+    },
+    "interaction.history": {
+      "required_scope": [
+        "session"
+      ],
+      "order_by": [
+        "-freshness"
+      ],
+      "max_tokens": 300
+    },
+    "interaction.query": {
+      "required_scope": [
+        "session"
+      ]
+    }
+  },
+  "tier_upgrades": {
+    "state.user": "protected"
+  },
+  "facts": {
+    "delivery_status:o_7781": {
+      "precedence": [
+        "orders-db",
+        "crm-notes"
+      ],
+      "scope": [
+        "tenant"
+      ],
+      "on_unresolved": "refuse"
+    }
+  },
+  "fitting_order": [
+    {
+      "slot": "interaction.history",
+      "action": "omit"
+    },
+    {
+      "slot": "interaction.memory",
+      "action": "compress"
+    },
+    {
+      "slot": "interaction.memory",
+      "action": "omit"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "action": "omit"
+    }
+  ],
+  "parser": true
+}

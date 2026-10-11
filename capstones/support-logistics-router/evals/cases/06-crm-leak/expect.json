@@ -1,0 +1,12 @@
+{
+  "route": "returns",
+  "guards_pass": true,
+  "trace": {
+    "out_of_scope": [
+      "crm:c_1001:0001",
+      "crm:c_1001:0002",
+      "crm:c_1001:0003",
+      "crm:c_1002:0001"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "customers": {
+    "c_1001": { "name": "Maya Lindqvist", "email": "maya.l@example.net", "phone": "+46 70 123 45 67", "tier": "member", "country": "SE", "version": 3 },
+    "c_1002": { "name": "Tomas Reyes", "email": "t.reyes@example.org", "phone": "+34 600 111 222", "tier": "guest", "country": "ES", "version": 1 },
+    "c_1003": { "name": "Priya Nair", "email": "priya@example.co.uk", "phone": "+44 7700 900123", "tier": "member", "country": "UK", "version": 5 }
+  }
+}

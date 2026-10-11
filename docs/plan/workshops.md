@@ -421,6 +421,6 @@ Open:
 2. Done. W0, then W1. Together these are the half-day tutorial and the one-week-out talk material.
 3. Done. W2 and W9 module A.
 4. Done. W3a, W4, W5; the "migrate your app" one-day offering (W1 plus W3a) exists.
-5. W6 and W7 done; the first capstone (C2, the support router, is closest to Fernway) next.
-6. W8, W9 modules B and C, W10, W11.
+5. Done. W6, W7 and the first capstone, C2.
+6. W8 next, then W9 modules B and C, W10, W11.
 7. W3b and W9 module D, the two remaining capstones, and the Anthropic provider notes.

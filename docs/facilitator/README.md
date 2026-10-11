@@ -12,7 +12,8 @@ One run sheet per workshop. Each gives the timing, the conference cut, the check
 | W5 Tools, MCP and capability policy | [05-tools-mcp.md](05-tools-mcp.md) | ready |
 | W6 Profiles, caching and evaluation | [06-profiles-caching-eval.md](06-profiles-caching-eval.md) | ready |
 | W7 Production | [07-production.md](07-production.md) | ready |
+| Capstone C2 Support and logistics router | [capstone-support-logistics-router.md](capstone-support-logistics-router.md) | ready |
 | W9 module A Tool-to-producer adapters | [09a-tool-to-producer.md](09a-tool-to-producer.md) | ready |
-| W3b, W8, W10, W11, W9 B to D, capstones | | written with each module |
+| W3b, W8, W10, W11, W9 B to D, C1, C3 | | written with each module |
 
 Before any session, run the checks in [docs/setup.md](../setup.md) section 5.

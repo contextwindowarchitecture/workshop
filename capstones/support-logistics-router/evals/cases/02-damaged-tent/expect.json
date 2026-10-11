@@ -1,0 +1,10 @@
+{
+  "route": "damaged",
+  "next_stage_in": [
+    "awaiting_photos"
+  ],
+  "must_cite_any": [
+    "kb:damaged-items@3#0"
+  ],
+  "guards_pass": true
+}

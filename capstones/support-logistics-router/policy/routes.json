@@ -1,0 +1,12 @@
+{
+  "_comment": "Intent selects the route; every route has a small and a large budget on different models, and a refusal on the small budget escalates to the large one (R-12, R-17). budget.input is computed from each model's context limit less what the route reserves (R-16).",
+  "intents": { "returns": "returns", "damaged": "damaged", "shipping": "general", "general": "general" },
+  "tokenizer": "estimate-utf8/v1",
+  "renderer": "cwa-messages/v1",
+  "retrieval": { "top_k": 6 },
+  "tiers": {
+    "small": { "model": "gpt-oss:20b", "model_context_limit": 2048, "reserved_output": 400, "margin_percent": 15 },
+    "large": { "model": "gpt-oss:120b", "model_context_limit": 8192, "reserved_output": 800, "margin_percent": 15 }
+  },
+  "escalate": { "small": { "protected_content_over_budget": "large", "evidence_required": "large" } }
+}

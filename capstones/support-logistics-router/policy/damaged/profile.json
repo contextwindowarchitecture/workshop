@@ -1,0 +1,49 @@
+{
+  "spec": "cwa/draft",
+  "id": "c2-damaged-messages",
+  "version": 1,
+  "route": "damaged",
+  "model_family": null,
+  "route_policy_version": "c2-damaged/v1",
+  "placement": [
+    {
+      "slot": "governance.instructions",
+      "wrap": "system"
+    },
+    {
+      "slot": "state.user",
+      "wrap": "xml:customer"
+    },
+    {
+      "slot": "state.task",
+      "wrap": "xml:ticket"
+    },
+    {
+      "slot": "interaction.memory",
+      "wrap": "xml:crm_note"
+    },
+    {
+      "slot": "interaction.history",
+      "wrap": "xml:history"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "wrap": "xml:policy"
+    },
+    {
+      "slot": "governance.output_contract",
+      "wrap": "xml:format"
+    },
+    {
+      "slot": "interaction.query",
+      "wrap": "xml:message"
+    }
+  ],
+  "evaluation": {
+    "status": "unevaluated",
+    "suite": null,
+    "date": null,
+    "result": null,
+    "artifact": null
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "route": "returns",
+  "next_stage_in": [
+    "return_requested",
+    "open"
+  ],
+  "must_cite_any": [
+    "kb:returns-policy@5#0",
+    "kb:returns-policy@5#1"
+  ],
+  "guards_pass": true,
+  "trace": {
+    "conflict_lost": [
+      "crm:c_1001:0002"
+    ],
+    "duplicate_content": true
+  }
+}

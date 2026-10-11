@@ -1,0 +1,10 @@
+{
+  "route": "general",
+  "next_stage_in": [
+    "open"
+  ],
+  "must_cite_any": [
+    "kb:shipping@7#2"
+  ],
+  "guards_pass": true
+}

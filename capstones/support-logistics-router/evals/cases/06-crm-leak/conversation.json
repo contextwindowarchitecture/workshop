@@ -1,0 +1,10 @@
+{
+  "customer": "c_1003",
+  "ticket": "t_5003",
+  "session": "s_c2_06",
+  "asked_at": "2026-10-01T10:25:00Z",
+  "question": "Can I return the gloves if they're the wrong size?",
+  "faults": [
+    "crm-ignores-customer"
+  ]
+}

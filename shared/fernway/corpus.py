@@ -40,12 +40,13 @@ def front_matter(text: str) -> tuple[dict[str, str], str]:
 
 
 @cache
-def chunks(directory: Path = HELP_CENTER) -> tuple[Chunk, ...]:
+def chunks(directory: Path = HELP_CENTER, prefix: str = "help") -> tuple[Chunk, ...]:
+    """prefix names the corpus in every chunk id: help:<article>@<version>#<n> for the Fernway help centre."""
     found = []
     for path in sorted(directory.glob("*.md")):
         meta, body = front_matter(path.read_text(encoding="utf-8"))
         for index, paragraph in enumerate(p.strip() for p in body.split("\n\n") if p.strip()):
-            found.append(Chunk(f"help:{meta['id']}@{meta['version']}#{index}", meta["id"], meta["title"],
+            found.append(Chunk(f"{prefix}:{meta['id']}@{meta['version']}#{index}", meta["id"], meta["title"],
                                meta["version"], meta["updated"], paragraph))
     return tuple(found)
 
@@ -57,9 +58,9 @@ def words(text: str) -> list[str]:
     return _WORD.findall(text.lower())
 
 
-def bm25(question: str, k1: float = 1.5, b: float = 0.75) -> list[tuple[Chunk, float]]:
-    """Every chunk scored against the question, best first, ties broken by id."""
-    docs = [(chunk, words(chunk.text)) for chunk in chunks()]
+def bm25(question: str, k1: float = 1.5, b: float = 0.75, directory: Path = HELP_CENTER, prefix: str = "help") -> list[tuple[Chunk, float]]:
+    """Every chunk scored against the question, best first, ties broken by id. Any directory of front-matter articles works."""
+    docs = [(chunk, words(chunk.text)) for chunk in chunks(directory, prefix)]
     n = len(docs)
     avg = sum(len(terms) for _, terms in docs) / n
     df: dict[str, int] = {}
