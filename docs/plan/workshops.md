@@ -422,5 +422,5 @@ Open:
 3. Done. W2 and W9 module A.
 4. Done. W3a, W4, W5; the "migrate your app" one-day offering (W1 plus W3a) exists.
 5. Done. W6, W7 and the first capstone, C2.
-6. W8 done; W9 modules B and C next, then W10, W11.
+6. W8 and W9 modules B and C done; W10 and W11 next.
 7. W3b and W9 module D, the two remaining capstones, and the Anthropic provider notes.

@@ -14,7 +14,9 @@ One run sheet per workshop. Each gives the timing, the conference cut, the check
 | W7 Production | [07-production.md](07-production.md) | ready |
 | Capstone C2 Support and logistics router | [capstone-support-logistics-router.md](capstone-support-logistics-router.md) | ready |
 | W8 The repair kata | [08-assembler-kata.md](08-assembler-kata.md) | ready |
+| W9 module B Assembler adapter protocol | [09b-assembler-protocol.md](09b-assembler-protocol.md) | ready |
+| W9 module C Provider adapter | [09c-provider.md](09c-provider.md) | ready |
 | W9 module A Tool-to-producer adapters | [09a-tool-to-producer.md](09a-tool-to-producer.md) | ready |
-| W3b, W10, W11, W9 B to D, C1, C3 | | written with each module |
+| W3b, W10, W11, W9 D, C1, C3 | | written with each module |
 
 Before any session, run the checks in [docs/setup.md](../setup.md) section 5.

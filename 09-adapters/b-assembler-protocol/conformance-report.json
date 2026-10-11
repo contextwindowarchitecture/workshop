@@ -1,0 +1,863 @@
+{
+  "implementation": {
+    "name": "cwa-assembler",
+    "version": "0.0.1",
+    "language": "python"
+  },
+  "contract": {
+    "repository": "contextwindowarchitecture/contextwindowarchitecture",
+    "commit": "c252494af79720d23c95d54c0cf9c638d3e43557",
+    "dirty": false
+  },
+  "cases": [
+    {
+      "id": "admission-reasons",
+      "rules": [
+        "R-1",
+        "R-2",
+        "R-3",
+        "R-8",
+        "R-9",
+        "R-10",
+        "R-13",
+        "R-14",
+        "R-15",
+        "R-16",
+        "R-18",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "admission-route-slots",
+      "rules": [
+        "R-15",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "blocks-budget",
+      "rules": [
+        "R-7",
+        "R-16",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "blocks-render",
+      "rules": [
+        "R-7",
+        "R-10",
+        "R-11",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-droppable-order",
+      "rules": [
+        "R-16",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-margin",
+      "rules": [
+        "R-16",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-margin-protected",
+      "rules": [
+        "R-16",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-margin-rounding",
+      "rules": [
+        "R-16",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-omit-after-variants",
+      "rules": [
+        "R-4",
+        "R-12",
+        "R-16",
+        "R-18",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-protected-variants",
+      "rules": [
+        "R-16",
+        "R-18",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-repeated-compress",
+      "rules": [
+        "R-16",
+        "R-18",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-route-order",
+      "rules": [
+        "R-16",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-route-tiers",
+      "rules": [
+        "R-16",
+        "R-18",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-slot-cap-before-pressure",
+      "rules": [
+        "R-16",
+        "R-18",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-slot-caps",
+      "rules": [
+        "R-3",
+        "R-16",
+        "R-18",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-slot-floor",
+      "rules": [
+        "R-16",
+        "R-18",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-slot-floor-refused",
+      "rules": [
+        "R-16",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-slot-floor-under-cap",
+      "rules": [
+        "R-16",
+        "R-18",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-tier-lowering-ignored",
+      "rules": [
+        "R-16",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-token-caps",
+      "rules": [
+        "R-3",
+        "R-16",
+        "R-18",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "budget-variant-choice",
+      "rules": [
+        "R-16",
+        "R-18",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "capability-policy-kind",
+      "rules": [
+        "R-15",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "conflict-fact",
+      "rules": [
+        "R-2",
+        "R-6",
+        "R-11",
+        "R-15",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "conflict-instruction",
+      "rules": [
+        "R-3",
+        "R-6",
+        "R-7",
+        "R-11",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "conflict-instruction-request-context",
+      "rules": [
+        "R-6",
+        "R-11",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "conflict-refused",
+      "rules": [
+        "R-6",
+        "R-11",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "conflict-request-context",
+      "rules": [
+        "R-11",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "conflict-required-slot-first",
+      "rules": [
+        "R-4",
+        "R-11",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "conflict-surfaced-shed",
+      "rules": [
+        "R-11",
+        "R-16",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "dedupe-evidence-required",
+      "rules": [
+        "R-12",
+        "R-17",
+        "R-21",
+        "R-24"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "dedupe-exact",
+      "rules": [
+        "R-21",
+        "R-22",
+        "R-24"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "dedupe-exemptions",
+      "rules": [
+        "R-6",
+        "R-11",
+        "R-16",
+        "R-21",
+        "R-24"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "dedupe-producer-reported",
+      "rules": [
+        "R-13",
+        "R-21",
+        "R-22",
+        "R-24"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "digest-beyond-2-53",
+      "rules": [
+        "R-2",
+        "R-13",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "diversity-cap",
+      "rules": [
+        "R-13",
+        "R-15",
+        "R-21",
+        "R-22",
+        "R-24",
+        "R-26"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "diversity-evidence-required",
+      "rules": [
+        "R-12",
+        "R-17",
+        "R-21",
+        "R-26"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "diversity-exemptions",
+      "rules": [
+        "R-6",
+        "R-11",
+        "R-16",
+        "R-21",
+        "R-24",
+        "R-25",
+        "R-26"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "doubles-largest",
+      "rules": [
+        "R-2",
+        "R-13",
+        "R-17",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "doubles-nearest",
+      "rules": [
+        "R-2",
+        "R-13",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "evidence-cap-omitted",
+      "rules": [
+        "R-12",
+        "R-16",
+        "R-17",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "evidence-min-included-items",
+      "rules": [
+        "R-12",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "evidence-precompute-summary",
+      "rules": [
+        "R-12",
+        "R-16",
+        "R-17",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "evidence-request-context",
+      "rules": [
+        "R-12",
+        "R-17",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "evidence-retrieve-narrower",
+      "rules": [
+        "R-12",
+        "R-16",
+        "R-17",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "fixture-three-slot",
+      "rules": [
+        "R-9",
+        "R-21",
+        "R-22",
+        "R-23"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "history-freshness-order",
+      "rules": [
+        "R-7"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "integer-written-as-double",
+      "rules": [
+        "R-2",
+        "R-26"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "messages-budget",
+      "rules": [
+        "R-7",
+        "R-16",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "messages-render",
+      "rules": [
+        "R-7",
+        "R-10",
+        "R-11",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "messages-repeated-slot",
+      "rules": [
+        "R-7",
+        "R-16",
+        "R-18",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "ordering-astral-ids",
+      "rules": [
+        "R-3",
+        "R-16",
+        "R-21",
+        "R-22",
+        "R-23"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "placement-protected-unplaced",
+      "rules": [
+        "R-16",
+        "R-17",
+        "R-20",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "placement-required-slot-first",
+      "rules": [
+        "R-4",
+        "R-17",
+        "R-20",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "placement-unplaced-slot",
+      "rules": [
+        "R-20",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "protected-over-budget",
+      "rules": [
+        "R-16",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "protected-over-cap",
+      "rules": [
+        "R-16",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "protected-over-slot-cap",
+      "rules": [
+        "R-16",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "render-attribute-escaping",
+      "rules": [
+        "R-11",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "required-instructions-missing",
+      "rules": [
+        "R-4",
+        "R-10",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "required-slot-missing",
+      "rules": [
+        "R-4",
+        "R-17",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "supersede-evidence-required",
+      "rules": [
+        "R-12",
+        "R-17",
+        "R-21",
+        "R-25"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "supersede-exemptions",
+      "rules": [
+        "R-6",
+        "R-11",
+        "R-16",
+        "R-21",
+        "R-24",
+        "R-25"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "supersede-observations",
+      "rules": [
+        "R-2",
+        "R-15",
+        "R-21",
+        "R-22",
+        "R-25"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "threshold-beyond-2-53",
+      "rules": [
+        "R-2",
+        "R-13",
+        "R-16",
+        "R-21",
+        "R-22"
+      ],
+      "outcome": "passed"
+    },
+    {
+      "id": "tokenizer-estimate-utf8",
+      "rules": [
+        "R-16",
+        "R-21"
+      ],
+      "outcome": "passed"
+    }
+  ],
+  "rejections": [
+    {
+      "id": "batch-entry-not-object",
+      "rules": [
+        "R-2",
+        "R-17"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "blocks-system-after-xml",
+      "rules": [
+        "R-7",
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "conflict-group-overlap",
+      "rules": [
+        "R-11",
+        "R-17"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "conflict-group-repeated-id",
+      "rules": [
+        "R-11",
+        "R-17"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "conflict-group-unknown-fact",
+      "rules": [
+        "R-11",
+        "R-17"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "conflict-group-unknown-item",
+      "rules": [
+        "R-11",
+        "R-17"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "duplicate-of-unknown",
+      "rules": [
+        "R-13",
+        "R-17"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "integer-out-of-range",
+      "rules": [
+        "R-17",
+        "R-23"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "messages-system-after-xml",
+      "rules": [
+        "R-7",
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "messages-system-on-evidence",
+      "rules": [
+        "R-7",
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "messages-tools-on-instructions",
+      "rules": [
+        "R-7",
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "number-out-of-range",
+      "rules": [
+        "R-17",
+        "R-23"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "producer-in-two-batches",
+      "rules": [
+        "R-15",
+        "R-17"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "producer-reason-unknown",
+      "rules": [
+        "R-9",
+        "R-17",
+        "R-21"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "profile-invalid-tag",
+      "rules": [
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "profile-missing-instructions",
+      "rules": [
+        "R-4",
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "profile-missing-output-contract",
+      "rules": [
+        "R-4",
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "profile-missing-query",
+      "rules": [
+        "R-4",
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "profile-route-mismatch",
+      "rules": [
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "profile-route-policy-mismatch",
+      "rules": [
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "profile-unrealizable",
+      "rules": [
+        "R-17",
+        "R-20"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "schema-missing-budget",
+      "rules": [
+        "R-17"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "schema-profile-spec",
+      "rules": [
+        "R-17",
+        "R-19"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "superseded-by-unknown",
+      "rules": [
+        "R-9",
+        "R-17"
+      ],
+      "outcome": "rejected"
+    },
+    {
+      "id": "unpaired-surrogate",
+      "rules": [
+        "R-17",
+        "R-23"
+      ],
+      "outcome": "rejected"
+    }
+  ]
+}
