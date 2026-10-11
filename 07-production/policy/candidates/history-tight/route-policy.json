@@ -1,0 +1,93 @@
+{
+  "route": "account-agent",
+  "version": "w7-candidate-history-tight/v1",
+  "clock_skew_seconds": 5,
+  "producers": {
+    "app-policy": {
+      "kind": "policy",
+      "slots": [
+        "governance.instructions"
+      ]
+    },
+    "capability-policy": {
+      "kind": "capability_policy",
+      "slots": [
+        "governance.capabilities"
+      ]
+    },
+    "agent-controller": {
+      "kind": "state",
+      "slots": [
+        "state.task"
+      ]
+    },
+    "accounts-db": {
+      "kind": "state",
+      "slots": [
+        "state.user"
+      ]
+    },
+    "fernway-accounts": {
+      "kind": "mcp",
+      "slots": [
+        "evidence.tool_results"
+      ]
+    },
+    "chat-session": {
+      "kind": "interaction",
+      "slots": [
+        "interaction.history",
+        "interaction.query"
+      ]
+    }
+  },
+  "slots": {
+    "state.task": {
+      "max_age_seconds": 300,
+      "required_scope": [
+        "tenant",
+        "task"
+      ]
+    },
+    "state.user": {
+      "max_age_seconds": 300,
+      "required_scope": [
+        "tenant"
+      ]
+    },
+    "evidence.tool_results": {
+      "supersede": "source",
+      "required_scope": [
+        "tenant",
+        "task"
+      ],
+      "order_by": [
+        "-freshness"
+      ]
+    },
+    "interaction.history": {
+      "required_scope": [
+        "session"
+      ],
+      "order_by": [
+        "-freshness"
+      ],
+      "max_tokens": 60
+    },
+    "interaction.query": {
+      "required_scope": [
+        "session"
+      ]
+    }
+  },
+  "fitting_order": [
+    {
+      "slot": "interaction.history",
+      "action": "omit"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "action": "omit"
+    }
+  ]
+}

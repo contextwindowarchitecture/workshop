@@ -16,3 +16,6 @@ tmp/
 .mcp.json
 .serena/
 .claude/
+
+# W7 snapshot store, written by every run
+07-production/store/*.sqlite

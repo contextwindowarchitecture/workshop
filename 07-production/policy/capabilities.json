@@ -1,0 +1,54 @@
+{
+  "$comment": "Which of the tools fernway-accounts proposes the model may be offered, to whom, with the policy's own wording and the server's input schema pinned by SHA-256 of its canonical JSON. delete_workspace is never offered to anyone; request_plan_change only to Owners. Every call the model makes is checked by the guard against this grant and the request's scope before the server sees it (R-5, R-15).",
+  "policy_producer": "capability-policy",
+  "allow_list_version": "account-agent/v2",
+  "server": "fernway-accounts",
+  "grants": {
+    "get_account": {
+      "roles": [
+        "Owner",
+        "Admin",
+        "Member"
+      ],
+      "scope": {
+        "workspace": "tenant"
+      },
+      "description": "Get the signed-in workspace's plan, billing cycle, seat count and data region. workspace is the signed-in workspace id.",
+      "schema_sha256": "707a1cc448185c0fccb1fa0273937101d791c486ad6a31bb063ce775b9de23a3"
+    },
+    "list_members": {
+      "roles": [
+        "Owner",
+        "Admin"
+      ],
+      "scope": {
+        "workspace": "tenant"
+      },
+      "description": "List the signed-in workspace's members with their role and billing-admin flag.",
+      "schema_sha256": "e3e0be3fcd54851a2fc385575a561f6e2452f2262ed3f5bd7d5060531b9a4fa7"
+    },
+    "get_service_status": {
+      "roles": [
+        "Owner",
+        "Admin",
+        "Member"
+      ],
+      "scope": {},
+      "description": "Current service status for a data region, EU or US. Pass the workspace's region from the account details.",
+      "schema_sha256": "e13a060fa8b4142d38791565ecc73da4c0af7a28cebbdbb03bd2730b6d630849"
+    },
+    "request_plan_change": {
+      "roles": [
+        "Owner"
+      ],
+      "scope": {
+        "workspace": "tenant"
+      },
+      "description": "Request a plan change for the signed-in workspace. Only when the user explicitly asks for it, and only after confirming the target plan with them.",
+      "schema_sha256": "3efc1f1513b923072d652cb427ce97db8881da23c5ad0d57d229db08adc134d8"
+    }
+  },
+  "never": {
+    "delete_workspace": "Deletes data that cannot be restored. A person does this in Settings after a confirmation flow, never the assistant."
+  }
+}

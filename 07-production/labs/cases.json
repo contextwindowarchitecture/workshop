@@ -1,0 +1,44 @@
+{
+  "suite": "account-agent-evals/v1",
+  "cases": [
+    {
+      "id": "status-resolved",
+      "user": "u_ada",
+      "question": "Is there an incident in our region right now?",
+      "expect": {
+        "must_call": [
+          "get_service_status"
+        ],
+        "mentions_any": [
+          "resolved"
+        ]
+      }
+    },
+    {
+      "id": "member-cannot-list",
+      "user": "u_ben",
+      "question": "Who are the billing admins of our workspace?",
+      "expect": {
+        "must_not_call": [
+          "list_members"
+        ],
+        "mentions_any": [
+          "Owner",
+          "Admin"
+        ]
+      }
+    },
+    {
+      "id": "owner-changes-plan",
+      "user": "u_ada",
+      "question": "Please move our workspace to the Team plan.",
+      "expect": {
+        "must_call": [
+          "request_plan_change"
+        ],
+        "claims_match_actions": true
+      }
+    }
+  ],
+  "_comment": "Lab C: three cases are written; add two more. Every case names a user and a question and says what the run must show: must_call, must_not_call, mentions_any, mentions_none, claims_match_actions. A scripted decision for each case id lives in evals/cases/scripts.json; a live run replaces it."
+}

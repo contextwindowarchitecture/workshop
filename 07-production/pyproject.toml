@@ -1,0 +1,29 @@
+[project]
+name = "cwa-workshop-07-production"
+version = "0.1.0"
+description = "W7. Production: snapshot store, telemetry, evals and the promotion gate"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+dependencies = [
+    "contextwindowarchitecture-assembler",
+    "mcp>=2.2",
+    "jsonschema>=4.23",
+    "openai>=2",
+    "opentelemetry-api>=1.45.0",
+    "opentelemetry-sdk>=1.45.0",
+    "opentelemetry-exporter-otlp-proto-http>=1.45.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+contextwindowarchitecture-assembler = { git = "https://github.com/contextwindowarchitecture/assembler-python", tag = "draft-release" }
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
