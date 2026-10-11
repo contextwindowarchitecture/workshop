@@ -19,3 +19,7 @@ tmp/
 
 # W7 snapshot store, written by every run
 07-production/store/*.sqlite
+
+# W8 kata work trees, built from the sibling assembler by kata.py
+08-assembler-kata/work/
+08-assembler-kata/.pristine/

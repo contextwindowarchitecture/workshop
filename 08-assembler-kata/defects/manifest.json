@@ -1,0 +1,167 @@
+{
+  "_comment": "Ten defects, each a one-line change in a different stage of the pipeline, each breaking one or more published conformance cases. kata.py build injects them; kata.py verify-manifest fills in which cases each breaks. Participants are not meant to read this file until they have fixed the case; kata.py hint names the stage and kata.py reveal names the line.",
+  "defects": [
+    {
+      "id": "estimate-rounds-down",
+      "stage": "tokenizer",
+      "file": "src/cwa/tokenize/estimate_utf8.py",
+      "rules": [
+        "R-16"
+      ],
+      "find": "        return (len(text.encode(\"utf-8\")) + 3) // 4",
+      "replace": "        return len(text.encode(\"utf-8\")) // 4",
+      "why": "estimate-utf8/v1 is UTF-8 bytes divided by four, rounded up. Rounding down undercounts every text by up to one token, so payloads fit that must not and every traced count is wrong.",
+      "breaks": [
+        "blocks-budget",
+        "messages-repeated-slot",
+        "tokenizer-estimate-utf8"
+      ],
+      "breaks_rejections": []
+    },
+    {
+      "id": "dedupe-compares-raw-bodies",
+      "stage": "deduplication",
+      "file": "src/cwa/dedupe.py",
+      "rules": [
+        "R-24"
+      ],
+      "find": "    return _RUN.sub(\" \", body).strip(\" \")",
+      "replace": "    return body.strip(\" \")",
+      "why": "Exact deduplication compares bodies after collapsing every run of whitespace to one space and trimming the ends (R-24). Comparing raw bodies lets a copy with different spacing through.",
+      "breaks": [
+        "dedupe-evidence-required",
+        "dedupe-exact",
+        "supersede-exemptions"
+      ],
+      "breaks_rejections": []
+    },
+    {
+      "id": "supersede-keeps-the-oldest",
+      "stage": "supersession",
+      "file": "src/cwa/supersede.py",
+      "rules": [
+        "R-25"
+      ],
+      "find": "            latest = max(members, key=by_freshness).freshness",
+      "replace": "            latest = min(members, key=by_freshness).freshness",
+      "why": "Supersession keeps the latest observation per producer and source and excludes the older ones (R-25). Keeping the oldest inverts it: the stale observation stays and the fresh one goes.",
+      "breaks": [
+        "diversity-exemptions",
+        "supersede-evidence-required",
+        "supersede-exemptions",
+        "supersede-observations"
+      ],
+      "breaks_rejections": []
+    },
+    {
+      "id": "diversity-exempt-items-take-no-places",
+      "stage": "source diversity",
+      "file": "src/cwa/diversity.py",
+      "rules": [
+        "R-26"
+      ],
+      "find": "            places = max(0, cap - sum(map(exempt, members)))",
+      "replace": "            places = cap",
+      "why": "Protected items and conflict-group members are never excluded and take places first, even beyond the cap (R-26). If they take no places, the cap admits that many extra items.",
+      "breaks": [
+        "diversity-exemptions"
+      ],
+      "breaks_rejections": []
+    },
+    {
+      "id": "history-renders-by-id",
+      "stage": "render",
+      "file": "src/cwa/render/__init__.py",
+      "rules": [
+        "R-7"
+      ],
+      "find": "        return sorted(items, key=cmp_to_key(_said_order))",
+      "replace": "        return sorted(items, key=lambda item: utf16(item.id))",
+      "why": "Prior turns render in the order they were said: by freshness compared as instants, then by id (R-7). Ordering by id alone breaks any conversation whose ids do not sort like its clock, and with it every cache prefix.",
+      "breaks": [
+        "conflict-instruction",
+        "history-freshness-order"
+      ],
+      "breaks_rejections": []
+    },
+    {
+      "id": "strings-order-by-utf8",
+      "stage": "string ordering",
+      "file": "src/cwa/strings.py",
+      "rules": [
+        "R-21",
+        "R-22"
+      ],
+      "find": "    return value.encode(\"utf-16-be\")",
+      "replace": "    return value.encode(\"utf-8\")",
+      "why": "Every string ordering in the specification is by UTF-16 code units, as RFC 8785 orders member names, so that Python, Go, Rust and JavaScript agree. UTF-8 byte order differs from it above the Basic Multilingual Plane.",
+      "breaks": [
+        "ordering-astral-ids"
+      ],
+      "breaks_rejections": []
+    },
+    {
+      "id": "expired-is-exclusive",
+      "stage": "admission",
+      "file": "src/cwa/admission.py",
+      "rules": [
+        "R-9"
+      ],
+      "find": "    if item.expires is not None and instants.compare(item.expires, ctx.snapshot.assembly_time) <= 0:",
+      "replace": "    if item.expires is not None and instants.compare(item.expires, ctx.snapshot.assembly_time) < 0:",
+      "why": "An item whose expires is at or before assembly_time is expired (R-9): equal means expired. Treating the boundary as live admits a memory the producer meant to be gone at that instant.",
+      "breaks": [
+        "admission-reasons"
+      ],
+      "breaks_rejections": []
+    },
+    {
+      "id": "threshold-is-strict",
+      "stage": "admission",
+      "file": "src/cwa/admission.py",
+      "rules": [
+        "R-13"
+      ],
+      "find": "    return \"below_threshold\" if minimum is not None and (item.relevance is None or item.relevance < minimum) else None",
+      "replace": "    return \"below_threshold\" if minimum is not None and (item.relevance is None or item.relevance <= minimum) else None",
+      "why": "A score equal to the route's min_relevance passes (R-13). A strict comparison excludes the item that sits exactly on the threshold.",
+      "breaks": [
+        "digest-beyond-2-53",
+        "doubles-largest",
+        "doubles-nearest",
+        "threshold-beyond-2-53"
+      ],
+      "breaks_rejections": []
+    },
+    {
+      "id": "margin-rounds-down",
+      "stage": "fitting",
+      "file": "src/cwa/model.py",
+      "rules": [
+        "R-16"
+      ],
+      "find": "        return (tokens * (100 + (self.margin_percent or 0)) + 99) // 100",
+      "replace": "        return (tokens * (100 + (self.margin_percent or 0))) // 100",
+      "why": "The margin charge rounds up, however small its fraction: a payload fits only when count times (100 plus margin) over 100, rounded up, is at most budget.input (R-16). Rounding down lets a payload one fraction of a token over the line through.",
+      "breaks": [
+        "budget-margin-rounding"
+      ],
+      "breaks_rejections": []
+    },
+    {
+      "id": "missing-scope-key-is-a-wildcard",
+      "stage": "admission",
+      "file": "src/cwa/admission.py",
+      "rules": [
+        "R-2"
+      ],
+      "find": "    if any(key not in item.scope for key in required) or any(request.get(k) != v for k, v in item.scope.items()):",
+      "replace": "    if any(request.get(k) != v for k, v in item.scope.items()):",
+      "why": "An item that lacks a key its slot's required_scope lists is out of scope; a missing key is never a wildcard (R-2). Dropping the check admits an item that said nothing about whose it is.",
+      "breaks": [
+        "admission-reasons"
+      ],
+      "breaks_rejections": []
+    }
+  ]
+}

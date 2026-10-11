@@ -1,0 +1,16 @@
+{
+  "_comment": "A defect no published conformance case reaches, found while authoring the kata: it is not injected. W10 starts from it: write the case that would catch it, in the specification repository's generators, and watch every assembler either pass or fail it.",
+  "defects": [
+    {
+      "id": "tiebreak-without-permission",
+      "stage": "conflict resolution",
+      "file": "src/cwa/conflicts.py",
+      "rules": [
+        "R-11"
+      ],
+      "find": "        if not policy.get(\"freshness_tiebreak\", False) or not newest:",
+      "replace": "        if not newest:",
+      "why": "Freshness breaks a tie between leaders only when the route's fact policy permits it (R-11). Without the permission check, a group the route meant to surface or refuse is decided by the clock."
+    }
+  ]
+}

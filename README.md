@@ -18,7 +18,7 @@ Every lab runs without a model: committed snapshots, traces and recorded runs re
 | [W5](05-tools-mcp/) | Tools, MCP and capability policy: agents under CWA | half day, model-free | ready |
 | [W6](06-profiles-caching-eval/) | Placement profiles, prompt caching and profile evaluation | half day, model-free | ready |
 | [W7](07-production/) | Production: snapshot store, telemetry, evals and the promotion gate | half day, model-free | ready |
-| [W8](08-assembler-kata/) | Inside the assembler: the repair kata | full day | planned |
+| [W8](08-assembler-kata/) | Inside the assembler: the repair kata | full day, model-free | ready |
 | [W9](09-adapters/) | Adapters: tool-to-producer, assembler protocol, provider, host seam | half day per module | module A ready, B to D planned |
 | [W10](10-conformance-contribution/) | Conformance and contributing to the specification | half day | planned |
 | [W11](11-benchmarking/) | Benchmarking CWA: does it help, and what does the number mean | half day | planned |

@@ -1,0 +1,18 @@
+[project]
+name = "cwa-workshop-08-assembler-kata"
+version = "0.1.0"
+description = "W8. Inside the assembler: the repair kata"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -28,7 +28,7 @@ RULES = (
     (re.compile(r"\bsystem_prompt\s*(\+=|=\s*f?[\"'].*\{)"), "a prompt string is being built by hand; emit items into slots instead"),
     (re.compile(r"\bpayload\s*(\+=|\.replace\(|\.format\()"), "the rendered payload is being changed after assembly"),
     (re.compile(r"\bpayload\[[\"']messages[\"']\]\.(append|insert|extend)\("), "a message is being added to the rendered payload"),
-    (re.compile(r"\bpayload\[[\"']system[\"']\]\s*(\+=|=)"), "the rendered system text is being changed after assembly"),
+    (re.compile(r"\bpayload\[[\"']system[\"']\]\s*(\+=|=(?!=))"), "the rendered system text is being changed after assembly"),
     (re.compile(r"\bdef\s+assemble\s*\("), "participant code defines its own assemble(); use the assembler's"),
     (re.compile(r"\bimport\s+tiktoken\b.*fixture-|tokenizer\s*=\s*[\"'](estimate-utf8|fixture-whitespace)/v1[\"'].*\bdef\b"), "an application tokenizer under a published id (R-16)"),
 )
@@ -42,7 +42,7 @@ def files(prefixes: list[str]) -> list[Path]:
             if prefixes and not any(rel.startswith(p) for p in prefixes):
                 continue
             for path in sorted(top.rglob("*.py")):
-                if any(part in {".venv", "node_modules", "__pycache__"} for part in path.parts):
+                if any(part in {".venv", "node_modules", "__pycache__", "work", ".pristine", ".scratch"} for part in path.parts):  # built trees are not participant code
                     continue
                 out.append(path)
     return out
