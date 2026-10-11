@@ -1,0 +1,7 @@
+{
+  "user": "u_ben",
+  "question": "Which plan are we on?",
+  "faults": [
+    "memory-store-ignores-user"
+  ]
+}

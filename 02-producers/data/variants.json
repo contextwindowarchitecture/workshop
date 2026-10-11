@@ -1,0 +1,274 @@
+{
+  "108ecb9a5cfc55841d5891c2c05834ba4afe1b82c99f9f3b33359fa30e8718eb": [
+    {
+      "suffix": "lead",
+      "body": "To set up SSO, a workspace owner opens Settings, then Security, then Single sign-on, and copies Fernway's ACS URL and entity ID into a new SAML app in the identity provider.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "13f8f7eeba46c6d473bad562969d3a09642707c2877a8e073f41639e1575e708": [
+    {
+      "suffix": "lead",
+      "body": "To export one project as CSV, open the project menu and choose Export, then CSV.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "1a215b46f31fd132825772270839185954d256d7ae4942ac4a756d2f135d8c7f": [
+    {
+      "suffix": "lead",
+      "body": "Fernway prepares the export in the background and emails a download link when it is ready, usually within an hour for large workspaces.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "1a539d02bea1674d4c3ded701ecbd88037cb8c5d4e9e6ff262108782a7aabd88": [
+    {
+      "suffix": "lead",
+      "body": "Annual plans can be refunded within 30 days of the first payment or of a renewal.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "1df78f796552831e76a9d80c15c0460e57ee24231c24c0f88719219d68f45444": [
+    {
+      "suffix": "lead",
+      "body": "Once the test succeeds, turn on Require SSO.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "226dd20235ec7e65270621ea51630377918491a351cdbdb4fb529390544a9c8a": [
+    {
+      "suffix": "lead",
+      "body": "To export the whole workspace, an Owner or Admin opens Settings, then Data, then Export workspace, and chooses JSON.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "2472e3b7ff9f17ff3913bd453459280359d2a9d690c21617cb56c84862fdd502": [
+    {
+      "suffix": "lead",
+      "body": "Team and Business workspaces can email support@fernway.example or use the Help menu in the app.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "2e1d355963438fae26dedf658c977d7d0e7f6ce689b8d1d613ef89d245e16b37": [
+    {
+      "suffix": "lead",
+      "body": "Members create projects and tasks, and see every public project plus the private projects they are added to.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "43688d30337e85c0e0a951dfa3272b770b393e22bda8eff09e36f4bfafd52de4": [
+    {
+      "suffix": "lead",
+      "body": "The Team plan costs $9 per member per month billed annually, or $11 billed monthly.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "4ad0d821d2f3ab1bfdfc73d83198a824ce3d719801cff17a47fbdf28fbf874bd": [
+    {
+      "suffix": "lead",
+      "body": "Fernway accepts Visa, Mastercard and American Express cards.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "4b7a5ab861deb8521ab142c18be4f152a0e30c802a66c5c6fe6888941b9f0878": [
+    {
+      "suffix": "lead",
+      "body": "Before enforcing SSO, verify your email domain under Settings, then Domains, by adding the TXT record Fernway shows to your DNS.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "5225d10be53c60ba98034cbc130632b7fb6ad029871c4e8168f491fd01a529ac": [
+    {
+      "suffix": "lead",
+      "body": "You can change plans at any time.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "595466ed13de624e0c4140188af01e5bce6bfc6c3a43069f4cfc50d52d4a6620": [
+    {
+      "suffix": "lead",
+      "body": "The Business plan costs $19 per member per month billed annually, or $23 billed monthly.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "61d4d94e1f1d3ab7f8669766b31a7b91c32021cd0541702164d16789d07884d7": [
+    {
+      "suffix": "lead",
+      "body": "The Free plan is for up to 5 members, with 3 active projects, 1 GB of file storage and 7 days of activity history.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "625f980330fb425fda530c27652d2ab0744a60e54a06dacb87212d63d8013de8": [
+    {
+      "suffix": "lead",
+      "body": "You can export a single project or the whole workspace.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "69470482b3c35be621a2f2a2ce5942e9a1700d7106dcffcc40a082c866d9c1f0": [
+    {
+      "suffix": "lead",
+      "body": "Admins manage members, projects and integrations, and can see every project in the workspace, including private ones.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "6c7cab6579454c2baeb1f753a9d275a25db9188533f5ade27b11db222b81c7f8": [
+    {
+      "suffix": "lead",
+      "body": "Board columns are your project's workflow stages, such as To do, In progress and Done.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "768fd8f01b72c02d08a5d387c1fe19396a968d9a2d62c7c7254312781fbafc46": [
+    {
+      "suffix": "lead",
+      "body": "Change a member's role under Settings, then Members, from the role menu next to their name.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "77a2136cefd354e961c81552c114fce6e8f2c6fdd14e2949bd60a29044d91c2b": [
+    {
+      "suffix": "lead",
+      "body": "On the Free plan a workspace can have 3 active projects.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "80aaa23b2daaa0854f05feb23123e8aa9bd8c1060c9d50b4109351a1dcb14f96": [
+    {
+      "suffix": "lead",
+      "body": "When you add members mid-cycle, Fernway charges a prorated amount for the rest of the billing period.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "860f7665130530934f8dc21db2400ac44c48b8c1aa1ef134203f430d2303dd81": [
+    {
+      "suffix": "lead",
+      "body": "To cancel, the workspace owner opens Settings, then Billing, and chooses Cancel plan.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "89323b455c9928192044338e1624e5b39ab7c6f6ab9ad125a226e129c0035ecb": [
+    {
+      "suffix": "lead",
+      "body": "Monthly plans are not refunded, but you can cancel at any time.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "93674169e61027e1b90d644b2b4982b4ba5e6879a7ae50acbb690907992db6ef": [
+    {
+      "suffix": "lead",
+      "body": "Single sign-on and SCIM are not available on the Team plan.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "981156518a3ab894ce0e29695a3f4c771bc77bd7e6c0e0ac2160a9792f66affd": [
+    {
+      "suffix": "lead",
+      "body": "Fernway has three plans: Free, Team and Business.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "98a7fb08dfc2ff94668e47742e078f035c4d230d29d3f03701ea7faeefbcd8f1": [
+    {
+      "suffix": "lead",
+      "body": "You can export one project or the entire workspace.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "a137a7b94911138bc45f631ce9ddeca6b41c981444ffaa7c196451e696c15183": [
+    {
+      "suffix": "lead",
+      "body": "Invoices are emailed to the billing contact on every charge and are listed under Billing, then Invoices, as PDF downloads.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "ac74b42b0e93e8bfcaa31bcf3a8ad879205c0b2ba562d4ec120f2e06eaf7c0d0": [
+    {
+      "suffix": "lead",
+      "body": "Exports are prepared in the background.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "bbc40d3a75690068ab46269bf400ccbaa8f1cea20217586ae7aa4df7c9efb481": [
+    {
+      "suffix": "lead",
+      "body": "Archive a finished project from its menu with Archive project.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "beedbd21596ca77c58b0d5dd852602dc18891463a87f83d75de2fb307676bd94": [
+    {
+      "suffix": "lead",
+      "body": "A project groups related tasks.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "d657853a420a4b81eb46b0dba928d8c525534998b145c0c711ed980b54b3216b": [
+    {
+      "suffix": "lead",
+      "body": "Workspace owners and billing admins manage billing under Settings, then Billing.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "dc05adf82df795bae8f8b1a3fcdab8f1a0308dd137404414adc9c456636c47e7": [
+    {
+      "suffix": "lead",
+      "body": "Include your workspace URL and, for a problem with a task, its key such as FW-123.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "eef84c8959147dda5b16c14c8817f31247b78c83cceb5625e2e04cebebf20666": [
+    {
+      "suffix": "lead",
+      "body": "SAML single sign-on lets members sign in to Fernway through your identity provider.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "f8ea2a734651ea7dc9d9927ef56cc364988e4059e3b8315726e2e52f46351578": [
+    {
+      "suffix": "lead",
+      "body": "SCIM provisioning creates, updates and deactivates Fernway members from your identity provider.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ],
+  "fe10f8aa74e3c528ebfc25ffebaff582c94b890e2f9cd7f03c73dfad3fa6fca8": [
+    {
+      "suffix": "lead",
+      "body": "Every workspace member has one role: Owner, Admin, Member or Guest.",
+      "method": "lead-sentence",
+      "lineage": "extracted"
+    }
+  ]
+}

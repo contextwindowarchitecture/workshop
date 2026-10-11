@@ -1,0 +1,11 @@
+{
+  "workspaces": {
+    "w_kitewood": { "name": "Kitewood Studio", "plan": "Business", "billing": "annually", "plan_since": "2026-09-08", "seats": 42, "region": "EU", "version": 18 },
+    "w_larkspur": { "name": "Larkspur Design", "plan": "Team", "billing": "monthly", "plan_since": "2025-11-20", "seats": 9, "region": "US", "version": 4 }
+  },
+  "users": {
+    "u_ada": { "workspace": "w_kitewood", "name": "Ada", "role": "Owner", "billing_admin": true, "version": 7 },
+    "u_ben": { "workspace": "w_kitewood", "name": "Ben", "role": "Member", "billing_admin": false, "version": 3 },
+    "u_cho": { "workspace": "w_larkspur", "name": "Cho", "role": "Admin", "billing_admin": true, "version": 2 }
+  }
+}

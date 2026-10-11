@@ -6,6 +6,7 @@ One run sheet per workshop. Each gives the timing, the conference cut, the check
 | --- | --- | --- |
 | W0 Foundations | [00-foundations.md](00-foundations.md) | ready |
 | W1 The CWA tour | [01-cwa-tour.md](01-cwa-tour.md) | ready |
-| W2 to W11, capstones | | written with each module |
+| W2 Producers | [02-producers.md](02-producers.md) | ready |
+| W3 to W11, capstones | | written with each module |
 
 Before any session, run the checks in [docs/setup.md](../setup.md) section 5.
