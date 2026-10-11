@@ -1,0 +1,229 @@
+{
+  "suite": "c3-wealth-triage/v1",
+  "model": "scripted",
+  "live": false,
+  "date": "2026-10-11",
+  "impl": "solution",
+  "profiles": {
+    "portfolio": {
+      "id": "c3-portfolio-blocks",
+      "version": 1,
+      "sha256": "953d4a2a9cbf15b5d64094b50a92666d174199cce1393fc401366be888dc1bf8"
+    },
+    "triage": {
+      "id": "c3-triage-blocks",
+      "version": 1,
+      "sha256": "30c587d0e6c6cce1cabfab0d69f7130079adf26d79d5bb740a010923c8547826"
+    }
+  },
+  "cases": [
+    {
+      "id": "01-holdings-question",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took portfolio"
+        },
+        {
+          "name": "trace:conflict_lost",
+          "passed": true,
+          "detail": "conflict_lost: ['vendor-position:acct_7701:ACME']"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['citations_were_sent:ok', 'actions_were_offered:ok', 'no_account_identifiers:ok', 'trade_guard:ok', 'figures_match_ledger:ok']"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome answered"
+        },
+        {
+          "name": "actions_queued",
+          "passed": true,
+          "detail": "queued []"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:corporate-actions@2#1', 'kb:trade-settlement@4#1']"
+        }
+      ],
+      "reply": "The ledger shows 1,000 settled units of ACME, worth about 42,100 GBP at the last quote of 42.10, which may be delayed. A 6-for-5 scrip issue is pending; those units count only once the custodian settles them [kb:trade-settlement@4#1], and the ledger figure is the record until then [kb:corporate-actions@2#1]."
+    },
+    {
+      "id": "02-vendor-figure-in-answer",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took portfolio"
+        },
+        {
+          "name": "failing_guard",
+          "passed": true,
+          "detail": "failed ['figures_match_ledger']"
+        },
+        {
+          "name": "reply_is_fallback",
+          "passed": true,
+          "detail": "the draft was withheld"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome needs_advisor"
+        },
+        {
+          "name": "actions_queued",
+          "passed": true,
+          "detail": "queued []"
+        }
+      ],
+      "reply": "The assistant could not complete this request safely. Your advisor has been asked to pick it up and will contact you."
+    },
+    {
+      "id": "03-advisory-sell-request",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took portfolio"
+        },
+        {
+          "name": "trace:capability_not_allowed",
+          "passed": true,
+          "detail": "capability_not_allowed: ['cap:place_trade', 'cap:transfer_funds']"
+        },
+        {
+          "name": "failing_guard",
+          "passed": true,
+          "detail": "failed ['actions_were_offered']"
+        },
+        {
+          "name": "reply_is_fallback",
+          "passed": true,
+          "detail": "the draft was withheld"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome needs_advisor"
+        },
+        {
+          "name": "actions_queued",
+          "passed": true,
+          "detail": "queued []"
+        }
+      ],
+      "reply": "The assistant could not complete this request safely. Your advisor has been asked to pick it up and will contact you."
+    },
+    {
+      "id": "04-self-directed-sell",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took portfolio"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['citations_were_sent:ok', 'actions_were_offered:ok', 'no_account_identifiers:ok', 'trade_guard:ok', 'figures_match_ledger:ok']"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome answered"
+        },
+        {
+          "name": "actions_queued",
+          "passed": true,
+          "detail": "queued ['place_trade']"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:trade-settlement@4#0', 'kb:trade-settlement@4#1']"
+        }
+      ],
+      "reply": "Queued for your confirmation in the portal: sell 500 ACME at market, about 21,050 GBP at the last quote; settlement is two business days after the trade [kb:trade-settlement@4#0]. The ledger holds 1,000 settled units; the pending scrip units cannot be sold until they settle [kb:trade-settlement@4#1]."
+    },
+    {
+      "id": "05-fraud-report",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took triage"
+        },
+        {
+          "name": "trace:capability_not_allowed",
+          "passed": true,
+          "detail": "capability_not_allowed: ['cap:place_trade', 'cap:schedule_advisor_call', 'cap:transfer_funds']"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['citations_were_sent:ok', 'actions_were_offered:ok', 'no_account_identifiers:ok', 'urgency_covers_risk:ok']"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome case_opened"
+        },
+        {
+          "name": "actions_queued",
+          "passed": true,
+          "detail": "queued ['open_case']"
+        }
+      ],
+      "reply": "This is treated as a suspected fraud report. A case has been opened for the fraud team at critical urgency, any pending outbound transfer is stopped until they have spoken to you, and they will call you shortly [kb:fraud-and-disputes@5#0] [kb:fraud-and-disputes@5#1]. (urgency critical, fraud team)"
+    },
+    {
+      "id": "06-pasted-statement",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took portfolio"
+        },
+        {
+          "name": "escalation",
+          "passed": true,
+          "detail": "attempts ['small', 'large']"
+        },
+        {
+          "name": "first_refusal",
+          "passed": true,
+          "detail": "first attempt refused protected_content_over_budget"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['citations_were_sent:ok', 'actions_were_offered:ok', 'no_account_identifiers:ok', 'trade_guard:ok', 'figures_match_ledger:ok']"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome answered"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:fees-and-charges@3#0', 'kb:fees-and-charges@3#2']"
+        }
+      ],
+      "reply": "Advisory accounts pay 0.75% a year charged quarterly in arrears, plus 0.10% custody; both appear on the quarterly statement and the Charges page with the period covered [kb:fees-and-charges@3#0] [kb:fees-and-charges@3#2]. I cannot read individual statement lines as fees; the Charges page lists them exactly."
+    }
+  ],
+  "result": "6/6 cases passed"
+}

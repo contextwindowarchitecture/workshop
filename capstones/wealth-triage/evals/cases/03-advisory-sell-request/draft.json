@@ -1,0 +1,24 @@
+{
+  "answer": "I have queued a market order to sell 500 ACME for you to confirm; it settles two business days after the trade [kb:trade-settlement@4#0].",
+  "figures": [
+    {
+      "symbol": "ACME",
+      "units": 1000,
+      "value": 42100.0
+    }
+  ],
+  "citations": [
+    "kb:trade-settlement@4#0"
+  ],
+  "actions": [
+    {
+      "tool": "place_trade",
+      "arguments": {
+        "client": "c_3001",
+        "symbol": "ACME",
+        "side": "sell",
+        "quantity": 500
+      }
+    }
+  ]
+}

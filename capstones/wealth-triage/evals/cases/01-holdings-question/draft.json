@@ -1,0 +1,15 @@
+{
+  "answer": "The ledger shows 1,000 settled units of ACME, worth about 42,100 GBP at the last quote of 42.10, which may be delayed. A 6-for-5 scrip issue is pending; those units count only once the custodian settles them [kb:trade-settlement@4#1], and the ledger figure is the record until then [kb:corporate-actions@2#1].",
+  "figures": [
+    {
+      "symbol": "ACME",
+      "units": 1000,
+      "value": 42100.0
+    }
+  ],
+  "citations": [
+    "kb:trade-settlement@4#1",
+    "kb:corporate-actions@2#1"
+  ],
+  "actions": []
+}

@@ -1,0 +1,13 @@
+{
+  "route": "portfolio",
+  "guards_pass": true,
+  "outcome_in": [
+    "answered"
+  ],
+  "actions_queued": [
+    "place_trade"
+  ],
+  "must_cite_any": [
+    "kb:trade-settlement@4#1"
+  ]
+}

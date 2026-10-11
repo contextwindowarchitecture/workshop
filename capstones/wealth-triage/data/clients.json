@@ -1,0 +1,7 @@
+{
+  "_comment": "Fictional clients of Larkbridge Wealth. The profile is protected user state; account numbers never leave this file.",
+  "clients": {
+    "c_3001": { "name": "Ingrid Sorensen", "mandate": "advisory", "risk_tier": "balanced", "kyc": "verified", "account": "acct_7701", "iban": "GB29 LBWX 6016 1331 9268 19", "country": "GB", "version": 7 },
+    "c_3002": { "name": "Kwame Asante", "mandate": "self-directed", "risk_tier": "growth", "kyc": "verified", "account": "acct_7702", "iban": "GB94 LBWX 6016 1331 7700 02", "country": "GB", "version": 4 }
+  }
+}

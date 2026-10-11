@@ -1,0 +1,16 @@
+{
+  "route": "portfolio",
+  "guards_pass": true,
+  "outcome_in": [
+    "answered"
+  ],
+  "actions_queued": [],
+  "must_cite_any": [
+    "kb:corporate-actions@2#1"
+  ],
+  "trace": {
+    "conflict_lost": [
+      "vendor-position:acct_7701:ACME"
+    ]
+  }
+}

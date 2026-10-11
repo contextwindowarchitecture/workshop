@@ -1,0 +1,12 @@
+{
+  "_comment": "The capability policy: which of the portal's proposed tools reach the model, by the client's mandate and the risk screen the application wrote (R-15). A proposal the policy does not grant is reported capability_not_allowed at stage producer. transfer_funds is never granted to the assistant.",
+  "policy_producer": "capability-policy",
+  "allow_list_version": "larkbridge-caps/v2",
+  "grants": {
+    "place_trade": { "mandates": ["self-directed"], "max_risk": "low", "description": "Queue a market order on this client's own account for the client to confirm in the portal. Sells may not exceed the ledger's settled units." },
+    "schedule_advisor_call": { "mandates": ["advisory", "self-directed"], "max_risk": "elevated", "description": "Book a call with this client's advisor." },
+    "open_case": { "mandates": ["advisory", "self-directed"], "max_risk": "critical", "description": "Open a service case for the fraud, disputes, access or general team." }
+  },
+  "risk_order": ["low", "elevated", "critical"],
+  "never": { "transfer_funds": "the assistant never moves money (fraud and disputes guideline)" }
+}

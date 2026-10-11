@@ -29,4 +29,4 @@ With `OPENAI_BASE_URL` unset, labs print the request they would have sent and st
 
 ## Anthropic
 
-Not yet written. The `cwa-messages/v1` shape maps onto the Messages API in the same way, with `system` as the system parameter and `tools` as the tool list; `assembler-demo/src/provider/anthropic.mjs` is a working adapter to read in the meantime.
+The same payload maps onto the Messages API with `system` as a list of text blocks, `tools` as tool definitions and `max_tokens` from `reserved_output`; a cache breakpoint is a `cache_control` marker on a block and adds no text. [anthropic.md](anthropic.md) has the mapping, the two differences that bite, and the configuration.

@@ -1,0 +1,9 @@
+{
+  "route": "portfolio",
+  "failing_guard": "figures_match_ledger",
+  "reply_is_fallback": true,
+  "outcome_in": [
+    "needs_advisor"
+  ],
+  "actions_queued": []
+}

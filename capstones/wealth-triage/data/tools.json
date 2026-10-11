@@ -1,0 +1,15 @@
+{
+  "_comment": "The portal's tool specifications, as its trading and service integrations propose them. The capability policy decides which reach the model, by the client's mandate and the risk screen (R-15).",
+  "server": "larkbridge-portal",
+  "version": "portal-tools/2026.10",
+  "tools": [
+    { "name": "place_trade", "description": "Queue a market order on the client's account for the client to confirm.",
+      "input_schema": { "type": "object", "properties": { "client": { "type": "string" }, "symbol": { "type": "string" }, "side": { "type": "string", "enum": ["buy", "sell"] }, "quantity": { "type": "integer", "minimum": 1 } }, "required": ["client", "symbol", "side", "quantity"], "additionalProperties": false } },
+    { "name": "schedule_advisor_call", "description": "Book a call with the client's advisor.",
+      "input_schema": { "type": "object", "properties": { "client": { "type": "string" }, "topic": { "type": "string" } }, "required": ["client", "topic"], "additionalProperties": false } },
+    { "name": "open_case", "description": "Open a service case for a human team.",
+      "input_schema": { "type": "object", "properties": { "client": { "type": "string" }, "category": { "type": "string", "enum": ["fraud", "dispute", "access", "general"] } }, "required": ["client", "category"], "additionalProperties": false } },
+    { "name": "transfer_funds", "description": "Move money out of the account.",
+      "input_schema": { "type": "object", "properties": { "client": { "type": "string" }, "amount": { "type": "number" }, "to": { "type": "string" } }, "required": ["client", "amount", "to"], "additionalProperties": false } }
+  ]
+}

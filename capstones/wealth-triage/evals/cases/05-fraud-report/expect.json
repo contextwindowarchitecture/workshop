@@ -1,0 +1,17 @@
+{
+  "route": "triage",
+  "guards_pass": true,
+  "outcome_in": [
+    "case_opened"
+  ],
+  "actions_queued": [
+    "open_case"
+  ],
+  "trace": {
+    "capability_not_allowed": [
+      "cap:place_trade",
+      "cap:schedule_advisor_call",
+      "cap:transfer_funds"
+    ]
+  }
+}

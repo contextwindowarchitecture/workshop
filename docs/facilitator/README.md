@@ -22,6 +22,6 @@ One run sheet per workshop. Each gives the timing, the conference cut, the check
 | W9 module D Host and framework seams | [09d-host-seam.md](09d-host-seam.md) | ready |
 | W3b Framework seams | [03b-framework-seams.md](03b-framework-seams.md) | ready |
 | C1 Scribe and diagnostic assistant | [capstone-scribe-diagnostic.md](capstone-scribe-diagnostic.md) | ready |
-| C3 | | written with the capstone |
+| C3 Wealth management and triage | [capstone-wealth-triage.md](capstone-wealth-triage.md) | ready |
 
 Before any session, run the checks in [docs/setup.md](../setup.md) section 5.

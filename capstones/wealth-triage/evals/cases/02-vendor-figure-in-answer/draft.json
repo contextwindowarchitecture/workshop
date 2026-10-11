@@ -1,0 +1,14 @@
+{
+  "answer": "You hold 1,200 units of ACME after the scrip issue, worth about 50,520 GBP at the last quote [kb:corporate-actions@2#1].",
+  "figures": [
+    {
+      "symbol": "ACME",
+      "units": 1200,
+      "value": 50520.0
+    }
+  ],
+  "citations": [
+    "kb:corporate-actions@2#1"
+  ],
+  "actions": []
+}

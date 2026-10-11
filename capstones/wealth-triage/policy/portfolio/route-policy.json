@@ -1,0 +1,138 @@
+{
+  "route": "portfolio",
+  "version": "c3-portfolio/v1",
+  "clock_skew_seconds": 5,
+  "requires_evidence": true,
+  "producers": {
+    "advice-policy": {
+      "kind": "policy",
+      "slots": [
+        "governance.instructions",
+        "governance.output_contract"
+      ]
+    },
+    "client-state": {
+      "kind": "state",
+      "slots": [
+        "state.user"
+      ]
+    },
+    "ledger": {
+      "kind": "state",
+      "slots": [
+        "state.task"
+      ]
+    },
+    "risk-screen": {
+      "kind": "state",
+      "slots": [
+        "state.task"
+      ]
+    },
+    "market-data": {
+      "kind": "retrieval",
+      "slots": [
+        "evidence.tool_results"
+      ]
+    },
+    "kb-search": {
+      "kind": "retrieval",
+      "slots": [
+        "evidence.knowledge"
+      ]
+    },
+    "capability-policy": {
+      "kind": "capability_policy",
+      "slots": [
+        "governance.capabilities"
+      ]
+    },
+    "chat-session": {
+      "kind": "interaction",
+      "slots": [
+        "interaction.history",
+        "interaction.query"
+      ]
+    }
+  },
+  "slots": {
+    "state.task": {
+      "max_age_seconds": 3600,
+      "required_scope": [
+        "tenant",
+        "task"
+      ]
+    },
+    "state.user": {
+      "max_age_seconds": 300,
+      "required_scope": [
+        "tenant",
+        "user"
+      ]
+    },
+    "evidence.knowledge": {
+      "min_relevance": 1.5,
+      "min_included": 1,
+      "dedupe": "exact",
+      "max_per_source": 2,
+      "order_by": [
+        "-relevance",
+        "-freshness"
+      ]
+    },
+    "evidence.tool_results": {
+      "required_scope": [
+        "tenant",
+        "task"
+      ],
+      "order_by": [
+        "-freshness"
+      ],
+      "max_per_source": 2
+    },
+    "interaction.history": {
+      "required_scope": [
+        "session"
+      ],
+      "order_by": [
+        "-freshness"
+      ],
+      "max_tokens": 700
+    },
+    "interaction.query": {
+      "required_scope": [
+        "session"
+      ]
+    }
+  },
+  "tier_upgrades": {
+    "state.user": "protected"
+  },
+  "facts": {
+    "position.ACME": {
+      "precedence": [
+        "ledger",
+        "market-data"
+      ],
+      "scope": [
+        "tenant"
+      ],
+      "on_unresolved": "refuse"
+    }
+  },
+  "fitting_order": [
+    {
+      "slot": "interaction.history",
+      "action": "omit"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "action": "omit"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "action": "omit"
+    }
+  ],
+  "parser": true
+}

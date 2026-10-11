@@ -1,0 +1,25 @@
+{
+  "answer": "Queued for your confirmation in the portal: sell 500 ACME at market, about 21,050 GBP at the last quote; settlement is two business days after the trade [kb:trade-settlement@4#0]. The ledger holds 1,000 settled units; the pending scrip units cannot be sold until they settle [kb:trade-settlement@4#1].",
+  "figures": [
+    {
+      "symbol": "ACME",
+      "units": 1000,
+      "value": 42100.0
+    }
+  ],
+  "citations": [
+    "kb:trade-settlement@4#0",
+    "kb:trade-settlement@4#1"
+  ],
+  "actions": [
+    {
+      "tool": "place_trade",
+      "arguments": {
+        "client": "c_3002",
+        "symbol": "ACME",
+        "side": "sell",
+        "quantity": 500
+      }
+    }
+  ]
+}

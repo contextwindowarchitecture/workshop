@@ -1,0 +1,18 @@
+{
+  "client": "c_3001",
+  "session": "s_c3_01",
+  "asked_at": "2026-10-06T09:05:00Z",
+  "turns": [
+    {
+      "role": "user",
+      "text": "Hello, quick question about my account.",
+      "at": "2026-10-06T09:04:00Z"
+    },
+    {
+      "role": "assistant",
+      "text": "Of course. What would you like to know?",
+      "at": "2026-10-06T09:04:05Z"
+    }
+  ],
+  "question": "What is my settled ACME position on the ledger, and its value at the last quote?"
+}

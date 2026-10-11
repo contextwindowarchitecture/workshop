@@ -1,0 +1,12 @@
+{
+  "_comment": "Intent selects the route; every route has a small and a large budget on different models, and a refusal for protected content on the small budget escalates to the large one (R-12, R-17). budget.input is computed from each model's context limit less what the route reserves (R-16). Both routes render cwa-message-blocks/v1 so cache reuse can be measured at block boundaries. The request's task is the client's account; prior turns are the session's.",
+  "intents": { "triage": "triage", "portfolio": "portfolio" },
+  "tokenizer": "estimate-utf8/v1",
+  "renderer": "cwa-message-blocks/v1",
+  "retrieval": { "top_k": 5 },
+  "tiers": {
+    "small": { "model": "gpt-oss:20b", "model_context_limit": 4096, "reserved_output": 600, "margin_percent": 15 },
+    "large": { "model": "gpt-oss:120b", "model_context_limit": 16384, "reserved_output": 1600, "margin_percent": 15 }
+  },
+  "escalate": { "small": { "protected_content_over_budget": "large" } }
+}

@@ -1,0 +1,24 @@
+[project]
+name = "cwa-capstone-wealth-triage"
+version = "0.1.0"
+description = "Capstone C3. Wealth management and triage"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+dependencies = [
+    "contextwindowarchitecture-assembler",
+    "openai>=2",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+contextwindowarchitecture-assembler = { git = "https://github.com/contextwindowarchitecture/assembler-python", tag = "draft-release" }
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

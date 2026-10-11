@@ -1,0 +1,44 @@
+{
+  "_comment": "The custodian ledger: settled positions and cash per account as of the ledger date. It is the system of record, and the route puts it first for every position fact. The morning batch is read at freeze time; the route ages state.task at 3600 seconds, so a ledger older than an hour is stale_state.",
+  "as_of": "2026-10-06T08:30:00Z",
+  "accounts": {
+    "acct_7701": {
+      "cash": 12400.5,
+      "currency": "GBP",
+      "version": 31,
+      "positions": [
+        {
+          "symbol": "ACME",
+          "name": "Acme Industrial plc",
+          "units": 1000,
+          "avg_cost": 36.2
+        },
+        {
+          "symbol": "GLOBX",
+          "name": "Globex Capital",
+          "units": 250,
+          "avg_cost": 101.0
+        }
+      ]
+    },
+    "acct_7702": {
+      "cash": 3100.0,
+      "currency": "GBP",
+      "version": 12,
+      "positions": [
+        {
+          "symbol": "ACME",
+          "name": "Acme Industrial plc",
+          "units": 1000,
+          "avg_cost": 40.75
+        },
+        {
+          "symbol": "NIMB",
+          "name": "Nimbus Data",
+          "units": 80,
+          "avg_cost": 215.0
+        }
+      ]
+    }
+  }
+}

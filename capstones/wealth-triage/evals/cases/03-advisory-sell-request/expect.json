@@ -1,0 +1,15 @@
+{
+  "route": "portfolio",
+  "failing_guard": "actions_were_offered",
+  "reply_is_fallback": true,
+  "outcome_in": [
+    "needs_advisor"
+  ],
+  "actions_queued": [],
+  "trace": {
+    "capability_not_allowed": [
+      "cap:place_trade",
+      "cap:transfer_funds"
+    ]
+  }
+}

@@ -423,4 +423,5 @@ Open:
 4. Done. W3a, W4, W5; the "migrate your app" one-day offering (W1 plus W3a) exists.
 5. Done. W6, W7 and the first capstone, C2.
 6. Done. W8, W9 modules B and C, W10 and W11.
-7. W3b and W9 module D, the two remaining capstones, and the Anthropic provider notes: next.
+7. Done. W3b, W9 module D, the capstones C1 and C3, and the Anthropic provider notes.
+8. The catalog is built. What follows is upkeep: move the pins together and re-vendor the contract when the specification or the assembler releases, rerun every `scenarios.py --check` and the W11 invariants, run the capstone suites live when a model is at hand and promote the profiles from the live reports, and send the W10 case and any new one upstream.

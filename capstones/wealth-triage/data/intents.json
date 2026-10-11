@@ -1,0 +1,7 @@
+{
+  "_comment": "The pre-assembly scorer the blueprint called 'Jev' is two deterministic pieces of application code here: these keyword rules select the route, and risk_screen() in the producers writes the risk level as state. A classifier can replace either behind the same contract, computed before the snapshot (R-18, R-23). Rules are checked in order; the first route with a hit wins; no hit means portfolio.",
+  "routes": {
+    "triage": ["didn't make", "did not make", "don't recognise", "do not recognise", "unauthorised", "unauthorized", "fraud", "stolen", "lost my card", "lost card", "dispute", "locked out", "suspicious"]
+  },
+  "fallback": "portfolio"
+}

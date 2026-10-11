@@ -1,0 +1,15 @@
+{
+  "route": "portfolio",
+  "attempts": [
+    "small",
+    "large"
+  ],
+  "first_refusal": "protected_content_over_budget",
+  "guards_pass": true,
+  "outcome_in": [
+    "answered"
+  ],
+  "must_cite_any": [
+    "kb:fees-and-charges@3#0"
+  ]
+}

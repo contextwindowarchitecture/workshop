@@ -41,7 +41,7 @@ uv run pytest
 
 [invariants.py](invariants.py) walks the repository for every committed snapshot, wherever its module keeps it: a `snapshot.json` beside a trace, a run record with `inferences`, an eval recording with `attempts`. For each it assembles twice and compares (R-23), validates the trace against the published schema (R-21), and, where a trace was committed beside it, compares the fresh trace with the recorded one. A snapshot committed with a `rejected.json` is expected to be rejected with the recorded problems: W1's two-batches exercise is one, and a rejection is an invariant too (R-5).
 
-Ninety-three snapshots at the time of writing, none failing. Break one on purpose: edit a committed trace in W2's scenarios and run again, then `git checkout` it. Then read the per-module table and notice which modules commit traces beside their snapshots and which commit only the snapshot: the `recorded` column counts only the first kind.
+One hundred and eleven snapshots at the time of writing, none failing. Break one on purpose: edit a committed trace in W2's scenarios and run again, then `git checkout` it. Then read the per-module table and notice which modules commit traces beside their snapshots and which commit only the snapshot: the `recorded` column counts only the first kind.
 
 **Checkpoint 2.** The snapshot count, the one expected rejection, and the module whose snapshots have no recorded trace to compare with.
 

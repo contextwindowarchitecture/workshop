@@ -1,0 +1,42 @@
+{
+  "client": "c_3002",
+  "session": "s_c3_cache",
+  "route": "portfolio",
+  "turns": [
+    {
+      "role": "user",
+      "text": "What positions does the ledger hold for my account?",
+      "at": "2026-10-06T09:00:00Z"
+    },
+    {
+      "role": "assistant",
+      "text": "You hold 1,000 ACME and 80 NIMB, with 3,100.00 GBP cash, per the ledger.",
+      "at": "2026-10-06T09:00:05Z"
+    },
+    {
+      "role": "user",
+      "text": "What is the ACME position worth at the last quote?",
+      "at": "2026-10-06T09:01:00Z"
+    },
+    {
+      "role": "assistant",
+      "text": "About 42,100 GBP at the last quote of 42.10; prices may be delayed.",
+      "at": "2026-10-06T09:01:05Z"
+    },
+    {
+      "role": "user",
+      "text": "Why does the vendor estimate show 1,200 ACME units when the ledger shows 1,000?",
+      "at": "2026-10-06T09:02:00Z"
+    },
+    {
+      "role": "assistant",
+      "text": "A 6-for-5 scrip issue is pending settlement; the ledger shows 1,000 settled units until then.",
+      "at": "2026-10-06T09:02:05Z"
+    },
+    {
+      "role": "user",
+      "text": "What dealing charge applies if I sell ACME?",
+      "at": "2026-10-06T09:03:00Z"
+    }
+  ]
+}

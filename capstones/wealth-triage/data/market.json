@@ -1,0 +1,9 @@
+{
+  "_comment": "A market-data vendor's feed: quotes, and the vendor's own estimate of each account's position, built from a corporate-actions feed that has applied a 6-for-5 ACME scrip issue the custodian has not yet settled. The estimate asserts the same position fact as the ledger and loses to it by precedence.",
+  "as_of": "2026-10-06T08:58:00Z",
+  "quotes": { "ACME": 42.10, "GLOBX": 118.30, "NIMB": 198.40 },
+  "vendor_positions": {
+    "acct_7701": [ { "symbol": "ACME", "units": 1200, "basis": "corporate-actions feed: 6-for-5 scrip issue applied 2026-10-03, pending settlement" } ],
+    "acct_7702": [ { "symbol": "ACME", "units": 1200, "basis": "corporate-actions feed: 6-for-5 scrip issue applied 2026-10-03, pending settlement" } ]
+  }
+}

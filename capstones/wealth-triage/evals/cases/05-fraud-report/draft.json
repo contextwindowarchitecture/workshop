@@ -1,0 +1,18 @@
+{
+  "summary": "This is treated as a suspected fraud report. A case has been opened for the fraud team at critical urgency, any pending outbound transfer is stopped until they have spoken to you, and they will call you shortly [kb:fraud-and-disputes@5#0] [kb:fraud-and-disputes@5#1].",
+  "urgency": "critical",
+  "team": "fraud",
+  "citations": [
+    "kb:fraud-and-disputes@5#0",
+    "kb:fraud-and-disputes@5#1"
+  ],
+  "actions": [
+    {
+      "tool": "open_case",
+      "arguments": {
+        "client": "c_3002",
+        "category": "fraud"
+      }
+    }
+  ]
+}
