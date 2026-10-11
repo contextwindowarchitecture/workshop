@@ -1,0 +1,508 @@
+{
+  "profile": {
+    "id": "fullsend-triage-briefing",
+    "version": 1
+  },
+  "budget": {
+    "input": 24000,
+    "reserved_output": 176000,
+    "margin_percent": 20
+  },
+  "result": {
+    "input_tokens": 1162,
+    "hash": "1c85ff4893f306e52c9a109dd06cba96cef111e9b8c5d7d77db96ab492d65506"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "agent:triage@a17be03",
+      "tokens": 162,
+      "source_version": "a17be03",
+      "eligibility": "agent definition pinned by sha in .fullsend/config.yaml"
+    },
+    {
+      "slot": "governance.instructions",
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d",
+      "tokens": 106,
+      "source_version": "4f9c2e1a7b3d",
+      "eligibility": "read from the protected base branch at a pinned SHA, never from the PR head"
+    },
+    {
+      "slot": "governance.output_contract",
+      "item_id": "contract:triage-result/v3",
+      "tokens": 118,
+      "source_version": "v3",
+      "eligibility": "harness validation_loop.schema (ADR 0022)"
+    },
+    {
+      "slot": "state.task",
+      "item_id": "state:work-item",
+      "tokens": 51,
+      "source_version": "2026-10-05T16:40:00Z",
+      "eligibility": "forge read at freeze time"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "state:requester",
+      "tokens": 38,
+      "source_version": "2026-10-06T13:58:30Z",
+      "eligibility": "dispatch authorization result"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "run:triage/18800#summary",
+      "tokens": 29,
+      "source_version": "18800",
+      "eligibility": "this agent's own earlier run on this work item"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "dup:issue/7012",
+      "tokens": 49,
+      "source_version": "2026-08-30T08:00:00Z",
+      "eligibility": "similarity score from the duplicate index"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "dup:issue/7700",
+      "tokens": 38,
+      "source_version": "2026-10-01T15:20:00Z",
+      "eligibility": "similarity score from the duplicate index"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:comment/90011@maintainer-a",
+      "tokens": 26,
+      "source_version": "90011",
+      "eligibility": "author permission 'write' >= triage"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:comment/90020",
+      "tokens": 37,
+      "source_version": "90020",
+      "eligibility": "fullsend's own earlier comment"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:issue/7811/0-body@newcontrib",
+      "tokens": 86,
+      "source_version": "body",
+      "eligibility": "author permission 'read' below triage: data only"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:issue/7811/c90034@drive-by-1",
+      "tokens": 21,
+      "source_version": "90034",
+      "eligibility": "author permission 'read' below triage: data only"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:issue/7811/c90035@drive-by-1",
+      "tokens": 18,
+      "source_version": "90035",
+      "eligibility": "author permission 'read' below triage: data only"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "item_id": "obs:issue/7811/c90040@newcontrib",
+      "tokens": 45,
+      "source_version": "90040",
+      "eligibility": "author permission 'read' below triage: data only"
+    },
+    {
+      "slot": "governance.examples",
+      "item_id": "example:triage/duplicate",
+      "tokens": 85,
+      "source_version": "a17be03",
+      "eligibility": "steering example for the decision vocabulary"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "query:triage/run-18950",
+      "tokens": 47,
+      "source_version": "normevent/v1",
+      "eligibility": "templated from the normalized event"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "run:triage/17002#summary",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "dup:issue/6100",
+      "reason": "below_threshold",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "state:ci-summary",
+      "reason": "stale_state",
+      "stage": "assembler",
+      "slot": "state.task"
+    },
+    {
+      "item_id": "obs:issue/7811/c90031@drive-by-1",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.tool_results",
+      "duplicate_of": "obs:issue/7811/c90033@drive-by-1"
+    },
+    {
+      "item_id": "obs:issue/7811/c90032@drive-by-1",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.tool_results",
+      "duplicate_of": "obs:issue/7811/c90033@drive-by-1"
+    },
+    {
+      "item_id": "obs:issue/7811/c90033@drive-by-1",
+      "reason": "source_diversity_cap",
+      "stage": "assembler",
+      "slot": "evidence.tool_results"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-06T14:00:00Z",
+    "route_policy_version": "fullsend-triage/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "84393a480505718838c840f459302bf63ec0e98ddf50d075aa9ec934b284c56d"
+  },
+  "defaults_filled": [
+    {
+      "item_id": "agent:triage@a17be03",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "agent:triage@a17be03",
+      "field": "variants"
+    },
+    {
+      "item_id": "agent:triage@a17be03",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "contract:triage-result/v3",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "contract:triage-result/v3",
+      "field": "variants"
+    },
+    {
+      "item_id": "contract:triage-result/v3",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "dup:issue/6100",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "dup:issue/6100",
+      "field": "variants"
+    },
+    {
+      "item_id": "dup:issue/6100",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "dup:issue/6100",
+      "field": "lineage"
+    },
+    {
+      "item_id": "dup:issue/7012",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "dup:issue/7012",
+      "field": "variants"
+    },
+    {
+      "item_id": "dup:issue/7012",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "dup:issue/7012",
+      "field": "lineage"
+    },
+    {
+      "item_id": "dup:issue/7700",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "dup:issue/7700",
+      "field": "variants"
+    },
+    {
+      "item_id": "dup:issue/7700",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "dup:issue/7700",
+      "field": "lineage"
+    },
+    {
+      "item_id": "example:triage/duplicate",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "example:triage/duplicate",
+      "field": "variants"
+    },
+    {
+      "item_id": "example:triage/duplicate",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:issue/7811/0-body@newcontrib",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "obs:issue/7811/0-body@newcontrib",
+      "field": "variants"
+    },
+    {
+      "item_id": "obs:issue/7811/0-body@newcontrib",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:issue/7811/0-body@newcontrib",
+      "field": "lineage"
+    },
+    {
+      "item_id": "obs:issue/7811/c90031@drive-by-1",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "obs:issue/7811/c90031@drive-by-1",
+      "field": "variants"
+    },
+    {
+      "item_id": "obs:issue/7811/c90031@drive-by-1",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:issue/7811/c90031@drive-by-1",
+      "field": "lineage"
+    },
+    {
+      "item_id": "obs:issue/7811/c90032@drive-by-1",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "obs:issue/7811/c90032@drive-by-1",
+      "field": "variants"
+    },
+    {
+      "item_id": "obs:issue/7811/c90032@drive-by-1",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:issue/7811/c90032@drive-by-1",
+      "field": "lineage"
+    },
+    {
+      "item_id": "obs:issue/7811/c90033@drive-by-1",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "obs:issue/7811/c90033@drive-by-1",
+      "field": "variants"
+    },
+    {
+      "item_id": "obs:issue/7811/c90033@drive-by-1",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:issue/7811/c90033@drive-by-1",
+      "field": "lineage"
+    },
+    {
+      "item_id": "obs:issue/7811/c90034@drive-by-1",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "obs:issue/7811/c90034@drive-by-1",
+      "field": "variants"
+    },
+    {
+      "item_id": "obs:issue/7811/c90034@drive-by-1",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:issue/7811/c90034@drive-by-1",
+      "field": "lineage"
+    },
+    {
+      "item_id": "obs:issue/7811/c90035@drive-by-1",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "obs:issue/7811/c90035@drive-by-1",
+      "field": "variants"
+    },
+    {
+      "item_id": "obs:issue/7811/c90035@drive-by-1",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:issue/7811/c90035@drive-by-1",
+      "field": "lineage"
+    },
+    {
+      "item_id": "obs:issue/7811/c90040@newcontrib",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "obs:issue/7811/c90040@newcontrib",
+      "field": "variants"
+    },
+    {
+      "item_id": "obs:issue/7811/c90040@newcontrib",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "obs:issue/7811/c90040@newcontrib",
+      "field": "lineage"
+    },
+    {
+      "item_id": "query:triage/run-18950",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "query:triage/run-18950",
+      "field": "variants"
+    },
+    {
+      "item_id": "query:triage/run-18950",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "query:triage/run-18950",
+      "field": "lineage"
+    },
+    {
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d",
+      "field": "variants"
+    },
+    {
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "run:triage/18800#summary",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "run:triage/18800#summary",
+      "field": "variants"
+    },
+    {
+      "item_id": "run:triage/18800#summary",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "state:ci-summary",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "state:ci-summary",
+      "field": "variants"
+    },
+    {
+      "item_id": "state:ci-summary",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "state:ci-summary",
+      "field": "lineage"
+    },
+    {
+      "item_id": "state:ci-summary",
+      "field": "injection_risk"
+    },
+    {
+      "item_id": "state:requester",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "state:requester",
+      "field": "variants"
+    },
+    {
+      "item_id": "state:requester",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "state:requester",
+      "field": "lineage"
+    },
+    {
+      "item_id": "state:requester",
+      "field": "injection_risk"
+    },
+    {
+      "item_id": "state:work-item",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "state:work-item",
+      "field": "variants"
+    },
+    {
+      "item_id": "state:work-item",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "state:work-item",
+      "field": "lineage"
+    },
+    {
+      "item_id": "state:work-item",
+      "field": "injection_risk"
+    },
+    {
+      "item_id": "turn:comment/90011@maintainer-a",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "turn:comment/90011@maintainer-a",
+      "field": "variants"
+    },
+    {
+      "item_id": "turn:comment/90011@maintainer-a",
+      "field": "conflict_policy"
+    },
+    {
+      "item_id": "turn:comment/90011@maintainer-a",
+      "field": "lineage"
+    },
+    {
+      "item_id": "turn:comment/90020",
+      "field": "token_budget"
+    },
+    {
+      "item_id": "turn:comment/90020",
+      "field": "variants"
+    },
+    {
+      "item_id": "turn:comment/90020",
+      "field": "conflict_policy"
+    }
+  ]
+}

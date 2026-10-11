@@ -1,0 +1,53 @@
+{
+  "_comment": "What the Go integration committed for each scenario (integrations/fullsend, assembler-go): the digest of its snapshot, the SHA-256 of its payload.json, and its outcome. The Python briefing must agree.",
+  "scenarios": {
+    "fix-7820": {
+      "snapshot_digest": "839c673db46f18ddbba99c7a41398ea1b0ed41933fa3ad440923bfa0fbcb6a22",
+      "refused": null,
+      "payload_sha256": "94a266f36f4fdfdd1dc6b73c48a2dba650422dbc68cb8afc9856147b09b85157",
+      "input_tokens": 777,
+      "included": 10,
+      "excluded": 1
+    },
+    "review-security-7820": {
+      "snapshot_digest": "ea0fd2b8ae9bafea2435ccbbaf2c51b4af7a00574f6d6c3643863913b410c6e0",
+      "refused": null,
+      "payload_sha256": "8d2c97d7e8a4e49593e901ccf2064a41d14133af90e3cf26b7a9e6dbe194a9d9",
+      "input_tokens": 967,
+      "included": 12,
+      "excluded": 3
+    },
+    "review-security-7820-starved-v2": {
+      "snapshot_digest": "e121254a41f69eea771734460fad917b6be129442f6891bdc33c6654548b2149",
+      "refused": "evidence_required",
+      "payload_sha256": null,
+      "input_tokens": null,
+      "included": 0,
+      "excluded": 8
+    },
+    "review-security-7820-tight-v1": {
+      "snapshot_digest": "a3d573124935e30d84d52e44801ef8661e942914b1745aa048a23a49827e0f46",
+      "refused": null,
+      "payload_sha256": "5629b0367b606a8d092ad8cdedd125c36f9b5ff880dd786954e40969df55c063",
+      "input_tokens": 690,
+      "included": 9,
+      "excluded": 6
+    },
+    "review-security-7820-tight-v2": {
+      "snapshot_digest": "f0eec6b9e77e99dbfa4cab71e953e4d8626a094e421cc0a6bdd2ef184d70ae23",
+      "refused": null,
+      "payload_sha256": "95a687fe34e28b08f8456fcbcc45eb29fcc9397937f827c94be49f3fefb934e4",
+      "input_tokens": 681,
+      "included": 9,
+      "excluded": 6
+    },
+    "triage-7811": {
+      "snapshot_digest": "84393a480505718838c840f459302bf63ec0e98ddf50d075aa9ec934b284c56d",
+      "refused": null,
+      "payload_sha256": "1c85ff4893f306e52c9a109dd06cba96cef111e9b8c5d7d77db96ab492d65506",
+      "input_tokens": 1162,
+      "included": 16,
+      "excluded": 6
+    }
+  }
+}

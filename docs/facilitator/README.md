@@ -19,6 +19,7 @@ One run sheet per workshop. Each gives the timing, the conference cut, the check
 | W9 module A Tool-to-producer adapters | [09a-tool-to-producer.md](09a-tool-to-producer.md) | ready |
 | W10 Conformance and contributing | [10-conformance-contribution.md](10-conformance-contribution.md) | ready |
 | W11 Benchmarking | [11-benchmarking.md](11-benchmarking.md) | ready |
-| W3b, W9 D, C1, C3 | | written with each module |
+| W9 module D Host and framework seams | [09d-host-seam.md](09d-host-seam.md) | ready |
+| W3b, C1, C3 | | written with each module |
 
 Before any session, run the checks in [docs/setup.md](../setup.md) section 5.

@@ -1,0 +1,358 @@
+{
+  "budget": {
+    "input": 840,
+    "margin_percent": 20,
+    "reserved_output": 199160
+  },
+  "compressed": [],
+  "conflicts": [
+    {
+      "decided_by": "policy",
+      "group_id": "fact:ci.unit-tests.status",
+      "items": [
+        "ci:unit-tests@abc1230f",
+        "run:review/18990#F3"
+      ],
+      "kind": "fact",
+      "resolution": "resolved",
+      "winner": "ci:unit-tests@abc1230f"
+    }
+  ],
+  "context": {
+    "assembly_time": "2026-10-06T14:00:00Z",
+    "renderer": "cwa-messages/v1",
+    "route_policy_version": "fullsend-review-security/v2",
+    "snapshot_digest": "f0eec6b9e77e99dbfa4cab71e953e4d8626a094e421cc0a6bdd2ef184d70ae23",
+    "spec": "cwa/draft",
+    "tokenizer": "estimate-utf8/v1"
+  },
+  "defaults_filled": [
+    {
+      "field": "token_budget",
+      "item_id": "agent:review-security@a17be03"
+    },
+    {
+      "field": "variants",
+      "item_id": "agent:review-security@a17be03"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "agent:review-security@a17be03"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "ci:unit-tests@9f1e77aa"
+    },
+    {
+      "field": "variants",
+      "item_id": "ci:unit-tests@9f1e77aa"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "ci:unit-tests@9f1e77aa"
+    },
+    {
+      "field": "lineage",
+      "item_id": "ci:unit-tests@9f1e77aa"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "ci:unit-tests@abc1230f"
+    },
+    {
+      "field": "variants",
+      "item_id": "ci:unit-tests@abc1230f"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "ci:unit-tests@abc1230f"
+    },
+    {
+      "field": "lineage",
+      "item_id": "ci:unit-tests@abc1230f"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "contract:review-dimension-result/v2"
+    },
+    {
+      "field": "variants",
+      "item_id": "contract:review-dimension-result/v2"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "contract:review-dimension-result/v2"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "diff:docs/guides/user/runtime-flags.md@abc1230f"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "diff:docs/guides/user/runtime-flags.md@abc1230f"
+    },
+    {
+      "field": "lineage",
+      "item_id": "diff:docs/guides/user/runtime-flags.md@abc1230f"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "diff:internal/runtime/claude.go@abc1230f"
+    },
+    {
+      "field": "variants",
+      "item_id": "diff:internal/runtime/claude.go@abc1230f"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "diff:internal/runtime/claude.go@abc1230f"
+    },
+    {
+      "field": "lineage",
+      "item_id": "diff:internal/runtime/claude.go@abc1230f"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f"
+    },
+    {
+      "field": "variants",
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f"
+    },
+    {
+      "field": "lineage",
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "query:review-security/run-19002"
+    },
+    {
+      "field": "variants",
+      "item_id": "query:review-security/run-19002"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "query:review-security/run-19002"
+    },
+    {
+      "field": "lineage",
+      "item_id": "query:review-security/run-19002"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d"
+    },
+    {
+      "field": "variants",
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "run:review/18990#F1"
+    },
+    {
+      "field": "variants",
+      "item_id": "run:review/18990#F1"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "run:review/18990#F1"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "run:review/18990#F3"
+    },
+    {
+      "field": "variants",
+      "item_id": "run:review/18990#F3"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "run:review/18990#F3"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "variants",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "lineage",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "injection_risk",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "variants",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "lineage",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "injection_risk",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "state:risk-tier1"
+    },
+    {
+      "field": "variants",
+      "item_id": "state:risk-tier1"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "state:risk-tier1"
+    },
+    {
+      "field": "lineage",
+      "item_id": "state:risk-tier1"
+    },
+    {
+      "field": "injection_risk",
+      "item_id": "state:risk-tier1"
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "run:review/18990#F2",
+      "reason": "revoked",
+      "stage": "producer"
+    },
+    {
+      "item_id": "run:review/18990#F3",
+      "reason": "conflict_lost",
+      "slot": "interaction.memory",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "ci:unit-tests@9f1e77aa",
+      "reason": "superseded",
+      "slot": "evidence.tool_results",
+      "stage": "assembler",
+      "superseded_by": "ci:unit-tests@abc1230f"
+    },
+    {
+      "item_id": "state:requester",
+      "reason": "over_budget",
+      "slot": "state.user",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "diff:docs/guides/user/runtime-flags.md@abc1230f",
+      "reason": "over_budget",
+      "slot": "evidence.tool_results",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f",
+      "reason": "over_budget",
+      "slot": "evidence.tool_results",
+      "stage": "assembler"
+    }
+  ],
+  "included": [
+    {
+      "eligibility": "agent definition pinned by sha in .fullsend/config.yaml",
+      "item_id": "agent:review-security@a17be03",
+      "slot": "governance.instructions",
+      "source_version": "a17be03",
+      "tokens": 124
+    },
+    {
+      "eligibility": "read from the protected base branch at a pinned SHA, never from the PR head",
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d",
+      "slot": "governance.instructions",
+      "source_version": "4f9c2e1a7b3d",
+      "tokens": 106
+    },
+    {
+      "eligibility": "harness validation_loop.schema (ADR 0022)",
+      "item_id": "contract:review-dimension-result/v2",
+      "slot": "governance.output_contract",
+      "source_version": "v2",
+      "tokens": 82
+    },
+    {
+      "eligibility": "forge read at freeze time",
+      "item_id": "state:change-proposal",
+      "slot": "state.task",
+      "source_version": "abc1230f",
+      "tokens": 40
+    },
+    {
+      "eligibility": "pre-script output (ADR 0089 tier 1)",
+      "item_id": "state:risk-tier1",
+      "slot": "state.task",
+      "source_version": "abc1230f",
+      "tokens": 34
+    },
+    {
+      "eligibility": "security finding from an earlier review of this PR",
+      "item_id": "run:review/18990#F1",
+      "slot": "interaction.memory",
+      "source_version": "18990",
+      "tokens": 57
+    },
+    {
+      "eligibility": "check run conclusion",
+      "item_id": "ci:unit-tests@abc1230f",
+      "slot": "evidence.tool_results",
+      "source_version": "abc1230f",
+      "tokens": 10
+    },
+    {
+      "eligibility": "changed file at head, ranked by path risk",
+      "item_id": "diff:internal/runtime/claude.go@abc1230f",
+      "slot": "evidence.tool_results",
+      "source_version": "abc1230f",
+      "tokens": 90
+    },
+    {
+      "eligibility": "templated from the normalized event",
+      "item_id": "query:review-security/run-19002",
+      "slot": "interaction.query",
+      "source_version": "normevent/v1",
+      "tokens": 43
+    }
+  ],
+  "profile": {
+    "id": "fullsend-review-security-briefing",
+    "version": 2
+  },
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "result": {
+    "hash": "95a687fe34e28b08f8456fcbcc45eb29fcc9397937f827c94be49f3fefb934e4",
+    "input_tokens": 681
+  }
+}

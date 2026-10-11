@@ -1,0 +1,57 @@
+{
+  "spec": "cwa/draft",
+  "id": "fullsend-triage-briefing",
+  "version": 1,
+  "route": "fullsend/triage",
+  "model_family": "anthropic/claude-sonnet-5-5",
+  "route_policy_version": "fullsend-triage/v1",
+  "placement": [
+    {
+      "slot": "governance.instructions",
+      "wrap": "system"
+    },
+    {
+      "slot": "governance.output_contract",
+      "wrap": "system"
+    },
+    {
+      "slot": "state.task",
+      "wrap": "xml:work_item"
+    },
+    {
+      "slot": "state.user",
+      "wrap": "xml:requester"
+    },
+    {
+      "slot": "interaction.memory",
+      "wrap": "xml:prior_run"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "wrap": "xml:duplicate_candidate"
+    },
+    {
+      "slot": "interaction.history",
+      "wrap": "xml:thread"
+    },
+    {
+      "slot": "evidence.tool_results",
+      "wrap": "xml:external_content"
+    },
+    {
+      "slot": "governance.examples",
+      "wrap": "xml:example"
+    },
+    {
+      "slot": "interaction.query",
+      "wrap": "xml:task_request"
+    }
+  ],
+  "evaluation": {
+    "status": "unevaluated",
+    "suite": null,
+    "date": null,
+    "result": null,
+    "artifact": null
+  }
+}

@@ -1,6 +1,6 @@
 # W9. Adapters
 
-Status: modules A, B and C ready; module D planned.
+Status: all four modules ready.
 
 This directory is scaffolded so the catalog layout is visible. The objectives, goals, outcomes and calls to action are in the plan, [section 3, W9](../docs/plan/workshops.md); the module will carry them here when it is written, with numbered checkpoints, a `scenarios/` folder of committed snapshots, traces and payloads, and a `scenarios.py --check` that CI runs without a model.
 

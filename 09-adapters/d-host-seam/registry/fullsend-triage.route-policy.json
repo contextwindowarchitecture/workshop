@@ -1,0 +1,112 @@
+{
+  "route": "fullsend/triage",
+  "version": "fullsend-triage/v1",
+  "clock_skew_seconds": 5,
+  "parser": true,
+  "producers": {
+    "agent-registry": {
+      "kind": "policy",
+      "slots": [
+        "governance.instructions",
+        "governance.examples",
+        "governance.output_contract"
+      ]
+    },
+    "repo-policy": {
+      "kind": "policy",
+      "slots": [
+        "governance.instructions"
+      ]
+    },
+    "forge-state": {
+      "kind": "state",
+      "slots": [
+        "state.task",
+        "state.user"
+      ]
+    },
+    "dispatch": {
+      "kind": "interaction",
+      "slots": [
+        "interaction.query"
+      ]
+    },
+    "forge-thread": {
+      "kind": "interaction",
+      "slots": [
+        "interaction.history"
+      ]
+    },
+    "forge-observer": {
+      "kind": "retrieval",
+      "slots": [
+        "evidence.tool_results"
+      ]
+    },
+    "duplicate-index": {
+      "kind": "retrieval",
+      "slots": [
+        "evidence.knowledge"
+      ]
+    },
+    "run-memory": {
+      "kind": "memory",
+      "slots": [
+        "interaction.memory"
+      ]
+    }
+  },
+  "slots": {
+    "state.task": {
+      "max_age_seconds": 300,
+      "required_scope": [
+        "tenant",
+        "task"
+      ]
+    },
+    "state.user": {
+      "max_age_seconds": 300,
+      "required_scope": [
+        "tenant",
+        "user"
+      ]
+    },
+    "evidence.knowledge": {
+      "min_relevance": 0.55,
+      "required_scope": [
+        "tenant"
+      ],
+      "order_by": [
+        "-relevance"
+      ],
+      "max_per_source": 1,
+      "max_tokens": 6000
+    },
+    "evidence.tool_results": {
+      "required_scope": [
+        "tenant",
+        "task"
+      ],
+      "order_by": [
+        "-freshness"
+      ],
+      "dedupe": "exact",
+      "max_per_source": 2,
+      "max_tokens": 8000
+    },
+    "interaction.history": {
+      "required_scope": [
+        "tenant",
+        "task"
+      ],
+      "max_tokens": 12000
+    },
+    "interaction.memory": {
+      "source_prefix": "run:",
+      "required_scope": [
+        "tenant",
+        "task"
+      ]
+    }
+  }
+}

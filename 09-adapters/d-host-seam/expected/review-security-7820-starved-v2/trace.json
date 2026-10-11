@@ -1,0 +1,306 @@
+{
+  "budget": {
+    "input": 760,
+    "margin_percent": 20,
+    "reserved_output": 199240
+  },
+  "compressed": [],
+  "conflicts": [
+    {
+      "decided_by": "policy",
+      "group_id": "fact:ci.unit-tests.status",
+      "items": [
+        "ci:unit-tests@abc1230f",
+        "run:review/18990#F3"
+      ],
+      "kind": "fact",
+      "resolution": "resolved",
+      "winner": "ci:unit-tests@abc1230f"
+    }
+  ],
+  "context": {
+    "assembly_time": "2026-10-06T14:00:00Z",
+    "renderer": "cwa-messages/v1",
+    "route_policy_version": "fullsend-review-security/v2",
+    "snapshot_digest": "e121254a41f69eea771734460fad917b6be129442f6891bdc33c6654548b2149",
+    "spec": "cwa/draft",
+    "tokenizer": "estimate-utf8/v1"
+  },
+  "defaults_filled": [
+    {
+      "field": "token_budget",
+      "item_id": "agent:review-security@a17be03"
+    },
+    {
+      "field": "variants",
+      "item_id": "agent:review-security@a17be03"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "agent:review-security@a17be03"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "ci:unit-tests@9f1e77aa"
+    },
+    {
+      "field": "variants",
+      "item_id": "ci:unit-tests@9f1e77aa"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "ci:unit-tests@9f1e77aa"
+    },
+    {
+      "field": "lineage",
+      "item_id": "ci:unit-tests@9f1e77aa"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "ci:unit-tests@abc1230f"
+    },
+    {
+      "field": "variants",
+      "item_id": "ci:unit-tests@abc1230f"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "ci:unit-tests@abc1230f"
+    },
+    {
+      "field": "lineage",
+      "item_id": "ci:unit-tests@abc1230f"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "contract:review-dimension-result/v2"
+    },
+    {
+      "field": "variants",
+      "item_id": "contract:review-dimension-result/v2"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "contract:review-dimension-result/v2"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "diff:docs/guides/user/runtime-flags.md@abc1230f"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "diff:docs/guides/user/runtime-flags.md@abc1230f"
+    },
+    {
+      "field": "lineage",
+      "item_id": "diff:docs/guides/user/runtime-flags.md@abc1230f"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "diff:internal/runtime/claude.go@abc1230f"
+    },
+    {
+      "field": "variants",
+      "item_id": "diff:internal/runtime/claude.go@abc1230f"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "diff:internal/runtime/claude.go@abc1230f"
+    },
+    {
+      "field": "lineage",
+      "item_id": "diff:internal/runtime/claude.go@abc1230f"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f"
+    },
+    {
+      "field": "variants",
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f"
+    },
+    {
+      "field": "lineage",
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "query:review-security/run-19002"
+    },
+    {
+      "field": "variants",
+      "item_id": "query:review-security/run-19002"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "query:review-security/run-19002"
+    },
+    {
+      "field": "lineage",
+      "item_id": "query:review-security/run-19002"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d"
+    },
+    {
+      "field": "variants",
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "repo:AGENTS.md@4f9c2e1a7b3d"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "run:review/18990#F1"
+    },
+    {
+      "field": "variants",
+      "item_id": "run:review/18990#F1"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "run:review/18990#F1"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "run:review/18990#F3"
+    },
+    {
+      "field": "variants",
+      "item_id": "run:review/18990#F3"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "run:review/18990#F3"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "variants",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "lineage",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "injection_risk",
+      "item_id": "state:change-proposal"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "variants",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "lineage",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "injection_risk",
+      "item_id": "state:requester"
+    },
+    {
+      "field": "token_budget",
+      "item_id": "state:risk-tier1"
+    },
+    {
+      "field": "variants",
+      "item_id": "state:risk-tier1"
+    },
+    {
+      "field": "conflict_policy",
+      "item_id": "state:risk-tier1"
+    },
+    {
+      "field": "lineage",
+      "item_id": "state:risk-tier1"
+    },
+    {
+      "field": "injection_risk",
+      "item_id": "state:risk-tier1"
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "run:review/18990#F2",
+      "reason": "revoked",
+      "stage": "producer"
+    },
+    {
+      "item_id": "run:review/18990#F3",
+      "reason": "conflict_lost",
+      "slot": "interaction.memory",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "ci:unit-tests@9f1e77aa",
+      "reason": "superseded",
+      "slot": "evidence.tool_results",
+      "stage": "assembler",
+      "superseded_by": "ci:unit-tests@abc1230f"
+    },
+    {
+      "item_id": "state:requester",
+      "reason": "over_budget",
+      "slot": "state.user",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "diff:docs/guides/user/runtime-flags.md@abc1230f",
+      "reason": "over_budget",
+      "slot": "evidence.tool_results",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "diff:internal/runtime/claude_test.go@abc1230f",
+      "reason": "over_budget",
+      "slot": "evidence.tool_results",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "ci:unit-tests@abc1230f",
+      "reason": "over_budget",
+      "slot": "evidence.tool_results",
+      "stage": "assembler"
+    },
+    {
+      "item_id": "diff:internal/runtime/claude.go@abc1230f",
+      "reason": "over_budget",
+      "slot": "evidence.tool_results",
+      "stage": "assembler"
+    }
+  ],
+  "included": [],
+  "profile": {
+    "id": "fullsend-review-security-briefing",
+    "version": 2
+  },
+  "recovery": {
+    "action": "precompute_summary"
+  },
+  "refused": {
+    "bool": true,
+    "reason": "evidence_required"
+  },
+  "result": null
+}
