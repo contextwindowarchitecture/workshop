@@ -1,0 +1,162 @@
+{
+  "profile": {
+    "id": "account-help-small-messages",
+    "version": 1
+  },
+  "budget": {
+    "input": 500,
+    "reserved_output": 512,
+    "margin_percent": 15
+  },
+  "result": {
+    "input_tokens": 429,
+    "hash": "533bd3bdd79a9b8b9cfd1eb5b980003972553736723df0e46956de9bd48ce604"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:instructions",
+      "tokens": 196,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:plan",
+      "tokens": 28,
+      "source_version": "18",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:u_ben",
+      "tokens": 12,
+      "source_version": "3",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:billing@5#0",
+      "tokens": 31,
+      "source_version": "5",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:billing@5#2",
+      "tokens": 44,
+      "source_version": "5",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:roles@4#1",
+      "tokens": 29,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:s_w4_unrev:0001",
+      "tokens": 20,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:billing@5#0",
+      "from": 39,
+      "to": 31,
+      "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+      "variant_id": "help:billing@5#0~summary"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:billing@5#2",
+      "from": 56,
+      "to": 44,
+      "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+      "variant_id": "help:billing@5#2~summary"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:roles@4#1",
+      "from": 49,
+      "to": 29,
+      "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+      "variant_id": "help:roles@4#1~summary"
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "mem:u_ben:0002",
+      "reason": "conflict_lost",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "help:billing@5#4",
+      "reason": "source_diversity_cap",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "mem:u_ben:0001",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "help:roles@4#0",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:refunds@4#2",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:billing@5#1",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:plans@9#4",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [
+    {
+      "group_id": "fact:plan",
+      "kind": "fact",
+      "items": [
+        "account:w_kitewood:plan",
+        "mem:u_ben:0002"
+      ],
+      "decided_by": "policy",
+      "resolution": "resolved",
+      "winner": "account:w_kitewood:plan"
+    }
+  ],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-01T10:50:00Z",
+    "route_policy_version": "w4-small/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "6aa794d40867701f3ae3c40f628761eab5ec33532eb3dedc1eebb1d4ff354440"
+  },
+  "defaults_filled": []
+}

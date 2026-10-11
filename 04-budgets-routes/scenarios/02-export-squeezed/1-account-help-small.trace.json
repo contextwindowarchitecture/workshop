@@ -1,0 +1,165 @@
+{
+  "profile": {
+    "id": "account-help-small-messages",
+    "version": 1
+  },
+  "budget": {
+    "input": 560,
+    "reserved_output": 512,
+    "margin_percent": 15
+  },
+  "result": {
+    "input_tokens": 472,
+    "hash": "e8ce2ed0803b8f68c64fc4e53055a8d2e317c80cacfc234cbd67fa5e677cbe7b"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:instructions",
+      "tokens": 196,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:plan",
+      "tokens": 28,
+      "source_version": "18",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:u_ada",
+      "tokens": 12,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#0",
+      "tokens": 35,
+      "source_version": "6",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#2",
+      "tokens": 77,
+      "source_version": "6",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:exports-faq@2#1",
+      "tokens": 36,
+      "source_version": "2",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:s_w4_squeezed:0003",
+      "tokens": 15,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#0",
+      "from": 43,
+      "to": 35,
+      "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+      "variant_id": "help:data-export@6#0~summary"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:exports-faq@2#1",
+      "from": 44,
+      "to": 36,
+      "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+      "variant_id": "help:exports-faq@2#1~summary"
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "mem:u_ada:0001",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mem:u_ada:0003",
+      "reason": "revoked",
+      "stage": "producer"
+    },
+    {
+      "item_id": "help:exports-faq@2#0",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.knowledge",
+      "duplicate_of": "help:data-export@6#0"
+    },
+    {
+      "item_id": "turn:s_w4_squeezed:0001",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "interaction.history"
+    },
+    {
+      "item_id": "turn:s_w4_squeezed:0002",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "interaction.history"
+    },
+    {
+      "item_id": "mem:u_ada:0005",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "mem:u_ada:0007",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "help:billing@5#0",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:projects@4#3",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:data-export@6#1",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:roles@4#1",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-01T10:00:00Z",
+    "route_policy_version": "w4-small/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "3d4f199ccf4e52a3f22ffd45a48692bcfa72451b715b7812a8170b68a196b689"
+  },
+  "defaults_filled": []
+}

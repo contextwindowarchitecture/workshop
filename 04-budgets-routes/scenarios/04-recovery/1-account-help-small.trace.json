@@ -1,0 +1,91 @@
+{
+  "profile": {
+    "id": "account-help-small-messages",
+    "version": 1
+  },
+  "budget": {
+    "input": 400,
+    "reserved_output": 512,
+    "margin_percent": 15
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "mem:u_cho:0002",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mem:u_cho:0003",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mem:u_cho:0001",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "interaction.memory"
+    },
+    {
+      "item_id": "help:refunds@4#0",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:plans@9#3",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:support@2#0",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:support@2#1",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:data-export@6#1",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:projects@4#3",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    },
+    {
+      "item_id": "help:refunds@4#1",
+      "reason": "over_budget",
+      "stage": "assembler",
+      "slot": "evidence.knowledge"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "evidence_required"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-01T10:40:00Z",
+    "route_policy_version": "w4-small/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "da763a83f611f3de02ad6a3f7c2657922116c8e015d76297ddd73e177d40e123"
+  },
+  "defaults_filled": [],
+  "recovery": {
+    "action": "precompute_summary"
+  }
+}

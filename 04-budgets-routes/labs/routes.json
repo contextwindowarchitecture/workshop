@@ -1,0 +1,24 @@
+{
+  "_comment": "Lab B: two routes for the same application, and no escalate table yet. When the small route refuses, the application should rebuild the request on the large one for the refusal reasons you choose; write the table (R-12, R-17). budget.input is each model's context limit less what the route reserves for the answer (R-16).",
+  "default": "account-help-small",
+  "tokenizer": "estimate-utf8/v1",
+  "renderer": "cwa-messages/v1",
+  "retrieval": {
+    "top_k": 8
+  },
+  "routes": {
+    "account-help-small": {
+      "model": "gpt-oss:20b",
+      "model_context_limit": 2048,
+      "reserved_output": 512,
+      "margin_percent": 15
+    },
+    "account-help": {
+      "model": "gpt-oss:120b",
+      "model_context_limit": 8192,
+      "reserved_output": 1024,
+      "margin_percent": 15
+    }
+  },
+  "escalate": {}
+}

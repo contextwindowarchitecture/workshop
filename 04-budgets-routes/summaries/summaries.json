@@ -1,0 +1,218 @@
+{
+  "108ecb9a5cfc55841d5891c2c05834ba4afe1b82c99f9f3b33359fa30e8718eb": {
+    "suffix": "summary",
+    "body": "To set up SSO, an owner copies Fernway's ACS URL and entity ID into a SAML app in the identity provider, pastes the provider's metadata URL back, and tests the connection.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "13f8f7eeba46c6d473bad562969d3a09642707c2877a8e073f41639e1575e708": {
+    "suffix": "summary",
+    "body": "Any project member on any plan can export a project as CSV from the project menu; one row per task and subtask, comments in one column.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "1a215b46f31fd132825772270839185954d256d7ae4942ac4a756d2f135d8c7f": {
+    "suffix": "summary",
+    "body": "Exports run in the background and a download link is emailed, usually within an hour; the link lasts 24 hours and works only for the requester.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "1a539d02bea1674d4c3ded701ecbd88037cb8c5d4e9e6ff262108782a7aabd88": {
+    "suffix": "summary",
+    "body": "Annual plans can be refunded within 30 days of first payment or renewal, prorated for unused months, back to the original payment method within 10 business days.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "1d30f6308eb3dc70c7db83498f18e587221aeb30d350730299fdd6741e1cc6d0": {
+    "suffix": "summary",
+    "body": "If an export fails, retry once, then contact support@fernway.example with the workspace name and the time of the attempt.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "1df78f796552831e76a9d80c15c0460e57ee24231c24c0f88719219d68f45444": {
+    "suffix": "summary",
+    "body": "After a successful test, Require SSO disables password sign-in for members; owners keep a password as a recovery path.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "226dd20235ec7e65270621ea51630377918491a351cdbdb4fb529390544a9c8a": {
+    "suffix": "summary",
+    "body": "An Owner or Admin exports the whole workspace as JSON from Settings, then Data; JSON keeps structure, dependencies and history, and workspace export is available on every plan.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "2472e3b7ff9f17ff3913bd453459280359d2a9d690c21617cb56c84862fdd502": {
+    "suffix": "summary",
+    "body": "Team and Business workspaces email support@fernway.example or use the Help menu; first replies within one business day for Team, 4 hours around the clock for Business.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "2e1d355963438fae26dedf658c977d7d0e7f6ce689b8d1d613ef89d245e16b37": {
+    "suffix": "summary",
+    "body": "Members create projects and tasks and see public projects plus private ones they are added to; Guests see only invited projects and cannot create projects.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "43688d30337e85c0e0a951dfa3272b770b393e22bda8eff09e36f4bfafd52de4": {
+    "suffix": "summary",
+    "body": "Team: $9 per member per month annually or $11 monthly; unlimited projects, 100 GB, guests, recurring tasks, Slack and GitHub integrations, email support within one business day.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "4ad0d821d2f3ab1bfdfc73d83198a824ce3d719801cff17a47fbdf28fbf874bd": {
+    "suffix": "summary",
+    "body": "Cards accepted: Visa, Mastercard, American Express. Business workspaces on annual billing can pay by invoice on 30-day terms via sales.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "4b7a5ab861deb8521ab142c18be4f152a0e30c802a66c5c6fe6888941b9f0878": {
+    "suffix": "summary",
+    "body": "Verify your email domain under Settings, then Domains, with a DNS TXT record before enforcing SSO; only members on verified domains can use it.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "5225d10be53c60ba98034cbc130632b7fb6ad029871c4e8168f491fd01a529ac": {
+    "suffix": "summary",
+    "body": "Plans can change any time: upgrades apply immediately and are prorated, downgrades apply at the end of the billing period.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "595466ed13de624e0c4140188af01e5bce6bfc6c3a43069f4cfc50d52d4a6620": {
+    "suffix": "summary",
+    "body": "Business: $19 per member per month billed monthly or $23 annually; everything in Team plus SAML SSO, SCIM, audit log, 99.9% SLA, EU or US data residency, 1 TB storage, 4-hour priority support.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "61d4d94e1f1d3ab7f8669766b31a7b91c32021cd0541702164d16789d07884d7": {
+    "suffix": "summary",
+    "body": "Free: up to 5 members, 3 active projects, 1 GB storage, 7 days of history, community-forum support.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "625f980330fb425fda530c27652d2ab0744a60e54a06dacb87212d63d8013de8": {
+    "suffix": "summary",
+    "body": "Export one project or the whole workspace, including tasks, subtasks, comments, labels and assignees; attachments come separately as a ZIP.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "69470482b3c35be621a2f2a2ce5942e9a1700d7106dcffcc40a082c866d9c1f0": {
+    "suffix": "summary",
+    "body": "Admins manage members, projects and integrations, see every project including private ones, and can change billing.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "6c7cab6579454c2baeb1f753a9d275a25db9188533f5ade27b11db222b81c7f8": {
+    "suffix": "summary",
+    "body": "Board columns are workflow stages; rename, reorder or add them from the column menu, and moving a card to the last column completes the task.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "768fd8f01b72c02d08a5d387c1fe19396a968d9a2d62c7c7254312781fbafc46": {
+    "suffix": "summary",
+    "body": "Change a role under Settings, then Members, from the role menu; changes apply immediately.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "77a2136cefd354e961c81552c114fce6e8f2c6fdd14e2949bd60a29044d91c2b": {
+    "suffix": "summary",
+    "body": "Free workspaces have 3 active projects; archived ones do not count, and paid plans have unlimited projects.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "80aaa23b2daaa0854f05feb23123e8aa9bd8c1060c9d50b4109351a1dcb14f96": {
+    "suffix": "summary",
+    "body": "Members added mid-cycle are prorated; members removed leave a credit on the next invoice, not a refund.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "860f7665130530934f8dc21db2400ac44c48b8c1aa1ef134203f430d2303dd81": {
+    "suffix": "summary",
+    "body": "The owner cancels under Settings, then Billing, with Cancel plan; annual refunds are requested from the same page within the 30-day window.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "89323b455c9928192044338e1624e5b39ab7c6f6ab9ad125a226e129c0035ecb": {
+    "suffix": "summary",
+    "body": "Monthly plans can be refunded on request; cancelling takes effect immediately and the workspace moves to the Free plan.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "93674169e61027e1b90d644b2b4982b4ba5e6879a7ae50acbb690907992db6ef": {
+    "suffix": "summary",
+    "body": "SSO and SCIM are Business-only; a Team workspace that needs them must upgrade.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "981156518a3ab894ce0e29695a3f4c771bc77bd7e6c0e0ac2160a9792f66affd": {
+    "suffix": "summary",
+    "body": "Three plans, Free, Team and Business, all with unlimited tasks, Board, List and Timeline views, and the desktop and mobile apps.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "98a7fb08dfc2ff94668e47742e078f035c4d230d29d3f03701ea7faeefbcd8f1": {
+    "suffix": "summary",
+    "body": "You can export a project or the whole workspace with tasks, subtasks, comments, labels and assignees; attachments are a separate ZIP archive.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "a137a7b94911138bc45f631ce9ddeca6b41c981444ffaa7c196451e696c15183": {
+    "suffix": "summary",
+    "body": "Invoices go to the billing contact on each charge and are downloadable as PDFs under Billing, then Invoices; a VAT or tax ID added to Billing details appears on later invoices.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "ac74b42b0e93e8bfcaa31bcf3a8ad879205c0b2ba562d4ec120f2e06eaf7c0d0": {
+    "suffix": "summary",
+    "body": "Exports are prepared in the background; the download email usually arrives within an hour for large workspaces and the link works for 24 hours.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "bbc40d3a75690068ab46269bf400ccbaa8f1cea20217586ae7aa4df7c9efb481": {
+    "suffix": "summary",
+    "body": "Archive a finished project from its menu; archived projects are read-only, hidden from the sidebar, still searchable, still count toward storage, and can be restored from Settings.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "beedbd21596ca77c58b0d5dd852602dc18891463a87f83d75de2fb307676bd94": {
+    "suffix": "summary",
+    "body": "A project groups tasks and shows them in Board, List and Timeline views; switching views never changes the tasks.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "c82283f85eab7858b929ac6ce8616514feaca467e11ca65f546c97730bc8fc0b": {
+    "suffix": "summary",
+    "body": "Free workspaces get help in the community forum, answered by the Fernway team on weekdays.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "d657853a420a4b81eb46b0dba928d8c525534998b145c0c711ed980b54b3216b": {
+    "suffix": "summary",
+    "body": "Owners and billing admins manage billing under Settings, then Billing; every member is a seat and guests are not charged.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "dc05adf82df795bae8f8b1a3fcdab8f1a0308dd137404414adc9c456636c47e7": {
+    "suffix": "summary",
+    "body": "Include your workspace URL and, for task problems, the task key such as FW-123; support never asks for passwords or API tokens.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "eef84c8959147dda5b16c14c8817f31247b78c83cceb5625e2e04cebebf20666": {
+    "suffix": "summary",
+    "body": "SAML SSO, on the Business plan, works with Okta, Microsoft Entra ID, Google Workspace and any SAML 2.0 provider.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "f8ea2a734651ea7dc9d9927ef56cc364988e4059e3b8315726e2e52f46351578": {
+    "suffix": "summary",
+    "body": "SCIM provisioning creates, updates and deactivates members from the identity provider using a SCIM token and base URL; deactivation removes the seat within minutes.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  },
+  "fe10f8aa74e3c528ebfc25ffebaff582c94b890e2f9cd7f03c73dfad3fa6fca8": {
+    "suffix": "summary",
+    "body": "Each member has one role: Owner, Admin, Member or Guest; only Owners can delete the workspace, change the plan or transfer ownership.",
+    "method": "model-summary (hand-checked stand-in for a gpt-oss-20b run)",
+    "lineage": "summarised"
+  }
+}

@@ -14,7 +14,7 @@ Every lab runs without a model: committed snapshots, traces and recorded runs re
 | [W1](01-cwa-tour/) | The CWA tour: planes, slots, snapshot, trace | half day, model-free | ready |
 | [W2](02-producers/) | Building a conformant producer | half day, model-free | ready |
 | [W3](03-integration/) | Integrating CWA into an existing application | full day, model-free | W3a ready, W3b planned |
-| [W4](04-budgets-routes/) | Budgets, variants, routes and refusals | half day | planned |
+| [W4](04-budgets-routes/) | Budgets, variants, routes and refusals | half day, model-free | ready |
 | [W5](05-tools-mcp/) | Tools, MCP and capability policy: agents under CWA | half day | planned |
 | [W6](06-profiles-caching-eval/) | Placement profiles, prompt caching and profile evaluation | half day | planned |
 | [W7](07-production/) | Production: snapshot store, telemetry, evals and the promotion gate | half day | planned |

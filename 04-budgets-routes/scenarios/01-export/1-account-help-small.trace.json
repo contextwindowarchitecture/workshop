@@ -1,0 +1,156 @@
+{
+  "profile": {
+    "id": "account-help-small-messages",
+    "version": 1
+  },
+  "budget": {
+    "input": 1536,
+    "reserved_output": 512,
+    "margin_percent": 15
+  },
+  "result": {
+    "input_tokens": 825,
+    "hash": "b5a5537f528a21555ca3c6d0a51de783b610c291bfed37c666276821be9dc420"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:instructions",
+      "tokens": 196,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:plan",
+      "tokens": 28,
+      "source_version": "18",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_kitewood:u_ada",
+      "tokens": 12,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:billing@5#0",
+      "tokens": 39,
+      "source_version": "5",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#0",
+      "tokens": 43,
+      "source_version": "6",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#1",
+      "tokens": 53,
+      "source_version": "6",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#2",
+      "tokens": 77,
+      "source_version": "6",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:exports-faq@2#1",
+      "tokens": 44,
+      "source_version": "2",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:projects@4#3",
+      "tokens": 36,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:roles@4#1",
+      "tokens": 49,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_ada:0005",
+      "tokens": 10,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_ada:0007",
+      "tokens": 21,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w4_export:0001",
+      "tokens": 15,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.history",
+      "item_id": "turn:s_w4_export:0002",
+      "tokens": 20,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:s_w4_export:0003",
+      "tokens": 15,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "mem:u_ada:0001",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mem:u_ada:0003",
+      "reason": "revoked",
+      "stage": "producer"
+    },
+    {
+      "item_id": "help:exports-faq@2#0",
+      "reason": "duplicate_content",
+      "stage": "assembler",
+      "slot": "evidence.knowledge",
+      "duplicate_of": "help:data-export@6#0"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-01T10:00:00Z",
+    "route_policy_version": "w4-small/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "8e5bdc6d4ce4cab5aeedfd0fda5365324b322d059c8e79df64d6120b47bb37d7"
+  },
+  "defaults_filled": []
+}

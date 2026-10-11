@@ -1,0 +1,18 @@
+{
+  "user": "u_ada",
+  "session": "s_w4_squeezed",
+  "asked_at": "2026-10-01T10:00:00Z",
+  "turns": [
+    {
+      "role": "user",
+      "text": "Hi, I'm planning a migration for our workspace next month.",
+      "at": "2026-10-01T09:58:00Z"
+    },
+    {
+      "role": "assistant",
+      "text": "Happy to help. What would you like to know about exporting or moving your data?",
+      "at": "2026-10-01T09:58:05Z"
+    }
+  ],
+  "question": "How do I export the whole workspace, including attachments?"
+}

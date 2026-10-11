@@ -1,0 +1,135 @@
+{
+  "profile": {
+    "id": "account-help-messages",
+    "version": 1
+  },
+  "budget": {
+    "input": 7168,
+    "reserved_output": 1024,
+    "margin_percent": 15
+  },
+  "result": {
+    "input_tokens": 795,
+    "hash": "3b15288de6302ca5d2f3a07af9bb6d30e0aba6b49a7f58091baed032943e9cf7"
+  },
+  "included": [
+    {
+      "slot": "governance.instructions",
+      "item_id": "policy:instructions",
+      "tokens": 196,
+      "source_version": "7",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_larkspur:plan",
+      "tokens": 27,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "state.user",
+      "item_id": "account:w_larkspur:u_cho",
+      "tokens": 12,
+      "source_version": "2",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:data-export@6#1",
+      "tokens": 53,
+      "source_version": "6",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:plans@9#3",
+      "tokens": 76,
+      "source_version": "9",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:projects@4#3",
+      "tokens": 36,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:refunds@4#0",
+      "tokens": 49,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:refunds@4#1",
+      "tokens": 54,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:refunds@4#2",
+      "tokens": 47,
+      "source_version": "4",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:support@2#0",
+      "tokens": 33,
+      "source_version": "2",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "evidence.knowledge",
+      "item_id": "help:support@2#1",
+      "tokens": 56,
+      "source_version": "2",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.memory",
+      "item_id": "mem:u_cho:0001",
+      "tokens": 11,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    },
+    {
+      "slot": "interaction.query",
+      "item_id": "turn:s_w4_rec:0001",
+      "tokens": 15,
+      "source_version": "1",
+      "eligibility": "route-policy"
+    }
+  ],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "mem:u_cho:0002",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mem:u_cho:0003",
+      "reason": "expired",
+      "stage": "producer"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": false,
+    "reason": null
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-01T10:40:00Z",
+    "route_policy_version": "w4-large/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "7ac01117c5d5929b3d09b247bcb68d4b979d62db505586e39984eca63ffe6ee9"
+  },
+  "defaults_filled": []
+}

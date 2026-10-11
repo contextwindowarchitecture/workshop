@@ -1,0 +1,40 @@
+{
+  "profile": {
+    "id": "account-help-small-messages",
+    "version": 1
+  },
+  "budget": {
+    "input": 1536,
+    "reserved_output": 512,
+    "margin_percent": 15
+  },
+  "result": null,
+  "included": [],
+  "compressed": [],
+  "excluded": [
+    {
+      "item_id": "mem:u_ada:0001",
+      "reason": "expired",
+      "stage": "producer"
+    },
+    {
+      "item_id": "mem:u_ada:0003",
+      "reason": "revoked",
+      "stage": "producer"
+    }
+  ],
+  "conflicts": [],
+  "refused": {
+    "bool": true,
+    "reason": "protected_content_over_budget"
+  },
+  "context": {
+    "spec": "cwa/draft",
+    "assembly_time": "2026-10-01T10:30:00Z",
+    "route_policy_version": "w4-small/v1",
+    "tokenizer": "estimate-utf8/v1",
+    "renderer": "cwa-messages/v1",
+    "snapshot_digest": "241cb8d582a7024b53a84b9a0a61ad5795642ece250a9047904673d669dfb1f9"
+  },
+  "defaults_filled": []
+}
