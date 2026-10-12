@@ -18,7 +18,7 @@ Name or handle: ______________________  Date: ____________
 - The two measures where models spread: ______________________ and ______________________
 - Model ______________________: grounding average ______, worst repeat ______. A gate running once would have seen: ______
 
-## Checkpoint 4. Twelve arms
+## Checkpoint 4. Eleven arms
 
 - The fair baseline is ______________________ because ______________________________________________
 - `cwa-state` minus `truncate-pinned` at 8,192: pilot ______  published ______

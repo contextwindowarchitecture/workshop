@@ -8,7 +8,7 @@ CWA makes a claim that can be tested in two halves. The first half is about the 
 
 - The invariants run over every snapshot this repository commits, which is the model-free half of any CWA benchmark.
 - A committed fourteen-model run of the examples bench read from its files: invariants first, then the measures that depend on the model, with the range across repeats beside the average.
-- A committed Domain 2 run of the viability benchmark read from its files: twelve ways of building the same conversation's context, side by side, with the column that tells a payload failure from a model failure.
+- A committed Domain 2 run of the viability benchmark read from its files: eleven ways of building the same conversation's context and two uncapped controls, side by side, with the column that tells a payload failure from a model failure.
 - One construct of your own, written as an expectation the bench could grade.
 
 ## Part 1. Two families, three kinds of result (30 minutes)
@@ -17,7 +17,7 @@ CWA makes a claim that can be tested in two halves. The first half is about the 
 | --- | --- | --- | --- |
 | The examples bench | one application (Fernway), its committed scenarios, the assembler at its pin | fourteen models on OpenRouter, ten repeats | `examples/bench` |
 | The viability benchmark, Domain 1 | the specification at its pin | four assemblers, treated as black boxes through the adapter protocol | `benchmark/domain1` |
-| The viability benchmark, Domain 2 | one model, its settings, the facts, the user's turns, the budget, the counter, the grader | the way the payload is built: twelve arms, from "concatenate everything" to the CWA pipeline | `benchmark/domain2` |
+| The viability benchmark, Domain 2 | one model, its settings, the facts, the user's turns, the budget, the counter, the grader | the way the payload is built: eleven arms, from "concatenate everything" to the CWA pipeline, and two uncapped controls | `benchmark/domain2` |
 
 The bench separates three kinds of result, and the distinction carries to any benchmark of a context architecture:
 
@@ -64,7 +64,7 @@ With the examples' environments synced, two more commands in `examples/bench` ar
 
 **Checkpoint 3.** The invariants line. The two measures where the models spread. One model's grounding average and its worst repeat, and what a gate that runs its suite once would have seen.
 
-## Part 4. Lab C: twelve ways to build the same context (60 minutes)
+## Part 4. Lab C: eleven ways to build the same context (60 minutes)
 
 ```sh
 export CWA_SIBLING_BENCHMARK=../cwa-extended/benchmark   # when the benchmark is not under the root
@@ -78,11 +78,13 @@ Domain 2 asks one question: over a long conversation, does a model given CWA-ass
 | `control-full`, `control-concat` | the whole conversation with no budget: upper bounds |
 | `concat` | every turn as chat; when that exceeds the budget, nothing is sent |
 | `truncate`, `truncate-pinned` | the newest turns that fit, the system prompt dropped or pinned. `truncate-pinned` is the fair reference |
+| `window` | the last ten turns |
 | `summary` | the last ten turns and a rolling summary the model writes: the strongest conventional control |
 | `cwa-history` | CWA's format with history only |
 | `cwa-state` | plus `state.task` written from the facts the user stated: the upper bound for state |
 | `cwa-state-x` | plus `state.task` written by the model, turn by turn: the realistic arm |
 | `cwa-memory`, `cwa-pipeline` | `cwa-state` with recent turns as history and older facts as memory; the second adds supersession and deduplication |
+| `cwa-format` | `window`'s exact selection, rendered as CWA renders it: the format control |
 
 The reader prints, for each arm and budget, the share of probes answered right, the 95% interval from a bootstrap over conversations, and the share of probes whose needed fact was in the payload at all. The last column is the one to learn: a wrong answer with the fact absent is the payload's failure, and with the fact present it is the model's.
 
