@@ -42,12 +42,27 @@ def test_reference_assembler_passes_the_case():
     assert verify.first_difference(verify.comparable(result.trace), verify.comparable(expected)) is None
 
 
-def test_the_case_catches_the_uncovered_defect():
-    document = json.loads((CASE / "snapshot.json").read_text(encoding="utf-8"))
-    expected = json.loads((CASE / "expected.trace.json").read_text(encoding="utf-8"))
-    broken = verify.run(verify.broken_assembler(), document)
-    assert broken.payload is not None, "the defect applies the tie-break and assembles"
-    assert verify.first_difference(verify.comparable(broken.trace), verify.comparable(expected)) == "/conflicts/0/decided_by"
+def test_the_case_catches_the_defect_it_was_written_for():
+    document, expected, payload = verify.load("conflict-tiebreak-not-permitted")
+    defects = verify.defects()
+    assert len(defects) == 11 and defects["tiebreak-without-permission"]["listed_in"] == "uncovered.json"
+    broken = verify.broken_assembler(defects["tiebreak-without-permission"])
+    assert verify.run(broken, document).payload is not None, "the defect applies the tie-break and assembles"
+    assert verify.judge(broken, document, expected, payload) == "/conflicts/0/decided_by"
+
+
+def test_the_case_is_specific_to_its_defect():
+    """A case that catches every defect is testing nothing in particular; this one isolates the tie-break."""
+    document, expected, payload = verify.load("conflict-tiebreak-not-permitted")
+    caught = {d: verify.judge(verify.broken_assembler(defect), document, expected, payload) is not None for d, defect in verify.defects().items()}
+    assert caught["tiebreak-without-permission"] and sum(caught.values()) <= 3, caught
+
+
+def test_the_same_table_under_another_id_is_the_same_case_renamed():
+    built = generate.files("my-renamed-case")
+    case = json.loads(built["case.json"])
+    doc = json.loads(built["snapshot.json"])
+    assert case["id"] == "my-renamed-case" and doc["profile"]["id"] == "my-renamed-case" and doc["route_policy"]["route"] == "my-renamed-case"
 
 
 def test_the_published_corpus_does_not_catch_it_where_this_case_does():

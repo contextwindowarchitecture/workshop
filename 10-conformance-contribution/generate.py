@@ -1,10 +1,12 @@
-"""Lab A: a new conformance case, written the way the specification's generators write theirs: from a table of intended
-outcomes, never from an assembler's output.
+"""Lab A, the worked example: a conformance case written the way the specification's generators write theirs, from a
+table of intended outcomes, never from an assembler's output.
 
-    uv run generate.py            # write cases/conflict-tiebreak-not-permitted/{case,snapshot,expected.trace}.json
-    uv run generate.py --check    # exit 1 when the committed files differ from what the table implies
+    uv run generate.py                 # write cases/conflict-tiebreak-not-permitted/{case,snapshot,expected.trace}.json
+    uv run generate.py --check         # exit 1 when the committed files differ from what the table implies
+    uv run generate.py --id my-case    # the same table under another case id (when the published corpus already has this one)
 
-The case is the one W8's uncovered defect calls for. A fact group has two leaders from the top-ranked producer with
+Your own case goes in a copy of this file (template.py is that copy with the table emptied) and is verified against the
+defect you chose with verify.py. The example is the one W8's uncovered defect called for when this module was written. A fact group has two leaders from the top-ranked producer with
 different freshness, and the route's fact policy does not permit a freshness tie-break. R-11 says the tie-break
 decides only when the policy sets one, so the group escalates; the policy says refuse, so assembly refuses with
 conflict_unresolved. An assembler that applies the tie-break anyway assembles instead, and this case catches it. The
@@ -23,7 +25,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 CONTRACT = ROOT / "shared" / "contract" / "cwa"
-CASE = HERE / "cases" / "conflict-tiebreak-not-permitted"
+DEFAULT_ID = "conflict-tiebreak-not-permitted"
+CASE = HERE / "cases" / DEFAULT_ID
 sys.path.insert(0, str(ROOT / "shared"))
 from siblings import sibling  # noqa: E402
 
@@ -48,7 +51,7 @@ def item(id: str, slot: str, body: str, **fields) -> dict:
 
 # --- the table: what this case intends -------------------------------------------------------------------------------
 
-ROUTE = "conflict-tiebreak-not-permitted"
+ROUTE = DEFAULT_ID
 TABLE = {
     "id": ROUTE,
     "rules": ["R-11", "R-17", "R-21"],
@@ -120,10 +123,14 @@ def expected_trace(document: dict) -> dict:
     }
 
 
-def files() -> dict[str, bytes]:
-    document = snapshot()
-    return {"case.json": _json({"id": TABLE["id"], "rules": TABLE["rules"], "description": TABLE["description"]}),
-            "snapshot.json": _json(document), "expected.trace.json": _json(expected_trace(document))}
+def files(case_id: str = DEFAULT_ID) -> dict[str, bytes]:
+    """The three files, under case_id: every id-derived string (profile, route, policy version, trace id) follows it."""
+    document, trace = snapshot(), None
+    document = json.loads(json.dumps(document).replace(DEFAULT_ID, case_id))
+    trace = json.loads(json.dumps(expected_trace(snapshot())).replace(DEFAULT_ID, case_id))
+    trace["context"]["snapshot_digest"] = snapshot_digest(document)
+    case = {"id": case_id, "rules": TABLE["rules"], "description": TABLE["description"]}
+    return {"case.json": _json(case), "snapshot.json": _json(document), "expected.trace.json": _json(trace)}
 
 
 def _json(value) -> bytes:
@@ -133,15 +140,18 @@ def _json(value) -> bytes:
 def main(argv: list[str]) -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--check", action="store_true")
+    p.add_argument("--id", default=DEFAULT_ID, help="the case id to write under (default: the worked example's)")
     args = p.parse_args(argv)
-    CASE.mkdir(parents=True, exist_ok=True)
-    stale = [name for name, content in files().items() if not (CASE / name).exists() or (CASE / name).read_bytes() != content]
+    case = HERE / "cases" / args.id
+    case.mkdir(parents=True, exist_ok=True)
+    built = files(args.id)
+    stale = [name for name, content in built.items() if not (case / name).exists() or (case / name).read_bytes() != content]
     if args.check:
         print("the case is current" if not stale else f"stale: {stale}")
         return 1 if stale else 0
-    for name, content in files().items():
-        (CASE / name).write_bytes(content)
-    print(f"wrote {CASE.relative_to(HERE)}/: case.json, snapshot.json, expected.trace.json (a refusal: no payload)")
+    for name, content in built.items():
+        (case / name).write_bytes(content)
+    print(f"wrote {case.relative_to(HERE)}/: case.json, snapshot.json, expected.trace.json (a refusal: no payload)")
     return 0
 
 
