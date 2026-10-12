@@ -240,5 +240,6 @@
       "reply": "Yes. With a Centor score of 4 and a positive rapid streptococcal test, treat [guide:acute-pharyngitis@5#1]. The criteria that make the score are the fever, exudate, tender nodes and absent cough recorded in the report [guide:acute-pharyngitis@5#0]. Penicillin V for ten days is first line; the chart records no allergy. Advise analgesia and fluids and review if symptoms persist beyond seven days."
     }
   ],
+  "scripted_only": [],
   "result": "6/6 cases passed"
 }

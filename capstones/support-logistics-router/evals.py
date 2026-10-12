@@ -91,13 +91,18 @@ def run_suite(label: str, live: bool, which: str | None) -> Path:
     out = RESULTS / label
     out.mkdir(parents=True, exist_ok=True)
     model_name = "scripted"
+    skipped = []
     for name in case_names():
+        if live and json.loads((CASES / name / "expect.json").read_text(encoding="utf-8")).get("scripted_only"):
+            skipped.append(name)  # the case scripts a bad draft to test a guard; a live model is not asked to misbehave
+            continue
         record = run_case(name, live, which)
         model_name = record["model"] if live else "scripted"
         (out / f"{name}.run.json").write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     profiles = {route: json.loads((common.POLICY / route / "profile.json").read_text(encoding="utf-8")) for route in ("returns", "damaged", "general")}
     meta = {"suite": "c2-support-router/v1", "model": model_name, "live": live, "date": date.today().isoformat(), "impl": impl.name(which),
-            "profiles": {r: {"id": p["id"], "version": p["version"], "sha256": profile_digest(p)} for r, p in profiles.items()}, "cases": case_names()}
+            "profiles": {r: {"id": p["id"], "version": p["version"], "sha256": profile_digest(p)} for r, p in profiles.items()},
+            "cases": [n for n in case_names() if n not in skipped], "scripted_only": skipped}
     (out / "meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
     report(out, write=True)
     return out
@@ -111,7 +116,8 @@ def report(results: Path, write: bool = False) -> dict[str, Any]:
         expect = json.loads((CASES / name / "expect.json").read_text(encoding="utf-8"))
         checks = grade(expect, record)
         graded.append({"id": name, "passed": all(c.passed for c in checks), "checks": [asdict(c) for c in checks], "reply": record["reply"]})
-    out = {**meta, "result": f"{sum(1 for g in graded if g['passed'])}/{len(graded)} cases passed", "cases": graded}
+    skipped = meta.get("scripted_only", [])
+    out = {**meta, "result": f"{sum(1 for g in graded if g['passed'])}/{len(graded)} cases passed" + (f" ({len(skipped)} scripted-only case(s) not run live)" if skipped else ""), "cases": graded}
     if write:
         (results / "report.json").write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return out

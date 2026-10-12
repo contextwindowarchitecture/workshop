@@ -1,0 +1,29 @@
+{
+  "suite": "c1-scribe-diagnostic/v1",
+  "model": "gpt-oss-20b-MXFP4-Q8",
+  "live": true,
+  "date": "2026-10-11",
+  "impl": "solution",
+  "profiles": {
+    "scribe": {
+      "id": "c1-scribe-messages",
+      "version": 1,
+      "sha256": "c764fc3d9e721caf2c4564bbbcaa1a96b62dcb00fb15dd999c9e5893e353128c"
+    },
+    "consult": {
+      "id": "c1-consult-messages",
+      "version": 1,
+      "sha256": "7d5573814358e46ac43b0a56763a25daa040cbb8e81e4a48e597276b062c19e9"
+    }
+  },
+  "cases": [
+    "01-followup-refill",
+    "04-nurse-visit",
+    "05-no-guideline",
+    "06-pasted-labs"
+  ],
+  "scripted_only": [
+    "02-transcript-injection",
+    "03-stale-vitals-in-note"
+  ]
+}

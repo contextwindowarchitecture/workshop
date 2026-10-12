@@ -1,0 +1,834 @@
+{
+  "request": {
+    "client": "c_3001",
+    "account": "acct_7701",
+    "session": "s_c3_02",
+    "asked_at": "2026-10-06T09:05:00Z",
+    "question": "What is my settled ACME position on the ledger, and its value at the last quote?",
+    "device": "known",
+    "faults": []
+  },
+  "intent": {
+    "route": "portfolio",
+    "matched": null
+  },
+  "route": "portfolio",
+  "attempts": [
+    {
+      "tier": "small",
+      "snapshot": {
+        "assembly_time": "2026-10-06T09:05:00Z",
+        "scope": {
+          "tenant": "larkbridge",
+          "user": "c_3001",
+          "session": "s_c3_02",
+          "task": "acct_7701"
+        },
+        "budget": {
+          "input": 3496,
+          "reserved_output": 600,
+          "margin_percent": 15
+        },
+        "profile": {
+          "spec": "cwa/draft",
+          "id": "c3-portfolio-blocks",
+          "version": 1,
+          "route": "portfolio",
+          "model_family": null,
+          "route_policy_version": "c3-portfolio/v1",
+          "placement": [
+            {
+              "slot": "governance.instructions",
+              "wrap": "system"
+            },
+            {
+              "slot": "state.user",
+              "wrap": "xml:client"
+            },
+            {
+              "slot": "state.task",
+              "wrap": "xml:account"
+            },
+            {
+              "slot": "governance.capabilities",
+              "wrap": "tools"
+            },
+            {
+              "slot": "governance.output_contract",
+              "wrap": "xml:format"
+            },
+            {
+              "slot": "evidence.tool_results",
+              "wrap": "xml:market"
+            },
+            {
+              "slot": "interaction.history",
+              "wrap": "xml:history"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "wrap": "xml:article"
+            },
+            {
+              "slot": "interaction.query",
+              "wrap": "xml:message"
+            }
+          ],
+          "evaluation": {
+            "status": "unevaluated",
+            "suite": null,
+            "date": null,
+            "result": null,
+            "artifact": null
+          }
+        },
+        "route_policy": {
+          "route": "portfolio",
+          "version": "c3-portfolio/v1",
+          "clock_skew_seconds": 5,
+          "requires_evidence": true,
+          "producers": {
+            "advice-policy": {
+              "kind": "policy",
+              "slots": [
+                "governance.instructions",
+                "governance.output_contract"
+              ]
+            },
+            "client-state": {
+              "kind": "state",
+              "slots": [
+                "state.user"
+              ]
+            },
+            "ledger": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "risk-screen": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "market-data": {
+              "kind": "retrieval",
+              "slots": [
+                "evidence.tool_results"
+              ]
+            },
+            "kb-search": {
+              "kind": "retrieval",
+              "slots": [
+                "evidence.knowledge"
+              ]
+            },
+            "capability-policy": {
+              "kind": "capability_policy",
+              "slots": [
+                "governance.capabilities"
+              ]
+            },
+            "chat-session": {
+              "kind": "interaction",
+              "slots": [
+                "interaction.history",
+                "interaction.query"
+              ]
+            }
+          },
+          "slots": {
+            "state.task": {
+              "max_age_seconds": 3600,
+              "required_scope": [
+                "tenant",
+                "task"
+              ]
+            },
+            "state.user": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "user"
+              ]
+            },
+            "evidence.knowledge": {
+              "min_relevance": 1.5,
+              "min_included": 1,
+              "dedupe": "exact",
+              "max_per_source": 2,
+              "order_by": [
+                "-relevance",
+                "-freshness"
+              ]
+            },
+            "evidence.tool_results": {
+              "required_scope": [
+                "tenant",
+                "task"
+              ],
+              "order_by": [
+                "-freshness"
+              ],
+              "max_per_source": 2
+            },
+            "interaction.history": {
+              "required_scope": [
+                "session"
+              ],
+              "order_by": [
+                "-freshness"
+              ],
+              "max_tokens": 700
+            },
+            "interaction.query": {
+              "required_scope": [
+                "session"
+              ]
+            }
+          },
+          "tier_upgrades": {
+            "state.user": "protected"
+          },
+          "facts": {
+            "position.ACME": {
+              "precedence": [
+                "ledger",
+                "market-data"
+              ],
+              "scope": [
+                "tenant"
+              ],
+              "on_unresolved": "refuse"
+            }
+          },
+          "fitting_order": [
+            {
+              "slot": "interaction.history",
+              "action": "omit"
+            },
+            {
+              "slot": "evidence.tool_results",
+              "action": "omit"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "action": "omit"
+            }
+          ],
+          "parser": true
+        },
+        "tokenizer": "estimate-utf8/v1",
+        "renderer": "cwa-message-blocks/v1",
+        "batches": [
+          {
+            "producer": {
+              "id": "advice-policy",
+              "kind": "policy"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "policy:portfolio",
+                "slot": "governance.instructions",
+                "source": "app:policy/portfolio/instructions.md",
+                "source_version": "4",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "You are the Larkbridge Wealth portal assistant, answering a client's question about their own account. Use only the client profile, the ledger, the market data, the articles and the conversation you are given.\n\nReport positions and cash from the ledger; the ledger is the record. Where a market-data estimate differs, say the ledger figure and mention the pending action. Quote the last price as an estimate. Never recommend buying or selling.\n\nQueue an order only when the client asked for it, only with a tool you were offered, and never for more units than the ledger holds. Never include an account number, IBAN or card number in your reply. Cite the article paragraph id for every rule you state.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "contract:portfolio",
+                "slot": "governance.output_contract",
+                "source": "app:policy/portfolio/contract.md",
+                "source_version": "2",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "Reply as JSON with exactly these keys: \"answer\" (plain text, at most 150 words), \"figures\" (a list of {\"symbol\", \"units\", \"value\"} for every holding you state, units as an integer and value as a number in GBP), \"citations\" (the list of article paragraph ids you relied on), \"actions\" (a list, possibly empty, of {\"tool\", \"arguments\"} objects using only the tools you were offered). No other keys, no text outside the JSON.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "client-state",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "client:c_3001",
+                "slot": "state.user",
+                "source": "clients-db:c_3001",
+                "source_version": "7",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-06T09:05:00Z",
+                "scope": {
+                  "tenant": "larkbridge",
+                  "user": "c_3001"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Client Ingrid Sorensen (c_3001): advisory mandate, balanced risk tier, KYC verified, country GB."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ledger",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "ledger:acct_7701",
+                "slot": "state.task",
+                "source": "custodian-ledger:acct_7701",
+                "source_version": "31",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-06T08:30:00Z",
+                "scope": {
+                  "tenant": "larkbridge",
+                  "task": "acct_7701"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Ledger for the account as of 2026-10-06T08:30:00Z: cash 12400.50 GBP. Positions: ACME (Acme Industrial plc): 1000 units settled, average cost 36.20; GLOBX (Globex Capital): 250 units settled, average cost 101.00."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "risk-screen",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "risk:s_c3_02",
+                "slot": "state.task",
+                "source": "risk-screen:s_c3_02",
+                "source_version": "rules/v2",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-06T09:05:00Z",
+                "scope": {
+                  "tenant": "larkbridge",
+                  "task": "acct_7701"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Risk screen for this session: low. No signals."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "market-data",
+              "kind": "retrieval"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "quote:ACME",
+                "slot": "evidence.tool_results",
+                "source": "market-data:quotes/ACME",
+                "source_version": "2026-10-06T08:58:00Z",
+                "authority": "observation",
+                "trust": "unverified",
+                "freshness": "2026-10-06T08:58:00Z",
+                "scope": {
+                  "tenant": "larkbridge",
+                  "task": "acct_7701"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Last quote ACME: 42.10 GBP at 2026-10-06T08:58:00Z (vendor feed, may be delayed)."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "quote:GLOBX",
+                "slot": "evidence.tool_results",
+                "source": "market-data:quotes/GLOBX",
+                "source_version": "2026-10-06T08:58:00Z",
+                "authority": "observation",
+                "trust": "unverified",
+                "freshness": "2026-10-06T08:58:00Z",
+                "scope": {
+                  "tenant": "larkbridge",
+                  "task": "acct_7701"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Last quote GLOBX: 118.30 GBP at 2026-10-06T08:58:00Z (vendor feed, may be delayed)."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "vendor-position:acct_7701:ACME",
+                "slot": "evidence.tool_results",
+                "source": "market-data:positions/acct_7701/ACME",
+                "source_version": "2026-10-06T08:58:00Z",
+                "authority": "observation",
+                "trust": "unverified",
+                "freshness": "2026-10-06T08:58:00Z",
+                "scope": {
+                  "tenant": "larkbridge",
+                  "task": "acct_7701"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Vendor estimate: ACME 1200 units (corporate-actions feed: 6-for-5 scrip issue applied 2026-10-03, pending settlement)."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "kb-search",
+              "kind": "retrieval"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:trade-settlement@4#0",
+                "slot": "evidence.knowledge",
+                "source": "kb:trade-settlement",
+                "source_version": "4",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-05-20T09:00:00Z",
+                "relevance": 7.012,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Market orders placed during exchange hours are sent immediately and settle two business days after the trade date. An order queued through the assistant is not placed until the client confirms it in the portal; the confirmation shows the symbol, side, quantity and the estimated value at the last quote."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:trade-settlement@4#1",
+                "slot": "evidence.knowledge",
+                "source": "kb:trade-settlement",
+                "source_version": "4",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-05-20T09:00:00Z",
+                "relevance": 6.525,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "A sell order cannot exceed the settled units the ledger holds for the account. Units from a corporate action count only once the custodian has settled them and they appear on the ledger."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:corporate-actions@2#1",
+                "slot": "evidence.knowledge",
+                "source": "kb:corporate-actions",
+                "source_version": "2",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-02-02T09:00:00Z",
+                "relevance": 6.409,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "The ledger is the record. When the portal and a vendor estimate differ, the ledger figure is reported and the pending action is mentioned with its expected settlement date."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:trade-settlement@4#2",
+                "slot": "evidence.knowledge",
+                "source": "kb:trade-settlement",
+                "source_version": "4",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-05-20T09:00:00Z",
+                "relevance": 4.65,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Prices shown in the portal are the vendor's last quote and may be delayed by up to fifteen minutes. Valuations are estimates until settlement."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:fees-and-charges@3#1",
+                "slot": "evidence.knowledge",
+                "source": "kb:fees-and-charges",
+                "source_version": "3",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-04-01T09:00:00Z",
+                "relevance": 3.974,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Custody is charged at 0.10% a year on all accounts. There is no charge for holding cash, and no exit fee on transfers out of the platform."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "capability-policy",
+              "kind": "capability_policy"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "cap:open_case",
+                "slot": "governance.capabilities",
+                "source": "capability-policy:larkbridge-portal/open_case",
+                "source_version": "larkbridge-caps/v2+portal-tools/2026.10",
+                "freshness": "2026-10-06T09:05:00Z",
+                "body": "{\"description\": \"Open a service case for the fraud, disputes, access or general team.\", \"input_schema\": {\"additionalProperties\": false, \"properties\": {\"category\": {\"enum\": [\"fraud\", \"dispute\", \"access\", \"general\"], \"type\": \"string\"}, \"client\": {\"type\": \"string\"}}, \"required\": [\"client\", \"category\"], \"type\": \"object\"}, \"name\": \"open_case\"}",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "cap:schedule_advisor_call",
+                "slot": "governance.capabilities",
+                "source": "capability-policy:larkbridge-portal/schedule_advisor_call",
+                "source_version": "larkbridge-caps/v2+portal-tools/2026.10",
+                "freshness": "2026-10-06T09:05:00Z",
+                "body": "{\"description\": \"Book a call with this client's advisor.\", \"input_schema\": {\"additionalProperties\": false, \"properties\": {\"client\": {\"type\": \"string\"}, \"topic\": {\"type\": \"string\"}}, \"required\": [\"client\", \"topic\"], \"type\": \"object\"}, \"name\": \"schedule_advisor_call\"}",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              }
+            ],
+            "excluded": [
+              {
+                "item_id": "cap:place_trade",
+                "reason": "capability_not_allowed",
+                "stage": "producer"
+              },
+              {
+                "item_id": "cap:transfer_funds",
+                "reason": "capability_not_allowed",
+                "stage": "producer"
+              }
+            ]
+          },
+          {
+            "producer": {
+              "id": "chat-session",
+              "kind": "interaction"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c3_02:0001",
+                "slot": "interaction.query",
+                "source": "portal-chat:s_c3_02",
+                "source_version": "1",
+                "authority": "user",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-06T09:05:00Z",
+                "scope": {
+                  "session": "s_c3_02"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "What is my settled ACME position on the ledger, and its value at the last quote?"
+              }
+            ],
+            "excluded": []
+          }
+        ],
+        "conflicts": [
+          {
+            "id": "fact:position.ACME",
+            "kind": "fact",
+            "fact": "position.ACME",
+            "items": [
+              "ledger:acct_7701",
+              "vendor-position:acct_7701:ACME"
+            ]
+          }
+        ],
+        "capabilities": {
+          "policy_producer": "capability-policy",
+          "allow_list_version": "larkbridge-caps/v2",
+          "allowed_ids": [
+            "cap:open_case",
+            "cap:schedule_advisor_call"
+          ]
+        }
+      },
+      "trace": {
+        "profile": {
+          "id": "c3-portfolio-blocks",
+          "version": 1
+        },
+        "budget": {
+          "input": 3496,
+          "reserved_output": 600,
+          "margin_percent": 15
+        },
+        "result": {
+          "input_tokens": 910,
+          "hash": "a4bf3fdada7e7fcb2289d9a6b182cdd5c4c85caf4256b306ed06818ecdd8ec52"
+        },
+        "included": [
+          {
+            "slot": "governance.instructions",
+            "item_id": "policy:portfolio",
+            "tokens": 176,
+            "source_version": "4",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.user",
+            "item_id": "client:c_3001",
+            "tokens": 24,
+            "source_version": "7",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.task",
+            "item_id": "ledger:acct_7701",
+            "tokens": 53,
+            "source_version": "31",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.task",
+            "item_id": "risk:s_c3_02",
+            "tokens": 12,
+            "source_version": "rules/v2",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "governance.capabilities",
+            "item_id": "cap:open_case",
+            "tokens": 85,
+            "source_version": "larkbridge-caps/v2+portal-tools/2026.10",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "governance.capabilities",
+            "item_id": "cap:schedule_advisor_call",
+            "tokens": 67,
+            "source_version": "larkbridge-caps/v2+portal-tools/2026.10",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "governance.output_contract",
+            "item_id": "contract:portfolio",
+            "tokens": 106,
+            "source_version": "2",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.tool_results",
+            "item_id": "quote:ACME",
+            "tokens": 21,
+            "source_version": "2026-10-06T08:58:00Z",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.tool_results",
+            "item_id": "quote:GLOBX",
+            "tokens": 21,
+            "source_version": "2026-10-06T08:58:00Z",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:corporate-actions@2#1",
+            "tokens": 43,
+            "source_version": "2",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:fees-and-charges@3#1",
+            "tokens": 35,
+            "source_version": "3",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:trade-settlement@4#0",
+            "tokens": 76,
+            "source_version": "4",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:trade-settlement@4#1",
+            "tokens": 47,
+            "source_version": "4",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "interaction.query",
+            "item_id": "turn:s_c3_02:0001",
+            "tokens": 20,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          }
+        ],
+        "compressed": [],
+        "excluded": [
+          {
+            "item_id": "cap:place_trade",
+            "reason": "capability_not_allowed",
+            "stage": "producer"
+          },
+          {
+            "item_id": "cap:transfer_funds",
+            "reason": "capability_not_allowed",
+            "stage": "producer"
+          },
+          {
+            "item_id": "vendor-position:acct_7701:ACME",
+            "reason": "conflict_lost",
+            "stage": "assembler",
+            "slot": "evidence.tool_results"
+          },
+          {
+            "item_id": "kb:trade-settlement@4#2",
+            "reason": "source_diversity_cap",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          }
+        ],
+        "conflicts": [
+          {
+            "group_id": "fact:position.ACME",
+            "kind": "fact",
+            "items": [
+              "ledger:acct_7701",
+              "vendor-position:acct_7701:ACME"
+            ],
+            "decided_by": "policy",
+            "resolution": "resolved",
+            "winner": "ledger:acct_7701"
+          }
+        ],
+        "refused": {
+          "bool": false,
+          "reason": null
+        },
+        "context": {
+          "spec": "cwa/draft",
+          "assembly_time": "2026-10-06T09:05:00Z",
+          "route_policy_version": "c3-portfolio/v1",
+          "tokenizer": "estimate-utf8/v1",
+          "renderer": "cwa-message-blocks/v1",
+          "snapshot_digest": "e71099fdfb010cdf10de63a2dbc2e2e7960f338ec85029e2cbf11b09c90ebb44"
+        },
+        "defaults_filled": []
+      },
+      "payload": "{\"messages\":[{\"content\":[{\"id\":\"client:c_3001\",\"text\":\"<client id=\\\"client:c_3001\\\">\\nClient Ingrid Sorensen (c_3001): advisory mandate, balanced risk tier, KYC verified, country GB.\\n</client>\\n\"},{\"id\":\"ledger:acct_7701\",\"text\":\"<account id=\\\"ledger:acct_7701\\\">\\nLedger for the account as of 2026-10-06T08:30:00Z: cash 12400.50 GBP. Positions: ACME (Acme Industrial plc): 1000 units settled, average cost 36.20; GLOBX (Globex Capital): 250 units settled, average cost 101.00.\\n</account>\\n\"},{\"id\":\"risk:s_c3_02\",\"text\":\"<account id=\\\"risk:s_c3_02\\\">\\nRisk screen for this session: low. No signals.\\n</account>\\n\"},{\"id\":\"contract:portfolio\",\"text\":\"<format id=\\\"contract:portfolio\\\">\\nReply as JSON with exactly these keys: \\\"answer\\\" (plain text, at most 150 words), \\\"figures\\\" (a list of {\\\"symbol\\\", \\\"units\\\", \\\"value\\\"} for every holding you state, units as an integer and value as a number in GBP), \\\"citations\\\" (the list of article paragraph ids you relied on), \\\"actions\\\" (a list, possibly empty, of {\\\"tool\\\", \\\"arguments\\\"} objects using only the tools you were offered). No other keys, no text outside the JSON.\\n</format>\\n\"},{\"id\":\"quote:ACME\",\"text\":\"<market id=\\\"quote:ACME\\\">\\nLast quote ACME: 42.10 GBP at 2026-10-06T08:58:00Z (vendor feed, may be delayed).\\n</market>\\n\"},{\"id\":\"quote:GLOBX\",\"text\":\"<market id=\\\"quote:GLOBX\\\">\\nLast quote GLOBX: 118.30 GBP at 2026-10-06T08:58:00Z (vendor feed, may be delayed).\\n</market>\\n\"},{\"id\":\"kb:corporate-actions@2#1\",\"text\":\"<article id=\\\"kb:corporate-actions@2#1\\\">\\nThe ledger is the record. When the portal and a vendor estimate differ, the ledger figure is reported and the pending action is mentioned with its expected settlement date.\\n</article>\\n\"},{\"id\":\"kb:fees-and-charges@3#1\",\"text\":\"<article id=\\\"kb:fees-and-charges@3#1\\\">\\nCustody is charged at 0.10% a year on all accounts. There is no charge for holding cash, and no exit fee on transfers out of the platform.\\n</article>\\n\"},{\"id\":\"kb:trade-settlement@4#0\",\"text\":\"<article id=\\\"kb:trade-settlement@4#0\\\">\\nMarket orders placed during exchange hours are sent immediately and settle two business days after the trade date. An order queued through the assistant is not placed until the client confirms it in the portal; the confirmation shows the symbol, side, quantity and the estimated value at the last quote.\\n</article>\\n\"},{\"id\":\"kb:trade-settlement@4#1\",\"text\":\"<article id=\\\"kb:trade-settlement@4#1\\\">\\nA sell order cannot exceed the settled units the ledger holds for the account. Units from a corporate action count only once the custodian has settled them and they appear on the ledger.\\n</article>\\n\"},{\"id\":\"turn:s_c3_02:0001\",\"text\":\"<message id=\\\"turn:s_c3_02:0001\\\">\\nWhat is my settled ACME position on the ledger, and its value at the last quote?\\n</message>\\n\"}],\"role\":\"user\"}],\"system\":[{\"id\":\"policy:portfolio\",\"text\":\"You are the Larkbridge Wealth portal assistant, answering a client's question about their own account. Use only the client profile, the ledger, the market data, the articles and the conversation you are given.\\n\\nReport positions and cash from the ledger; the ledger is the record. Where a market-data estimate differs, say the ledger figure and mention the pending action. Quote the last price as an estimate. Never recommend buying or selling.\\n\\nQueue an order only when the client asked for it, only with a tool you were offered, and never for more units than the ledger holds. Never include an account number, IBAN or card number in your reply. Cite the article paragraph id for every rule you state.\"}],\"tools\":[{\"id\":\"cap:open_case\",\"text\":\"{\\\"description\\\": \\\"Open a service case for the fraud, disputes, access or general team.\\\", \\\"input_schema\\\": {\\\"additionalProperties\\\": false, \\\"properties\\\": {\\\"category\\\": {\\\"enum\\\": [\\\"fraud\\\", \\\"dispute\\\", \\\"access\\\", \\\"general\\\"], \\\"type\\\": \\\"string\\\"}, \\\"client\\\": {\\\"type\\\": \\\"string\\\"}}, \\\"required\\\": [\\\"client\\\", \\\"category\\\"], \\\"type\\\": \\\"object\\\"}, \\\"name\\\": \\\"open_case\\\"}\"},{\"id\":\"cap:schedule_advisor_call\",\"text\":\"{\\\"description\\\": \\\"Book a call with this client's advisor.\\\", \\\"input_schema\\\": {\\\"additionalProperties\\\": false, \\\"properties\\\": {\\\"client\\\": {\\\"type\\\": \\\"string\\\"}, \\\"topic\\\": {\\\"type\\\": \\\"string\\\"}}, \\\"required\\\": [\\\"client\\\", \\\"topic\\\"], \\\"type\\\": \\\"object\\\"}, \\\"name\\\": \\\"schedule_advisor_call\\\"}\"}]}"
+    }
+  ],
+  "draft": "{\"answer\":\"Your settled ACME position is 1,000 units on the ledger. Using the most recent quote of £42.10, the current value is £42,100.00.\",\"figures\":[{\"symbol\":\"ACME\",\"units\":1000,\"value\":42100.0}],\"citations\":[\"kb:corporate-actions@2#1\",\"kb:trade-settlement@4#0\"],\"actions\":[]}",
+  "parsed": {
+    "answer": "Your settled ACME position is 1,000 units on the ledger. Using the most recent quote of £42.10, the current value is £42,100.00.",
+    "figures": [
+      {
+        "symbol": "ACME",
+        "units": 1000,
+        "value": 42100.0
+      }
+    ],
+    "citations": [
+      "kb:corporate-actions@2#1",
+      "kb:trade-settlement@4#0"
+    ],
+    "actions": []
+  },
+  "guards": [
+    {
+      "name": "citations_were_sent",
+      "ok": true,
+      "reason": "2 citation(s), all sent"
+    },
+    {
+      "name": "actions_were_offered",
+      "ok": true,
+      "reason": "0 action(s), all offered"
+    },
+    {
+      "name": "no_account_identifiers",
+      "ok": true,
+      "reason": "no account identifier in the reply"
+    },
+    {
+      "name": "trade_guard",
+      "ok": true,
+      "reason": "every order is this client's and within the ledger's settled units"
+    },
+    {
+      "name": "figures_match_ledger",
+      "ok": true,
+      "reason": "1 stated position(s), all the ledger's"
+    }
+  ],
+  "reply": "Your settled ACME position is 1,000 units on the ledger. Using the most recent quote of £42.10, the current value is £42,100.00.",
+  "actions_queued": [],
+  "outcome": "answered",
+  "model": "gpt-oss-20b-MXFP4-Q8"
+}

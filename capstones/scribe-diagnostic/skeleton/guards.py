@@ -1,6 +1,6 @@
 """Your screens, run on the parsed draft outside the model (R-5):
 
-    actions_were_offered(actions, granted) -> Decision          every action's tool is in the set the final request offered (cap ids without "cap:")
+    actions_were_offered(actions, granted) -> Decision          every action's tool is in the set the final request offered (cap ids without "cap:") and its arguments match that tool's input_schema in data/tools.json
     prescription_guard(actions, request) -> Decision            a refill names an active chart medicine, this patient, and the clinician prescribes
     vitals_match_state(objective, current, stale) -> Decision   the objective records the current BP and none the route decided against
     citations_were_sent(citations, sent) -> Decision            every cited paragraph id was in the final request

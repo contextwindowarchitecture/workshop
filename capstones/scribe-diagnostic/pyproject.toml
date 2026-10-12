@@ -8,6 +8,7 @@ requires-python = ">=3.12"
 dependencies = [
     "contextwindowarchitecture-assembler",
     "openai>=2",
+    "jsonschema>=4.23",
 ]
 
 [tool.uv]

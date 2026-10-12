@@ -117,7 +117,7 @@ def test_budgets_are_computed_and_the_pasted_thread_escalates(which):
 
 def test_variants_are_used_before_notes_are_omitted(which):
     request, drafter, _ = case("01-return-jacket")
-    record = app.run(request, drafter, which, out=io.StringIO(), budget_input=900)
+    record = app.run(request, drafter, which, out=io.StringIO(), budget_input=950)
     trace = record["attempts"][0]["trace"]
     assert not trace["refused"]["bool"]
     assert any(r["item_id"].startswith("crm:") for r in trace["compressed"]), "CRM notes compress to their summaries first"

@@ -51,6 +51,15 @@ def risk_decided(document: dict[str, Any], trace: dict[str, Any]) -> str:
     return "low"
 
 
+def unfenced(draft: str) -> str:
+    """A model that wraps its JSON in a Markdown fence still answered in JSON; the fence is not part of the contract."""
+    text = draft.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1] if "\n" in text else text[3:]
+        text = text.rsplit("```", 1)[0]
+    return text.strip()
+
+
 def run(request: Request, drafter: Any, which: str | None = None, out: TextIO = sys.stdout, budget_input: int | None = None) -> dict[str, Any]:
     intent, producers, context, guards = (impl.module(m, which) for m in ("intent", "producers", "context", "guards"))
     table = common.routes()
@@ -79,7 +88,7 @@ def run(request: Request, drafter: Any, which: str | None = None, out: TextIO = 
     draft = drafter.draft_for(result.payload)
     record["draft"] = draft
     try:
-        parsed = json.loads(draft)
+        parsed = json.loads(unfenced(draft))
         assert isinstance(parsed, dict) and set(parsed) == CONTRACTS[route]
         assert isinstance(parsed["citations"], list) and isinstance(parsed["actions"], list)
     except (ValueError, AssertionError, TypeError, KeyError):

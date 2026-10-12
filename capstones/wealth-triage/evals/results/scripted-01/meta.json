@@ -23,5 +23,6 @@
     "04-self-directed-sell",
     "05-fraud-report",
     "06-pasted-statement"
-  ]
+  ],
+  "scripted_only": []
 }

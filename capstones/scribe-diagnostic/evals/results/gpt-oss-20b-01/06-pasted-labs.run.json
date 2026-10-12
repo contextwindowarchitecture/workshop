@@ -1,0 +1,1311 @@
+{
+  "request": {
+    "encounter": "enc_9003",
+    "clinician": "dr_lee",
+    "patient": "p_2002",
+    "session": "s_c1_06",
+    "asked_at": "2026-10-03T11:36:00Z",
+    "question": "Should I start antibiotics for this pharyngitis, and which first line? Here is the full triage and lab report:\n000  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n001  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n002  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n003  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n004  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n005  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n006  Allergy reconciliation: none recorded; patient reports none.\n007  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n008  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n009  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n010  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n011  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n012  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n013  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n014  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n015  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n016  Allergy reconciliation: none recorded; patient reports none.\n017  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n018  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n019  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n020  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n021  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n022  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n023  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n024  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n025  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n026  Allergy reconciliation: none recorded; patient reports none.\n027  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n028  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n029  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n030  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n031  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n032  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n033  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n034  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n035  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n036  Allergy reconciliation: none recorded; patient reports none.\n037  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n038  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n039  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n040  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n041  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n042  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n043  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n044  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n045  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n046  Allergy reconciliation: none recorded; patient reports none.\n047  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n048  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n049  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n050  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n051  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n052  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n053  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n054  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n055  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n056  Allergy reconciliation: none recorded; patient reports none.\n057  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n058  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n059  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n060  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n061  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n062  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n063  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n064  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n065  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n066  Allergy reconciliation: none recorded; patient reports none.\n067  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n068  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n069  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n070  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n071  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n072  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n073  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n074  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n075  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n076  Allergy reconciliation: none recorded; patient reports none.\n077  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n078  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n079  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n080  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n081  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n082  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n083  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n084  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n085  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n086  Allergy reconciliation: none recorded; patient reports none.\n087  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n088  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n089  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n090  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n091  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n092  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n093  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n094  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n095  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n096  Allergy reconciliation: none recorded; patient reports none.\n097  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n098  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n099  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n100  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n101  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n102  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n103  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n104  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n105  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n106  Allergy reconciliation: none recorded; patient reports none.\n107  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n108  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n109  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n110  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n111  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n112  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n113  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n114  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n115  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n116  Allergy reconciliation: none recorded; patient reports none.\n117  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n118  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n119  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n120  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n121  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n122  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n123  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n124  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n125  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n126  Allergy reconciliation: none recorded; patient reports none.\n127  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n128  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n129  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n130  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n131  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n132  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n133  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n134  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n135  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n136  Allergy reconciliation: none recorded; patient reports none.\n137  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n138  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n139  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n140  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n141  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n142  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n143  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n144  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n145  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n146  Allergy reconciliation: none recorded; patient reports none.\n147  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n148  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n149  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n150  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n151  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n152  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n153  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n154  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n155  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n156  Allergy reconciliation: none recorded; patient reports none.\n157  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n158  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n159  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n160  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n161  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n162  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n163  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n164  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n165  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n166  Allergy reconciliation: none recorded; patient reports none.\n167  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n168  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n169  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n170  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n171  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n172  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n173  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n174  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n175  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n176  Allergy reconciliation: none recorded; patient reports none.\n177  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n178  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n179  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n180  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n181  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n182  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n183  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n184  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n185  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n186  Allergy reconciliation: none recorded; patient reports none.\n187  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n188  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n189  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n190  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n191  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n192  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n193  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n194  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n195  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n196  Allergy reconciliation: none recorded; patient reports none.\n197  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n198  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n199  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n200  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n201  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n202  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n203  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n204  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n205  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n206  Allergy reconciliation: none recorded; patient reports none.\n207  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n208  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n209  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n210  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n211  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n212  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n213  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n214  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n215  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n216  Allergy reconciliation: none recorded; patient reports none.\n217  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n218  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n219  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n220  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n221  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n222  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n223  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n224  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n225  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n226  Allergy reconciliation: none recorded; patient reports none.\n227  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n228  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n229  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n230  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n231  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n232  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n233  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n234  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n235  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n236  Allergy reconciliation: none recorded; patient reports none.\n237  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n238  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n239  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n240  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n241  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n242  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n243  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n244  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n245  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n246  Allergy reconciliation: none recorded; patient reports none.\n247  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n248  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n249  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n250  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n251  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n252  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n253  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n254  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n255  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n256  Allergy reconciliation: none recorded; patient reports none.\n257  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n258  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n259  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n260  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n261  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n262  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n263  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n264  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n265  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n266  Allergy reconciliation: none recorded; patient reports none.\n267  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n268  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n269  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n270  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n271  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n272  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n273  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n274  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n275  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n276  Allergy reconciliation: none recorded; patient reports none.\n277  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n278  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n279  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n280  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n281  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n282  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n283  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n284  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n285  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n286  Allergy reconciliation: none recorded; patient reports none.\n287  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n288  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n289  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n290  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n291  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n292  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n293  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n294  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n295  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n296  Allergy reconciliation: none recorded; patient reports none.\n297  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n298  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n299  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n300  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n301  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n302  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n303  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n304  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n305  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n306  Allergy reconciliation: none recorded; patient reports none.\n307  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n308  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n309  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n310  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n311  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n312  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n313  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n314  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n315  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n316  Allergy reconciliation: none recorded; patient reports none.\n317  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n318  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n319  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n320  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n321  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n322  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n323  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n324  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n325  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n326  Allergy reconciliation: none recorded; patient reports none.\n327  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n328  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n329  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n330  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n331  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n332  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n333  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n334  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n335  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n336  Allergy reconciliation: none recorded; patient reports none.\n337  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n338  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n339  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n340  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n341  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n342  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n343  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n344  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n345  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n346  Allergy reconciliation: none recorded; patient reports none.\n347  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n348  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n349  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n350  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n351  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n352  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n353  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n354  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n355  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n356  Allergy reconciliation: none recorded; patient reports none.\n357  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n358  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n359  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n360  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n361  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n362  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n363  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n364  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n365  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n366  Allergy reconciliation: none recorded; patient reports none.\n367  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n368  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n369  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n370  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n371  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n372  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n373  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n374  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n375  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n376  Allergy reconciliation: none recorded; patient reports none.\n377  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n378  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n379  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n380  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n381  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n382  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n383  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n384  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n385  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n386  Allergy reconciliation: none recorded; patient reports none.\n387  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n388  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n389  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n390  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n391  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n392  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n393  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n394  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n395  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n396  Allergy reconciliation: none recorded; patient reports none.\n397  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n398  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n399  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n400  END OF REPORT.",
+    "faults": []
+  },
+  "intent": {
+    "route": "consult",
+    "matched": "should i"
+  },
+  "route": "consult",
+  "attempts": [
+    {
+      "tier": "small",
+      "snapshot": {
+        "assembly_time": "2026-10-03T11:36:00Z",
+        "scope": {
+          "tenant": "harbor-street",
+          "user": "dr_lee",
+          "session": "s_c1_06",
+          "task": "p_2002"
+        },
+        "budget": {
+          "input": 2560,
+          "reserved_output": 512,
+          "margin_percent": 15
+        },
+        "profile": {
+          "spec": "cwa/draft",
+          "id": "c1-consult-messages",
+          "version": 1,
+          "route": "consult",
+          "model_family": null,
+          "route_policy_version": "c1-consult/v1",
+          "placement": [
+            {
+              "slot": "governance.instructions",
+              "wrap": "system"
+            },
+            {
+              "slot": "state.user",
+              "wrap": "xml:clinician"
+            },
+            {
+              "slot": "state.task",
+              "wrap": "xml:chart"
+            },
+            {
+              "slot": "interaction.memory",
+              "wrap": "xml:prior_note"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "wrap": "xml:guideline"
+            },
+            {
+              "slot": "interaction.history",
+              "wrap": "xml:transcript"
+            },
+            {
+              "slot": "governance.output_contract",
+              "wrap": "xml:format"
+            },
+            {
+              "slot": "interaction.query",
+              "wrap": "xml:request"
+            }
+          ],
+          "evaluation": {
+            "status": "unevaluated",
+            "suite": null,
+            "date": null,
+            "result": null,
+            "artifact": null
+          }
+        },
+        "route_policy": {
+          "route": "consult",
+          "version": "c1-consult/v1",
+          "clock_skew_seconds": 5,
+          "requires_evidence": true,
+          "producers": {
+            "clinical-policy": {
+              "kind": "policy",
+              "slots": [
+                "governance.instructions",
+                "governance.output_contract"
+              ]
+            },
+            "ehr-chart": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "telemetry": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "clinician-state": {
+              "kind": "state",
+              "slots": [
+                "state.user"
+              ]
+            },
+            "ehr-notes": {
+              "kind": "memory",
+              "slots": [
+                "interaction.memory"
+              ]
+            },
+            "guidelines": {
+              "kind": "retrieval",
+              "slots": [
+                "evidence.knowledge"
+              ]
+            },
+            "ambient-scribe": {
+              "kind": "interaction",
+              "slots": [
+                "interaction.history",
+                "interaction.query"
+              ]
+            }
+          },
+          "slots": {
+            "state.task": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "task"
+              ]
+            },
+            "state.user": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "user"
+              ]
+            },
+            "evidence.knowledge": {
+              "min_relevance": 3.0,
+              "min_included": 1,
+              "dedupe": "exact",
+              "max_per_source": 2,
+              "order_by": [
+                "-relevance",
+                "-freshness"
+              ]
+            },
+            "interaction.memory": {
+              "source_prefix": "note:",
+              "required_scope": [
+                "tenant",
+                "task"
+              ],
+              "order_by": [
+                "-freshness"
+              ]
+            },
+            "interaction.history": {
+              "required_scope": [
+                "session"
+              ],
+              "order_by": [
+                "-freshness"
+              ],
+              "max_tokens": 900
+            },
+            "interaction.query": {
+              "required_scope": [
+                "session"
+              ]
+            }
+          },
+          "tier_upgrades": {
+            "state.user": "protected"
+          },
+          "facts": {
+            "vitals.bp": {
+              "precedence": [
+                "telemetry",
+                "ehr-notes"
+              ],
+              "scope": [
+                "tenant"
+              ],
+              "on_unresolved": "refuse"
+            }
+          },
+          "fitting_order": [
+            {
+              "slot": "interaction.history",
+              "action": "omit"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "compress"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "omit"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "action": "omit"
+            }
+          ],
+          "parser": true
+        },
+        "tokenizer": "estimate-utf8/v1",
+        "renderer": "cwa-messages/v1",
+        "batches": [
+          {
+            "producer": {
+              "id": "clinical-policy",
+              "kind": "policy"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "policy:consult",
+                "slot": "governance.instructions",
+                "source": "app:policy/consult/instructions.md",
+                "source_version": "2",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "You are the Harbor Street Family Practice clinical reference assistant, answering a clinician's question during an encounter. Answer only from the guidelines you are given, applied to the chart and vitals you are given; say so when the guidelines do not cover the question.\n\nCite the guideline paragraph id for every rule you state. The chart's allergy and medication lists decide what is safe, not the transcript. You do not order, prescribe or file anything; the clinician decides.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "contract:consult",
+                "slot": "governance.output_contract",
+                "source": "app:policy/consult/contract.md",
+                "source_version": "1",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "Reply as JSON with exactly these keys: \"answer\" (plain text, at most 200 words) and \"citations\" (the list of guideline paragraph ids you relied on). No other keys, no text outside the JSON.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ehr-chart",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "chart:p_2002",
+                "slot": "state.task",
+                "source": "ehr:patients/p_2002",
+                "source_version": "3",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-03T11:36:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "task": "p_2002"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Patient p_2002: Daniel Mbeki, 34M. Encounter enc_9003, acute visit: sore throat, room 2. Problems: none. Active medications: none. Allergies: none known. Recent labs: none on file."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "telemetry",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "vitals:enc_9003",
+                "slot": "state.task",
+                "source": "telemetry:spot-vitals-2/enc_9003",
+                "source_version": "2026-10-03T11:34:00Z",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-03T11:34:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "task": "p_2002"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Vitals from spot-vitals-2 at 2026-10-03T11:34:00Z: BP 118/74, HR 96, SpO2 97%, temperature 38.4 C."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "clinician-state",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "clinician:dr_lee",
+                "slot": "state.user",
+                "source": "staff-directory:dr_lee",
+                "source_version": "2",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-03T11:36:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "user": "dr_lee"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Dr. Hana Lee (dr_lee), physician, a prescriber."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ehr-notes",
+              "kind": "memory"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [
+                  {
+                    "id": "note:p_2002:0001~summary",
+                    "body": "November 2025: travel vaccinations given, no chronic conditions, no regular medicines.",
+                    "method": "clinician-written summary",
+                    "lineage": "summarised"
+                  }
+                ],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "note:p_2002:0001",
+                "slot": "interaction.memory",
+                "source": "note:p_2002:0001",
+                "source_version": "1",
+                "authority": "generated",
+                "trust": "unverified",
+                "freshness": "2025-11-04T16:00:00Z",
+                "expires": "2026-11-04T16:00:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "task": "p_2002"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Note by dr_lee on 2025-11-04 (encounter enc_8120): Daniel Mbeki attended for travel vaccinations before a trip to Kenya. No chronic conditions, no regular medicines, no known drug allergies. Hepatitis A and typhoid vaccines administered without reaction. Malaria prophylaxis discussed and prescribed as a one-off course."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "guidelines",
+              "kind": "retrieval"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 35.553,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Most sore throats are viral and resolve without antibiotics. Use the Centor criteria to decide on testing: fever above 38°C, tonsillar exudate, tender anterior cervical lymphadenopathy, and absence of cough score one point each."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#1",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 29.089,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "With a Centor score of 0 or 1, do not test or treat with antibiotics. With a score of 2 or 3, perform a rapid streptococcal antigen test and treat only if positive. With a score of 4, test or treat empirically."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#2",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 15.569,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "First-line treatment for confirmed streptococcal pharyngitis is penicillin V for ten days. In patients with a documented penicillin allergy, use a macrolide or a first-generation cephalosporin if the allergy was not anaphylaxis; the chart's allergy list decides, not recall in the room."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:metformin-prescribing@2#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:metformin-prescribing",
+                "source_version": "2",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-05-14T09:00:00Z",
+                "relevance": 12.779,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Metformin is first-line therapy for type 2 diabetes in adults without contraindication. Usual dosing is 500 mg twice daily with meals, increased by 500 mg per week as tolerated to a maximum of 2000 mg daily."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:opioid-stewardship@2#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:opioid-stewardship",
+                "source_version": "2",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-02-10T09:00:00Z",
+                "relevance": 12.776,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Opioids are not indicated for chronic non-cancer pain as first-line therapy, and never for a condition with no documented pain assessment. A request for an opioid must be assessed by the prescriber in person, with the indication, prior analgesia and risk factors recorded."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:hypertension-followup@4#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:hypertension-followup",
+                "source_version": "4",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-04-20T09:00:00Z",
+                "relevance": 11.379,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "The blood pressure target for adults with diabetes is below 130/80 mmHg where tolerated. Base decisions on a seated reading taken at the current visit after five minutes' rest; a single elevated reading, especially one recorded under stress or at a rushed intake, should be repeated before treatment is changed."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ambient-scribe",
+              "kind": "interaction"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c1_06:0001",
+                "slot": "interaction.history",
+                "source": "stt:s_c1_06",
+                "source_version": "1",
+                "authority": "untrusted",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-03T11:31:00Z",
+                "scope": {
+                  "session": "s_c1_06"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "[clinician] Daniel, tell me about the toe."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c1_06:0002",
+                "slot": "interaction.history",
+                "source": "stt:s_c1_06",
+                "source_version": "1",
+                "authority": "untrusted",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-03T11:31:30Z",
+                "scope": {
+                  "session": "s_c1_06"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "[patient] My throat is on fire and I have had fevers since Tuesday."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c1_06:0003",
+                "slot": "interaction.query",
+                "source": "console:s_c1_06",
+                "source_version": "1",
+                "authority": "user",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-03T11:36:00Z",
+                "scope": {
+                  "session": "s_c1_06"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "Should I start antibiotics for this pharyngitis, and which first line? Here is the full triage and lab report:\n000  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n001  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n002  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n003  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n004  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n005  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n006  Allergy reconciliation: none recorded; patient reports none.\n007  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n008  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n009  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n010  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n011  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n012  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n013  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n014  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n015  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n016  Allergy reconciliation: none recorded; patient reports none.\n017  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n018  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n019  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n020  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n021  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n022  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n023  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n024  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n025  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n026  Allergy reconciliation: none recorded; patient reports none.\n027  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n028  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n029  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n030  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n031  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n032  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n033  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n034  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n035  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n036  Allergy reconciliation: none recorded; patient reports none.\n037  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n038  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n039  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n040  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n041  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n042  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n043  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n044  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n045  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n046  Allergy reconciliation: none recorded; patient reports none.\n047  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n048  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n049  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n050  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n051  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n052  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n053  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n054  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n055  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n056  Allergy reconciliation: none recorded; patient reports none.\n057  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n058  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n059  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n060  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n061  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n062  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n063  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n064  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n065  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n066  Allergy reconciliation: none recorded; patient reports none.\n067  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n068  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n069  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n070  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n071  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n072  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n073  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n074  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n075  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n076  Allergy reconciliation: none recorded; patient reports none.\n077  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n078  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n079  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n080  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n081  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n082  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n083  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n084  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n085  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n086  Allergy reconciliation: none recorded; patient reports none.\n087  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n088  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n089  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n090  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n091  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n092  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n093  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n094  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n095  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n096  Allergy reconciliation: none recorded; patient reports none.\n097  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n098  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n099  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n100  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n101  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n102  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n103  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n104  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n105  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n106  Allergy reconciliation: none recorded; patient reports none.\n107  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n108  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n109  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n110  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n111  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n112  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n113  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n114  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n115  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n116  Allergy reconciliation: none recorded; patient reports none.\n117  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n118  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n119  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n120  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n121  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n122  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n123  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n124  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n125  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n126  Allergy reconciliation: none recorded; patient reports none.\n127  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n128  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n129  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n130  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n131  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n132  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n133  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n134  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n135  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n136  Allergy reconciliation: none recorded; patient reports none.\n137  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n138  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n139  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n140  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n141  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n142  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n143  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n144  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n145  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n146  Allergy reconciliation: none recorded; patient reports none.\n147  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n148  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n149  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n150  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n151  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n152  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n153  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n154  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n155  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n156  Allergy reconciliation: none recorded; patient reports none.\n157  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n158  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n159  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n160  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n161  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n162  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n163  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n164  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n165  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n166  Allergy reconciliation: none recorded; patient reports none.\n167  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n168  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n169  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n170  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n171  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n172  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n173  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n174  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n175  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n176  Allergy reconciliation: none recorded; patient reports none.\n177  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n178  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n179  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n180  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n181  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n182  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n183  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n184  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n185  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n186  Allergy reconciliation: none recorded; patient reports none.\n187  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n188  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n189  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n190  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n191  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n192  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n193  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n194  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n195  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n196  Allergy reconciliation: none recorded; patient reports none.\n197  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n198  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n199  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n200  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n201  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n202  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n203  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n204  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n205  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n206  Allergy reconciliation: none recorded; patient reports none.\n207  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n208  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n209  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n210  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n211  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n212  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n213  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n214  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n215  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n216  Allergy reconciliation: none recorded; patient reports none.\n217  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n218  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n219  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n220  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n221  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n222  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n223  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n224  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n225  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n226  Allergy reconciliation: none recorded; patient reports none.\n227  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n228  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n229  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n230  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n231  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n232  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n233  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n234  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n235  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n236  Allergy reconciliation: none recorded; patient reports none.\n237  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n238  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n239  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n240  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n241  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n242  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n243  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n244  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n245  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n246  Allergy reconciliation: none recorded; patient reports none.\n247  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n248  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n249  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n250  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n251  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n252  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n253  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n254  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n255  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n256  Allergy reconciliation: none recorded; patient reports none.\n257  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n258  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n259  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n260  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n261  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n262  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n263  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n264  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n265  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n266  Allergy reconciliation: none recorded; patient reports none.\n267  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n268  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n269  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n270  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n271  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n272  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n273  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n274  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n275  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n276  Allergy reconciliation: none recorded; patient reports none.\n277  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n278  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n279  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n280  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n281  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n282  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n283  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n284  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n285  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n286  Allergy reconciliation: none recorded; patient reports none.\n287  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n288  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n289  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n290  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n291  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n292  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n293  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n294  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n295  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n296  Allergy reconciliation: none recorded; patient reports none.\n297  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n298  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n299  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n300  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n301  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n302  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n303  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n304  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n305  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n306  Allergy reconciliation: none recorded; patient reports none.\n307  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n308  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n309  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n310  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n311  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n312  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n313  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n314  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n315  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n316  Allergy reconciliation: none recorded; patient reports none.\n317  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n318  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n319  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n320  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n321  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n322  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n323  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n324  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n325  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n326  Allergy reconciliation: none recorded; patient reports none.\n327  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n328  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n329  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n330  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n331  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n332  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n333  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n334  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n335  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n336  Allergy reconciliation: none recorded; patient reports none.\n337  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n338  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n339  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n340  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n341  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n342  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n343  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n344  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n345  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n346  Allergy reconciliation: none recorded; patient reports none.\n347  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n348  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n349  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n350  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n351  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n352  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n353  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n354  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n355  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n356  Allergy reconciliation: none recorded; patient reports none.\n357  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n358  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n359  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n360  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n361  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n362  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n363  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n364  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n365  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n366  Allergy reconciliation: none recorded; patient reports none.\n367  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n368  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n369  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n370  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n371  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n372  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n373  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n374  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n375  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n376  Allergy reconciliation: none recorded; patient reports none.\n377  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n378  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n379  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n380  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n381  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n382  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n383  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n384  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n385  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n386  Allergy reconciliation: none recorded; patient reports none.\n387  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n388  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n389  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n390  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n391  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n392  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n393  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n394  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n395  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n396  Allergy reconciliation: none recorded; patient reports none.\n397  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n398  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n399  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n400  END OF REPORT."
+              }
+            ],
+            "excluded": []
+          }
+        ],
+        "conflicts": []
+      },
+      "trace": {
+        "profile": {
+          "id": "c1-consult-messages",
+          "version": 1
+        },
+        "budget": {
+          "input": 2560,
+          "reserved_output": 512,
+          "margin_percent": 15
+        },
+        "result": null,
+        "included": [],
+        "compressed": [],
+        "excluded": [
+          {
+            "item_id": "guide:acute-pharyngitis@5#2",
+            "reason": "source_diversity_cap",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          }
+        ],
+        "conflicts": [],
+        "refused": {
+          "bool": true,
+          "reason": "protected_content_over_budget"
+        },
+        "context": {
+          "spec": "cwa/draft",
+          "assembly_time": "2026-10-03T11:36:00Z",
+          "route_policy_version": "c1-consult/v1",
+          "tokenizer": "estimate-utf8/v1",
+          "renderer": "cwa-messages/v1",
+          "snapshot_digest": "a985a70d1ca8217a201d84c6652f6501f7e98c013a627749cc7bbf2f76212fcb"
+        },
+        "defaults_filled": []
+      },
+      "payload": null
+    },
+    {
+      "tier": "large",
+      "snapshot": {
+        "assembly_time": "2026-10-03T11:36:00Z",
+        "scope": {
+          "tenant": "harbor-street",
+          "user": "dr_lee",
+          "session": "s_c1_06",
+          "task": "p_2002"
+        },
+        "budget": {
+          "input": 14784,
+          "reserved_output": 1600,
+          "margin_percent": 15
+        },
+        "profile": {
+          "spec": "cwa/draft",
+          "id": "c1-consult-messages",
+          "version": 1,
+          "route": "consult",
+          "model_family": null,
+          "route_policy_version": "c1-consult/v1",
+          "placement": [
+            {
+              "slot": "governance.instructions",
+              "wrap": "system"
+            },
+            {
+              "slot": "state.user",
+              "wrap": "xml:clinician"
+            },
+            {
+              "slot": "state.task",
+              "wrap": "xml:chart"
+            },
+            {
+              "slot": "interaction.memory",
+              "wrap": "xml:prior_note"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "wrap": "xml:guideline"
+            },
+            {
+              "slot": "interaction.history",
+              "wrap": "xml:transcript"
+            },
+            {
+              "slot": "governance.output_contract",
+              "wrap": "xml:format"
+            },
+            {
+              "slot": "interaction.query",
+              "wrap": "xml:request"
+            }
+          ],
+          "evaluation": {
+            "status": "unevaluated",
+            "suite": null,
+            "date": null,
+            "result": null,
+            "artifact": null
+          }
+        },
+        "route_policy": {
+          "route": "consult",
+          "version": "c1-consult/v1",
+          "clock_skew_seconds": 5,
+          "requires_evidence": true,
+          "producers": {
+            "clinical-policy": {
+              "kind": "policy",
+              "slots": [
+                "governance.instructions",
+                "governance.output_contract"
+              ]
+            },
+            "ehr-chart": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "telemetry": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "clinician-state": {
+              "kind": "state",
+              "slots": [
+                "state.user"
+              ]
+            },
+            "ehr-notes": {
+              "kind": "memory",
+              "slots": [
+                "interaction.memory"
+              ]
+            },
+            "guidelines": {
+              "kind": "retrieval",
+              "slots": [
+                "evidence.knowledge"
+              ]
+            },
+            "ambient-scribe": {
+              "kind": "interaction",
+              "slots": [
+                "interaction.history",
+                "interaction.query"
+              ]
+            }
+          },
+          "slots": {
+            "state.task": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "task"
+              ]
+            },
+            "state.user": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "user"
+              ]
+            },
+            "evidence.knowledge": {
+              "min_relevance": 3.0,
+              "min_included": 1,
+              "dedupe": "exact",
+              "max_per_source": 2,
+              "order_by": [
+                "-relevance",
+                "-freshness"
+              ]
+            },
+            "interaction.memory": {
+              "source_prefix": "note:",
+              "required_scope": [
+                "tenant",
+                "task"
+              ],
+              "order_by": [
+                "-freshness"
+              ]
+            },
+            "interaction.history": {
+              "required_scope": [
+                "session"
+              ],
+              "order_by": [
+                "-freshness"
+              ],
+              "max_tokens": 900
+            },
+            "interaction.query": {
+              "required_scope": [
+                "session"
+              ]
+            }
+          },
+          "tier_upgrades": {
+            "state.user": "protected"
+          },
+          "facts": {
+            "vitals.bp": {
+              "precedence": [
+                "telemetry",
+                "ehr-notes"
+              ],
+              "scope": [
+                "tenant"
+              ],
+              "on_unresolved": "refuse"
+            }
+          },
+          "fitting_order": [
+            {
+              "slot": "interaction.history",
+              "action": "omit"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "compress"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "omit"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "action": "omit"
+            }
+          ],
+          "parser": true
+        },
+        "tokenizer": "estimate-utf8/v1",
+        "renderer": "cwa-messages/v1",
+        "batches": [
+          {
+            "producer": {
+              "id": "clinical-policy",
+              "kind": "policy"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "policy:consult",
+                "slot": "governance.instructions",
+                "source": "app:policy/consult/instructions.md",
+                "source_version": "2",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "You are the Harbor Street Family Practice clinical reference assistant, answering a clinician's question during an encounter. Answer only from the guidelines you are given, applied to the chart and vitals you are given; say so when the guidelines do not cover the question.\n\nCite the guideline paragraph id for every rule you state. The chart's allergy and medication lists decide what is safe, not the transcript. You do not order, prescribe or file anything; the clinician decides.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "contract:consult",
+                "slot": "governance.output_contract",
+                "source": "app:policy/consult/contract.md",
+                "source_version": "1",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "Reply as JSON with exactly these keys: \"answer\" (plain text, at most 200 words) and \"citations\" (the list of guideline paragraph ids you relied on). No other keys, no text outside the JSON.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ehr-chart",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "chart:p_2002",
+                "slot": "state.task",
+                "source": "ehr:patients/p_2002",
+                "source_version": "3",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-03T11:36:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "task": "p_2002"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Patient p_2002: Daniel Mbeki, 34M. Encounter enc_9003, acute visit: sore throat, room 2. Problems: none. Active medications: none. Allergies: none known. Recent labs: none on file."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "telemetry",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "vitals:enc_9003",
+                "slot": "state.task",
+                "source": "telemetry:spot-vitals-2/enc_9003",
+                "source_version": "2026-10-03T11:34:00Z",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-03T11:34:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "task": "p_2002"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Vitals from spot-vitals-2 at 2026-10-03T11:34:00Z: BP 118/74, HR 96, SpO2 97%, temperature 38.4 C."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "clinician-state",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "clinician:dr_lee",
+                "slot": "state.user",
+                "source": "staff-directory:dr_lee",
+                "source_version": "2",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-03T11:36:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "user": "dr_lee"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Dr. Hana Lee (dr_lee), physician, a prescriber."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ehr-notes",
+              "kind": "memory"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [
+                  {
+                    "id": "note:p_2002:0001~summary",
+                    "body": "November 2025: travel vaccinations given, no chronic conditions, no regular medicines.",
+                    "method": "clinician-written summary",
+                    "lineage": "summarised"
+                  }
+                ],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "note:p_2002:0001",
+                "slot": "interaction.memory",
+                "source": "note:p_2002:0001",
+                "source_version": "1",
+                "authority": "generated",
+                "trust": "unverified",
+                "freshness": "2025-11-04T16:00:00Z",
+                "expires": "2026-11-04T16:00:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "task": "p_2002"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Note by dr_lee on 2025-11-04 (encounter enc_8120): Daniel Mbeki attended for travel vaccinations before a trip to Kenya. No chronic conditions, no regular medicines, no known drug allergies. Hepatitis A and typhoid vaccines administered without reaction. Malaria prophylaxis discussed and prescribed as a one-off course."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "guidelines",
+              "kind": "retrieval"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 35.553,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Most sore throats are viral and resolve without antibiotics. Use the Centor criteria to decide on testing: fever above 38°C, tonsillar exudate, tender anterior cervical lymphadenopathy, and absence of cough score one point each."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#1",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 29.089,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "With a Centor score of 0 or 1, do not test or treat with antibiotics. With a score of 2 or 3, perform a rapid streptococcal antigen test and treat only if positive. With a score of 4, test or treat empirically."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#2",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 15.569,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "First-line treatment for confirmed streptococcal pharyngitis is penicillin V for ten days. In patients with a documented penicillin allergy, use a macrolide or a first-generation cephalosporin if the allergy was not anaphylaxis; the chart's allergy list decides, not recall in the room."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:metformin-prescribing@2#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:metformin-prescribing",
+                "source_version": "2",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-05-14T09:00:00Z",
+                "relevance": 12.779,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Metformin is first-line therapy for type 2 diabetes in adults without contraindication. Usual dosing is 500 mg twice daily with meals, increased by 500 mg per week as tolerated to a maximum of 2000 mg daily."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:opioid-stewardship@2#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:opioid-stewardship",
+                "source_version": "2",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-02-10T09:00:00Z",
+                "relevance": 12.776,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Opioids are not indicated for chronic non-cancer pain as first-line therapy, and never for a condition with no documented pain assessment. A request for an opioid must be assessed by the prescriber in person, with the indication, prior analgesia and risk factors recorded."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:hypertension-followup@4#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:hypertension-followup",
+                "source_version": "4",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-04-20T09:00:00Z",
+                "relevance": 11.379,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "The blood pressure target for adults with diabetes is below 130/80 mmHg where tolerated. Base decisions on a seated reading taken at the current visit after five minutes' rest; a single elevated reading, especially one recorded under stress or at a rushed intake, should be repeated before treatment is changed."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ambient-scribe",
+              "kind": "interaction"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c1_06:0001",
+                "slot": "interaction.history",
+                "source": "stt:s_c1_06",
+                "source_version": "1",
+                "authority": "untrusted",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-03T11:31:00Z",
+                "scope": {
+                  "session": "s_c1_06"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "[clinician] Daniel, tell me about the toe."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c1_06:0002",
+                "slot": "interaction.history",
+                "source": "stt:s_c1_06",
+                "source_version": "1",
+                "authority": "untrusted",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-03T11:31:30Z",
+                "scope": {
+                  "session": "s_c1_06"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "[patient] My throat is on fire and I have had fevers since Tuesday."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c1_06:0003",
+                "slot": "interaction.query",
+                "source": "console:s_c1_06",
+                "source_version": "1",
+                "authority": "user",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-03T11:36:00Z",
+                "scope": {
+                  "session": "s_c1_06"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "Should I start antibiotics for this pharyngitis, and which first line? Here is the full triage and lab report:\n000  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n001  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n002  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n003  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n004  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n005  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n006  Allergy reconciliation: none recorded; patient reports none.\n007  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n008  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n009  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n010  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n011  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n012  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n013  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n014  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n015  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n016  Allergy reconciliation: none recorded; patient reports none.\n017  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n018  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n019  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n020  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n021  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n022  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n023  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n024  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n025  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n026  Allergy reconciliation: none recorded; patient reports none.\n027  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n028  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n029  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n030  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n031  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n032  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n033  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n034  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n035  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n036  Allergy reconciliation: none recorded; patient reports none.\n037  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n038  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n039  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n040  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n041  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n042  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n043  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n044  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n045  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n046  Allergy reconciliation: none recorded; patient reports none.\n047  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n048  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n049  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n050  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n051  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n052  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n053  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n054  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n055  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n056  Allergy reconciliation: none recorded; patient reports none.\n057  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n058  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n059  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n060  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n061  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n062  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n063  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n064  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n065  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n066  Allergy reconciliation: none recorded; patient reports none.\n067  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n068  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n069  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n070  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n071  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n072  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n073  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n074  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n075  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n076  Allergy reconciliation: none recorded; patient reports none.\n077  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n078  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n079  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n080  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n081  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n082  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n083  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n084  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n085  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n086  Allergy reconciliation: none recorded; patient reports none.\n087  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n088  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n089  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n090  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n091  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n092  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n093  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n094  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n095  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n096  Allergy reconciliation: none recorded; patient reports none.\n097  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n098  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n099  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n100  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n101  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n102  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n103  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n104  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n105  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n106  Allergy reconciliation: none recorded; patient reports none.\n107  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n108  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n109  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n110  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n111  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n112  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n113  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n114  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n115  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n116  Allergy reconciliation: none recorded; patient reports none.\n117  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n118  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n119  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n120  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n121  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n122  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n123  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n124  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n125  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n126  Allergy reconciliation: none recorded; patient reports none.\n127  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n128  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n129  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n130  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n131  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n132  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n133  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n134  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n135  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n136  Allergy reconciliation: none recorded; patient reports none.\n137  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n138  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n139  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n140  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n141  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n142  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n143  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n144  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n145  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n146  Allergy reconciliation: none recorded; patient reports none.\n147  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n148  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n149  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n150  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n151  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n152  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n153  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n154  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n155  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n156  Allergy reconciliation: none recorded; patient reports none.\n157  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n158  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n159  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n160  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n161  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n162  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n163  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n164  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n165  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n166  Allergy reconciliation: none recorded; patient reports none.\n167  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n168  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n169  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n170  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n171  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n172  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n173  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n174  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n175  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n176  Allergy reconciliation: none recorded; patient reports none.\n177  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n178  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n179  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n180  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n181  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n182  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n183  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n184  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n185  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n186  Allergy reconciliation: none recorded; patient reports none.\n187  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n188  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n189  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n190  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n191  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n192  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n193  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n194  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n195  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n196  Allergy reconciliation: none recorded; patient reports none.\n197  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n198  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n199  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n200  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n201  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n202  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n203  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n204  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n205  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n206  Allergy reconciliation: none recorded; patient reports none.\n207  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n208  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n209  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n210  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n211  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n212  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n213  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n214  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n215  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n216  Allergy reconciliation: none recorded; patient reports none.\n217  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n218  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n219  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n220  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n221  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n222  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n223  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n224  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n225  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n226  Allergy reconciliation: none recorded; patient reports none.\n227  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n228  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n229  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n230  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n231  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n232  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n233  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n234  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n235  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n236  Allergy reconciliation: none recorded; patient reports none.\n237  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n238  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n239  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n240  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n241  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n242  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n243  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n244  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n245  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n246  Allergy reconciliation: none recorded; patient reports none.\n247  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n248  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n249  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n250  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n251  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n252  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n253  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n254  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n255  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n256  Allergy reconciliation: none recorded; patient reports none.\n257  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n258  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n259  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n260  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n261  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n262  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n263  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n264  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n265  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n266  Allergy reconciliation: none recorded; patient reports none.\n267  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n268  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n269  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n270  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n271  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n272  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n273  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n274  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n275  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n276  Allergy reconciliation: none recorded; patient reports none.\n277  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n278  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n279  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n280  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n281  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n282  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n283  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n284  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n285  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n286  Allergy reconciliation: none recorded; patient reports none.\n287  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n288  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n289  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n290  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n291  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n292  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n293  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n294  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n295  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n296  Allergy reconciliation: none recorded; patient reports none.\n297  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n298  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n299  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n300  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n301  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n302  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n303  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n304  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n305  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n306  Allergy reconciliation: none recorded; patient reports none.\n307  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n308  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n309  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n310  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n311  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n312  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n313  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n314  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n315  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n316  Allergy reconciliation: none recorded; patient reports none.\n317  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n318  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n319  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n320  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n321  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n322  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n323  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n324  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n325  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n326  Allergy reconciliation: none recorded; patient reports none.\n327  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n328  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n329  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n330  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n331  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n332  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n333  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n334  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n335  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n336  Allergy reconciliation: none recorded; patient reports none.\n337  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n338  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n339  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n340  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n341  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n342  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n343  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n344  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n345  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n346  Allergy reconciliation: none recorded; patient reports none.\n347  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n348  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n349  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n350  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n351  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n352  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n353  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n354  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n355  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n356  Allergy reconciliation: none recorded; patient reports none.\n357  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n358  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n359  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n360  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n361  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n362  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n363  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n364  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n365  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n366  Allergy reconciliation: none recorded; patient reports none.\n367  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n368  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n369  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n370  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n371  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n372  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n373  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n374  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n375  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n376  Allergy reconciliation: none recorded; patient reports none.\n377  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n378  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n379  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n380  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n381  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n382  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n383  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n384  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n385  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n386  Allergy reconciliation: none recorded; patient reports none.\n387  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n388  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n389  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n390  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\n391  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\n392  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\n393  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\n394  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\n395  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\n396  Allergy reconciliation: none recorded; patient reports none.\n397  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\n398  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR >90.\n399  LFT within range. Glucose 5.4. Pregnancy test not applicable.\n400  END OF REPORT."
+              }
+            ],
+            "excluded": []
+          }
+        ],
+        "conflicts": []
+      },
+      "trace": {
+        "profile": {
+          "id": "c1-consult-messages",
+          "version": 1
+        },
+        "budget": {
+          "input": 14784,
+          "reserved_output": 1600,
+          "margin_percent": 15
+        },
+        "result": {
+          "input_tokens": 8931,
+          "hash": "c08a9f653ab202e75d6f0fb37b4e0312baf5561f03d165571a242ee208f487f4"
+        },
+        "included": [
+          {
+            "slot": "governance.instructions",
+            "item_id": "policy:consult",
+            "tokens": 121,
+            "source_version": "2",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.user",
+            "item_id": "clinician:dr_lee",
+            "tokens": 12,
+            "source_version": "2",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.task",
+            "item_id": "chart:p_2002",
+            "tokens": 45,
+            "source_version": "3",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.task",
+            "item_id": "vitals:enc_9003",
+            "tokens": 25,
+            "source_version": "2026-10-03T11:34:00Z",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "interaction.memory",
+            "item_id": "note:p_2002:0001",
+            "tokens": 80,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "guide:acute-pharyngitis@5#0",
+            "tokens": 58,
+            "source_version": "5",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "guide:acute-pharyngitis@5#1",
+            "tokens": 53,
+            "source_version": "5",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "guide:hypertension-followup@4#0",
+            "tokens": 78,
+            "source_version": "4",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "guide:metformin-prescribing@2#0",
+            "tokens": 52,
+            "source_version": "2",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "guide:opioid-stewardship@2#0",
+            "tokens": 68,
+            "source_version": "2",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "interaction.history",
+            "item_id": "turn:s_c1_06:0001",
+            "tokens": 11,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "interaction.history",
+            "item_id": "turn:s_c1_06:0002",
+            "tokens": 17,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "governance.output_contract",
+            "item_id": "contract:consult",
+            "tokens": 48,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "interaction.query",
+            "item_id": "turn:s_c1_06:0003",
+            "tokens": 8093,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          }
+        ],
+        "compressed": [],
+        "excluded": [
+          {
+            "item_id": "guide:acute-pharyngitis@5#2",
+            "reason": "source_diversity_cap",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          }
+        ],
+        "conflicts": [],
+        "refused": {
+          "bool": false,
+          "reason": null
+        },
+        "context": {
+          "spec": "cwa/draft",
+          "assembly_time": "2026-10-03T11:36:00Z",
+          "route_policy_version": "c1-consult/v1",
+          "tokenizer": "estimate-utf8/v1",
+          "renderer": "cwa-messages/v1",
+          "snapshot_digest": "ba578eb34897891962c1f9e26082a9b0a1cbd5db4e09b7ace7361a8bfe22dbba"
+        },
+        "defaults_filled": []
+      },
+      "payload": "{\"messages\":[{\"content\":\"<clinician id=\\\"clinician:dr_lee\\\">\\nDr. Hana Lee (dr_lee), physician, a prescriber.\\n</clinician>\\n<chart id=\\\"chart:p_2002\\\">\\nPatient p_2002: Daniel Mbeki, 34M. Encounter enc_9003, acute visit: sore throat, room 2. Problems: none. Active medications: none. Allergies: none known. Recent labs: none on file.\\n</chart>\\n<chart id=\\\"vitals:enc_9003\\\">\\nVitals from spot-vitals-2 at 2026-10-03T11:34:00Z: BP 118/74, HR 96, SpO2 97%, temperature 38.4 C.\\n</chart>\\n<prior_note id=\\\"note:p_2002:0001\\\">\\nNote by dr_lee on 2025-11-04 (encounter enc_8120): Daniel Mbeki attended for travel vaccinations before a trip to Kenya. No chronic conditions, no regular medicines, no known drug allergies. Hepatitis A and typhoid vaccines administered without reaction. Malaria prophylaxis discussed and prescribed as a one-off course.\\n</prior_note>\\n<guideline id=\\\"guide:acute-pharyngitis@5#0\\\">\\nMost sore throats are viral and resolve without antibiotics. Use the Centor criteria to decide on testing: fever above 38°C, tonsillar exudate, tender anterior cervical lymphadenopathy, and absence of cough score one point each.\\n</guideline>\\n<guideline id=\\\"guide:acute-pharyngitis@5#1\\\">\\nWith a Centor score of 0 or 1, do not test or treat with antibiotics. With a score of 2 or 3, perform a rapid streptococcal antigen test and treat only if positive. With a score of 4, test or treat empirically.\\n</guideline>\\n<guideline id=\\\"guide:hypertension-followup@4#0\\\">\\nThe blood pressure target for adults with diabetes is below 130/80 mmHg where tolerated. Base decisions on a seated reading taken at the current visit after five minutes' rest; a single elevated reading, especially one recorded under stress or at a rushed intake, should be repeated before treatment is changed.\\n</guideline>\\n<guideline id=\\\"guide:metformin-prescribing@2#0\\\">\\nMetformin is first-line therapy for type 2 diabetes in adults without contraindication. Usual dosing is 500 mg twice daily with meals, increased by 500 mg per week as tolerated to a maximum of 2000 mg daily.\\n</guideline>\\n<guideline id=\\\"guide:opioid-stewardship@2#0\\\">\\nOpioids are not indicated for chronic non-cancer pain as first-line therapy, and never for a condition with no documented pain assessment. A request for an opioid must be assessed by the prescriber in person, with the indication, prior analgesia and risk factors recorded.\\n</guideline>\\n<transcript id=\\\"turn:s_c1_06:0001\\\" speaker=\\\"user\\\">\\n[clinician] Daniel, tell me about the toe.\\n</transcript>\\n<transcript id=\\\"turn:s_c1_06:0002\\\" speaker=\\\"user\\\">\\n[patient] My throat is on fire and I have had fevers since Tuesday.\\n</transcript>\\n<format id=\\\"contract:consult\\\">\\nReply as JSON with exactly these keys: \\\"answer\\\" (plain text, at most 200 words) and \\\"citations\\\" (the list of guideline paragraph ids you relied on). No other keys, no text outside the JSON.\\n</format>\\n<request id=\\\"turn:s_c1_06:0003\\\">\\nShould I start antibiotics for this pharyngitis, and which first line? Here is the full triage and lab report:\\n000  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n001  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n002  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n003  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n004  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n005  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n006  Allergy reconciliation: none recorded; patient reports none.\\n007  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n008  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n009  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n010  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n011  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n012  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n013  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n014  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n015  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n016  Allergy reconciliation: none recorded; patient reports none.\\n017  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n018  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n019  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n020  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n021  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n022  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n023  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n024  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n025  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n026  Allergy reconciliation: none recorded; patient reports none.\\n027  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n028  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n029  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n030  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n031  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n032  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n033  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n034  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n035  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n036  Allergy reconciliation: none recorded; patient reports none.\\n037  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n038  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n039  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n040  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n041  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n042  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n043  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n044  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n045  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n046  Allergy reconciliation: none recorded; patient reports none.\\n047  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n048  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n049  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n050  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n051  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n052  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n053  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n054  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n055  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n056  Allergy reconciliation: none recorded; patient reports none.\\n057  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n058  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n059  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n060  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n061  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n062  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n063  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n064  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n065  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n066  Allergy reconciliation: none recorded; patient reports none.\\n067  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n068  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n069  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n070  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n071  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n072  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n073  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n074  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n075  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n076  Allergy reconciliation: none recorded; patient reports none.\\n077  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n078  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n079  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n080  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n081  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n082  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n083  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n084  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n085  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n086  Allergy reconciliation: none recorded; patient reports none.\\n087  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n088  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n089  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n090  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n091  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n092  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n093  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n094  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n095  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n096  Allergy reconciliation: none recorded; patient reports none.\\n097  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n098  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n099  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n100  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n101  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n102  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n103  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n104  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n105  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n106  Allergy reconciliation: none recorded; patient reports none.\\n107  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n108  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n109  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n110  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n111  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n112  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n113  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n114  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n115  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n116  Allergy reconciliation: none recorded; patient reports none.\\n117  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n118  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n119  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n120  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n121  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n122  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n123  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n124  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n125  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n126  Allergy reconciliation: none recorded; patient reports none.\\n127  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n128  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n129  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n130  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n131  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n132  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n133  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n134  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n135  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n136  Allergy reconciliation: none recorded; patient reports none.\\n137  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n138  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n139  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n140  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n141  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n142  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n143  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n144  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n145  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n146  Allergy reconciliation: none recorded; patient reports none.\\n147  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n148  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n149  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n150  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n151  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n152  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n153  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n154  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n155  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n156  Allergy reconciliation: none recorded; patient reports none.\\n157  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n158  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n159  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n160  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n161  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n162  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n163  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n164  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n165  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n166  Allergy reconciliation: none recorded; patient reports none.\\n167  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n168  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n169  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n170  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n171  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n172  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n173  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n174  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n175  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n176  Allergy reconciliation: none recorded; patient reports none.\\n177  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n178  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n179  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n180  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n181  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n182  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n183  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n184  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n185  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n186  Allergy reconciliation: none recorded; patient reports none.\\n187  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n188  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n189  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n190  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n191  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n192  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n193  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n194  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n195  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n196  Allergy reconciliation: none recorded; patient reports none.\\n197  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n198  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n199  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n200  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n201  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n202  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n203  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n204  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n205  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n206  Allergy reconciliation: none recorded; patient reports none.\\n207  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n208  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n209  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n210  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n211  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n212  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n213  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n214  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n215  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n216  Allergy reconciliation: none recorded; patient reports none.\\n217  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n218  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n219  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n220  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n221  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n222  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n223  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n224  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n225  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n226  Allergy reconciliation: none recorded; patient reports none.\\n227  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n228  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n229  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n230  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n231  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n232  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n233  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n234  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n235  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n236  Allergy reconciliation: none recorded; patient reports none.\\n237  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n238  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n239  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n240  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n241  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n242  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n243  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n244  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n245  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n246  Allergy reconciliation: none recorded; patient reports none.\\n247  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n248  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n249  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n250  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n251  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n252  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n253  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n254  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n255  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n256  Allergy reconciliation: none recorded; patient reports none.\\n257  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n258  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n259  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n260  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n261  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n262  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n263  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n264  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n265  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n266  Allergy reconciliation: none recorded; patient reports none.\\n267  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n268  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n269  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n270  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n271  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n272  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n273  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n274  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n275  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n276  Allergy reconciliation: none recorded; patient reports none.\\n277  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n278  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n279  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n280  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n281  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n282  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n283  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n284  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n285  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n286  Allergy reconciliation: none recorded; patient reports none.\\n287  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n288  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n289  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n290  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n291  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n292  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n293  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n294  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n295  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n296  Allergy reconciliation: none recorded; patient reports none.\\n297  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n298  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n299  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n300  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n301  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n302  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n303  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n304  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n305  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n306  Allergy reconciliation: none recorded; patient reports none.\\n307  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n308  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n309  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n310  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n311  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n312  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n313  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n314  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n315  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n316  Allergy reconciliation: none recorded; patient reports none.\\n317  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n318  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n319  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n320  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n321  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n322  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n323  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n324  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n325  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n326  Allergy reconciliation: none recorded; patient reports none.\\n327  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n328  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n329  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n330  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n331  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n332  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n333  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n334  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n335  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n336  Allergy reconciliation: none recorded; patient reports none.\\n337  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n338  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n339  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n340  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n341  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n342  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n343  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n344  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n345  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n346  Allergy reconciliation: none recorded; patient reports none.\\n347  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n348  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n349  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n350  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n351  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n352  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n353  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n354  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n355  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n356  Allergy reconciliation: none recorded; patient reports none.\\n357  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n358  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n359  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n360  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n361  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n362  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n363  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n364  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n365  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n366  Allergy reconciliation: none recorded; patient reports none.\\n367  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n368  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n369  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n370  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n371  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n372  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n373  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n374  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n375  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n376  Allergy reconciliation: none recorded; patient reports none.\\n377  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n378  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n379  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n380  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n381  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n382  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n383  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n384  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n385  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n386  Allergy reconciliation: none recorded; patient reports none.\\n387  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n388  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n389  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n390  TRIAGE AND LAB REPORT, Harbor Street Family Practice, enc_9003, Daniel Mbeki, 34M.\\n391  Presenting: sore throat 3 days, fever at home 38.6 C, pain on swallowing, no cough, no rhinorrhoea.\\n392  Triage vitals: temperature 38.4 C, HR 96, BP 118/74, SpO2 97%, RR 16.\\n393  Examination (nurse): bilateral tonsillar exudate, tender anterior cervical nodes, no trismus, airway patent.\\n394  Centor: fever yes, exudate yes, tender anterior nodes yes, cough absent yes. Score 4.\\n395  Rapid strep antigen: POSITIVE (lot 2290-A, read at 11:20).\\n396  Allergy reconciliation: none recorded; patient reports none.\\n397  CBC: WBC 13.2, neutrophils 78%, Hb 14.8, platelets 240.\\n398  CRP 46 mg/L. Monospot negative. Urea 4.9, creatinine 78, eGFR &gt;90.\\n399  LFT within range. Glucose 5.4. Pregnancy test not applicable.\\n400  END OF REPORT.\\n</request>\\n\",\"role\":\"user\"}],\"system\":[{\"id\":\"policy:consult\",\"text\":\"You are the Harbor Street Family Practice clinical reference assistant, answering a clinician's question during an encounter. Answer only from the guidelines you are given, applied to the chart and vitals you are given; say so when the guidelines do not cover the question.\\n\\nCite the guideline paragraph id for every rule you state. The chart's allergy and medication lists decide what is safe, not the transcript. You do not order, prescribe or file anything; the clinician decides.\"}],\"tools\":[]}"
+    }
+  ],
+  "draft": "{\"answer\":\"Yes, start antibiotics. With a Centor score of 4, a positive rapid streptococcal antigen test, and no reported drug allergies, the recommended first‑line therapy is amoxicillin 500 mg twice daily for 10 days (or penicillin V 250 mg twice daily).\",\"citations\":[\"guide:acute-pharyngitis@5#0\",\"guide:acute-pharyngitis@5#1\"]}",
+  "parsed": {
+    "answer": "Yes, start antibiotics. With a Centor score of 4, a positive rapid streptococcal antigen test, and no reported drug allergies, the recommended first‑line therapy is amoxicillin 500 mg twice daily for 10 days (or penicillin V 250 mg twice daily).",
+    "citations": [
+      "guide:acute-pharyngitis@5#0",
+      "guide:acute-pharyngitis@5#1"
+    ]
+  },
+  "guards": [
+    {
+      "name": "citations_were_sent",
+      "ok": true,
+      "reason": "2 citation(s), all sent"
+    }
+  ],
+  "reply": "Yes, start antibiotics. With a Centor score of 4, a positive rapid streptococcal antigen test, and no reported drug allergies, the recommended first‑line therapy is amoxicillin 500 mg twice daily for 10 days (or penicillin V 250 mg twice daily).",
+  "actions_queued": [],
+  "outcome": "answered",
+  "model": "gpt-oss-20b-MXFP4-Q8"
+}

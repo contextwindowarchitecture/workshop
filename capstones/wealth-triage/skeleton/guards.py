@@ -1,8 +1,8 @@
 """Your screens, run on the parsed draft outside the model (R-5):
 
-    actions_were_offered(actions, granted) -> Decision       every action's tool is in the set the final request offered (cap ids without "cap:")
+    actions_were_offered(actions, granted) -> Decision       every action's tool is in the set the final request offered (cap ids without "cap:") and its arguments match that tool's input_schema in data/tools.json
     trade_guard(actions, request) -> Decision                a place_trade names this client, and a sell is of a held symbol for no more than the ledger's units
-    figures_match_ledger(figures, request) -> Decision       every stated position is a ledger holding with the ledger's units
+    figures_match_ledger(figures, request) -> Decision       every stated position is a ledger holding with the ledger's units; a CASH entry is the ledger's cash
     no_account_identifiers(text) -> Decision                 no IBAN, acct_ number or card number in the reply
     urgency_covers_risk(urgency, risk) -> Decision           urgency is one of low/normal/high/critical and not below the risk screen's floor
                                                              (low -> low, elevated -> high, critical -> critical)

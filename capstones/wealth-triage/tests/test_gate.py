@@ -175,10 +175,13 @@ def test_the_guards_as_units(which):
     assert not guards.trade_guard([sell(1500)], request).ok and not guards.trade_guard([sell(10, "GLOBX")], request).ok
     assert guards.figures_match_ledger([{"symbol": "ACME", "units": 1000, "value": 42100.0}], request).ok
     assert not guards.figures_match_ledger([{"symbol": "ACME", "units": 1200, "value": 1.0}], request).ok
+    assert guards.figures_match_ledger([{"symbol": "CASH", "units": None, "value": 3100.0}], request).ok and not guards.figures_match_ledger([{"symbol": "CASH", "units": 0, "value": 99.0}], request).ok
     assert not guards.no_account_identifiers("Your IBAN GB94 LBWX 6016 1331 7700 02 is on file.").ok and guards.no_account_identifiers("You hold 1,000 ACME.").ok
     assert guards.urgency_covers_risk("critical", "critical").ok and not guards.urgency_covers_risk("normal", "elevated").ok and not guards.urgency_covers_risk("urgent", "low").ok
     never = guards.actions_were_offered([{"tool": "transfer_funds", "arguments": {}}], {"open_case"})
     assert not never.ok and "never moves money" in never.reason
+    misnamed = guards.actions_were_offered([{"tool": "place_trade", "arguments": {"client": "c_3002", "symbol": "ACME", "side": "sell", "quantity": "500"}}], {"place_trade"})
+    assert not misnamed.ok and "schema" in misnamed.reason and guards.actions_were_offered([sell(500)], {"place_trade"}).ok
     assert guards.citations_were_sent(["kb:a@1#0"], {"kb:a@1#0"}).ok and not guards.citations_were_sent(["kb:a@1#1"], {"kb:a@1#0"}).ok
 
 

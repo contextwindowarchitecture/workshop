@@ -54,6 +54,10 @@ CWA_C1_IMPL=skeleton uv run pytest
 
 The route contract; the producers and only the producers the route lists; the chart as protected state with no vitals in it; the transcript as untrusted history with the request as the one user item; the declared conflict decided by producer precedence; prior notes as expiring memory with reviewed variants and their own scope, and another patient's note caught by scope; the capability policy as the only source of tools, granting by role, absent on the consult route; one scored item per guideline paragraph and a refusal when nothing survives the threshold; budgets computed from the model limits and the pasted report escalating; history shed before evidence; the output contract placed on a parser route; the prescription and vitals guards withholding drafts; the guards as units; every attempt replaying byte for byte; every case's expectations.
 
+## What a live run showed
+
+With omlx serving `gpt-oss-20b-MXFP4-Q8` (2026-10-11, `evals/results/gpt-oss-20b-01/`), two of the four live cases passed; `02-transcript-injection` and `03-stale-vitals-in-note` script a bad draft to exercise a guard and are `scripted_only`. The refusal and the escalation cases held. The two that failed are the model's handling of the tool schema: it queued the refill with `patient_id` and `encounter_id` and no `medication` or `dose`, and filed the nurse's note with arguments the schema does not allow. The action guard now validates arguments against the offered tool's schema and says exactly that, the draft is withheld, and the encounter goes to the clinician. The notes it wrote were otherwise sound: today's reading, not the stale one; citations that were sent. No profile was promoted from this run.
+
 ## Closing section, written by the team
 
 Which route policy did you change, what did the stored traces say it would change, and did you ship it? Which decision in your traces would a prompt not have been able to explain? What would you need before running the suite live, and what in the gate could a live model still get wrong?

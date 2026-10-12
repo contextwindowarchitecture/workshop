@@ -1,0 +1,644 @@
+{
+  "request": {
+    "encounter": "enc_9003",
+    "clinician": "dr_lee",
+    "patient": "p_2002",
+    "session": "s_c1_05",
+    "asked_at": "2026-10-03T11:35:00Z",
+    "question": "Gout flare: colchicine dosing?",
+    "faults": []
+  },
+  "intent": {
+    "route": "consult",
+    "matched": null
+  },
+  "route": "consult",
+  "attempts": [
+    {
+      "tier": "small",
+      "snapshot": {
+        "assembly_time": "2026-10-03T11:35:00Z",
+        "scope": {
+          "tenant": "harbor-street",
+          "user": "dr_lee",
+          "session": "s_c1_05",
+          "task": "p_2002"
+        },
+        "budget": {
+          "input": 2560,
+          "reserved_output": 512,
+          "margin_percent": 15
+        },
+        "profile": {
+          "spec": "cwa/draft",
+          "id": "c1-consult-messages",
+          "version": 1,
+          "route": "consult",
+          "model_family": null,
+          "route_policy_version": "c1-consult/v1",
+          "placement": [
+            {
+              "slot": "governance.instructions",
+              "wrap": "system"
+            },
+            {
+              "slot": "state.user",
+              "wrap": "xml:clinician"
+            },
+            {
+              "slot": "state.task",
+              "wrap": "xml:chart"
+            },
+            {
+              "slot": "interaction.memory",
+              "wrap": "xml:prior_note"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "wrap": "xml:guideline"
+            },
+            {
+              "slot": "interaction.history",
+              "wrap": "xml:transcript"
+            },
+            {
+              "slot": "governance.output_contract",
+              "wrap": "xml:format"
+            },
+            {
+              "slot": "interaction.query",
+              "wrap": "xml:request"
+            }
+          ],
+          "evaluation": {
+            "status": "unevaluated",
+            "suite": null,
+            "date": null,
+            "result": null,
+            "artifact": null
+          }
+        },
+        "route_policy": {
+          "route": "consult",
+          "version": "c1-consult/v1",
+          "clock_skew_seconds": 5,
+          "requires_evidence": true,
+          "producers": {
+            "clinical-policy": {
+              "kind": "policy",
+              "slots": [
+                "governance.instructions",
+                "governance.output_contract"
+              ]
+            },
+            "ehr-chart": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "telemetry": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "clinician-state": {
+              "kind": "state",
+              "slots": [
+                "state.user"
+              ]
+            },
+            "ehr-notes": {
+              "kind": "memory",
+              "slots": [
+                "interaction.memory"
+              ]
+            },
+            "guidelines": {
+              "kind": "retrieval",
+              "slots": [
+                "evidence.knowledge"
+              ]
+            },
+            "ambient-scribe": {
+              "kind": "interaction",
+              "slots": [
+                "interaction.history",
+                "interaction.query"
+              ]
+            }
+          },
+          "slots": {
+            "state.task": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "task"
+              ]
+            },
+            "state.user": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "user"
+              ]
+            },
+            "evidence.knowledge": {
+              "min_relevance": 3.0,
+              "min_included": 1,
+              "dedupe": "exact",
+              "max_per_source": 2,
+              "order_by": [
+                "-relevance",
+                "-freshness"
+              ]
+            },
+            "interaction.memory": {
+              "source_prefix": "note:",
+              "required_scope": [
+                "tenant",
+                "task"
+              ],
+              "order_by": [
+                "-freshness"
+              ]
+            },
+            "interaction.history": {
+              "required_scope": [
+                "session"
+              ],
+              "order_by": [
+                "-freshness"
+              ],
+              "max_tokens": 900
+            },
+            "interaction.query": {
+              "required_scope": [
+                "session"
+              ]
+            }
+          },
+          "tier_upgrades": {
+            "state.user": "protected"
+          },
+          "facts": {
+            "vitals.bp": {
+              "precedence": [
+                "telemetry",
+                "ehr-notes"
+              ],
+              "scope": [
+                "tenant"
+              ],
+              "on_unresolved": "refuse"
+            }
+          },
+          "fitting_order": [
+            {
+              "slot": "interaction.history",
+              "action": "omit"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "compress"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "omit"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "action": "omit"
+            }
+          ],
+          "parser": true
+        },
+        "tokenizer": "estimate-utf8/v1",
+        "renderer": "cwa-messages/v1",
+        "batches": [
+          {
+            "producer": {
+              "id": "clinical-policy",
+              "kind": "policy"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "policy:consult",
+                "slot": "governance.instructions",
+                "source": "app:policy/consult/instructions.md",
+                "source_version": "2",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "You are the Harbor Street Family Practice clinical reference assistant, answering a clinician's question during an encounter. Answer only from the guidelines you are given, applied to the chart and vitals you are given; say so when the guidelines do not cover the question.\n\nCite the guideline paragraph id for every rule you state. The chart's allergy and medication lists decide what is safe, not the transcript. You do not order, prescribe or file anything; the clinician decides.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "contract:consult",
+                "slot": "governance.output_contract",
+                "source": "app:policy/consult/contract.md",
+                "source_version": "1",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "Reply as JSON with exactly these keys: \"answer\" (plain text, at most 200 words) and \"citations\" (the list of guideline paragraph ids you relied on). No other keys, no text outside the JSON.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ehr-chart",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "chart:p_2002",
+                "slot": "state.task",
+                "source": "ehr:patients/p_2002",
+                "source_version": "3",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-03T11:35:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "task": "p_2002"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Patient p_2002: Daniel Mbeki, 34M. Encounter enc_9003, acute visit: sore throat, room 2. Problems: none. Active medications: none. Allergies: none known. Recent labs: none on file."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "telemetry",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "vitals:enc_9003",
+                "slot": "state.task",
+                "source": "telemetry:spot-vitals-2/enc_9003",
+                "source_version": "2026-10-03T11:34:00Z",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-03T11:34:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "task": "p_2002"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Vitals from spot-vitals-2 at 2026-10-03T11:34:00Z: BP 118/74, HR 96, SpO2 97%, temperature 38.4 C."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "clinician-state",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "clinician:dr_lee",
+                "slot": "state.user",
+                "source": "staff-directory:dr_lee",
+                "source_version": "2",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-03T11:35:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "user": "dr_lee"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Dr. Hana Lee (dr_lee), physician, a prescriber."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ehr-notes",
+              "kind": "memory"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [
+                  {
+                    "id": "note:p_2002:0001~summary",
+                    "body": "November 2025: travel vaccinations given, no chronic conditions, no regular medicines.",
+                    "method": "clinician-written summary",
+                    "lineage": "summarised"
+                  }
+                ],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "note:p_2002:0001",
+                "slot": "interaction.memory",
+                "source": "note:p_2002:0001",
+                "source_version": "1",
+                "authority": "generated",
+                "trust": "unverified",
+                "freshness": "2025-11-04T16:00:00Z",
+                "expires": "2026-11-04T16:00:00Z",
+                "scope": {
+                  "tenant": "harbor-street",
+                  "task": "p_2002"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Note by dr_lee on 2025-11-04 (encounter enc_8120): Daniel Mbeki attended for travel vaccinations before a trip to Kenya. No chronic conditions, no regular medicines, no known drug allergies. Hepatitis A and typhoid vaccines administered without reaction. Malaria prophylaxis discussed and prescribed as a one-off course."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "guidelines",
+              "kind": "retrieval"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:metformin-prescribing@2#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:metformin-prescribing",
+                "source_version": "2",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-05-14T09:00:00Z",
+                "relevance": 2.577,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Metformin is first-line therapy for type 2 diabetes in adults without contraindication. Usual dosing is 500 mg twice daily with meals, increased by 500 mg per week as tolerated to a maximum of 2000 mg daily."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 0.0,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Most sore throats are viral and resolve without antibiotics. Use the Centor criteria to decide on testing: fever above 38°C, tonsillar exudate, tender anterior cervical lymphadenopathy, and absence of cough score one point each."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#1",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 0.0,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "With a Centor score of 0 or 1, do not test or treat with antibiotics. With a score of 2 or 3, perform a rapid streptococcal antigen test and treat only if positive. With a score of 4, test or treat empirically."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#2",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 0.0,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "First-line treatment for confirmed streptococcal pharyngitis is penicillin V for ten days. In patients with a documented penicillin allergy, use a macrolide or a first-generation cephalosporin if the allergy was not anaphylaxis; the chart's allergy list decides, not recall in the room."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:acute-pharyngitis@5#3",
+                "slot": "evidence.knowledge",
+                "source": "guide:acute-pharyngitis",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-01-30T09:00:00Z",
+                "relevance": 0.0,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Advise analgesia, fluids and rest for every patient, and review if symptoms persist beyond seven days or worsen."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "guide:hypertension-followup@4#0",
+                "slot": "evidence.knowledge",
+                "source": "guide:hypertension-followup",
+                "source_version": "4",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-04-20T09:00:00Z",
+                "relevance": 0.0,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "The blood pressure target for adults with diabetes is below 130/80 mmHg where tolerated. Base decisions on a seated reading taken at the current visit after five minutes' rest; a single elevated reading, especially one recorded under stress or at a rushed intake, should be repeated before treatment is changed."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ambient-scribe",
+              "kind": "interaction"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c1_05:0001",
+                "slot": "interaction.history",
+                "source": "stt:s_c1_05",
+                "source_version": "1",
+                "authority": "untrusted",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-03T11:31:00Z",
+                "scope": {
+                  "session": "s_c1_05"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "[clinician] Daniel, tell me about the toe."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c1_05:0002",
+                "slot": "interaction.history",
+                "source": "stt:s_c1_05",
+                "source_version": "1",
+                "authority": "untrusted",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-03T11:31:30Z",
+                "scope": {
+                  "session": "s_c1_05"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "[patient] It came on overnight, red, hot and I cannot bear the bedsheet on it."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c1_05:0003",
+                "slot": "interaction.query",
+                "source": "console:s_c1_05",
+                "source_version": "1",
+                "authority": "user",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-03T11:35:00Z",
+                "scope": {
+                  "session": "s_c1_05"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "Gout flare: colchicine dosing?"
+              }
+            ],
+            "excluded": []
+          }
+        ],
+        "conflicts": []
+      },
+      "trace": {
+        "profile": {
+          "id": "c1-consult-messages",
+          "version": 1
+        },
+        "budget": {
+          "input": 2560,
+          "reserved_output": 512,
+          "margin_percent": 15
+        },
+        "result": null,
+        "included": [],
+        "compressed": [],
+        "excluded": [
+          {
+            "item_id": "guide:acute-pharyngitis@5#0",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          },
+          {
+            "item_id": "guide:acute-pharyngitis@5#1",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          },
+          {
+            "item_id": "guide:acute-pharyngitis@5#2",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          },
+          {
+            "item_id": "guide:acute-pharyngitis@5#3",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          },
+          {
+            "item_id": "guide:hypertension-followup@4#0",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          },
+          {
+            "item_id": "guide:metformin-prescribing@2#0",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          }
+        ],
+        "conflicts": [],
+        "refused": {
+          "bool": true,
+          "reason": "evidence_required"
+        },
+        "context": {
+          "spec": "cwa/draft",
+          "assembly_time": "2026-10-03T11:35:00Z",
+          "route_policy_version": "c1-consult/v1",
+          "tokenizer": "estimate-utf8/v1",
+          "renderer": "cwa-messages/v1",
+          "snapshot_digest": "ec78430e63ec418b533e3fb53f8a245792f3e22c196c701c815bbb1cbdb42d2b"
+        },
+        "defaults_filled": [],
+        "recovery": {
+          "action": "request_context"
+        }
+      },
+      "payload": null
+    }
+  ],
+  "draft": null,
+  "parsed": null,
+  "guards": [],
+  "reply": "The assistant could not complete this request safely. The encounter has been flagged for the clinician to review and complete by hand.",
+  "actions_queued": [],
+  "outcome": "needs_clinician_review",
+  "model": "gpt-oss-20b-MXFP4-Q8"
+}

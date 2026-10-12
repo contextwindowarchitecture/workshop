@@ -57,7 +57,8 @@ class LiveModel:
         messages += [{"role": m["role"], "content": m["content"]} for m in rendered["messages"]]
         request: dict[str, Any] = {"model": self.name, "messages": messages, "max_tokens": self.reserved_output}
         if rendered.get("tools"):
-            request["tools"] = [{"type": "function", "function": {"name": t["name"], "description": t["description"], "parameters": t["input_schema"]}} for t in rendered["tools"]]
+            specs = [json.loads(t["text"]) for t in rendered["tools"]]  # a tools entry is {id, text}: the text is the tool specification
+            request["tools"] = [{"type": "function", "function": {"name": t["name"], "description": t.get("description", ""), "parameters": t["input_schema"]}} for t in specs]
         if os.environ.get("CWA_WORKSHOP_REASONING_EFFORT"):
             request["reasoning_effort"] = os.environ["CWA_WORKSHOP_REASONING_EFFORT"]
         response = self.client.chat.completions.create(**request)

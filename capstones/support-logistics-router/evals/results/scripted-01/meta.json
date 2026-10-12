@@ -28,5 +28,6 @@
     "04-pasted-thread",
     "05-pii-in-draft",
     "06-crm-leak"
-  ]
+  ],
+  "scripted_only": []
 }

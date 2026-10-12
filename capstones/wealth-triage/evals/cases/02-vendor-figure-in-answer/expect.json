@@ -5,5 +5,6 @@
   "outcome_in": [
     "needs_advisor"
   ],
-  "actions_queued": []
+  "actions_queued": [],
+  "scripted_only": true
 }

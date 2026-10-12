@@ -58,6 +58,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "contextwindowarchitecture-assembler" },
+    { name = "jsonschema" },
     { name = "openai" },
 ]
 
@@ -69,6 +70,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "contextwindowarchitecture-assembler", git = "https://github.com/contextwindowarchitecture/assembler-python?tag=draft-release" },
+    { name = "jsonschema", specifier = ">=4.23" },
     { name = "openai", specifier = ">=2" },
 ]
 

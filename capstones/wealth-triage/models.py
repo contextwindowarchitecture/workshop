@@ -39,7 +39,10 @@ class LiveDrafter:
         messages += [{"role": m["role"], "content": text_of(m["content"])} for m in rendered["messages"]]
         request: dict[str, Any] = {"model": self.name, "messages": messages, "max_tokens": self.reserved_output}
         if rendered.get("tools"):
-            request["tools"] = [{"type": "function", "function": t} for t in rendered["tools"]]
+            # the offered tools are shown to the model as the API's tool definitions, but a call is a JSON action the
+            # contract names and the guards read, never a native tool call: tool_choice none keeps it that way
+            request["tools"] = [{"type": "function", "function": {"name": t["name"], "description": t.get("description", ""), "parameters": t["input_schema"]}} for t in (json.loads(e["text"]) for e in rendered["tools"])]
+            request["tool_choice"] = "none"
         if os.environ.get("CWA_WORKSHOP_REASONING_EFFORT"):
             request["reasoning_effort"] = os.environ["CWA_WORKSHOP_REASONING_EFFORT"]
         return self.client.chat.completions.create(**request).choices[0].message.content or ""

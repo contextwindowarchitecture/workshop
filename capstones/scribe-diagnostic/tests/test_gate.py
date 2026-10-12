@@ -140,7 +140,7 @@ def test_budgets_are_computed_and_the_pasted_report_escalates(which):
 
 def test_history_is_shed_before_evidence_under_pressure(which):
     request, drafter, _ = case("01-followup-refill")
-    record = app.run(request, drafter, which, out=io.StringIO(), budget_input=1300)
+    record = app.run(request, drafter, which, out=io.StringIO(), budget_input=1350)
     trace = record["attempts"][0]["trace"]
     assert not trace["refused"]["bool"]
     dropped = [r["item_id"] for r in trace["excluded"] if r["reason"] == "over_budget"]
@@ -182,6 +182,9 @@ def test_the_guards_as_units(which):
     assert not guards.prescription_guard([refill], nurse).ok
     offered = guards.actions_were_offered([{"tool": "order_controlled_substance", "arguments": {}}], {"order_prescription_refill", "add_chart_note"})
     assert not offered.ok and "never" in offered.reason
+    misnamed = guards.actions_were_offered([{"tool": "order_prescription_refill", "arguments": {"patient_id": "p_2001", "medication": "metformin", "dose": "500 mg"}}], {"order_prescription_refill"})
+    assert not misnamed.ok and "schema" in misnamed.reason
+    assert guards.actions_were_offered([refill], {"order_prescription_refill"}).ok
     assert guards.vitals_match_state("BP 128/82, HR 72.", "128/82", ["150/95"]).ok
     assert not guards.vitals_match_state("BP 150/95.", "128/82", ["150/95"]).ok
     assert guards.citations_were_sent(["guide:a@1#0"], {"guide:a@1#0"}).ok and not guards.citations_were_sent(["guide:a@1#1"], {"guide:a@1#0"}).ok

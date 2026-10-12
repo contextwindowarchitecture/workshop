@@ -200,5 +200,6 @@
       "reply": "Yes: items can be returned within 30 days of delivery, unused and with tags. To exchange a size, start a return and place a new order [kb:refunds-and-exchanges@4#1]."
     }
   ],
+  "scripted_only": [],
   "result": "6/6 cases passed"
 }

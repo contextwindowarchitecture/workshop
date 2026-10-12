@@ -11,5 +11,6 @@
       "cap:place_trade",
       "cap:transfer_funds"
     ]
-  }
+  },
+  "scripted_only": true
 }

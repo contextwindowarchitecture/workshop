@@ -8,6 +8,8 @@ import re
 from dataclasses import dataclass
 from typing import Any
 
+import jsonschema
+
 import common
 from common import Request
 
@@ -26,12 +28,17 @@ class Decision:
 
 
 def actions_were_offered(actions: list[dict[str, Any]], granted: set[str]) -> Decision:
+    """Every action names a tool the final request offered, with arguments that match that tool's schema (R-5, R-15)."""
+    schemas = {t["name"]: t["input_schema"] for t in common.tools()["tools"]}
     for a in actions:
         if a.get("tool") not in granted:
             never = common.capabilities_policy().get("never", {})
             why = f": {never[a['tool']]}" if a.get("tool") in never else ""
             return Decision("actions_were_offered", False, f"the draft calls {a.get('tool')}, which was not offered on this route{why}")
-    return Decision("actions_were_offered", True, f"{len(actions)} action(s), all offered")
+        problems = sorted(e.message for e in jsonschema.Draft202012Validator(schemas[a["tool"]]).iter_errors(a.get("arguments")))
+        if problems:
+            return Decision("actions_were_offered", False, f"the arguments for {a['tool']} do not match its schema: {'; '.join(problems)}")
+    return Decision("actions_were_offered", True, f"{len(actions)} action(s), all offered with arguments that match their schemas")
 
 
 def trade_guard(actions: list[dict[str, Any]], request: Request) -> Decision:
@@ -55,6 +62,10 @@ def figures_match_ledger(figures: list[dict[str, Any]], request: Request) -> Dec
     acct = common.ledger()["accounts"][request.account]
     held = {p["symbol"]: p["units"] for p in acct["positions"]}
     for f in figures:
+        if str(f.get("symbol", "")).upper() == "CASH":
+            if not isinstance(f.get("value"), (int, float)) or abs(float(f["value"]) - acct["cash"]) > 0.01:
+                return Decision("figures_match_ledger", False, f"the answer states cash {f.get('value')}; the ledger holds {acct['cash']:.2f}")
+            continue
         if f.get("symbol") not in held:
             return Decision("figures_match_ledger", False, f"the answer states a position in {f.get('symbol')}, which the ledger does not hold")
         if f.get("units") != held[f["symbol"]]:

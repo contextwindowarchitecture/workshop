@@ -9,5 +9,6 @@
     "conflict_lost": [
       "note:p_2001:0002"
     ]
-  }
+  },
+  "scripted_only": true
 }

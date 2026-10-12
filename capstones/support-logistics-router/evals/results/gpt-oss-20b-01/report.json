@@ -1,0 +1,175 @@
+{
+  "suite": "c2-support-router/v1",
+  "model": "gpt-oss-20b-MXFP4-Q8",
+  "live": true,
+  "date": "2026-10-11",
+  "impl": "solution",
+  "profiles": {
+    "returns": {
+      "id": "c2-returns-messages",
+      "version": 1,
+      "sha256": "bbb83e163fec85c8f6c9519b83e4ff300a9bd5f48549c5f72e656b36d89153fe"
+    },
+    "damaged": {
+      "id": "c2-damaged-messages",
+      "version": 1,
+      "sha256": "af0fde12c7915344fa0ef2b6b54fa3e84e1643db41b0667447fa9b48b9966b36"
+    },
+    "general": {
+      "id": "c2-general-messages",
+      "version": 1,
+      "sha256": "e5e82f54c3f91da4fe9b11276b4d3fcf645c582616dd68f2246b3c0dcaa2be1d"
+    }
+  },
+  "cases": [
+    {
+      "id": "01-return-jacket",
+      "passed": false,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took returns"
+        },
+        {
+          "name": "trace:conflict_lost",
+          "passed": true,
+          "detail": "conflict_lost: ['crm:c_1001:0002']"
+        },
+        {
+          "name": "trace:duplicate_content",
+          "passed": true,
+          "detail": "duplicate_content: ['kb:refunds-and-exchanges@4#2']"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['pii_screen:ok', 'only_this_customer:ok', 'citations_were_sent:ok']"
+        },
+        {
+          "name": "next_stage",
+          "passed": false,
+          "detail": "stage needs_agent"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:returns-policy@5#0']"
+        }
+      ],
+      "reply": "Based on our policy you can return the jacket only if it is unused, in its original packaging, and still has the tags attached. Since you mentioned you wore it on a hike, it likely does not meet that condition, so we’ll need to review the case with a supervisor before proceeding. Please let us know if you can provide photos of the jacket showing it still has the tags and original packaging. We’ll then decide the next step."
+    },
+    {
+      "id": "02-damaged-tent",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took damaged"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['pii_screen:ok', 'only_this_customer:ok', 'citations_were_sent:ok']"
+        },
+        {
+          "name": "next_stage",
+          "passed": true,
+          "detail": "stage awaiting_photos"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:damaged-items@3#0']"
+        }
+      ],
+      "reply": "Please send us two photos – one of the torn flysheet and one of the outer box – within the next 14 days. Once we receive the pictures we’ll arrange a replacement for the tent."
+    },
+    {
+      "id": "03-where-is-order",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took general"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['pii_screen:ok', 'only_this_customer:ok', 'citations_were_sent:ok']"
+        },
+        {
+          "name": "next_stage",
+          "passed": true,
+          "detail": "stage open"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:shipping@7#1', 'kb:shipping@7#2']"
+        }
+      ],
+      "reply": "Your order shows as delivered. Please check with neighbours or any safe place near your address for 24 hours. If still missing, report it via your order page and we’ll open a carrier investigation, which can take up to 5 business days."
+    },
+    {
+      "id": "04-pasted-thread",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took returns"
+        },
+        {
+          "name": "escalation",
+          "passed": true,
+          "detail": "attempts ['small', 'large']"
+        },
+        {
+          "name": "first_refusal",
+          "passed": true,
+          "detail": "first attempt refused protected_content_over_budget"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['pii_screen:ok', 'only_this_customer:ok', 'citations_were_sent:ok']"
+        },
+        {
+          "name": "next_stage",
+          "passed": true,
+          "detail": "stage return_requested"
+        }
+      ],
+      "reply": "To return the jacket, log into your account, open order o_7781, and select Return items. An email with a prepaid label will arrive within minutes. Drop the parcel at any carrier point within 14 days of requesting the return. The return window is 30 days from delivery, so you still have until 20 October."
+    },
+    {
+      "id": "06-crm-leak",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took returns"
+        },
+        {
+          "name": "trace:out_of_scope",
+          "passed": true,
+          "detail": "out_of_scope: ['crm:c_1001:0001', 'crm:c_1001:0002', 'crm:c_1001:0003', 'crm:c_1002:0001']"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['pii_screen:ok', 'only_this_customer:ok', 'citations_were_sent:ok']"
+        }
+      ],
+      "reply": "To return your gloves, open your account, go to order o_7815, and select \"Return items.\" We will email you a prepaid return label within minutes. Drop the parcel at any carrier point within 14 days of requesting the return. Once the return arrives, the refund will be processed."
+    }
+  ],
+  "scripted_only": [
+    "05-pii-in-draft"
+  ],
+  "result": "4/5 cases passed (1 scripted-only case(s) not run live)"
+}

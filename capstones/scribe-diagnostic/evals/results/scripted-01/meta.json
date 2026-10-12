@@ -23,5 +23,6 @@
     "04-nurse-visit",
     "05-no-guideline",
     "06-pasted-labs"
-  ]
+  ],
+  "scripted_only": []
 }
