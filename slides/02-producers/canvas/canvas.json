@@ -1,0 +1,23 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T00:30:00Z"},
+  "title": "W2 Producers Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Agenda.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Agenda"},
+    "Batch.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 What a producer is"},
+    "Kinds.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Seven kinds and their slots"},
+    "Stages.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 Propose, then decide"},
+    "Part1.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 Part 1 Two given producers"},
+    "LabA.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Lab A Retrieval"},
+    "LabB.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Lab B Memory"},
+    "LabC.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Lab C State"},
+    "LabD.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 Lab D Wrong in one way"},
+    "Close.dc.html": {"x": 2000, "y": 3600, "w": 1920, "h": 1080, "title": "11 Part 6 and close"}
+  },
+  "order": ["Main.dc.html", "Agenda.dc.html", "Batch.dc.html", "Kinds.dc.html", "Stages.dc.html", "Part1.dc.html", "LabA.dc.html", "LabB.dc.html", "LabC.dc.html", "LabD.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

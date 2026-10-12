@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab D Wrong in one way</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB D · 40 MINUTES · LABS/NEGATIVE.PY</span>
+<span>10 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Five items, each wrong in exactly one way</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Each is added to a valid snapshot. The trace records its code, and nothing else changes.</p>
+</div>
+<svg width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="claims_protected: tier_upgrade_not_allowed, R-16. wrong_slot: producer_slot_not_allowed, R-13. unmarked: untrusted_content_unmarked, R-10. reused_id: duplicate_item_id, R-2. no_relevance: missing_field:relevance, R-13.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="24" font-size="18" font-weight="600" fill="#4A5361">FUNCTION</text>
+<text x="300" y="24" font-size="18" font-weight="600" fill="#4A5361">CODE</text>
+<text x="900" y="24" font-size="18" font-weight="600" fill="#4A5361">REQ</text>
+<line x1="0" y1="42" x2="1000" y2="42" stroke="#11151B" stroke-width="2"></line>
+<g font-size="21">
+<text x="0" y="94" fill="#11151B">claims_protected</text><text x="300" y="94" fill="#C2541D">tier_upgrade_not_allowed</text><text x="900" y="94" fill="#2E3540">R-16</text>
+<text x="0" y="170" fill="#11151B">wrong_slot</text><text x="300" y="170" fill="#C2541D">producer_slot_not_allowed</text><text x="900" y="170" fill="#2E3540">R-13</text>
+<text x="0" y="246" fill="#11151B">unmarked</text><text x="300" y="246" fill="#C2541D">untrusted_content_unmarked</text><text x="900" y="246" fill="#2E3540">R-10</text>
+<text x="0" y="322" fill="#11151B" font-weight="600">reused_id</text><text x="300" y="322" fill="#C2541D">duplicate_item_id</text><text x="900" y="322" fill="#2E3540">R-2</text>
+<text x="0" y="398" fill="#11151B">no_relevance</text><text x="300" y="398" fill="#C2541D">missing_field:relevance</text><text x="900" y="398" fill="#2E3540">R-13</text>
+</g>
+<g stroke="#DADFE7" stroke-width="1.5">
+<line x1="0" y1="122" x2="1000" y2="122"></line>
+<line x1="0" y1="198" x2="1000" y2="198"></line>
+<line x1="0" y1="274" x2="1000" y2="274"></line>
+<line x1="0" y1="350" x2="1000" y2="350"></line>
+<line x1="0" y1="426" x2="1000" y2="426"></line>
+</g>
+<text x="300" y="346" font-size="15" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">both items sharing the id go, the original too</text>
+<rect x="1080" y="0" width="600" height="230" fill="#11151B"></rect>
+<text x="1108" y="44" font-size="20" font-weight="600" fill="#FFFFFF">why "exactly one way"</text>
+<text x="1108" y="88" font-size="17" fill="#FFFFFF">reasons.json is in precedence</text>
+<text x="1108" y="114" font-size="17" fill="#FFFFFF">order. An item wrong in two</text>
+<text x="1108" y="140" font-size="17" fill="#FFFFFF">ways gets the earlier code</text>
+<text x="1108" y="166" font-size="17" fill="#FFFFFF">(R-21).</text>
+<rect x="1080" y="260" width="600" height="230" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="1108" y="304" font-size="20" font-weight="600" fill="#11151B">lint.py versus the trace</text>
+<text x="1108" y="348" font-size="17" fill="#2E3540">The linter runs the checks a</text>
+<text x="1108" y="374" font-size="17" fill="#2E3540">producer can run alone. It cannot</text>
+<text x="1108" y="400" font-size="17" fill="#2E3540">see across batches, read the clock</text>
+<text x="1108" y="426" font-size="17" fill="#2E3540">or know the route's threshold.</text>
+<text x="1108" y="464" font-size="17" fill="#C2541D">The trace catches them all.</text>
+</g>
+<g font-family="IBM Plex Mono, monospace" font-size="20" fill="#11151B">
+<text x="0" y="500">CWA_W2_IMPL=labs uv run pytest tests/test_lab_d.py</text>
+<text x="0" y="536">CWA_W2_IMPL=labs uv run lint.py --negatives</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

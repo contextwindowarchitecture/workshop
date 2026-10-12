@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab A Retrieval</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB A · 60 MINUTES · LABS/RETRIEVAL.PY</span>
+<span>07 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">A retrieval producer: everything after the score</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">BM25 is given. The corpus is rigged: one paragraph copied word for word, another reworded.</p>
+</div>
+<svg width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="The reworded paragraph is dropped by the producer and reported as duplicate_content at stage producer. The exact copy is emitted and excluded by the assembler as duplicate_content at stage assembler, because the route sets dedupe exact. Variants are each paragraph's first sentence, lineage extracted.">
+<defs>
+<marker id="la" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="300" height="150" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="18" y="32" font-size="17" font-weight="600" fill="#11151B">data-export.md</text>
+<rect x="18" y="52" width="264" height="36" fill="#DCE3F5"></rect><text x="32" y="76" font-size="16" fill="#11151B">paragraph A</text>
+<rect x="18" y="98" width="264" height="36" fill="#DCE3F5"></rect><text x="32" y="122" font-size="16" fill="#11151B">paragraph B</text>
+<rect x="0" y="180" width="300" height="150" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="18" y="212" font-size="17" font-weight="600" fill="#11151B">exports-faq.md</text>
+<rect x="18" y="232" width="264" height="36" fill="#DCE3F5" stroke="#11151B" stroke-dasharray="4 4"></rect><text x="32" y="256" font-size="16" fill="#11151B">A, word for word</text>
+<rect x="18" y="278" width="264" height="36" fill="#DCE3F5" stroke="#C2541D" stroke-dasharray="4 4"></rect><text x="32" y="302" font-size="16" fill="#11151B">B, reworded</text>
+<line x1="300" y1="165" x2="390" y2="165" stroke="#11151B" stroke-width="2" marker-end="url(#la)"></line>
+<rect x="400" y="80" width="300" height="170" fill="#2453C9"></rect>
+<text x="424" y="132" font-size="22" font-weight="600" fill="#FFFFFF">your producer</text>
+<text x="424" y="170" font-size="16" fill="#FFFFFF">score, dedupe near,</text>
+<text x="424" y="194" font-size="16" fill="#FFFFFF">report, package,</text>
+<text x="424" y="218" font-size="16" fill="#FFFFFF">attach variants</text>
+<path d="M 700 120 C 760 120, 760 40, 820 40" fill="none" stroke="#11151B" stroke-width="2" marker-end="url(#la)"></path>
+<line x1="700" y1="165" x2="820" y2="165" stroke="#11151B" stroke-width="2" marker-end="url(#la)"></line>
+<path d="M 700 210 C 760 210, 760 290, 820 290" fill="none" stroke="#11151B" stroke-width="2" marker-end="url(#la)"></path>
+<rect x="830" y="10" width="850" height="64" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="852" y="38" font-size="17" fill="#11151B">B reworded · <tspan font-weight="600" fill="#C2541D">duplicate_content</tspan> · stage producer</text>
+<text x="852" y="62" font-size="15" fill="#4A5361">reported, with duplicate_of naming the chunk it kept (R-13)</text>
+<rect x="830" y="130" width="400" height="70" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="852" y="160" font-size="17" fill="#11151B">A, exact copy</text>
+<text x="852" y="184" font-size="15" fill="#4A5361">emitted: dedupe is the route's</text>
+<line x1="1230" y1="165" x2="1290" y2="165" stroke="#11151B" stroke-width="2" marker-end="url(#la)"></line>
+<rect x="1300" y="130" width="380" height="70" fill="#11151B"></rect>
+<text x="1320" y="160" font-size="16" fill="#FFFFFF">assembler · dedupe: exact</text>
+<text x="1320" y="184" font-size="15" fill="#FFFFFF"><tspan fill="#F0A57E">duplicate_content</tspan> · R-24</text>
+<rect x="830" y="256" width="850" height="64" fill="#FFFFFF" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="852" y="284" font-size="17" fill="#11151B">every other paragraph · one item each</text>
+<text x="852" y="308" font-size="15" fill="#4A5361">relevance, source, source_version, and a variant; no filtering by score</text>
+<line x1="0" y1="370" x2="1680" y2="370" stroke="#DADFE7" stroke-width="2"></line>
+<text x="0" y="414" font-size="18" font-weight="600" fill="#4A5361">VARIANTS · DATA/VARIANTS.JSON, KEYED BY SHA-256</text>
+<rect x="0" y="436" width="520" height="36" fill="#DCE3F5"></rect>
+<rect x="0" y="436" width="170" height="36" fill="#2453C9"></rect>
+<text x="14" y="460" font-size="16" fill="#FFFFFF">sentence 1</text>
+<line x1="540" y1="454" x2="610" y2="454" stroke="#11151B" stroke-width="2" marker-end="url(#la)"></line>
+<rect x="620" y="436" width="170" height="36" fill="#2453C9"></rect>
+<text x="634" y="460" font-size="16" fill="#FFFFFF">sentence 1</text>
+<text x="810" y="460" font-size="18" fill="#11151B">lineage: <tspan font-weight="600" fill="#2453C9">extracted</tspan></text>
+<text x="0" y="512" font-size="16" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">Cut from the text, not written about it. W4 swaps in reviewed summaries under the same key.</text>
+<rect x="1180" y="400" width="500" height="160" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1204" y="436" font-size="18" font-weight="600" fill="#11151B">then two experiments</text>
+<text x="1204" y="476" font-size="16" fill="#2E3540">drop lineage, run --defaults:</text>
+<text x="1204" y="498" font-size="16" fill="#2E3540">  one defaults_filled row per item</text>
+<text x="1204" y="530" font-size="16" fill="#2E3540">--budget 600: ~ rows before</text>
+<text x="1204" y="552" font-size="16" fill="#2E3540">  any omission (R-16, R-18)</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

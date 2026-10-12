@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 3 Same bytes</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 3 · 30 MINUTES · DETERMINISM (R-23)</span>
+<span>09 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Same snapshot, same bytes, every time</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">A trace is only worth reading if any machine, any day, gives the same payload.</p>
+</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; background: #11151B; color: #FFFFFF; padding: 22px 32px">uv run tour.py replay scenarios/00-baseline/snapshot.json</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="520" viewBox="0 0 1680 520" role="img" aria-label="Three experiments against two outputs: snapshot digest and payload hash">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="36" font-size="20" fill="#4A5361">BREAK AN INPUT ON PURPOSE</text>
+<text x="1060" y="36" font-size="20" fill="#4A5361">SNAPSHOT DIGEST</text>
+<text x="1380" y="36" font-size="20" fill="#4A5361">PAYLOAD HASH</text>
+<line x1="0" y1="60" x2="1680" y2="60" stroke="#11151B" stroke-width="2"></line>
+<text x="0" y="120" font-size="26" font-weight="600" fill="#2453C9">1</text>
+<text x="48" y="120" font-size="26" fill="#11151B">change one character in an item body</text>
+<rect x="1060" y="82" width="280" height="64" fill="#2453C9" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1084" y="124" font-size="24" font-weight="600" fill="#FFFFFF">changes</text>
+<rect x="1380" y="82" width="280" height="64" fill="#2453C9" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1404" y="124" font-size="24" font-weight="600" fill="#FFFFFF">changes</text>
+<line x1="0" y1="170" x2="1680" y2="170" stroke="#DADFE7" stroke-width="2"></line>
+<text x="0" y="230" font-size="26" font-weight="600" fill="#2453C9">2</text>
+<text x="48" y="230" font-size="26" fill="#11151B">move assembly_time by one second</text>
+<rect x="1060" y="192" width="280" height="64" fill="#2453C9" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1084" y="234" font-size="24" font-weight="600" fill="#FFFFFF">changes</text>
+<rect x="1380" y="192" width="280" height="64" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1404" y="234" font-size="24" font-weight="600" fill="#11151B">same</text>
+<line x1="0" y1="280" x2="1680" y2="280" stroke="#DADFE7" stroke-width="2"></line>
+<text x="0" y="340" font-size="26" font-weight="600" fill="#2453C9">3</text>
+<text x="48" y="340" font-size="26" fill="#11151B">set assembly_time to 2026-12-31T00:00:00Z</text>
+<rect x="1060" y="302" width="280" height="64" fill="#2453C9" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1084" y="344" font-size="24" font-weight="600" fill="#FFFFFF">changes</text>
+<rect x="1380" y="302" width="280" height="64" fill="#2453C9" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1404" y="344" font-size="24" font-weight="600" fill="#FFFFFF">changes</text>
+<line x1="0" y1="390" x2="1680" y2="390" stroke="#11151B" stroke-width="2"></line>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="22" fill="#2E3540">
+<text x="0" y="446">The clock is part of the snapshot. In December the trace gains five exclusions:</text>
+<text x="0" y="482">expired (memory), stale_state (two state items), not_eligible (two chunks past 90 days).</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

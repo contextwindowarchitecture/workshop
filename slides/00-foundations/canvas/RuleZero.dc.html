@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 6 Rule zero</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 6 · 5 MINUTES · R-5</span>
+<span>09 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Rule zero</h2>
+<p style="margin: 0; font-size: 30px; color: #2E3540">Language guidance goes in context. Enforceable invariants go outside the model.</p>
+</div>
+<svg width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Every never, always, must or do not sentence in your prompt is sorted: if a guard outside the model could enforce it, it becomes a tool that refuses, an output filter or an argument check; if not, it is real governance text">
+<defs>
+<marker id="rz" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace" fill="#11151B">
+<rect x="0" y="180" width="360" height="240" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="28" y="230" font-size="20" fill="#4A5361">from your prompt</text>
+<text x="28" y="280" font-size="26" font-weight="600">"never …"</text>
+<text x="28" y="316" font-size="26" font-weight="600">"always …"</text>
+<text x="28" y="352" font-size="26" font-weight="600">"must …"</text>
+<text x="28" y="388" font-size="26" font-weight="600">"do not …"</text>
+<line x1="360" y1="300" x2="450" y2="300" stroke="#11151B" stroke-width="2" marker-end="url(#rz)"></line>
+<polygon points="590,180 730,300 590,420 450,300" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></polygon>
+<text x="526" y="292" font-size="19" font-weight="600">could a guard</text>
+<text x="526" y="318" font-size="19" font-weight="600">enforce it?</text>
+<path d="M 730 300 L 790 300 L 790 120 L 870 120" fill="none" stroke="#11151B" stroke-width="2" marker-end="url(#rz)"></path>
+<text x="746" y="200" font-size="18" fill="#4A5361">yes</text>
+<path d="M 790 300 L 790 470 L 870 470" fill="none" stroke="#11151B" stroke-width="2" marker-end="url(#rz)"></path>
+<text x="804" y="420" font-size="18" fill="#4A5361">no</text>
+<rect x="880" y="0" width="800" height="260" fill="#2453C9"></rect>
+<text x="912" y="52" font-size="26" font-weight="600" fill="#FFFFFF">outside the model: a guard</text>
+<text x="912" y="86" font-size="17" fill="#FFFFFF">the model cannot talk its way past it</text>
+<rect x="912" y="114" width="230" height="110" fill="#1A3D96"></rect>
+<text x="932" y="160" font-size="19" fill="#FFFFFF">a tool that</text>
+<text x="932" y="188" font-size="19" fill="#FFFFFF">refuses</text>
+<rect x="1162" y="114" width="230" height="110" fill="#1A3D96"></rect>
+<text x="1182" y="160" font-size="19" fill="#FFFFFF">a filter on</text>
+<text x="1182" y="188" font-size="19" fill="#FFFFFF">output</text>
+<rect x="1412" y="114" width="236" height="110" fill="#1A3D96"></rect>
+<text x="1432" y="160" font-size="19" fill="#FFFFFF">a check on</text>
+<text x="1432" y="188" font-size="19" fill="#FFFFFF">arguments</text>
+<rect x="880" y="370" width="800" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="912" y="422" font-size="26" font-weight="600">in context: governance text</text>
+<text x="912" y="458" font-size="17" fill="#4A5361">real language guidance</text>
+<text x="912" y="520" font-size="21" fill="#2E3540">tone · register · "be concise"</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="22" fill="#2E3540">
+<text x="0" y="500">A rule stated in governance is an instruction.</text>
+<text x="0" y="532">The application still has to enforce it.</text>
+</g>
+</svg>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #11151B">Checkpoint 6</span> · list those sentences. For each: could a guard enforce it, and what would it check?</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

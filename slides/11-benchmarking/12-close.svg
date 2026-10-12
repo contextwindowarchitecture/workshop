@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Close</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CLOSE · DOMAIN 1, THE INVARIANT HALF AT SCALE</span>
+<span>12 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Which half is the number you will report?</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">While the model half was measured, the invariant half held, with no model anywhere.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="440" viewBox="0 0 1680 440" role="img" aria-label="Domain 1: 65 cases and 25 rejections on all four assemblers; 4,900 of 4,900 decisions identical across fifteen environment cells and seven platforms; 10,000 fuzzed snapshots agreeing; a trace auditor that catches 1,616 of 1,626 deliberately broken traces. Its five findings became conformance cases.">
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<rect x="0" y="0" width="400" height="300" fill="#11151B"></rect>
+<text x="28" y="96" font-size="48" font-weight="600" fill="#FFFFFF">65 + 25</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#B9C3D6"><text x="28" y="160">cases and rejections</text><text x="28" y="186">on all four assemblers</text></g>
+</g>
+<g>
+<rect x="426" y="0" width="400" height="300" fill="#11151B"></rect>
+<text x="454" y="96" font-size="48" font-weight="600" fill="#FFFFFF">4,900</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#B9C3D6"><text x="454" y="160">of 4,900 decisions identical</text><text x="454" y="186">across fifteen environment</text><text x="454" y="212">cells and seven platforms</text></g>
+</g>
+<g>
+<rect x="852" y="0" width="400" height="300" fill="#11151B"></rect>
+<text x="880" y="96" font-size="48" font-weight="600" fill="#FFFFFF">10,000</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#B9C3D6"><text x="880" y="160">fuzzed snapshots agreeing</text></g>
+</g>
+<g>
+<rect x="1278" y="0" width="402" height="300" fill="#11151B"></rect>
+<text x="1306" y="96" font-size="48" font-weight="600" fill="#FFFFFF">1,616</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#B9C3D6"><text x="1306" y="160">of 1,626 broken traces caught</text><text x="1306" y="186">by an auditor that never</text><text x="1306" y="212">assembles</text></g>
+</g>
+<rect x="0" y="330" width="1680" height="90" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="28" y="384" font-size="19" fill="#2453C9">Its five findings became conformance cases: W10's subject.</text>
+</g>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; font-size: 23px; line-height: 1.45">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Run it yourself</span><span><span style="font-family: 'IBM Plex Mono', monospace">uv run cwabench setup</span> at the benchmark root builds the four adapters; it needs the Go, Rust and Node toolchains.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Say it every time</span><span>The invariants line first. Then the measure, with its range, and whose doing it is.</span></div>
+</div>
+</div>
+</foreignObject>
+</svg>

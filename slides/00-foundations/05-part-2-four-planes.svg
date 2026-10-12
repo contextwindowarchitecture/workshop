@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Four planes</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 2 · STEP 4 · PLANES AND SLOTS</span>
+<span>05 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Four questions, never merged</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">One slot and one authority per item (R-1). Wording never changes either (R-7).</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Governance: who may direct the model. State: what is true right now. Evidence: what the model may ground on. Interaction: what has happened, and what is asked.">
+<g font-family="IBM Plex Mono, monospace" fill="#11151B">
+<rect x="0" y="0" width="405" height="460" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="0" y="0" width="405" height="10" fill="#2453C9"></rect>
+<text x="28" y="64" font-size="30" font-weight="600">governance</text>
+<text x="28" y="120" font-size="26" font-family="IBM Plex Sans, sans-serif" font-weight="600">Who may direct</text>
+<text x="28" y="154" font-size="26" font-family="IBM Plex Sans, sans-serif" font-weight="600">the model?</text>
+<text x="28" y="230" font-size="18" fill="#2E3540">instructions</text>
+<text x="28" y="262" font-size="18" fill="#2E3540">capabilities</text>
+<text x="28" y="294" font-size="18" fill="#2E3540">examples</text>
+<text x="28" y="326" font-size="18" fill="#2E3540">output_contract</text>
+<rect x="425" y="0" width="405" height="460" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="425" y="0" width="405" height="10" fill="#11151B"></rect>
+<text x="453" y="64" font-size="30" font-weight="600">state</text>
+<text x="453" y="120" font-size="26" font-family="IBM Plex Sans, sans-serif" font-weight="600">What is true</text>
+<text x="453" y="154" font-size="26" font-family="IBM Plex Sans, sans-serif" font-weight="600">right now?</text>
+<text x="453" y="230" font-size="18" fill="#2E3540">user</text>
+<text x="453" y="262" font-size="18" fill="#2E3540">task</text>
+<rect x="850" y="0" width="405" height="460" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="850" y="0" width="405" height="10" fill="#C2541D"></rect>
+<text x="878" y="64" font-size="30" font-weight="600">evidence</text>
+<text x="878" y="120" font-size="26" font-family="IBM Plex Sans, sans-serif" font-weight="600">What may the model</text>
+<text x="878" y="154" font-size="26" font-family="IBM Plex Sans, sans-serif" font-weight="600">ground on?</text>
+<text x="878" y="230" font-size="18" fill="#2E3540">knowledge</text>
+<text x="878" y="262" font-size="18" fill="#2E3540">tool_results</text>
+<rect x="878" y="360" width="349" height="64" fill="#FBF0EA" stroke="#C2541D" stroke-width="1.5"></rect>
+<text x="898" y="399" font-size="19">chunk: reference_only</text>
+<rect x="1275" y="0" width="405" height="460" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="1275" y="0" width="405" height="10" fill="#7A8494"></rect>
+<text x="1303" y="64" font-size="30" font-weight="600">interaction</text>
+<text x="1303" y="120" font-size="26" font-family="IBM Plex Sans, sans-serif" font-weight="600">What has happened,</text>
+<text x="1303" y="154" font-size="26" font-family="IBM Plex Sans, sans-serif" font-weight="600">and what is asked?</text>
+<text x="1303" y="230" font-size="18" fill="#2E3540">memory</text>
+<text x="1303" y="262" font-size="18" fill="#2E3540">history</text>
+<text x="1303" y="294" font-size="18" fill="#2E3540">query</text>
+<rect x="1303" y="360" width="349" height="64" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="1323" y="399" font-size="19">query: the trigger</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="24" fill="#2E3540">
+<text x="0" y="530">A retrieved chunk that says "ignore your instructions" is still evidence with reference_only authority.</text>
+<text x="0" y="566">Nothing in its wording can change that.</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Agenda</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>AGENDA · 3.5 HOURS INSTRUCTOR-LED</span>
+<span>02 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Three candidates, one gets promoted</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Every tool takes <span style="font-family: 'IBM Plex Mono', monospace">--impl labs</span>. Say it at the start, so nobody edits <span style="font-family: 'IBM Plex Mono', monospace">solution/</span>.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="400" viewBox="0 0 1680 400" role="img" aria-label="210 minute timeline: framing 15, part 1 20, lab B 45, break 15, lab C 60, break 10, lab D 30, close 15. Conference cut is part 1 and lab B.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="24" font-size="18" fill="#4A5361">FULL · 210 MIN</text>
+<rect x="0" y="40" width="120" height="100" fill="#11151B"></rect>
+<rect x="120" y="40" width="160" height="100" fill="#2453C9"></rect>
+<rect x="280" y="40" width="360" height="100" fill="#1A3D96"></rect>
+<rect x="640" y="40" width="120" height="100" fill="#DADFE7"></rect>
+<rect x="760" y="40" width="480" height="100" fill="#2453C9"></rect>
+<rect x="1240" y="40" width="80" height="100" fill="#DADFE7"></rect>
+<rect x="1320" y="40" width="240" height="100" fill="#C2541D"></rect>
+<rect x="1560" y="40" width="120" height="100" fill="#11151B"></rect>
+<g stroke="#F4F5F7" stroke-width="3">
+<line x1="120" y1="40" x2="120" y2="140"></line>
+<line x1="280" y1="40" x2="280" y2="140"></line>
+<line x1="640" y1="40" x2="640" y2="140"></line>
+<line x1="760" y1="40" x2="760" y2="140"></line>
+<line x1="1240" y1="40" x2="1240" y2="140"></line>
+<line x1="1320" y1="40" x2="1320" y2="140"></line>
+<line x1="1560" y1="40" x2="1560" y2="140"></line>
+</g>
+<g font-size="22" font-weight="600" fill="#FFFFFF">
+<text x="20" y="98">frame</text>
+<text x="140" y="98">part 1</text>
+<text x="300" y="98">lab B · reuse</text>
+<text x="780" y="98">lab C · evaluate, promote</text>
+<text x="1340" y="98">lab D · lock</text>
+<text x="1580" y="98">close</text>
+</g>
+<text x="660" y="98" font-size="18" fill="#11151B">break</text>
+<g font-size="17" fill="#4A5361">
+<text x="0" y="170">0</text>
+<text x="108" y="170">15</text>
+<text x="268" y="170">35</text>
+<text x="628" y="170">80</text>
+<text x="748" y="170">95</text>
+<text x="1222" y="170">155</text>
+<text x="1302" y="170">165</text>
+<text x="1542" y="170">195</text>
+<text x="1644" y="170">210</text>
+</g>
+<text x="760" y="208" font-size="17" fill="#2E3540">stop at 140: what did the structural suite measure?</text>
+<text x="0" y="284" font-size="18" fill="#4A5361">CONFERENCE CUT · 90 MIN</text>
+<rect x="0" y="300" width="1680" height="40" fill="#FFFFFF" stroke="#DADFE7"></rect>
+<rect x="120" y="300" width="160" height="40" fill="#2453C9"></rect>
+<rect x="280" y="300" width="360" height="40" fill="#1A3D96"></rect>
+</g>
+</svg>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540">Model-free. The live part of Lab C is optional and needs an OpenAI-compatible endpoint.</div>
+</div>
+</foreignObject>
+</svg>

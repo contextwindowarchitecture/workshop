@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 2 Thirteen snapshots</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 2 · THE EXERCISES</span>
+<span>08 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Thirteen snapshots, one change each</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Each says what changed, never what the assembler will do.</p>
+</div>
+<svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="The base snapshot with thirteen single-change variants">
+<g stroke="#9AA3B0" stroke-width="1.5" fill="none">
+<path d="M 640 320 C 600 320, 600 39, 560 39"></path>
+<path d="M 640 320 C 600 320, 600 131, 560 131"></path>
+<path d="M 640 320 C 600 320, 600 223, 560 223"></path>
+<path d="M 640 320 L 560 315"></path>
+<path d="M 640 320 C 600 320, 600 407, 560 407"></path>
+<path d="M 640 320 C 600 320, 600 499, 560 499"></path>
+<path d="M 640 320 C 600 320, 600 591, 560 591"></path>
+<path d="M 1040 320 C 1080 320, 1080 39, 1120 39"></path>
+<path d="M 1040 320 C 1080 320, 1080 145, 1120 145"></path>
+<path d="M 1040 320 C 1080 320, 1080 251, 1120 251"></path>
+<path d="M 1040 320 C 1080 320, 1080 357, 1120 357"></path>
+<path d="M 1040 320 C 1080 320, 1080 463, 1120 463"></path>
+<path d="M 1040 320 C 1080 320, 1080 569, 1120 569"></path>
+</g>
+<rect x="640" y="200" width="400" height="240" fill="#11151B"></rect>
+<g font-family="IBM Plex Mono, monospace" fill="#FFFFFF">
+<text x="668" y="252" font-size="22" font-weight="600">the base</text>
+<text x="668" y="296" font-size="17">messages-snapshot.json</text>
+<text x="668" y="336" font-size="17">support chat</text>
+<text x="668" y="366" font-size="17">7 producers · 13 items</text>
+<text x="668" y="410" font-size="15" fill="#B9C3D6">the specification's own example</text>
+</g>
+<g font-family="IBM Plex Mono, monospace" font-size="18">
+<g>
+<rect x="0" y="0" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="20" y="34" font-weight="600" fill="#2453C9">00</text><text x="64" y="34" fill="#11151B">baseline</text>
+<text x="64" y="60" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">nothing</text>
+</g>
+<g>
+<rect x="0" y="92" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="20" y="126" font-weight="600" fill="#2453C9">01</text><text x="64" y="126" fill="#11151B">no-query</text>
+<text x="64" y="152" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">the live query is removed</text>
+</g>
+<g>
+<rect x="0" y="184" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="20" y="218" font-weight="600" fill="#2453C9">02</text><text x="64" y="218" fill="#11151B">imperative-chunk</text>
+<text x="64" y="244" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">an instruction pasted into a retrieved chunk</text>
+</g>
+<g>
+<rect x="0" y="276" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="20" y="310" font-weight="600" fill="#2453C9">03</text><text x="64" y="310" fill="#11151B">chunk-claims-governing</text>
+<text x="64" y="336" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">the chunk claims governing authority</text>
+</g>
+<g>
+<rect x="0" y="368" width="560" height="78" fill="#FFFFFF" stroke="#C2541D" stroke-width="2.5"></rect>
+<text x="20" y="402" font-weight="600" fill="#2453C9">04</text><text x="64" y="402" fill="#11151B">chunk-moves-to-instructions</text>
+<text x="64" y="428" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">the chunk is addressed to governance.instructions</text>
+</g>
+<g>
+<rect x="0" y="460" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="20" y="494" font-weight="600" fill="#2453C9">05</text><text x="64" y="494" fill="#11151B">expired-memory</text>
+<text x="64" y="520" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">a memory expires a minute before assembly</text>
+</g>
+<g>
+<rect x="0" y="552" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="20" y="586" font-weight="600" fill="#2453C9">06</text><text x="64" y="586" fill="#11151B">stale-state</text>
+<text x="64" y="612" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">a state item is twenty minutes old</text>
+</g>
+<g>
+<rect x="1120" y="0" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1140" y="34" font-weight="600" fill="#2453C9">07</text><text x="1184" y="34" fill="#11151B">budget-pressure</text>
+<text x="1184" y="60" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">budget.input drops to 200</text>
+</g>
+<g>
+<rect x="1120" y="106" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1140" y="140" font-weight="600" fill="#2453C9">08</text><text x="1184" y="140" fill="#11151B">budget-refusal</text>
+<text x="1184" y="166" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">budget.input drops to 90</text>
+</g>
+<g>
+<rect x="1120" y="212" width="560" height="78" fill="#FFFFFF" stroke="#C2541D" stroke-width="2.5"></rect>
+<text x="1140" y="246" font-weight="600" fill="#2453C9">09</text><text x="1184" y="246" fill="#11151B">tool-from-mcp</text>
+<text x="1184" y="272" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">an MCP adapter emits a tool specification itself</text>
+</g>
+<g>
+<rect x="1120" y="318" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1140" y="352" font-weight="600" fill="#2453C9">10</text><text x="1184" y="352" fill="#11151B">duplicate-chunk</text>
+<text x="1184" y="378" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">same words, spaced differently</text>
+</g>
+<g>
+<rect x="1120" y="424" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1140" y="458" font-weight="600" fill="#2453C9">11</text><text x="1184" y="458" fill="#11151B">evidence-required</text>
+<text x="1184" y="484" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">evidence required, nothing clears the threshold</text>
+</g>
+<g>
+<rect x="1120" y="530" width="560" height="78" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1140" y="564" font-weight="600" fill="#2453C9">12</text><text x="1184" y="564" fill="#11151B">two-batches</text>
+<text x="1184" y="590" font-size="16" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">one producer's batch appears twice</text>
+</g>
+</g>
+</svg>
+<div style="display: flex; gap: 48px; font-size: 22px; color: #2E3540">
+<span><span style="display: inline-block; width: 28px; height: 16px; border: 2.5px solid #C2541D; vertical-align: middle; margin-right: 12px"></span>stop the room after 04 and 09</span>
+<span style="font-family: 'IBM Plex Mono', monospace; color: #11151B">uv run tour.py list</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

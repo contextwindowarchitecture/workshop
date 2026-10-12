@@ -1,0 +1,24 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T06:00:00Z"},
+  "title": "W11 Benchmarking Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Agenda.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Agenda"},
+    "Halves.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 Two halves"},
+    "Families.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Part 1 Two families"},
+    "Kinds.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 Part 1 Three kinds of result"},
+    "Invariants.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 Lab A The invariants"},
+    "Bench.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Lab B Fourteen models"},
+    "Whose.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Lab B What is CWA's"},
+    "Arms.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Lab C Twelve arms"},
+    "Result.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 Lab C The published result"},
+    "Construct.dc.html": {"x": 2000, "y": 3600, "w": 1920, "h": 1080, "title": "11 Lab D One construct"},
+    "Close.dc.html": {"x": 4000, "y": 3600, "w": 1920, "h": 1080, "title": "12 Close"}
+  },
+  "order": ["Main.dc.html", "Agenda.dc.html", "Halves.dc.html", "Families.dc.html", "Kinds.dc.html", "Invariants.dc.html", "Bench.dc.html", "Whose.dc.html", "Arms.dc.html", "Result.dc.html", "Construct.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

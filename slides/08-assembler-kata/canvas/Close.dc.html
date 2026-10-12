@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Close</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CLOSE · 15 MINUTES</span>
+<span>09 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Which repository will you open an issue in?</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Pick an open issue and work it the way you worked the kata.</p>
+</div>
+<svg width="1680" height="380" viewBox="0 0 1680 380" role="img" aria-label="The four assembler repositories: Python, TypeScript, Go and Rust">
+<g font-family="IBM Plex Mono, monospace">
+<g><rect x="0" y="0" width="400" height="300" fill="#2453C9"></rect><text x="28" y="60" font-size="30" font-weight="600" fill="#FFFFFF">Python</text><text x="28" y="96" font-size="15" fill="#DCE3F5">the reference you repaired</text></g>
+<g><rect x="426" y="0" width="400" height="300" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="454" y="60" font-size="30" font-weight="600" fill="#11151B">TypeScript</text></g>
+<g><rect x="852" y="0" width="400" height="300" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="880" y="60" font-size="30" font-weight="600" fill="#11151B">Go</text></g>
+<g><rect x="1278" y="0" width="402" height="300" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="1306" y="60" font-size="30" font-weight="600" fill="#11151B">Rust</text></g>
+<g font-size="17" fill="#4A5361">
+<text x="28" y="250" fill="#FFFFFF">red · green · report</text>
+<text x="454" y="250">red · green · report</text>
+<text x="880" y="250">red · green · report</text>
+<text x="1306" y="250">red · green · report</text>
+</g>
+<text x="0" y="350" font-size="16" fill="#4A5361">docs/assemblers.md maps one port's names to the others'</text>
+</g>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; font-size: 23px; line-height: 1.45">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">W10</span><span>Writes the missing case in the specification repository's generators and runs all four assemblers against it.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Case problems</span><span>File an issue for any published case whose expectation you can show is wrong.</span></div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

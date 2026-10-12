@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 4 Six words</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 4 · 10 MINUTES · THE GLOSSARY</span>
+<span>07 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Six words, in your own words</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Look them up. Close the glossary. Write each in one line. Reopen it and mark what you missed.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="630" viewBox="0 0 1680 630" role="img" aria-label="Six terms: item, slot, snapshot, assembler, profile, trace">
+<g font-family="IBM Plex Sans, sans-serif">
+<g transform="translate(0,0)">
+<rect width="540" height="300" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="32" y="72" font-family="IBM Plex Mono, monospace" font-size="40" font-weight="600" fill="#11151B">item</text>
+<text x="32" y="140" font-size="21" fill="#2E3540">One piece of candidate context:</text>
+<text x="32" y="172" font-size="21" fill="#2E3540">a slot, an authority, a source</text>
+<text x="32" y="204" font-size="21" fill="#2E3540">and a body.</text>
+<line x1="32" y1="256" x2="508" y2="256" stroke="#DADFE7" stroke-width="1.5"></line>
+<text x="32" y="284" font-family="IBM Plex Mono, monospace" font-size="16" fill="#C2541D"></text>
+</g>
+<g transform="translate(570,0)">
+<rect width="540" height="300" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="32" y="72" font-family="IBM Plex Mono, monospace" font-size="40" font-weight="600" fill="#11151B">slot</text>
+<text x="32" y="140" font-size="21" fill="#2E3540">One of eleven typed places,</text>
+<text x="32" y="172" font-size="21" fill="#2E3540">grouped into four planes.</text>
+<text x="32" y="204" font-size="21" fill="#2E3540"></text>
+<line x1="32" y1="256" x2="508" y2="256" stroke="#DADFE7" stroke-width="1.5"></line>
+<text x="32" y="284" font-family="IBM Plex Mono, monospace" font-size="16" fill="#C2541D"></text>
+</g>
+<g transform="translate(1140,0)">
+<rect width="540" height="300" fill="#FFFFFF" stroke="#C2541D" stroke-width="3"></rect>
+<text x="32" y="72" font-family="IBM Plex Mono, monospace" font-size="40" font-weight="600" fill="#11151B">snapshot</text>
+<text x="32" y="140" font-size="21" fill="#2E3540">The frozen input to assembly,</text>
+<text x="32" y="172" font-size="21" fill="#2E3540">taken before any model call,</text>
+<text x="32" y="204" font-size="21" fill="#2E3540">clock and policy included.</text>
+<line x1="32" y1="256" x2="508" y2="256" stroke="#DADFE7" stroke-width="1.5"></line>
+<text x="32" y="284" font-family="IBM Plex Mono, monospace" font-size="16" fill="#C2541D">a usual miss</text>
+</g>
+<g transform="translate(0,330)">
+<rect width="540" height="300" fill="#FFFFFF" stroke="#C2541D" stroke-width="3"></rect>
+<text x="32" y="72" font-family="IBM Plex Mono, monospace" font-size="40" font-weight="600" fill="#11151B">assembler</text>
+<text x="32" y="140" font-size="21" fill="#2E3540">Turns a snapshot into a payload</text>
+<text x="32" y="172" font-size="21" fill="#2E3540">and a trace. It never calls</text>
+<text x="32" y="204" font-size="21" fill="#2E3540">a model.</text>
+<line x1="32" y1="256" x2="508" y2="256" stroke="#DADFE7" stroke-width="1.5"></line>
+<text x="32" y="284" font-family="IBM Plex Mono, monospace" font-size="16" fill="#C2541D">a usual miss</text>
+</g>
+<g transform="translate(570,330)">
+<rect width="540" height="300" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="32" y="72" font-family="IBM Plex Mono, monospace" font-size="40" font-weight="600" fill="#11151B">profile</text>
+<text x="32" y="140" font-size="21" fill="#2E3540">Placement made explicit:</text>
+<text x="32" y="172" font-size="21" fill="#2E3540">versioned, per route, evaluated,</text>
+<text x="32" y="204" font-size="21" fill="#2E3540">recorded in every trace.</text>
+<line x1="32" y1="256" x2="508" y2="256" stroke="#DADFE7" stroke-width="1.5"></line>
+<text x="32" y="284" font-family="IBM Plex Mono, monospace" font-size="16" fill="#C2541D"></text>
+</g>
+<g transform="translate(1140,330)">
+<rect width="540" height="300" fill="#FFFFFF" stroke="#C2541D" stroke-width="3"></rect>
+<text x="32" y="72" font-family="IBM Plex Mono, monospace" font-size="40" font-weight="600" fill="#11151B">trace</text>
+<text x="32" y="140" font-size="21" fill="#2E3540">What was sent, and what was</text>
+<text x="32" y="172" font-size="21" fill="#2E3540">left out, each exclusion with</text>
+<text x="32" y="204" font-size="21" fill="#2E3540">a reason.</text>
+<line x1="32" y1="256" x2="508" y2="256" stroke="#DADFE7" stroke-width="1.5"></line>
+<text x="32" y="284" font-family="IBM Plex Mono, monospace" font-size="16" fill="#C2541D">a usual miss</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Close</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CLOSE · THE CAPSTONE'S REAL OUTPUT</span>
+<span>13 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The closing section, written by the team</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The facilitator collects it. Three questions, answered from your own traces and reports.</p>
+</div>
+<svg width="1680" height="440" viewBox="0 0 1680 440" role="img" aria-label="Three questions: which route policy or placement you changed, what the evidence said it would change and whether you shipped it; which decision in your traces a prompt could not have explained; what you would need before running the suite live, and what a live model could still get wrong.">
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<rect x="0" y="0" width="540" height="400" fill="#2453C9"></rect>
+<text x="28" y="64" font-size="48" font-weight="600" fill="#FFFFFF">1</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="22" fill="#FFFFFF"><text x="28" y="140">Which route policy did you</text><text x="28" y="170">change? What did the stored</text><text x="28" y="200">traces say it would change?</text><text x="28" y="230">Did you ship it?</text></g>
+<text x="28" y="350" font-size="15" fill="#DCE3F5">C3: a placement, with cache.py</text>
+<text x="28" y="374" font-size="15" fill="#DCE3F5">as the evidence</text>
+</g>
+<g>
+<rect x="570" y="0" width="540" height="400" fill="#11151B"></rect>
+<text x="598" y="64" font-size="48" font-weight="600" fill="#FFFFFF">2</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="22" fill="#FFFFFF"><text x="598" y="140">Which decision in your traces</text><text x="598" y="170">would a prompt not have been</text><text x="598" y="200">able to explain?</text></g>
+<text x="598" y="350" font-size="15" fill="#B9C3D6">the same question as the demo</text>
+</g>
+<g>
+<rect x="1140" y="0" width="540" height="400" fill="#C2541D"></rect>
+<text x="1168" y="64" font-size="48" font-weight="600" fill="#FFFFFF">3</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="22" fill="#FFFFFF"><text x="1168" y="140">What would you need before</text><text x="1168" y="170">running the suite live, and what</text><text x="1168" y="200">in the gate could a live model</text><text x="1168" y="230">still get wrong?</text></g>
+<text x="1168" y="350" font-size="15" fill="#FBF0EA">the live runs answer part of it</text>
+</g>
+</g>
+</svg>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540">For the policy change, keep W7's what-if habit even without a store: run the suite before and after, and compare the reports.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

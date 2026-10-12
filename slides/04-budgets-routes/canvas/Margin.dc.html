@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The margin rule</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · THE COUNT · R-16</span>
+<span>05 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">One margin rule, one naming rule</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The count is the declared tokenizer's. <span style="font-family: 'IBM Plex Mono', monospace">estimate-utf8/v1</span> is portable, and wrong by a model-dependent factor.</p>
+</div>
+<svg width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="The payload fits when count times 100 plus margin over 100, rounded up, is at most budget.input. An application tokenizer works under its own id; under a published id the assembler stops before assembly.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="1680" height="200" fill="#11151B"></rect>
+<text x="40" y="60" font-size="18" fill="#B9C3D6">the payload fits when</text>
+<text x="40" y="134" font-size="44" font-weight="600" fill="#FFFFFF">ceil( count × (100 + margin) / 100 ) ≤ budget.input</text>
+<text x="40" y="178" font-size="17" fill="#B9C3D6">margin is budget.margin_percent; it rounds up</text>
+<text x="0" y="270" font-size="18" font-weight="600" fill="#4A5361">COUNTING WITH THE MODEL'S OWN TOKENIZER</text>
+<rect x="0" y="296" width="810" height="270" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="28" y="344" font-size="22" font-weight="600" fill="#2453C9">under an id of its own</text>
+<text x="28" y="396" font-size="17" fill="#11151B">tokenizer: an id the application owns</text>
+<text x="28" y="446" font-size="17" fill="#2E3540">works; the trace names it</text>
+<rect x="870" y="296" width="810" height="270" fill="#FFFFFF" stroke="#C2541D" stroke-width="3"></rect>
+<text x="898" y="344" font-size="22" font-weight="600" fill="#C2541D">under a published id</text>
+<text x="898" y="396" font-size="17" fill="#11151B">tokenizer: "estimate-utf8/v1", counted otherwise</text>
+<text x="898" y="446" font-size="17" fill="#2E3540">the assembler stops before assembly</text>
+<text x="898" y="500" font-size="15" fill="#4A5361">a trace that says estimate-utf8/v1</text>
+<text x="898" y="524" font-size="15" fill="#4A5361">must mean that count</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

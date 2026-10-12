@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>W10 Conformance and contributing</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 10</span>
+<span>01 / 11</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 1000px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: {{accent}}; font-weight: 500">W10 · Conformance and contributing</div>
+<h1 style="margin: 0; font-size: 128px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">Write the case</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 940px">Pick one of W8's defects and write the conformance case that isolates it, from a table of intended outcomes. Prove it, run the specification's own checker over it, and write it up the way the project takes changes.</p>
+</div>
+<svg width="560" height="640" viewBox="0 0 560 640" role="img" aria-label="A table of intended outcomes produces a snapshot and an expected trace. The reference assembler passes the case and the defective copy fails it. Then the specification's checker and a pull request.">
+<g font-family="IBM Plex Mono, monospace" font-size="18">
+<g stroke="#11151B" stroke-width="2">
+<line x1="280" y1="96" x2="280" y2="128"></line><line x1="280" y1="200" x2="280" y2="232"></line>
+<line x1="150" y1="304" x2="150" y2="336"></line><line x1="410" y1="304" x2="410" y2="336"></line>
+<line x1="280" y1="408" x2="280" y2="440"></line><line x1="280" y1="512" x2="280" y2="544"></line>
+</g>
+<rect x="20" y="24" width="520" height="72" fill="#2453C9"></rect><text x="44" y="68" fill="#FFFFFF" font-weight="600">a table of intended outcomes</text>
+<rect x="20" y="128" width="520" height="72" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="44" y="172" fill="#11151B">snapshot · expected trace</text>
+<rect x="20" y="232" width="520" height="72" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="44" y="276" fill="#11151B">verify.py</text>
+<rect x="20" y="336" width="250" height="72" fill="#11151B"></rect><text x="40" y="380" fill="#FFFFFF">reference passes</text>
+<rect x="290" y="336" width="250" height="72" fill="#C2541D"></rect><text x="310" y="380" fill="#FFFFFF">one defect fails</text>
+<line x1="150" y1="408" x2="150" y2="424" stroke="#11151B" stroke-width="2"></line><line x1="410" y1="408" x2="410" y2="424" stroke="#11151B" stroke-width="2"></line><line x1="150" y1="424" x2="410" y2="424" stroke="#11151B" stroke-width="2"></line>
+<rect x="20" y="440" width="520" height="72" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="44" y="484" fill="#11151B">conformance/check.py</text>
+<rect x="20" y="544" width="520" height="72" fill="#2453C9"></rect><text x="44" y="588" fill="#FFFFFF" font-weight="600">a pull request, signed</text>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>Half a day</span>
+<span style="color: #9AA3B0">/</span>
+<span>Model-free</span>
+<span style="color: #9AA3B0">/</span>
+<span>After W2 or W8</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2453C9","options":["#2453C9","#C2541D","#11151B"]},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2453C9' };
+  }
+}
+</script>
+</body>
+</html>

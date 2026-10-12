@@ -1,0 +1,21 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T01:50:00Z"},
+  "title": "W6 Profiles and Caching Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Agenda.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Agenda"},
+    "Hypothesis.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 A profile is a hypothesis"},
+    "Part1.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Part 1 Three placements"},
+    "Reuse.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 Lab B Measure reuse"},
+    "Trade.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 Lab B The trade"},
+    "Promote.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Lab C Evaluate and promote"},
+    "Registry.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Lab D Lock and gate"},
+    "Close.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Close"}
+  },
+  "order": ["Main.dc.html", "Agenda.dc.html", "Hypothesis.dc.html", "Part1.dc.html", "Reuse.dc.html", "Trade.dc.html", "Promote.dc.html", "Registry.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

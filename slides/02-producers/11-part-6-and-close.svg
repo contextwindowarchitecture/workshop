@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 6 and close</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 6 · 20 MINUTES · CHECKLIST.MD</span>
+<span>11 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">One page for reviewing any producer</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Every line should be something you did on purpose. Lines marked L, the linter catches; the trace catches them all.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="400" viewBox="0 0 1680 400" role="img" aria-label="The checklist has four sections: the batch, every item, by slot, and what the producer does not do">
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<rect x="0" y="0" width="405" height="400" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<rect x="0" y="0" width="405" height="8" fill="#2453C9"></rect>
+<text x="26" y="52" font-size="24" font-weight="600" fill="#11151B">The batch</text>
+<g font-size="16" fill="#2E3540">
+<text x="26" y="104">one batch per producer</text>
+<text x="26" y="140">ids unique across the</text>
+<text x="26" y="162">whole snapshot</text>
+<text x="26" y="198">every suppressed entry</text>
+<text x="26" y="220">reported, by id</text>
+<text x="26" y="256">no suppressed body sent</text>
+</g>
+</g>
+<g transform="translate(425,0)">
+<rect x="0" y="0" width="405" height="400" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<rect x="0" y="0" width="405" height="8" fill="#2453C9"></rect>
+<text x="26" y="52" font-size="24" font-weight="600" fill="#11151B">Every item</text>
+<g font-size="16" fill="#2E3540">
+<text x="26" y="104">eight required fields,</text>
+<text x="26" y="126">closed schema</text>
+<text x="26" y="162">freshness is observed,</text>
+<text x="26" y="184">never an expiry</text>
+<text x="26" y="220">slot within the kind's gate</text>
+<text x="26" y="256">no tier above the slot's</text>
+<text x="26" y="292">variants and scores cached</text>
+<text x="26" y="314">by content hash</text>
+</g>
+</g>
+<g transform="translate(850,0)">
+<rect x="0" y="0" width="405" height="400" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<rect x="0" y="0" width="405" height="8" fill="#2453C9"></rect>
+<text x="26" y="52" font-size="24" font-weight="600" fill="#11151B">By slot</text>
+<g font-size="16" fill="#2E3540">
+<text x="26" y="104">evidence: one per chunk,</text>
+<text x="26" y="126">relevance, marked untrusted</text>
+<text x="26" y="162">memory: expires, turn source</text>
+<text x="26" y="198">state: read time, no marker</text>
+<text x="26" y="234">governance: verified</text>
+<text x="26" y="270">capabilities: only the</text>
+<text x="26" y="292">granted policy producer</text>
+<text x="26" y="328">history: model turns are</text>
+<text x="26" y="350">untrusted, generated</text>
+</g>
+</g>
+<g transform="translate(1275,0)">
+<rect x="0" y="0" width="405" height="400" fill="#11151B"></rect>
+<rect x="0" y="0" width="405" height="8" fill="#C2541D"></rect>
+<text x="26" y="52" font-size="24" font-weight="600" fill="#FFFFFF">Does not</text>
+<g font-size="16" fill="#FFFFFF">
+<text x="26" y="104">filter by relevance</text>
+<text x="26" y="140">cap by source</text>
+<text x="26" y="176">drop exact duplicates</text>
+<text x="26" y="212">trim to a budget</text>
+<text x="26" y="248">call a model or write</text>
+<text x="26" y="270">variants during a request</text>
+<text x="26" y="306">prove its own identity</text>
+</g>
+</g>
+</g>
+</svg>
+<div style="height: 2px; background: #DADFE7"></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; font-size: 23px; line-height: 1.45">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Checkpoint 6</span><span>One real retriever, memory store, state service or tool of yours: its kind, its slots, and the lines it will find hardest.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Then</span><span>Convert it, and open a pull request in your own codebase with batch tests modelled on <span style="font-family: 'IBM Plex Mono', monospace">tests/</span>.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Next</span><span>W9 module A wraps an existing tool, library or MCP server as a producer. This checklist is the acceptance test.</span></div>
+</div>
+</div>
+</foreignObject>
+</svg>

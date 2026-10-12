@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Steps 1 and 2 Inventory and freeze</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>STEPS 1 AND 2 · 90 MINUTES</span>
+<span>07 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Name what you send, then freeze it</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Step 1 changes no code. Step 2 makes <span style="font-family: 'IBM Plex Mono', monospace">build_request()</span> two lines.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="Step 1: each part of the old prompt gets a slot and an authority. Step 2: freeze a snapshot and assemble it; the first snapshot is rejected and its problems list is the to-do list.">
+<defs>
+<marker id="fz" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="18" font-weight="600" fill="#2453C9">STEP 1 · INVENTORY.MD</text>
+<text x="0" y="66" font-size="15" fill="#4A5361">IN THE OLD PROMPT</text>
+<text x="300" y="66" font-size="15" fill="#4A5361">SLOT</text>
+<text x="620" y="66" font-size="15" fill="#4A5361">AUTHORITY</text>
+<line x1="0" y1="80" x2="820" y2="80" stroke="#11151B" stroke-width="2"></line>
+<g font-size="18" fill="#11151B">
+<text x="0" y="120">instructions</text>
+<text x="0" y="172">account line</text>
+<text x="0" y="224">memories</text>
+<text x="0" y="276">articles</text>
+<text x="0" y="328">messages</text>
+<text x="0" y="380">question</text>
+</g>
+<g font-size="17" fill="#9AA3B0">
+<text x="300" y="120">?</text><text x="620" y="120">?</text>
+<text x="300" y="172">?</text><text x="620" y="172">?</text>
+<text x="300" y="224">?</text><text x="620" y="224">?</text>
+<text x="300" y="276">?</text><text x="620" y="276">?</text>
+<text x="300" y="328">?</text><text x="620" y="328">?</text>
+<text x="300" y="380">?</text><text x="620" y="380">?</text>
+</g>
+<g stroke="#DADFE7" stroke-width="1.5">
+<line x1="0" y1="140" x2="820" y2="140"></line>
+<line x1="0" y1="192" x2="820" y2="192"></line>
+<line x1="0" y1="244" x2="820" y2="244"></line>
+<line x1="0" y1="296" x2="820" y2="296"></line>
+<line x1="0" y1="348" x2="820" y2="348"></line>
+<line x1="0" y1="400" x2="820" y2="400"></line>
+</g>
+<text x="0" y="450" font-size="17" fill="#11151B">and every "never" sentence</text>
+<text x="0" y="478" font-size="15" fill="#4A5361">Step 6 decides which a guard can enforce.</text>
+<text x="920" y="22" font-size="18" font-weight="600" fill="#2453C9">STEP 2 · CONTEXT.SNAPSHOT() AND ASSEMBLE()</text>
+<rect x="920" y="50" width="760" height="110" fill="#11151B"></rect>
+<text x="944" y="94" font-size="19" fill="#FFFFFF">build_request()</text>
+<text x="944" y="128" font-size="19" fill="#B9C3D6">1 freeze a snapshot · 2 assemble it</text>
+<line x1="1300" y1="160" x2="1300" y2="200" stroke="#11151B" stroke-width="2" marker-end="url(#fz)"></line>
+<rect x="920" y="210" width="760" height="190" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="944" y="250" font-size="20" font-weight="600" fill="#C2541D">rejected</text>
+<text x="944" y="284" font-size="16" fill="#11151B">no payload, no trace, only the problems</text>
+<rect x="944" y="306" width="520" height="14" fill="#E9C9B6"></rect>
+<rect x="944" y="330" width="440" height="14" fill="#E9C9B6"></rect>
+<rect x="944" y="354" width="580" height="14" fill="#E9C9B6"></rect>
+<text x="920" y="450" font-size="22" font-weight="600" fill="#11151B">That list is the to-do list.</text>
+<text x="920" y="500" font-size="15" fill="#4A5361">checkpoint 2:</text>
+<text x="920" y="526" font-size="15" fill="#11151B">test_build_request_freezes_and_assembles</text>
+<text x="920" y="550" font-size="15" fill="#11151B">test_the_same_snapshot_renders_the_same_bytes</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

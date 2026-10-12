@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab D Record and replay</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB D · 30 MINUTES · R-23</span>
+<span>09 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Record live, replay with no model</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Live needs an OpenAI-compatible endpoint with tool calling. Without one, replay the six committed runs.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="A live run writes a record holding every inference's snapshot, trace and payload, the model's decision and each call's verdict. Replay re-assembles each snapshot and compares bytes, with no model.">
+<defs>
+<marker id="ld5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="1680" height="70" fill="#11151B"></rect>
+<text x="24" y="44" font-size="18" fill="#FFFFFF">uv run agent.py --live --user u_ada --record runs/live-01.json "Is there an incident…"</text>
+<line x1="840" y1="70" x2="840" y2="110" stroke="#11151B" stroke-width="2" marker-end="url(#ld5)"></line>
+<rect x="300" y="120" width="1080" height="250" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="328" y="160" font-size="20" font-weight="600" fill="#2453C9">runs/live-01.json · per inference</text>
+<g font-size="17" fill="#11151B">
+<rect x="328" y="186" width="230" height="56" fill="#EEF1F8"></rect><text x="346" y="220">snapshot</text>
+<rect x="574" y="186" width="230" height="56" fill="#EEF1F8"></rect><text x="592" y="220">trace</text>
+<rect x="820" y="186" width="230" height="56" fill="#EEF1F8"></rect><text x="838" y="220">payload</text>
+<rect x="1066" y="186" width="290" height="56" fill="#FFFFFF" stroke="#9AA3B0"></rect><text x="1084" y="220">model's decision</text>
+<rect x="328" y="258" width="1028" height="56" fill="#FBF0EA" stroke="#C2541D"></rect><text x="346" y="292">each call's verdict from the guard</text>
+</g>
+<text x="328" y="350" font-size="15" fill="#4A5361">the six scenarios under scenarios/ are such records, made with scripted models</text>
+<line x1="840" y1="370" x2="840" y2="410" stroke="#11151B" stroke-width="2" marker-end="url(#ld5)"></line>
+<rect x="0" y="420" width="1680" height="70" fill="#11151B"></rect>
+<text x="24" y="464" font-size="18" fill="#FFFFFF">uv run agent.py --replay runs/live-01.json</text>
+<text x="0" y="540" font-size="19" fill="#11151B">Re-assembles every snapshot and compares the bytes. No model, so CI can run it.</text>
+<text x="0" y="578" font-size="16" fill="#4A5361">CHECKPOINT 5 · one recorded run replayed, or the six committed runs and one surprising decision noted.</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

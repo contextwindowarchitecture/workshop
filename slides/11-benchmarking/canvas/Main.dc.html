@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>W11 Benchmarking CWA</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 11</span>
+<span>01 / 12</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 1000px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: {{accent}}; font-weight: 500">W11 · Benchmarking CWA</div>
+<h1 style="margin: 0; font-size: 128px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">Does it help?</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 940px">And what does the number mean? Every number here is read from runs the sibling repositories committed. Keep the assembler's half apart from the model's, and say of every number which half it belongs to.</p>
+</div>
+<svg width="560" height="640" viewBox="0 0 560 640" role="img" aria-label="Two halves. The assembler's half holds for every model: same snapshot, same bytes; the request is the payload; a refusal sends nothing. The model's half is an estimate about one model on one task, drawn as a point with an interval.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="560" height="300" fill="#11151B"></rect>
+<text x="28" y="48" font-size="16" fill="#B9C3D6">THE ASSEMBLER · NO MODEL</text>
+<g font-size="19" fill="#FFFFFF"><text x="28" y="112">same snapshot, same bytes</text><text x="28" y="160">the request is the payload</text><text x="28" y="208">a refusal sends nothing</text></g>
+<g font-size="15" fill="#B9C3D6"><text x="470" y="112">R-23</text><text x="470" y="160">R-5</text><text x="470" y="208">R-17</text></g>
+<text x="28" y="268" font-size="15" fill="#B9C3D6">holds for every model</text>
+<rect x="0" y="340" width="560" height="300" fill="#2453C9"></rect>
+<text x="28" y="388" font-size="16" fill="#DCE3F5">THE MODEL · AN ESTIMATE</text>
+<text x="28" y="436" font-size="19" fill="#FFFFFF">one model, one task</text>
+<line x1="60" y1="520" x2="500" y2="520" stroke="#DCE3F5" stroke-width="2"></line>
+<line x1="180" y1="500" x2="180" y2="540" stroke="#FFFFFF" stroke-width="3"></line>
+<line x1="380" y1="500" x2="380" y2="540" stroke="#FFFFFF" stroke-width="3"></line>
+<line x1="180" y1="520" x2="380" y2="520" stroke="#FFFFFF" stroke-width="6"></line>
+<circle cx="290" cy="520" r="12" fill="#C2541D"></circle>
+<text x="28" y="608" font-size="15" fill="#DCE3F5">a point, and the range beside it</text>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>Half a day</span>
+<span style="color: #9AA3B0">/</span>
+<span>Model-free throughout</span>
+<span style="color: #9AA3B0">/</span>
+<span>For evaluation engineers and adopting leads</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2453C9","options":["#2453C9","#C2541D","#11151B"]},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2453C9' };
+  }
+}
+</script>
+</body>
+</html>

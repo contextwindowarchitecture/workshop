@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Agenda</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>AGENDA · 3.5 HOURS INSTRUCTOR-LED</span>
+<span>02 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Store the snapshot, not the prompt</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Clear the store before and after: <span style="font-family: 'IBM Plex Mono', monospace">rm -f store/cwa.sqlite</span>. Set <span style="font-family: 'IBM Plex Mono', monospace">CWA_W7_IMPL=labs</span> for the labs.</p>
+</div>
+<svg width="1680" height="400" viewBox="0 0 1680 400" role="img" aria-label="210 minute timeline: framing 10, part 1 20, lab B 40, break 15, lab C 60, break 10, lab D 30, close 25. Conference cut is part 1 and lab C.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="24" font-size="18" fill="#4A5361">FULL · 210 MIN</text>
+<rect x="0" y="40" width="80" height="100" fill="#11151B"></rect>
+<rect x="80" y="40" width="160" height="100" fill="#2453C9"></rect>
+<rect x="240" y="40" width="320" height="100" fill="#1A3D96"></rect>
+<rect x="560" y="40" width="120" height="100" fill="#DADFE7"></rect>
+<rect x="680" y="40" width="480" height="100" fill="#C2541D"></rect>
+<rect x="1160" y="40" width="80" height="100" fill="#DADFE7"></rect>
+<rect x="1240" y="40" width="240" height="100" fill="#2453C9"></rect>
+<rect x="1480" y="40" width="200" height="100" fill="#11151B"></rect>
+<g stroke="#F4F5F7" stroke-width="3">
+<line x1="80" y1="40" x2="80" y2="140"></line>
+<line x1="240" y1="40" x2="240" y2="140"></line>
+<line x1="560" y1="40" x2="560" y2="140"></line>
+<line x1="680" y1="40" x2="680" y2="140"></line>
+<line x1="1160" y1="40" x2="1160" y2="140"></line>
+<line x1="1240" y1="40" x2="1240" y2="140"></line>
+<line x1="1480" y1="40" x2="1480" y2="140"></line>
+</g>
+<g font-size="22" font-weight="600" fill="#FFFFFF">
+<text x="100" y="98">part 1</text>
+<text x="260" y="98">lab B · spans</text>
+<text x="700" y="98">lab C · evals</text>
+<text x="1260" y="98">lab D · gate</text>
+<text x="1500" y="98">playbook</text>
+</g>
+<text x="590" y="98" font-size="18" fill="#11151B">break</text>
+<g font-size="17" fill="#4A5361">
+<text x="0" y="170">0</text>
+<text x="70" y="170">10</text>
+<text x="228" y="170">30</text>
+<text x="548" y="170">70</text>
+<text x="668" y="170">85</text>
+<text x="1142" y="170">145</text>
+<text x="1222" y="170">155</text>
+<text x="1462" y="170">185</text>
+<text x="1644" y="170">210</text>
+</g>
+<text x="680" y="208" font-size="17" fill="#2E3540">read claims-what-it-did-not-do's answer aloud, then its grade</text>
+<text x="0" y="284" font-size="18" fill="#4A5361">CONFERENCE CUT · 90 MIN</text>
+<rect x="0" y="300" width="1680" height="40" fill="#FFFFFF" stroke="#DADFE7"></rect>
+<rect x="80" y="300" width="160" height="40" fill="#2453C9"></rect>
+<rect x="680" y="300" width="480" height="40" fill="#C2541D"></rect>
+</g>
+</svg>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540">Model-free with scripted models. A live eval run and an OTLP backend (Jaeger's all-in-one is quickest) are optional.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

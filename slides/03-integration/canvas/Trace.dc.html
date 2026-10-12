@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Step 4 Five conversations</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>STEP 4 · 30 MINUTES · CHECK THE TRACE</span>
+<span>09 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Five conversations, before and after</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Read the table for each. Replay a snapshot and compare the hash. Remove a field and watch the exclusion.</p>
+</div>
+<svg width="1680" height="580" viewBox="0 0 1680 580" role="img" aria-label="Five scenarios comparing the before app and the migrated app">
+<g font-family="IBM Plex Mono, monospace" font-size="17" font-weight="600">
+<text x="0" y="22" fill="#4A5361">SCENARIO</text>
+<text x="380" y="22" fill="#C2541D">BEFORE</text>
+<text x="1020" y="22" fill="#2453C9">AFTER</text>
+</g>
+<line x1="0" y1="40" x2="1680" y2="40" stroke="#11151B" stroke-width="2"></line>
+<g font-family="IBM Plex Mono, monospace" font-size="19" font-weight="600" fill="#11151B">
+<text x="0" y="96">01-ada-export</text>
+<text x="0" y="206">02-ben-plan-conflict</text>
+<text x="0" y="316">03-off-topic</text>
+<text x="0" y="426">04-long-conversation</text>
+<text x="0" y="536">05-memory-leak</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#2E3540">
+<text x="380" y="96">everything pasted, revoked and</text><text x="380" y="122">expired memories included</text>
+<text x="380" y="206">"Business plan" and "Team plan"</text><text x="380" y="232">with equal standing</text>
+<text x="380" y="316">five irrelevant paragraphs</text><text x="380" y="342">sent anyway</text>
+<text x="380" y="426">the last six messages,</text><text x="380" y="452">whatever their size</text>
+<text x="380" y="536">a producer bug ships another</text><text x="380" y="562">user's memories</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#11151B">
+<text x="1020" y="96">two producer-reported rows, the exact FAQ</text><text x="1020" y="122">copy excluded, a replayable digest</text>
+<text x="1020" y="206"><tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">fact:plan</tspan> decided by policy, the memory</text><text x="1020" y="232"><tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">conflict_lost</tspan>, the account protected</text>
+<text x="1020" y="316">refused <tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">evidence_required</tspan>, recovery</text><text x="1020" y="342"><tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">request_context</tspan>, nothing sent</text>
+<text x="1020" y="426">oldest turns <tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">over_budget</tspan> under the history</text><text x="1020" y="452">cap; the query never dropped</text>
+<text x="1020" y="536">each leaked memory <tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">out_of_scope</tspan>,</text><text x="1020" y="562">the leak visible by producer</text>
+</g>
+<g stroke="#DADFE7" stroke-width="1.5">
+<line x1="0" y1="150" x2="1680" y2="150"></line>
+<line x1="0" y1="260" x2="1680" y2="260"></line>
+<line x1="0" y1="370" x2="1680" y2="370"></line>
+<line x1="0" y1="480" x2="1680" y2="480"></line>
+</g>
+<line x1="1000" y1="50" x2="1000" y2="575" stroke="#DADFE7" stroke-width="1.5"></line>
+</svg>
+<div style="font-size: 22px; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #11151B">Checkpoint 4</span> · the inventory's step-4 lines, filled from your own run, not from the solution's scenarios.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

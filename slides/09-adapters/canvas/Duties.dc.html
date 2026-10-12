@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A The seven duties</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>MODULE A · TOOL-TO-PRODUCER · FRAMING</span>
+<span>04 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">A producer's duties, on data it did not shape</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The tool does not change. The adapter carries the provenance the tool already has.</p>
+</div>
+<svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Seven adapter duties: one item per thing; provenance from the tool's own identifiers; scores passed through, never used to filter; suppressions reported; the injection marker; variants precomputed; identity left to the application. Three given tools: a LlamaIndex BM25 retriever, a SQLite memory table, and an MCP server over stdio.">
+<g font-family="IBM Plex Mono, monospace">
+<g font-size="22" font-weight="600" fill="#2453C9">
+<text x="0" y="40">1</text><text x="0" y="128">2</text><text x="0" y="216">3</text><text x="0" y="304">4</text><text x="0" y="392">5</text><text x="0" y="480">6</text><text x="0" y="568">7</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="24" font-weight="600" fill="#11151B">
+<text x="44" y="40">One item per thing, in the right slot</text>
+<text x="44" y="128">Provenance from the tool's own identifiers</text>
+<text x="44" y="216">Scores passed through, never used to filter</text>
+<text x="44" y="304">Suppressions reported</text>
+<text x="44" y="392">The injection marker on everything from outside</text>
+<text x="44" y="480">Variants, if any, precomputed</text>
+<text x="44" y="568">Identity left to the application</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#4A5361">
+<text x="44" y="72">a merged blob is never an item</text>
+<text x="44" y="160">when the tool does not carry them, that is a finding about the pipeline</text>
+<text x="44" y="248">the route's threshold decides, so the trace shows it</text>
+<text x="44" y="336">anything never seen because of how the tool was queried is invisible downstream</text>
+<text x="44" y="424">governance did not write it</text>
+<text x="44" y="512">looked up, never written during the request</text>
+<text x="44" y="600">the application stamps producer id and kind; the route decides its slots</text>
+</g>
+<g font-size="16" fill="#4A5361">
+<text x="1000" y="40">R-13</text><text x="1000" y="128">source · source_version</text><text x="1000" y="216">R-13</text><text x="1000" y="304">R-9 · R-14</text><text x="1000" y="392">R-10 · R-15</text><text x="1000" y="480">R-18</text><text x="1000" y="568">R-15</text>
+</g>
+<g stroke="#DADFE7" stroke-width="2">
+<line x1="0" y1="92" x2="1200" y2="92"></line><line x1="0" y1="180" x2="1200" y2="180"></line><line x1="0" y1="268" x2="1200" y2="268"></line>
+<line x1="0" y1="356" x2="1200" y2="356"></line><line x1="0" y1="444" x2="1200" y2="444"></line><line x1="0" y1="532" x2="1200" y2="532"></line>
+</g>
+<rect x="1260" y="0" width="420" height="620" fill="#11151B"></rect>
+<text x="1288" y="44" font-size="17" font-weight="600" fill="#B9C3D6">TOOLS/ · GIVEN, NOT EDITED</text>
+<text x="1288" y="112" font-size="21" font-weight="600" fill="#FFFFFF">BM25 retriever</text>
+<text x="1288" y="142" font-size="15" fill="#B9C3D6">LlamaIndex, over the</text>
+<text x="1288" y="164" font-size="15" fill="#B9C3D6">Fernway help centre</text>
+<text x="1288" y="252" font-size="21" font-weight="600" fill="#FFFFFF">memory table</text>
+<text x="1288" y="282" font-size="15" fill="#B9C3D6">SQLite, with expires and</text>
+<text x="1288" y="304" font-size="15" fill="#B9C3D6">revoked_by columns</text>
+<text x="1288" y="392" font-size="21" font-weight="600" fill="#FFFFFF">MCP server</text>
+<text x="1288" y="422" font-size="15" fill="#B9C3D6">Fernway account and status</text>
+<text x="1288" y="444" font-size="15" fill="#B9C3D6">data, official SDK, stdio</text>
+<text x="1288" y="560" font-size="15" fill="#B9C3D6">you write labs/*_adapter.py</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

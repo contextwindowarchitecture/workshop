@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Agenda</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>AGENDA · FOUR HOURS INSTRUCTOR-LED</span>
+<span>02 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Permission is decided outside the model</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Every run uses a scripted model and a real MCP server as a subprocess. Set <span style="font-family: 'IBM Plex Mono', monospace">CWA_W5_IMPL=labs</span> for the labs.</p>
+</div>
+<svg width="1680" height="400" viewBox="0 0 1680 400" role="img" aria-label="240 minute timeline: framing 10, part 1 25, lab A 50, break 15, lab B 40, lab C 45, break 10, lab D 30, close 15. Conference cut is part 1 and lab C.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="24" font-size="18" fill="#4A5361">FULL · 240 MIN</text>
+<rect x="0" y="40" width="70" height="100" fill="#11151B"></rect>
+<rect x="70" y="40" width="175" height="100" fill="#2453C9"></rect>
+<rect x="245" y="40" width="350" height="100" fill="#1A3D96"></rect>
+<rect x="595" y="40" width="105" height="100" fill="#DADFE7"></rect>
+<rect x="700" y="40" width="280" height="100" fill="#2453C9"></rect>
+<rect x="980" y="40" width="315" height="100" fill="#C2541D"></rect>
+<rect x="1295" y="40" width="70" height="100" fill="#DADFE7"></rect>
+<rect x="1365" y="40" width="210" height="100" fill="#1A3D96"></rect>
+<rect x="1575" y="40" width="105" height="100" fill="#11151B"></rect>
+<g stroke="#F4F5F7" stroke-width="3">
+<line x1="70" y1="40" x2="70" y2="140"></line>
+<line x1="245" y1="40" x2="245" y2="140"></line>
+<line x1="595" y1="40" x2="595" y2="140"></line>
+<line x1="700" y1="40" x2="700" y2="140"></line>
+<line x1="980" y1="40" x2="980" y2="140"></line>
+<line x1="1295" y1="40" x2="1295" y2="140"></line>
+<line x1="1365" y1="40" x2="1365" y2="140"></line>
+<line x1="1575" y1="40" x2="1575" y2="140"></line>
+</g>
+<g font-size="22" font-weight="600" fill="#FFFFFF">
+<text x="90" y="98">part 1</text>
+<text x="265" y="98">lab A · guard</text>
+<text x="720" y="98">lab B · policy</text>
+<text x="1000" y="98">lab C · injection</text>
+<text x="1385" y="98">lab D</text>
+</g>
+<text x="613" y="98" font-size="18" fill="#11151B">break</text>
+<g font-size="17" fill="#4A5361">
+<text x="0" y="170">0</text>
+<text x="60" y="170">10</text>
+<text x="233" y="170">35</text>
+<text x="583" y="170">85</text>
+<text x="682" y="170">100</text>
+<text x="962" y="170">140</text>
+<text x="1277" y="170">185</text>
+<text x="1347" y="170">195</text>
+<text x="1557" y="170">225</text>
+<text x="1644" y="170">240</text>
+</g>
+<text x="245" y="208" font-size="17" fill="#2E3540">at 75: a participant's guard on the projector</text>
+<text x="0" y="284" font-size="18" fill="#4A5361">CONFERENCE CUT · 90 MIN</text>
+<rect x="0" y="300" width="1680" height="40" fill="#FFFFFF" stroke="#DADFE7"></rect>
+<rect x="70" y="300" width="175" height="40" fill="#2453C9"></rect>
+<rect x="980" y="300" width="315" height="40" fill="#C2541D"></rect>
+</g>
+</svg>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540">Lab D's live recording needs an OpenAI-compatible endpoint with tool calling, and is optional. A venue that blocks subprocesses breaks the module.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

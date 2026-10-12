@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The model of fitting</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · THE MODEL OF FITTING · R-16, R-18</span>
+<span>03 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Three tiers, and the order things shorten</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Every omission is an <span style="font-family: 'IBM Plex Mono', monospace">over_budget</span> row. Every swap is a <span style="font-family: 'IBM Plex Mono', monospace">compressed</span> row naming the variant.</p>
+</div>
+<svg width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="Protected renders whole or the assembly refuses. Droppable may be omitted. Compressible may be swapped for a precomputed variant or omitted, only after droppable items are gone. Caps apply before budget pressure; min_tokens is a floor.">
+<defs>
+<marker id="ft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="540" height="220" fill="#2453C9"></rect>
+<text x="28" y="50" font-size="26" font-weight="600" fill="#FFFFFF">protected</text>
+<text x="28" y="96" font-size="17" fill="#FFFFFF">rendered whole,</text>
+<text x="28" y="122" font-size="17" fill="#FFFFFF">or the assembly refuses</text>
+<text x="28" y="180" font-size="15" fill="#DCE3F5">never touched</text>
+<rect x="570" y="0" width="540" height="220" fill="#DCE3F5" stroke="#2453C9" stroke-width="2"></rect>
+<text x="598" y="50" font-size="26" font-weight="600" fill="#11151B">compressible</text>
+<text x="598" y="96" font-size="17" fill="#11151B">a precomputed shorter variant,</text>
+<text x="598" y="122" font-size="17" fill="#11151B">or omitted, and only after</text>
+<text x="598" y="148" font-size="17" fill="#11151B">droppable items are gone</text>
+<rect x="1140" y="0" width="540" height="220" fill="#FFFFFF" stroke="#C2541D" stroke-width="2" stroke-dasharray="8 6"></rect>
+<text x="1168" y="50" font-size="26" font-weight="600" fill="#C2541D">droppable</text>
+<text x="1168" y="96" font-size="17" fill="#11151B">may be omitted</text>
+<text x="0" y="290" font-size="18" font-weight="600" fill="#4A5361">IN ORDER</text>
+<rect x="0" y="310" width="380" height="150" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="20" y="348" font-size="20" font-weight="600" fill="#11151B">1 caps first</text>
+<text x="20" y="384" font-size="15" fill="#2E3540">an item over its token_budget,</text>
+<text x="20" y="408" font-size="15" fill="#2E3540">a slot over max_tokens: reduced</text>
+<text x="20" y="432" font-size="15" fill="#2E3540">before any budget pressure</text>
+<line x1="380" y1="385" x2="420" y2="385" stroke="#11151B" stroke-width="2" marker-end="url(#ft)"></line>
+<rect x="430" y="310" width="380" height="150" fill="#FFFFFF" stroke="#C2541D" stroke-width="2"></rect>
+<text x="450" y="348" font-size="20" font-weight="600" fill="#C2541D">2 - droppable</text>
+<text x="450" y="384" font-size="15" fill="#2E3540">omitted under pressure</text>
+<line x1="810" y1="385" x2="850" y2="385" stroke="#11151B" stroke-width="2" marker-end="url(#ft)"></line>
+<rect x="860" y="310" width="380" height="150" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="880" y="348" font-size="20" font-weight="600" fill="#2453C9">3 ~ variants</text>
+<text x="880" y="384" font-size="15" fill="#2E3540">compressible swapped for</text>
+<text x="880" y="408" font-size="15" fill="#2E3540">the shorter variant</text>
+<line x1="1240" y1="385" x2="1280" y2="385" stroke="#11151B" stroke-width="2" marker-end="url(#ft)"></line>
+<rect x="1290" y="310" width="390" height="150" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="1310" y="348" font-size="20" font-weight="600" fill="#11151B">4 - compressible</text>
+<text x="1310" y="384" font-size="15" fill="#2E3540">omitted, last</text>
+<text x="0" y="510" font-size="17" fill="#11151B">The route's <tspan fill="#2453C9">fitting_order</tspan> says what shortens first; without one, variants come before omission.</text>
+<rect x="0" y="540" width="1680" height="56" fill="#11151B"></rect>
+<text x="24" y="575" font-size="18" fill="#FFFFFF"><tspan font-weight="600">min_tokens</tspan> on a slot: a floor nothing reduces below. Fitting that would break it refuses.</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

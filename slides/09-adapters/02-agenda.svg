@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Agenda</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>AGENDA · FOUR MODULES, INSTRUCTOR-LED</span>
+<span>02 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Four half days, each taught alone</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Every module runs in its own directory with uv and no model. The orange strip under a bar is that module's conference cut.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Module A, 240 minutes: framing, part 1, lab 1 retriever, break, lab 2 memory, lab 3 MCP, break, part 5. Module B, 150 minutes: framing, part 1, the lab, break, part 3, close. Module C, 150 minutes: framing, part 1, the lab, break, part 3, close. Module D, 240 minutes: framing, part 1, lab 1 the port, break, lab 2 scorer, lab 3 refusal, part 5 and close.">
+<g font-family="IBM Plex Mono, monospace">
+<g transform="translate(0,0)">
+<text x="0" y="20" font-size="18" font-weight="600" fill="#11151B">A · TOOL-TO-PRODUCER · 240 MIN</text>
+<rect x="0" y="34" width="70" height="56" fill="#11151B"></rect>
+<rect x="70" y="34" width="140" height="56" fill="#2453C9"></rect>
+<rect x="210" y="34" width="350" height="56" fill="#1A3D96"></rect>
+<rect x="560" y="34" width="105" height="56" fill="#DADFE7"></rect>
+<rect x="665" y="34" width="280" height="56" fill="#1A3D96"></rect>
+<rect x="945" y="34" width="420" height="56" fill="#2453C9"></rect>
+<rect x="1365" y="34" width="70" height="56" fill="#DADFE7"></rect>
+<rect x="1435" y="34" width="245" height="56" fill="#11151B"></rect>
+<rect x="70" y="94" width="140" height="8" fill="#C2541D"></rect><rect x="945" y="94" width="420" height="8" fill="#C2541D"></rect>
+<g font-size="19" font-weight="600" fill="#FFFFFF"><text x="84" y="69">part 1</text><text x="226" y="69">lab 1 · retriever</text><text x="681" y="69">lab 2 · memory</text><text x="961" y="69">lab 3 · MCP</text><text x="1451" y="69">part 5</text></g>
+<text x="0" y="128" font-size="16" fill="#4A5361">cut 75 min: part 1 and lab 3</text>
+</g>
+<g transform="translate(0,150)">
+<text x="0" y="20" font-size="18" font-weight="600" fill="#11151B">B · ASSEMBLER PROTOCOL · 150 MIN</text>
+<rect x="0" y="34" width="70" height="56" fill="#11151B"></rect>
+<rect x="70" y="34" width="140" height="56" fill="#2453C9"></rect>
+<rect x="210" y="34" width="420" height="56" fill="#1A3D96"></rect>
+<rect x="630" y="34" width="70" height="56" fill="#DADFE7"></rect>
+<rect x="700" y="34" width="280" height="56" fill="#2453C9"></rect>
+<rect x="980" y="34" width="70" height="56" fill="#11151B"></rect>
+<rect x="70" y="94" width="560" height="8" fill="#C2541D"></rect>
+<g font-size="19" font-weight="600" fill="#FFFFFF"><text x="84" y="69">part 1</text><text x="226" y="69">the lab · adapter.py</text><text x="716" y="69">part 3 · compare</text></g>
+<text x="0" y="128" font-size="16" fill="#4A5361">cut 75 min: part 1 and the lab</text>
+<text x="1090" y="69" font-size="16" fill="#4A5361">the four-way agreement needs</text>
+<text x="1090" y="91" font-size="16" fill="#4A5361">assembler-demo built (Go and Rust)</text>
+</g>
+<g transform="translate(0,300)">
+<text x="0" y="20" font-size="18" font-weight="600" fill="#11151B">C · PROVIDER · 150 MIN</text>
+<rect x="0" y="34" width="70" height="56" fill="#11151B"></rect>
+<rect x="70" y="34" width="140" height="56" fill="#2453C9"></rect>
+<rect x="210" y="34" width="420" height="56" fill="#1A3D96"></rect>
+<rect x="630" y="34" width="70" height="56" fill="#DADFE7"></rect>
+<rect x="700" y="34" width="210" height="56" fill="#2453C9"></rect>
+<rect x="910" y="34" width="140" height="56" fill="#11151B"></rect>
+<rect x="70" y="94" width="560" height="8" fill="#C2541D"></rect>
+<g font-size="19" font-weight="600" fill="#FFFFFF"><text x="84" y="69">part 1</text><text x="226" y="69">the lab · four functions</text><text x="716" y="69">part 3</text><text x="926" y="69">close</text></g>
+<text x="0" y="128" font-size="16" fill="#4A5361">cut 60 min: part 1 and the lab's first two tests</text>
+<text x="1090" y="69" font-size="16" fill="#4A5361">sending is optional and</text>
+<text x="1090" y="91" font-size="16" fill="#4A5361">needs an endpoint</text>
+</g>
+<g transform="translate(0,450)">
+<text x="0" y="20" font-size="18" font-weight="600" fill="#11151B">D · HOST SEAM · 240 MIN</text>
+<rect x="0" y="34" width="70" height="56" fill="#11151B"></rect>
+<rect x="70" y="34" width="210" height="56" fill="#2453C9"></rect>
+<rect x="280" y="34" width="630" height="56" fill="#1A3D96"></rect>
+<rect x="910" y="34" width="70" height="56" fill="#DADFE7"></rect>
+<rect x="980" y="34" width="210" height="56" fill="#2453C9"></rect>
+<rect x="1190" y="34" width="210" height="56" fill="#1A3D96"></rect>
+<rect x="1400" y="34" width="280" height="56" fill="#11151B"></rect>
+<rect x="70" y="94" width="210" height="8" fill="#C2541D"></rect><rect x="980" y="94" width="210" height="8" fill="#C2541D"></rect>
+<g font-size="19" font-weight="600" fill="#FFFFFF"><text x="84" y="69">part 1</text><text x="296" y="69">lab 1 · the port</text><text x="996" y="69">lab 2 · score</text><text x="1206" y="69">lab 3 · refuse</text><text x="1416" y="69">part 5 · your host</text></g>
+<text x="0" y="128" font-size="16" fill="#4A5361">cut 60 min: part 1 and lab 2</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

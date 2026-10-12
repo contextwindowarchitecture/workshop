@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D Port, score, refuse</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>MODULE D · LABS 1 TO 3</span>
+<span>12 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Port by digest, score the trace, act on a refusal</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">A second language joins an integration by matching the first one's committed record.</p>
+</div>
+<svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Lab 1: the Go producers ported to Python, proven when the snapshot digest equals the Go record. Lab 2: route v1 dropped a high-severity prior finding; v2 protects memory. Lab 3: a refusal becomes a host outcome with no sandbox, span attributes and a comment written from the trace.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="540" height="640" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="24" y="40" font-size="17" font-weight="600" fill="#2453C9">LAB 1 · THE PORT · 90 MIN</text>
+<rect x="24" y="64" width="220" height="80" fill="#11151B"></rect><text x="40" y="98" font-size="16" fill="#FFFFFF">Go original</text><text x="40" y="124" font-size="13" fill="#B9C3D6">governance.go, triage.go</text>
+<text x="256" y="112" font-size="26" font-weight="600" fill="#11151B">=</text>
+<rect x="292" y="64" width="224" height="80" fill="#2453C9"></rect><text x="308" y="98" font-size="16" fill="#FFFFFF">your Python</text><text x="308" y="124" font-size="13" fill="#DCE3F5">labs/producers.py</text>
+<text x="24" y="172" font-size="14" fill="#4A5361">same snapshot digest, same payload bytes</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">
+<text x="24" y="216">1  governance pinned and verified</text>
+<text x="24" y="246">2  the query templated by dispatch</text>
+<text x="24" y="276">3  state current and scoped</text>
+<text x="24" y="306">4  the thread splits by permission</text>
+<text x="24" y="336">5  duplicates, one scored item each</text>
+<text x="24" y="366">6  memory expires and reports</text>
+<text x="24" y="396">7  freeze, batches in producer-id order</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#4A5361">
+<text x="24" y="452">One character off in one body, and the</text>
+<text x="24" y="476">digest differs. The test names the scenario,</text>
+<text x="24" y="500">not the field: diff against the committed</text>
+<text x="24" y="524">scenarios/triage-7811/snapshot.json.</text>
+</g>
+<rect x="570" y="0" width="540" height="640" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="594" y="40" font-size="17" font-weight="600" fill="#11151B">LAB 2 · A SCORER · 30 MIN</text>
+<text x="594" y="76" font-size="14" fill="#4A5361">same budget pressure, two routes</text>
+<rect x="594" y="94" width="492" height="110" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="614" y="128" font-size="17" font-weight="600" fill="#C2541D">route v1</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#11151B"><text x="614" y="156">shed memory first; lost a high-severity</text><text x="614" y="180">prior finding as over_budget</text></g>
+<rect x="594" y="218" width="492" height="110" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect>
+<text x="614" y="252" font-size="17" font-weight="600" fill="#2453C9">route v2</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#11151B"><text x="614" y="280">protects memory; sheds the docs and</text><text x="614" y="304">test diffs instead</text></g>
+<text x="594" y="364" font-size="15" fill="#11151B">dropped_high_severity()</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#4A5361"><text x="594" y="392">a policy mistake is a query over traces,</text><text x="594" y="416">run on every run</text></g>
+<text x="594" y="466" font-size="15" font-weight="600" fill="#4A5361">CHECKPOINT 3 · THE POLICY CHANGE</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="{{ink}}"><text x="594" y="500">{{p1}}</text><text x="594" y="526">{{p2}}</text><text x="594" y="552">{{p3}}</text><text x="594" y="578">{{p4}}</text></g>
+<rect x="1140" y="0" width="540" height="640" fill="#11151B"></rect>
+<text x="1164" y="40" font-size="17" font-weight="600" fill="#B9C3D6">LAB 3 · A REFUSAL · 30 MIN</text>
+<text x="1164" y="84" font-size="17" fill="#FFFFFF">evidence_required</text>
+<text x="1164" y="112" font-size="15" fill="#B9C3D6">recovery: precompute_summary</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#FFFFFF">
+<text x="1164" y="168">no sandbox starts</text>
+<text x="1164" y="200">the span carries the reason</text>
+<text x="1164" y="224">and the recovery action</text>
+<text x="1164" y="256">the work item gets a comment</text>
+<text x="1164" y="280">written from the trace</text>
+</g>
+<text x="1164" y="326" font-size="15" fill="#C2541D">a model wrote none of it</text>
+<text x="1164" y="386" font-size="15" font-weight="600" fill="#B9C3D6">CHECKPOINT 4 · THE COMMENT, THE SPAN</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="{{inkd}}">
+<text x="1164" y="420">{{r1}}</text><text x="1164" y="446">{{r2}}</text><text x="1164" y="472">{{r3}}</text><text x="1164" y="498">{{r4}}</text><text x="1164" y="524">{{r5}}</text><text x="1164" y="550">{{r6}}</text><text x="1164" y="576">{{r7}}</text>
+</g>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showAnswers":{"editor":"boolean","default":false},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.showAnswers ?? false;
+    return {
+      ink: s ? '#11151B' : '#9AA3B0',
+      inkd: s ? '#FFFFFF' : '#6B7585',
+      p1: s ? 'v1 dropped run:review/18990#F1, kept claude_test.go;' : 'What did v1 drop, and v2 instead?',
+      p2: s ? 'v2 dropped claude_test.go and the docs diff.' : 'Compare fitting_order and',
+      p3: s ? 'v2 removes “omit interaction.memory first” and' : 'tier_upgrades in the two snapshots.',
+      p4: s ? 'adds tier_upgrades {interaction.memory: protected}.' : '',
+      r1: s ? 'Comment: the reason; diff items need precomputed' : 'What does the comment say, in the',
+      r2: s ? 'summaries; what was dropped for budget (every' : 'host’s own words?',
+      r3: s ? 'diff and the current CI run); budget, policy version.' : '',
+      r4: s ? 'Span: cwa.refused true' : 'Which span attributes?',
+      r5: s ? 'cwa.refused.reason evidence_required' : '',
+      r6: s ? 'cwa.recovery.action precompute_summary' : '',
+      r7: s ? 'and the snapshot digest' : ''
+    };
+  }
+}
+</script>
+</body>
+</html>

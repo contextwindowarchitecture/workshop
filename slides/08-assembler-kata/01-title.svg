@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>W8 Inside the assembler: the repair kata</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 8</span>
+<span>01 / 09</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 1000px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: #2453C9; font-weight: 500">W8 · Inside the assembler</div>
+<h1 style="margin: 0; font-size: 128px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">The repair kata</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 920px">Read a conformance report and the normative order of reason codes and know which stage is wrong. Change the reference assembler under its own test discipline. Then open a real pull request against one of the four implementations.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="640" viewBox="0 0 560 640" role="img" aria-label="The assembler's stages from validate to trace, with defects marked on several of them">
+<g font-family="IBM Plex Mono, monospace" font-size="18">
+<rect x="0" y="0" width="440" height="56" fill="#11151B"></rect><text x="20" y="35" fill="#FFFFFF">validate · snapshot</text>
+<rect x="0" y="70" width="440" height="56" fill="#2453C9"></rect><text x="20" y="105" fill="#FFFFFF">admit</text>
+<rect x="0" y="140" width="440" height="56" fill="#2453C9"></rect><text x="20" y="175" fill="#FFFFFF">conflicts</text>
+<rect x="0" y="210" width="440" height="56" fill="#2453C9"></rect><text x="20" y="245" fill="#FFFFFF">supersede</text>
+<rect x="0" y="280" width="440" height="56" fill="#2453C9"></rect><text x="20" y="315" fill="#FFFFFF">dedupe</text>
+<rect x="0" y="350" width="440" height="56" fill="#2453C9"></rect><text x="20" y="385" fill="#FFFFFF">diversity</text>
+<rect x="0" y="420" width="440" height="56" fill="#2453C9"></rect><text x="20" y="455" fill="#FFFFFF">fit</text>
+<rect x="0" y="490" width="440" height="56" fill="#2453C9"></rect><text x="20" y="525" fill="#FFFFFF">render</text>
+<rect x="0" y="560" width="440" height="56" fill="#11151B"></rect><text x="20" y="595" fill="#FFFFFF">trace</text>
+</g>
+<g fill="#C2541D">
+<circle cx="490" cy="98" r="14"></circle><circle cx="490" cy="238" r="14"></circle><circle cx="490" cy="308" r="14"></circle><circle cx="490" cy="378" r="14"></circle><circle cx="490" cy="448" r="14"></circle><circle cx="490" cy="518" r="14"></circle>
+</g>
+<text x="460" y="636" font-family="IBM Plex Mono, monospace" font-size="14" fill="#C2541D">defects</text>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>A full day</span>
+<span style="color: #9AA3B0">/</span>
+<span>Model-free, no Node</span>
+<span style="color: #9AA3B0">/</span>
+<span>After W1; W2 helps</span>
+</div>
+</div>
+</foreignObject>
+</svg>

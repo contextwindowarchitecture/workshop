@@ -1,0 +1,23 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T05:00:00Z"},
+  "title": "W10 Conformance Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Agenda.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Agenda"},
+    "Data.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 The specification is data"},
+    "Anatomy.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Part 1 The anatomy of a case"},
+    "Table.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 Part 1 Written from a table"},
+    "Example.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 Part 2 The worked example"},
+    "LabA.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Lab A Your case"},
+    "LabB.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Lab B The specification's checker"},
+    "Templates.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Lab C Writing to the project"},
+    "Drafts.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 Lab C Two drafts and upstream"},
+    "Close.dc.html": {"x": 2000, "y": 3600, "w": 1920, "h": 1080, "title": "11 Close"}
+  },
+  "order": ["Main.dc.html", "Agenda.dc.html", "Data.dc.html", "Anatomy.dc.html", "Table.dc.html", "Example.dc.html", "LabA.dc.html", "LabB.dc.html", "Templates.dc.html", "Drafts.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

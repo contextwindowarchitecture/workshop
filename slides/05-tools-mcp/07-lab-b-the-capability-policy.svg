@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab B The capability policy</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB B · 40 MINUTES · LABS/CAPABILITIES.JSON</span>
+<span>07 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Decide who is offered what</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Pin the scope each call must satisfy, and name what is never offered.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="The starting policy grants every tool to every role. The policy you write decides per role, pins scope, and names a never list.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="18" font-weight="600" fill="#C2541D">WHERE YOU START</text>
+<text x="0" y="48" font-size="15" fill="#4A5361">server proposals passed straight through</text>
+<g font-size="15" fill="#4A5361" text-anchor="middle">
+<text x="335" y="92">Owner</text><text x="445" y="92">Admin</text><text x="555" y="92">Member</text>
+</g>
+<g font-size="17" fill="#11151B">
+<text x="0" y="140">get_account</text>
+<text x="0" y="200">get_service_status</text>
+<text x="0" y="260">list_members</text>
+<text x="0" y="320">request_plan_change</text>
+<text x="0" y="380">delete_workspace</text>
+</g>
+<g fill="#C2541D">
+<rect x="290" y="112" width="90" height="40"></rect><rect x="400" y="112" width="90" height="40"></rect><rect x="510" y="112" width="90" height="40"></rect>
+<rect x="290" y="172" width="90" height="40"></rect><rect x="400" y="172" width="90" height="40"></rect><rect x="510" y="172" width="90" height="40"></rect>
+<rect x="290" y="232" width="90" height="40"></rect><rect x="400" y="232" width="90" height="40"></rect><rect x="510" y="232" width="90" height="40"></rect>
+<rect x="290" y="292" width="90" height="40"></rect><rect x="400" y="292" width="90" height="40"></rect><rect x="510" y="292" width="90" height="40"></rect>
+<rect x="290" y="352" width="90" height="40"></rect><rect x="400" y="352" width="90" height="40"></rect><rect x="510" y="352" width="90" height="40"></rect>
+</g>
+<text x="0" y="440" font-size="16" fill="#C2541D">no scope rules · no never list</text>
+<line x1="680" y1="0" x2="680" y2="460" stroke="#DADFE7" stroke-width="2"></line>
+<text x="760" y="22" font-size="18" font-weight="600" fill="#2453C9">THE POLICY YOU WRITE</text>
+<text x="760" y="48" font-size="15" fill="#4A5361">grants per role, scope per argument</text>
+<g font-size="15" fill="#4A5361" text-anchor="middle">
+<text x="1110" y="92">Owner</text><text x="1250" y="92">Admin</text><text x="1390" y="92">Member</text><text x="1560" y="92">scope</text>
+</g>
+<g font-size="17" fill="#11151B">
+<text x="760" y="140">get_account</text>
+<text x="760" y="200">get_service_status</text>
+<text x="760" y="260">list_members</text>
+<text x="760" y="320">request_plan_change</text>
+<text x="760" y="380">delete_workspace</text>
+</g>
+<g stroke="#2453C9" stroke-width="1.5">
+<rect x="1050" y="112" width="120" height="40" fill="#F4F5F7"></rect><rect x="1190" y="112" width="120" height="40" fill="#F4F5F7"></rect><rect x="1330" y="112" width="120" height="40" fill="#F4F5F7"></rect>
+<rect x="1050" y="172" width="120" height="40" fill="#F4F5F7"></rect><rect x="1190" y="172" width="120" height="40" fill="#F4F5F7"></rect><rect x="1330" y="172" width="120" height="40" fill="#F4F5F7"></rect>
+<rect x="1050" y="232" width="120" height="40" fill="#F4F5F7"></rect><rect x="1190" y="232" width="120" height="40" fill="#F4F5F7"></rect><rect x="1330" y="232" width="120" height="40" fill="#F4F5F7"></rect>
+<rect x="1050" y="292" width="120" height="40" fill="#F4F5F7"></rect><rect x="1190" y="292" width="120" height="40" fill="#F4F5F7"></rect><rect x="1330" y="292" width="120" height="40" fill="#F4F5F7"></rect>
+</g>
+<rect x="1050" y="352" width="400" height="40" fill="none" stroke="#C2541D" stroke-width="2" stroke-dasharray="6 5"></rect>
+<text x="1250" y="378" font-size="16" fill="#9AA3B0" text-anchor="middle">?</text>
+<g font-size="14" fill="#9AA3B0" text-anchor="middle">
+<text x="1560" y="137">?</text>
+<text x="1560" y="257">?</text>
+<text x="1560" y="317">?</text>
+</g>
+<text x="760" y="440" font-size="16" fill="#4A5361">fill in your grants table</text>
+<line x1="0" y1="480" x2="1680" y2="480" stroke="#DADFE7" stroke-width="2"></line>
+<text x="0" y="524" font-size="17" fill="#11151B">02-member-not-offered · Ben is a Member and asks for list_members. Which mechanism stopped the call?</text>
+<text x="0" y="560" font-size="17" font-weight="600" fill="#9AA3B0">?</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

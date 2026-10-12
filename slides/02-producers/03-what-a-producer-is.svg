@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>What a producer is</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · WHAT A PRODUCER IS</span>
+<span>03 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Anything that proposes items for slots</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">One batch per request. The application stamps who sent it (R-15).</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="420" viewBox="0 0 1680 420" role="img" aria-label="Seven producers each emit a batch of items and excluded rows; the application freezes the snapshot and stamps each batch with the producer id and kind it authenticated">
+<defs>
+<marker id="b3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace" font-size="18" fill="#11151B">
+<rect x="0" y="0" width="300" height="48" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="18" y="31">retriever</text>
+<rect x="0" y="62" width="300" height="48" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="18" y="93">memory store</text>
+<rect x="0" y="124" width="300" height="48" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="18" y="155">state service</text>
+<rect x="0" y="186" width="300" height="48" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="18" y="217">MCP adapter</text>
+<rect x="0" y="248" width="300" height="48" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="18" y="279">capability policy</text>
+<rect x="0" y="310" width="300" height="48" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="18" y="341">app instructions</text>
+<rect x="0" y="372" width="300" height="48" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="18" y="403">conversation</text>
+<g stroke="#9AA3B0" stroke-width="1.5" fill="none">
+<path d="M 300 24 C 360 24, 360 210, 420 210"></path>
+<path d="M 300 86 C 360 86, 360 210, 420 210"></path>
+<path d="M 300 148 C 360 148, 360 210, 420 210"></path>
+<path d="M 300 210 L 420 210"></path>
+<path d="M 300 272 C 360 272, 360 210, 420 210"></path>
+<path d="M 300 334 C 360 334, 360 210, 420 210"></path>
+<path d="M 300 396 C 360 396, 360 210, 420 210"></path>
+</g>
+<line x1="420" y1="210" x2="470" y2="210" stroke="#11151B" stroke-width="2" marker-end="url(#b3)"></line>
+<rect x="480" y="110" width="400" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="504" y="152" font-size="22" font-weight="600">one batch</text>
+<text x="504" y="196" font-size="20" fill="#2453C9">items</text>
+<text x="504" y="230" font-size="20" fill="#C2541D">excluded</text>
+<text x="504" y="280" font-size="16" fill="#4A5361">what it suppressed, with a reason</text>
+<line x1="880" y1="210" x2="970" y2="210" stroke="#11151B" stroke-width="2" marker-end="url(#b3)"></line>
+<rect x="980" y="110" width="360" height="200" fill="#2453C9"></rect>
+<text x="1004" y="152" font-size="22" font-weight="600" fill="#FFFFFF">application</text>
+<text x="1004" y="194" font-size="17" fill="#FFFFFF">authenticates, freezes,</text>
+<text x="1004" y="220" font-size="17" fill="#FFFFFF">stamps the batch</text>
+<text x="1004" y="276" font-size="19" fill="#FFFFFF">producer: {id, kind}</text>
+<line x1="1340" y1="210" x2="1430" y2="210" stroke="#11151B" stroke-width="2" marker-end="url(#b3)"></line>
+<rect x="1440" y="150" width="240" height="120" fill="#11151B"></rect>
+<text x="1466" y="218" font-size="22" font-weight="600" fill="#FFFFFF">snapshot</text>
+</g>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 72px; font-size: 23px; line-height: 1.45">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">A conformant producer</span>
+<span>emits only items that meet the item rules (R-1, R-2), reports every entry it suppresses (R-9), precomputes scores and variants (R-18), and meets the rules for its kind.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #C2541D">The claim rests on its word</span>
+<span>Nothing in an item proves who sent it; <span style="font-family: 'IBM Plex Mono', monospace">source</span> and <span style="font-family: 'IBM Plex Mono', monospace">trust</span> are claims. Admission cannot see a blob that was two chunks, or a chunk dropped and never reported. Hence the checklist.</span>
+</div>
+</div>
+</div>
+</foreignObject>
+</svg>

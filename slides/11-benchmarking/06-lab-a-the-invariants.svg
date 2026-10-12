@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab A The invariants</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 2 · LAB A · 30 MINUTES · INVARIANTS.PY</span>
+<span>06 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The model-free half, over this repository</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Every committed snapshot in W1 to W7, W9, W10 and the capstone, wherever its module keeps it.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="invariants.py finds snapshots in three shapes, then for each assembles twice and compares, validates the trace against the schema, compares with a recorded trace where one was committed, and checks an expected rejection. Below, the exercise and checkpoint 2.">
+<defs>
+<marker id="iv11" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="20" font-size="16" font-weight="600" fill="#4A5361">IT FINDS</text>
+<rect x="0" y="36" width="460" height="80" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="70" font-size="16" fill="#11151B">snapshot.json beside a trace</text>
+<rect x="0" y="128" width="460" height="80" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="162" font-size="16" fill="#11151B">a run record with inferences</text>
+<rect x="0" y="220" width="460" height="80" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="254" font-size="16" fill="#11151B">an eval recording with attempts</text>
+<path d="M 460 168 L 536 168" stroke="#11151B" stroke-width="2" fill="none" marker-end="url(#iv11)"></path>
+<text x="560" y="20" font-size="16" font-weight="600" fill="#4A5361">AND FOR EACH</text>
+<g>
+<rect x="560" y="36" width="1120" height="62" fill="#11151B"></rect>
+<text x="584" y="74" font-size="18" fill="#FFFFFF">assemble twice and compare</text><text x="1590" y="74" font-size="16" fill="#B9C3D6">R-23</text>
+<rect x="560" y="106" width="1120" height="62" fill="#11151B"></rect>
+<text x="584" y="144" font-size="18" fill="#FFFFFF">validate the trace against the published schema</text><text x="1590" y="144" font-size="16" fill="#B9C3D6">R-21</text>
+<rect x="560" y="176" width="1120" height="62" fill="#2453C9"></rect>
+<text x="584" y="214" font-size="18" fill="#FFFFFF">where a trace was committed beside it, compare: the recorded column</text>
+<rect x="560" y="246" width="1120" height="62" fill="#C2541D"></rect>
+<text x="584" y="284" font-size="18" fill="#FFFFFF">committed with rejected.json: rejected with the recorded problems</text><text x="1590" y="284" font-size="16" fill="#FBF0EA">R-5</text>
+</g>
+<rect x="0" y="350" width="820" height="270" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="390" font-size="16" font-weight="600" fill="#4A5361">BREAK ONE ON PURPOSE</text>
+<g font-size="16" fill="#11151B"><text x="24" y="432">uv run invariants.py</text></g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="24" y="476">Edit a committed trace in W2's scenarios,</text>
+<text x="24" y="502">run again, then git checkout it.</text>
+<text x="24" y="546">Then read the per-module table: which modules</text>
+<text x="24" y="572">commit traces beside their snapshots?</text>
+</g>
+<rect x="860" y="350" width="820" height="270" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="884" y="390" font-size="16" font-weight="600" fill="#4A5361">CHECKPOINT 2</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B"><text x="884" y="432">the snapshot count</text><text x="884" y="496">the one expected rejection</text><text x="884" y="560">the module with nothing recorded</text></g>
+<g font-size="17" fill="#9AA3B0"><text x="884" y="460">?</text><text x="884" y="524">?</text><text x="884" y="588">?</text></g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Close</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CLOSE · 10 MINUTES</span>
+<span>11 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Who is opening what, and where does it go?</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Issue first when the meaning changes. A pull request when the data already says it.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="440" viewBox="0 0 1680 440" role="img" aria-label="Four routes into the project: a new case that isolates a defect goes as a pull request; a case whose expectation is wrong goes as a case-problem issue; a change to what a rule means goes as a spec-change issue before any diff; an assembler of your own goes as an implementation to list.">
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<rect x="0" y="0" width="400" height="400" fill="#2453C9"></rect>
+<text x="28" y="52" font-size="16" fill="#DCE3F5">you have</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="21" font-weight="600" fill="#FFFFFF"><text x="28" y="92">a case that isolates</text><text x="28" y="120">a defect</text></g>
+<line x1="28" y1="200" x2="372" y2="200" stroke="#DCE3F5" stroke-width="2"></line>
+<text x="28" y="244" font-size="16" fill="#DCE3F5">it goes as</text>
+<text x="28" y="282" font-size="19" font-weight="600" fill="#FFFFFF">a pull request</text>
+<text x="28" y="360" font-size="14" fill="#DCE3F5">drafts/case-addition.md</text>
+</g>
+<g>
+<rect x="426" y="0" width="400" height="400" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="454" y="52" font-size="16" fill="#4A5361">you have</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="21" font-weight="600" fill="#11151B"><text x="454" y="92">a case whose expectation</text><text x="454" y="120">you can show is wrong</text></g>
+<line x1="454" y1="200" x2="798" y2="200" stroke="#DADFE7" stroke-width="2"></line>
+<text x="454" y="244" font-size="16" fill="#4A5361">it goes as</text>
+<text x="454" y="282" font-size="19" font-weight="600" fill="#11151B">a case-problem issue</text>
+<text x="454" y="360" font-size="14" fill="#4A5361">cite the rule that decides</text>
+</g>
+<g>
+<rect x="852" y="0" width="400" height="400" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="880" y="52" font-size="16" fill="#4A5361">you want</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="21" font-weight="600" fill="#11151B"><text x="880" y="92">a rule to mean</text><text x="880" y="120">something else</text></g>
+<line x1="880" y1="200" x2="1224" y2="200" stroke="#C2541D" stroke-width="2"></line>
+<text x="880" y="244" font-size="16" fill="#4A5361">it goes as</text>
+<text x="880" y="282" font-size="19" font-weight="600" fill="#C2541D">a spec-change issue,</text>
+<text x="880" y="310" font-size="19" font-weight="600" fill="#C2541D">before any diff</text>
+<text x="880" y="360" font-size="14" fill="#4A5361">drafts/spec-change.md</text>
+</g>
+<g>
+<rect x="1278" y="0" width="402" height="400" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="1306" y="52" font-size="16" fill="#4A5361">you have</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="21" font-weight="600" fill="#11151B"><text x="1306" y="92">an assembler of</text><text x="1306" y="120">your own</text></g>
+<line x1="1306" y1="200" x2="1650" y2="200" stroke="#DADFE7" stroke-width="2"></line>
+<text x="1306" y="244" font-size="16" fill="#4A5361">it goes as</text>
+<text x="1306" y="282" font-size="19" font-weight="600" fill="#11151B">an implementation</text>
+<text x="1306" y="310" font-size="19" font-weight="600" fill="#11151B">to list</text>
+<text x="1306" y="360" font-size="14" fill="#4A5361">the repository, what you need</text>
+</g>
+</g>
+</svg>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540">Every commit signed with <span style="font-family: 'IBM Plex Mono', monospace">git commit -s</span>; derived text regenerated, never edited.</div>
+</div>
+</foreignObject>
+</svg>

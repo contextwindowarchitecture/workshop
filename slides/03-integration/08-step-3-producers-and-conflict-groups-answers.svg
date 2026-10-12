@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Step 3 Producers and conflict groups</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>STEP 3 · 90 MINUTES · THE HARD PART</span>
+<span>08 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Give every item an authority and a source</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Five producers. Two also return the facts their items assert. Scope keys on everything that has them.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="470" viewBox="0 0 1680 470" role="img" aria-label="Five producers emit batches into the snapshot. accounts_db and memory_store also return facts; conflict_groups declares one fact group per fact two or more items assert; the route decides each by producer precedence.">
+<defs>
+<marker id="pr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<g font-size="18">
+<rect x="0" y="0" width="300" height="60" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="20" y="37" fill="#11151B">app_policy</text>
+<rect x="0" y="80" width="300" height="60" fill="#2453C9"></rect><text x="20" y="117" fill="#FFFFFF" font-weight="600">accounts_db</text>
+<rect x="0" y="160" width="300" height="60" fill="#2453C9"></rect><text x="20" y="197" fill="#FFFFFF" font-weight="600">memory_store</text>
+<rect x="0" y="240" width="300" height="60" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="20" y="277" fill="#11151B">help_center_search</text>
+<rect x="0" y="320" width="300" height="60" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect><text x="20" y="357" fill="#11151B">chat_session</text>
+</g>
+<g stroke="#9AA3B0" stroke-width="1.5" fill="none">
+<path d="M 300 30 C 420 30, 420 190, 520 190"></path>
+<path d="M 300 110 C 420 110, 420 190, 520 190"></path>
+<path d="M 300 190 L 520 190"></path>
+<path d="M 300 270 C 420 270, 420 190, 520 190"></path>
+<path d="M 300 350 C 420 350, 420 190, 520 190"></path>
+</g>
+<text x="330" y="166" font-size="15" fill="#4A5361">batches</text>
+<line x1="520" y1="190" x2="560" y2="190" stroke="#11151B" stroke-width="2" marker-end="url(#pr)"></line>
+<rect x="570" y="120" width="300" height="140" fill="#11151B"></rect>
+<text x="594" y="176" font-size="22" font-weight="600" fill="#FFFFFF">snapshot</text>
+<text x="594" y="210" font-size="15" fill="#B9C3D6">frozen once</text>
+<path d="M 300 120 C 360 120, 360 420, 600 420" fill="none" stroke="#2453C9" stroke-width="2" stroke-dasharray="6 5"></path>
+<path d="M 300 200 C 340 200, 340 420, 600 420" fill="none" stroke="#2453C9" stroke-width="2" stroke-dasharray="6 5"></path>
+<text x="420" y="410" font-size="15" fill="#2453C9">facts</text>
+<line x1="600" y1="420" x2="640" y2="420" stroke="#2453C9" stroke-width="2" marker-end="url(#pr)"></line>
+<rect x="650" y="380" width="300" height="80" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="672" y="414" font-size="18" fill="#11151B">conflict_groups()</text>
+<text x="672" y="440" font-size="14" fill="#4A5361">two items, one fact: a group</text>
+<path d="M 800 380 L 800 268" fill="none" stroke="#2453C9" stroke-width="2" marker-end="url(#pr)"></path>
+<line x1="870" y1="190" x2="960" y2="190" stroke="#11151B" stroke-width="2" marker-end="url(#pr)"></line>
+<rect x="970" y="100" width="710" height="180" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="994" y="144" font-size="20" font-weight="600" fill="#11151B">assembler: admission resolves the group</text>
+<text x="994" y="184" font-size="17" fill="#2E3540">by the route's producer precedence</text>
+<text x="994" y="214" font-size="17" fill="#2E3540">never by comparing the bodies (R-11)</text>
+<text x="994" y="254" font-size="17" fill="#C2541D">the loser: conflict_lost</text>
+<text x="1000" y="340" font-size="17" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">The application declares. The route decides.</text>
+<text x="1000" y="370" font-size="17" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">Stop the room: why can the assembler not find the contradiction itself?</text>
+</g>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; font-size: 22px; line-height: 1.45">
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Which producer reports revoked, and why?</span><span style="color: #2E3540">The memory store: it knows the row is revoked, so it never sends it and reports it (R-14).</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Why does the assembler record conflict_lost?</span><span style="color: #2E3540">Resolving a declared group is admission’s job; the producer could not know what the account would say (R-11).</span></div>
+</div>
+</div>
+</foreignObject>
+</svg>

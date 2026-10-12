@@ -1,0 +1,23 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-11T23:45:00Z"},
+  "title": "W1 CWA Tour Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Terms.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Seven terms"},
+    "Planes.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 Four planes, eleven slots"},
+    "Results.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Three results"},
+    "Agenda.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 Agenda"},
+    "Part1.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 Part 1 Before and after"},
+    "Part2Loop.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Part 2 The predict loop"},
+    "Part2Exercises.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Part 2 Thirteen snapshots"},
+    "Part3.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Part 3 Same bytes"},
+    "Part4.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 Part 4 Whose bug"},
+    "Close.dc.html": {"x": 2000, "y": 3600, "w": 1920, "h": 1080, "title": "11 Part 5 and close"}
+  },
+  "order": ["Main.dc.html", "Terms.dc.html", "Planes.dc.html", "Results.dc.html", "Agenda.dc.html", "Part1.dc.html", "Part2Loop.dc.html", "Part2Exercises.dc.html", "Part3.dc.html", "Part4.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

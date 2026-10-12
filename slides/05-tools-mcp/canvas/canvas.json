@@ -1,0 +1,22 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T01:30:00Z"},
+  "title": "W5 Tools and MCP Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Agenda.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Agenda"},
+    "Permission.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 Proposal, grant, guard"},
+    "Observation.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Observation or denial"},
+    "Part1.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 Part 1 Four turns"},
+    "LabA.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 Lab A The guard"},
+    "LabB.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Lab B The capability policy"},
+    "LabC.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Lab C The injected instruction"},
+    "LabD.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Lab D Record and replay"},
+    "Close.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 Close"}
+  },
+  "order": ["Main.dc.html", "Agenda.dc.html", "Permission.dc.html", "Observation.dc.html", "Part1.dc.html", "LabA.dc.html", "LabB.dc.html", "LabC.dc.html", "LabD.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

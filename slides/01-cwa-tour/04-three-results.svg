@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Three results</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · THREE RESULTS</span>
+<span>04 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Assembled, refused, rejected</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The difference matters all day.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="660" viewBox="0 0 1680 660" role="img" aria-label="A snapshot is checked for validity. Invalid: rejected, only the problems. Valid: the assembler runs. Requirements met: assembled, payload and trace. A requirement cannot be met: refused, trace and reason, nothing reaches a model.">
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace" fill="#11151B">
+<rect x="0" y="270" width="220" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="30" y="324" font-size="24" font-weight="600">snapshot</text>
+<line x1="220" y1="315" x2="320" y2="315" stroke="#11151B" stroke-width="2" marker-end="url(#ar)"></line>
+<polygon points="430,215 540,315 430,415 320,315" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></polygon>
+<text x="388" y="322" font-size="22" font-weight="600">valid?</text>
+<line x1="430" y1="415" x2="430" y2="520" stroke="#11151B" stroke-width="2"></line>
+<line x1="430" y1="520" x2="1110" y2="520" stroke="#11151B" stroke-width="2" marker-end="url(#ar)"></line>
+<text x="446" y="470" font-size="19" fill="#4A5361">no</text>
+<line x1="540" y1="315" x2="640" y2="315" stroke="#11151B" stroke-width="2" marker-end="url(#ar)"></line>
+<text x="560" y="300" font-size="19" fill="#4A5361">yes</text>
+<rect x="650" y="255" width="240" height="120" fill="#2453C9"></rect>
+<text x="680" y="310" font-size="24" font-weight="600" fill="#FFFFFF">assembler</text>
+<text x="680" y="342" font-size="17" fill="#FFFFFF">checks requirements</text>
+<line x1="890" y1="290" x2="1000" y2="290" stroke="#11151B" stroke-width="2"></line>
+<line x1="1000" y1="290" x2="1000" y2="110" stroke="#11151B" stroke-width="2"></line>
+<line x1="1000" y1="110" x2="1110" y2="110" stroke="#11151B" stroke-width="2" marker-end="url(#ar)"></line>
+<text x="912" y="276" font-size="17" fill="#4A5361">met</text>
+<line x1="890" y1="345" x2="1110" y2="345" stroke="#11151B" stroke-width="2" marker-end="url(#ar)"></line>
+<text x="912" y="377" font-size="17" fill="#4A5361">cannot be met</text>
+<rect x="1120" y="40" width="560" height="140" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="1148" y="92" font-size="30" font-weight="600" fill="#2453C9">assembled</text>
+<text x="1148" y="134" font-size="20">payload + trace</text>
+<rect x="1120" y="275" width="560" height="140" fill="#FFFFFF" stroke="#C2541D" stroke-width="3"></rect>
+<text x="1148" y="327" font-size="30" font-weight="600" fill="#C2541D">refused</text>
+<text x="1148" y="365" font-size="20">trace + reason, maybe a recovery</text>
+<text x="1148" y="395" font-size="18" fill="#4A5361">nothing reaches a model (R-17)</text>
+<rect x="1120" y="450" width="560" height="140" fill="#FFFFFF" stroke="#11151B" stroke-width="3" stroke-dasharray="10 8"></rect>
+<text x="1148" y="502" font-size="30" font-weight="600">rejected</text>
+<text x="1148" y="540" font-size="20">no payload, no trace</text>
+<text x="1148" y="570" font-size="18" fill="#4A5361">only the problems</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="21" fill="#2E3540">
+<text x="0" y="620">A refusal is an outcome of a valid snapshot. A rejection means the application built it wrong.</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

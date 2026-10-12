@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab C Calibrate the margin</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB C · 30 MINUTES · CALIBRATE.PY</span>
+<span>09 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Calibrate the margin</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Count every text the large route renders with <span style="font-family: 'IBM Plex Mono', monospace">estimate-utf8/v1</span> and with tiktoken's <span style="font-family: 'IBM Plex Mono', monospace">cl100k_base</span>.</p>
+</div>
+<svg width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="On this corpus the ratios run from 0.82 on the instructions to 1.005 on account and article text. The script recommends a 6 percent margin; the routes table uses 15 percent.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="18" font-weight="600" fill="#4A5361">RATIO OF THE TWO COUNTS, ON THIS CORPUS</text>
+<line x1="100" y1="250" x2="1580" y2="250" stroke="#11151B" stroke-width="2"></line>
+<g stroke="#11151B" stroke-width="2">
+<line x1="100" y1="242" x2="100" y2="258"></line>
+<line x1="470" y1="242" x2="470" y2="258"></line>
+<line x1="840" y1="242" x2="840" y2="258"></line>
+<line x1="1210" y1="242" x2="1210" y2="258"></line>
+<line x1="1580" y1="242" x2="1580" y2="258"></line>
+</g>
+<g font-size="17" fill="#4A5361" text-anchor="middle">
+<text x="100" y="286">0.8</text>
+<text x="470" y="286">0.9</text>
+<text x="840" y="286">1.0</text>
+<text x="1210" y="286">1.1</text>
+<text x="1580" y="286">1.2</text>
+</g>
+<rect x="174" y="150" width="684" height="60" fill="#DCE3F5"></rect>
+<circle cx="174" cy="180" r="12" fill="#2453C9"></circle>
+<text x="174" y="128" font-size="17" fill="#11151B" text-anchor="middle">0.82 instructions</text>
+<circle cx="858" cy="180" r="12" fill="#2453C9"></circle>
+<text x="858" y="128" font-size="17" fill="#11151B" text-anchor="middle">1.005 account, articles</text>
+<line x1="1062" y1="60" x2="1062" y2="320" stroke="#2453C9" stroke-width="3" stroke-dasharray="8 6"></line>
+<text x="1076" y="78" font-size="17" font-weight="600" fill="#2453C9">6% recommended</text>
+<line x1="1395" y1="60" x2="1395" y2="320" stroke="#C2541D" stroke-width="3"></line>
+<text x="1409" y="78" font-size="17" font-weight="600" fill="#C2541D">15% in the table</text>
+<text x="1409" y="102" font-size="15" fill="#2E3540">generous here</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif">
+<text x="0" y="380" font-size="22" fill="#11151B">The estimate is nearly right on English prose. The margin is headroom for other text:</text>
+<text x="0" y="414" font-size="22" fill="#11151B">on code, logs or another language it can undercount by far more.</text>
+<text x="0" y="460" font-size="18" fill="#2E3540">Run the pasted-log conversation through it with <tspan font-family="IBM Plex Mono, monospace">--encoding o200k_base</tspan> too.</text>
+</g>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="500" width="1680" height="80" fill="#11151B"></rect>
+<text x="24" y="534" font-size="17" fill="#FFFFFF">uv run --extra calibrate calibrate.py --stop-rule</text>
+<text x="24" y="562" font-size="15" fill="#B9C3D6">own id: works and the trace names it · published id: stops before assembly (R-16)</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

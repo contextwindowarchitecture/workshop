@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>C3 The six cases</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>C3 · EVALS/CASES/</span>
+<span>11 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Six cases: the ledger, the mandate, the floor</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The same sell request is withheld on one account and queued on another, decided before the model saw a tool.</p>
+</div>
+<svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="The six C3 cases with their outcome and what to look at in the trace. Below, the usual demo answers, hidden until answers are shown.">
+<g font-family="IBM Plex Mono, monospace">
+<g font-size="14" fill="#4A5361"><text x="0" y="20">case</text><text x="400" y="20">outcome</text><text x="720" y="20">what to look at</text></g>
+<line x1="0" y1="34" x2="1680" y2="34" stroke="#11151B" stroke-width="2"></line>
+<g font-size="16" fill="#11151B">
+<text x="0" y="74">01-holdings-question</text><text x="0" y="146">02-vendor-figure-in-answer</text><text x="0" y="218">03-advisory-sell-request</text><text x="0" y="290">04-self-directed-sell</text><text x="0" y="362">05-fraud-report</text><text x="0" y="434">06-pasted-statement</text>
+</g>
+<g font-size="15">
+<rect x="400" y="52" width="280" height="34" fill="#2453C9"></rect><text x="414" y="75" fill="#FFFFFF">1,000 reported</text>
+<rect x="400" y="124" width="280" height="34" fill="#C2541D"></rect><text x="414" y="147" fill="#FFFFFF">draft withheld</text>
+<rect x="400" y="196" width="280" height="34" fill="#C2541D"></rect><text x="414" y="219" fill="#FFFFFF">draft withheld</text>
+<rect x="400" y="268" width="280" height="34" fill="#2453C9"></rect><text x="414" y="291" fill="#FFFFFF">order queued</text>
+<rect x="400" y="340" width="280" height="34" fill="#11151B"></rect><text x="414" y="363" fill="#FFFFFF">triaged critical</text>
+<rect x="400" y="412" width="280" height="34" fill="#1A3D96"></rect><text x="414" y="435" fill="#FFFFFF">escalated</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#11151B">
+<text x="720" y="66">conflict_lost on the vendor estimate; place_trade withheld on an</text><text x="720" y="88">advisory account</text>
+<text x="720" y="138">the draft reports 1,200; figures_match_ledger withholds it: the</text><text x="720" y="160">application holds figures to the ledger</text>
+<text x="720" y="210">cap:place_trade is capability_not_allowed at the producer;</text><text x="720" y="232">actions_were_offered withholds the draft</text>
+<text x="720" y="282">the tool is offered, the order is within the ledger,</text><text x="720" y="304">queued for confirmation</text>
+<text x="720" y="354">a transfer the client did not make, from a new device: the risk</text><text x="720" y="376">screen writes critical; only open_case is offered</text>
+<text x="720" y="426">protected_content_over_budget on the small tier, escalation;</text><text x="720" y="448">the answer cites the fees article</text>
+</g>
+<g stroke="#DADFE7" stroke-width="2"><line x1="0" y1="106" x2="1680" y2="106"></line><line x1="0" y1="178" x2="1680" y2="178"></line><line x1="0" y1="250" x2="1680" y2="250"></line><line x1="0" y1="322" x2="1680" y2="322"></line><line x1="0" y1="394" x2="1680" y2="394"></line></g>
+<rect x="0" y="490" width="1680" height="130" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="528" font-size="15" font-weight="600" fill="#4A5361">THE DEMO · ONE TRACE A PROMPT COULD NOT EXPLAIN, AND ONE NUMBER A PROMPT COULD NOT PRODUCE</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="{{ink}}"><text x="24" y="572">{{d1}}</text><text x="24" y="600">{{d2}}</text></g>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showAnswers":{"editor":"boolean","default":false},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.showAnswers ?? false;
+    return {
+      ink: s ? '#11151B' : '#9AA3B0',
+      d1: s ? 'Case 05’s client is self-directed and still gets no trading tool: the policy’s max_risk is part of the grant.' : 'Why does case 05’s self-directed client get no trading tool?',
+      d2: s ? 'The number: cache.py’s reuse under your profile against history-first.' : 'Which number could a prompt not have produced?'
+    };
+  }
+}
+</script>
+</body>
+</html>

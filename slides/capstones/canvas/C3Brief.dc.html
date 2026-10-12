@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>C3 Wealth management and triage</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>C3 · WEALTH MANAGEMENT AND TRIAGE · LARKBRIDGE WEALTH</span>
+<span>10 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Is a trade on the table? Decided before any model runs</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Report from the ledger, queue orders only within mandate and risk, triage fraud at a floor, and leave money movement to people.</p>
+</div>
+<svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Where each input goes: the custodian ledger as task state, the vendor's estimate as untrusted evidence, the risk level computed once and used as state and as the capability policy's input, client state protected with no identifiers, tools granted by mandate and risk. Right: the cache-first placement that cache.py measures against history-first.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="20" font-size="16" font-weight="600" fill="#4A5361">WHERE EACH INPUT GOES</text>
+<g font-size="15">
+<rect x="0" y="36" width="1000" height="62" fill="#11151B"></rect><text x="20" y="74" fill="#FFFFFF">the custodian ledger: 1,000 ACME settled</text><text x="680" y="74" fill="#B9C3D6">state.task · the record</text>
+<rect x="0" y="106" width="1000" height="62" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect><text x="20" y="144" fill="#11151B">the vendor's estimate: 1,200</text><text x="680" y="144" fill="#C2541D">tool_results · untrusted</text>
+<rect x="0" y="176" width="1000" height="62" fill="#2453C9"></rect><text x="20" y="214" fill="#FFFFFF">risk_level(), computed once</text><text x="680" y="214" fill="#DCE3F5">state, and a policy input</text>
+<rect x="0" y="246" width="1000" height="62" fill="#11151B"></rect><text x="20" y="284" fill="#FFFFFF">the client, advisory or self-directed</text><text x="680" y="284" fill="#B9C3D6">protected · no identifiers</text>
+<rect x="0" y="316" width="1000" height="62" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="20" y="354" fill="#11151B">four portal tools</text><text x="680" y="354" fill="#4A5361">by mandate and max_risk</text>
+<rect x="0" y="386" width="1000" height="62" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="20" y="424" fill="#11151B">five articles, one scored item per paragraph</text><text x="680" y="424" fill="#4A5361">min_relevance admits</text>
+</g>
+<text x="0" y="490" font-size="16" font-weight="600" fill="#4A5361">THREE COORDINATION POINTS · SAY ALL THREE</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">
+<text x="0" y="528">the fact position.ACME, asserted by ledger and by market-data</text>
+<text x="0" y="562">the risk level: one function, called by risk_screen and capability_policy</text>
+<text x="0" y="596">the grant the freeze puts in the snapshot's capabilities member</text>
+</g>
+<rect x="1040" y="0" width="640" height="640" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="1064" y="40" font-size="16" font-weight="600" fill="#2453C9">UV RUN CACHE.PY · THE DAY'S NUMBER</text>
+<text x="1064" y="86" font-size="14" fill="#4A5361">cache-first: the committed profile</text>
+<g font-size="13">
+<rect x="1064" y="100" width="360" height="40" fill="#1A3D96"></rect><text x="1078" y="126" fill="#FFFFFF">stable across the session</text>
+<rect x="1424" y="100" width="80" height="40" fill="#DCE3F5"></rect><rect x="1504" y="100" width="72" height="40" fill="#DCE3F5"></rect><rect x="1576" y="100" width="80" height="40" fill="#DCE3F5"></rect>
+<text x="1430" y="160" fill="#4A5361">history, articles, query</text>
+</g>
+<text x="1064" y="216" font-size="14" fill="#4A5361">history-first: the alternative</text>
+<g font-size="13">
+<rect x="1064" y="230" width="160" height="40" fill="#DCE3F5"></rect><text x="1078" y="256" fill="#11151B">history</text>
+<rect x="1224" y="230" width="280" height="40" fill="#1A3D96"></rect><text x="1238" y="256" fill="#FFFFFF">stable</text>
+<rect x="1504" y="230" width="72" height="40" fill="#DCE3F5"></rect><rect x="1576" y="230" width="80" height="40" fill="#DCE3F5"></rect>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">
+<text x="1064" y="330">A cache reuses an unchanged prefix at</text>
+<text x="1064" y="354">block boundaries, so the measure is exact.</text>
+<text x="1064" y="402">Run it under your freeze, move one slot in</text>
+<text x="1064" y="426">the profile, run it again. The number moves;</text>
+<text x="1064" y="450">the trace explains why.</text>
+</g>
+<text x="1064" y="518" font-size="14" fill="#C2541D">not 100%: the articles and the query</text>
+<text x="1064" y="540" font-size="14" fill="#C2541D">change every turn by design</text>
+<text x="1064" y="600" font-size="14" fill="#4A5361">R-16 · R-19</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Close</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CLOSE · 15 MINUTES · THE AUDIT QUESTION</span>
+<span>10 / 10</span>
+</div>
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">In your agent, look for two gaps</h2>
+<svg width="1680" height="520" viewBox="0 0 1680 520" role="img" aria-label="First gap: a tool specification reaching the model without a grant. Second gap: a tool call reaching a server without a guard.">
+<defs>
+<marker id="c5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="810" height="520" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="32" y="60" font-size="26" font-weight="600" fill="#11151B">1 · what reaches the model</text>
+<text x="32" y="96" font-size="26" font-weight="600" fill="#11151B">without a grant?</text>
+<rect x="32" y="170" width="220" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="52" y="222" font-size="18" fill="#11151B">tool server</text>
+<line x1="252" y1="215" x2="540" y2="215" stroke="#C2541D" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#c5)"></line>
+<text x="276" y="196" font-size="15" fill="#C2541D">tool specs, no policy</text>
+<rect x="550" y="170" width="220" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2" stroke-dasharray="8 6"></rect>
+<text x="570" y="222" font-size="18" fill="#11151B">model</text>
+<text x="32" y="350" font-size="17" fill="#2E3540">Every tool specification the model sees</text>
+<text x="32" y="378" font-size="17" fill="#2E3540">should come from a capability policy,</text>
+<text x="32" y="406" font-size="17" fill="#2E3540">versioned, per role, with a never list.</text>
+<rect x="870" y="0" width="810" height="520" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="902" y="60" font-size="26" font-weight="600" fill="#11151B">2 · what reaches a server</text>
+<text x="902" y="96" font-size="26" font-weight="600" fill="#11151B">without a guard?</text>
+<rect x="902" y="170" width="220" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2" stroke-dasharray="8 6"></rect>
+<text x="922" y="222" font-size="18" fill="#11151B">model</text>
+<line x1="1122" y1="215" x2="1410" y2="215" stroke="#C2541D" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#c5)"></line>
+<text x="1146" y="196" font-size="15" fill="#C2541D">a call, unchecked</text>
+<rect x="1420" y="170" width="220" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="1440" y="222" font-size="18" fill="#11151B">tool server</text>
+<text x="902" y="350" font-size="17" fill="#2E3540">Every call should pass a guard that reads</text>
+<text x="902" y="378" font-size="17" fill="#2E3540">the call, the grant and the scope,</text>
+<text x="902" y="406" font-size="17" fill="#2E3540">before the server sees it.</text>
+</g>
+</svg>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Next</span> · W7 adds the snapshot store, telemetry and evals over records like these.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

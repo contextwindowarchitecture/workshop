@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>C1 Scribe and diagnostic</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>C1 · SCRIBE AND DIAGNOSTIC · HARBOR STREET FAMILY PRACTICE</span>
+<span>06 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The room can talk to the model; it cannot instruct it</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Draft the SOAP note or answer a reference question from the chart, today's vitals, prior notes and guidelines. Every order stays the clinician's.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Where each input goes: the chart as protected task state; today's monitor reading as task state; an earlier reading in the prior note that recorded it, as memory; every transcript turn as untrusted history; the typed request as the one user item; guideline paragraphs scored; tools only from the capability policy by role. Two coordination points: the fact group vitals.bp, and the grant.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="20" font-size="16" font-weight="600" fill="#4A5361">WHERE EACH INPUT GOES</text>
+<g font-size="15">
+<rect x="0" y="36" width="1040" height="62" fill="#11151B"></rect><text x="20" y="74" fill="#FFFFFF">the chart: problems, medicines, allergies, labs</text><text x="700" y="74" fill="#B9C3D6">state.task · protected</text>
+<rect x="0" y="106" width="1040" height="62" fill="#11151B"></rect><text x="20" y="144" fill="#FFFFFF">today's reading, from the monitor</text><text x="700" y="144" fill="#B9C3D6">state.task</text>
+<rect x="0" y="176" width="1040" height="62" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="20" y="214" fill="#11151B">an earlier reading, in the note that recorded it</text><text x="700" y="214" fill="#4A5361">memory · can lose</text>
+<rect x="0" y="246" width="1040" height="62" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect><text x="20" y="284" fill="#11151B">every transcript turn, whoever it was labelled</text><text x="700" y="284" fill="#C2541D">history · untrusted</text>
+<rect x="0" y="316" width="1040" height="62" fill="#2453C9"></rect><text x="20" y="354" fill="#FFFFFF">the clinician's typed request</text><text x="700" y="354" fill="#DCE3F5">the one user item</text>
+<rect x="0" y="386" width="1040" height="62" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="20" y="424" fill="#11151B">guideline paragraphs, one scored item each</text><text x="700" y="424" fill="#4A5361">min_relevance admits</text>
+<rect x="0" y="456" width="1040" height="62" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="20" y="494" fill="#11151B">the EHR's tools</text><text x="700" y="494" fill="#4A5361">capability policy, by role</text>
+</g>
+<text x="0" y="566" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">A protected item cannot lose a conflict: that is why the stale reading must not be in the chart.</text>
+<rect x="1080" y="0" width="600" height="300" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="1104" y="40" font-size="16" font-weight="600" fill="#2453C9">COORDINATION POINTS · SAY BOTH</text>
+<text x="1104" y="90" font-size="17" fill="#11151B">fact group vitals.bp</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="1104" y="118">asserted by telemetry and by the</text><text x="1104" y="140">intake note in ehr-notes;</text><text x="1104" y="162">precedence: [telemetry, ehr-notes]</text></g>
+<text x="1104" y="212" font-size="17" fill="#11151B">the grant</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="1104" y="240">the capability policy returns it; the</text><text x="1104" y="262">freeze puts it in capabilities</text></g>
+<rect x="1080" y="330" width="600" height="310" fill="#11151B"></rect>
+<text x="1104" y="370" font-size="16" font-weight="600" fill="#B9C3D6">THE DAY'S BEST MOMENT</text>
+<text x="1104" y="416" font-size="17" fill="#FFFFFF">vitals_decided() in app.py</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#B9C3D6">
+<text x="1104" y="456">The application reads the trace's</text>
+<text x="1104" y="480">conflict record to learn which reading</text>
+<text x="1104" y="504">won, and holds the draft to it.</text>
+<text x="1104" y="556" fill="#FFFFFF">Say in a sentence why the orchestrator</text>
+<text x="1104" y="580" fill="#FFFFFF">does not compare the two bodies itself.</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

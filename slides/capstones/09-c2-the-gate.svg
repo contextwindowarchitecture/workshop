@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>C2 The six cases</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>C2 · EVALS/CASES/*/EXPECT.JSON</span>
+<span>09 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Six cases, each an expectation on the trace</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The guards run on the parsed reply. A draft that is not the contract's JSON fails before any screen runs.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="The six C2 cases with their route, the next stage the application writes, and what the expectation checks in the trace. Below, the usual demo answers, hidden until answers are shown.">
+<g font-family="IBM Plex Mono, monospace">
+<g font-size="14" fill="#4A5361"><text x="0" y="20">case</text><text x="330" y="20">route</text><text x="500" y="20">next stage</text><text x="800" y="20">the expectation checks</text></g>
+<line x1="0" y1="34" x2="1680" y2="34" stroke="#11151B" stroke-width="2"></line>
+<g font-size="16" fill="#11151B">
+<text x="0" y="74">01-return-jacket</text><text x="0" y="146">02-damaged-tent</text><text x="0" y="218">03-where-is-order</text><text x="0" y="290">04-pasted-thread</text><text x="0" y="362">05-pii-in-draft</text><text x="0" y="434">06-crm-leak</text>
+</g>
+<g font-size="15" fill="#2453C9"><text x="330" y="74">returns</text><text x="330" y="146">damaged</text><text x="330" y="218">general</text><text x="330" y="290">returns</text><text x="330" y="362">returns</text><text x="330" y="434">returns</text></g>
+<g font-size="15" fill="#11151B"><text x="500" y="74">return_requested</text><text x="500" y="146">awaiting_photos</text><text x="500" y="218">open</text><text x="500" y="290">return_requested</text><text x="500" y="362" fill="#C2541D">needs_agent</text><text x="500" y="434">guards pass</text></g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#11151B">
+<text x="800" y="66">cites the returns policy; crm:c_1001:0002 conflict_lost;</text><text x="800" y="88">the refund paragraph deduplicated across two articles</text>
+<text x="800" y="146">cites the damaged-items article</text>
+<text x="800" y="218">cites the shipping article</text>
+<text x="800" y="282">attempts small, then large; the first refusal is</text><text x="800" y="304">protected_content_over_budget</text>
+<text x="800" y="354">the pii_screen withholds the draft; a fallback reply</text><text x="800" y="376">goes out instead. Scripted only.</text>
+<text x="800" y="426">a producer fault leaks other customers' CRM notes;</text><text x="800" y="448">all four are out_of_scope, caught by the scope</text>
+</g>
+<g stroke="#DADFE7" stroke-width="2"><line x1="0" y1="106" x2="1680" y2="106"></line><line x1="0" y1="178" x2="1680" y2="178"></line><line x1="0" y1="250" x2="1680" y2="250"></line><line x1="0" y1="322" x2="1680" y2="322"></line><line x1="0" y1="394" x2="1680" y2="394"></line></g>
+<rect x="0" y="490" width="1680" height="130" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="528" font-size="15" font-weight="600" fill="#4A5361">THE DEMO · ONE TRACE THAT EXPLAINS A DECISION A PROMPT COULD NOT HAVE · THE USUAL ANSWERS</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#9AA3B0"><text x="24" y="572">Which trace rows do teams usually show, and which one marks a careful reader?</text><text x="24" y="600"></text></g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

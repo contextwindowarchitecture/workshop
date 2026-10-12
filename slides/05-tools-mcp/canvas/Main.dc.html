@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>W5 Tools, MCP and capability policy</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 5</span>
+<span>01 / 10</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 1000px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: {{accent}}; font-weight: 500">W5 · Tools, MCP and capability policy</div>
+<h1 style="margin: 0; font-size: 128px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">Agents under CWA</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 920px">An agent loop whose every tool call is gated by a versioned allow-list and a guard you wrote, a denial that comes back as state rather than a fake result, and a replayable record of every inference.</p>
+</div>
+<svg width="600" height="620" viewBox="0 0 600 620" role="img" aria-label="The MCP server proposes tools, the capability policy grants some, the model asks, the guard decides, and only then does the server see the call">
+<defs>
+<marker id="m5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="600" height="80" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="36" font-size="20" font-weight="600" fill="#11151B">MCP server</text>
+<text x="24" y="62" font-size="15" fill="#4A5361">proposes five tools</text>
+<line x1="300" y1="80" x2="300" y2="118" stroke="#11151B" stroke-width="2" marker-end="url(#m5)"></line>
+<rect x="0" y="126" width="600" height="80" fill="#2453C9"></rect>
+<text x="24" y="162" font-size="20" font-weight="600" fill="#FFFFFF">capability policy</text>
+<text x="24" y="188" font-size="15" fill="#FFFFFF">grants some, per role</text>
+<line x1="300" y1="206" x2="300" y2="244" stroke="#11151B" stroke-width="2" marker-end="url(#m5)"></line>
+<rect x="0" y="252" width="600" height="80" fill="#FFFFFF" stroke="#11151B" stroke-width="2" stroke-dasharray="8 6"></rect>
+<text x="24" y="288" font-size="20" font-weight="600" fill="#11151B">model</text>
+<text x="24" y="314" font-size="15" fill="#4A5361">asks for a call</text>
+<line x1="300" y1="332" x2="300" y2="370" stroke="#11151B" stroke-width="2" marker-end="url(#m5)"></line>
+<rect x="0" y="378" width="600" height="80" fill="#C2541D"></rect>
+<text x="24" y="414" font-size="20" font-weight="600" fill="#FFFFFF">guard: authorize()</text>
+<text x="24" y="440" font-size="15" fill="#FFFFFF">before the server sees it</text>
+<line x1="300" y1="458" x2="300" y2="496" stroke="#11151B" stroke-width="2" marker-end="url(#m5)"></line>
+<rect x="0" y="504" width="600" height="80" fill="#11151B"></rect>
+<text x="24" y="540" font-size="20" font-weight="600" fill="#FFFFFF">server runs the call</text>
+<text x="24" y="566" font-size="15" fill="#B9C3D6">the result is an observation</text>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>Half a day</span>
+<span style="color: #9AA3B0">/</span>
+<span>Model-free: scripted models</span>
+<span style="color: #9AA3B0">/</span>
+<span>A real MCP server</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2453C9","options":["#2453C9","#C2541D","#11151B"]},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2453C9' };
+  }
+}
+</script>
+</body>
+</html>

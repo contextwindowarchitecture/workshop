@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Agenda</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>AGENDA · FOUR HOURS INSTRUCTOR-LED</span>
+<span>05 / 11</span>
+</div>
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Five parts, two breaks, no model</h2>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="330" viewBox="0 0 1680 330" role="img" aria-label="Timeline of 240 minutes: framing 10, part 1 30, break 15, part 2 90, part 3 30, break 15, part 4 40, part 5 10">
+<g font-family="IBM Plex Mono, monospace">
+<line x1="35" y1="40" x2="35" y2="100" stroke="#11151B" stroke-width="1.5"></line>
+<text x="0" y="28" font-size="18" fill="#11151B">framing</text>
+<line x1="1645" y1="40" x2="1645" y2="100" stroke="#11151B" stroke-width="1.5"></line>
+<text x="1600" y="28" font-size="18" fill="#11151B">part 5</text>
+<rect x="0" y="100" width="70" height="100" fill="#11151B"></rect>
+<rect x="70" y="100" width="210" height="100" fill="#2453C9"></rect>
+<rect x="280" y="100" width="105" height="100" fill="#DADFE7"></rect>
+<rect x="385" y="100" width="630" height="100" fill="#1A3D96"></rect>
+<rect x="1015" y="100" width="210" height="100" fill="#2453C9"></rect>
+<rect x="1225" y="100" width="105" height="100" fill="#DADFE7"></rect>
+<rect x="1330" y="100" width="280" height="100" fill="#C2541D"></rect>
+<rect x="1610" y="100" width="70" height="100" fill="#11151B"></rect>
+<g stroke="#F4F5F7" stroke-width="3">
+<line x1="70" y1="100" x2="70" y2="200"></line>
+<line x1="280" y1="100" x2="280" y2="200"></line>
+<line x1="385" y1="100" x2="385" y2="200"></line>
+<line x1="1015" y1="100" x2="1015" y2="200"></line>
+<line x1="1225" y1="100" x2="1225" y2="200"></line>
+<line x1="1330" y1="100" x2="1330" y2="200"></line>
+<line x1="1610" y1="100" x2="1610" y2="200"></line>
+</g>
+<text x="90" y="160" font-size="24" font-weight="600" fill="#FFFFFF">part 1</text>
+<text x="300" y="160" font-size="20" fill="#11151B">break</text>
+<text x="405" y="160" font-size="24" font-weight="600" fill="#FFFFFF">part 2 · thirteen snapshots</text>
+<text x="1035" y="160" font-size="24" font-weight="600" fill="#FFFFFF">part 3</text>
+<text x="1245" y="160" font-size="20" fill="#11151B">break</text>
+<text x="1350" y="160" font-size="24" font-weight="600" fill="#FFFFFF">part 4</text>
+<g font-size="17" fill="#4A5361">
+<text x="0" y="234">0</text>
+<text x="62" y="234">10</text>
+<text x="268" y="234">40</text>
+<text x="373" y="234">55</text>
+<text x="997" y="234">145</text>
+<text x="1207" y="234">175</text>
+<text x="1312" y="234">190</text>
+<text x="1592" y="234">230</text>
+<text x="1640" y="234">240</text>
+</g>
+<text x="385" y="300" font-size="19" fill="#2E3540">stop the room after 04 and after 09</text>
+<line x1="385" y1="252" x2="1015" y2="252" stroke="#11151B" stroke-width="1.5" stroke-dasharray="4 6"></line>
+<line x1="385" y1="252" x2="385" y2="270" stroke="#11151B" stroke-width="1.5"></line>
+<line x1="1225" y1="252" x2="1225" y2="270" stroke="#11151B" stroke-width="1.5"></line>
+<line x1="1015" y1="252" x2="1225" y2="252" stroke="#11151B" stroke-width="1.5" stroke-dasharray="4 6"></line>
+<text x="1035" y="300" font-size="19" fill="#2E3540">conference cut: 2 + 3</text>
+</g>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 32px; font-size: 22px; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">1 · Before and after</span><span>One function changes: <span style="font-family: 'IBM Plex Mono', monospace">build_request()</span></span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #1A3D96">2 · Thirteen snapshots</span><span>One change each. Predict, then run.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">3 · Same bytes</span><span>Replay, then break determinism on purpose.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #C2541D">4 · Whose bug?</span><span>Four assemblers, four columns, one question.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">5 · The tests</span><span>Nine tests a trace makes possible.</span></div>
+</div>
+</div>
+</foreignObject>
+</svg>

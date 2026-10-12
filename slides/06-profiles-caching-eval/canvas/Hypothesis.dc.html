@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A profile is a hypothesis</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · R-19, R-20</span>
+<span>03 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Where things go is not the spec's business</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">A profile is a hypothesis. The evaluation is the experiment.</p>
+</div>
+<svg width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="A profile is versioned, per route, evaluated against the route's tasks before promotion, and recorded in every trace. The evidence disagrees on attention and instructions and agrees only that a cache reuses an unchanged prefix. The six-step protocol: fix the item set, name the metric, render with each profile, compare on the target model, measure reuse, record and version.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="18" font-weight="600" fill="#4A5361">A PROFILE IS</text>
+<g font-size="19">
+<rect x="0" y="40" width="400" height="80" fill="#2453C9"></rect><text x="24" y="88" fill="#FFFFFF" font-weight="600">versioned</text>
+<rect x="426" y="40" width="400" height="80" fill="#2453C9"></rect><text x="450" y="88" fill="#FFFFFF" font-weight="600">per route</text>
+<rect x="852" y="40" width="400" height="80" fill="#2453C9"></rect><text x="876" y="76" fill="#FFFFFF" font-weight="600">evaluated before</text><text x="876" y="102" fill="#FFFFFF" font-weight="600">it is promoted</text>
+<rect x="1278" y="40" width="402" height="80" fill="#2453C9"></rect><text x="1302" y="76" fill="#FFFFFF" font-weight="600">recorded in</text><text x="1302" y="102" fill="#FFFFFF" font-weight="600">every trace</text>
+</g>
+<text x="0" y="186" font-size="18" font-weight="600" fill="#4A5361">THE PLACEMENT PAGE'S EVIDENCE</text>
+<g font-size="17">
+<rect x="0" y="204" width="540" height="110" fill="#FFFFFF" stroke="#C2541D" stroke-width="2"></rect>
+<text x="24" y="246" fill="#11151B" font-weight="600">3 papers</text>
+<text x="24" y="280" fill="#C2541D">disagree about where attention goes</text>
+<rect x="570" y="204" width="540" height="110" fill="#FFFFFF" stroke="#C2541D" stroke-width="2"></rect>
+<text x="594" y="246" fill="#11151B" font-weight="600">2 provider guides</text>
+<text x="594" y="280" fill="#C2541D">disagree about where instructions go</text>
+<rect x="1140" y="204" width="540" height="110" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="1164" y="246" fill="#11151B" font-weight="600">2 prompt-cache mechanisms</text>
+<text x="1164" y="280" fill="#2453C9">agree: only an unchanged prefix</text>
+</g>
+<text x="0" y="380" font-size="18" font-weight="600" fill="#4A5361">THE SIX-STEP PROTOCOL · THE LAB PLAN</text>
+<g>
+<polygon points="0,400 250,400 275,460 250,520 0,520" fill="#11151B"></polygon>
+<polygon points="280,400 530,400 555,460 530,520 280,520 305,460" fill="#11151B"></polygon>
+<polygon points="560,400 810,400 835,460 810,520 560,520 585,460" fill="#2453C9"></polygon>
+<polygon points="840,400 1090,400 1115,460 1090,520 840,520 865,460" fill="#2453C9"></polygon>
+<polygon points="1120,400 1370,400 1395,460 1370,520 1120,520 1145,460" fill="#1A3D96"></polygon>
+<polygon points="1400,400 1680,400 1680,520 1400,520 1425,460" fill="#C2541D"></polygon>
+</g>
+<g font-size="17" fill="#FFFFFF" font-weight="600">
+<text x="20" y="450">1 fix the</text><text x="20" y="476">item set</text>
+<text x="320" y="450">2 name the</text><text x="320" y="476">metric</text>
+<text x="600" y="450">3 render with</text><text x="600" y="476">each profile</text>
+<text x="880" y="450">4 compare on the</text><text x="880" y="476">target model</text>
+<text x="1160" y="450">5 measure</text><text x="1160" y="476">reuse</text>
+<text x="1440" y="450">6 record</text><text x="1440" y="476">and version</text>
+</g>
+<g font-size="15" fill="#4A5361">
+<text x="560" y="560">part 1</text>
+<text x="840" y="560">lab C, live</text>
+<text x="1120" y="560">lab B</text>
+<text x="1400" y="560">labs C and D</text>
+</g>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

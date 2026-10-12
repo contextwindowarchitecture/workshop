@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>W9 Adapters</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 9</span>
+<span>01 / 13</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 1000px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: {{accent}}; font-weight: 500">W9 · Four seams</div>
+<h1 style="margin: 0; font-size: 128px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">Adapters</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 940px">Put what you already run behind the contract without changing it. A tool's output becomes a producer batch. An assembler speaks a protocol any runner can drive. A payload reaches a provider with nothing added. A host's permissions become authority.</p>
+</div>
+<svg width="560" height="640" viewBox="0 0 560 640" role="img" aria-label="Inside a host frame labelled D: a tool, the A adapter, the snapshot, the B assembler protocol, the payload, the C provider adapter, and the model's API, top to bottom">
+<rect x="1.5" y="1.5" width="557" height="637" fill="none" stroke="#C2541D" stroke-width="3"></rect>
+<g font-family="IBM Plex Mono, monospace" font-size="18">
+<text x="24" y="40" font-size="16" font-weight="600" fill="#C2541D">D · the host decides who may speak</text>
+<g stroke="#11151B" stroke-width="2">
+<line x1="280" y1="128" x2="280" y2="144"></line><line x1="280" y1="200" x2="280" y2="216"></line><line x1="280" y1="272" x2="280" y2="288"></line>
+<line x1="280" y1="344" x2="280" y2="360"></line><line x1="280" y1="416" x2="280" y2="432"></line><line x1="280" y1="488" x2="280" y2="504"></line>
+</g>
+<rect x="40" y="72" width="480" height="56" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="60" y="107" fill="#11151B">a tool you already run</text>
+<rect x="40" y="144" width="480" height="56" fill="#2453C9"></rect><text x="60" y="179" fill="#FFFFFF" font-weight="600">A · tool to producer</text>
+<rect x="40" y="216" width="480" height="56" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="60" y="251" fill="#11151B">snapshot</text>
+<rect x="40" y="288" width="480" height="56" fill="#2453C9"></rect><text x="60" y="323" fill="#FFFFFF" font-weight="600">B · assembler protocol</text>
+<rect x="40" y="360" width="480" height="56" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="60" y="395" fill="#11151B">payload · cwa-messages/v1</text>
+<rect x="40" y="432" width="480" height="56" fill="#2453C9"></rect><text x="60" y="467" fill="#FFFFFF" font-weight="600">C · provider adapter</text>
+<rect x="40" y="504" width="480" height="56" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="60" y="539" fill="#11151B">the model's API</text>
+<text x="40" y="604" font-size="16" fill="#4A5361">nothing an adapter wraps is changed</text>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>Four half-day modules</span>
+<span style="color: #9AA3B0">/</span>
+<span>Model-free</span>
+<span style="color: #9AA3B0">/</span>
+<span>After W1; module A assumes W2</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2453C9","options":["#2453C9","#C2541D","#11151B"]},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2453C9' };
+  }
+}
+</script>
+</body>
+</html>

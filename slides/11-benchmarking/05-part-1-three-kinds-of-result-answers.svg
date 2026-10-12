@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 1 Three kinds of result</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 1 · BENCH/MEANING.PY</span>
+<span>05 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Three kinds of result, and what a failure means</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The distinction carries to any benchmark of a context architecture. Read <span style="font-family: 'IBM Plex Mono', monospace">meaning.py</span> before any table.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Invariants hold for every model; a failure is a bug in the application or assembler. Construct measures hold for one model at a time; a failure is how that model used its context. The application's own eval suite is one model graded by the application's gate. Checkpoint 1 below.">
+<g font-family="IBM Plex Mono, monospace">
+<g font-size="15" fill="#4A5361"><text x="0" y="20">kind</text><text x="520" y="20">holds for</text><text x="820" y="20">a failure means</text></g>
+<line x1="0" y1="34" x2="1680" y2="34" stroke="#11151B" stroke-width="2"></line>
+<rect x="0" y="50" width="1680" height="130" fill="#11151B"></rect>
+<text x="24" y="92" font-size="21" font-weight="600" fill="#FFFFFF">invariants</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#B9C3D6"><text x="24" y="124">payload sent as rendered, refusal sends nothing,</text><text x="24" y="146">every snapshot replays, same question, same snapshot</text></g>
+<text x="520" y="92" font-size="19" fill="#FFFFFF">every model</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#FFFFFF"><text x="820" y="92">a bug in the application or the assembler.</text><text x="820" y="122">Never a finding about a model.</text></g>
+<rect x="0" y="196" width="1680" height="130" fill="#2453C9"></rect>
+<text x="24" y="238" font-size="21" font-weight="600" fill="#FFFFFF">construct measures</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#DCE3F5"><text x="24" y="270">grounding, conflict adherence, exclusion respect,</text><text x="24" y="292">resistance to injected text, allowed actions</text></g>
+<text x="520" y="238" font-size="19" fill="#FFFFFF">one model at a time</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#FFFFFF"><text x="820" y="238">how that model used the context</text><text x="820" y="268">it was given</text></g>
+<rect x="0" y="342" width="1680" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="384" font-size="21" font-weight="600" fill="#11151B">the application's own eval suite</text>
+<text x="520" y="384" font-size="19" fill="#11151B">one model, by the app's gate</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#11151B"><text x="820" y="384">what W7's gate would have said</text></g>
+<rect x="0" y="480" width="1680" height="140" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="518" font-size="16" font-weight="600" fill="#4A5361">CHECKPOINT 1</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B"><text x="24" y="556">A payload_sent failure: which kind, and what do you do?</text><text x="24" y="592">A model citing an article it was not sent: which kind?</text></g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B"><text x="840" y="556">An invariant: a bug. Fix it and rerun; never a model result.</text><text x="840" y="592">A construct measure (grounding): the model’s doing.</text></g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

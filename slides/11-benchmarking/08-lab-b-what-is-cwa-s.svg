@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab B What is CWA's</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 3 · LAB B · THE SAME TABLE, SORTED</span>
+<span>08 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">What in the table is CWA's, and what is not</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The bench's tokens and cost pages say so number by number.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="CWA's: the invariants, the same snapshot to every model, and grounding being measurable at all because articles have ids and user content is marked. The model's and the host's: which model cites better, reasons longer or costs more, and a model's own token count. Below, two commands that send nothing.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="820" height="440" fill="#11151B"></rect>
+<text x="28" y="46" font-size="18" font-weight="600" fill="#B9C3D6">CWA'S</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="20" fill="#FFFFFF">
+<text x="28" y="104">The invariants</text>
+<text x="28" y="164">01 to 03 gave every model the same snapshot</text>
+<text x="28" y="224">Grounding can be measured at all: every</text>
+<text x="28" y="252">article has an id, user content is marked,</text>
+<text x="28" y="280">never elevated</text>
+<text x="28" y="340">margin_percent, which exists to cover a</text>
+<text x="28" y="368">model counting more than the assembler</text>
+</g>
+<g font-size="15" fill="#B9C3D6"><text x="700" y="164">R-23</text><text x="700" y="224">R-10 · R-13</text><text x="700" y="340">R-16</text></g>
+<rect x="860" y="0" width="820" height="440" fill="#2453C9"></rect>
+<text x="888" y="46" font-size="18" font-weight="600" fill="#DCE3F5">THE MODEL'S AND THE HOST'S</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="20" fill="#FFFFFF">
+<text x="888" y="104">Which model cites better</text>
+<text x="888" y="164">Which reasons longer</text>
+<text x="888" y="224">Which costs more</text>
+<text x="888" y="284">A model's own token count: it can be</text>
+<text x="888" y="312">several times the assembler's, which is</text>
+<text x="888" y="340">right by its own tokenizer</text>
+</g>
+<text x="0" y="494" font-size="16" font-weight="600" fill="#4A5361">IN EXAMPLES/BENCH, WITH ITS ENVIRONMENTS SYNCED · NEITHER SENDS ANYTHING</text>
+<rect x="0" y="514" width="820" height="106" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="554" font-size="18" fill="#11151B">uv run grade.py results/&lt;run-id&gt;</text>
+<text x="24" y="590" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">regrades a run from its files after the expectations change</text>
+<rect x="860" y="514" width="820" height="106" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="884" y="554" font-size="18" fill="#11151B">uv run serve.py</text>
+<text x="884" y="590" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">the viewer that lays the same numbers out by construct</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

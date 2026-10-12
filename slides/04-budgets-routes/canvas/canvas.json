@@ -1,0 +1,23 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T01:10:00Z"},
+  "title": "W4 Budgets and Routes Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Agenda.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Agenda"},
+    "Fitting.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 The model of fitting"},
+    "Refusals.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Three refusals"},
+    "Margin.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 The margin rule"},
+    "Part1.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 Part 1 Two routes"},
+    "LabA.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Lab A Review the summaries"},
+    "LabB.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Lab B Escalation table"},
+    "LabC.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Lab C Calibrate the margin"},
+    "LabD.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 Lab D The budget cases"},
+    "Close.dc.html": {"x": 2000, "y": 3600, "w": 1920, "h": 1080, "title": "11 Close"}
+  },
+  "order": ["Main.dc.html", "Agenda.dc.html", "Fitting.dc.html", "Refusals.dc.html", "Margin.dc.html", "Part1.dc.html", "LabA.dc.html", "LabB.dc.html", "LabC.dc.html", "LabD.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

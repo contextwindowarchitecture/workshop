@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 1 Before and after</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 1 · 30 MINUTES · FERNWAY DOCS-QA</span>
+<span>06 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Before and after, in one function</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Same application. Only <span style="font-family: 'IBM Plex Mono', monospace">build_request()</span> changes.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="before.py pastes instructions, five chunks and the last six messages into a system string and sends it. after.py freezes a snapshot and assembles it: three chunks in, two out as below_threshold; an off-topic question is refused with evidence_required.">
+<defs>
+<marker id="p1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace" fill="#11151B">
+<rect x="0" y="0" width="800" height="600" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="32" y="56" font-size="30" font-weight="600">before.py</text>
+<rect x="32" y="100" width="230" height="52" fill="#F4F5F7" stroke="#7A8494"></rect>
+<text x="50" y="133" font-size="18">instructions</text>
+<rect x="32" y="166" width="230" height="52" fill="#F4F5F7" stroke="#7A8494"></rect>
+<text x="50" y="199" font-size="18">retrieve 5 chunks</text>
+<rect x="32" y="232" width="230" height="52" fill="#F4F5F7" stroke="#7A8494"></rect>
+<text x="50" y="265" font-size="18">last 6 messages</text>
+<line x1="262" y1="126" x2="372" y2="180" stroke="#11151B" stroke-width="2" marker-end="url(#p1)"></line>
+<line x1="262" y1="192" x2="372" y2="192" stroke="#11151B" stroke-width="2" marker-end="url(#p1)"></line>
+<line x1="262" y1="258" x2="372" y2="204" stroke="#11151B" stroke-width="2" marker-end="url(#p1)"></line>
+<rect x="382" y="150" width="200" height="84" fill="#F4F5F7" stroke="#11151B" stroke-width="2"></rect>
+<text x="402" y="186" font-size="18">one system</text>
+<text x="402" y="212" font-size="18">string</text>
+<line x1="582" y1="192" x2="652" y2="192" stroke="#11151B" stroke-width="2" marker-end="url(#p1)"></line>
+<text x="664" y="199" font-size="22" font-weight="600">model</text>
+<line x1="32" y1="340" x2="768" y2="340" stroke="#DADFE7" stroke-width="2"></line>
+<text x="32" y="392" font-size="20" font-weight="600">Off-topic question</text>
+<g>
+<rect x="32" y="420" width="110" height="40" fill="#DADFE7"></rect>
+<rect x="152" y="420" width="110" height="40" fill="#DADFE7"></rect>
+<rect x="272" y="420" width="110" height="40" fill="#DADFE7"></rect>
+<rect x="392" y="420" width="110" height="40" fill="#DADFE7"></rect>
+<rect x="512" y="420" width="110" height="40" fill="#DADFE7"></rect>
+</g>
+<text x="32" y="510" font-size="19" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">Five irrelevant chunks go to the model anyway.</text>
+<text x="32" y="545" font-size="19" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">And then it hopes.</text>
+</g>
+<g font-family="IBM Plex Mono, monospace" fill="#11151B">
+<rect x="880" y="0" width="800" height="600" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="912" y="56" font-size="30" font-weight="600" fill="#2453C9">after.py</text>
+<rect x="912" y="150" width="200" height="84" fill="#F4F5F7" stroke="#11151B" stroke-width="2"></rect>
+<text x="932" y="186" font-size="18">freeze a</text>
+<text x="932" y="212" font-size="18">snapshot</text>
+<line x1="1112" y1="192" x2="1182" y2="192" stroke="#11151B" stroke-width="2" marker-end="url(#p1)"></line>
+<rect x="1192" y="150" width="200" height="84" fill="#2453C9"></rect>
+<text x="1212" y="200" font-size="20" font-weight="600" fill="#FFFFFF">assemble</text>
+<line x1="1392" y1="192" x2="1462" y2="192" stroke="#11151B" stroke-width="2" marker-end="url(#p1)"></line>
+<text x="1474" y="186" font-size="18">decisions</text>
+<text x="1474" y="212" font-size="18">+ payload</text>
+<g font-size="18">
+<text x="912" y="282"><tspan fill="#2453C9" font-weight="600">+</tspan> 3 chunks in, with relevance scores</text>
+<text x="912" y="312"><tspan fill="#C2541D" font-weight="600">-</tspan> 2 out: below_threshold (min 2.0)</text>
+</g>
+<line x1="912" y1="340" x2="1648" y2="340" stroke="#DADFE7" stroke-width="2"></line>
+<text x="912" y="392" font-size="20" font-weight="600">Off-topic question</text>
+<rect x="912" y="420" width="560" height="56" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="932" y="455" font-size="19" fill="#11151B">refused · evidence_required</text>
+<text x="912" y="515" font-size="19">recovery: request_context</text>
+<text x="912" y="550" font-size="19" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">No request is sent.</text>
+</g>
+</svg>
+<div style="font-size: 24px; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #11151B">Checkpoint 1</span> · the function that changed, the two reason codes, and where the refusal was decided.</div>
+</div>
+</foreignObject>
+</svg>

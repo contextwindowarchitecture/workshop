@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>C The lab and the breakpoint</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>MODULE C · THE LAB AND PART 3</span>
+<span>10 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Four functions, then a breakpoint that adds no byte</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The tests check what adapters get wrong. The breakpoint changes what the provider caches, not what the model reads.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Left: the lab's tests, six mistakes and one refusal. Right: a row of blocks, a stable prefix, and a cache_control marker on one block boundary; the texts with and without it are identical.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="760" height="640" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="24" y="40" font-size="17" font-weight="600" fill="#2453C9">LABS/PROVIDER.PY · 60 MIN</text>
+<text x="24" y="74" font-size="14" fill="#4A5361">CWA_W9C_IMPL=labs uv run pytest</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#11151B">
+<text x="24" y="124">a system entry merged into the user turn</text>
+<text x="24" y="162">a prior turn promoted to an assistant message</text>
+<text x="24" y="200">a tool specification rewritten</text>
+<text x="24" y="238">max_tokens a constant, not the route's reserved_output</text>
+<text x="24" y="276">blocks joined with a separator the renderer did not emit</text>
+<text x="24" y="314">any text added anywhere</text>
+</g>
+<rect x="24" y="350" width="712" height="110" fill="#11151B"></rect>
+<text x="44" y="390" font-size="17" font-weight="600" fill="#FFFFFF">and one refusal · R-17</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#B9C3D6"><text x="44" y="424">No payload, so no request.</text><text x="44" y="448">The application sends nothing.</text></g>
+<text x="24" y="512" font-size="15" font-weight="600" fill="#4A5361">CHECKPOINT 2 · THROUGH YOUR ADAPTER</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#9AA3B0"><text x="24" y="550">Are the two hashes equal under both renderers?</text><text x="24" y="578">Where does max_tokens come from?</text><text x="24" y="606">The SDK snippet for one request.</text></g>
+<text x="800" y="22" font-size="17" font-weight="600" fill="#4A5361">PART 3 · THE ANTHROPIC MAPPING, 30 MIN</text>
+<text x="800" y="70" font-size="15" fill="#4A5361">without a breakpoint</text>
+<g font-size="15" fill="#FFFFFF">
+<rect x="800" y="84" width="170" height="70" fill="#2453C9"></rect><text x="818" y="125">block</text>
+<rect x="976" y="84" width="170" height="70" fill="#2453C9"></rect><text x="994" y="125">block</text>
+<rect x="1152" y="84" width="170" height="70" fill="#2453C9"></rect><text x="1170" y="125">block</text>
+<rect x="1328" y="84" width="170" height="70" fill="#DCE3F5"></rect><text x="1346" y="125" fill="#11151B">block</text>
+<rect x="1504" y="84" width="176" height="70" fill="#DCE3F5"></rect><text x="1522" y="125" fill="#11151B">block</text>
+</g>
+<text x="800" y="210" font-size="15" fill="#4A5361">with a breakpoint</text>
+<g font-size="15" fill="#FFFFFF">
+<rect x="800" y="224" width="170" height="70" fill="#2453C9"></rect><text x="818" y="265">block</text>
+<rect x="976" y="224" width="170" height="70" fill="#2453C9"></rect><text x="994" y="265">block</text>
+<rect x="1152" y="224" width="170" height="70" fill="#2453C9"></rect><text x="1170" y="265">block</text>
+<rect x="1328" y="224" width="170" height="70" fill="#DCE3F5"></rect><text x="1346" y="265" fill="#11151B">block</text>
+<rect x="1504" y="224" width="176" height="70" fill="#DCE3F5"></rect><text x="1522" y="265" fill="#11151B">block</text>
+</g>
+<line x1="1325" y1="212" x2="1325" y2="306" stroke="#C2541D" stroke-width="5"></line>
+<text x="1240" y="330" font-size="15" fill="#C2541D">cache_control on one block</text>
+<path d="M 800 350 L 800 362 L 1322 362 L 1322 350" fill="none" stroke="#11151B" stroke-width="2"></path>
+<text x="800" y="388" font-size="15" fill="#11151B">the stable prefix</text>
+<rect x="800" y="420" width="880" height="64" fill="#11151B"></rect>
+<text x="822" y="460" font-size="18" fill="#FFFFFF">diff the texts: identical</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">
+<text x="800" y="520">W6 measured the renderer's half: a stable prefix at block boundaries.</text>
+<text x="800" y="546">This is the adapter's half: marking the boundary without adding a byte.</text>
+</g>
+<text x="800" y="592" font-size="15" font-weight="600" fill="#4A5361">CHECKPOINT 3 · WHICH BLOCK, AND WHY</text>
+<text x="800" y="622" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#9AA3B0">Where did you place it, and what changed in the texts?</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

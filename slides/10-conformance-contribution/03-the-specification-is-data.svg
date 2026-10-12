@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>The specification is data</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · 10 MINUTES</span>
+<span>03 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The specification is data; the prose is written from it</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">So a change to the specification is a change to data, and a case is how you prove the data means what you say.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="Three contract files and the conformance cases feed check.py --write, which writes the generated blocks in SPEC.md and the guides. Below, the exercise: pick one of W8's eleven defects, write the case that isolates it, prove it, and only then ask whether the corpus already covers it.">
+<defs>
+<marker id="dt10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<rect x="0" y="0" width="620" height="80" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="34" font-size="18" font-weight="600" fill="#11151B">contract/requirements.json</text><text x="22" y="62" font-size="14" fill="#4A5361">the requirements</text>
+<rect x="0" y="92" width="620" height="80" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="126" font-size="18" font-weight="600" fill="#11151B">contract/reasons.json</text><text x="22" y="154" font-size="14" fill="#4A5361">reason codes, in the precedence R-21 applies</text>
+<rect x="0" y="184" width="620" height="80" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="218" font-size="18" font-weight="600" fill="#11151B">contract/slot-defaults.json</text><text x="22" y="246" font-size="14" fill="#4A5361">the policy defaults R-3 fills</text>
+<rect x="0" y="276" width="620" height="80" fill="#2453C9"></rect>
+<text x="22" y="310" font-size="18" font-weight="600" fill="#FFFFFF">conformance/cases/</text><text x="22" y="338" font-size="14" fill="#DCE3F5">what every listed assembler must pass</text>
+</g>
+<g stroke="#11151B" stroke-width="2" fill="none">
+<path d="M 620 40 L 680 40 L 680 178 L 716 178" marker-end="url(#dt10)"></path>
+<path d="M 620 132 L 680 132"></path><path d="M 620 224 L 680 224 L 680 178"></path>
+<path d="M 620 316 L 680 316 L 680 224"></path>
+</g>
+<rect x="720" y="128" width="400" height="100" fill="#11151B"></rect>
+<text x="742" y="170" font-size="20" font-weight="600" fill="#FFFFFF">conformance/check.py</text>
+<text x="742" y="202" font-size="17" fill="#B9C3D6">--write</text>
+<line x1="1120" y1="178" x2="1176" y2="178" stroke="#11151B" stroke-width="2" marker-end="url(#dt10)"></line>
+<rect x="1180" y="88" width="500" height="180" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="1202" y="124" font-size="18" font-weight="600" fill="#11151B">SPEC.md and the guides</text>
+<rect x="1202" y="144" width="456" height="16" fill="#DADFE7"></rect>
+<rect x="1202" y="172" width="456" height="52" fill="#EEF1F8" stroke="#2453C9" stroke-width="2" stroke-dasharray="6 4"></rect>
+<text x="1218" y="204" font-size="14" fill="#2453C9">between the generated markers</text>
+<rect x="1202" y="236" width="300" height="16" fill="#DADFE7"></rect>
+<text x="0" y="420" font-size="17" font-weight="600" fill="#4A5361">THE EXERCISE DOES NOT NEED THE CORPUS TO HAVE A GAP</text>
+<g transform="translate(0,440)">
+<rect x="0" y="0" width="400" height="160" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="42" font-size="24" font-weight="600" fill="#2453C9">1</text><text x="56" y="42" font-size="17" font-weight="600" fill="#11151B">pick a defect</text>
+<text x="22" y="84" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">one of the eleven one-line</text><text x="22" y="108" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">defects W8's kata ships</text>
+</g>
+<g transform="translate(426,440)">
+<rect x="0" y="0" width="400" height="160" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="42" font-size="24" font-weight="600" fill="#2453C9">2</text><text x="56" y="42" font-size="17" font-weight="600" fill="#11151B">write the case</text>
+<text x="22" y="84" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">from a table of intended</text><text x="22" y="108" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">outcomes, isolating it</text>
+</g>
+<g transform="translate(852,440)">
+<rect x="0" y="0" width="400" height="160" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="42" font-size="24" font-weight="600" fill="#2453C9">3</text><text x="56" y="42" font-size="17" font-weight="600" fill="#11151B">prove it</text>
+<text x="22" y="84" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">the reference passes, the defect</text><text x="22" y="108" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">fails, the other ten mostly do not</text>
+</g>
+<g transform="translate(1278,440)">
+<rect x="0" y="0" width="402" height="160" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="22" y="42" font-size="24" font-weight="600" fill="#C2541D">4</text><text x="56" y="42" font-size="17" font-weight="600" fill="#11151B">then ask</text>
+<text x="22" y="84" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">does the published corpus</text><text x="22" y="108" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">already catch it? The last</text><text x="22" y="132" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">question, not the first.</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

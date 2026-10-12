@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 1 Store, show, replay, what-if</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 1 · 20 MINUTES · STORE.PY</span>
+<span>04 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Store a run, replay it, ask what-if</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Before shipping a candidate policy: what would it have done to the traffic you already served?</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="A run stores three snapshots by digest; show lists every exclusion and tool call; replay compares bytes with no model. What-if re-assembles stored snapshots under a candidate: no-supersede changes one inference, history-tight changes nothing.">
+<defs>
+<marker id="p7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="260" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="40" font-size="19" font-weight="600" fill="#11151B">run.py</text>
+<text x="22" y="68" font-size="14" fill="#4A5361">status-resolved</text>
+<line x1="260" y1="45" x2="330" y2="45" stroke="#11151B" stroke-width="2" marker-end="url(#p7)"></line>
+<rect x="340" y="0" width="420" height="250" fill="#2453C9"></rect>
+<text x="364" y="40" font-size="20" font-weight="600" fill="#FFFFFF">store · by digest</text>
+<rect x="364" y="64" width="372" height="40" fill="#1A3D96"></rect><text x="380" y="91" font-size="15" fill="#FFFFFF">snapshot 1</text>
+<rect x="364" y="114" width="372" height="40" fill="#1A3D96"></rect><text x="380" y="141" font-size="15" fill="#FFFFFF">snapshot 2</text>
+<rect x="364" y="164" width="372" height="40" fill="#1A3D96"></rect><text x="380" y="191" font-size="15" fill="#FFFFFF">snapshot 3</text>
+<text x="364" y="232" font-size="14" fill="#DCE3F5">+ run · traces · tool calls</text>
+<line x1="760" y1="80" x2="830" y2="80" stroke="#11151B" stroke-width="2" marker-end="url(#p7)"></line>
+<line x1="760" y1="190" x2="830" y2="190" stroke="#11151B" stroke-width="2" marker-end="url(#p7)"></line>
+<rect x="840" y="30" width="380" height="100" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="862" y="70" font-size="18" font-weight="600" fill="#11151B">show</text>
+<text x="862" y="100" font-size="14" fill="#2E3540">exclusions · calls · verdicts</text>
+<rect x="840" y="150" width="380" height="100" fill="#11151B"></rect>
+<text x="862" y="190" font-size="18" font-weight="600" fill="#FFFFFF">replay</text>
+<text x="862" y="220" font-size="14" fill="#B9C3D6">compare bytes, no model (R-23)</text>
+<text x="1260" y="70" font-size="15" fill="#4A5361">CHECKPOINT 1</text>
+<text x="1260" y="100" font-size="15" fill="#11151B">which observation was</text>
+<text x="1260" y="124" font-size="15" fill="#11151B">superseded, and by which?</text>
+<text x="1260" y="160" font-size="16" font-weight="600" fill="#2453C9">obs:1 by obs:2, on turn 3</text>
+<line x1="0" y1="300" x2="1680" y2="300" stroke="#DADFE7" stroke-width="2"></line>
+<text x="0" y="346" font-size="18" font-weight="600" fill="#4A5361">STORE.PY WHATIF · NOTHING SENT, NOTHING STORED IS MODIFIED</text>
+<rect x="0" y="370" width="820" height="230" fill="#FFFFFF" stroke="#C2541D" stroke-width="3"></rect>
+<text x="24" y="412" font-size="20" font-weight="600" fill="#11151B">policy/candidates/no-supersede</text>
+<text x="24" y="446" font-size="15" fill="#4A5361">removes supersede: source from tool results</text>
+<text x="24" y="506" font-size="30" font-weight="600" fill="#C2541D">1 inference changes</text>
+<text x="24" y="548" font-size="16" fill="#2E3540">the older status poll would now be included</text>
+<text x="24" y="572" font-size="16" fill="#2E3540">beside the newer one</text>
+<rect x="860" y="370" width="820" height="230" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="884" y="412" font-size="20" font-weight="600" fill="#11151B">policy/candidates/history-tight</text>
+<text x="884" y="446" font-size="15" fill="#4A5361">tightens the history cap</text>
+<text x="884" y="506" font-size="30" font-weight="600" fill="#11151B">nothing changes</text>
+<text x="884" y="548" font-size="16" fill="#2E3540">no stored run had history; the evidence says</text>
+<text x="884" y="572" font-size="16" fill="#2E3540">nothing either way. Which would you ship?</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>What production adds</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · RUN.PY</span>
+<span>03 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Four pieces around an unchanged agent</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">One snapshot per inference, a guard on every call, a denial as state. Then these.</p>
+</div>
+<svg width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="The store keeps every snapshot by digest. Telemetry emits spans with decisions and digests, never content. Evals grade each run from its record. The deployment gate takes policy and profile only from the registry lock.">
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<rect x="0" y="0" width="400" height="500" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="24" y="48" font-size="26" font-weight="600" fill="#2453C9">store</text>
+<text x="24" y="78" font-size="15" fill="#4A5361">store.py</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="24" y="130">Every inference's snapshot,</text>
+<text x="24" y="156">kept by digest, with the run,</text>
+<text x="24" y="182">its trace and its tool calls.</text>
+<text x="24" y="236">Storing the snapshot, not the</text>
+<text x="24" y="262">prompt, makes an answer</text>
+<text x="24" y="288">debuggable later.</text>
+</g>
+<text x="24" y="420" font-size="15" fill="#C2541D">holds user content:</text>
+<text x="24" y="444" font-size="15" fill="#C2541D">its data's retention and</text>
+<text x="24" y="468" font-size="15" fill="#C2541D">access rules apply</text>
+</g>
+<g transform="translate(426,0)">
+<rect x="0" y="0" width="400" height="500" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="24" y="48" font-size="26" font-weight="600" fill="#2453C9">telemetry</text>
+<text x="24" y="78" font-size="15" fill="#4A5361">telemetry.py</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="24" y="130">One span per run, inference</text>
+<text x="24" y="156">and tool call.</text>
+<text x="24" y="210">Decisions and digests.</text>
+<text x="24" y="236">Never content.</text>
+</g>
+<text x="24" y="420" font-size="15" fill="#2453C9">the digest links a span</text>
+<text x="24" y="444" font-size="15" fill="#2453C9">to the store; whoever may</text>
+<text x="24" y="468" font-size="15" fill="#2453C9">see content fetches it</text>
+</g>
+<g transform="translate(852,0)">
+<rect x="0" y="0" width="400" height="500" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="24" y="48" font-size="26" font-weight="600" fill="#2453C9">evals</text>
+<text x="24" y="78" font-size="15" fill="#4A5361">evals.py</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="24" y="130">A suite of cases, each run</text>
+<text x="24" y="156">recorded like a scenario and</text>
+<text x="24" y="182">graded from the record alone.</text>
+<text x="24" y="236">Grading reads what the run</text>
+<text x="24" y="262">did, not only what the answer</text>
+<text x="24" y="288">says.</text>
+</g>
+<text x="24" y="444" font-size="15" fill="#C2541D">claims a denied plan</text>
+<text x="24" y="468" font-size="15" fill="#C2541D">change: fails</text>
+</g>
+<g transform="translate(1278,0)">
+<rect x="0" y="0" width="402" height="500" fill="#C2541D"></rect>
+<text x="24" y="48" font-size="26" font-weight="600" fill="#FFFFFF">gate</text>
+<text x="24" y="78" font-size="15" fill="#FBF0EA">run.py --deployment</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#FFFFFF">
+<text x="24" y="130">Route policy and profile only</text>
+<text x="24" y="156">from the registry lock.</text>
+<text x="24" y="210">The profile must be evaluated,</text>
+<text x="24" y="236">for the model that runs it.</text>
+</g>
+<text x="24" y="468" font-size="15" fill="#FFFFFF">R-19, R-20</text>
+</g>
+<rect x="0" y="540" width="1680" height="80" fill="#11151B"></rect>
+<text x="24" y="588" font-size="19" fill="#FFFFFF">and one table: <tspan fill="#F0A57E">outcomes.py</tspan>, what the host does with each refusal (R-12, R-17)</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

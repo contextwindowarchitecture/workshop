@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>W1 The CWA tour</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 1</span>
+<span>01 / 11</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 900px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: #2453C9; font-weight: 500">W1</div>
+<h1 style="margin: 0; font-size: 148px; line-height: 0.95; font-weight: 700; letter-spacing: -0.03em">The CWA tour</h1>
+<p style="margin: 0; font-size: 44px; line-height: 1.25; color: #2E3540">Planes, slots, snapshot, trace.</p>
+<p style="margin: 0; font-size: 28px; line-height: 1.45; color: #4A5361; max-width: 820px">Leave able to read any trace, name the requirement behind every exclusion and refusal, and tell a producer bug from an assembler bug from an application bug.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="620" viewBox="0 0 720 620" role="img" aria-label="Four stacked planes: governance, state, evidence, interaction">
+<g font-family="IBM Plex Mono, monospace" font-size="20">
+<g>
+<polygon points="120,90 600,90 680,170 200,170" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></polygon>
+<text x="230" y="140" fill="#11151B">governance · 4 slots</text>
+</g>
+<g>
+<polygon points="120,220 600,220 680,300 200,300" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></polygon>
+<text x="230" y="270" fill="#11151B">state · 2 slots</text>
+</g>
+<g>
+<polygon points="120,350 600,350 680,430 200,430" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></polygon>
+<text x="230" y="400" fill="#11151B">evidence · 2 slots</text>
+</g>
+<g>
+<polygon points="120,480 600,480 680,560 200,560" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></polygon>
+<text x="230" y="530" fill="#11151B">interaction · 3 slots</text>
+</g>
+<line x1="40" y1="60" x2="40" y2="590" stroke="#2453C9" stroke-width="3"></line>
+<polygon points="40,600 32,584 48,584" fill="#2453C9"></polygon>
+<text x="0" y="40" fill="#2453C9" font-weight="600">snapshot</text>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>Half a day</span>
+<span style="color: #9AA3B0">/</span>
+<span>Self-paced or instructor-led</span>
+<span style="color: #9AA3B0">/</span>
+<span>Nothing today calls a model</span>
+</div>
+</div>
+</foreignObject>
+</svg>

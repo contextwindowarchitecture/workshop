@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 5 and close</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 5 · 15 MINUTES · AND CLOSE</span>
+<span>11 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The tests a trace makes possible</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Specification §6.1 lists nine. You ran eight today. <span style="font-family: 'IBM Plex Mono', monospace; color: #11151B">uv run tour.py checklist</span></p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="400" viewBox="0 0 1680 400" role="img" aria-label="Nine tests: assembly snapshot, golden task, counterfactual ablation, conflict, budget pressure, freshness, refusal, capability source are done today; cache reuse belongs to W6">
+<defs>
+<g id="tick"><path d="M 9 19 L 16 26 L 29 11" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path></g>
+</defs>
+<g font-family="IBM Plex Mono, monospace" font-size="22" fill="#11151B">
+<g transform="translate(0,0)"><rect width="38" height="38" fill="#2453C9"></rect><use href="#tick"></use><text x="60" y="28">Assembly snapshot</text><text x="60" y="58" font-size="17" fill="#4A5361">R-23 · replay</text></g>
+<g transform="translate(570,0)"><rect width="38" height="38" fill="#2453C9"></rect><use href="#tick"></use><text x="60" y="28">Golden task</text><text x="60" y="58" font-size="17" fill="#4A5361">R-21 · 00-baseline</text></g>
+<g transform="translate(1140,0)"><rect width="38" height="38" fill="#2453C9"></rect><use href="#tick"></use><text x="60" y="28">Counterfactual ablation</text><text x="60" y="58" font-size="17" fill="#4A5361">R-21 · 11-evidence-required</text></g>
+<g transform="translate(0,130)"><rect width="38" height="38" fill="#2453C9"></rect><use href="#tick"></use><text x="60" y="28">Conflict</text><text x="60" y="58" font-size="17" fill="#4A5361">R-7 · diff 00 vs 02</text></g>
+<g transform="translate(570,130)"><rect width="38" height="38" fill="#2453C9"></rect><use href="#tick"></use><text x="60" y="28">Budget pressure</text><text x="60" y="58" font-size="17" fill="#4A5361">R-16 · 07-budget-pressure</text></g>
+<g transform="translate(1140,130)"><rect width="38" height="38" fill="#2453C9"></rect><use href="#tick"></use><text x="60" y="28">Freshness</text><text x="60" y="58" font-size="17" fill="#4A5361">R-9 · 05-expired-memory</text></g>
+<g transform="translate(0,260)"><rect width="38" height="38" fill="#2453C9"></rect><use href="#tick"></use><text x="60" y="28">Refusal</text><text x="60" y="58" font-size="17" fill="#4A5361">R-12 · 11-evidence-required</text></g>
+<g transform="translate(570,260)"><rect width="38" height="38" fill="#2453C9"></rect><use href="#tick"></use><text x="60" y="28">Capability source</text><text x="60" y="58" font-size="17" fill="#4A5361">R-15 · 09-tool-from-mcp</text></g>
+<g transform="translate(1140,260)"><rect x="1" y="1" width="36" height="36" fill="#FFFFFF" stroke="#C2541D" stroke-width="2" stroke-dasharray="6 5"></rect><text x="60" y="28">Cache reuse</text><text x="60" y="58" font-size="17" fill="#C2541D">W6 · two turns, cache-ordered profile</text></g>
+</g>
+</svg>
+<div style="height: 2px; background: #DADFE7"></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; font-size: 24px; line-height: 1.45">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Take home</span><span>For each item in your W0 <span style="font-family: 'IBM Plex Mono', monospace">items.cwa.yaml</span>, name the test that would catch its likeliest failure.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Next track</span><span>Application builders go to W2, producers. Contributors go to W8, the assembler kata.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Bring to W3</span><span>Your predict sheet. The exercises you missed are the ones your app is likeliest to get wrong.</span></div>
+</div>
+</div>
+</foreignObject>
+</svg>

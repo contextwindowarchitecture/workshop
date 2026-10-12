@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 3 The contributor's finish</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 3 · 60 MINUTES · WORK/AGENTS.MD</span>
+<span>07 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">A clean report is not the end</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace">kata.py check</span> is the conformance gate. The contributor's gate is the port's full suite.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Three tests gate a contribution: one fails while the committed report is stale, one rejects a status claim for a requirement whose cases fail, and a pending set only shrinks. status.json claims implemented or boundary-checked with evidence; the specification's listing records what a port claims.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="1680" height="70" fill="#11151B"></rect>
+<text x="24" y="44" font-size="18" fill="#FFFFFF">cd work &amp;&amp; uv run python -m cwa.conformance &gt; conformance-report.json &amp;&amp; uv run pytest</text>
+<text x="0" y="124" font-size="17" font-weight="600" fill="#4A5361">THREE TESTS GATE A CONTRIBUTION</text>
+<g>
+<rect x="0" y="144" width="540" height="200" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="24" y="186" font-size="19" font-weight="600" fill="#2453C9">the report</text>
+<text x="24" y="226" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">fails while the committed</text>
+<text x="24" y="250" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">conformance report is stale</text>
+<text x="24" y="316" font-size="15" fill="#9AA3B0">which file?</text>
+</g>
+<g>
+<rect x="570" y="144" width="540" height="200" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="594" y="186" font-size="19" font-weight="600" fill="#2453C9">the status claims</text>
+<text x="594" y="226" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">rejects a status.json claim for a</text>
+<text x="594" y="250" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">requirement whose cases fail</text>
+<text x="594" y="316" font-size="15" fill="#9AA3B0">which file?</text>
+</g>
+<g>
+<rect x="1140" y="144" width="540" height="200" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="1164" y="186" font-size="19" font-weight="600" fill="#2453C9">the PENDING set</text>
+<text x="1164" y="226" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">in the conformance suite;</text>
+<text x="1164" y="250" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">it only shrinks</text>
+<text x="1164" y="316" font-size="15" fill="#9AA3B0">which file?</text>
+</g>
+<text x="0" y="404" font-size="17" font-weight="600" fill="#4A5361">WHAT A PORT CLAIMS</text>
+<rect x="0" y="424" width="820" height="170" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="464" font-size="19" font-weight="600" fill="#11151B">status.json</text>
+<text x="24" y="502" font-size="16" fill="#2E3540">per requirement: implemented,</text>
+<text x="24" y="528" font-size="16" fill="#2E3540">or boundary-checked,</text>
+<text x="24" y="554" font-size="16" fill="#2E3540">and the evidence each cites</text>
+<rect x="860" y="424" width="820" height="170" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="884" y="464" font-size="19" font-weight="600" fill="#11151B">implementations/python.json</text>
+<text x="884" y="502" font-size="16" fill="#2E3540">in the specification repository:</text>
+<text x="884" y="528" font-size="16" fill="#2E3540">what a listing claims,</text>
+<text x="884" y="554" font-size="16" fill="#2E3540">and what it does not</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

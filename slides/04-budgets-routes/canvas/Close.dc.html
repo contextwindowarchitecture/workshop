@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Close</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CLOSE · 10 MINUTES</span>
+<span>11 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Which truncation heuristic goes first?</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Replace one in production with tiers and precomputed, reviewed variants.</p>
+</div>
+<svg width="1680" height="400" viewBox="0 0 1680 400" role="img" aria-label="Before: text cut at a fixed length, mid-thought, with no record. After: tiers decide what goes, reviewed variants stand in, and every omission and swap is a row in the trace.">
+<defs>
+<marker id="cl4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="720" height="400" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="28" y="48" font-size="22" font-weight="600" fill="#11151B">truncation</text>
+<rect x="28" y="84" width="600" height="20" fill="#DADFE7"></rect>
+<rect x="28" y="116" width="600" height="20" fill="#DADFE7"></rect>
+<rect x="28" y="148" width="600" height="20" fill="#DADFE7"></rect>
+<rect x="28" y="180" width="340" height="20" fill="#DADFE7"></rect>
+<line x1="370" y1="70" x2="370" y2="230" stroke="#C2541D" stroke-width="3" stroke-dasharray="6 5"></line>
+<text x="384" y="226" font-size="15" fill="#C2541D">cut here, mid-thought</text>
+<text x="28" y="300" font-size="17" fill="#2E3540">whatever falls past the line</text>
+<text x="28" y="328" font-size="17" fill="#2E3540">is gone, and nothing says so</text>
+<line x1="720" y1="200" x2="830" y2="200" stroke="#11151B" stroke-width="2.5" marker-end="url(#cl4)"></line>
+<rect x="840" y="0" width="840" height="400" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="868" y="48" font-size="22" font-weight="600" fill="#2453C9">tiers and reviewed variants</text>
+<rect x="868" y="84" width="784" height="40" fill="#2453C9"></rect>
+<text x="884" y="110" font-size="16" fill="#FFFFFF">+ protected, whole</text>
+<rect x="868" y="136" width="440" height="40" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="884" y="162" font-size="16" fill="#11151B">~ compressed: a reviewed variant</text>
+<rect x="868" y="188" width="784" height="40" fill="none" stroke="#C2541D" stroke-width="1.5" stroke-dasharray="6 5"></rect>
+<text x="884" y="214" font-size="16" fill="#C2541D">- over_budget: droppable, omitted</text>
+<text x="868" y="300" font-size="17" fill="#2E3540">every swap and omission is a row,</text>
+<text x="868" y="328" font-size="17" fill="#2E3540">and a refusal says how to recover</text>
+</g>
+</svg>
+<div style="height: 2px; background: #DADFE7"></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; font-size: 23px; line-height: 1.45">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">W5</span><span>Adds tools to this application.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">W6</span><span>Evaluates the profiles both routes still carry as <span style="font-family: 'IBM Plex Mono', monospace">unevaluated</span>.</span></div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

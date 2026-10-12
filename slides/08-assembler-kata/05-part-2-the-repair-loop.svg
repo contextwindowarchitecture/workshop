@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 2 The repair loop</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 2 · FOUR TO FIVE HOURS · ONE CASE AT A TIME</span>
+<span>05 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Red, green, then reveal</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">A contributor who cannot show the failing test does not get the merge.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Six steps: read the case; read the requirement; locate the stage; write the smallest failing test; fix and run the full suite; check status, then reveal.">
+<defs>
+<marker id="lp8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<rect x="0" y="0" width="520" height="250" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="46" font-size="22" font-weight="600" fill="#2453C9">1 read the case</text>
+<text x="24" y="90" font-size="15" fill="#11151B">snapshot · expected trace · payload</text>
+<text x="24" y="130" font-size="14" fill="#4A5361">cd work &amp;&amp; uv run pytest</text>
+<text x="24" y="152" font-size="14" fill="#4A5361">  tests/test_conformance.py -k &lt;id&gt;</text>
+</g>
+<line x1="520" y1="125" x2="570" y2="125" stroke="#11151B" stroke-width="2" marker-end="url(#lp8)"></line>
+<g transform="translate(580,0)">
+<rect x="0" y="0" width="520" height="250" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="46" font-size="22" font-weight="600" fill="#2453C9">2 read the requirement</text>
+<text x="24" y="90" font-size="15" fill="#11151B">conformance/README.md and SPEC.md</text>
+<text x="24" y="130" font-size="14" fill="#4A5361">the README is normative where the</text>
+<text x="24" y="152" font-size="14" fill="#4A5361">spec leaves an algorithm open</text>
+</g>
+<line x1="1100" y1="125" x2="1150" y2="125" stroke="#11151B" stroke-width="2" marker-end="url(#lp8)"></line>
+<g transform="translate(1160,0)">
+<rect x="0" y="0" width="520" height="250" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="46" font-size="22" font-weight="600" fill="#2453C9">3 locate the stage</text>
+<text x="24" y="90" font-size="15" fill="#11151B">kata.py hint &lt;id&gt; when stuck</text>
+<text x="24" y="130" font-size="14" fill="#4A5361">names the stage, never the line;</text>
+<text x="24" y="152" font-size="14" fill="#4A5361">says when two defects share a case</text>
+</g>
+<path d="M 1420 250 L 1420 290 L 260 290 L 260 330" fill="none" stroke="#11151B" stroke-width="2" marker-end="url(#lp8)"></path>
+<g transform="translate(0,340)">
+<rect x="0" y="0" width="520" height="250" fill="#C2541D"></rect>
+<text x="24" y="46" font-size="22" font-weight="600" fill="#FFFFFF">4 write it red</text>
+<text x="24" y="90" font-size="15" fill="#FFFFFF">the smallest test that states the</text>
+<text x="24" y="114" font-size="15" fill="#FFFFFF">behaviour and fails, in the port's</text>
+<text x="24" y="138" font-size="15" fill="#FFFFFF">own style under work/tests/</text>
+<text x="24" y="210" font-size="14" fill="#FBF0EA">not optional</text>
+</g>
+<line x1="520" y1="465" x2="570" y2="465" stroke="#11151B" stroke-width="2" marker-end="url(#lp8)"></line>
+<g transform="translate(580,340)">
+<rect x="0" y="0" width="520" height="250" fill="#2453C9"></rect>
+<text x="24" y="46" font-size="22" font-weight="600" fill="#FFFFFF">5 fix, go green</text>
+<text x="24" y="90" font-size="15" fill="#FFFFFF">then run the full suite</text>
+<text x="24" y="138" font-size="14" fill="#DCE3F5">ask which sentence of the spec</text>
+<text x="24" y="160" font-size="14" fill="#DCE3F5">your fix implements</text>
+</g>
+<line x1="1100" y1="465" x2="1150" y2="465" stroke="#11151B" stroke-width="2" marker-end="url(#lp8)"></line>
+<g transform="translate(1160,340)">
+<rect x="0" y="0" width="520" height="250" fill="#11151B"></rect>
+<text x="24" y="46" font-size="22" font-weight="600" fill="#FFFFFF">6 status, then reveal</text>
+<text x="24" y="90" font-size="15" fill="#FFFFFF">kata.py status</text>
+<text x="24" y="114" font-size="15" fill="#FFFFFF">kata.py reveal &lt;id&gt;</text>
+<text x="24" y="160" font-size="14" fill="#B9C3D6">only after the case passes:</text>
+<text x="24" y="182" font-size="14" fill="#B9C3D6">compare with the line that changed</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

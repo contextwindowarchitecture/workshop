@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 1 Four turns</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 1 · 25 MINUTES · 01-STATUS-CHECK</span>
+<span>05 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Four turns, four snapshots</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">"Is there an incident in our region right now?" A scripted model, so the run is the same every time.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Four inferences: read the account, poll the status, poll again, answer. Each has its own snapshot, trace and digest. On turn three obs:2 is superseded by obs:3.">
+<defs>
+<marker id="p5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<rect x="0" y="0" width="390" height="360" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="44" font-size="22" font-weight="600" fill="#2453C9">turn 1</text>
+<rect x="24" y="70" width="342" height="44" fill="#F4F5F7"></rect><text x="40" y="98" font-size="16" fill="#11151B">snapshot · trace</text>
+<rect x="24" y="124" width="342" height="44" fill="#F4F5F7"></rect><text x="40" y="152" font-size="16" fill="#11151B">digest 1</text>
+<text x="24" y="240" font-size="18" font-weight="600" fill="#11151B">reads the account</text>
+</g>
+<line x1="390" y1="180" x2="420" y2="180" stroke="#11151B" stroke-width="2" marker-end="url(#p5)"></line>
+<g>
+<rect x="430" y="0" width="390" height="360" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="454" y="44" font-size="22" font-weight="600" fill="#2453C9">turn 2</text>
+<rect x="454" y="70" width="342" height="44" fill="#F4F5F7"></rect><text x="470" y="98" font-size="16" fill="#11151B">snapshot · trace</text>
+<rect x="454" y="124" width="342" height="44" fill="#F4F5F7"></rect><text x="470" y="152" font-size="16" fill="#11151B">digest 2</text>
+<text x="454" y="240" font-size="18" font-weight="600" fill="#11151B">polls the status</text>
+</g>
+<line x1="820" y1="180" x2="850" y2="180" stroke="#11151B" stroke-width="2" marker-end="url(#p5)"></line>
+<g>
+<rect x="860" y="0" width="390" height="360" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="884" y="44" font-size="22" font-weight="600" fill="#2453C9">turn 3</text>
+<rect x="884" y="70" width="342" height="44" fill="#F4F5F7"></rect><text x="900" y="98" font-size="16" fill="#11151B">snapshot · trace</text>
+<rect x="884" y="124" width="342" height="44" fill="#F4F5F7"></rect><text x="900" y="152" font-size="16" fill="#11151B">digest 3</text>
+<text x="884" y="240" font-size="18" font-weight="600" fill="#11151B">polls again</text>
+<rect x="884" y="270" width="342" height="64" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="900" y="298" font-size="15" fill="#11151B">obs:2 superseded</text>
+<text x="900" y="320" font-size="15" fill="#11151B">by obs:3 (R-25)</text>
+</g>
+<line x1="1250" y1="180" x2="1280" y2="180" stroke="#11151B" stroke-width="2" marker-end="url(#p5)"></line>
+<g>
+<rect x="1290" y="0" width="390" height="360" fill="#11151B"></rect>
+<text x="1314" y="44" font-size="22" font-weight="600" fill="#FFFFFF">turn 4</text>
+<rect x="1314" y="70" width="342" height="44" fill="#2E3540"></rect><text x="1330" y="98" font-size="16" fill="#FFFFFF">snapshot · trace</text>
+<rect x="1314" y="124" width="342" height="44" fill="#2E3540"></rect><text x="1330" y="152" font-size="16" fill="#FFFFFF">digest 4</text>
+<text x="1314" y="240" font-size="18" font-weight="600" fill="#FFFFFF">answers</text>
+</g>
+<text x="0" y="420" font-size="18" fill="#11151B">Same call, newer observation: the older one goes as superseded.</text>
+<rect x="0" y="450" width="1680" height="64" fill="#11151B"></rect>
+<text x="24" y="490" font-size="18" fill="#FFFFFF">uv run agent.py --replay scenarios/01-status-check/run.json</text>
+<text x="0" y="562" font-size="16" fill="#4A5361">CHECKPOINT 1 · why do four digests differ? <tspan fill="#9AA3B0" font-weight="600">?</tspan></text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

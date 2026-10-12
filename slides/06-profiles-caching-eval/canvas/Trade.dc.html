@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab B The trade</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB B · EVALUATE.PY COMPARE</span>
+<span>06 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Reuse is a cost score, not a quality score</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">What <span style="font-family: 'IBM Plex Mono', monospace">cache-first</span> trades for its reuse: the articles sit right before the query, far from the instructions.</p>
+</div>
+<svg width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Block reuse against evidence distance: policy-first 0.26 and 87 tokens, evidence-first 0.09 and 127 tokens, cache-first 0.57 and 0 tokens.">
+<g font-family="IBM Plex Mono, monospace">
+<line x1="100" y1="520" x2="1000" y2="520" stroke="#11151B" stroke-width="2"></line>
+<line x1="100" y1="100" x2="100" y2="520" stroke="#11151B" stroke-width="2"></line>
+<g stroke="#DADFE7" stroke-width="1.5">
+<line x1="100" y1="377" x2="1000" y2="377"></line><line x1="100" y1="234" x2="1000" y2="234"></line>
+<line x1="400" y1="100" x2="400" y2="520"></line><line x1="700" y1="100" x2="700" y2="520"></line><line x1="1000" y1="100" x2="1000" y2="520"></line>
+</g>
+<g font-size="15" fill="#4A5361">
+<text x="100" y="548" text-anchor="middle">0</text><text x="400" y="548" text-anchor="middle">0.2</text><text x="700" y="548" text-anchor="middle">0.4</text><text x="1000" y="548" text-anchor="middle">0.6</text>
+<text x="86" y="525" text-anchor="end">0</text><text x="86" y="382" text-anchor="end">50</text><text x="86" y="239" text-anchor="end">100</text>
+</g>
+<text x="550" y="586" font-size="16" fill="#11151B" text-anchor="middle">block reuse →</text>
+<text x="0" y="80" font-size="16" fill="#11151B">evidence distance (tokens)</text>
+<circle cx="490" cy="271" r="14" fill="#5C6676"></circle>
+<text x="512" y="266" font-size="18" font-weight="600" fill="#5C6676">policy-first</text>
+<circle cx="235" cy="157" r="14" fill="#C2541D"></circle>
+<text x="257" y="152" font-size="18" font-weight="600" fill="#C2541D">evidence-first</text>
+<circle cx="955" cy="520" r="14" fill="#2453C9"></circle>
+<text x="955" y="494" font-size="18" font-weight="600" fill="#2453C9" text-anchor="end">cache-first</text>
+<text x="1100" y="122" font-size="15" font-weight="600" fill="#4A5361">PROFILE</text>
+<text x="1360" y="122" font-size="15" font-weight="600" fill="#4A5361">REUSE</text>
+<text x="1500" y="122" font-size="15" font-weight="600" fill="#4A5361">DISTANCE</text>
+<line x1="1100" y1="138" x2="1680" y2="138" stroke="#11151B" stroke-width="2"></line>
+<g font-size="20" fill="#11151B">
+<text x="1100" y="184">policy-first</text><text x="1360" y="184">0.26</text><text x="1500" y="184">87</text>
+<text x="1100" y="240">evidence-first</text><text x="1360" y="240">0.09</text><text x="1500" y="240">127</text>
+<text x="1100" y="296" fill="#2453C9" font-weight="600">cache-first</text><text x="1360" y="296" fill="#2453C9" font-weight="600">0.57</text><text x="1500" y="296" fill="#2453C9" font-weight="600">0</text>
+</g>
+<g stroke="#DADFE7" stroke-width="1.5"><line x1="1100" y1="210" x2="1680" y2="210"></line><line x1="1100" y1="266" x2="1680" y2="266"></line></g>
+<rect x="1100" y="360" width="580" height="160" fill="#11151B"></rect>
+<g font-family="IBM Plex Sans, sans-serif" fill="#FFFFFF">
+<text x="1124" y="404" font-size="20" font-weight="700">Whether the distance helps or</text>
+<text x="1124" y="432" font-size="20" font-weight="700">hurts the answer, only a model</text>
+<text x="1124" y="460" font-size="20" font-weight="700">can settle.</text>
+<text x="1124" y="496" font-size="16" fill="#B9C3D6">That is Lab C's live part.</text>
+</g>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

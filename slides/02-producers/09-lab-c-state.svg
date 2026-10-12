@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab C State</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB C · 30 MINUTES · LABS/STATE.PY</span>
+<span>09 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Freshness is when the row was read</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">One typed item per fact into <span style="font-family: 'IBM Plex Mono', monospace">state.user</span>, from the system of record (R-8).</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="560" viewBox="0 0 1680 560" role="img" aria-label="A question at 10:00 on a route that admits state for 300 seconds. A row read at the request is current. A row read at 09:50 is outside the window and excluded as stale_state.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="840" y="40" width="370" height="300" fill="#EEF1F8"></rect>
+<text x="856" y="70" font-size="17" fill="#2453C9" font-weight="600">route admits state</text>
+<text x="856" y="94" font-size="17" fill="#2453C9" font-weight="600">for 300 seconds</text>
+<line x1="100" y1="300" x2="1580" y2="300" stroke="#11151B" stroke-width="2"></line>
+<g stroke="#11151B" stroke-width="2">
+<line x1="100" y1="292" x2="100" y2="308"></line>
+<line x1="470" y1="292" x2="470" y2="308"></line>
+<line x1="840" y1="292" x2="840" y2="308"></line>
+<line x1="1210" y1="292" x2="1210" y2="308"></line>
+<line x1="1580" y1="292" x2="1580" y2="308"></line>
+</g>
+<g font-size="18" fill="#4A5361" text-anchor="middle">
+<text x="100" y="334">09:45</text>
+<text x="470" y="334">09:50</text>
+<text x="840" y="334">09:55</text>
+<text x="1210" y="334">10:00</text>
+<text x="1580" y="334">10:05</text>
+</g>
+<line x1="1210" y1="40" x2="1210" y2="300" stroke="#11151B" stroke-width="3"></line>
+<rect x="1230" y="120" width="390" height="70" fill="#11151B"></rect>
+<text x="1250" y="152" font-size="18" font-weight="600" fill="#FFFFFF">the question</text>
+<text x="1250" y="178" font-size="15" fill="#B9C3D6">"Who can change our billing details?"</text>
+<circle cx="1150" cy="250" r="14" fill="#2453C9"></circle>
+<text x="1100" y="226" font-size="16" fill="#11151B" text-anchor="end">read at the request</text>
+<circle cx="470" cy="250" r="14" fill="#C2541D"></circle>
+<text x="470" y="222" font-size="16" fill="#11151B" text-anchor="middle">--read-at 09:50</text>
+<rect x="290" y="380" width="360" height="70" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="310" y="412" font-size="18" font-weight="600" fill="#C2541D">stale_state</text>
+<text x="310" y="436" font-size="15" fill="#11151B">both items excluded</text>
+<line x1="470" y1="264" x2="470" y2="378" stroke="#C2541D" stroke-width="2" stroke-dasharray="5 4"></line>
+<rect x="990" y="380" width="320" height="70" fill="#2453C9"></rect>
+<text x="1010" y="412" font-size="18" font-weight="600" fill="#FFFFFF">included</text>
+<text x="1010" y="436" font-size="15" fill="#FFFFFF">current state</text>
+<line x1="1150" y1="264" x2="1150" y2="378" stroke="#2453C9" stroke-width="2" stroke-dasharray="5 4"></line>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="22" fill="#2E3540">
+<text x="0" y="510">A cached account read is not current state. On <tspan font-family="IBM Plex Mono, monospace" fill="#C2541D">stale_state</tspan>, the application reads again rather than sending it.</text>
+<text x="0" y="546">The usual mistake: setting freshness to when the plan last changed.</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

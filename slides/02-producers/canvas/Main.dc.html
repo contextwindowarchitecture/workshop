@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>W2 Building a conformant producer</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 2</span>
+<span>01 / 11</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 940px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: {{accent}}; font-weight: 500">W2 · Producers</div>
+<h1 style="margin: 0; font-size: 128px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">Building a conformant producer</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 880px">Leave with three producers you wrote, tests that assert their batch shape and the codes they must never trigger, and a one-page checklist for reviewing anyone else's.</p>
+</div>
+<svg width="680" height="600" viewBox="0 0 680 600" role="img" aria-label="A producer emits one batch of items and excluded rows; the application stamps it with the producer's id and kind">
+<defs>
+<marker id="t2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="230" width="190" height="110" fill="#2453C9"></rect>
+<text x="24" y="292" font-size="24" font-weight="600" fill="#FFFFFF">producer</text>
+<line x1="190" y1="285" x2="270" y2="285" stroke="#11151B" stroke-width="2.5" marker-end="url(#t2)"></line>
+<rect x="280" y="40" width="400" height="500" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="280" y="40" width="400" height="56" fill="#11151B"></rect>
+<text x="300" y="76" font-size="18" fill="#FFFFFF">producer: {id, kind}</text>
+<text x="300" y="136" font-size="20" font-weight="600" fill="#11151B">items</text>
+<rect x="300" y="156" width="360" height="40" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<rect x="300" y="206" width="360" height="40" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<rect x="300" y="256" width="360" height="40" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<rect x="300" y="306" width="360" height="40" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="300" y="400" font-size="20" font-weight="600" fill="#11151B">excluded</text>
+<rect x="300" y="420" width="360" height="40" fill="#FBF0EA" stroke="#C2541D" stroke-width="1.5" stroke-dasharray="6 5"></rect>
+<text x="316" y="446" font-size="16" fill="#11151B">reason · stage: producer</text>
+<rect x="300" y="470" width="360" height="40" fill="#FBF0EA" stroke="#C2541D" stroke-width="1.5" stroke-dasharray="6 5"></rect>
+<text x="316" y="496" font-size="16" fill="#11151B">reason · stage: producer</text>
+<text x="280" y="22" font-size="16" fill="#4A5361">stamped by the application</text>
+<text x="280" y="580" font-size="16" fill="#4A5361">one batch per request</text>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>Half a day</span>
+<span style="color: #9AA3B0">/</span>
+<span>Self-paced, model-free</span>
+<span style="color: #9AA3B0">/</span>
+<span>No siblings, no Node</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2453C9","options":["#2453C9","#C2541D","#11151B"]},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2453C9' };
+  }
+}
+</script>
+</body>
+</html>

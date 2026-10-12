@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>A An MCP server proposes</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>MODULE A · LAB 3 · 60 MINUTES · R-15</span>
+<span>06 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">An MCP adapter proposes; it never grants</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Two outputs from one session, and the separation is the lesson.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="The MCP server's session feeds the adapter. proposals passes tool specifications unchanged to the capability policy, which writes governance.capabilities. observations turns each call result into an evidence.tool_results item. Below, three runs and a checkpoint panel.">
+<defs>
+<marker id="mc9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="80" width="280" height="140" fill="#11151B"></rect>
+<text x="22" y="122" font-size="19" font-weight="600" fill="#FFFFFF">MCP server</text>
+<text x="22" y="154" font-size="14" fill="#B9C3D6">tools/fernway_mcp.py</text>
+<text x="22" y="178" font-size="14" fill="#B9C3D6">info · specs · results</text>
+<text x="22" y="202" font-size="14" fill="#B9C3D6">observed_at by the app</text>
+<line x1="280" y1="150" x2="336" y2="150" stroke="#11151B" stroke-width="2" marker-end="url(#mc9)"></line>
+<rect x="340" y="20" width="420" height="260" fill="#2453C9"></rect>
+<text x="362" y="58" font-size="16" font-weight="600" fill="#DCE3F5">LABS/MCP_ADAPTER.PY</text>
+<text x="362" y="110" font-size="18" font-weight="600" fill="#FFFFFF">proposals(specs)</text>
+<text x="362" y="134" font-size="14" fill="#DCE3F5">the specifications, unchanged</text>
+<text x="362" y="214" font-size="18" font-weight="600" fill="#FFFFFF">observations(info,</text>
+<text x="362" y="238" font-size="18" font-weight="600" fill="#FFFFFF">  results, request)</text>
+<line x1="760" y1="104" x2="816" y2="104" stroke="#11151B" stroke-width="2" marker-end="url(#mc9)"></line>
+<line x1="760" y1="224" x2="1276" y2="224" stroke="#11151B" stroke-width="2" marker-end="url(#mc9)"></line>
+<rect x="820" y="20" width="400" height="168" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="842" y="56" font-size="17" font-weight="600" fill="#11151B">capability policy</text>
+<text x="842" y="88" font-size="14" fill="#2E3540">grants by the user's role</text>
+<text x="842" y="112" font-size="14" fill="#2E3540">pins each input schema, SHA-256</text>
+<text x="842" y="136" font-size="14" fill="#2E3540">uses its own description</text>
+<text x="842" y="160" font-size="14" fill="#C2541D">reports each declined proposal</text>
+<line x1="1220" y1="104" x2="1276" y2="104" stroke="#11151B" stroke-width="2" marker-end="url(#mc9)"></line>
+<rect x="1280" y="20" width="400" height="168" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect>
+<text x="1302" y="56" font-size="17" font-weight="600" fill="#2453C9">governance.capabilities</text>
+<text x="1302" y="88" font-size="14" fill="#2E3540">renders in the tools channel</text>
+<text x="1302" y="112" font-size="14" fill="#2E3540">the grant written into</text>
+<text x="1302" y="136" font-size="14" fill="#2E3540">the snapshot</text>
+<rect x="1280" y="200" width="400" height="120" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect>
+<text x="1302" y="234" font-size="17" font-weight="600" fill="#2453C9">evidence.tool_results</text>
+<text x="1302" y="264" font-size="14" fill="#2E3540">source: the call itself</text>
+<text x="1302" y="288" font-size="14" fill="#2E3540">version: the server's; errors too</text>
+<text x="0" y="372" font-size="17" font-weight="600" fill="#4A5361">THREE RUNS · uv run run.py --impl labs</text>
+<rect x="0" y="390" width="800" height="62" fill="#11151B"></rect>
+<text x="22" y="428" font-size="16" fill="#FFFFFF">--user u_ada --calls account,status,status</text>
+<rect x="0" y="464" width="800" height="62" fill="#11151B"></rect>
+<text x="22" y="502" font-size="16" fill="#FFFFFF">--user u_ben "Who are the billing admins?"</text>
+<rect x="0" y="538" width="800" height="62" fill="#11151B"></rect>
+<text x="22" y="576" font-size="16" fill="#FFFFFF">--user u_ada --fault specs-as-items</text>
+<g font-size="14" fill="#B9C3D6"><text x="640" y="428">status twice</text><text x="640" y="502">a Member</text><text x="640" y="576">on purpose</text></g>
+<rect x="860" y="350" width="820" height="270" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="884" y="390" font-size="16" font-weight="600" fill="#4A5361">CHECKPOINTS 1 AND 4</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="884" y="432">Tools: the capability policy (kind capability_policy).</text><text x="884" y="462">obs:2 superseded by obs:3, same source: the status call for EU.</text><text x="884" y="492">Specs as items: producer_slot_not_allowed. Route widened:</text><text x="884" y="522">capability_not_allowed, because the grant does not name them.</text><text x="884" y="552">As Ben: cap:list_members capability_not_allowed, stage producer.</text><text x="884" y="582">Colliding ids: duplicate_item_id on both sides; no tool renders.</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

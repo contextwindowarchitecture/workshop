@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Proposal, grant, guard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · R-15, R-5</span>
+<span>03 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Proposal, grant, guard</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Three things that look alike and are not.</p>
+</div>
+<svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Proposal: the MCP server lists five tools; proposals never reach the model. Grant: the capability policy decides which proposals each role is offered. Guard: authorize checks every call before the server sees it.">
+<defs>
+<marker id="pg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="520" height="640" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="28" y="52" font-size="30" font-weight="600" fill="#11151B">proposal</text>
+<text x="28" y="88" font-size="16" fill="#4A5361">tools/fernway_mcp.py</text>
+<g font-size="17" fill="#11151B">
+<rect x="28" y="120" width="464" height="44" fill="#F4F5F7" stroke="#9AA3B0"></rect><text x="44" y="148">get_account</text>
+<rect x="28" y="174" width="464" height="44" fill="#F4F5F7" stroke="#9AA3B0"></rect><text x="44" y="202">get_service_status</text>
+<rect x="28" y="228" width="464" height="44" fill="#F4F5F7" stroke="#9AA3B0"></rect><text x="44" y="256">list_members</text>
+<rect x="28" y="282" width="464" height="44" fill="#F4F5F7" stroke="#9AA3B0"></rect><text x="44" y="310">request_plan_change</text>
+<rect x="28" y="336" width="464" height="44" fill="#FBF0EA" stroke="#C2541D"></rect><text x="44" y="364">delete_workspace</text>
+</g>
+<text x="28" y="440" font-size="17" fill="#11151B">what the server says it has</text>
+<text x="28" y="480" font-size="17" font-weight="600" fill="#C2541D">never reaches the model</text>
+<line x1="520" y1="250" x2="570" y2="250" stroke="#11151B" stroke-width="2" marker-end="url(#pg)"></line>
+<rect x="580" y="0" width="520" height="640" fill="#2453C9"></rect>
+<text x="608" y="52" font-size="30" font-weight="600" fill="#FFFFFF">grant</text>
+<text x="608" y="88" font-size="16" fill="#DCE3F5">capability_policy.py</text>
+<g font-size="17" fill="#FFFFFF">
+<text x="608" y="148">which proposals each role</text>
+<text x="608" y="172">is offered, with:</text>
+<text x="608" y="216">· the policy's own description</text>
+<text x="608" y="250">· the input schema, pinned</text>
+<text x="608" y="274">  by SHA-256</text>
+<text x="608" y="308">· a scope rule per argument</text>
+<text x="608" y="342">· a never list</text>
+</g>
+<text x="608" y="420" font-size="16" fill="#DCE3F5">the only producer of</text>
+<text x="608" y="444" font-size="16" fill="#DCE3F5">governance.capabilities;</text>
+<text x="608" y="468" font-size="16" fill="#DCE3F5">the grant names the offered ids</text>
+<text x="608" y="540" font-size="17" font-weight="600" fill="#FFFFFF">last turn: offers nothing</text>
+<line x1="1100" y1="250" x2="1150" y2="250" stroke="#11151B" stroke-width="2" marker-end="url(#pg)"></line>
+<rect x="1160" y="0" width="520" height="640" fill="#C2541D"></rect>
+<text x="1188" y="52" font-size="30" font-weight="600" fill="#FFFFFF">guard</text>
+<text x="1188" y="88" font-size="16" fill="#FBF0EA">authorize(), on every call</text>
+<g font-size="17" fill="#FFFFFF">
+<text x="1188" y="148">before the server sees it:</text>
+<text x="1188" y="192">· offered on this turn</text>
+<text x="1188" y="226">· arguments match the schema</text>
+<text x="1188" y="260">· arguments name the</text>
+<text x="1188" y="284">  signed-in workspace</text>
+</g>
+<text x="1188" y="420" font-size="17" font-weight="600" fill="#FFFFFF">the model's wording</text>
+<text x="1188" y="444" font-size="17" font-weight="600" fill="#FFFFFF">plays no part</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

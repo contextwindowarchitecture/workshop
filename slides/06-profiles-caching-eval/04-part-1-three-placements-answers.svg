@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 1 Three placements</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 1 · 20 MINUTES · LABS/PROFILES.JSON</span>
+<span>04 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Three placements, one item set</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Three candidates for the <span style="font-family: 'IBM Plex Mono', monospace">account-help</span> route. They place the same six slots.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="Three profiles placing six slots in different orders">
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<text x="0" y="26" font-size="24" font-weight="600" fill="#11151B">policy-first</text>
+<text x="0" y="56" font-size="15" fill="#4A5361">articles before memory and history</text>
+<rect x="0" y="80" width="520" height="52" fill="#11151B" stroke="#11151B" stroke-width="1"></rect><text x="20" y="113" font-size="17" fill="#FFFFFF">instructions</text>
+<rect x="0" y="140" width="520" height="52" fill="#5C6676" stroke="#11151B" stroke-width="1"></rect><text x="20" y="173" font-size="17" fill="#FFFFFF">account</text>
+<rect x="0" y="200" width="520" height="52" fill="#C2541D" stroke="#11151B" stroke-width="1"></rect><text x="20" y="233" font-size="17" fill="#FFFFFF">articles</text>
+<rect x="0" y="260" width="520" height="52" fill="#DCE3F5" stroke="#11151B" stroke-width="1"></rect><text x="20" y="293" font-size="17" fill="#11151B">memory</text>
+<rect x="0" y="320" width="520" height="52" fill="#DCE3F5" stroke="#11151B" stroke-width="1"></rect><text x="20" y="353" font-size="17" fill="#11151B">history</text>
+<rect x="0" y="380" width="520" height="52" fill="#2453C9" stroke="#11151B" stroke-width="1"></rect><text x="20" y="413" font-size="17" fill="#FFFFFF">query</text>
+</g>
+<g>
+<text x="580" y="26" font-size="24" font-weight="600" fill="#11151B">evidence-first</text>
+<text x="580" y="56" font-size="15" fill="#4A5361">articles right after the instructions</text>
+<rect x="580" y="80" width="520" height="52" fill="#11151B" stroke="#11151B" stroke-width="1"></rect><text x="600" y="113" font-size="17" fill="#FFFFFF">instructions</text>
+<rect x="580" y="140" width="520" height="52" fill="#C2541D" stroke="#11151B" stroke-width="1"></rect><text x="600" y="173" font-size="17" fill="#FFFFFF">articles</text>
+<rect x="580" y="200" width="520" height="52" fill="#5C6676" stroke="#11151B" stroke-width="1"></rect><text x="600" y="233" font-size="17" fill="#FFFFFF">account</text>
+<rect x="580" y="260" width="520" height="52" fill="#DCE3F5" stroke="#11151B" stroke-width="1"></rect><text x="600" y="293" font-size="17" fill="#11151B">memory</text>
+<rect x="580" y="320" width="520" height="52" fill="#DCE3F5" stroke="#11151B" stroke-width="1"></rect><text x="600" y="353" font-size="17" fill="#11151B">history</text>
+<rect x="580" y="380" width="520" height="52" fill="#2453C9" stroke="#11151B" stroke-width="1"></rect><text x="600" y="413" font-size="17" fill="#FFFFFF">query</text>
+</g>
+<g>
+<text x="1160" y="26" font-size="24" font-weight="600" fill="#11151B">cache-first</text>
+<text x="1160" y="56" font-size="15" fill="#4A5361">stable first; articles and query last</text>
+<rect x="1160" y="80" width="520" height="52" fill="#11151B" stroke="#11151B" stroke-width="1"></rect><text x="1180" y="113" font-size="17" fill="#FFFFFF">instructions</text>
+<rect x="1160" y="140" width="520" height="52" fill="#5C6676" stroke="#11151B" stroke-width="1"></rect><text x="1180" y="173" font-size="17" fill="#FFFFFF">account</text>
+<rect x="1160" y="200" width="520" height="52" fill="#DCE3F5" stroke="#11151B" stroke-width="1"></rect><text x="1180" y="233" font-size="17" fill="#11151B">memory</text>
+<rect x="1160" y="260" width="520" height="52" fill="#DCE3F5" stroke="#11151B" stroke-width="1"></rect><text x="1180" y="293" font-size="17" fill="#11151B">history</text>
+<rect x="1160" y="320" width="520" height="52" fill="#C2541D" stroke="#11151B" stroke-width="1"></rect><text x="1180" y="353" font-size="17" fill="#FFFFFF">articles</text>
+<rect x="1160" y="380" width="520" height="52" fill="#2453C9" stroke="#11151B" stroke-width="1"></rect><text x="1180" y="413" font-size="17" fill="#FFFFFF">query</text>
+</g>
+<rect x="0" y="480" width="1680" height="64" fill="#11151B"></rect>
+<text x="24" y="520" font-size="18" fill="#FFFFFF">uv run profiles.py diff policy-first cache-first</text>
+<text x="0" y="590" font-size="18" fill="#11151B">identical included lists · identical item set · <tspan fill="#C2541D" font-weight="600">different bytes · different hash</tspan></text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

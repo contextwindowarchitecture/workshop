@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Agenda</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>AGENDA · THREE AND A HALF HOURS INSTRUCTOR-LED</span>
+<span>02 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Read the runs others committed</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Lab A runs here alone. Labs B and C read the <span style="font-family: 'IBM Plex Mono', monospace">examples</span> and <span style="font-family: 'IBM Plex Mono', monospace">benchmark</span> siblings; clone the benchmark before the session.</p>
+</div>
+<svg width="1680" height="400" viewBox="0 0 1680 400" role="img" aria-label="240 minute timeline: framing 10, part 1 30, lab A 30, break 10, lab B 60, lab C 60, break 10, lab D and close 30. Conference cut is part 1, lab A, and lab C's two tables projected, 60 minutes.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="24" font-size="18" fill="#4A5361">HALF DAY · 240 MIN</text>
+<rect x="0" y="40" width="70" height="100" fill="#11151B"></rect>
+<rect x="70" y="40" width="210" height="100" fill="#2453C9"></rect>
+<rect x="280" y="40" width="210" height="100" fill="#1A3D96"></rect>
+<rect x="490" y="40" width="70" height="100" fill="#DADFE7"></rect>
+<rect x="560" y="40" width="420" height="100" fill="#2453C9"></rect>
+<rect x="980" y="40" width="420" height="100" fill="#C2541D"></rect>
+<rect x="1400" y="40" width="70" height="100" fill="#DADFE7"></rect>
+<rect x="1470" y="40" width="210" height="100" fill="#11151B"></rect>
+<g stroke="#F4F5F7" stroke-width="3">
+<line x1="70" y1="40" x2="70" y2="140"></line><line x1="280" y1="40" x2="280" y2="140"></line><line x1="490" y1="40" x2="490" y2="140"></line>
+<line x1="560" y1="40" x2="560" y2="140"></line><line x1="980" y1="40" x2="980" y2="140"></line><line x1="1400" y1="40" x2="1400" y2="140"></line><line x1="1470" y1="40" x2="1470" y2="140"></line>
+</g>
+<g font-size="22" font-weight="600" fill="#FFFFFF">
+<text x="88" y="98">part 1</text>
+<text x="298" y="98">lab A</text>
+<text x="580" y="98">lab B · 14 models</text>
+<text x="1000" y="98">lab C · 12 arms</text>
+<text x="1488" y="98">lab D</text>
+</g>
+<g font-size="17" fill="#4A5361">
+<text x="0" y="170">0</text><text x="58" y="170">10</text><text x="268" y="170">40</text><text x="478" y="170">70</text><text x="548" y="170">80</text>
+<text x="958" y="170">140</text><text x="1378" y="170">200</text><text x="1448" y="170">210</text><text x="1637" y="170">240</text>
+</g>
+<g font-size="16" fill="#2E3540">
+<text x="70" y="208">three kinds of result</text>
+<text x="280" y="208">invariants.py</text>
+<text x="560" y="208">pick a model before the range</text>
+<text x="980" y="208">ten minutes on fact in payload</text>
+<text x="1470" y="208">and close</text>
+</g>
+<text x="0" y="284" font-size="18" fill="#4A5361">CONFERENCE CUT · 60 MIN · PART 1, LAB A, LAB C'S TWO TABLES PROJECTED</text>
+<rect x="0" y="300" width="1680" height="40" fill="#FFFFFF" stroke="#DADFE7"></rect>
+<rect x="70" y="300" width="210" height="40" fill="#2453C9"></rect>
+<rect x="280" y="300" width="210" height="40" fill="#1A3D96"></rect>
+<rect x="980" y="300" width="140" height="40" fill="#C2541D"></rect>
+</g>
+</svg>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540">Framing: two halves, what the assembler did and what the model did with it. Never one number for both.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

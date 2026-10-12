@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 1 The anatomy of a case</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 1 · 30 MINUTES · CASES/CONFLICT-FACT/</span>
+<span>04 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Four files, and who reads each</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Open the vendored copy of a published case under <span style="font-family: 'IBM Plex Mono', monospace">shared/contract/cwa/conformance/cases/</span>.</p>
+</div>
+<svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="case.json holds the id, rules and description. snapshot.json is the frozen input. expected.trace.json is the trace a conformant assembler emits. expected.payload.txt is the rendered bytes, absent for a refusal. A rejection has only case.json and snapshot.json. Checkpoint 1 below.">
+<g font-family="IBM Plex Mono, monospace">
+<g font-size="15" fill="#4A5361"><text x="0" y="20">file</text><text x="460" y="20">what it holds</text><text x="1200" y="20">who reads it</text></g>
+<line x1="0" y1="34" x2="1680" y2="34" stroke="#11151B" stroke-width="2"></line>
+<g font-size="20" font-weight="600" fill="#2453C9"><text x="0" y="78">case.json</text><text x="0" y="158">snapshot.json</text><text x="0" y="238">expected.trace.json</text><text x="0" y="318">expected.payload.txt</text></g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#11151B">
+<text x="460" y="78">id, the requirement ids it exercises (rules), one sentence</text>
+<text x="460" y="158">the frozen input, valid against snapshot.schema.json</text>
+<text x="460" y="238">the trace a conformant assembler emits, trace_id and timings aside</text>
+<text x="460" y="318">the rendered bytes, compared byte for byte</text>
+<text x="460" y="344" font-size="16" fill="#C2541D">absent when the case expects a refusal</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#2E3540">
+<text x="1200" y="78">people; check.py for the id</text>
+<text x="1200" y="158">the assembler under test</text>
+<text x="1200" y="238">the runner, field by field</text>
+<text x="1200" y="318">the runner</text>
+</g>
+<g stroke="#DADFE7" stroke-width="2"><line x1="0" y1="110" x2="1680" y2="110"></line><line x1="0" y1="190" x2="1680" y2="190"></line><line x1="0" y1="270" x2="1680" y2="270"></line><line x1="0" y1="364" x2="1680" y2="364"></line></g>
+<rect x="0" y="400" width="620" height="220" fill="#11151B"></rect>
+<text x="24" y="440" font-size="17" font-weight="600" fill="#B9C3D6">CONFORMANCE/REJECTIONS/</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#FFFFFF">
+<text x="24" y="482">case.json and snapshot.json only.</text>
+<text x="24" y="514">It breaks exactly one snapshot check;</text>
+<text x="24" y="546">a conformant assembler rejects it</text>
+<text x="24" y="578">before assembly. Nothing to expect.</text>
+</g>
+<rect x="660" y="400" width="1020" height="220" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="684" y="440" font-size="17" font-weight="600" fill="#4A5361">CHECKPOINT 1 · THE GROUP f-tie</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="{{ink}}">
+<text x="684" y="482">{{k1}}</text><text x="684" y="512">{{k2}}</text><text x="684" y="542">{{k3}}</text><text x="684" y="572">{{k4}}</text><text x="684" y="602">{{k5}}</text>
+</g>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showAnswers":{"editor":"boolean","default":false},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.showAnswers ?? false;
+    return {
+      ink: s ? '#11151B' : '#9AA3B0',
+      k1: s ? 'f-tie escalates and is surfaced: two leaders, same producer,' : 'What decides f-tie?',
+      k2: s ? 'same instant, no freshness_tiebreak.' : 'What would have to differ for the clock to decide it instead?',
+      k3: s ? 'For the clock to decide: freshness_tiebreak true, one leader strictly later.' : 'Which file does a refusal case not have,',
+      k4: s ? 'A refusal has no expected.payload.txt; R-17: a refused assembly' : 'and which requirement says why?',
+      k5: s ? 'has no rendered payload.' : ''
+    };
+  }
+}
+</script>
+</body>
+</html>

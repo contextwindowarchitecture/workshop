@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Close</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CLOSE · 15 MINUTES</span>
+<span>09 / 09</span>
+</div>
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">What does your route's profile say about evaluation today?</h2>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="440" viewBox="0 0 1680 440" role="img" aria-label="A profile with an empty evaluation object beside an evaluated one carrying suite, date, result, artifact and model family">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="800" height="440" fill="#FFFFFF" stroke="#C2541D" stroke-width="2" stroke-dasharray="10 8"></rect>
+<text x="32" y="52" font-size="22" font-weight="600" fill="#C2541D">almost always</text>
+<g font-size="20" fill="#11151B">
+<text x="32" y="120">profile: account-help</text>
+<text x="32" y="160">version: 1</text>
+<text x="32" y="200">placement: …</text>
+<text x="32" y="260" fill="#C2541D">evaluation: nothing</text>
+</g>
+<text x="32" y="380" font-size="16" fill="#4A5361">a placement nobody tested, for no named model</text>
+<line x1="800" y1="220" x2="880" y2="220" stroke="#11151B" stroke-width="2.5"></line>
+<polygon points="880,212 896,220 880,228" fill="#11151B"></polygon>
+<rect x="900" y="0" width="780" height="440" fill="#2453C9"></rect>
+<text x="932" y="52" font-size="22" font-weight="600" fill="#FFFFFF">after W6</text>
+<g font-size="20" fill="#FFFFFF">
+<text x="932" y="120">evaluation:</text>
+<text x="964" y="160">suite · date · result</text>
+<text x="964" y="200">artifact: evaluations/…</text>
+<text x="932" y="260">model_family: named</text>
+<text x="932" y="320">locked by digest; gated on deploy</text>
+</g>
+</g>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; font-size: 23px; line-height: 1.45">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">Contribute</span><span>An evaluated profile, with its artifact, through the About page's contribution path.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">W7</span><span>Puts this registry behind a deployment flag in the running application.</span></div>
+</div>
+</div>
+</foreignObject>
+</svg>

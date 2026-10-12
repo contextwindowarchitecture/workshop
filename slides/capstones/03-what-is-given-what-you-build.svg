@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>What is given, what you build</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>THE SHAPE OF EVERY CAPSTONE</span>
+<span>03 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The orchestrator is given; it never assembles</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace">app.py</span> calls four modules your team writes. Each module's contract is in its docstring.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="app.py's steps: select the route, freeze a snapshot per attempt, escalate on a refusal, hand the payload to the drafter unchanged, parse the contract, run the screens, queue actions and write the outcome. The route selector, the producers and freeze, and the screens are the team's. Below, what is given and what the team hands in.">
+<defs>
+<marker id="sh12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="20" font-size="16" font-weight="600" fill="#4A5361">APP.PY, ONE REQUEST</text>
+<g font-size="15">
+<rect x="0" y="40" width="200" height="110" fill="#2453C9"></rect><text x="16" y="84" fill="#FFFFFF">select</text><text x="16" y="108" fill="#FFFFFF">the route</text>
+<rect x="240" y="40" width="200" height="110" fill="#2453C9"></rect><text x="256" y="84" fill="#FFFFFF">producers,</text><text x="256" y="108" fill="#FFFFFF">freeze</text><text x="256" y="132" fill="#DCE3F5" font-size="13">per attempt</text>
+<rect x="480" y="40" width="200" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="496" y="84" fill="#11151B">assemble</text><text x="496" y="108" fill="#11151B">refused?</text><text x="496" y="132" fill="#4A5361" font-size="13">escalate a tier</text>
+<rect x="720" y="40" width="200" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="736" y="84" fill="#11151B">payload to</text><text x="736" y="108" fill="#11151B">the drafter</text><text x="736" y="132" fill="#4A5361" font-size="13">unchanged</text>
+<rect x="960" y="40" width="200" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="976" y="84" fill="#11151B">parse the</text><text x="976" y="108" fill="#11151B">contract</text>
+<rect x="1200" y="40" width="200" height="110" fill="#2453C9"></rect><text x="1216" y="84" fill="#FFFFFF">the screens</text><text x="1216" y="108" fill="#FFFFFF">on the draft</text>
+<rect x="1440" y="40" width="240" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="1456" y="84" fill="#11151B">queue actions,</text><text x="1456" y="108" fill="#11151B">write outcome</text>
+</g>
+<g stroke="#11151B" stroke-width="2">
+<line x1="200" y1="95" x2="236" y2="95" marker-end="url(#sh12)"></line><line x1="440" y1="95" x2="476" y2="95" marker-end="url(#sh12)"></line>
+<line x1="680" y1="95" x2="716" y2="95" marker-end="url(#sh12)"></line><line x1="920" y1="95" x2="956" y2="95" marker-end="url(#sh12)"></line>
+<line x1="1160" y1="95" x2="1196" y2="95" marker-end="url(#sh12)"></line><line x1="1400" y1="95" x2="1436" y2="95" marker-end="url(#sh12)"></line>
+</g>
+<path d="M 580 150 L 580 190 L 340 190 L 340 154" fill="none" stroke="#C2541D" stroke-width="2" marker-end="url(#sh12)"></path>
+<text x="390" y="214" font-size="13" fill="#C2541D">a new snapshot, not a patch</text>
+<rect x="0" y="244" width="24" height="16" fill="#2453C9"></rect><text x="34" y="258" font-size="14" fill="#2E3540">your team's modules in skeleton/</text>
+<text x="0" y="320" font-size="16" font-weight="600" fill="#4A5361">GIVEN</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="0" y="360">data/: the domain's records, with the traps built in</text>
+<text x="0" y="396">policy/: routes, profiles, contracts, a routes table</text>
+<text x="0" y="432">app.py: the orchestrator</text>
+<text x="0" y="468">evals.py and six gate cases with scripted drafts</text>
+<text x="0" y="504">solution/: the facilitator's, until the demo</text>
+</g>
+<rect x="860" y="300" width="820" height="320" fill="#11151B"></rect>
+<text x="884" y="340" font-size="16" font-weight="600" fill="#B9C3D6">YOUR TEAM HANDS IN</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#FFFFFF">
+<text x="884" y="384">the four modules</text>
+<text x="884" y="422">two gate cases of your own</text>
+<text x="884" y="460">a reviewed change to one route policy</text>
+<text x="884" y="498">a recorded suite, and the promotion</text>
+<text x="884" y="536">the closing section, written by the team</text>
+</g>
+<text x="884" y="590" font-size="14" fill="#B9C3D6">DELIVERABLES.md names the test that checks each</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

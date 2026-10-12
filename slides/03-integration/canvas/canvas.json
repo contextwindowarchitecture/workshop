@@ -1,0 +1,24 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T00:50:00Z"},
+  "title": "W3 Integration Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Agenda.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Agenda"},
+    "App.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 The application"},
+    "Conflict.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Business or Team"},
+    "Duties.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 The application's duties"},
+    "Steps.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 The six steps"},
+    "Freeze.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Steps 1 and 2 Inventory and freeze"},
+    "Producers.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Step 3 Producers and conflict groups"},
+    "Trace.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Step 4 Five conversations"},
+    "Policy.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 Step 5 Policy and budget"},
+    "Guards.dc.html": {"x": 2000, "y": 3600, "w": 1920, "h": 1080, "title": "11 Step 6 Guards"},
+    "Close.dc.html": {"x": 4000, "y": 3600, "w": 1920, "h": 1080, "title": "12 Close"}
+  },
+  "order": ["Main.dc.html", "Agenda.dc.html", "App.dc.html", "Conflict.dc.html", "Duties.dc.html", "Steps.dc.html", "Freeze.dc.html", "Producers.dc.html", "Trace.dc.html", "Policy.dc.html", "Guards.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

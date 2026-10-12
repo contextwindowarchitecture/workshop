@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab A Review the summaries</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB A · 50 MINUTES · REVIEW.PY</span>
+<span>07 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Review the summaries before you commit them</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Thirty-six summaries, one per paragraph. Four say something their paragraph does not.</p>
+</div>
+<svg width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="Summaries keyed by content hash are reviewed into approved and rejected; the producer attaches only approved variants. Scenario 05 shows an unreviewed summary saying admins can change billing when the paragraph says they cannot.">
+<defs>
+<marker id="la" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="340" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="20" y="40" font-size="17" font-weight="600" fill="#11151B">summaries.json</text>
+<text x="20" y="70" font-size="14" fill="#4A5361">keyed by SHA-256 of the</text>
+<text x="20" y="92" font-size="14" fill="#4A5361">paragraph</text>
+<line x1="340" y1="55" x2="410" y2="55" stroke="#11151B" stroke-width="2" marker-end="url(#la)"></line>
+<rect x="420" y="0" width="300" height="110" fill="#2453C9"></rect>
+<text x="442" y="46" font-size="18" font-weight="600" fill="#FFFFFF">you review</text>
+<text x="442" y="76" font-size="14" fill="#FFFFFF">paragraph beside summary</text>
+<line x1="720" y1="55" x2="790" y2="55" stroke="#11151B" stroke-width="2" marker-end="url(#la)"></line>
+<rect x="800" y="0" width="380" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="820" y="40" font-size="17" font-weight="600" fill="#11151B">labs/reviewed.json</text>
+<text x="820" y="70" font-size="14" fill="#2453C9">approved</text>
+<text x="920" y="70" font-size="14" fill="#C2541D">rejected + one-line reason</text>
+<line x1="1180" y1="55" x2="1250" y2="55" stroke="#11151B" stroke-width="2" marker-end="url(#la)"></line>
+<rect x="1260" y="0" width="420" height="110" fill="#11151B"></rect>
+<text x="1282" y="44" font-size="17" font-weight="600" fill="#FFFFFF">variants_for()</text>
+<text x="1282" y="74" font-size="14" fill="#B9C3D6">attaches a variant only for</text>
+<text x="1282" y="96" font-size="14" fill="#B9C3D6">approved ids</text>
+<text x="0" y="170" font-size="18" font-weight="600" fill="#C2541D">BEFORE YOU FINISH · 05-UNREVIEWED · --BUDGET 500</text>
+<rect x="0" y="190" width="820" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="228" font-size="16" fill="#4A5361">the roles paragraph</text>
+<text x="24" y="276" font-size="22" font-weight="600" fill="#11151B">admins cannot change billing</text>
+<text x="24" y="314" font-size="15" fill="#2E3540">unless an Owner makes them a billing admin</text>
+<rect x="860" y="190" width="820" height="200" fill="#FBF0EA" stroke="#C2541D" stroke-width="3"></rect>
+<text x="884" y="228" font-size="16" fill="#C2541D">~ the summary swapped in under budget</text>
+<text x="884" y="276" font-size="22" font-weight="600" fill="#11151B">admins can change billing</text>
+<text x="884" y="314" font-size="15" fill="#2E3540">a faithful swap of a variant that was not</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#2E3540">
+<text x="0" y="450">An unreviewed summary is a sentence one model wrote that another will read as evidence, and nobody checked.</text>
+<text x="0" y="500"><tspan font-weight="700" fill="#11151B">Same text, same hash:</tspan> the exact FAQ copy and its paragraph share one summary. Approving either id approves the text.</text>
+<text x="0" y="540"><tspan font-weight="700" fill="#11151B">Review changes recovery:</tspan> in 04, a rejected summary leaves no variant, so the recovery is precompute_summary.</text>
+<text x="0" y="590"><tspan font-weight="700" fill="#C2541D">Reject only for unfaithfulness.</tspan> Shorter and blunter is the point.</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>W4 Budgets, variants, routes and refusals</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 4</span>
+<span>01 / 11</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 1000px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: {{accent}}; font-weight: 500">W4 · Budgets and routes</div>
+<h1 style="margin: 0; font-size: 116px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">Budgets, variants, routes and refusals</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 920px">Design a route set with budgets, caps, floors and escalation and justify every number. Explain why the system refused rather than answered. Review anything shorter that stands in for evidence.</p>
+</div>
+<svg width="600" height="620" viewBox="0 0 600 620" role="img" aria-label="A budget window: protected items render whole, compressible items swap to shorter variants, droppable items are omitted first">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="40" width="600" height="440" fill="none" stroke="#11151B" stroke-width="3"></rect>
+<text x="0" y="24" font-size="18" fill="#4A5361">budget.input</text>
+<rect x="24" y="64" width="552" height="70" fill="#2453C9"></rect>
+<text x="44" y="106" font-size="20" font-weight="600" fill="#FFFFFF">protected · whole</text>
+<rect x="24" y="150" width="552" height="70" fill="#DCE3F5" stroke="#2453C9" stroke-width="2"></rect>
+<text x="44" y="192" font-size="20" fill="#11151B">compressible</text>
+<rect x="24" y="236" width="300" height="70" fill="#DCE3F5" stroke="#2453C9" stroke-width="2"></rect>
+<text x="44" y="278" font-size="20" fill="#11151B">~ variant</text>
+<rect x="24" y="322" width="552" height="70" fill="#2453C9"></rect>
+<text x="44" y="364" font-size="20" font-weight="600" fill="#FFFFFF">protected · whole</text>
+<rect x="24" y="520" width="552" height="70" fill="none" stroke="#C2541D" stroke-width="2" stroke-dasharray="8 6"></rect>
+<text x="44" y="562" font-size="20" fill="#C2541D">- droppable, over_budget</text>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>Half a day</span>
+<span style="color: #9AA3B0">/</span>
+<span>Self-paced, model-free</span>
+<span style="color: #9AA3B0">/</span>
+<span>After W1; W3a helps</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2453C9","options":["#2453C9","#C2541D","#11151B"]},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2453C9' };
+  }
+}
+</script>
+</body>
+</html>

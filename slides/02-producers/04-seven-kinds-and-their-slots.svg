@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Seven kinds and their slots</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · KINDS AND SLOT GATES</span>
+<span>04 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Seven kinds, and the slots each may address</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Whatever the route lists. A slot outside the kind's gate is <span style="font-family: 'IBM Plex Mono', monospace">producer_slot_not_allowed</span>.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="Retrieval: knowledge and tool results. Memory: memory. State: user and task. MCP: knowledge and tool results, and proposes to capabilities. Capability policy: capabilities. Policy and interaction: whatever the route lists except state slots and capabilities.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="260" y="0" width="448" height="40" fill="#2453C9"></rect>
+<text x="276" y="27" font-size="18" font-weight="600" fill="#FFFFFF">governance</text>
+<rect x="708" y="0" width="224" height="40" fill="#11151B"></rect>
+<text x="724" y="27" font-size="18" font-weight="600" fill="#FFFFFF">state</text>
+<rect x="932" y="0" width="224" height="40" fill="#C2541D"></rect>
+<text x="948" y="27" font-size="18" font-weight="600" fill="#FFFFFF">evidence</text>
+<rect x="1156" y="0" width="336" height="40" fill="#5C6676"></rect>
+<text x="1172" y="27" font-size="18" font-weight="600" fill="#FFFFFF">interaction</text>
+<text x="1512" y="27" font-size="18" font-weight="600" fill="#4A5361">gate</text>
+<g font-size="14" fill="#2E3540" text-anchor="middle">
+<text x="316" y="70">instructions</text>
+<text x="428" y="70">capabilities</text>
+<text x="540" y="70">examples</text>
+<text x="652" y="64">output_</text><text x="652" y="82">contract</text>
+<text x="764" y="70">user</text>
+<text x="876" y="70">task</text>
+<text x="988" y="70">knowledge</text>
+<text x="1100" y="64">tool_</text><text x="1100" y="82">results</text>
+<text x="1212" y="70">memory</text>
+<text x="1324" y="70">history</text>
+<text x="1436" y="70">query</text>
+</g>
+<line x1="0" y1="100" x2="1680" y2="100" stroke="#11151B" stroke-width="2"></line>
+<g stroke="#DADFE7" stroke-width="1.5">
+<line x1="0" y1="168" x2="1680" y2="168"></line>
+<line x1="0" y1="226" x2="1680" y2="226"></line>
+<line x1="0" y1="284" x2="1680" y2="284"></line>
+<line x1="0" y1="342" x2="1680" y2="342"></line>
+<line x1="0" y1="400" x2="1680" y2="400"></line>
+<line x1="0" y1="458" x2="1680" y2="458"></line>
+<line x1="0" y1="516" x2="1680" y2="516"></line>
+</g>
+<g font-size="20" font-weight="600" fill="#11151B">
+<text x="0" y="146">retrieval</text>
+<text x="0" y="204">memory</text>
+<text x="0" y="262">state</text>
+<text x="0" y="320">mcp</text>
+<text x="0" y="378">capability_policy</text>
+<text x="0" y="436">policy</text>
+<text x="0" y="494">interaction</text>
+</g>
+<g font-size="18" fill="#2E3540">
+<text x="1512" y="146">R-13</text>
+<text x="1512" y="204">R-14</text>
+<text x="1512" y="262">R-8</text>
+<text x="1512" y="320">R-15</text>
+<text x="1512" y="378">R-15</text>
+<text x="1512" y="436">R-15</text>
+<text x="1512" y="494">R-15</text>
+</g>
+<g fill="#2453C9">
+<rect x="948" y="116" width="80" height="36"></rect>
+<rect x="1060" y="116" width="80" height="36"></rect>
+<rect x="1172" y="174" width="80" height="36"></rect>
+<rect x="724" y="232" width="80" height="36"></rect>
+<rect x="836" y="232" width="80" height="36"></rect>
+<rect x="948" y="290" width="80" height="36"></rect>
+<rect x="1060" y="290" width="80" height="36"></rect>
+<rect x="388" y="348" width="80" height="36"></rect>
+</g>
+<rect x="388" y="290" width="80" height="36" fill="none" stroke="#C2541D" stroke-width="2" stroke-dasharray="5 4"></rect>
+<text x="428" y="313" font-size="12" fill="#C2541D" text-anchor="middle">proposes</text>
+<g fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5">
+<rect x="276" y="406" width="80" height="36"></rect>
+<rect x="500" y="406" width="80" height="36"></rect>
+<rect x="612" y="406" width="80" height="36"></rect>
+<rect x="948" y="406" width="80" height="36"></rect>
+<rect x="1060" y="406" width="80" height="36"></rect>
+<rect x="1172" y="406" width="80" height="36"></rect>
+<rect x="1284" y="406" width="80" height="36"></rect>
+<rect x="1396" y="406" width="80" height="36"></rect>
+<rect x="276" y="464" width="80" height="36"></rect>
+<rect x="500" y="464" width="80" height="36"></rect>
+<rect x="612" y="464" width="80" height="36"></rect>
+<rect x="948" y="464" width="80" height="36"></rect>
+<rect x="1060" y="464" width="80" height="36"></rect>
+<rect x="1172" y="464" width="80" height="36"></rect>
+<rect x="1284" y="464" width="80" height="36"></rect>
+<rect x="1396" y="464" width="80" height="36"></rect>
+</g>
+<rect x="0" y="566" width="28" height="28" fill="#2453C9"></rect>
+<text x="40" y="588" font-size="18" fill="#11151B">may address</text>
+<rect x="250" y="566" width="28" height="28" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="290" y="588" font-size="18" fill="#11151B">only if the route lists it</text>
+<rect x="620" y="566" width="28" height="28" fill="none" stroke="#C2541D" stroke-width="2" stroke-dasharray="5 4"></rect>
+<text x="660" y="588" font-size="18" fill="#11151B">proposes to the capability policy, never emits there</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

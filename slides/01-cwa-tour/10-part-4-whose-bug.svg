@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 4 Whose bug</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 4 · 45 MINUTES · THE INSPECTOR</span>
+<span>10 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Four columns: whose bug is it?</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">One question through all four assemblers, on the same frozen bytes.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="500" viewBox="0 0 1680 500" role="img" aria-label="Candidate context, CWA decisions, outbound request, model answer. Wrong at each column means a producer, assembler, adapter or model bug.">
+<defs>
+<marker id="p4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="360" height="250" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="28" y="56" font-size="26" font-weight="600" fill="#11151B">candidate</text>
+<text x="28" y="90" font-size="26" font-weight="600" fill="#11151B">context</text>
+<rect x="28" y="130" width="140" height="18" fill="#DADFE7"></rect>
+<rect x="28" y="158" width="220" height="18" fill="#DADFE7"></rect>
+<rect x="28" y="186" width="180" height="18" fill="#DADFE7"></rect>
+<line x1="360" y1="125" x2="430" y2="125" stroke="#11151B" stroke-width="2" marker-end="url(#p4)"></line>
+<rect x="440" y="0" width="360" height="250" fill="#2453C9"></rect>
+<text x="468" y="56" font-size="26" font-weight="600" fill="#FFFFFF">CWA</text>
+<text x="468" y="90" font-size="26" font-weight="600" fill="#FFFFFF">decisions</text>
+<text x="468" y="146" font-size="18" fill="#FFFFFF">+ included</text>
+<text x="468" y="176" font-size="18" fill="#FFFFFF">- excluded · reason</text>
+<text x="468" y="206" font-size="18" fill="#FFFFFF">× 4 assemblers</text>
+<line x1="800" y1="125" x2="870" y2="125" stroke="#11151B" stroke-width="2" marker-end="url(#p4)"></line>
+<rect x="880" y="0" width="360" height="250" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="908" y="56" font-size="26" font-weight="600" fill="#11151B">outbound</text>
+<text x="908" y="90" font-size="26" font-weight="600" fill="#11151B">request</text>
+<text x="908" y="160" font-size="18" fill="#4A5361">{ "system": …,</text>
+<text x="908" y="188" font-size="18" fill="#4A5361">  "messages": … }</text>
+<line x1="1240" y1="125" x2="1310" y2="125" stroke="#11151B" stroke-width="2" marker-end="url(#p4)"></line>
+<rect x="1320" y="0" width="360" height="250" fill="#FFFFFF" stroke="#11151B" stroke-width="2" stroke-dasharray="10 8"></rect>
+<text x="1348" y="56" font-size="26" font-weight="600" fill="#11151B">model</text>
+<text x="1348" y="90" font-size="26" font-weight="600" fill="#11151B">answer</text>
+<text x="1348" y="160" font-size="18" fill="#4A5361">empty unless .env</text>
+<text x="1348" y="188" font-size="18" fill="#4A5361">names a provider</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif">
+<text x="0" y="310" font-size="20" fill="#4A5361">wrong candidate</text>
+<text x="0" y="350" font-size="30" font-weight="700" fill="#11151B">producer bug</text>
+<text x="440" y="310" font-size="20" fill="#4A5361">wrong decision</text>
+<text x="440" y="350" font-size="30" font-weight="700" fill="#2453C9">assembler bug</text>
+<text x="440" y="386" font-size="19" fill="#2E3540">four disagreeing is the alarm</text>
+<text x="880" y="310" font-size="20" fill="#4A5361">wrong request, right payload</text>
+<text x="880" y="350" font-size="30" font-weight="700" fill="#11151B">adapter bug</text>
+<text x="1320" y="310" font-size="20" fill="#4A5361">wrong answer, right request</text>
+<text x="1320" y="350" font-size="30" font-weight="700" fill="#C2541D">the model's</text>
+<line x1="0" y1="430" x2="1680" y2="430" stroke="#DADFE7" stroke-width="2"></line>
+<text x="0" y="478" font-size="22" fill="#2E3540">Watch for: basic 03 renders a forum post's markup escaped, never as structure · intermediate 04 shows two conflict groups</text>
+</g>
+</svg>
+<div style="display: flex; gap: 40px; align-items: center">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; background: #11151B; color: #FFFFFF; padding: 18px 28px">pnpm run inspector</span>
+<span style="font-size: 24px; color: #2E3540">Basic tour together, intermediate in pairs. Predict the codes before each step.</span>
+</div>
+</div>
+</foreignObject>
+</svg>

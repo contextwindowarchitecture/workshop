@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Four planes, eleven slots</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · THE MODEL</span>
+<span>03 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Four planes, eleven slots, never merged</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Every item belongs to exactly one slot. The planes answer four different questions.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Governance: instructions, capabilities, examples, output_contract. State: user, task. Evidence: knowledge, tool_results. Interaction: memory, history, query.">
+<g font-family="IBM Plex Mono, monospace" fill="#11151B">
+<g>
+<rect x="0" y="0" width="405" height="640" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="0" y="0" width="405" height="10" fill="#2453C9"></rect>
+<text x="28" y="64" font-size="30" font-weight="600">governance</text>
+<text x="28" y="104" font-size="19" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">Who may direct the model</text>
+<rect x="28" y="150" width="349" height="64" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="48" y="190" font-size="20">.instructions</text>
+<rect x="28" y="230" width="349" height="64" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="48" y="270" font-size="20">.capabilities</text>
+<rect x="28" y="310" width="349" height="64" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="48" y="350" font-size="20">.examples</text>
+<rect x="28" y="390" width="349" height="64" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="48" y="430" font-size="20">.output_contract</text>
+</g>
+<g>
+<rect x="425" y="0" width="405" height="640" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="425" y="0" width="405" height="10" fill="#11151B"></rect>
+<text x="453" y="64" font-size="30" font-weight="600">state</text>
+<text x="453" y="104" font-size="19" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">What is true right now</text>
+<rect x="453" y="150" width="349" height="64" fill="#F4F5F7" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="473" y="190" font-size="20">.user</text>
+<rect x="453" y="230" width="349" height="64" fill="#F4F5F7" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="473" y="270" font-size="20">.task</text>
+</g>
+<g>
+<rect x="850" y="0" width="405" height="640" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="850" y="0" width="405" height="10" fill="#C2541D"></rect>
+<text x="878" y="64" font-size="30" font-weight="600">evidence</text>
+<text x="878" y="104" font-size="19" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">What the model may ground on</text>
+<rect x="878" y="150" width="349" height="64" fill="#FBF0EA" stroke="#C2541D" stroke-width="1.5"></rect>
+<text x="898" y="190" font-size="20">.knowledge</text>
+<rect x="878" y="230" width="349" height="64" fill="#FBF0EA" stroke="#C2541D" stroke-width="1.5"></rect>
+<text x="898" y="270" font-size="20">.tool_results</text>
+</g>
+<g>
+<rect x="1275" y="0" width="405" height="640" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="1275" y="0" width="405" height="10" fill="#7A8494"></rect>
+<text x="1303" y="64" font-size="30" font-weight="600">interaction</text>
+<text x="1303" y="104" font-size="18" fill="#4A5361" font-family="IBM Plex Sans, sans-serif">What has happened, what is asked</text>
+<rect x="1303" y="150" width="349" height="64" fill="#F4F5F7" stroke="#7A8494" stroke-width="1.5"></rect>
+<text x="1323" y="190" font-size="20">.memory</text>
+<rect x="1303" y="230" width="349" height="64" fill="#F4F5F7" stroke="#7A8494" stroke-width="1.5"></rect>
+<text x="1323" y="270" font-size="20">.history</text>
+<rect x="1303" y="310" width="349" height="64" fill="#F4F5F7" stroke="#7A8494" stroke-width="1.5"></rect>
+<text x="1323" y="350" font-size="20">.query</text>
+</g>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="20" fill="#2E3540">
+<text x="453" y="560">An item in one of the two</text>
+<text x="453" y="590">evidence slots is an evidence item.</text>
+<text x="878" y="560">The piece of a document a</text>
+<text x="878" y="590">retriever pulls is a chunk.</text>
+<text x="28" y="560">Wording never changes</text>
+<text x="28" y="590">authority or placement (R-7).</text>
+<text x="1303" y="560">Memory and history are the past;</text>
+<text x="1303" y="590">the query is the live ask.</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

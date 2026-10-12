@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab B Measure reuse</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB B · 45 MINUTES · EVALUATE.PY REUSE</span>
+<span>05 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">How many leading blocks come back unchanged?</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">A frozen four-turn conversation. Predict which profile reuses most, then run <span style="font-family: 'IBM Plex Mono', monospace">compare</span>.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Shared prefix blocks between consecutive turns: cache-first grows 5, 7, 9; policy-first stays at 3; evidence-first stays at 1.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="17" fill="#4A5361">SHARED LEADING BLOCKS, TURN N TO N+1</text>
+<g stroke="#DADFE7" stroke-width="1.5">
+<line x1="100" y1="540" x2="1100" y2="540"></line>
+<line x1="100" y1="460" x2="1100" y2="460"></line>
+<line x1="100" y1="380" x2="1100" y2="380"></line>
+<line x1="100" y1="300" x2="1100" y2="300"></line>
+<line x1="100" y1="220" x2="1100" y2="220"></line>
+<line x1="100" y1="140" x2="1100" y2="140"></line>
+</g>
+<g font-size="15" fill="#4A5361" text-anchor="end">
+<text x="86" y="545">0</text><text x="86" y="465">2</text><text x="86" y="385">4</text><text x="86" y="305">6</text><text x="86" y="225">8</text><text x="86" y="145">10</text>
+</g>
+<g font-size="16" fill="#2E3540" text-anchor="middle">
+<text x="250" y="578">turn 1 to 2</text><text x="600" y="578">turn 2 to 3</text><text x="950" y="578">turn 3 to 4</text>
+</g>
+<g opacity="1">
+<polyline points="250,340 600,260 950,180" fill="none" stroke="#2453C9" stroke-width="5"></polyline>
+<circle cx="250" cy="340" r="9" fill="#2453C9"></circle><circle cx="600" cy="260" r="9" fill="#2453C9"></circle><circle cx="950" cy="180" r="9" fill="#2453C9"></circle>
+<text x="250" y="322" font-size="16" fill="#2453C9" text-anchor="middle">5</text><text x="600" y="242" font-size="16" fill="#2453C9" text-anchor="middle">7</text><text x="950" y="162" font-size="16" fill="#2453C9" text-anchor="middle">9</text>
+<text x="975" y="185" font-size="18" font-weight="600" fill="#2453C9">cache-first</text>
+<polyline points="250,420 600,420 950,420" fill="none" stroke="#5C6676" stroke-width="5"></polyline>
+<circle cx="250" cy="420" r="9" fill="#5C6676"></circle><circle cx="600" cy="420" r="9" fill="#5C6676"></circle><circle cx="950" cy="420" r="9" fill="#5C6676"></circle>
+<text x="975" y="425" font-size="18" font-weight="600" fill="#5C6676">policy-first</text>
+<polyline points="250,500 600,500 950,500" fill="none" stroke="#C2541D" stroke-width="5"></polyline>
+<circle cx="250" cy="500" r="9" fill="#C2541D"></circle><circle cx="600" cy="500" r="9" fill="#C2541D"></circle><circle cx="950" cy="500" r="9" fill="#C2541D"></circle>
+<text x="975" y="505" font-size="18" font-weight="600" fill="#C2541D">evidence-first</text>
+</g>
+<text x="600" y="330" font-size="34" font-weight="600" fill="#9AA3B0" text-anchor="middle"></text>
+<rect x="1180" y="40" width="500" height="520" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1204" y="80" font-size="18" font-weight="600" fill="#11151B">why</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">
+<text x="1204" y="120">A provider cache reuses an</text>
+<text x="1204" y="144">unchanged prefix, at block</text>
+<text x="1204" y="168">boundaries.</text>
+<text x="1204" y="212"><tspan font-family="IBM Plex Mono, monospace" font-size="15">cwa-message-blocks/v1</tspan> emits</text>
+<text x="1204" y="236">one block per item, so a break-</text>
+<text x="1204" y="260">point can sit between any two.</text>
+<text x="1204" y="304">History renders in the order said</text>
+<text x="1204" y="328">(R-7), so each turn appends.</text>
+<text x="1204" y="372">Retrieval changes with the</text>
+<text x="1204" y="396">question: the first article ends</text>
+<text x="1204" y="420">the shared prefix.</text>
+<text x="1204" y="472" font-family="IBM Plex Mono, monospace" font-size="15" fill="#11151B">tests/test_reuse.py</text>
+<text x="1204" y="496">a breakpoint after the history</text>
+<text x="1204" y="520">stays valid on the next call</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

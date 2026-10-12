@@ -1,0 +1,21 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T02:30:00Z"},
+  "title": "W8 Assembler Kata Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Agenda.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Agenda"},
+    "Form.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 The form"},
+    "Pipeline.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Part 1 The pipeline and four exits"},
+    "Loop.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 Part 2 The repair loop"},
+    "Ten.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 Part 2 Ten defects by stage"},
+    "Finish.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Part 3 The contributor's finish"},
+    "Uncovered.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Part 3 The uncovered defect"},
+    "Close.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Close"}
+  },
+  "order": ["Main.dc.html", "Agenda.dc.html", "Form.dc.html", "Pipeline.dc.html", "Loop.dc.html", "Ten.dc.html", "Finish.dc.html", "Uncovered.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

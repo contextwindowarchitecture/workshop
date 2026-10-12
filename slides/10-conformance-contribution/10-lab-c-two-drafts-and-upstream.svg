@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab C Two drafts and upstream</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 5 · LAB C · 45 MINUTES · DRAFTS/</span>
+<span>10 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Two drafts, then one step out of this repository</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Each draft is written against the three questions a maintainer asks.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Two drafts: the pull request description for a case, and a spec-change proposal whose worked example lets a profile's evaluation.result be an object. Then upstream.py copies the case into your fork and prints the remaining steps without touching git. Checkpoint 5 at the bottom right.">
+<defs>
+<marker id="dr10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="820" height="270" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="24" y="42" font-size="19" font-weight="600" fill="#2453C9">case-addition.md</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="24" y="88">The pull request description for a case. A worked</text>
+<text x="24" y="114">draft for the example is there; write yours.</text>
+<text x="24" y="166">If Lab B showed the corpus already covers your</text>
+<text x="24" y="192">defect, write the case-problem issue instead: does</text>
+<text x="24" y="218">the published case isolate it?</text>
+</g>
+<rect x="860" y="0" width="820" height="270" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="884" y="42" font-size="19" font-weight="600" fill="#2453C9">spec-change.md</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="884" y="88">The worked example: allow an object for a profile's</text>
+<text x="884" y="114">evaluation.result. W4 and W6 found it cannot hold a</text>
+<text x="884" y="140">suite's result without flattening it to a string.</text>
+<text x="884" y="192">Written to be argued with; its last section argues</text>
+<text x="884" y="218">with it. Then write your own.</text>
+</g>
+<rect x="0" y="310" width="1680" height="70" fill="#11151B"></rect>
+<text x="24" y="354" font-size="18" fill="#FFFFFF">uv run upstream.py --into &lt;your fork of the specification&gt; --case &lt;your id&gt;</text>
+<rect x="0" y="410" width="300" height="100" fill="#2453C9"></rect>
+<text x="22" y="452" font-size="16" fill="#FFFFFF">copies the case into</text>
+<text x="22" y="478" font-size="16" fill="#FFFFFF">conformance/cases/</text>
+<line x1="300" y1="460" x2="336" y2="460" stroke="#11151B" stroke-width="2" marker-end="url(#dr10)"></line>
+<text x="340" y="432" font-size="15" font-weight="600" fill="#4A5361">AND PRINTS WHAT REMAINS</text>
+<g font-size="16" fill="#11151B">
+<text x="340" y="468">the checker</text><text x="340" y="496">the generator move</text>
+<text x="560" y="468">the CHANGES.md bullet</text><text x="560" y="496">the listed assemblers</text>
+<text x="340" y="524">the signed commit</text>
+</g>
+<text x="0" y="586" font-size="16" fill="#C2541D">it never touches git</text>
+<text x="0" y="612" font-size="15" fill="#4A5361">the only step of this module that leaves this repository</text>
+<rect x="860" y="410" width="820" height="210" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="884" y="448" font-size="16" font-weight="600" fill="#4A5361">CHECKPOINT 5 · WHAT MAKES A DRAFT READY</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#9AA3B0">
+<text x="884" y="490">What must the case-addition draft name?</text><text x="884" y="520">What must it say about the rules?</text><text x="884" y="550">What must it report about the assemblers?</text>
+</g>
+<text x="884" y="596" font-size="14" fill="#4A5361">and the thing from this repository you would propose first</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

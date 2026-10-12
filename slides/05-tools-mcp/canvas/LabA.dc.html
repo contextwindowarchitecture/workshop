@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab A The guard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB A · 50 MINUTES · LABS/GUARD.PY</span>
+<span>06 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The guard reads the call, not the question</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Four checks, in order. The docstring is the specification.</p>
+</div>
+<svg width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Four checks in order on every tool call. In the wrong-workspace script the model asks about w_larkspur while Ada is signed in to w_kitewood, and the guard denies it by scope.">
+<defs>
+<marker id="ga" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="390" height="150" fill="#C2541D"></rect>
+<text x="24" y="44" font-size="22" font-weight="600" fill="#FFFFFF">check 1</text>
+<text x="24" y="90" font-size="17" fill="#FFFFFF">{{c1a}}</text>
+<text x="24" y="114" font-size="17" fill="#FFFFFF">{{c1b}}</text>
+<line x1="390" y1="75" x2="420" y2="75" stroke="#11151B" stroke-width="2" marker-end="url(#ga)"></line>
+<rect x="430" y="0" width="390" height="150" fill="#C2541D"></rect>
+<text x="454" y="44" font-size="22" font-weight="600" fill="#FFFFFF">check 2</text>
+<text x="454" y="90" font-size="17" fill="#FFFFFF">{{c2a}}</text>
+<text x="454" y="114" font-size="17" fill="#FFFFFF">{{c2b}}</text>
+<line x1="820" y1="75" x2="850" y2="75" stroke="#11151B" stroke-width="2" marker-end="url(#ga)"></line>
+<rect x="860" y="0" width="390" height="150" fill="#C2541D"></rect>
+<text x="884" y="44" font-size="22" font-weight="600" fill="#FFFFFF">check 3</text>
+<text x="884" y="90" font-size="17" fill="#FFFFFF">{{c3a}}</text>
+<text x="884" y="114" font-size="17" fill="#FFFFFF">{{c3b}}</text>
+<line x1="1250" y1="75" x2="1280" y2="75" stroke="#11151B" stroke-width="2" marker-end="url(#ga)"></line>
+<rect x="1290" y="0" width="390" height="150" fill="#C2541D"></rect>
+<text x="1314" y="44" font-size="22" font-weight="600" fill="#FFFFFF">check 4</text>
+<text x="1314" y="90" font-size="17" fill="#FFFFFF">{{c4a}}</text>
+<text x="1314" y="114" font-size="17" fill="#FFFFFF">{{c4b}}</text>
+<text x="0" y="214" font-size="18" font-weight="600" fill="#4A5361">06-WRONG-WORKSPACE · "WHAT PLAN IS LARKSPUR DESIGN ON?"</text>
+<rect x="0" y="236" width="560" height="120" fill="#FFFFFF" stroke="#11151B" stroke-width="2" stroke-dasharray="8 6"></rect>
+<text x="24" y="276" font-size="17" fill="#4A5361">the scripted model asks</text>
+<text x="24" y="314" font-size="19" fill="#11151B">workspace=<tspan fill="#C2541D" font-weight="600">w_larkspur</tspan></text>
+<line x1="560" y1="296" x2="640" y2="296" stroke="#11151B" stroke-width="2" marker-end="url(#ga)"></line>
+<rect x="650" y="236" width="500" height="120" fill="#FBF0EA" stroke="#C2541D" stroke-width="3"></rect>
+<text x="674" y="276" font-size="19" font-weight="600" fill="#C2541D">denied by scope</text>
+<text x="674" y="314" font-size="17" fill="#11151B">Ada is signed in to w_kitewood</text>
+<line x1="1150" y1="296" x2="1230" y2="296" stroke="#11151B" stroke-width="2" marker-end="url(#ga)"></line>
+<rect x="1240" y="236" width="440" height="120" fill="#2453C9"></rect>
+<text x="1264" y="276" font-size="17" fill="#FFFFFF">next turn, as task state,</text>
+<text x="1264" y="304" font-size="17" fill="#FFFFFF">and the model asks about</text>
+<text x="1264" y="332" font-size="17" fill="#FFFFFF">its own workspace</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif">
+<text x="0" y="424" font-size="22" font-weight="700" fill="#11151B">Not by reading the question, nor the observation, for danger words.</text>
+<text x="0" y="460" font-size="20" fill="#2E3540">The guard reads the call, the grant and the scope. Nothing else.</text>
+<text x="0" y="530" font-size="18" fill="#4A5361">CHECKPOINT 2 · why is the never-reason appended to a denial?</text>
+<text x="0" y="562" font-size="18" fill="{{ink}}" font-weight="600">{{why}}</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showAnswers":{"editor":"boolean","default":false},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.showAnswers ?? false;
+    const c = (a, b) => s ? [a, b] : ['?', ''];
+    const [c1a, c1b] = c('offered on this turn', '');
+    const [c2a, c2b] = c('arguments are an object', '');
+    const [c3a, c3b] = c('arguments match the', 'input schema');
+    const [c4a, c4b] = c('every scoped argument equals', 'the request’s scope value');
+    return {
+      c1a, c1b, c2a, c2b, c3a, c3b, c4a, c4b,
+      ink: s ? '#11151B' : '#9AA3B0',
+      why: s ? 'The denial becomes task state the model reads next turn; a reason it can relay beats a bare refusal.' : '?'
+    };
+  }
+}
+</script>
+</body>
+</html>

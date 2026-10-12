@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>What live runs showed</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>EVALS/RESULTS/ · 2026-10-11 · OMLX, LOCAL</span>
+<span>12 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">What live runs showed</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Cases that script a bad draft on purpose are scripted only, so a live run grades fewer than six.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Live cases passed: C1, gpt-oss-20b 2 of 4, Qwen3.6-35B-A3B 4 of 4 and promoted. C2, gpt-oss-20b 4 of 5, Qwen 4 of 5, nothing promoted. C3, gpt-oss-20b 2 of 4, Qwen 4 of 4 and promoted. Each failure is described beside it.">
+<g font-family="IBM Plex Mono, monospace">
+<g font-size="14" fill="#4A5361"><text x="0" y="20">capstone</text><text x="200" y="20">gpt-oss-20b-MXFP4-Q8</text><text x="940" y="20">Qwen3.6-35B-A3B-8bit, thinking off</text></g>
+<line x1="0" y1="34" x2="1680" y2="34" stroke="#11151B" stroke-width="2"></line>
+<g font-size="22" font-weight="600" fill="#2453C9"><text x="0" y="90">C1</text><text x="0" y="280">C2</text><text x="0" y="470">C3</text></g>
+<g>
+<text x="200" y="92" font-size="40" font-weight="600" fill="#11151B">2/4</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="320" y="72">The tool schema: a refill with no medication or</text><text x="320" y="94">dose. The action guard withholds; the encounter</text><text x="320" y="116">goes to the clinician. The notes were sound.</text></g>
+<text x="940" y="92" font-size="40" font-weight="600" fill="#11151B">4/4</text>
+<rect x="1060" y="66" width="140" height="34" fill="#2453C9"></rect><text x="1074" y="89" font-size="15" fill="#FFFFFF">promoted</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="1220" y="80">the refill queued with the</text><text x="1220" y="102">schema's arguments</text></g>
+</g>
+<g>
+<text x="200" y="282" font-size="40" font-weight="600" fill="#11151B">4/5</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="320" y="262">The failure moved between runs: needs_agent</text><text x="320" y="284">where a stage was expected. W11's lesson about</text><text x="320" y="306">a suite run once.</text></g>
+<text x="940" y="282" font-size="40" font-weight="600" fill="#11151B">4/5</text>
+<rect x="1060" y="256" width="140" height="34" fill="#C2541D"></rect><text x="1074" y="279" font-size="15" fill="#FFFFFF">not promoted</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="1220" y="262">04: the contract's members</text><text x="1220" y="284">without braces, a CRM note</text><text x="1220" y="306">cited; the ticket went to an agent</text></g>
+</g>
+<g>
+<text x="200" y="472" font-size="40" font-weight="600" fill="#11151B">2/4</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="320" y="452">The tool schema again: an invented order_type.</text><text x="320" y="474">Nothing queued; the request went to an advisor,</text><text x="320" y="496">the designed outcome.</text></g>
+<text x="940" y="472" font-size="40" font-weight="600" fill="#11151B">4/4</text>
+<rect x="1060" y="446" width="140" height="34" fill="#2453C9"></rect><text x="1074" y="469" font-size="15" fill="#FFFFFF">promoted</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="1220" y="460">the order and the case placed</text><text x="1220" y="482">with the schema's arguments</text></g>
+</g>
+<g stroke="#DADFE7" stroke-width="2"><line x1="0" y1="180" x2="1680" y2="180"></line><line x1="0" y1="370" x2="1680" y2="370"></line><line x1="0" y1="560" x2="1680" y2="560"></line></g>
+<text x="0" y="608" font-size="16" fill="#11151B">In C1 and C3 the action guard withheld every draft whose arguments the schema did not allow. A team's own promotion replaces the committed one.</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

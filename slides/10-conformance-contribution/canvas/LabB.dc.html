@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab B The specification's checker</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 4 · LAB B · 30 MINUTES · NEEDS THE SPEC SIBLING</span>
+<span>08 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Run what CI runs over a pull request</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">A case is added to a scratch copy of the specification; the sibling checkout is never modified.</p>
+</div>
+<svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="spec_check.py copies the specification sibling to scratch, adds your case and runs conformance/check.py, which checks schemas, digests, refusals, reason codes and stored reports. Two deliberate breakages and checkpoint 4 follow, with the question of whether the corpus already covers your defect.">
+<defs>
+<marker id="lb10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="300" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="40" font-size="17" font-weight="600" fill="#11151B">the spec sibling</text>
+<text x="22" y="72" font-size="14" fill="#4A5361">CWA_SIBLINGS_ROOT</text>
+<text x="22" y="94" font-size="14" fill="#4A5361">never modified</text>
+<line x1="300" y1="55" x2="356" y2="55" stroke="#11151B" stroke-width="2" marker-end="url(#lb10)"></line>
+<rect x="360" y="0" width="340" height="110" fill="#2453C9"></rect>
+<text x="382" y="40" font-size="17" font-weight="600" fill="#FFFFFF">scratch copy</text>
+<text x="382" y="72" font-size="14" fill="#DCE3F5">+ cases/&lt;your id&gt;/</text>
+<text x="382" y="94" font-size="14" fill="#DCE3F5">--keep to branch from</text>
+<line x1="700" y1="55" x2="756" y2="55" stroke="#11151B" stroke-width="2" marker-end="url(#lb10)"></line>
+<rect x="760" y="0" width="920" height="110" fill="#11151B"></rect>
+<text x="782" y="40" font-size="17" font-weight="600" fill="#FFFFFF">conformance/check.py</text>
+<text x="782" y="72" font-size="14" fill="#B9C3D6">uv run spec_check.py --case &lt;your id&gt;</text>
+<text x="0" y="160" font-size="17" font-weight="600" fill="#4A5361">WHAT IT CHECKS</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="0" y="200">every case against the schemas</text>
+<text x="0" y="234">its digest against the definition</text>
+<text x="0" y="268">a refusal with no payload file</text>
+<text x="0" y="302">reason codes against the requirements</text>
+<text x="0" y="336">the listed implementations' stored</text>
+<text x="0" y="360">reports against the corpus as it now stands</text>
+</g>
+<text x="560" y="160" font-size="17" font-weight="600" fill="#4A5361">BREAK IT ON PURPOSE, IN THE SCRATCH COPY</text>
+<rect x="560" y="180" width="540" height="90" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="580" y="214" font-size="15" fill="#11151B">edit the digest in expected.trace.json</text>
+<text x="580" y="248" font-size="14" fill="{{ink}}">{{b1}}</text>
+<rect x="560" y="284" width="540" height="90" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="580" y="318" font-size="15" fill="#11151B">a stray expected.payload.txt by a refusal</text>
+<text x="580" y="352" font-size="14" fill="{{ink}}">{{b2}}</text>
+<rect x="1140" y="150" width="540" height="224" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="1164" y="188" font-size="17" font-weight="600" fill="#2453C9">THE LAST QUESTION</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="1164" y="228">Does the corpus already cover</text>
+<text x="1164" y="254">your defect? The manifest's</text>
+<text x="1164" y="280">breaks list names the published</text>
+<text x="1164" y="306">cases for the ten; for an uncovered</text>
+<text x="1164" y="332">one, a refused duplicate id says so.</text>
+</g>
+<rect x="0" y="410" width="1680" height="210" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="448" font-size="16" font-weight="600" fill="#4A5361">CHECKPOINT 4 · WHAT CHECK.PY PRINTED, WHO COVERS YOUR DEFECT, HOW YOURS COMPARES</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="{{ink}}">
+<text x="24" y="490">{{k1}}</text><text x="24" y="520">{{k2}}</text><text x="24" y="550">{{k3}}</text>
+</g>
+<text x="24" y="596" font-size="15" fill="#4A5361">a case that duplicates a published one is not a pull request; one that isolates what the published one reaches by accident may be</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showAnswers":{"editor":"boolean","default":false},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.showAnswers ?? false;
+    return {
+      ink: s ? '#11151B' : '#9AA3B0',
+      b1: s ? 'snapshot_digest does not match the normalized snapshot' : 'what does check.py print?',
+      b2: s ? 'refusal has an expected.payload.txt' : 'what does check.py print?',
+      k1: s ? 'ok, with the count one higher than the vendored corpus.' : 'What did check.py print with your case added?',
+      k2: s ? 'For the ten manifest defects, the breaks list names the published cases.' : 'Which published case, if any, covers your defect?',
+      k3: s ? 'The published case usually reaches the defect among other decisions; yours isolates it.' : 'Does yours isolate it more narrowly, or less?'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>C The last mile</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>MODULE C · PROVIDER · PART 1 · §1</span>
+<span>09 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The adapter adds nothing</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Map the renderer's intermediate representation onto a vendor's API, and prove by hash that what was sent is what was assembled.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="The cwa-messages/v1 representation has three channels: system, tools, and one user message. An adapter maps each onto an OpenAI-compatible request; the mapping is checkpoint 1. Below, what an adapter may add, and the three hashes send.py prints, the last two equal.">
+<defs>
+<marker id="lm9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="17" font-weight="600" fill="#4A5361">CWA-MESSAGES/V1 · {system, tools, messages}</text>
+<rect x="0" y="40" width="640" height="76" fill="#11151B"></rect>
+<text x="22" y="74" font-size="19" font-weight="600" fill="#FFFFFF">system</text><text x="22" y="100" font-size="14" fill="#B9C3D6">governance placed as system, in order</text>
+<rect x="0" y="128" width="640" height="76" fill="#11151B"></rect>
+<text x="22" y="162" font-size="19" font-weight="600" fill="#FFFFFF">tools</text><text x="22" y="188" font-size="14" fill="#B9C3D6">governance placed as tools</text>
+<rect x="0" y="216" width="640" height="112" fill="#2453C9"></rect>
+<text x="22" y="250" font-size="19" font-weight="600" fill="#FFFFFF">one user message</text>
+<text x="22" y="278" font-size="14" fill="#DCE3F5">every other item in placement order,</text>
+<text x="22" y="300" font-size="14" fill="#DCE3F5">prior turns included as a transcript</text>
+<text x="0" y="356" font-size="14" fill="#4A5361">cwa-message-blocks/v1: the same request, the user</text>
+<text x="0" y="378" font-size="14" fill="#4A5361">content as one {id, text} entry per item</text>
+<g stroke="#11151B" stroke-width="2">
+<line x1="640" y1="78" x2="736" y2="78" marker-end="url(#lm9)"></line>
+<line x1="640" y1="166" x2="736" y2="166" marker-end="url(#lm9)"></line>
+<line x1="640" y1="272" x2="736" y2="272" marker-end="url(#lm9)"></line>
+</g>
+<text x="740" y="22" font-size="17" font-weight="600" fill="#4A5361">OPENAI-COMPATIBLE REQUEST · CHECKPOINT 1</text>
+<rect x="740" y="40" width="940" height="76" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="762" y="86" font-size="17" fill="#11151B">system messages, one per entry, in order</text>
+<rect x="740" y="128" width="940" height="76" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="762" y="174" font-size="17" fill="#11151B">function definitions</text>
+<rect x="740" y="216" width="940" height="112" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="762" y="262" font-size="17" fill="#11151B">still the one user message</text>
+<text x="762" y="292" font-size="17" fill="#11151B">blocks joined with nothing between them</text>
+<text x="0" y="438" font-size="17" font-weight="600" fill="#2453C9">MAY ADD: STRUCTURE, NO TEXT</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#11151B"><text x="0" y="474">a cache breakpoint, a cache key, a lifetime</text></g>
+<text x="0" y="532" font-size="17" font-weight="600" fill="#C2541D">NEVER ADDS</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#11151B"><text x="0" y="568">a preamble, a suffix, a reformatting</text></g>
+<text x="0" y="620" font-size="14" fill="#4A5361">so the trace's token count and hash still describe what the model reads</text>
+<text x="740" y="438" font-size="17" font-weight="600" fill="#4A5361">UV RUN SEND.PY · THREE HASHES</text>
+<rect x="740" y="456" width="300" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="760" y="490" font-size="15" fill="#11151B">the payload's,</text><text x="760" y="516" font-size="15" fill="#11151B">from the trace</text>
+<rect x="1060" y="456" width="290" height="90" fill="#2453C9"></rect>
+<text x="1080" y="490" font-size="15" fill="#FFFFFF">texts the model</text><text x="1080" y="516" font-size="15" fill="#FFFFFF">reads</text>
+<text x="1357" y="512" font-size="30" font-weight="600" fill="#11151B">=</text>
+<rect x="1390" y="456" width="290" height="90" fill="#2453C9"></rect>
+<text x="1410" y="490" font-size="15" fill="#FFFFFF">texts the request</text><text x="1410" y="516" font-size="15" fill="#FFFFFF">carries</text>
+<text x="740" y="586" font-size="16" fill="#11151B">Proof: the adapter added, removed and changed no text, so the</text>
+<text x="740" y="612" font-size="16" fill="#11151B">trace’s count and hash describe the request.</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab B Fourteen models</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 3 · LAB B · 60 MINUTES · BENCH_READ.PY</span>
+<span>07 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Invariants first, then the measures, then the range</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The committed run of 2026-10-05: fourteen models, 2,380 jobs, $9.44 of a $30 cap.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Step 1: the invariants line, 5,460 of 5,460. Step 2: the measures, read across before down; which are at the ceiling and which spread is checkpoint 3. Step 3: an average with its range across ten repeats, drawn on a number line from 0.95 to 1.00.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="520" height="300" fill="#11151B"></rect>
+<text x="24" y="40" font-size="16" font-weight="600" fill="#B9C3D6">1 · THE INVARIANTS LINE</text>
+<text x="24" y="120" font-size="54" font-weight="600" fill="#FFFFFF">5,460</text>
+<text x="24" y="160" font-size="20" fill="#B9C3D6">of 5,460</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#B9C3D6"><text x="24" y="214">the same context to every model in 01 to 03;</text><text x="24" y="238">every request the rendered payload;</text><text x="24" y="262">every snapshot replayed</text></g>
+<rect x="560" y="0" width="540" height="300" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="584" y="40" font-size="16" font-weight="600" fill="#4A5361">2 · THE MEASURES, ACROSS</text>
+<g font-size="17" fill="#11151B"><text x="584" y="84">grounding · conflict · excluded</text><text x="584" y="112">refusal · claims · evals</text></g>
+<text x="584" y="164" font-size="14" fill="#4A5361">at or near the ceiling for every model</text>
+<rect x="584" y="174" width="492" height="38" fill="#EEF1F8"></rect><text x="598" y="199" font-size="16" fill="#11151B">conflict · excluded · refusal</text>
+<text x="584" y="236" font-size="14" fill="#4A5361">where the models spread</text>
+<rect x="584" y="246" width="492" height="38" fill="#FBF0EA"></rect><text x="598" y="271" font-size="16" fill="#11151B">claims · evals</text>
+<rect x="1140" y="0" width="540" height="300" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="1164" y="40" font-size="16" font-weight="600" fill="#2453C9">3 · --measure grounding</text>
+<line x1="1180" y1="180" x2="1640" y2="180" stroke="#DADFE7" stroke-width="2"></line>
+<g font-size="14" fill="#4A5361"><text x="1166" y="214">0.95</text><text x="1622" y="214">1.00</text></g>
+<line x1="1180" y1="172" x2="1180" y2="188" stroke="#4A5361" stroke-width="2"></line><line x1="1640" y1="172" x2="1640" y2="188" stroke="#4A5361" stroke-width="2"></line>
+<line x1="1254" y1="180" x2="1604" y2="180" stroke="#2453C9" stroke-width="6"></line>
+<line x1="1254" y1="164" x2="1254" y2="196" stroke="#2453C9" stroke-width="3"></line>
+<circle cx="1603" cy="180" r="11" fill="#C2541D"></circle>
+<text x="1560" y="146" font-size="15" fill="#C2541D">0.996</text>
+<text x="1232" y="146" font-size="15" fill="#2453C9">0.958</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="1164" y="252">average, and the worst of ten repeats</text><text x="1164" y="276">a suite run once reports whichever it got</text></g>
+<rect x="0" y="340" width="1680" height="280" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="380" font-size="16" font-weight="600" fill="#4A5361">CHECKPOINT 3</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="24" y="424">the invariants line, and the cost</text>
+<text x="24" y="474">the two measures where the models spread, and how far</text>
+<text x="24" y="524">one model's grounding average and its worst repeat</text>
+<text x="24" y="574">what a gate that runs its suite once would have seen</text>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">
+<text x="840" y="424">5,460 of 5,460; $9.44 of $30.00</text><text x="840" y="474">claims 15 to 29 of 30; evals 19 to 58 of 60</text><text x="840" y="524">deepseek-v4.1-flash: 0.996, worst 0.958</text><text x="840" y="574">one of ten repeats, passing or failing on which</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

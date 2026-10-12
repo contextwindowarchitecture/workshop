@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 1 Seven failure modes</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 1 · 15 MINUTES · THE PROBLEM</span>
+<span>03 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">What goes wrong when a prompt is a string</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Seven failure modes, each reproducible on the demo.</p>
+</div>
+<svg width="1680" height="680" viewBox="0 0 1680 680" role="img" aria-label="Seven failure modes: authority inversion, instruction-shaped evidence, stale-as-current, memory that never expires, displacement under budget, redundant re-reading, missing trigger">
+<defs>
+<marker id="fm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C2541D"></path></marker>
+</defs>
+<g font-family="IBM Plex Sans, sans-serif" fill="#11151B">
+<g transform="translate(0,0)">
+<rect width="405" height="325" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<g transform="translate(28,28)" aria-hidden="true">
+<rect x="0" y="0" width="90" height="34" fill="none" stroke="#2453C9" stroke-width="2.5"></rect>
+<rect x="20" y="52" width="50" height="22" fill="#C2541D"></rect>
+<line x1="45" y1="52" x2="45" y2="38" stroke="#C2541D" stroke-width="2.5" marker-end="url(#fm)"></line>
+</g>
+<text x="28" y="148" font-size="23" font-weight="700">Authority inversion</text>
+<text x="28" y="192" font-size="19" fill="#2E3540">Imperative text in a document, a</text>
+<text x="28" y="220" font-size="19" fill="#2E3540">tool result or a pasted message</text>
+<text x="28" y="248" font-size="19" fill="#2E3540">changes the model's behaviour.</text>
+</g>
+<g transform="translate(425,0)">
+<rect width="405" height="325" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<g transform="translate(28,28)" aria-hidden="true">
+<rect x="0" y="0" width="70" height="80" fill="none" stroke="#11151B" stroke-width="2.5"></rect>
+<line x1="12" y1="18" x2="58" y2="18" stroke="#9AA3B0" stroke-width="3"></line>
+<line x1="12" y1="34" x2="58" y2="34" stroke="#C2541D" stroke-width="5"></line>
+<line x1="12" y1="50" x2="58" y2="50" stroke="#9AA3B0" stroke-width="3"></line>
+<line x1="12" y1="64" x2="44" y2="64" stroke="#9AA3B0" stroke-width="3"></line>
+</g>
+<text x="28" y="148" font-size="23" font-weight="700">Instruction-shaped evidence</text>
+<text x="28" y="192" font-size="19" fill="#2E3540">Evidence that reads like an</text>
+<text x="28" y="220" font-size="19" fill="#2E3540">instruction is followed as one.</text>
+</g>
+<g transform="translate(850,0)">
+<rect width="405" height="325" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<g transform="translate(28,28)" aria-hidden="true">
+<rect x="0" y="10" width="110" height="18" fill="#2453C9"></rect>
+<rect x="0" y="44" width="110" height="18" fill="#9AA3B0"></rect>
+<circle cx="140" cy="53" r="16" fill="none" stroke="#11151B" stroke-width="2.5"></circle>
+<line x1="140" y1="53" x2="140" y2="43" stroke="#11151B" stroke-width="2.5"></line>
+<line x1="140" y1="53" x2="148" y2="57" stroke="#11151B" stroke-width="2.5"></line>
+</g>
+<text x="28" y="148" font-size="23" font-weight="700">Stale-as-current</text>
+<text x="28" y="192" font-size="19" fill="#2E3540">An old fact stands level with a</text>
+<text x="28" y="220" font-size="19" fill="#2E3540">current one, and the model picks</text>
+<text x="28" y="248" font-size="19" fill="#2E3540">the wrong one.</text>
+</g>
+<g transform="translate(1275,0)">
+<rect width="405" height="325" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<g transform="translate(28,28)" aria-hidden="true">
+<path d="M 20 40 C 20 10, 60 10, 60 40 C 60 70, 100 70, 100 40 C 100 10, 60 10, 60 40 C 60 70, 20 70, 20 40 Z" fill="none" stroke="#C2541D" stroke-width="3"></path>
+</g>
+<text x="28" y="148" font-size="23" font-weight="700">Memory that never expires</text>
+<text x="28" y="192" font-size="19" fill="#2E3540">A months-old summary or inferred</text>
+<text x="28" y="220" font-size="19" fill="#2E3540">preference still steers answers,</text>
+<text x="28" y="248" font-size="19" fill="#2E3540">and nothing can revoke it.</text>
+</g>
+<g transform="translate(0,355)">
+<rect width="405" height="325" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<g transform="translate(28,28)" aria-hidden="true">
+<rect x="0" y="0" width="100" height="80" fill="none" stroke="#11151B" stroke-width="2.5"></rect>
+<rect x="10" y="12" width="80" height="14" fill="#9AA3B0"></rect>
+<rect x="10" y="34" width="80" height="14" fill="#9AA3B0"></rect>
+<rect x="10" y="56" width="130" height="14" fill="#2453C9"></rect>
+<line x1="100" y1="50" x2="100" y2="80" stroke="#C2541D" stroke-width="3" stroke-dasharray="4 4"></line>
+</g>
+<text x="28" y="148" font-size="23" font-weight="700">Displacement under budget</text>
+<text x="28" y="192" font-size="19" fill="#2E3540">The important part is pushed out,</text>
+<text x="28" y="220" font-size="19" fill="#2E3540">or cut mid-thought, as the</text>
+<text x="28" y="248" font-size="19" fill="#2E3540">window fills.</text>
+</g>
+<g transform="translate(425,355)">
+<rect width="405" height="325" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<g transform="translate(28,28)" aria-hidden="true">
+<rect x="0" y="4" width="110" height="18" fill="#9AA3B0"></rect>
+<rect x="0" y="32" width="110" height="18" fill="#9AA3B0"></rect>
+<rect x="0" y="60" width="110" height="18" fill="#9AA3B0"></rect>
+<text x="124" y="48" font-family="IBM Plex Mono, monospace" font-size="22" fill="#C2541D" font-weight="600">×n</text>
+</g>
+<text x="28" y="148" font-size="23" font-weight="700">Redundant re-reading</text>
+<text x="28" y="192" font-size="19" fill="#2E3540">The same text is sent again and</text>
+<text x="28" y="220" font-size="19" fill="#2E3540">again in a form no cache can</text>
+<text x="28" y="248" font-size="19" fill="#2E3540">reuse.</text>
+</g>
+<g transform="translate(850,355)">
+<rect width="405" height="325" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<g transform="translate(28,28)" aria-hidden="true">
+<rect x="0" y="0" width="110" height="80" fill="none" stroke="#C2541D" stroke-width="2.5" stroke-dasharray="8 6"></rect>
+<text x="42" y="54" font-family="IBM Plex Mono, monospace" font-size="34" font-weight="600" fill="#C2541D">?</text>
+</g>
+<text x="28" y="148" font-size="23" font-weight="700">Missing trigger</text>
+<text x="28" y="192" font-size="19" fill="#2E3540">The model is not told what, in all</text>
+<text x="28" y="220" font-size="19" fill="#2E3540">that context, it is being asked to</text>
+<text x="28" y="248" font-size="19" fill="#2E3540">respond to.</text>
+</g>
+<g transform="translate(1275,355)">
+<rect width="405" height="325" fill="#11151B"></rect>
+<text x="28" y="60" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="600" fill="#FFFFFF">Checkpoint 1</text>
+<text x="28" y="112" font-size="21" fill="#FFFFFF">For each of the seven: which</text>
+<text x="28" y="142" font-size="21" fill="#FFFFFF">system you have worked on</text>
+<text x="28" y="172" font-size="21" fill="#FFFFFF">has shown it, or "not seen".</text>
+<text x="28" y="228" font-size="21" fill="#B9C3D6">You should recognise at</text>
+<text x="28" y="258" font-size="21" fill="#B9C3D6">least three.</text>
+</g>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab D One construct</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 5 · LAB D · 45 MINUTES · EXPECTATIONS.EXAMPLE.TOML</span>
+<span>11 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">A construct a grader with no model can check</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">A CWA decision a case exercises, written as an expectation keyed by case. The checks are patterns, and say so.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="The worked example from W3a: the trace row, the expectation for winner and loser, and what the pattern would miss. Beside it, the four questions to answer before the phrases. Below, the expectation keys and checkpoint 5.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="980" height="420" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="24" y="38" font-size="16" font-weight="600" fill="#2453C9">W3A · 03-integration/02-ben-plan-conflict</text>
+<text x="24" y="78" font-size="14" font-weight="600" fill="#4A5361">THE TRACE ROW</text>
+<text x="24" y="106" font-size="16" fill="#11151B">conflicts[fact:plan].winner = account:w_kitewood:plan</text>
+<text x="24" y="132" font-size="16" fill="#11151B">excluded mem:u_ben:0002 conflict_lost</text>
+<text x="24" y="182" font-size="14" font-weight="600" fill="#4A5361">THE EXPECTATION</text>
+<rect x="24" y="196" width="932" height="96" fill="#11151B"></rect>
+<text x="44" y="230" font-size="16" fill="#FFFFFF">answer   = { mentions_any = ["Business"] }</text>
+<text x="44" y="258" font-size="16" fill="#FFFFFF">conflict = { winner = ["Business"], loser = ["you are on the Team plan", ...] }</text>
+<text x="44" y="282" font-size="16" fill="#FFFFFF">excluded = { mentions_none = ["on the Team plan"] }</text>
+<text x="24" y="332" font-size="14" font-weight="600" fill="#C2541D">WHAT IT WOULD MISS</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#11151B">
+<text x="24" y="360">"your current plan", unnamed, passes loser and fails winner on a technicality;</text>
+<text x="24" y="384">"not the Team plan" fails loser while siding with the winner. Read the answer.</text>
+</g>
+<rect x="1020" y="0" width="660" height="420" fill="#11151B"></rect>
+<text x="1044" y="38" font-size="16" font-weight="600" fill="#B9C3D6">BEFORE THE PHRASES</text>
+<g font-size="22" font-weight="600" fill="#C2541D"><text x="1044" y="96">1</text><text x="1044" y="186">2</text><text x="1044" y="276">3</text><text x="1044" y="366">4</text></g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#FFFFFF">
+<text x="1080" y="94">Which trace row does it exercise?</text>
+<text x="1080" y="184">What would ignoring it look like?</text>
+<text x="1080" y="274">What would respecting it look like?</text>
+<text x="1080" y="364">What phrasing would the pattern miss?</text>
+</g>
+<g font-size="14" fill="#B9C3D6">
+<text x="1080" y="120">below_threshold, conflict_lost, superseded_by</text>
+<text x="1080" y="210">mentions_none, loser</text>
+<text x="1080" y="300">must_cite, winner, mentions_any</text>
+<text x="1080" y="390">write it beside the expectation</text>
+</g>
+<text x="0" y="470" font-size="15" font-weight="600" fill="#4A5361">THE BENCH'S KEYS</text>
+<g font-size="15" fill="#11151B">
+<text x="0" y="504">answer.mentions_any</text><text x="0" y="532">grounding.must_cite</text><text x="0" y="560">conflict.winner · .loser</text>
+<text x="300" y="504">excluded.mentions_none</text><text x="300" y="532">untrusted.must_not_attempt</text><text x="300" y="560">actions.must_call · must_not_call</text>
+</g>
+<rect x="760" y="450" width="920" height="170" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="784" y="488" font-size="15" font-weight="600" fill="#4A5361">CHECKPOINT 5 · A THIRD, FROM YOUR MODULE OR CAPSTONE</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B"><text x="784" y="526">your construct · its trace row · its expectation · the phrasing it would miss</text></g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#9AA3B0"><text x="784" y="566">What makes one good?</text><text x="784" y="592"></text></g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

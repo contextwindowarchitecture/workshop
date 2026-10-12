@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Propose, then decide</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · THE EIGHT STAGES</span>
+<span>05 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">A producer proposes. The route decides.</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The first four stages are the producer's, done before assembly. The last four are the assembler's, and every exclusion is traced.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="400" viewBox="0 0 1680 400" role="img" aria-label="Producer stages: rewrite, retrieve, rerank, package. Assembler stages: admit, resolve, fit, render and trace.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="24" font-size="18" font-weight="600" fill="#2453C9">PRODUCER · BEFORE THE REQUEST</text>
+<text x="848" y="24" font-size="18" font-weight="600" fill="#11151B">ASSEMBLER · NEVER CALLS A MODEL</text>
+<polygon points="0,50 190,50 210,100 190,150 0,150" fill="#2453C9"></polygon>
+<polygon points="212,50 402,50 422,100 402,150 212,150 232,100" fill="#2453C9"></polygon>
+<polygon points="424,50 614,50 634,100 614,150 424,150 444,100" fill="#2453C9"></polygon>
+<polygon points="636,50 826,50 846,100 826,150 636,150 656,100" fill="#2453C9"></polygon>
+<polygon points="848,50 1038,50 1058,100 1038,150 848,150 868,100" fill="#11151B"></polygon>
+<polygon points="1060,50 1250,50 1270,100 1250,150 1060,150 1080,100" fill="#11151B"></polygon>
+<polygon points="1272,50 1462,50 1482,100 1462,150 1272,150 1292,100" fill="#11151B"></polygon>
+<polygon points="1484,50 1680,50 1680,150 1484,150 1504,100" fill="#11151B"></polygon>
+<g font-size="20" font-weight="600" fill="#FFFFFF">
+<text x="22" y="107">1 rewrite</text>
+<text x="252" y="107">2 retrieve</text>
+<text x="464" y="107">3 rerank</text>
+<text x="676" y="107">4 package</text>
+<text x="888" y="107">5 admit</text>
+<text x="1100" y="107">6 resolve</text>
+<text x="1312" y="107">7 fit</text>
+<text x="1520" y="96">8 render</text>
+<text x="1520" y="120">&amp; trace</text>
+</g>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#2E3540">
+<text x="0" y="192">Keep the rewritten</text><text x="0" y="216">query to explain</text><text x="0" y="240">results later.</text>
+<text x="222" y="192">From sources whose</text><text x="222" y="216">provenance you can</text><text x="222" y="240">name.</text>
+<text x="434" y="192">Score into relevance.</text><text x="434" y="216">Report a dropped near-</text><text x="434" y="240">duplicate (R-13).</text>
+<text x="646" y="192">One item per chunk,</text><text x="646" y="216">never one merged</text><text x="646" y="240">blob (R-13).</text>
+<text x="858" y="192">Schema, sender, slot,</text><text x="858" y="216">authority, scope, age,</text><text x="858" y="240">min_relevance.</text>
+<text x="1070" y="192">Conflicts, then</text><text x="1070" y="216">superseded, exact</text><text x="1070" y="240">duplicates, source caps.</text>
+<text x="1282" y="192">Shed by tier under</text><text x="1282" y="216">budget, or refuse</text><text x="1282" y="240">(R-16, R-17).</text>
+<text x="1494" y="192">Render in profile</text><text x="1494" y="216">order; account for</text><text x="1494" y="240">every decision.</text>
+</g>
+<line x1="0" y1="290" x2="1680" y2="290" stroke="#DADFE7" stroke-width="2"></line>
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="336" font-size="18" font-weight="600" fill="#C2541D">THE PRODUCER DOES NOT</text>
+<g font-size="20" fill="#11151B">
+<text x="0" y="376">filter by relevance</text>
+<text x="300" y="376">cap by source</text>
+<text x="530" y="376">drop exact duplicates</text>
+<text x="830" y="376">trim to a budget</text>
+<text x="1080" y="376">call a model during a request</text>
+</g>
+</g>
+</svg>
+<p style="margin: 0; font-size: 23px; line-height: 1.45; color: #2E3540; max-width: 1560px">Those are the route's rules, so every item the assembler leaves out is a row in the trace with a reason. A chunk the producer filters out itself is a threshold the trace can never show working.</p>
+</div>
+</foreignObject>
+</svg>

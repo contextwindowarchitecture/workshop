@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>W7 Production</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 7</span>
+<span>01 / 10</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 1000px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: #2453C9; font-weight: 500">W7 · Production</div>
+<h1 style="margin: 0; font-size: 116px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">Store, emit, gate, decide</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 920px">Leave with an operating playbook: what to store, what to emit, what gates a deployment, and what the application does with each refusal.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="620" viewBox="0 0 620 620" role="img" aria-label="W5's agent in the middle, surrounded by the store, telemetry, evals and the deployment gate">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="180" y="220" width="260" height="180" fill="#11151B"></rect>
+<text x="310" y="300" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">W5's agent</text>
+<text x="310" y="332" font-size="15" fill="#B9C3D6" text-anchor="middle">unchanged</text>
+<rect x="180" y="0" width="260" height="140" fill="#2453C9"></rect>
+<text x="310" y="64" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">store</text>
+<text x="310" y="94" font-size="14" fill="#FFFFFF" text-anchor="middle">snapshots by digest</text>
+<rect x="0" y="240" width="140" height="140" fill="#2453C9"></rect>
+<text x="70" y="304" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">spans</text>
+<text x="70" y="330" font-size="13" fill="#FFFFFF" text-anchor="middle">no content</text>
+<rect x="480" y="240" width="140" height="140" fill="#2453C9"></rect>
+<text x="550" y="304" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">evals</text>
+<text x="550" y="330" font-size="13" fill="#FFFFFF" text-anchor="middle">graded on</text>
+<text x="550" y="348" font-size="13" fill="#FFFFFF" text-anchor="middle">the record</text>
+<rect x="180" y="480" width="260" height="140" fill="#C2541D"></rect>
+<text x="310" y="544" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">gate</text>
+<text x="310" y="574" font-size="14" fill="#FFFFFF" text-anchor="middle">lock · evaluated · model</text>
+<g stroke="#11151B" stroke-width="2">
+<line x1="310" y1="140" x2="310" y2="220"></line>
+<line x1="140" y1="310" x2="180" y2="310"></line>
+<line x1="440" y1="310" x2="480" y2="310"></line>
+<line x1="310" y1="400" x2="310" y2="480"></line>
+</g>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>Half a day</span>
+<span style="color: #9AA3B0">/</span>
+<span>Model-free; live and OTLP optional</span>
+<span style="color: #9AA3B0">/</span>
+<span>After W5; W6 helps</span>
+</div>
+</div>
+</foreignObject>
+</svg>

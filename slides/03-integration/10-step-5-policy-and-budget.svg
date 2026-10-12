@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Step 5 Policy and budget</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>STEP 5 · 60 MINUTES · AFTER/POLICY/</span>
+<span>10 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Defend every number in the policy</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The route policy, the profile with its version, and a budget computed from the model's limit (R-16).</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="The model's context limit splits into budget.input and reserved_output. Three numbers to defend: the relevance threshold, the history cap and the tokenizer margin.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="18" font-weight="600" fill="#4A5361">CONTEXT.BUDGET() FROM POLICY/ASSEMBLY.JSON</text>
+<rect x="0" y="44" width="1680" height="20" fill="none" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="0" y="96" font-size="18" fill="#11151B">the model's context limit <tspan fill="#9AA3B0" font-weight="600">?</tspan></text>
+<rect x="0" y="120" width="1470" height="80" fill="#2453C9"></rect>
+<text x="24" y="168" font-size="22" font-weight="600" fill="#FFFFFF">budget.input <tspan font-weight="400">?</tspan></text>
+<rect x="1470" y="120" width="210" height="80" fill="#C2541D"></rect>
+<text x="1486" y="156" font-size="16" fill="#FFFFFF">reserved_output</text>
+<text x="1486" y="182" font-size="16" fill="#FFFFFF">?</text>
+<line x1="0" y1="250" x2="1680" y2="250" stroke="#DADFE7" stroke-width="2"></line>
+<text x="0" y="294" font-size="18" font-weight="600" fill="#4A5361">THREE NUMBERS TO SAY ALOUD</text>
+<rect x="0" y="316" width="540" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="24" y="356" font-size="20" font-weight="600" fill="#11151B">relevance threshold</text>
+<text x="24" y="404" font-size="34" font-weight="600" fill="#9AA3B0">?</text>
+<text x="24" y="448" font-size="15" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">Why this value, on this corpus?</text>
+<text x="24" y="472" font-size="15" fill="#2E3540" font-family="IBM Plex Sans, sans-serif"></text>
+<rect x="570" y="316" width="540" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="594" y="356" font-size="20" font-weight="600" fill="#11151B">history cap</text>
+<text x="594" y="404" font-size="34" font-weight="600" fill="#9AA3B0">?</text>
+<text x="594" y="448" font-size="15" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">What does it drop, and what must it keep?</text>
+<text x="594" y="472" font-size="15" fill="#2E3540" font-family="IBM Plex Sans, sans-serif"></text>
+<rect x="1140" y="316" width="540" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
+<text x="1164" y="356" font-size="20" font-weight="600" fill="#11151B">tokenizer margin</text>
+<text x="1164" y="404" font-size="34" font-weight="600" fill="#9AA3B0">?</text>
+<text x="1164" y="448" font-size="15" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">What error does it cover?</text>
+<text x="1164" y="472" font-size="15" fill="#2E3540" font-family="IBM Plex Sans, sans-serif"></text>
+<text x="0" y="566" font-size="17" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">Notice: the off-topic question refuses only once <tspan font-family="IBM Plex Mono, monospace">requires_evidence</tspan>, <tspan font-family="IBM Plex Mono, monospace">min_included</tspan> and the threshold are in the route policy. Before that, it assembles with no evidence.</text>
+</g>
+</svg>
+<div style="font-size: 22px; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #11151B">policy/profile.json</span> · version 1, unevaluated. W6 evaluates it; until then R-19 says it does not deploy.</div>
+</div>
+</foreignObject>
+</svg>

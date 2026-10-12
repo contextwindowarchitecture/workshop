@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 2 Ten defects by stage</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 2 · DEFECTS/MANIFEST.JSON</span>
+<span>06 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Ten one-line defects, by stage</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Each breaks at least one published case. Two share a case, which passes only when both are fixed.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Ten defects: tokenizer, deduplication, supersession, source diversity, render order, string ordering, fitting's margin, and three in admission.">
+<g font-family="IBM Plex Mono, monospace">
+<g transform="translate(0,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">tokenizer</text><text x="22" y="74" font-size="13" fill="#4A5361">estimate_utf8.py</text><text x="22" y="150" font-size="15" fill="#C2541D">?</text></g>
+<g transform="translate(340,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">deduplication</text><text x="22" y="74" font-size="13" fill="#4A5361">dedupe.py</text><text x="22" y="150" font-size="15" fill="#C2541D"></text></g>
+<g transform="translate(680,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">supersession</text><text x="22" y="74" font-size="13" fill="#4A5361">supersede.py</text><text x="22" y="150" font-size="15" fill="#C2541D"></text></g>
+<g transform="translate(1020,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">source diversity</text><text x="22" y="74" font-size="13" fill="#4A5361">diversity.py</text><text x="22" y="150" font-size="15" fill="#C2541D"></text><text x="22" y="172" font-size="15" fill="#C2541D"></text></g>
+<g transform="translate(1360,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">render order</text><text x="22" y="74" font-size="13" fill="#4A5361">render/</text><text x="22" y="150" font-size="15" fill="#C2541D"></text></g>
+<g transform="translate(0,230)"><rect width="320" height="200" fill="#FBF0EA" stroke="#C2541D" stroke-width="3"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#C2541D">string ordering</text><text x="22" y="74" font-size="13" fill="#4A5361">strings.py · takes longest</text><text x="22" y="150" font-size="15" fill="#C2541D"></text><text x="22" y="172" font-size="13" fill="#C2541D"></text></g>
+<g transform="translate(340,230)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">fitting's margin</text><text x="22" y="74" font-size="13" fill="#4A5361">model.py</text><text x="22" y="150" font-size="15" fill="#C2541D"></text></g>
+<g transform="translate(680,230)"><rect width="320" height="200" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">admission</text><text x="22" y="74" font-size="13" fill="#4A5361">admission.py</text><text x="22" y="150" font-size="15" fill="#C2541D"></text><text x="22" y="180" font-size="13" fill="#C2541D"></text></g>
+<g transform="translate(1020,230)"><rect width="320" height="200" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">admission</text><text x="22" y="74" font-size="13" fill="#4A5361">admission.py</text><text x="22" y="150" font-size="15" fill="#C2541D"></text></g>
+<g transform="translate(1360,230)"><rect width="320" height="200" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">admission</text><text x="22" y="74" font-size="13" fill="#4A5361">admission.py</text><text x="22" y="150" font-size="15" fill="#C2541D"></text><text x="22" y="172" font-size="15" fill="#C2541D"></text><text x="22" y="194" font-size="13" fill="#C2541D"></text></g>
+<text x="0" y="500" font-size="17" fill="#4A5361">CHECKPOINT 2 · THE REPAIR LOG, TEN ROWS</text>
+<text x="0" y="534" font-size="18" fill="#11151B">case · stage · the test you wrote · the line you changed</text>
+<text x="0" y="580" font-size="15" fill="#4A5361">Fixed but still failing? kata.py hint says when a case is reached by two. Stale bytecode after a same-length edit: delete __pycache__.</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

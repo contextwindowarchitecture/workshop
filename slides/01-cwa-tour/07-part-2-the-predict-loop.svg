@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 2 The predict loop</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 2 · 90 MINUTES · HOW TO WORK EACH EXERCISE</span>
+<span>07 / 11</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Predict first. Every time.</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The predict sheet is the point. <span style="font-family: 'IBM Plex Mono', monospace">reveal</span> comes last.</p>
+</div>
+<div style="display: flex; gap: 80px; align-items: flex-start">
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="640" viewBox="0 0 820 640" role="img" aria-label="A loop: predict, run, check against the trace, reveal, then the next exercise">
+<defs>
+<marker id="lp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<circle cx="410" cy="320" r="220" fill="none" stroke="#DADFE7" stroke-width="2"></circle>
+<path d="M 552 154 A 220 220 0 0 1 622 262" fill="none" stroke="#11151B" stroke-width="2.5" marker-end="url(#lp)"></path>
+<path d="M 622 378 A 220 220 0 0 1 561 480" fill="none" stroke="#11151B" stroke-width="2.5" marker-end="url(#lp)"></path>
+<path d="M 259 480 A 220 220 0 0 1 198 378" fill="none" stroke="#11151B" stroke-width="2.5" marker-end="url(#lp)"></path>
+<path d="M 198 262 A 220 220 0 0 1 268 154" fill="none" stroke="#11151B" stroke-width="2.5" marker-end="url(#lp)"></path>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="290" y="56" width="240" height="96" fill="#2453C9"></rect>
+<text x="314" y="96" font-size="26" font-weight="600" fill="#FFFFFF">1 predict</text>
+<text x="314" y="128" font-size="16" fill="#FFFFFF">code · result</text>
+<rect x="560" y="272" width="250" height="96" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="584" y="312" font-size="26" font-weight="600" fill="#11151B">2 run</text>
+<text x="584" y="344" font-size="16" fill="#2E3540">tour.py run &lt;id&gt;</text>
+<rect x="290" y="488" width="240" height="96" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="314" y="528" font-size="26" font-weight="600" fill="#11151B">3 check</text>
+<text x="314" y="560" font-size="16" fill="#2E3540">against the trace</text>
+<rect x="10" y="272" width="250" height="96" fill="#FFFFFF" stroke="#C2541D" stroke-width="2"></rect>
+<text x="34" y="312" font-size="26" font-weight="600" fill="#C2541D">4 reveal</text>
+<text x="34" y="344" font-size="16" fill="#2E3540">tour.py reveal &lt;id&gt;</text>
+<text x="350" y="314" font-size="22" fill="#4A5361">×13</text>
+<text x="300" y="344" font-size="16" fill="#4A5361">diff when bytes</text>
+<text x="300" y="366" font-size="16" fill="#4A5361">change, not decisions</text>
+</g>
+</svg>
+<div style="display: flex; flex-direction: column; gap: 32px; flex-grow: 1; padding-top: 24px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">READING THE DECISIONS TABLE</div>
+<div style="display: flex; flex-direction: column; gap: 20px; font-size: 28px">
+<div style="display: flex; gap: 28px; align-items: baseline"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9; width: 40px">+</span><span>included</span></div>
+<div style="display: flex; gap: 28px; align-items: baseline"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #C2541D; width: 40px">-</span><span>excluded, with reason and stage</span></div>
+<div style="display: flex; gap: 28px; align-items: baseline"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; width: 40px">~</span><span>compressed</span></div>
+<div style="display: flex; gap: 28px; align-items: baseline"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; width: 40px">!</span><span>conflict</span></div>
+</div>
+<div style="height: 2px; background: #DADFE7"></div>
+<p style="margin: 0; font-size: 24px; line-height: 1.45; color: #2E3540">A code surprises you? Open <span style="font-family: 'IBM Plex Mono', monospace; color: #11151B">contract/reasons.json</span>. Its order is the order the assembler records: an item that fails several checks gets the earliest code (R-21).</p>
+<p style="margin: 0; font-size: 24px; line-height: 1.45; color: #2E3540">The bar: eight of thirteen right. For each miss, find the sentence in <span style="font-family: 'IBM Plex Mono', monospace; color: #11151B">SPEC.md</span> that explains it.</p>
+</div>
+</div>
+</div>
+</foreignObject>
+</svg>

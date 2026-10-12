@@ -1,0 +1,25 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T04:00:00Z"},
+  "title": "W9 Adapters Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Agenda.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 Agenda"},
+    "Seams.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 Four seams"},
+    "Duties.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 A The seven duties"},
+    "Retriever.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 A Retriever and memory"},
+    "Mcp.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 A An MCP server proposes"},
+    "Exits.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 B Three exits"},
+    "Harness.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 B The harness"},
+    "LastMile.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 C The last mile"},
+    "Breakpoint.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 C The lab and the breakpoint"},
+    "Briefing.dc.html": {"x": 2000, "y": 3600, "w": 1920, "h": 1080, "title": "11 D Before and after"},
+    "HostLabs.dc.html": {"x": 4000, "y": 3600, "w": 1920, "h": 1080, "title": "12 D Port, score, refuse"},
+    "Close.dc.html": {"x": 0, "y": 4800, "w": 1920, "h": 1080, "title": "13 Close"}
+  },
+  "order": ["Main.dc.html", "Agenda.dc.html", "Seams.dc.html", "Duties.dc.html", "Retriever.dc.html", "Mcp.dc.html", "Exits.dc.html", "Harness.dc.html", "LastMile.dc.html", "Breakpoint.dc.html", "Briefing.dc.html", "HostLabs.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

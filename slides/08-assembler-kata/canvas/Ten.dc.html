@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 2 Ten defects by stage</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 2 · DEFECTS/MANIFEST.JSON</span>
+<span>06 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Ten one-line defects, by stage</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Each breaks at least one published case. Two share a case, which passes only when both are fixed.</p>
+</div>
+<svg width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Ten defects: tokenizer, deduplication, supersession, source diversity, render order, string ordering, fitting's margin, and three in admission.">
+<g font-family="IBM Plex Mono, monospace">
+<g transform="translate(0,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">tokenizer</text><text x="22" y="74" font-size="13" fill="#4A5361">estimate_utf8.py</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d1}}</text></g>
+<g transform="translate(340,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">deduplication</text><text x="22" y="74" font-size="13" fill="#4A5361">dedupe.py</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d2}}</text></g>
+<g transform="translate(680,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">supersession</text><text x="22" y="74" font-size="13" fill="#4A5361">supersede.py</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d3}}</text></g>
+<g transform="translate(1020,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">source diversity</text><text x="22" y="74" font-size="13" fill="#4A5361">diversity.py</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d4a}}</text><text x="22" y="172" font-size="15" fill="{{ink}}">{{d4b}}</text></g>
+<g transform="translate(1360,0)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">render order</text><text x="22" y="74" font-size="13" fill="#4A5361">render/</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d5}}</text></g>
+<g transform="translate(0,230)"><rect width="320" height="200" fill="#FBF0EA" stroke="#C2541D" stroke-width="3"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#C2541D">string ordering</text><text x="22" y="74" font-size="13" fill="#4A5361">strings.py · takes longest</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d6}}</text><text x="22" y="172" font-size="13" fill="{{ink}}">{{d6b}}</text></g>
+<g transform="translate(340,230)"><rect width="320" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">fitting's margin</text><text x="22" y="74" font-size="13" fill="#4A5361">model.py</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d7}}</text></g>
+<g transform="translate(680,230)"><rect width="320" height="200" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">admission</text><text x="22" y="74" font-size="13" fill="#4A5361">admission.py</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d8}}</text><text x="22" y="180" font-size="13" fill="{{ink}}">{{shared}}</text></g>
+<g transform="translate(1020,230)"><rect width="320" height="200" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">admission</text><text x="22" y="74" font-size="13" fill="#4A5361">admission.py</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d9}}</text></g>
+<g transform="translate(1360,230)"><rect width="320" height="200" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect><text x="22" y="44" font-size="20" font-weight="600" fill="#11151B">admission</text><text x="22" y="74" font-size="13" fill="#4A5361">admission.py</text><text x="22" y="150" font-size="15" fill="{{ink}}">{{d10a}}</text><text x="22" y="172" font-size="15" fill="{{ink}}">{{d10b}}</text><text x="22" y="194" font-size="13" fill="{{ink}}">{{shared}}</text></g>
+<text x="0" y="500" font-size="17" fill="#4A5361">CHECKPOINT 2 · THE REPAIR LOG, TEN ROWS</text>
+<text x="0" y="534" font-size="18" fill="#11151B">case · stage · the test you wrote · the line you changed</text>
+<text x="0" y="580" font-size="15" fill="#4A5361">Fixed but still failing? kata.py hint says when a case is reached by two. Stale bytecode after a same-length edit: delete __pycache__.</text>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showAnswers":{"editor":"boolean","default":false},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.showAnswers ?? false;
+    const v = (x) => s ? x : '';
+    return {
+      ink: '#C2541D',
+      d1: s ? 'estimate-rounds-down' : '?',
+      d2: v('dedupe-compares-raw-bodies'),
+      d3: v('supersede-keeps-the-oldest'),
+      d4a: v('diversity-exempt-items-'), d4b: v('take-no-places'),
+      d5: v('history-renders-by-id'),
+      d6: v('strings-order-by-utf8'), d6b: v('ordering-astral-ids: one encoding name'),
+      d7: v('margin-rounds-down'),
+      d8: v('expired-is-exclusive'), shared: v('shares admission-reasons'),
+      d9: v('threshold-is-strict'),
+      d10a: v('missing-scope-key-'), d10b: v('is-a-wildcard')
+    };
+  }
+}
+</script>
+</body>
+</html>

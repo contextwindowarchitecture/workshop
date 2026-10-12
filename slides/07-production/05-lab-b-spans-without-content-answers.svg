@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab B Spans without content</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB B · 40 MINUTES · LABS/TELEMETRY_ATTRIBUTES.PY</span>
+<span>05 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Spans without content</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">What on-call sees at three in the morning, and what a tracing vendor stores for a year.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="620" viewBox="0 0 1680 620" role="img" aria-label="One run span with inference spans and tool-call spans beneath. Everything that identifies and explains the assembly goes into attributes; nothing a user wrote does. The snapshot digest links a span to the store.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="17" font-weight="600" fill="#4A5361">ONE SPAN PER RUN, INFERENCE AND TOOL CALL</text>
+<rect x="0" y="44" width="780" height="44" fill="#11151B"></rect><text x="16" y="73" font-size="16" fill="#FFFFFF">run</text>
+<rect x="40" y="100" width="300" height="40" fill="#2453C9"></rect><text x="56" y="126" font-size="15" fill="#FFFFFF">inference 1</text>
+<rect x="80" y="150" width="180" height="34" fill="#DCE3F5"></rect><text x="94" y="173" font-size="14" fill="#11151B">tool call</text>
+<rect x="290" y="196" width="300" height="40" fill="#2453C9"></rect><text x="306" y="222" font-size="15" fill="#FFFFFF">inference 2</text>
+<rect x="330" y="246" width="180" height="34" fill="#DCE3F5"></rect><text x="344" y="269" font-size="14" fill="#11151B">tool call</text>
+<rect x="540" y="292" width="240" height="40" fill="#2453C9"></rect><text x="556" y="318" font-size="15" fill="#FFFFFF">inference 3</text>
+<rect x="0" y="380" width="380" height="220" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="22" y="418" font-size="19" font-weight="600" fill="#2453C9">in</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">
+<text x="22" y="456">everything that identifies</text>
+<text x="22" y="480">and explains the assembly:</text>
+<text x="22" y="514">decisions and digests</text>
+</g>
+<rect x="400" y="380" width="380" height="220" fill="#FBF0EA" stroke="#C2541D" stroke-width="3"></rect>
+<text x="422" y="418" font-size="19" font-weight="600" fill="#C2541D">out</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#11151B">
+<text x="422" y="456">anything a user wrote:</text>
+<text x="422" y="480">the question, item bodies,</text>
+<text x="422" y="504">and the answer, which is</text>
+<text x="422" y="528">no better</text>
+</g>
+<rect x="860" y="0" width="820" height="400" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="884" y="40" font-size="17" font-weight="600" fill="#4A5361">CHECKPOINT 2 · YOUR ATTRIBUTE KEYS</text>
+<g font-size="17" fill="#11151B">
+<text x="884" y="84">profile · route policy · snapshot digest</text>
+<text x="884" y="114">payload hash · input tokens · budget</text>
+<text x="884" y="144">refused · recovery</text>
+<text x="884" y="174">included · compressed · excluded with reasons</text>
+<text x="884" y="204">conflicts · defaults filled</text>
+</g>
+<line x1="884" y1="236" x2="1656" y2="236" stroke="#DADFE7" stroke-width="1.5"></line>
+<text x="884" y="276" font-size="17" fill="#11151B">the one value that links a span to the</text>
+<text x="884" y="302" font-size="17" fill="#11151B">content without carrying it:</text>
+<text x="884" y="350" font-size="22" font-weight="600" fill="#2453C9">the snapshot digest</text>
+<rect x="860" y="430" width="820" height="170" fill="#11151B"></rect>
+<text x="884" y="472" font-size="17" font-weight="600" fill="#FFFFFF">test_attributes_carry_no_content</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#B9C3D6">
+<text x="884" y="510">Takes every sentence of every item body in the snapshot</text>
+<text x="884" y="536">and asserts none appears in your attributes.</text>
+<text x="884" y="572">Facilitator: add a body sentence on purpose and watch it fail.</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

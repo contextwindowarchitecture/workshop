@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Two halves</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · 10 MINUTES</span>
+<span>03 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">A claim tested in two halves</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">What the assembler did, and what the model did with it. Never one number for both.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Left: the assembler's half, needing no model: same snapshot gives the same bytes, the request sent is the payload, a refusal sends nothing; a failure is a bug. Right: the model's half: every number a statistical estimate about one model on one task. Below, four numbers from this module sorted into the two halves.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="820" height="340" fill="#11151B"></rect>
+<text x="28" y="46" font-size="18" font-weight="600" fill="#B9C3D6">THE ASSEMBLER'S HALF · NEEDS NO MODEL</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="22" fill="#FFFFFF">
+<text x="28" y="110">The same snapshot gives the same bytes</text>
+<text x="28" y="156">The request sent is the payload</text>
+<text x="28" y="202">A refusal sends nothing</text>
+</g>
+<g font-size="17" fill="#B9C3D6"><text x="700" y="110">R-23</text><text x="700" y="156">R-5</text><text x="700" y="202">R-17</text></g>
+<text x="28" y="300" font-size="16" fill="#B9C3D6">a failure here is a bug, never a finding about a model</text>
+<rect x="860" y="0" width="820" height="340" fill="#2453C9"></rect>
+<text x="888" y="46" font-size="18" font-weight="600" fill="#DCE3F5">THE MODEL'S HALF · AN ESTIMATE</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="22" fill="#FFFFFF">
+<text x="888" y="110">What a model does with context</text>
+<text x="888" y="140">assembled that way</text>
+<text x="888" y="202">Every number: one model, one task,</text>
+<text x="888" y="232">with a range beside the average</text>
+</g>
+<text x="888" y="300" font-size="16" fill="#DCE3F5">say of every number which half it belongs to</text>
+<text x="0" y="404" font-size="17" font-weight="600" fill="#4A5361">FOUR NUMBERS FROM THIS MODULE · WHICH HALF?</text>
+<g>
+<rect x="0" y="424" width="400" height="196" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="474" font-size="26" font-weight="600" fill="#11151B">5,460 / 5,460</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="22" y="510">invariants in the</text><text x="22" y="532">fourteen-model run</text></g>
+<text x="22" y="596" font-size="15" font-weight="600" fill="#11151B">assembler</text>
+</g>
+<g>
+<rect x="426" y="424" width="400" height="196" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="448" y="474" font-size="26" font-weight="600" fill="#2453C9">0.996</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="448" y="510">a grounding average, with a</text><text x="448" y="532">worst repeat of 0.958</text></g>
+<text x="448" y="596" font-size="15" font-weight="600" fill="#2453C9">model</text>
+</g>
+<g>
+<rect x="852" y="424" width="400" height="196" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="874" y="474" font-size="26" font-weight="600" fill="#11151B">220,608</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="874" y="510">assemblies on four assemblers,</text><text x="874" y="532">each equal to the prediction</text></g>
+<text x="874" y="596" font-size="15" font-weight="600" fill="#11151B">assembler</text>
+</g>
+<g>
+<rect x="1278" y="424" width="402" height="196" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
+<text x="1300" y="474" font-size="26" font-weight="600" fill="#2453C9">+0.009</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="1300" y="510">model-written state against</text><text x="1300" y="532">pinned truncation, [−0.025, +0.040]</text></g>
+<text x="1300" y="596" font-size="15" font-weight="600" fill="#2453C9">model</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>The application's duties</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>THE ACCEPTANCE CRITERIA · SPEC §1</span>
+<span>05 / 12</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">What no component can do for the application</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Nine MUSTs. The inventory's last table, and where each lands in <span style="font-family: 'IBM Plex Mono', monospace">after/</span>.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Nine application duties with their requirement and where each lands in the migrated application">
+<g font-family="IBM Plex Mono, monospace" font-size="17" font-weight="600" fill="#4A5361">
+<text x="0" y="22">DUTY</text><text x="800" y="22">REQ</text><text x="960" y="22">WHERE IT LANDS</text>
+</g>
+<line x1="0" y1="38" x2="1680" y2="38" stroke="#11151B" stroke-width="2"></line>
+<g font-family="IBM Plex Sans, sans-serif" font-size="20" fill="#11151B">
+<text x="0" y="78">Enforce invariants outside the model</text>
+<text x="0" y="140">Write state itself, never from model output</text>
+<text x="0" y="202">Declare conflict groups</text>
+<text x="0" y="264">Authenticate each producer; bind identity outside the items</text>
+<text x="0" y="326">Make every external read before freezing; refreeze to retry</text>
+<text x="0" y="388">Set parser: true where a downstream parser exists</text>
+<text x="0" y="450">Set budget.input from the context limit less reserved_output</text>
+<text x="0" y="512">Version profiles; deploy only evaluated ones</text>
+<text x="0" y="574">Hand the payload over unchanged, with no text of its own</text>
+</g>
+<g font-family="IBM Plex Mono, monospace" font-size="18" fill="#2453C9" font-weight="600">
+<text x="800" y="78">R-5</text>
+<text x="800" y="140">R-8</text>
+<text x="800" y="202">R-11</text>
+<text x="800" y="264">R-15</text>
+<text x="800" y="326">R-12, R-23</text>
+<text x="800" y="388">R-4</text>
+<text x="800" y="450">R-16</text>
+<text x="800" y="512">R-19, R-20</text>
+<text x="800" y="574">§1</text>
+</g>
+<g font-family="IBM Plex Mono, monospace" font-size="17" fill="#11151B">
+<text x="960" y="78">guards.py, wired into answer()</text>
+<text x="960" y="140">producers.accounts_db, freshness = read time</text>
+<text x="960" y="202">context.conflict_groups</text>
+<text x="960" y="264">route policy's producers, stamped at freeze</text>
+<text x="960" y="326">context.snapshot: every producer, one freeze</text>
+<text x="960" y="388" fill="#C2541D">not on this route; say so in the inventory</text>
+<text x="960" y="450">context.budget() from policy/assembly.json</text>
+<text x="960" y="512" fill="#C2541D">policy/profile.json, version 1, unevaluated</text>
+<text x="960" y="574">provider.request_for</text>
+</g>
+<g stroke="#DADFE7" stroke-width="1.5">
+<line x1="0" y1="100" x2="1680" y2="100"></line>
+<line x1="0" y1="162" x2="1680" y2="162"></line>
+<line x1="0" y1="224" x2="1680" y2="224"></line>
+<line x1="0" y1="286" x2="1680" y2="286"></line>
+<line x1="0" y1="348" x2="1680" y2="348"></line>
+<line x1="0" y1="410" x2="1680" y2="410"></line>
+<line x1="0" y1="472" x2="1680" y2="472"></line>
+<line x1="0" y1="534" x2="1680" y2="534"></line>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

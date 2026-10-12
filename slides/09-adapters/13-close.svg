@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Close</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CLOSE · AFTER EACH MODULE</span>
+<span>13 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">What will you wrap next?</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Each module ends on something of your own: a tool, an assembler, a provider, a host.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="440" viewBox="0 0 1680 440" role="img" aria-label="Four cards. A: a stub for one of your tools, checked against W2's checklist. B: your own assembler behind the protocol. C: a provider your team uses, with the two hashes equal. D: your host on the worksheet.">
+<g font-family="IBM Plex Mono, monospace">
+<g>
+<rect x="0" y="0" width="400" height="400" fill="#2453C9"></rect>
+<text x="28" y="64" font-size="40" font-weight="600" fill="#FFFFFF">A</text>
+<text x="28" y="104" font-size="18" fill="#DCE3F5">a tool of yours</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#FFFFFF">
+<text x="28" y="168">A stub with a docstring: the slot,</text>
+<text x="28" y="194">the authority, where id, source,</text>
+<text x="28" y="220">source_version, freshness and the</text>
+<text x="28" y="246">score come from, and what it</text>
+<text x="28" y="272">cannot know.</text>
+</g>
+<text x="28" y="360" font-size="14" fill="#DCE3F5">then W2's checklist over it</text>
+</g>
+<g>
+<rect x="426" y="0" width="400" height="400" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="454" y="64" font-size="40" font-weight="600" fill="#2453C9">B</text>
+<text x="454" y="104" font-size="18" fill="#4A5361">an assembler of yours</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="454" y="168">Put it behind the same protocol,</text>
+<text x="454" y="194">in any language, and run the</text>
+<text x="454" y="220">suite against it.</text>
+</g>
+<text x="454" y="360" font-size="14" fill="#4A5361">stdin in, three exits out</text>
+</g>
+<g>
+<rect x="852" y="0" width="400" height="400" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="880" y="64" font-size="40" font-weight="600" fill="#2453C9">C</text>
+<text x="880" y="104" font-size="18" fill="#4A5361">your team's provider</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="880" y="168">Add it, keep the two hashes</text>
+<text x="880" y="194">equal, and commit the snippet</text>
+<text x="880" y="220">generator with it.</text>
+</g>
+<text x="880" y="360" font-size="14" fill="#4A5361">what your reviewers will see</text>
+</g>
+<g>
+<rect x="1278" y="0" width="402" height="400" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<text x="1306" y="64" font-size="40" font-weight="600" fill="#C2541D">D</text>
+<text x="1306" y="104" font-size="18" fill="#4A5361">your host</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#11151B">
+<text x="1306" y="168">Its permission model as authority,</text>
+<text x="1306" y="194">its ids as sources, the two</text>
+<text x="1306" y="220">handoffs, one refusal, and what</text>
+<text x="1306" y="246">it has no source for today.</text>
+</g>
+<text x="1306" y="360" font-size="14" fill="#4A5361">read "Questions a maintainer</text>
+<text x="1306" y="382" font-size="14" fill="#4A5361">will ask" before you present</text>
+</g>
+</g>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; font-size: 23px; line-height: 1.45">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">W3</span><span>Migrates a whole application. The adapters you wrote are its producers.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">W10</span><span>Takes a disagreement between assemblers to the specification repository as a case.</span></div>
+</div>
+</div>
+</foreignObject>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Part 3 The evidence</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>PART 3 · 15 MINUTES · THE PLACEMENT PAGE</span>
+<span>06 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Seven sources, no recommendation</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">CWA takes no position on where items go. It requires that placement be a profile.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="560" viewBox="0 0 1680 560" role="img" aria-label="Three papers, two provider prompting guides that disagree, and two provider cache pages lead to one conclusion: placement is a profile that is versioned, per route, evaluated and recorded in every trace">
+<defs>
+<marker id="ev" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace" fill="#11151B">
+<rect x="0" y="0" width="720" height="160" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<circle cx="44" cy="48" r="12" fill="#2453C9"></circle>
+<circle cx="78" cy="48" r="12" fill="#2453C9"></circle>
+<circle cx="112" cy="48" r="12" fill="#2453C9"></circle>
+<text x="146" y="56" font-size="24" font-weight="600">3 papers</text>
+<text x="32" y="104" font-size="19" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">Where models attend, and how accuracy falls with length.</text>
+<text x="32" y="134" font-size="19" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">Each on specific models and tasks.</text>
+<rect x="0" y="190" width="720" height="160" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<circle cx="44" cy="238" r="12" fill="#C2541D"></circle>
+<circle cx="78" cy="238" r="12" fill="none" stroke="#C2541D" stroke-width="3"></circle>
+<text x="112" y="246" font-size="24" font-weight="600">2 provider prompting guides</text>
+<text x="32" y="294" font-size="19" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">They disagree about where instructions go.</text>
+<rect x="0" y="380" width="720" height="160" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<circle cx="44" cy="428" r="12" fill="#7A8494"></circle>
+<circle cx="78" cy="428" r="12" fill="#7A8494"></circle>
+<text x="112" y="436" font-size="24" font-weight="600">2 provider cache pages</text>
+<text x="32" y="484" font-size="19" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">They describe mechanisms, not outcomes.</text>
+<path d="M 720 80 C 800 80, 800 270, 880 270" fill="none" stroke="#11151B" stroke-width="2"></path>
+<line x1="720" y1="270" x2="880" y2="270" stroke="#11151B" stroke-width="2"></line>
+<path d="M 720 460 C 800 460, 800 270, 880 270" fill="none" stroke="#11151B" stroke-width="2"></path>
+<line x1="880" y1="270" x2="940" y2="270" stroke="#11151B" stroke-width="2" marker-end="url(#ev)"></line>
+<rect x="950" y="70" width="730" height="400" fill="#11151B"></rect>
+<text x="986" y="134" font-size="30" font-weight="600" fill="#FFFFFF">placement is a profile</text>
+<g font-size="22" fill="#FFFFFF">
+<rect x="986" y="182" width="16" height="16" fill="#2453C9"></rect><text x="1020" y="198">versioned</text>
+<rect x="986" y="236" width="16" height="16" fill="#2453C9"></rect><text x="1020" y="252">per route</text>
+<rect x="986" y="290" width="16" height="16" fill="#2453C9"></rect><text x="1020" y="306">evaluated against that route's tasks</text>
+<rect x="986" y="344" width="16" height="16" fill="#2453C9"></rect><text x="1020" y="360">recorded in every trace</text>
+</g>
+<text x="986" y="430" font-size="18" fill="#B9C3D6">evaluate per route and per model, then version</text>
+</g>
+</svg>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540; max-width: 1600px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #11151B">Checkpoint 3</span> · one sentence per source: what it supports, and what it does not let you conclude. The level: <i>"Lost in the Middle supports a U-shaped attention curve on retrieval tasks for the models tested; it does not say where your instructions should go for your model."</i></div>
+</div>
+</foreignObject>
+</svg>

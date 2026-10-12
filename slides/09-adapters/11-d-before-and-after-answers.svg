@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>D Before and after</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>MODULE D · HOST SEAM · PART 1 · FULLSEND</span>
+<span>11 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The host already knows who may speak</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Repository permission decides who is user in the thread and whose words are evidence. The wording decides nothing.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Today: one tool result from gh issue view, with a maintainer, a drive-by, the bot and a hidden HTML comment indistinguishable. With a briefing: system entries, then one user message with a wrapper per slot. Left out, each with its reason. Below, checkpoint 1.">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="17" font-weight="600" fill="#4A5361">TODAY · BEFORE.PY</text>
+<rect x="0" y="40" width="460" height="380" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="76" font-size="14" fill="#4A5361">gh issue view --comments</text>
+<g fill="#DADFE7">
+<rect x="22" y="96" width="416" height="14"></rect><rect x="22" y="118" width="360" height="14"></rect>
+<rect x="22" y="158" width="400" height="14"></rect><rect x="22" y="180" width="300" height="14"></rect>
+<rect x="22" y="220" width="416" height="14"></rect><rect x="22" y="242" width="250" height="14"></rect>
+<rect x="22" y="282" width="380" height="14"></rect><rect x="22" y="304" width="410" height="14"></rect>
+</g>
+<text x="22" y="356" font-size="14" fill="#C2541D">&lt;!-- an instruction, hidden --&gt;</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#11151B"><text x="22" y="398">four kinds of speaker; nothing separates them</text></g>
+<text x="500" y="22" font-size="17" font-weight="600" fill="#4A5361">WITH A BRIEFING · AFTER.PY</text>
+<g font-size="15">
+<rect x="500" y="40" width="600" height="104" fill="#11151B"></rect>
+<text x="520" y="68" fill="#FFFFFF">agent definition · pinned SHA</text>
+<text x="520" y="96" fill="#FFFFFF">AGENTS.md · protected base branch</text>
+<text x="520" y="124" fill="#FFFFFF">output contract</text>
+<rect x="500" y="152" width="600" height="268" fill="#EEF1F8" stroke="#2453C9" stroke-width="2"></rect>
+<g fill="#11151B">
+<text x="520" y="182">&lt;work_item&gt;  &lt;requester&gt;</text>
+<text x="520" y="210">&lt;prior_run&gt;  &lt;duplicate_candidate&gt;</text>
+<text x="520" y="250" fill="#2453C9">&lt;thread speaker="user"&gt;</text>
+<text x="520" y="278" fill="#2453C9">&lt;thread speaker="assistant"&gt;</text>
+<text x="520" y="318" fill="#C2541D">&lt;external_content&gt;</text>
+<text x="540" y="342" font-size="13" fill="#C2541D">the hidden comment, escaped</text>
+<text x="520" y="384">&lt;task_request&gt;  last</text>
+</g>
+</g>
+<text x="1140" y="22" font-size="17" font-weight="600" fill="#4A5361">LEFT OUT, EACH WITH A REASON</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#11151B">
+<text x="1140" y="70">expired run summary</text><text x="1140" y="92" fill="#4A5361">reported by its producer</text>
+<text x="1140" y="134">duplicate candidate</text><text x="1140" y="156" fill="#4A5361">0.41 under the route's 0.55</text>
+<text x="1140" y="198">CI summary</text><text x="1140" y="220" fill="#4A5361">cached 20 min, limit 300 s</text>
+<text x="1140" y="262">two of three "+1" copies</text><text x="1140" y="284" fill="#4A5361">exact duplicates</text>
+<text x="1140" y="326">the third "+1"</text><text x="1140" y="348" fill="#4A5361">per-author cap of two</text>
+</g>
+<text x="1140" y="398" font-size="13" fill="#4A5361">the cap bounds volume; not a content filter</text>
+<text x="0" y="476" font-size="16" font-weight="600" fill="#4A5361">CHECKPOINT 1 · FOUR SPEAKERS</text>
+<g font-size="15" fill="#4A5361"><text x="0" y="508">speaker</text><text x="420" y="508">slot</text><text x="900" y="508">authority</text></g>
+<line x1="0" y1="520" x2="1680" y2="520" stroke="#DADFE7" stroke-width="2"></line>
+<g font-size="16" fill="#11151B"><text x="0" y="550">a maintainer</text><text x="0" y="578">the bot's earlier comment</text><text x="0" y="606">the reporter, a drive-by</text><text x="0" y="634">the hidden instruction</text></g>
+<g font-size="16" fill="#11151B">
+<text x="420" y="550">interaction.history</text><text x="900" y="550">user</text>
+<text x="420" y="578">interaction.history</text><text x="900" y="578">untrusted, lineage generated</text>
+<text x="420" y="606">evidence.tool_results</text><text x="900" y="606">observation</text>
+<text x="420" y="634">obs:issue/7811/0-body@newcontrib</text><text x="900" y="634">escaped inside &lt;external_content&gt;</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

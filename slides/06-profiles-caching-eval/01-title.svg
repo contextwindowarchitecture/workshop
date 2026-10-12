@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>W6 Placement profiles, prompt caching and profile evaluation</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · WORKSHOP 6</span>
+<span>01 / 09</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 1000px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: #2453C9; font-weight: 500">W6 · Profiles, caching, evaluation</div>
+<h1 style="margin: 0; font-size: 116px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">Placement is a hypothesis you test</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 920px">Leave with one evaluated profile whose evaluation points at a reproducible artifact, a registry lock the team can ship, and a deployment gate that refuses the other candidates.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="620" viewBox="0 0 600 620" role="img" aria-label="Two consecutive turns rendered as blocks; the leading blocks repeat unchanged, so a cache can reuse that prefix">
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="20" font-size="17" fill="#4A5361">turn n</text>
+<text x="320" y="20" font-size="17" fill="#4A5361">turn n+1</text>
+<g fill="#2453C9">
+<rect x="0" y="40" width="270" height="52"></rect><rect x="0" y="102" width="270" height="52"></rect><rect x="0" y="164" width="270" height="52"></rect><rect x="0" y="226" width="270" height="52"></rect><rect x="0" y="288" width="270" height="52"></rect>
+<rect x="320" y="40" width="270" height="52"></rect><rect x="320" y="102" width="270" height="52"></rect><rect x="320" y="164" width="270" height="52"></rect><rect x="320" y="226" width="270" height="52"></rect><rect x="320" y="288" width="270" height="52"></rect>
+</g>
+<rect x="0" y="350" width="270" height="52" fill="#DCE3F5" stroke="#2453C9" stroke-width="2"></rect>
+<rect x="0" y="412" width="270" height="52" fill="#DCE3F5" stroke="#2453C9" stroke-width="2"></rect>
+<rect x="320" y="350" width="270" height="52" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<rect x="320" y="412" width="270" height="52" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<rect x="320" y="474" width="270" height="52" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect>
+<line x1="-6" y1="345" x2="606" y2="345" stroke="#C2541D" stroke-width="3" stroke-dasharray="8 6"></line>
+<text x="0" y="604" font-size="15" fill="#C2541D">the unchanged prefix a cache can reuse</text>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>Half a day</span>
+<span style="color: #9AA3B0">/</span>
+<span>Model-free; live part optional</span>
+<span style="color: #9AA3B0">/</span>
+<span>After W1; W3a or W4 helps</span>
+</div>
+</div>
+</foreignObject>
+</svg>

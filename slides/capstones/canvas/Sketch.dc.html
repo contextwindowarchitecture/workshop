@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>From the sketch to the specification</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>BLUEPRINT.MD · WHAT CHANGED, AND WHY</span>
+<span>05 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">A model may score; a model never gates</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The original sketches put a model at each decision. Each blueprint moves the decision before the snapshot or outside the model.</p>
+</div>
+<svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="Six rows, from the sketch to here: a model picking the route becomes deterministic intent rules; a model deciding a tool is safe becomes a capability policy and a guard; a tie-breaker reading two values becomes a declared fact group; a variant synthesizer becomes summaries written ahead; a PII screen after the model becomes guards on the parsed draft and no contact details in state; a named model becomes any endpoint or a scripted drafter.">
+<g font-family="IBM Plex Mono, monospace">
+<g font-size="14" fill="#4A5361"><text x="0" y="20">in the sketch</text><text x="560" y="20">here</text><text x="1500" y="20">rule</text></g>
+<line x1="0" y1="34" x2="1680" y2="34" stroke="#11151B" stroke-width="2"></line>
+<g font-family="IBM Plex Sans, sans-serif" font-size="18">
+<g fill="#4A5361">
+<text x="0" y="82">a model classifies and picks the route</text>
+<text x="0" y="176">a model decides the prescription tool is safe</text>
+<text x="0" y="270">a fact tie-breaker reads both values</text>
+<text x="0" y="364">a model compresses when "too many tokens"</text>
+<text x="0" y="458">screen for PII after the model</text>
+<text x="0" y="552">a named model on vLLM</text>
+</g>
+<g fill="#11151B">
+<text x="560" y="72">deterministic intent rules, run by the application</text><text x="560" y="98">before the snapshot</text>
+<text x="560" y="166">the capability policy grants by role; a guard outside</text><text x="560" y="192">the model checks every action</text>
+<text x="560" y="260">a declared fact group: producer precedence decides,</text><text x="560" y="286">and nobody reads either body</text>
+<text x="560" y="354">summaries written ahead, attached as variants;</text><text x="560" y="380">the assembler swaps them in by the route's order</text>
+<text x="560" y="448">guards on the parsed draft, and contact details</text><text x="560" y="474">never put in state</text>
+<text x="560" y="542">any OpenAI-compatible endpoint, or a scripted</text><text x="560" y="568">drafter: the model is a route setting</text>
+</g>
+</g>
+<g font-size="15" fill="#2453C9"><text x="1500" y="82">R-23</text><text x="1500" y="176">R-15 · R-5</text><text x="1500" y="270">R-11</text><text x="1500" y="364">R-18</text><text x="1500" y="458">R-5</text></g>
+<g font-size="13" fill="#4A5361"><text x="1500" y="104">C2</text><text x="1500" y="198">C1 · C3</text><text x="1500" y="292">C1 · C3</text><text x="1500" y="386">C2</text><text x="1500" y="480">C2</text><text x="1500" y="574">all three</text></g>
+<g stroke="#C2541D" stroke-width="2"><line x1="500" y1="76" x2="536" y2="76"></line><line x1="500" y1="170" x2="536" y2="170"></line><line x1="500" y1="264" x2="536" y2="264"></line><line x1="500" y1="358" x2="536" y2="358"></line><line x1="500" y1="452" x2="536" y2="452"></line><line x1="500" y1="546" x2="536" y2="546"></line></g>
+<g stroke="#DADFE7" stroke-width="2"><line x1="0" y1="124" x2="1680" y2="124"></line><line x1="0" y1="218" x2="1680" y2="218"></line><line x1="0" y1="312" x2="1680" y2="312"></line><line x1="0" y1="406" x2="1680" y2="406"></line><line x1="0" y1="500" x2="1680" y2="500"></line></g>
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

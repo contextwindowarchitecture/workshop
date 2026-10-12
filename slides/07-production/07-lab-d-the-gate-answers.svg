@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>Lab D The gate</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>LAB D · 30 MINUTES · RUN.PY --DEPLOYMENT · R-19, R-20</span>
+<span>07 / 10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The deployment gate refuses three ways</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Run it first with nothing promoted. Promote with <span style="font-family: 'IBM Plex Mono', monospace">--force-scripted</span>, run again, then try another model.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="560" viewBox="0 0 1680 560" role="img" aria-label="A deployment run passes three checks in order before it serves; each failing check refuses the run.">
+<defs>
+<marker id="ld7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="130" width="220" height="100" fill="#11151B"></rect>
+<text x="22" y="172" font-size="18" font-weight="600" fill="#FFFFFF">run.py</text>
+<text x="22" y="200" font-size="15" fill="#B9C3D6">--deployment</text>
+<line x1="220" y1="180" x2="270" y2="180" stroke="#11151B" stroke-width="2" marker-end="url(#ld7)"></line>
+<polygon points="400,90 530,180 400,270 270,180" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></polygon>
+<text x="400" y="174" font-size="18" font-weight="600" fill="#11151B" text-anchor="middle">check 1</text>
+<text x="400" y="200" font-size="14" fill="#C2541D" text-anchor="middle">a registry lock?</text>
+<line x1="530" y1="180" x2="580" y2="180" stroke="#11151B" stroke-width="2" marker-end="url(#ld7)"></line>
+<polygon points="710,90 840,180 710,270 580,180" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></polygon>
+<text x="710" y="174" font-size="18" font-weight="600" fill="#11151B" text-anchor="middle">check 2</text>
+<text x="710" y="200" font-size="14" fill="#C2541D" text-anchor="middle">profile evaluated?</text>
+<line x1="840" y1="180" x2="890" y2="180" stroke="#11151B" stroke-width="2" marker-end="url(#ld7)"></line>
+<polygon points="1020,90 1150,180 1020,270 890,180" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></polygon>
+<text x="1020" y="174" font-size="18" font-weight="600" fill="#11151B" text-anchor="middle">check 3</text>
+<text x="1020" y="200" font-size="14" fill="#C2541D" text-anchor="middle">the model it was for?</text>
+<line x1="1150" y1="180" x2="1260" y2="180" stroke="#11151B" stroke-width="2" marker-end="url(#ld7)"></line>
+<rect x="1270" y="130" width="410" height="100" fill="#2453C9"></rect>
+<text x="1292" y="172" font-size="18" font-weight="600" fill="#FFFFFF">serves</text>
+<text x="1292" y="200" font-size="14" fill="#FFFFFF">policy and profile from the lock</text>
+<g stroke="#C2541D" stroke-width="2">
+<line x1="400" y1="270" x2="400" y2="330"></line>
+<line x1="710" y1="270" x2="710" y2="330"></line>
+<line x1="1020" y1="270" x2="1020" y2="330"></line>
+</g>
+<rect x="290" y="340" width="220" height="56" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect><text x="400" y="374" font-size="16" fill="#C2541D" text-anchor="middle">refused</text>
+<rect x="600" y="340" width="220" height="56" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect><text x="710" y="374" font-size="16" fill="#C2541D" text-anchor="middle">refused</text>
+<rect x="910" y="340" width="220" height="56" fill="#FBF0EA" stroke="#C2541D" stroke-width="2"></rect><text x="1020" y="374" font-size="16" fill="#C2541D" text-anchor="middle">refused</text>
+<text x="0" y="470" font-size="17" fill="#4A5361">CHECKPOINT 4 · the gate's three refusals in order, then the outcome in outcomes.py you changed, and why.</text>
+<text x="0" y="520" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="#2E3540">A scripted suite exercises the mechanism. It never evaluates a profile for a model: only a live run on that model does.</text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>The form</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>FRAMING · THE FORM</span>
+<span>03 / 09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Not a fifth assembler: contributors to the four</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The copy is the real assembler, the cases are the real cases, the discipline is the port's own <span style="font-family: 'IBM Plex Mono', monospace">AGENTS.md</span>.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Four assemblers in Python, TypeScript, Go and Rust all pass the published cases. The kata copies the Python reference at its pin into work, injects ten one-line defects, and keeps a pristine copy.">
+<defs>
+<marker id="fm8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<text x="0" y="22" font-size="17" font-weight="600" fill="#4A5361">FOUR ASSEMBLERS, ALL PASSING THE PUBLISHED CASES</text>
+<rect x="0" y="40" width="400" height="90" fill="#2453C9"></rect><text x="24" y="94" font-size="22" font-weight="600" fill="#FFFFFF">Python · reference</text>
+<rect x="426" y="40" width="400" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="450" y="94" font-size="22" font-weight="600" fill="#11151B">TypeScript</text>
+<rect x="852" y="40" width="400" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="876" y="94" font-size="22" font-weight="600" fill="#11151B">Go</text>
+<rect x="1278" y="40" width="402" height="90" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect><text x="1302" y="94" font-size="22" font-weight="600" fill="#11151B">Rust</text>
+<text x="0" y="164" font-size="15" fill="#4A5361">docs/assemblers.md lays them side by side</text>
+<text x="0" y="234" font-size="17" font-weight="600" fill="#4A5361">THE KATA</text>
+<rect x="0" y="256" width="360" height="120" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="22" y="298" font-size="18" font-weight="600" fill="#11151B">assembler-python</text>
+<text x="22" y="328" font-size="15" fill="#4A5361">sibling checkout,</text>
+<text x="22" y="350" font-size="15" fill="#4A5361">at its pinned release</text>
+<line x1="360" y1="316" x2="430" y2="316" stroke="#11151B" stroke-width="2" marker-end="url(#fm8)"></line>
+<rect x="440" y="276" width="260" height="80" fill="#11151B"></rect>
+<text x="462" y="324" font-size="18" fill="#FFFFFF">kata.py build</text>
+<path d="M 700 296 C 760 296, 760 280, 820 280" fill="none" stroke="#11151B" stroke-width="2" marker-end="url(#fm8)"></path>
+<path d="M 700 336 C 760 336, 760 452, 820 452" fill="none" stroke="#11151B" stroke-width="2" marker-end="url(#fm8)"></path>
+<rect x="830" y="220" width="850" height="120" fill="#FBF0EA" stroke="#C2541D" stroke-width="3"></rect>
+<text x="854" y="262" font-size="20" font-weight="600" fill="#C2541D">work/</text>
+<text x="854" y="294" font-size="16" fill="#11151B">the copy, ten one-line defects injected, installed</text>
+<text x="854" y="320" font-size="15" fill="#4A5361">each in a different stage, each breaking at least one case</text>
+<rect x="830" y="392" width="850" height="120" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="854" y="434" font-size="20" font-weight="600" fill="#11151B">.pristine/</text>
+<text x="854" y="466" font-size="16" fill="#11151B">the unmodified copy, for kata.py diff</text>
+<text x="854" y="492" font-size="15" fill="#4A5361">both git-ignored and rebuilt: the source is never duplicated here</text>
+<rect x="0" y="530" width="700" height="70" fill="#11151B"></rect>
+<text x="24" y="574" font-size="18" fill="#FFFFFF">kata.py status · <tspan fill="#F0A57E">65 cases, 25 rejections</tspan></text>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>

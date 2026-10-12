@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Capstones</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2453C9}a:hover{color:#1A3D96}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 96px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>CONTEXT WINDOW ARCHITECTURE · CAPSTONES</span>
+<span>01 / 13</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 80px">
+<div style="display: flex; flex-direction: column; gap: 36px; max-width: 1000px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: {{accent}}; font-weight: 500">C1 · C2 · C3</div>
+<h1 style="margin: 0; font-size: 128px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em">One day, one gate</h1>
+<p style="margin: 0; font-size: 30px; line-height: 1.45; color: #4A5361; max-width: 940px">Everything from W2 to W7, applied to a new domain, a new dataset and a different shape of application. Teams of three or four, an acceptance gate instead of a worksheet.</p>
+</div>
+<svg width="560" height="640" viewBox="0 0 560 640" role="img" aria-label="Three domains, a clinic, a retailer and a wealth manager, each feeding the same gate: write cases, record, grade, promote.">
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="560" height="104" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="44" font-size="20" font-weight="600" fill="#2453C9">C1</text><text x="80" y="44" font-size="19" fill="#11151B">scribe and diagnostic</text>
+<text x="80" y="76" font-size="14" fill="#4A5361">Harbor Street Family Practice</text>
+<rect x="0" y="128" width="560" height="104" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="172" font-size="20" font-weight="600" fill="#2453C9">C2</text><text x="80" y="172" font-size="19" fill="#11151B">support and logistics</text>
+<text x="80" y="204" font-size="14" fill="#4A5361">Northwind Outdoors</text>
+<rect x="0" y="256" width="560" height="104" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="24" y="300" font-size="20" font-weight="600" fill="#2453C9">C3</text><text x="80" y="300" font-size="19" fill="#11151B">wealth and triage</text>
+<text x="80" y="332" font-size="14" fill="#4A5361">Larkbridge Wealth</text>
+<g stroke="#11151B" stroke-width="2" fill="none"><path d="M 280 360 L 280 420"></path></g>
+<rect x="0" y="420" width="560" height="220" fill="#11151B"></rect>
+<text x="24" y="464" font-size="16" fill="#B9C3D6">THE GATE</text>
+<g font-size="20" fill="#FFFFFF"><text x="24" y="516">write cases</text><text x="24" y="550">record</text><text x="24" y="584">grade</text><text x="24" y="618">promote</text></g>
+<rect x="300" y="490" width="236" height="128" fill="#2453C9"></rect>
+<text x="318" y="528" font-size="15" fill="#FFFFFF">every attempt</text><text x="318" y="554" font-size="15" fill="#FFFFFF">replays byte</text><text x="318" y="580" font-size="15" fill="#FFFFFF">for byte</text>
+</g>
+</svg>
+</div>
+<div style="display: flex; gap: 48px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #2E3540">
+<span>One day each</span>
+<span style="color: #9AA3B0">/</span>
+<span>Model-free; a live drafter optional</span>
+<span style="color: #9AA3B0">/</span>
+<span>Fictional teaching data</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2453C9","options":["#2453C9","#C2541D","#11151B"]},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2453C9' };
+  }
+}
+</script>
+</body>
+</html>

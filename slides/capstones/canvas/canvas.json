@@ -1,0 +1,25 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T08:00:00Z"},
+  "title": "Capstones Slides",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1920, "h": 1080, "title": "01 Title"},
+    "Day.dc.html": {"x": 2000, "y": 0, "w": 1920, "h": 1080, "title": "02 The day"},
+    "Shape.dc.html": {"x": 4000, "y": 0, "w": 1920, "h": 1080, "title": "03 What is given, what you build"},
+    "Three.dc.html": {"x": 0, "y": 1200, "w": 1920, "h": 1080, "title": "04 Three domains"},
+    "Sketch.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 From the sketch to the specification"},
+    "C1Brief.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 C1 Scribe and diagnostic"},
+    "C1Cases.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 C1 The six cases"},
+    "C2Brief.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 C2 Support and logistics router"},
+    "C2Gate.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 C2 The gate"},
+    "C3Brief.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 C3 Wealth management and triage"},
+    "C3Cases.dc.html": {"x": 2000, "y": 3600, "w": 1920, "h": 1080, "title": "11 C3 The six cases"},
+    "Live.dc.html": {"x": 4000, "y": 3600, "w": 1920, "h": 1080, "title": "12 What live runs showed"},
+    "Close.dc.html": {"x": 0, "y": 4800, "w": 1920, "h": 1080, "title": "13 Close"}
+  },
+  "order": ["Main.dc.html", "Day.dc.html", "Shape.dc.html", "Three.dc.html", "Sketch.dc.html", "C1Brief.dc.html", "C1Cases.dc.html", "C2Brief.dc.html", "C2Gate.dc.html", "C3Brief.dc.html", "C3Cases.dc.html", "Live.dc.html", "Close.dc.html"],
+  "notes": {},
+  "designSystems": []
+}

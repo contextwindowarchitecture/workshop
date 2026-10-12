@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>B Three exits</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap");</style>
+<foreignObject x="0" y="0" width="1920" height="1080">
+<div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
+<span>MODULE B · THE PROTOCOL · R-17</span>
+<span>07 / 13</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">A runner must not import the assembler</h2>
+<p style="margin: 0; font-size: 28px; color: #2E3540">It drives a Go binary, a Rust binary, a Node process and a Python process the same way.</p>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="A runner writes snapshot bytes to the adapter's stdin. Exit 0: assembled or refused, one JSON object on stdout. Exit 2: rejected before assembly, problems on stderr. Exit 3: names a tokenizer or renderer the assembler does not provide, a fixed sentence on stderr, recorded as skipped. Below, checkpoint 1 as a table.">
+<defs>
+<marker id="ex9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
+</defs>
+<g font-family="IBM Plex Mono, monospace">
+<rect x="0" y="110" width="240" height="180" fill="#11151B"></rect>
+<text x="22" y="152" font-size="20" font-weight="600" fill="#FFFFFF">runner</text>
+<text x="22" y="186" font-size="14" fill="#B9C3D6">harness.py, the</text>
+<text x="22" y="208" font-size="14" fill="#B9C3D6">kata, any CI</text>
+<line x1="240" y1="200" x2="296" y2="200" stroke="#11151B" stroke-width="2" marker-end="url(#ex9)"></line>
+<text x="246" y="186" font-size="13" fill="#4A5361">stdin</text>
+<rect x="300" y="0" width="300" height="400" fill="#2453C9"></rect>
+<text x="322" y="40" font-size="19" font-weight="600" fill="#FFFFFF">adapter</text>
+<text x="322" y="72" font-size="14" fill="#DCE3F5">snapshot bytes in</text>
+<g font-size="16" fill="#FFFFFF"><text x="322" y="150">Python</text><text x="322" y="182">TypeScript</text><text x="322" y="214">Go</text><text x="322" y="246">Rust</text><text x="322" y="278">yours</text></g>
+<text x="322" y="372" font-size="14" fill="#DCE3F5">about thirty lines</text>
+<g stroke="#11151B" stroke-width="2" fill="none">
+<path d="M 600 60 L 676 60" marker-end="url(#ex9)"></path>
+<path d="M 600 200 L 676 200" marker-end="url(#ex9)"></path>
+<path d="M 600 340 L 676 340" marker-end="url(#ex9)"></path>
+</g>
+<g>
+<rect x="680" y="0" width="120" height="120" fill="#11151B"></rect><text x="740" y="80" font-size="52" font-weight="600" fill="#FFFFFF" text-anchor="middle">0</text>
+<rect x="800" y="0" width="880" height="120" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="822" y="38" font-size="18" font-weight="600" fill="#11151B">assembled or refused</text>
+<text x="822" y="72" font-size="15" fill="#2E3540">stdout: {"payload": &lt;base64 or null&gt;, "trace": {...}}</text>
+<text x="822" y="100" font-size="14" fill="#4A5361">base64 so the payload's bytes survive a text channel</text>
+</g>
+<g>
+<rect x="680" y="140" width="120" height="120" fill="#C2541D"></rect><text x="740" y="220" font-size="52" font-weight="600" fill="#FFFFFF" text-anchor="middle">2</text>
+<rect x="800" y="140" width="880" height="120" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="822" y="178" font-size="18" font-weight="600" fill="#11151B">rejected before assembly</text>
+<text x="822" y="212" font-size="15" fill="#2E3540">stderr: the problems</text>
+<text x="822" y="240" font-size="14" fill="#4A5361">a non-JSON input is a rejection, not a crash</text>
+</g>
+<g>
+<rect x="680" y="280" width="120" height="120" fill="#4A5361"></rect><text x="740" y="360" font-size="52" font-weight="600" fill="#FFFFFF" text-anchor="middle">3</text>
+<rect x="800" y="280" width="880" height="120" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="822" y="318" font-size="18" font-weight="600" fill="#11151B">a tokenizer or renderer it does not provide</text>
+<text x="822" y="352" font-size="15" fill="#2E3540">stderr, exactly: &lt;component&gt; &lt;id&gt; is not provided</text>
+<text x="822" y="380" font-size="14" fill="#4A5361">so the runner records skipped, not failed</text>
+</g>
+<text x="0" y="446" font-size="18" font-weight="600" fill="#C2541D">Nothing else on stdout, ever.</text>
+<text x="0" y="496" font-size="16" font-weight="600" fill="#4A5361">CHECKPOINT 1 · THREE RUNS</text>
+<g font-size="15" fill="#4A5361"><text x="0" y="530">case</text><text x="560" y="530">exit</text><text x="680" y="530">stdout</text><text x="1180" y="530">stderr</text></g>
+<line x1="0" y1="542" x2="1680" y2="542" stroke="#DADFE7" stroke-width="2"></line>
+<g font-size="16" fill="#11151B"><text x="0" y="572">fixture-three-slot</text><text x="0" y="600">required-slot-missing</text><text x="0" y="628">producer-in-two-batches</text></g>
+<g font-size="16" fill="#9AA3B0">
+<text x="560" y="572">?</text><text x="680" y="572">?</text><text x="1180" y="572">?</text>
+<text x="560" y="600">?</text><text x="680" y="600">?</text><text x="1180" y="600">?</text>
+<text x="560" y="628">?</text><text x="680" y="628">?</text><text x="1180" y="628">?</text>
+</g>
+</g>
+</svg>
+</div>
+</foreignObject>
+</svg>
