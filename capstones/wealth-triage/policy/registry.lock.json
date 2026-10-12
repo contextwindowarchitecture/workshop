@@ -1,0 +1,26 @@
+{
+  "profiles": [
+    {
+      "id": "c3-portfolio-blocks",
+      "version": 1,
+      "sha256": "9bc3228b5548027f8688c499281bd0d2359c62251bc6ab7acd447ca4a7c9ae9f"
+    },
+    {
+      "id": "c3-triage-blocks",
+      "version": 1,
+      "sha256": "856408964412ef3482468f463021e7fd475d284c9250c07bcafebc5736fd9362"
+    }
+  ],
+  "route_policies": [
+    {
+      "route": "portfolio",
+      "version": "c3-portfolio/v1",
+      "sha256": "2b38786357856611cef84257f7c0b5a408b320f93599bd18e27700b64572bfd0"
+    },
+    {
+      "route": "triage",
+      "version": "c3-triage/v1",
+      "sha256": "759936b441c77eb95b000004325577ff31fd6175882428f27513eb2a68cbdf5e"
+    }
+  ]
+}

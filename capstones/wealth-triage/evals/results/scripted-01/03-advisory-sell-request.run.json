@@ -34,7 +34,7 @@
           "id": "c3-portfolio-blocks",
           "version": 1,
           "route": "portfolio",
-          "model_family": null,
+          "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c3-portfolio/v1",
           "placement": [
             {
@@ -75,11 +75,11 @@
             }
           ],
           "evaluation": {
-            "status": "unevaluated",
-            "suite": null,
-            "date": null,
-            "result": null,
-            "artifact": null
+            "status": "evaluated",
+            "suite": "c3-wealth-triage/v1",
+            "date": "2026-10-11",
+            "result": "4/4 cases passed (2 scripted-only case(s) not run live)",
+            "artifact": "evals/results/qwen3.6-35b-a3b-01/report.json"
           }
         },
         "route_policy": {
@@ -778,7 +778,7 @@
           "route_policy_version": "c3-portfolio/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-message-blocks/v1",
-          "snapshot_digest": "730a3c7606d56b488debca22a41d4e9b88ae0efcdded5ef28d7ee8481e02504c"
+          "snapshot_digest": "a1a9c8686ffbab04ecadadcb148c1b1d277a2e25a4e8a627e59b4990de791b01"
         },
         "defaults_filled": []
       },

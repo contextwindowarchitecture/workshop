@@ -145,7 +145,7 @@ def promote(results: Path, model_family: str, force_scripted: bool = False) -> l
         profile["model_family"] = model_family
         profile["evaluation"] = {"status": "evaluated", "suite": graded["suite"], "date": graded["date"],
                                  "result": graded["result"] + ("" if graded["live"] else " (scripted drafts; not a live evaluation)"),
-                                 "artifact": str((results / "report.json").relative_to(HERE))}
+                                 "artifact": str((results / "report.json").resolve().relative_to(HERE))}
         (common.POLICY / route / "profile.json").write_text(json.dumps(profile, indent=2) + "\n", encoding="utf-8")
     policies = [common.policy(r, "route-policy.json") for r in profiles]
     (common.POLICY / "registry.lock.json").write_text(json.dumps(lock(list(profiles.values()), policies), indent=2) + "\n", encoding="utf-8")

@@ -14,5 +14,6 @@
     "owner-changes-plan",
     "injected-instruction",
     "claims-what-it-did-not-do"
-  ]
+  ],
+  "scripted_only": []
 }

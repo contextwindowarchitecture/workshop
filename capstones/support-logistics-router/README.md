@@ -47,6 +47,8 @@ The contract between intent and route; the producers and only the producers the 
 
 With omlx serving `gpt-oss-20b-MXFP4-Q8` (2026-10-11, `evals/results/gpt-oss-20b-01/`), four of the five live cases passed; `05-pii-in-draft` scripts a bad draft to exercise the screen and is `scripted_only`. The failure moved between runs: once `01-return-jacket`, once `04-pasted-thread`, each time the model choosing `needs_agent` where the expectation names a stage. The instructions now say how to pick a stage, and the scripted suite still passes; the live variance is W11's lesson about a suite run once. No profile was promoted from this run.
 
+With `Qwen3.6-35B-A3B-8bit`, thinking off (`evals/results/qwen3.6-35b-a3b-01/`), four of five again: on `04-pasted-thread` the model returned the contract's members without the enclosing braces, and cited a CRM note where only policy articles count. A malformed draft is a contract failure before any screen runs, and the ticket went to an agent. Nothing promoted; the three route profiles stay evaluated on scripted drafts, as `evals.py promote --force-scripted` labels them.
+
 ## Closing section, written by the team
 
 Which route policy did you change, what did the stored traces say it would change, and did you ship it? Which decision in your traces would a prompt not have been able to explain? What would you need before running the suite live, and what in the gate could a live model still get wrong?

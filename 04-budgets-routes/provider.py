@@ -44,6 +44,8 @@ def send(request: dict[str, Any]) -> str | None:
     extra = {}
     if os.environ.get("CWA_WORKSHOP_REASONING_EFFORT"):
         extra["reasoning_effort"] = os.environ["CWA_WORKSHOP_REASONING_EFFORT"]
+    if os.environ.get("CWA_WORKSHOP_EXTRA_BODY"):  # server-specific members, e.g. {"chat_template_kwargs": {"enable_thinking": false}}
+        extra["extra_body"] = json.loads(os.environ["CWA_WORKSHOP_EXTRA_BODY"])
     response = client.chat.completions.create(**request, **extra)
     return response.choices[0].message.content or ""
 

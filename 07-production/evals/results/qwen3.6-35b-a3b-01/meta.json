@@ -1,0 +1,20 @@
+{
+  "suite": "account-agent-evals/v1",
+  "model": "Qwen3.6-35B-A3B-8bit",
+  "date": "2026-10-11",
+  "live": true,
+  "profile": {
+    "id": "account-agent-messages",
+    "version": 1,
+    "sha256": "5cc98519a879b66116c19d1292d6e811fed9af508aaba21280f3be2d6147da32"
+  },
+  "cases": [
+    "member-cannot-list",
+    "owner-changes-plan",
+    "injected-instruction",
+    "claims-what-it-did-not-do"
+  ],
+  "scripted_only": [
+    "status-resolved"
+  ]
+}

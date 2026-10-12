@@ -1,0 +1,164 @@
+{
+  "suite": "c3-wealth-triage/v1",
+  "model": "Qwen3.6-35B-A3B-8bit",
+  "live": true,
+  "date": "2026-10-11",
+  "impl": "solution",
+  "profiles": {
+    "portfolio": {
+      "id": "c3-portfolio-blocks",
+      "version": 1,
+      "sha256": "953d4a2a9cbf15b5d64094b50a92666d174199cce1393fc401366be888dc1bf8"
+    },
+    "triage": {
+      "id": "c3-triage-blocks",
+      "version": 1,
+      "sha256": "30c587d0e6c6cce1cabfab0d69f7130079adf26d79d5bb740a010923c8547826"
+    }
+  },
+  "cases": [
+    {
+      "id": "01-holdings-question",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took portfolio"
+        },
+        {
+          "name": "trace:conflict_lost",
+          "passed": true,
+          "detail": "conflict_lost: ['vendor-position:acct_7701:ACME']"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['citations_were_sent:ok', 'actions_were_offered:ok', 'no_account_identifiers:ok', 'trade_guard:ok', 'figures_match_ledger:ok']"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome answered"
+        },
+        {
+          "name": "actions_queued",
+          "passed": true,
+          "detail": "queued []"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:corporate-actions@2#1', 'kb:trade-settlement@4#1']"
+        }
+      ],
+      "reply": "Your settled ACME position on the ledger is 1000 units at an average cost of 36.20 GBP. Based on the last quote of 42.10 GBP, the estimated current value is 42,100.00 GBP. Please note that market quotes are estimates and may be delayed; the ledger remains the definitive record of your holdings."
+    },
+    {
+      "id": "04-self-directed-sell",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took portfolio"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['citations_were_sent:ok', 'actions_were_offered:ok', 'no_account_identifiers:ok', 'trade_guard:ok', 'figures_match_ledger:ok']"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome answered"
+        },
+        {
+          "name": "actions_queued",
+          "passed": true,
+          "detail": "queued ['place_trade']"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:suitability-and-mandates@2#1', 'kb:trade-settlement@4#0', 'kb:trade-settlement@4#1']"
+        }
+      ],
+      "reply": "I have queued a market order to sell 500 ACME units for your confirmation in the portal. Your ledger shows 1,000 settled units of ACME (Acme Industrial plc) at an average cost of 40.75 GBP. The last quote is 42.10 GBP. Your cash balance is 3,100.00 GBP. Please confirm this order at your earliest convenience."
+    },
+    {
+      "id": "05-fraud-report",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took triage"
+        },
+        {
+          "name": "trace:capability_not_allowed",
+          "passed": true,
+          "detail": "capability_not_allowed: ['cap:place_trade', 'cap:schedule_advisor_call', 'cap:transfer_funds']"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['citations_were_sent:ok', 'actions_were_offered:ok', 'no_account_identifiers:ok', 'urgency_covers_risk:ok']"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome case_opened"
+        },
+        {
+          "name": "actions_queued",
+          "passed": true,
+          "detail": "queued ['open_case']"
+        }
+      ],
+      "reply": "We have received your report regarding an unrecognized transfer of £9,800. Due to the use of an unverified device and the amount involved, this is treated as a critical suspected fraud case. We are escalating this immediately to our fraud team for investigation. You do not need to take further action at this moment; the relevant team will contact you to verify the activity and secure your account. (urgency critical, fraud team)"
+    },
+    {
+      "id": "06-pasted-statement",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took portfolio"
+        },
+        {
+          "name": "escalation",
+          "passed": true,
+          "detail": "attempts ['small', 'large']"
+        },
+        {
+          "name": "first_refusal",
+          "passed": true,
+          "detail": "first attempt refused protected_content_over_budget"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['citations_were_sent:ok', 'actions_were_offered:ok', 'no_account_identifiers:ok', 'trade_guard:ok', 'figures_match_ledger:ok']"
+        },
+        {
+          "name": "outcome",
+          "passed": true,
+          "detail": "outcome answered"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:fees-and-charges@3#0', 'kb:fees-and-charges@3#2']"
+        }
+      ],
+      "reply": "As an advisory account, you are charged an annual advisory fee of 0.75% of assets, billed quarterly in arrears. Your statement provided contains only card purchases and direct debits; no advisory fee transaction appears within it. Fees are detailed on your quarterly statement and the Charges page. To confirm the exact amount charged for last quarter, please review those official documents. Your current ledger shows cash of 12400.50 GBP."
+    }
+  ],
+  "scripted_only": [
+    "02-vendor-figure-in-answer",
+    "03-advisory-sell-request"
+  ],
+  "result": "4/4 cases passed (2 scripted-only case(s) not run live)"
+}

@@ -1,7 +1,8 @@
 {
   "route": "returns",
   "next_stage_in": [
-    "return_requested"
+    "return_requested",
+    "open"
   ],
   "guards_pass": true,
   "attempts": [

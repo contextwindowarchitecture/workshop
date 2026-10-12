@@ -34,7 +34,7 @@
           "id": "c1-scribe-messages",
           "version": 1,
           "route": "scribe",
-          "model_family": null,
+          "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c1-scribe/v1",
           "placement": [
             {
@@ -75,11 +75,11 @@
             }
           ],
           "evaluation": {
-            "status": "unevaluated",
-            "suite": null,
-            "date": null,
-            "result": null,
-            "artifact": null
+            "status": "evaluated",
+            "suite": "c1-scribe-diagnostic/v1",
+            "date": "2026-10-11",
+            "result": "4/4 cases passed (2 scripted-only case(s) not run live)",
+            "artifact": "evals/results/qwen3.6-35b-a3b-01/report.json"
           }
         },
         "route_policy": {
@@ -891,7 +891,7 @@
           "route_policy_version": "c1-scribe/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-messages/v1",
-          "snapshot_digest": "e81b2833582542e4b5f1a3113c00b95d201fcb656e79711231ef3397cd73c63c"
+          "snapshot_digest": "3bda2c6f64197156bc7d0935fe5102161027cf58bfc6da0c702b254e053bdb49"
         },
         "defaults_filled": []
       },

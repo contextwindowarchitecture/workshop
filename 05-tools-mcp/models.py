@@ -61,6 +61,8 @@ class LiveModel:
             request["tools"] = [{"type": "function", "function": {"name": t["name"], "description": t.get("description", ""), "parameters": t["input_schema"]}} for t in specs]
         if os.environ.get("CWA_WORKSHOP_REASONING_EFFORT"):
             request["reasoning_effort"] = os.environ["CWA_WORKSHOP_REASONING_EFFORT"]
+        if os.environ.get("CWA_WORKSHOP_EXTRA_BODY"):  # server-specific members, e.g. {"chat_template_kwargs": {"enable_thinking": false}}
+            request["extra_body"] = json.loads(os.environ["CWA_WORKSHOP_EXTRA_BODY"])
         response = self.client.chat.completions.create(**request)
         message = response.choices[0].message
         if message.tool_calls:

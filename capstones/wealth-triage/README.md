@@ -59,6 +59,8 @@ The route contract; the producers and only the producers the route lists; protec
 
 With omlx serving `gpt-oss-20b-MXFP4-Q8` (2026-10-11, `evals/results/gpt-oss-20b-01/`), two of the four live cases passed; `02-vendor-figure-in-answer` and `03-advisory-sell-request` script a bad draft to exercise a guard and are `scripted_only`. The ledger's figure was reported and the pasted statement escalated and was answered. The two that failed are the model's handling of the tool schema: an order with no `client` and an invented `order_type`, and a fraud case opened with arguments the schema does not allow. The action guard validates arguments against the offered tool's schema and withholds the draft, so nothing was queued and the request went to an advisor, which is the designed outcome for an order the system cannot trust. An earlier pass also listed cash as a figure, which the guard now accepts when it is the ledger's cash. No profile was promoted from this run.
 
+With `Qwen3.6-35B-A3B-8bit` on the same server, thinking turned off through `CWA_WORKSHOP_EXTRA_BODY` and the tools visible to the model (`evals/results/qwen3.6-35b-a3b-01/`), all four live cases passed: the order and the case were placed with the schema's arguments and queued for confirmation. Both route profiles are promoted from that report; `policy/registry.lock.json` pins them. A team's own promotion replaces it.
+
 ## Closing section, written by the team
 
 Which placement or policy did you change, what did `cache.py` and the stored traces say it would change, and did you ship it? Which decision in your traces would a prompt not have been able to explain? What would you need before running the suite live, and what in the gate could a live model still get wrong?

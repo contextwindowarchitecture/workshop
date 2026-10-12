@@ -1,0 +1,29 @@
+{
+  "suite": "c3-wealth-triage/v1",
+  "model": "Qwen3.6-35B-A3B-8bit",
+  "live": true,
+  "date": "2026-10-11",
+  "impl": "solution",
+  "profiles": {
+    "portfolio": {
+      "id": "c3-portfolio-blocks",
+      "version": 1,
+      "sha256": "953d4a2a9cbf15b5d64094b50a92666d174199cce1393fc401366be888dc1bf8"
+    },
+    "triage": {
+      "id": "c3-triage-blocks",
+      "version": 1,
+      "sha256": "30c587d0e6c6cce1cabfab0d69f7130079adf26d79d5bb740a010923c8547826"
+    }
+  },
+  "cases": [
+    "01-holdings-question",
+    "04-self-directed-sell",
+    "05-fraud-report",
+    "06-pasted-statement"
+  ],
+  "scripted_only": [
+    "02-vendor-figure-in-answer",
+    "03-advisory-sell-request"
+  ]
+}

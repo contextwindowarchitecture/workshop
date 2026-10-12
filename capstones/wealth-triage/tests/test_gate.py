@@ -10,6 +10,8 @@ import io
 import json
 
 import pytest
+
+import models
 from cwa import Snapshot, assemble
 
 import app
@@ -202,3 +204,10 @@ def test_every_case_passes_its_expectations(name, which):
     record, expect = run(name, which)
     checks = evals.grade(expect, record)
     assert all(c.passed for c in checks), [f"{c.name}: {c.detail}" for c in checks if not c.passed]
+
+
+def test_a_native_tool_call_is_folded_into_the_contracts_actions():
+    folded = json.loads(models.fold_tool_calls('{"x": 1, "actions": []}', [("open_case", '{"client": "c_1", "category": "fraud"}')]))
+    assert folded["actions"] == [{"tool": "open_case", "arguments": {"client": "c_1", "category": "fraud"}}] and folded["x"] == 1
+    assert models.fold_tool_calls("not json", [("t", "{}")]) == "not json"
+    assert models.fold_tool_calls("plain", []) == "plain"

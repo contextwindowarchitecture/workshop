@@ -34,7 +34,7 @@
           "id": "c1-consult-messages",
           "version": 1,
           "route": "consult",
-          "model_family": null,
+          "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c1-consult/v1",
           "placement": [
             {
@@ -71,11 +71,11 @@
             }
           ],
           "evaluation": {
-            "status": "unevaluated",
-            "suite": null,
-            "date": null,
-            "result": null,
-            "artifact": null
+            "status": "evaluated",
+            "suite": "c1-scribe-diagnostic/v1",
+            "date": "2026-10-11",
+            "result": "4/4 cases passed (2 scripted-only case(s) not run live)",
+            "artifact": "evals/results/qwen3.6-35b-a3b-01/report.json"
           }
         },
         "route_policy": {
@@ -594,7 +594,7 @@
           "route_policy_version": "c1-consult/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-messages/v1",
-          "snapshot_digest": "a985a70d1ca8217a201d84c6652f6501f7e98c013a627749cc7bbf2f76212fcb"
+          "snapshot_digest": "e85614a4550b004b4785f4792917166ef0659860e073fa83d331c1ab913ca35c"
         },
         "defaults_filled": []
       },
@@ -620,7 +620,7 @@
           "id": "c1-consult-messages",
           "version": 1,
           "route": "consult",
-          "model_family": null,
+          "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c1-consult/v1",
           "placement": [
             {
@@ -657,11 +657,11 @@
             }
           ],
           "evaluation": {
-            "status": "unevaluated",
-            "suite": null,
-            "date": null,
-            "result": null,
-            "artifact": null
+            "status": "evaluated",
+            "suite": "c1-scribe-diagnostic/v1",
+            "date": "2026-10-11",
+            "result": "4/4 cases passed (2 scripted-only case(s) not run live)",
+            "artifact": "evals/results/qwen3.6-35b-a3b-01/report.json"
           }
         },
         "route_policy": {
@@ -1282,7 +1282,7 @@
           "route_policy_version": "c1-consult/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-messages/v1",
-          "snapshot_digest": "ba578eb34897891962c1f9e26082a9b0a1cbd5db4e09b7ace7361a8bfe22dbba"
+          "snapshot_digest": "9b40a4fb69e757fac6ee30302a8b9a065d588d5472b3c164d3f93068bbb3e4d1"
         },
         "defaults_filled": []
       },

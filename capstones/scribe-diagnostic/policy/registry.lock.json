@@ -1,0 +1,26 @@
+{
+  "profiles": [
+    {
+      "id": "c1-consult-messages",
+      "version": 1,
+      "sha256": "c8ef1757a8fb3ea21a08075fcb6cb8130d40bd896bf069be5c2624c5ccb99d04"
+    },
+    {
+      "id": "c1-scribe-messages",
+      "version": 1,
+      "sha256": "d50fd151809a4f2c12d2691528c2388c1e3ec634ab4a76d801f5a1efbfd3a52a"
+    }
+  ],
+  "route_policies": [
+    {
+      "route": "consult",
+      "version": "c1-consult/v1",
+      "sha256": "3fbc65c4087b514ec5a88d771a6d4be698f099dadf15ad09b8f90c8667cae167"
+    },
+    {
+      "route": "scribe",
+      "version": "c1-scribe/v1",
+      "sha256": "6e7b49e2ae7f958c009f1790c08782d9bccdc79d28624764d9d275a1d6b61ae0"
+    }
+  ]
+}

@@ -8,12 +8,12 @@
     "portfolio": {
       "id": "c3-portfolio-blocks",
       "version": 1,
-      "sha256": "953d4a2a9cbf15b5d64094b50a92666d174199cce1393fc401366be888dc1bf8"
+      "sha256": "9bc3228b5548027f8688c499281bd0d2359c62251bc6ab7acd447ca4a7c9ae9f"
     },
     "triage": {
       "id": "c3-triage-blocks",
       "version": 1,
-      "sha256": "30c587d0e6c6cce1cabfab0d69f7130079adf26d79d5bb740a010923c8547826"
+      "sha256": "856408964412ef3482468f463021e7fd475d284c9250c07bcafebc5736fd9362"
     }
   },
   "cases": [

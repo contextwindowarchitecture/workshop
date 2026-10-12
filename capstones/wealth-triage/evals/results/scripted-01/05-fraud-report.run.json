@@ -34,7 +34,7 @@
           "id": "c3-triage-blocks",
           "version": 1,
           "route": "triage",
-          "model_family": null,
+          "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c3-triage/v1",
           "placement": [
             {
@@ -75,11 +75,11 @@
             }
           ],
           "evaluation": {
-            "status": "unevaluated",
-            "suite": null,
-            "date": null,
-            "result": null,
-            "artifact": null
+            "status": "evaluated",
+            "suite": "c3-wealth-triage/v1",
+            "date": "2026-10-11",
+            "result": "4/4 cases passed (2 scripted-only case(s) not run live)",
+            "artifact": "evals/results/qwen3.6-35b-a3b-01/report.json"
           }
         },
         "route_policy": {
@@ -763,7 +763,7 @@
           "route_policy_version": "c3-triage/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-message-blocks/v1",
-          "snapshot_digest": "d78fb21c6969037811eb20a85dee5d7cfd3a177455c5718132ddbd09068fb131"
+          "snapshot_digest": "a00cf1df2903e60ced4ad312e93acc24de0c89070f2a6b579c519ead48973899"
         },
         "defaults_filled": []
       },

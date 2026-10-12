@@ -39,7 +39,7 @@ SCRIPTS = HERE / "evals" / "cases" / "scripts.json"
 PROFILE = HERE / "policy" / "profile.json"
 ROUTE = HERE / "policy" / "route-policy.json"
 LOCK = HERE / "policy" / "registry.lock.json"
-PLAN_CLAIM = re.compile(r"\b(?:I(?:'ve| have)? (?:changed|moved|switched|requested(?: the change)?|downgraded|upgraded)|(?:has been|was) (?:changed|moved|switched|downgraded|upgraded)|plan is now)\b", re.IGNORECASE)
+PLAN_CLAIM = re.compile(r"\b(?:I(?:'ve| have)? (?:\w+ly )?(?:changed|moved|switched|requested(?: the change)?|downgraded|upgraded)|(?:has been|was|is now) (?:\w+ly )?(?:changed|moved|switched|downgraded|upgraded)|plan is now)\b", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -84,7 +84,10 @@ def run_suite(label: str, live: bool, which: str | None = None) -> Path:
     out = RESULTS / label
     out.mkdir(parents=True, exist_ok=True)
     model_name = None
+    skipped = [c["id"] for c in suite["cases"] if live and c.get("scripted_only")]  # a case that needs the scripted model's path through the tools
     for case in suite["cases"]:
+        if case["id"] in skipped:
+            continue
         request = Request(user=case["user"], session=f"s_eval_{case['id']}", asked_at="2026-10-01T10:00:00Z", question=case["question"])
         model: Any = models.LiveModel(agent.settings()["reserved_output"]) if live else models.ScriptedModel({"name": f"scripted:{case['id']}", **scripts[case["id"]]})
         model_name = model.name if live else "scripted"
@@ -92,7 +95,7 @@ def run_suite(label: str, live: bool, which: str | None = None) -> Path:
         (out / f"{case['id']}.run.json").write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     meta = {"suite": suite["suite"], "model": model_name, "date": date.today().isoformat(), "live": live,
             "profile": {"id": json.loads(PROFILE.read_text())["id"], "version": json.loads(PROFILE.read_text())["version"], "sha256": profile_digest(json.loads(PROFILE.read_text()))},
-            "cases": [c["id"] for c in suite["cases"]]}
+            "cases": [c["id"] for c in suite["cases"] if c["id"] not in skipped], "scripted_only": skipped}
     (out / "meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
     report(out, which, write=True)
     return out
@@ -109,7 +112,8 @@ def report(results: Path, which: str | None = None, write: bool = False) -> dict
         checks = grade(by_id[case_id], record) if case_id in by_id else [Check("known_case", False, "not in the current suite")]
         graded.append({"id": case_id, "passed": all(c.passed for c in checks), "checks": [asdict(c) for c in checks], "answer": record["answer"]})
     passed = sum(1 for g in graded if g["passed"])
-    out = {**meta, "result": f"{passed}/{len(graded)} cases passed", "cases": graded}
+    skipped = meta.get("scripted_only", [])
+    out = {**meta, "result": f"{passed}/{len(graded)} cases passed" + (f" ({len(skipped)} scripted-only case(s) not run live)" if skipped else ""), "cases": graded}
     if write:
         (results / "report.json").write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return out
@@ -131,7 +135,7 @@ def promote(results: Path, model_family: str) -> list[str]:
         return problems
     profile["model_family"] = model_family
     profile["evaluation"] = {"status": "evaluated", "suite": graded["suite"], "date": graded["date"], "result": graded["result"],
-                             "artifact": str((results / "report.json").relative_to(HERE))}
+                             "artifact": str((results / "report.json").resolve().relative_to(HERE))}
     PROFILE.write_text(json.dumps(profile, indent=2) + "\n", encoding="utf-8")
     pinned = lock([profile], [json.loads(ROUTE.read_text(encoding="utf-8"))])
     LOCK.write_text(json.dumps(pinned, indent=2) + "\n", encoding="utf-8")
@@ -175,7 +179,7 @@ def main(argv: list[str]) -> int:
             graded = report(Path(args.results))
             profile = json.loads(PROFILE.read_text(encoding="utf-8"))
             profile["model_family"] = args.model_family
-            profile["evaluation"] = {"status": "evaluated", "suite": graded["suite"], "date": graded["date"], "result": graded["result"] + " (scripted models; not a live evaluation)", "artifact": str((Path(args.results) / "report.json").relative_to(HERE))}
+            profile["evaluation"] = {"status": "evaluated", "suite": graded["suite"], "date": graded["date"], "result": graded["result"] + " (scripted models; not a live evaluation)", "artifact": str((Path(args.results) / "report.json").resolve().relative_to(HERE))}
             PROFILE.write_text(json.dumps(profile, indent=2) + "\n", encoding="utf-8")
             LOCK.write_text(json.dumps(lock([profile], [json.loads(ROUTE.read_text(encoding="utf-8"))]), indent=2) + "\n", encoding="utf-8")
     if problems:

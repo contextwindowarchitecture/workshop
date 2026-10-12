@@ -1,0 +1,678 @@
+{
+  "request": {
+    "customer": "c_1002",
+    "ticket": "t_5002",
+    "session": "s_c2_02",
+    "asked_at": "2026-10-01T10:05:00Z",
+    "question": "The tent arrived with a torn flysheet and the box was crushed. What happens now?",
+    "faults": []
+  },
+  "intent": {
+    "route": "damaged",
+    "matched": "torn"
+  },
+  "route": "damaged",
+  "attempts": [
+    {
+      "tier": "small",
+      "snapshot": {
+        "assembly_time": "2026-10-01T10:05:00Z",
+        "scope": {
+          "tenant": "northwind",
+          "user": "c_1002",
+          "session": "s_c2_02",
+          "task": "t_5002"
+        },
+        "budget": {
+          "input": 1648,
+          "reserved_output": 400,
+          "margin_percent": 15
+        },
+        "profile": {
+          "spec": "cwa/draft",
+          "id": "c2-damaged-messages",
+          "version": 1,
+          "route": "damaged",
+          "model_family": null,
+          "route_policy_version": "c2-damaged/v1",
+          "placement": [
+            {
+              "slot": "governance.instructions",
+              "wrap": "system"
+            },
+            {
+              "slot": "state.user",
+              "wrap": "xml:customer"
+            },
+            {
+              "slot": "state.task",
+              "wrap": "xml:ticket"
+            },
+            {
+              "slot": "interaction.memory",
+              "wrap": "xml:crm_note"
+            },
+            {
+              "slot": "interaction.history",
+              "wrap": "xml:history"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "wrap": "xml:policy"
+            },
+            {
+              "slot": "governance.output_contract",
+              "wrap": "xml:format"
+            },
+            {
+              "slot": "interaction.query",
+              "wrap": "xml:message"
+            }
+          ],
+          "evaluation": {
+            "status": "unevaluated",
+            "suite": null,
+            "date": null,
+            "result": null,
+            "artifact": null
+          }
+        },
+        "route_policy": {
+          "route": "damaged",
+          "version": "c2-damaged/v1",
+          "clock_skew_seconds": 5,
+          "requires_evidence": true,
+          "producers": {
+            "support-policy": {
+              "kind": "policy",
+              "slots": [
+                "governance.instructions",
+                "governance.output_contract"
+              ]
+            },
+            "ticket-state": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "customer-state": {
+              "kind": "state",
+              "slots": [
+                "state.user"
+              ]
+            },
+            "orders-db": {
+              "kind": "state",
+              "slots": [
+                "state.task"
+              ]
+            },
+            "crm-notes": {
+              "kind": "memory",
+              "slots": [
+                "interaction.memory"
+              ]
+            },
+            "kb-search": {
+              "kind": "retrieval",
+              "slots": [
+                "evidence.knowledge"
+              ]
+            },
+            "web-chat": {
+              "kind": "interaction",
+              "slots": [
+                "interaction.history",
+                "interaction.query"
+              ]
+            }
+          },
+          "slots": {
+            "state.task": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "task"
+              ]
+            },
+            "state.user": {
+              "max_age_seconds": 300,
+              "required_scope": [
+                "tenant",
+                "user"
+              ]
+            },
+            "evidence.knowledge": {
+              "min_relevance": 2.5,
+              "min_included": 1,
+              "dedupe": "exact",
+              "max_per_source": 2,
+              "order_by": [
+                "-relevance",
+                "-freshness"
+              ]
+            },
+            "interaction.memory": {
+              "source_prefix": "crm:",
+              "required_scope": [
+                "tenant",
+                "user"
+              ],
+              "order_by": [
+                "-freshness"
+              ]
+            },
+            "interaction.history": {
+              "required_scope": [
+                "session"
+              ],
+              "order_by": [
+                "-freshness"
+              ],
+              "max_tokens": 300
+            },
+            "interaction.query": {
+              "required_scope": [
+                "session"
+              ]
+            }
+          },
+          "tier_upgrades": {
+            "state.user": "protected"
+          },
+          "facts": {
+            "delivery_status:o_7781": {
+              "precedence": [
+                "orders-db",
+                "crm-notes"
+              ],
+              "scope": [
+                "tenant"
+              ],
+              "on_unresolved": "refuse"
+            }
+          },
+          "fitting_order": [
+            {
+              "slot": "interaction.history",
+              "action": "omit"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "compress"
+            },
+            {
+              "slot": "interaction.memory",
+              "action": "omit"
+            },
+            {
+              "slot": "evidence.knowledge",
+              "action": "omit"
+            }
+          ],
+          "parser": true
+        },
+        "tokenizer": "estimate-utf8/v1",
+        "renderer": "cwa-messages/v1",
+        "batches": [
+          {
+            "producer": {
+              "id": "support-policy",
+              "kind": "policy"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "policy:damaged",
+                "slot": "governance.instructions",
+                "source": "app:policy/damaged/instructions.md",
+                "source_version": "3",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "You are the Northwind Outdoors support assistant, handling a damaged or defective item. Use only the customer and ticket facts, the CRM notes, the policy articles and the conversation you are given.\n\nExplain what the customer can do next in plain steps, cite the policy article id for every rule you state, and never promise a refund amount or date the articles do not state.\n\nNever include the customer's phone number, email address, postal address or any payment detail in your reply, and never mention another customer or another order than the one on this ticket.\n\nSet next_stage to awaiting_photos when the policy needs photos the customer has not sent, to return_requested or refund_pending once the policy's remedy is clear, and to open when you need more from the customer; use needs_agent only when the articles do not cover the request.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "contract:json-reply",
+                "slot": "governance.output_contract",
+                "source": "app:policy/output-contract.md",
+                "source_version": "1",
+                "freshness": "2026-09-01T09:00:00Z",
+                "body": "Reply as JSON with exactly these keys: \"reply\" (the message to the customer, at most 120 words, plain text), \"next_stage\" (one of: open, awaiting_photos, return_requested, label_sent, refund_pending, resolved, needs_agent), \"citations\" (the list of policy article ids you relied on). No other keys, no text outside the JSON.",
+                "authority": "governing",
+                "trust": "verified",
+                "lineage": "verbatim",
+                "injection_risk": "none"
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "customer-state",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "customer:c_1002",
+                "slot": "state.user",
+                "source": "customers-db:c_1002",
+                "source_version": "1",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-01T10:05:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "user": "c_1002"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Customer Tomas Reyes (c_1002), guest, country ES."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "ticket-state",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "ticket:t_5002",
+                "slot": "state.task",
+                "source": "tickets-db:t_5002",
+                "source_version": "2026-10-01T09:40:00Z",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-01T10:05:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "task": "t_5002"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Ticket t_5002 for order o_7802: stage awaiting_photos, routed as damaged, return requested False, label sent False, refund none, attempts 1."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "orders-db",
+              "kind": "state"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "governs",
+                "eligibility": "route-policy",
+                "id": "order:o_7802",
+                "slot": "state.task",
+                "source": "orders-db:o_7802",
+                "source_version": "4",
+                "authority": "state",
+                "trust": "verified",
+                "freshness": "2026-10-01T10:05:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "task": "t_5002"
+                },
+                "lineage": "extracted",
+                "injection_risk": "none",
+                "body": "Order o_7802 placed 2026-09-27, standard shipping, status delivered, delivered 2026-09-30T10:05:00Z. Items: Two-person tent, green (249.00)."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "crm-notes",
+              "kind": "memory"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [
+                  {
+                    "id": "crm:c_1002:0001~summary",
+                    "body": "Customer reported the tent arrived with a torn flysheet and was asked for two photos; none received yet.",
+                    "method": "agent-written summary",
+                    "lineage": "summarised"
+                  }
+                ],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "crm:c_1002:0001",
+                "slot": "interaction.memory",
+                "source": "crm:c_1002:0001",
+                "source_version": "1",
+                "authority": "generated",
+                "trust": "unverified",
+                "freshness": "2026-09-30T18:20:00Z",
+                "expires": "2027-03-29T18:20:00Z",
+                "scope": {
+                  "tenant": "northwind",
+                  "user": "c_1002"
+                },
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Email from Tomas Reyes about order o_7802 (two-person tent, green), delivered 30 September. Customer reports the flysheet has a tear of about 20 cm near a seam, visible on unpacking, and the outer box was crushed on one corner. Agent replied with the damaged-items procedure: report from the order page with two photos (item and outer packaging) within 14 days of delivery; a replacement ships first when in stock. Ticket t_5002 moved to awaiting photos. No photos received as of this note."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "kb-search",
+              "kind": "retrieval"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:shipping@7#2",
+                "slot": "evidence.knowledge",
+                "source": "kb:shipping",
+                "source_version": "7",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-09-15T09:00:00Z",
+                "relevance": 4.441,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "A parcel that shows as delivered but has not arrived is usually with a neighbour or at a safe place; please check for 24 hours. After that, report it from the order page and we open a carrier investigation, which takes up to 5 business days."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:damaged-items@3#0",
+                "slot": "evidence.knowledge",
+                "source": "kb:damaged-items",
+                "source_version": "3",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-09-02T09:00:00Z",
+                "relevance": 2.741,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "If an item arrives damaged or defective, report it within 14 days of delivery from the order page with Report a problem, and attach two photos: the item and the outer packaging."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:returns-policy@5#0",
+                "slot": "evidence.knowledge",
+                "source": "kb:returns-policy",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-08-20T09:00:00Z",
+                "relevance": 2.38,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "Most items can be returned within 30 days of delivery for a full refund to the original payment method. Items must be unused, in their original packaging, with tags attached."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:refunds-and-exchanges@4#1",
+                "slot": "evidence.knowledge",
+                "source": "kb:refunds-and-exchanges",
+                "source_version": "4",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-07-30T09:00:00Z",
+                "relevance": 1.375,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "To exchange a size or colour, start a return for the original and place a new order; the new order ships immediately and the return is refunded when it arrives. Exchanges are not held in stock."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:damaged-items@3#1",
+                "slot": "evidence.knowledge",
+                "source": "kb:damaged-items",
+                "source_version": "3",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-09-02T09:00:00Z",
+                "relevance": 1.19,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "For damaged items we send a replacement first, free of charge, and include a prepaid label for the damaged one. You do not need to wait for the return to arrive before the replacement ships."
+              },
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "kb:returns-policy@5#2",
+                "slot": "evidence.knowledge",
+                "source": "kb:returns-policy",
+                "source_version": "5",
+                "authority": "reference_only",
+                "trust": "verified",
+                "freshness": "2026-08-20T09:00:00Z",
+                "relevance": 1.19,
+                "lineage": "verbatim",
+                "injection_risk": "untrusted_content",
+                "body": "To start a return, open the order in your account and choose Return items. We email a prepaid label within minutes; drop the parcel at any carrier point within 14 days of requesting the return."
+              }
+            ],
+            "excluded": []
+          },
+          {
+            "producer": {
+              "id": "web-chat",
+              "kind": "interaction"
+            },
+            "items": [
+              {
+                "token_budget": null,
+                "variants": [],
+                "conflict_policy": "defers",
+                "eligibility": "route-policy",
+                "id": "turn:s_c2_02:0001",
+                "slot": "interaction.query",
+                "source": "chat:s_c2_02",
+                "source_version": "1",
+                "authority": "user",
+                "lineage": "verbatim",
+                "trust": "unverified",
+                "freshness": "2026-10-01T10:05:00Z",
+                "scope": {
+                  "session": "s_c2_02"
+                },
+                "injection_risk": "untrusted_content",
+                "body": "The tent arrived with a torn flysheet and the box was crushed. What happens now?"
+              }
+            ],
+            "excluded": []
+          }
+        ],
+        "conflicts": []
+      },
+      "trace": {
+        "profile": {
+          "id": "c2-damaged-messages",
+          "version": 1
+        },
+        "budget": {
+          "input": 1648,
+          "reserved_output": 400,
+          "margin_percent": 15
+        },
+        "result": {
+          "input_tokens": 709,
+          "hash": "f75b35f8e930239e9de7b81b5905fdc8eb7f77962cd7dee9bb6adfbd989eb6fe"
+        },
+        "included": [
+          {
+            "slot": "governance.instructions",
+            "item_id": "policy:damaged",
+            "tokens": 212,
+            "source_version": "3",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.user",
+            "item_id": "customer:c_1002",
+            "tokens": 13,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.task",
+            "item_id": "order:o_7802",
+            "tokens": 35,
+            "source_version": "4",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "state.task",
+            "item_id": "ticket:t_5002",
+            "tokens": 35,
+            "source_version": "2026-10-01T09:40:00Z",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "interaction.memory",
+            "item_id": "crm:c_1002:0001",
+            "tokens": 123,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:damaged-items@3#0",
+            "tokens": 45,
+            "source_version": "3",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "evidence.knowledge",
+            "item_id": "kb:shipping@7#2",
+            "tokens": 61,
+            "source_version": "7",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "governance.output_contract",
+            "item_id": "contract:json-reply",
+            "tokens": 81,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          },
+          {
+            "slot": "interaction.query",
+            "item_id": "turn:s_c2_02:0001",
+            "tokens": 20,
+            "source_version": "1",
+            "eligibility": "route-policy"
+          }
+        ],
+        "compressed": [],
+        "excluded": [
+          {
+            "item_id": "kb:damaged-items@3#1",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          },
+          {
+            "item_id": "kb:refunds-and-exchanges@4#1",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          },
+          {
+            "item_id": "kb:returns-policy@5#0",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          },
+          {
+            "item_id": "kb:returns-policy@5#2",
+            "reason": "below_threshold",
+            "stage": "assembler",
+            "slot": "evidence.knowledge"
+          }
+        ],
+        "conflicts": [],
+        "refused": {
+          "bool": false,
+          "reason": null
+        },
+        "context": {
+          "spec": "cwa/draft",
+          "assembly_time": "2026-10-01T10:05:00Z",
+          "route_policy_version": "c2-damaged/v1",
+          "tokenizer": "estimate-utf8/v1",
+          "renderer": "cwa-messages/v1",
+          "snapshot_digest": "2cc48913a7e44d1a92e9f6fac03cb8cb03f8de3430fb93ba9f6aaf4c925ef9ee"
+        },
+        "defaults_filled": []
+      },
+      "payload": "{\"messages\":[{\"content\":\"<customer id=\\\"customer:c_1002\\\">\\nCustomer Tomas Reyes (c_1002), guest, country ES.\\n</customer>\\n<ticket id=\\\"order:o_7802\\\">\\nOrder o_7802 placed 2026-09-27, standard shipping, status delivered, delivered 2026-09-30T10:05:00Z. Items: Two-person tent, green (249.00).\\n</ticket>\\n<ticket id=\\\"ticket:t_5002\\\">\\nTicket t_5002 for order o_7802: stage awaiting_photos, routed as damaged, return requested False, label sent False, refund none, attempts 1.\\n</ticket>\\n<crm_note id=\\\"crm:c_1002:0001\\\">\\nEmail from Tomas Reyes about order o_7802 (two-person tent, green), delivered 30 September. Customer reports the flysheet has a tear of about 20 cm near a seam, visible on unpacking, and the outer box was crushed on one corner. Agent replied with the damaged-items procedure: report from the order page with two photos (item and outer packaging) within 14 days of delivery; a replacement ships first when in stock. Ticket t_5002 moved to awaiting photos. No photos received as of this note.\\n</crm_note>\\n<policy id=\\\"kb:damaged-items@3#0\\\">\\nIf an item arrives damaged or defective, report it within 14 days of delivery from the order page with Report a problem, and attach two photos: the item and the outer packaging.\\n</policy>\\n<policy id=\\\"kb:shipping@7#2\\\">\\nA parcel that shows as delivered but has not arrived is usually with a neighbour or at a safe place; please check for 24 hours. After that, report it from the order page and we open a carrier investigation, which takes up to 5 business days.\\n</policy>\\n<format id=\\\"contract:json-reply\\\">\\nReply as JSON with exactly these keys: \\\"reply\\\" (the message to the customer, at most 120 words, plain text), \\\"next_stage\\\" (one of: open, awaiting_photos, return_requested, label_sent, refund_pending, resolved, needs_agent), \\\"citations\\\" (the list of policy article ids you relied on). No other keys, no text outside the JSON.\\n</format>\\n<message id=\\\"turn:s_c2_02:0001\\\">\\nThe tent arrived with a torn flysheet and the box was crushed. What happens now?\\n</message>\\n\",\"role\":\"user\"}],\"system\":[{\"id\":\"policy:damaged\",\"text\":\"You are the Northwind Outdoors support assistant, handling a damaged or defective item. Use only the customer and ticket facts, the CRM notes, the policy articles and the conversation you are given.\\n\\nExplain what the customer can do next in plain steps, cite the policy article id for every rule you state, and never promise a refund amount or date the articles do not state.\\n\\nNever include the customer's phone number, email address, postal address or any payment detail in your reply, and never mention another customer or another order than the one on this ticket.\\n\\nSet next_stage to awaiting_photos when the policy needs photos the customer has not sent, to return_requested or refund_pending once the policy's remedy is clear, and to open when you need more from the customer; use needs_agent only when the articles do not cover the request.\"}],\"tools\":[]}"
+    }
+  ],
+  "draft": "{\n \"reply\": \"Thanks for reporting this. To process a replacement for your tent, please submit a damage report from the order page within 14 days of delivery. You must attach two photos: one of the damaged item and one of the outer packaging (kb:damaged-items@3#0). A replacement will ship once in stock. Please provide these photos so we can proceed.\",\n \"next_stage\": \"awaiting_photos\",\n \"citations\": [\n  \"kb:damaged-items@3#0\"\n ]\n}",
+  "parsed": {
+    "reply": "Thanks for reporting this. To process a replacement for your tent, please submit a damage report from the order page within 14 days of delivery. You must attach two photos: one of the damaged item and one of the outer packaging (kb:damaged-items@3#0). A replacement will ship once in stock. Please provide these photos so we can proceed.",
+    "next_stage": "awaiting_photos",
+    "citations": [
+      "kb:damaged-items@3#0"
+    ]
+  },
+  "guards": [
+    {
+      "name": "pii_screen",
+      "ok": true,
+      "reason": "no contact or payment detail in the reply"
+    },
+    {
+      "name": "only_this_customer",
+      "ok": true,
+      "reason": "the reply names only this customer's ticket and order"
+    },
+    {
+      "name": "citations_were_sent",
+      "ok": true,
+      "reason": "1 citation(s), all sent"
+    }
+  ],
+  "reply": "Thanks for reporting this. To process a replacement for your tent, please submit a damage report from the order page within 14 days of delivery. You must attach two photos: one of the damaged item and one of the outer packaging (kb:damaged-items@3#0). A replacement will ship once in stock. Please provide these photos so we can proceed.",
+  "next_stage": "awaiting_photos",
+  "model": "Qwen3.6-35B-A3B-8bit"
+}

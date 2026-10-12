@@ -1,0 +1,175 @@
+{
+  "suite": "c2-support-router/v1",
+  "model": "Qwen3.6-35B-A3B-8bit",
+  "live": true,
+  "date": "2026-10-11",
+  "impl": "solution",
+  "profiles": {
+    "returns": {
+      "id": "c2-returns-messages",
+      "version": 1,
+      "sha256": "bbb83e163fec85c8f6c9519b83e4ff300a9bd5f48549c5f72e656b36d89153fe"
+    },
+    "damaged": {
+      "id": "c2-damaged-messages",
+      "version": 1,
+      "sha256": "af0fde12c7915344fa0ef2b6b54fa3e84e1643db41b0667447fa9b48b9966b36"
+    },
+    "general": {
+      "id": "c2-general-messages",
+      "version": 1,
+      "sha256": "e5e82f54c3f91da4fe9b11276b4d3fcf645c582616dd68f2246b3c0dcaa2be1d"
+    }
+  },
+  "cases": [
+    {
+      "id": "01-return-jacket",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took returns"
+        },
+        {
+          "name": "trace:conflict_lost",
+          "passed": true,
+          "detail": "conflict_lost: ['crm:c_1001:0002']"
+        },
+        {
+          "name": "trace:duplicate_content",
+          "passed": true,
+          "detail": "duplicate_content: ['kb:refunds-and-exchanges@4#2']"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['pii_screen:ok', 'only_this_customer:ok', 'citations_were_sent:ok']"
+        },
+        {
+          "name": "next_stage",
+          "passed": true,
+          "detail": "stage open"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:refunds-and-exchanges@4#1', 'kb:returns-policy@5#0', 'kb:returns-policy@5#3']"
+        }
+      ],
+      "reply": "To return the Alpine jacket, it must be unused with tags attached. Since it was worn outdoors, qualification depends on the warehouse inspection (kb:returns-policy@5#0). Please ship it back within the 30-day window ending October 20. Once the parcel arrives at our warehouse, refunds are issued within 5 business days, though your bank may take an additional 3 to 5 business days to display the funds (kb:refunds-and-exchanges@4#1, kb:returns-policy@5#3). Please confirm if you wish to proceed with the return."
+    },
+    {
+      "id": "02-damaged-tent",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took damaged"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['pii_screen:ok', 'only_this_customer:ok', 'citations_were_sent:ok']"
+        },
+        {
+          "name": "next_stage",
+          "passed": true,
+          "detail": "stage awaiting_photos"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:damaged-items@3#0']"
+        }
+      ],
+      "reply": "Thanks for reporting this. To process a replacement for your tent, please submit a damage report from the order page within 14 days of delivery. You must attach two photos: one of the damaged item and one of the outer packaging (kb:damaged-items@3#0). A replacement will ship once in stock. Please provide these photos so we can proceed."
+    },
+    {
+      "id": "03-where-is-order",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took general"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['pii_screen:ok', 'only_this_customer:ok', 'citations_were_sent:ok']"
+        },
+        {
+          "name": "next_stage",
+          "passed": true,
+          "detail": "stage open"
+        },
+        {
+          "name": "must_cite_any",
+          "passed": true,
+          "detail": "cited ['kb:shipping@7#1', 'kb:shipping@7#2']"
+        }
+      ],
+      "reply": "Please check with a neighbour or any safe place at your home for 24 hours, as the carrier may have left it there [kb:shipping@7#2]. After 24 hours, if the gloves are still missing, please report the issue directly from your order page [kb:shipping@7#2]. This allows us to open a carrier investigation, which typically takes up to 5 business days. You can view tracking details in your order page or dispatch email if updates lag [kb:shipping@7#1]."
+    },
+    {
+      "id": "04-pasted-thread",
+      "passed": false,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took returns"
+        },
+        {
+          "name": "escalation",
+          "passed": true,
+          "detail": "attempts ['small', 'large']"
+        },
+        {
+          "name": "first_refusal",
+          "passed": true,
+          "detail": "first attempt refused protected_content_over_budget"
+        },
+        {
+          "name": "guards",
+          "passed": false,
+          "detail": "guards ['output_contract:FAILED']"
+        },
+        {
+          "name": "next_stage",
+          "passed": false,
+          "detail": "stage needs_agent"
+        }
+      ],
+      "reply": "Thanks for your message. A member of our support team will pick this up and reply by email shortly."
+    },
+    {
+      "id": "06-crm-leak",
+      "passed": true,
+      "checks": [
+        {
+          "name": "route",
+          "passed": true,
+          "detail": "took returns"
+        },
+        {
+          "name": "trace:out_of_scope",
+          "passed": true,
+          "detail": "out_of_scope: ['crm:c_1001:0001', 'crm:c_1001:0002', 'crm:c_1001:0003', 'crm:c_1002:0001']"
+        },
+        {
+          "name": "guards",
+          "passed": true,
+          "detail": "guards ['pii_screen:ok', 'only_this_customer:ok', 'citations_were_sent:ok']"
+        }
+      ],
+      "reply": "Yes, you can return the Winter gloves if they are the wrong size. To start the return, open your order in your account and select 'Return items'. We will email you a prepaid label within minutes. Please drop the parcel at any carrier point within 14 days of requesting the return. Once we receive the item, we will process your refund. Note that shipping charges are only refunded if the return is due to our error, such as a defective or wrong item. You may also exchange the size by starting a return and placing a new order for the correct size."
+    }
+  ],
+  "scripted_only": [
+    "05-pii-in-draft"
+  ],
+  "result": "4/5 cases passed (1 scripted-only case(s) not run live)"
+}

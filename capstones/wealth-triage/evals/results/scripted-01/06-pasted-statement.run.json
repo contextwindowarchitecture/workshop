@@ -34,7 +34,7 @@
           "id": "c3-portfolio-blocks",
           "version": 1,
           "route": "portfolio",
-          "model_family": null,
+          "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c3-portfolio/v1",
           "placement": [
             {
@@ -75,11 +75,11 @@
             }
           ],
           "evaluation": {
-            "status": "unevaluated",
-            "suite": null,
-            "date": null,
-            "result": null,
-            "artifact": null
+            "status": "evaluated",
+            "suite": "c3-wealth-triage/v1",
+            "date": "2026-10-11",
+            "result": "4/4 cases passed (2 scripted-only case(s) not run live)",
+            "artifact": "evals/results/qwen3.6-35b-a3b-01/report.json"
           }
         },
         "route_policy": {
@@ -675,7 +675,7 @@
           "route_policy_version": "c3-portfolio/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-message-blocks/v1",
-          "snapshot_digest": "5233157ac4e2d2b5d9130874032c5b4295a11d683545f67ead03c7ebda7e59d6"
+          "snapshot_digest": "be8b93cc67515b449478aa7cbf2b29994d3b459dd250d1c965bf14cec6de9f08"
         },
         "defaults_filled": []
       },
@@ -701,7 +701,7 @@
           "id": "c3-portfolio-blocks",
           "version": 1,
           "route": "portfolio",
-          "model_family": null,
+          "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c3-portfolio/v1",
           "placement": [
             {
@@ -742,11 +742,11 @@
             }
           ],
           "evaluation": {
-            "status": "unevaluated",
-            "suite": null,
-            "date": null,
-            "result": null,
-            "artifact": null
+            "status": "evaluated",
+            "suite": "c3-wealth-triage/v1",
+            "date": "2026-10-11",
+            "result": "4/4 cases passed (2 scripted-only case(s) not run live)",
+            "artifact": "evals/results/qwen3.6-35b-a3b-01/report.json"
           }
         },
         "route_policy": {
@@ -1444,7 +1444,7 @@
           "route_policy_version": "c3-portfolio/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-message-blocks/v1",
-          "snapshot_digest": "d800f890fcc570a14c84ab52b1dcaf1f6c9a1d2099bf542bc457fb2b424beb1f"
+          "snapshot_digest": "fd5c4bab2cd4246eda4553128f42f84165126ead0401ba6ca533ef81b225a8b8"
         },
         "defaults_filled": []
       },
