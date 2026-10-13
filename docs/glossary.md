@@ -182,7 +182,7 @@ Related: `plane`, `authority`, `rule-zero`, `capability-policy`
 
 The agent framework or loop that runs the tools, keeps the state and retries the failures. CWA fills the one blank it leaves: what lands in the window on each pass.
 
-Where: [harness engineering](https://contextwindowarchitecture.io/index.html#harness)
+Where: [harness engineering](https://contextwindowarchitecture.io/assembler.html#harness)
 
 Related: `application`, `assembler`
 

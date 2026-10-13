@@ -57,9 +57,9 @@ These apply to every workshop and are not repeated below.
   - Leaves with a slot inventory of one real prompt they own.
 - **Calls to action**
   - Bring `items.cwa.yaml` to W1 and W3.
-  - Read the home page's harness engineering section for the framework the team uses, and note which of its decisions the team already makes.
+  - Read the Assembler page's harness engineering section for the framework the team uses, and note which of its decisions the team already makes.
 - **Covers**: R-1, R-4, R-5, R-7 at the level of ideas; no code.
-- **Reuses**: `website/index.html` problem, schema and harness sections, `website/assembler.html` live assembly simulator, `website/evidence.html`, `site/glossary.json`, and the Fernway request from W3's `before/app.py` as the sample prompt. The site's Start-page migrator and guided tour were removed; the slot sort is done by hand.
+- **Reuses**: `website/index.html` problem and schema sections, `website/assembler.html` live assembly simulator and harness engineering section, `website/evidence.html`, `site/glossary.json`, and the Fernway request from W3's `before/app.py` as the sample prompt. The site's Start-page migrator and guided tour were removed; the slot sort is done by hand.
 
 ### W1. The CWA tour: planes, slots, snapshot, trace
 
@@ -131,7 +131,7 @@ These apply to every workshop and are not repeated below.
   - Run the same inventory on one production prompt and file the slot map in the team's design docs.
   - Report an inexpressible route to the spec repository if the migration hits one.
 - **Covers**: R-4, R-5, R-7, R-8, R-11, R-12, R-15, R-16, R-19, R-20, R-23.
-- **Reuses**: `examples/01-docs-qa` and `02-account-aware` as the before and after poles, the home page's harness engineering section, which is the framework seam picker.
+- **Reuses**: `examples/01-docs-qa` and `02-account-aware` as the before and after poles, the Assembler page's harness engineering section, which is the framework seam picker.
 
 ### W4. Budgets, variants, routes and refusals
 

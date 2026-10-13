@@ -12,7 +12,7 @@ A framework owns the loop: tool calls, retries, handoffs, streaming, checkpoints
 
 ## Part 1. The seam in five frameworks (30 minutes)
 
-The website's framework picker names the seam for each. Python here; the others are call-outs.
+The Assembler page's [framework picker](https://contextwindowarchitecture.io/assembler.html#harness) names the seam for each. Python here; the others are call-outs.
 
 | Framework | Where the seam is | Verdict |
 | --- | --- | --- |

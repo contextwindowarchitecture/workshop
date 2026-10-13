@@ -59,7 +59,7 @@
 </g>
 </svg>
 <div style="display: flex; flex-direction: column; gap: 14px; font-size: 24px; line-height: 1.45; max-width: 820px">
-<span><b>Harness engineering, on the home page.</b> Pick the framework you use.</span>
+<span><b>Harness engineering, on the Assembler page.</b> Pick the framework you use.</span>
 <span style="color: #2E3540">Your framework runs the loop; the assembler takes over stage 04, where the request is built. Then pick a track in the catalog.</span>
 </div>
 </div>

@@ -78,7 +78,7 @@ Go back through your own prompt and find every sentence of the form "never", "al
 ## After this workshop
 
 - Bring `items.cwa.yaml` and the worksheet to [W1](../01-cwa-tour/) and [W3](../03-integration/).
-- Read the home page's [harness engineering](https://contextwindowarchitecture.io/#harness) section and pick the framework you use. It shows the one stage of your loop an assembler takes over, and the decisions you are already making there without names for the parts.
+- Read the Assembler page's [harness engineering](https://contextwindowarchitecture.io/assembler.html#harness) section, below the simulator, and pick the framework you use. It shows the one stage of your loop an assembler takes over, and the decisions you are already making there without names for the parts.
 - Pick a track in the [catalog](../README.md#tracks).
 
 ## Covers
