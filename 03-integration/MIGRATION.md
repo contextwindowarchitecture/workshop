@@ -2,7 +2,7 @@
 
 Work in `after/`. It starts as a copy of `before/`. Run the tests against your work with `CWA_W3_IMPL=after uv run pytest`; they fail step by step until the migration is done. `uv run pytest` runs them against `solution/`, which is a reference to read when stuck, not to copy blind.
 
-The six steps are the Start page's six, applied to this application. Each step names the tests that go green when it is done.
+The six steps are the ones on [slide 06 of the W3 deck](../slides/03-integration/06-the-six-steps.svg), applied to this application. Each step names the tests that go green when it is done.
 
 ## Step 1. Name the slots you already send
 
@@ -28,7 +28,7 @@ Scope keys go on every item that has them: tenant and user on account and memory
 
 ## Step 4. Check the trace
 
-Run `uv run python -m after.app --conversation scenarios/01-ada-export/conversation.json` and read the table. Then the two checks the Start page asks for: replay the stored snapshot with `--replay` and compare the hash; remove `relevance` from a chunk in a copy of the snapshot and watch `missing_field:relevance` appear. Both are tests already; this step is reading them with your own eyes.
+Run `uv run python -m after.app --conversation scenarios/01-ada-export/conversation.json` and read the table. Then two checks: replay the stored snapshot with `--replay` and compare the hash; remove `relevance` from a chunk in a copy of the snapshot and watch `missing_field:relevance` appear. Both are tests already; this step is reading them with your own eyes.
 
 **Tests:** the step 2 and 3 tests again; `test_the_off_topic_question_refuses_and_nothing_is_sent`.
 

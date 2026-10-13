@@ -116,7 +116,7 @@ These apply to every workshop and are not repeated below.
 - **Audience**: application engineers. Prerequisite: W1; W2 recommended.
 - **Objectives**
   - Define the application conformance claim: the MUSTs no component can meet on the application's behalf.
-  - Teach the migration sequence from the Start page: name the slots you already send, freeze a snapshot, give every item an authority and a source, check the trace, pick a profile, move enforcement out of the prompt.
+  - Teach the six-step migration sequence (slide 06 of the W3 deck): name the slots you already send, freeze a snapshot, give every item an authority and a source, check the trace, pick a profile, move enforcement out of the prompt.
   - Teach the application's duties: authenticate producers and bind identity outside item fields (R-15), write state from the application never from model output (R-8), declare typed conflict groups (R-11), set `budget.input` from the model's context limit less `reserved_output` (R-16), set `parser: true` where a downstream parser exists (R-4), freeze before every model call and refreeze for any retry (R-12, R-23), hand the payload over unchanged with no text of its own.
   - W3b: show the seam in each framework where assembly belongs, including OpenAI Agents SDK `call_model_input_filter`, LangGraph, Claude Agent SDK, Vercel AI SDK and roll-your-own, and when to skip CWA.
 - **Goals**
@@ -131,7 +131,7 @@ These apply to every workshop and are not repeated below.
   - Run the same inventory on one production prompt and file the slot map in the team's design docs.
   - Report an inexpressible route to the spec repository if the migration hits one.
 - **Covers**: R-4, R-5, R-7, R-8, R-11, R-12, R-15, R-16, R-19, R-20, R-23.
-- **Reuses**: `examples/01-docs-qa` and `02-account-aware` as the before and after poles, `website/start.html` scaffolds, the landing page's framework seam picker.
+- **Reuses**: `examples/01-docs-qa` and `02-account-aware` as the before and after poles, the home page's harness engineering section, which is the framework seam picker.
 
 ### W4. Budgets, variants, routes and refusals
 
