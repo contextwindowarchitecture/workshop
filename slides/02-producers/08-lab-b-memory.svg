@@ -9,7 +9,7 @@
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px">
 <h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">A memory producer, and the leak it cannot hide</h2>
-<p style="margin: 0; font-size: 28px; color: #2E3540">Eight memories across three users. For Ada, one is revoked and one has expired.</p>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Nine memories across three users. For Ada, one is revoked and one has expired.</p>
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Revoked and expired memories are reported by id with no body; the rest are sent with expires, a turn source and their own scope. Under the leak fault, Ada's memories are sent for Ben's request and the assembler excludes them as out_of_scope.">
 <defs>

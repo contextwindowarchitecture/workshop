@@ -25,7 +25,7 @@ Name or handle: ______________________  Date: ____________
 | mem:u_ada:0003 | | |
 | mem:u_ada:0001 | | |
 | mem:u_ada:0005 | | |
-| mem:u_ben:0001 under the leak fault | | |
+| mem:u_ada:0007 under the leak fault, asked as Ben | | |
 
 ## Checkpoint 4. Lab C, state
 

@@ -5,7 +5,7 @@ One page for code review. A producer's conformance claim rests on its own word, 
 ## The batch
 
 - [ ] One batch per producer per snapshot; the application adds `producer: {id, kind}` when it freezes (R-15). Two batches from one producer reject the snapshot.
-- [ ] Every id is unique across the whole snapshot, not just this batch (R-2, `duplicate_item_id`). L
+- [ ] Every id is unique across the whole snapshot, not just this batch (R-2, `duplicate_item_id`). L within the batch; only the trace sees an id reused across batches.
 - [ ] Every entry the producer suppressed is an `excluded` row `{item_id, reason, stage: "producer"}` with a reason from `contract/reasons.json` (R-9). A bad reason rejects the snapshot. L
 - [ ] A `duplicate_content` row carries `duplicate_of`, a `superseded` row carries `superseded_by`, and each names a candidate in this same batch (R-13, R-25). L
 - [ ] No suppressed entry's body appears anywhere in the batch (R-14).

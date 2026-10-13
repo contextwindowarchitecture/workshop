@@ -61,7 +61,7 @@
 <text x="1204" y="476" font-size="16" fill="#2E3540">drop lineage, run --defaults:</text>
 <text x="1204" y="498" font-size="16" fill="#2E3540">  one defaults_filled row per item</text>
 <text x="1204" y="530" font-size="16" fill="#2E3540">--budget 600: ~ rows before</text>
-<text x="1204" y="552" font-size="16" fill="#2E3540">  any omission (R-16, R-18)</text>
+<text x="1204" y="552" font-size="16" fill="#2E3540">  any chunk goes (R-16, R-18)</text>
 </g>
 </svg>
 </div>

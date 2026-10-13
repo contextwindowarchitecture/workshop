@@ -61,13 +61,13 @@ The corpus is rigged to teach. `exports-faq.md` repeats one paragraph of `data-e
 
 Variants come from `data/variants.json`, written ahead of time by `variants.py` and keyed by the SHA-256 of each paragraph. Run `uv run variants.py --check`, then read the file. The shorter form is each paragraph's first sentence, so its lineage is `extracted`, not `summarised`: nothing was written, only cut. W4 replaces this with reviewed model-written summaries stored under the same key.
 
-When the tests pass, do two more things. Remove `lineage` from your items and run `freeze.py --impl labs --defaults`; watch `defaults_filled` grow by one row per item, and put it back. Then squeeze: `freeze.py --impl labs --budget 600 ...` and watch the assembler swap in your variants (`~` rows) before it omits anything (R-16, R-18).
+When the tests pass, do two more things. Remove `lineage` from your items and run `freeze.py --impl labs --defaults`; watch `defaults_filled` grow by one row per item, and put it back. Then squeeze: `freeze.py --impl labs --budget 600 ...`. The assembler omits the droppable account items first and then the history turns, which the route's fitting order sheds before anything else, and then swaps in your variants (`~` rows) before it omits a single chunk (R-16, R-18).
 
 **Checkpoint 2.** The worksheet's Lab A counts, and the sentence on why the variant's lineage is `extracted`.
 
 ## Lab B. A memory producer (40 minutes)
 
-Open [labs/memory.py](labs/memory.py). `shared/fixtures/memories.json` holds eight memories across three users. For Ada, one is revoked and one has expired; your producer sends neither body and reports both by id (R-9, R-14). Every memory you do send carries `expires`, a `turn:` source and its own `scope`.
+Open [labs/memory.py](labs/memory.py). `shared/fixtures/memories.json` holds nine memories across three users. For Ada, one is revoked and one has expired; your producer sends neither body and reports both by id (R-9, R-14). Every memory you do send carries `expires`, a `turn:` source and its own `scope`.
 
 ```sh
 CWA_W2_IMPL=labs uv run pytest tests/test_lab_b.py
@@ -128,7 +128,7 @@ Read [checklist.md](checklist.md) against the three producers you wrote. Every l
 
 ## Covers
 
-R-1, R-2, R-3, R-8, R-9, R-10, R-13, R-14, R-15, R-16, R-18, R-24; R-26 through the route's `max_per_source`. The committed scenarios under `scenarios/` are the answer key: `01-ada-export` shows producer and assembler dedupe side by side, `02-cho-refund` the producer's expired rows, `03-memory-leak` scope catching a leak, `04-stale-account-read` stale state, `05-budget-variants` variants used before anything is omitted, and `neg-*` each wrong item's code.
+R-1, R-2, R-3, R-8, R-9, R-10, R-13, R-14, R-15, R-16, R-18, R-24; R-26 through the route's `max_per_source`. The committed scenarios under `scenarios/` are the answer key: `01-ada-export` shows producer and assembler dedupe side by side, `02-cho-refund` the producer's expired rows, `03-memory-leak` scope catching a leak, `04-stale-account-read` stale state, `05-budget-variants` variants used before any chunk is omitted, and `neg-*` each wrong item's code.
 
 ## Files
 

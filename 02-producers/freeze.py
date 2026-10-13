@@ -3,7 +3,7 @@
     uv run freeze.py --user u_ada "How do I export the whole workspace, including attachments?"
     uv run freeze.py --impl labs --user u_ada "How do I export the whole workspace, including attachments?"     # your producers
     uv run freeze.py --user u_cho --defaults "Can I get a refund on a monthly plan?"  # also list defaults_filled
-    uv run freeze.py --user u_ada --budget 700 "How do I export the whole workspace, including attachments?"    # squeeze: variants get used
+    uv run freeze.py --user u_ada --budget 600 "How do I export the whole workspace, including attachments?"    # squeeze: variants get used
     uv run freeze.py --user u_ada --fault memory-store-ignores-user "..."            # inject a producer bug
     uv run freeze.py --user u_ada --read-at 2026-10-01T09:50:00Z "..."              # a stale account read
     uv run freeze.py --user u_ada --out snap.json "..."                              # also write the snapshot
