@@ -12,7 +12,7 @@ Conference cut (90 minutes): part 1 and Lab B.
 
 ## Where things go is not the spec's business
 
-CWA takes no position on placement. It requires that placement be a **profile**: versioned, per route, evaluated against that route's tasks before it is promoted, and recorded in every trace (R-19, R-20). The Placement page collects the evidence for that position: three papers that disagree about where attention goes, two provider guides that disagree about where instructions go, and two prompt-cache mechanisms that agree on one thing, that a cache reuses only an unchanged prefix.
+CWA takes no position on placement. It requires that placement be a **profile**: versioned, per route, evaluated against that route's tasks before it is promoted, and recorded in every trace (R-19, R-20). The Placement page collects the evidence for that position: three papers that measure where attention goes and find that it varies with model, length and task, two provider guides that disagree about where instructions go, and two prompt-cache mechanisms that agree on one thing, that a cache reuses only an unchanged prefix.
 
 So a profile is a hypothesis, and the evaluation is the experiment. The six-step protocol on the Placement page is the lab plan here: fix the item set, name the metric, render with each profile, compare on the target model, measure reuse, record and version.
 
@@ -20,17 +20,17 @@ So a profile is a hypothesis, and the evaluation is the experiment. The six-step
 
 ```sh
 uv sync
-uv run profiles.py list
-uv run profiles.py diff policy-first cache-first
+uv run profiles.py list --impl labs
+uv run profiles.py diff policy-first cache-first --impl labs
 ```
 
-[labs/profiles.json](labs/profiles.json) holds three candidates for the `account-help` route. They place the same six slots. `policy-first` puts the articles before the memory and the history; `evidence-first` puts them right after the instructions; `cache-first` puts everything that is stable across a conversation first and everything that changes per turn, the articles and the query, last. The diff renders the same request under two of them: identical included lists, identical item set, different bytes, different hash.
+[labs/profiles.json](labs/profiles.json) holds three candidates for the `account-help` route. They place the same six slots. `policy-first` puts the articles before the memory and the history; `evidence-first` puts them right after the instructions; `cache-first` puts everything that is stable across a conversation first and everything that changes per turn, the articles and the query, last. The diff renders the same request under two of them: the same item set in a different order, so different bytes and a different hash.
 
 **Checkpoint 1.** The worksheet's part 1 table: the three orders and what differs.
 
 ## Lab B. Measure reuse (45 minutes)
 
-A provider's prompt cache reuses an unchanged prefix, at block boundaries. The `cwa-message-blocks/v1` renderer emits the user message as one block per item so a breakpoint can sit between any two (R-16). Over a frozen four-turn conversation, measure how many leading blocks of turn n reappear unchanged at the head of turn n+1:
+A provider's prompt cache reuses an unchanged prefix, at block boundaries. The `cwa-message-blocks/v1` renderer emits the user message as one block per item so a breakpoint can sit between any two (R-7). Over a frozen four-turn conversation, measure how many leading blocks of turn n reappear unchanged at the head of turn n+1:
 
 ```sh
 uv run evaluate.py reuse cache-first
@@ -78,7 +78,7 @@ uv run registry.py deploy policy-first --impl labs
 CWA_W6_IMPL=labs uv run pytest tests/test_lab_d_registry.py
 ```
 
-A profile's digest covers everything except its evaluation object, so promoting it did not change its identity, and changing its placement without bumping its version would. The lock pins every profile and the route policy by digest and never rewrites an entry. A deployment asks with `deployment=True` and gets only an evaluated profile; the other two are refused with the reason (R-19, R-20). Then do the thing the lock exists for: edit a placement in `labs/profiles.json` without changing the version, run `registry.py check`, and read the refusal; put it back.
+A profile's digest covers everything except its evaluation object, so changing its placement without bumping its version changes it. Promoting changes it too, because promotion also sets `model_family`, which the digest covers; that is why Lab C promotes before this lab locks. Lock first and promote second, and `check` refuses the promoted profile and `lock` will not repin it without a version increase (R-20). The lock pins every profile and the route policy by digest and never rewrites an entry. A deployment asks with `deployment=True` and gets only an evaluated profile; the other two are refused with the reason (R-19, R-20). Then do the thing the lock exists for: edit a placement in `labs/profiles.json` without changing the version, run `registry.py check`, and read the refusal; put it back.
 
 **Checkpoint 4.** The two deployment outcomes, and the refusal you got from the tampered profile.
 
@@ -93,7 +93,7 @@ R-7, R-16, R-19, R-20, R-21, R-23.
 
 ## Files
 
-- `labs/profiles.json`, `labs/registry.lock.json`: yours. `solution/`: the finished ones, which CI tests. `impl.py`: the `CWA_W6_IMPL` switch.
+- `labs/profiles.json`, and `labs/registry.lock.json` once Lab D writes it: yours. `solution/`: the finished ones, which CI tests. `impl.py`: the `CWA_W6_IMPL` switch.
 - `profiles.py`, `evaluate.py`, `registry.py`: the lab tools. `evaluations/`: the frozen conversations and the artifacts.
 - `app/`: W3a's producers and a profile-parameterised freeze. `policy/`: the route policy and the instructions.
 - `scenarios.py`, `scenarios/`, `tests/`: one conversation rendered turn by turn under each profile, and the tests.

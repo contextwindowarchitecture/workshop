@@ -31,7 +31,7 @@
 <text x="614" y="90">pins every profile and</text><text x="614" y="116">the route policy by digest</text>
 <text x="614" y="164">never rewrites an entry</text>
 </g>
-<text x="614" y="226" font-size="15" fill="#F0A57E">promoting did not change identity</text>
+<text x="614" y="226" font-size="15" fill="#F0A57E">lock after promoting</text>
 <line x1="1090" y1="130" x2="1170" y2="130" stroke="#11151B" stroke-width="2" marker-end="url(#rg)"></line>
 <rect x="1180" y="0" width="500" height="260" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
 <text x="1204" y="42" font-size="20" font-weight="600" fill="#2453C9">deploy · deployment=True</text>
@@ -54,7 +54,7 @@
 <text x="1204" y="392" font-size="18" font-weight="600" fill="#C2541D">refused</text>
 <text x="1204" y="426" font-size="15" fill="#11151B">digest mismatch for that id and version (R-20)</text>
 <text x="1204" y="452" font-size="15" fill="#2E3540">then put it back</text>
-<text x="0" y="540" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="#2E3540">Changing a placement without bumping its version changes the digest. Promoting it does not.</text>
+<text x="0" y="540" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="#2E3540">Changing a placement without bumping its version changes the digest. So does promoting, which sets model_family.</text>
 </g>
 </svg>
 </div>

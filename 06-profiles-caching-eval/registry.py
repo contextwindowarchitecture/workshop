@@ -4,8 +4,8 @@
     uv run registry.py check             # load the registry: every digest matches, or the reason it does not
     uv run registry.py deploy cache-first   # what a deployment gets: an evaluated profile, or a refusal
 
-A profile's digest covers everything but its evaluation object, so evaluating a profile does not change its identity
-and changing its placement without a version bump does. A route policy's digest covers the whole policy. The lock never
+A profile's digest covers everything but its evaluation object, so changing its placement without a version bump
+changes it. Promotion changes it too, because it sets model_family, which the digest covers: lock after promoting. A route policy's digest covers the whole policy. The lock never
 rewrites an entry; a new version is a new entry. A deployment asks for a profile with deployment=True and gets only an
 evaluated one.
 """
