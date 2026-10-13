@@ -36,7 +36,7 @@ Do these in order:
 
 1. **Budget squeeze.** The input budget starts at 8k. Step it down through 4k, 2k and 1k. At each step, note what is dropped, what is compressed to a shorter version, and what is never touched. At some point the simulator refuses instead of sending a payload: note the reason it gives.
 2. **Remove a slot.** Back at 8k, click each slot in turn to remove it and read "What breaks without it". Remove the instructions, then the query, and read what happens instead of an answer. **Restore all slots** when you are done.
-3. **The unassembled blob.** Press **Show the unassembled blob** and read "Symptom you'll actually see". Do the same on each of the seven system tabs, and match each system to one of part 1's failure modes. One failure mode has no system of its own; find the control in step 2 that reproduces it.
+3. **The unassembled blob.** Press **Show the unassembled blob** and read "Symptom you'll actually see". Do the same on each of the seven system tabs, and match each system to one of part 1's failure modes. Choosing a tab starts the simulator playing again, and it moves on to the next system after a few seconds, so press **Pause** after each one. One failure mode has no system of its own; find the control in step 2 that reproduces it.
 4. **Planes and slots.** Open the home page's [schema](https://contextwindowarchitecture.io/#planes) and read the four questions the planes answer: who may direct the model, what is true right now, what the model may ground on, what has happened and what is asked. Switch to **Slots**; part 5 uses this view.
 
 **Checkpoint 2.** Fill in the matching table. Then, for three of the failure modes, write what the simulator showed and which decision prevented it. Use the simulator's words: a slot name, a tier (protected, compressible, droppable), a refusal reason, or "refused".
@@ -55,7 +55,7 @@ The point of the page is not a recommendation. It is that CWA takes no position 
 
 Open the glossary from any page's header, or read [docs/glossary.md](../docs/glossary.md). Look up exactly these six: **item**, **slot**, **snapshot**, **assembler**, **profile**, **trace**.
 
-**Checkpoint 4.** Close the glossary and write each definition in your own words, one line each. Then reopen it and mark any of the six where your version missed something the glossary has. The usual misses: a snapshot is frozen before any model call and includes the clock; an assembler never calls a model; a trace accounts for what was left out, not only what was sent.
+**Checkpoint 4.** Close the glossary and write each definition in your own words, one line each. Then reopen it and mark any of the six where your version missed something the glossary has. The usual misses: a snapshot is frozen before assembly, after every read and model call it depends on, and includes the clock; an assembler never calls a model; a trace accounts for what was left out, not only what was sent.
 
 ## Part 5. Your own prompt, in slots (25 minutes)
 

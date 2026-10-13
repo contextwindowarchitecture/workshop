@@ -34,8 +34,8 @@
 <g transform="translate(1140,0)">
 <rect width="540" height="300" fill="#FFFFFF" stroke="#C2541D" stroke-width="3"></rect>
 <text x="32" y="72" font-family="IBM Plex Mono, monospace" font-size="40" font-weight="600" fill="#11151B">snapshot</text>
-<text x="32" y="140" font-size="21" fill="#2E3540">The frozen input to assembly,</text>
-<text x="32" y="172" font-size="21" fill="#2E3540">taken before any model call,</text>
+<text x="32" y="140" font-size="21" fill="#2E3540">Everything one call depends on,</text>
+<text x="32" y="172" font-size="21" fill="#2E3540">frozen before assembly,</text>
 <text x="32" y="204" font-size="21" fill="#2E3540">clock and policy included.</text>
 <line x1="32" y1="256" x2="508" y2="256" stroke="#DADFE7" stroke-width="1.5"></line>
 <text x="32" y="284" font-family="IBM Plex Mono, monospace" font-size="16" fill="#C2541D">a usual miss</text>
