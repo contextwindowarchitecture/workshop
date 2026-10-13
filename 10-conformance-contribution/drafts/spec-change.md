@@ -24,7 +24,7 @@ The registry lock excludes `evaluation` from the profile digest, so the change d
 ## The case against it
 
 - The artifact already carries the structured result. `evaluation.artifact` names the report, and the report holds the numbers. `result` is the one-line reading for people, which is why a string suits it. A query over profiles belongs on the artifacts, not the registry.
-- Two shapes mean every reader of a profile branches. The four assemblers, the website and every registry tool would have to accept both. A string summary and a pointer to the data is the shape the rest of the specification uses (`recovery.detail` is free text for the same reason).
+- Two shapes mean every reader of a profile branches. The four assemblers and every registry tool would have to accept both. A string summary and a pointer to the data is the shape the rest of the specification uses (`recovery.detail` is free text for the same reason).
 - The schema is the contract; the stumble was in the workshop. The modules now write a sentence with `summarize()`, which is what the field asks for.
 
 Either way, the proposal is well-formed: it names the schema and what it says, it shows the profile that fails today, and it says what else would change. That is what the template needs, and what a maintainer can answer in an issue before anyone writes a diff.
