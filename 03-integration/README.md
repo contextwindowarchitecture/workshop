@@ -80,7 +80,7 @@ uv run pytest                            # the solution, and the before app's fa
 
 - Run step 1 on one production prompt you own, and file the slot map where your team keeps design docs.
 - W4 adds variants, two routes and escalation to this application. W5 adds tools. W6 evaluates the profile you left unevaluated.
-- If a route you need cannot be expressed in a route policy, that is a spec-change issue; the About page says how.
+- If a route you need cannot be expressed in a route policy, that is a spec-change issue; the spec repository's [CONTRIBUTING](https://github.com/contextwindowarchitecture/contextwindowarchitecture/blob/main/CONTRIBUTING.md) says how.
 
 ## Covers
 

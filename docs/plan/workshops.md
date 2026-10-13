@@ -106,7 +106,7 @@ These apply to every workshop and are not repeated below.
   - Holds a one-page producer conformance checklist for code review.
 - **Calls to action**
   - Continue to W9 module A to wrap a tool you already run instead of writing from scratch.
-  - Follow the "build a producer" contribution path on the About page.
+  - Share the producer through the spec repository's CONTRIBUTING: Discussions first, then a pull request.
 - **Covers**: R-1, R-2, R-3, R-9, R-10, R-13, R-14, R-15, R-18, R-24 to R-26 as route opt-ins the producer must anticipate.
 - **Reuses**: `guides/producers.md`, `website/producers.html` linters, `assembler-demo/producers/`, `examples/02-account-aware/producers.py`.
 
@@ -193,7 +193,7 @@ These apply to every workshop and are not repeated below.
 - **Outcomes**
   - One evaluated profile with a reproducible artifact and a registry lock the team can ship.
 - **Calls to action**
-  - Contribute the evaluated profile through the About page's contribution path.
+  - Contribute the evaluated profile as the spec repository's CONTRIBUTING sets out: Discussions or an issue, then a pull request.
 - **Covers**: R-7, R-19, R-20, R-21, R-23.
 - **Reuses**: `website/evidence.html` evidence and protocol, `examples/profiles.json`, `conformance/registry/`, `examples/05-production/policy/registry.lock.json`, `conformance/cases/blocks-*`.
 

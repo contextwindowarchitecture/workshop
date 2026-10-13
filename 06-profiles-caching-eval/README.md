@@ -84,7 +84,7 @@ A profile's digest covers everything except its evaluation object, so promoting 
 
 ## After this workshop
 
-- Contribute an evaluated profile, with its artifact, through the About page's contribution path.
+- Contribute an evaluated profile, with its artifact, as the spec repository's [CONTRIBUTING](https://github.com/contextwindowarchitecture/contextwindowarchitecture/blob/main/CONTRIBUTING.md) sets out: propose it in Discussions or an issue, then open a pull request.
 - W7 puts this registry behind a deployment flag in the running application.
 
 ## Covers

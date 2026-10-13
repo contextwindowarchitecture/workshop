@@ -124,7 +124,7 @@ Read [checklist.md](checklist.md) against the three producers you wrote. Every l
 
 - W9 module A wraps an existing tool, library or MCP server as a producer instead of writing one from scratch; the checklist is the acceptance test.
 - Convert the producer you named in checkpoint 6 and open a pull request in your own codebase with batch tests modelled on `tests/`.
-- The About page's "build a producer" path is how a producer gets listed for the community.
+- To share a producer with the community, follow the spec repository's [CONTRIBUTING](https://github.com/contextwindowarchitecture/contextwindowarchitecture/blob/main/CONTRIBUTING.md): start in its Discussions, before any pull request.
 
 ## Covers
 
