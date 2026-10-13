@@ -4,7 +4,7 @@ Half a day, self-paced, model-free. You leave able to read any trace and name th
 
 ## Before you start
 
-- Python 3.12 or later and [uv](https://docs.astral.sh/uv/). Part 4 also needs Node 22 with pnpm.
+- Python 3.12 or later and [uv](https://docs.astral.sh/uv/). Part 4 also needs Node 22 with pnpm. To run all four assemblers there, the inspector also needs the `assembler-typescript` (built, so `dist/` exists), `assembler-go` and `assembler-rust` siblings, with Go and Rust to build their adapters; without them it runs the Python assembler alone and marks the others "not built".
 - `uv sync` in this directory fetches the reference assembler at its `draft-release` tag. Nothing else is installed.
 - Parts 1 and 4 read the `examples` and `assembler-demo` siblings. Parts 2, 3 and 5 need only this directory and the vendored contract. See [docs/setup.md](../docs/setup.md) for the sibling layout and `CWA_SIBLINGS_ROOT`.
 - Open [predict.md](predict.md) beside this file. Every exercise is predicted before it is run.
@@ -21,7 +21,7 @@ A model call under CWA is built like this, and every part has a name you will us
 | item | one piece of candidate context with a slot, an authority, a source and a body | `batches[].items[]` in any `snapshot.json` |
 | slot | one of eleven typed places in four planes | the `slot` field; the slot column in the decisions table |
 | producer | whatever emitted a batch of items, authenticated by the application | `batches[].producer` |
-| snapshot | everything frozen for one call: batches, route policy, profile, budget, tokenizer, renderer, clock, conflicts, grant | `scenarios/*/snapshot.json` |
+| snapshot | everything frozen for one call: batches, route policy, profile, budget, tokenizer, renderer, clock, scope, conflicts, grant | `scenarios/*/snapshot.json` |
 | assembler | a pure function from snapshot to payload plus trace; it never calls a model | `cwa.assemble` |
 | payload | the rendered request, byte for byte what the provider receives | `scenarios/*/payload.json` |
 | trace | what was sent, what was left out and why, with a reason code per exclusion | `scenarios/*/trace.json` |
@@ -41,7 +41,7 @@ cd "$(python3 ../shared/siblings.py examples)/01-docs-qa" && uv sync
 diff before.py after.py | less
 ```
 
-Find `build_request()` in each file. In `before.py` it reads the instructions, retrieves five chunks, pastes them into a system string and keeps the last six messages. In `after.py` it is two lines: freeze a snapshot, assemble it. Everything else in the two files is the same application.
+Find `build_request()` in each file. In `before.py` it reads the instructions, retrieves five chunks, pastes them into a system string and keeps the last six messages. In `after.py` it is two lines: freeze a snapshot, assemble it. The rest of `after.py` that differs prints, saves and replays what the assembler decided; the conversation, command line and provider code are shared.
 
 Run both on the same question and read what each prints:
 
@@ -89,7 +89,7 @@ The exercises, with the requirement each exercises (do not read the right-hand c
 | 03-chunk-claims-governing | the chunk claims governing authority | R-1 |
 | 04-chunk-moves-to-instructions | the chunk is addressed to governance.instructions | R-13, R-15 |
 | 05-expired-memory | a memory expires a minute before assembly | R-9 |
-| 06-stale-state | a state item is twenty minutes old | R-8 |
+| 06-stale-state | a state item is twenty minutes old | R-3, R-8 |
 | 07-budget-pressure | budget.input drops to 200 | R-16 |
 | 08-budget-refusal | budget.input drops to 90 | R-16, R-17 |
 | 09-tool-from-mcp | an MCP adapter emits a tool specification itself | R-15 |
@@ -175,7 +175,7 @@ Tick each one off against the command you ran. Then take the `items.cwa.yaml` yo
 
 ## Covers
 
-R-1, R-2, R-4, R-7, R-8, R-9, R-12, R-13, R-15, R-16, R-17, R-21, R-22, R-23, R-24. Every exercise's `rules` field names its requirements, and `tests/test_scenarios.py` is the answer key: it asserts each exercise's codes appear in its trace, that the exercises which prove "nothing changes" match the baseline's decisions, and that every committed snapshot replays to its committed payload.
+R-1, R-3, R-4, R-7, R-8, R-9, R-10, R-12, R-13, R-15, R-16, R-17, R-21, R-22, R-23, R-24. Every exercise's `rules` field names its requirements, and `tests/test_scenarios.py` is the answer key: it asserts each exercise's codes appear in its trace, that the exercises which prove "nothing changes" match the baseline's decisions, and that every committed snapshot replays to its committed payload.
 
 ## Files
 

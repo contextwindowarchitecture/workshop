@@ -27,7 +27,7 @@
 <text x="384" y="60" font-weight="600" font-size="22">snapshot</text>
 <text x="384" y="100" font-size="17" fill="#4A5361">batches · route policy · profile</text>
 <text x="384" y="128" font-size="17" fill="#4A5361">budget · tokenizer · renderer</text>
-<text x="384" y="156" font-size="17" fill="#4A5361">clock · conflicts · grant</text>
+<text x="384" y="156" font-size="17" fill="#4A5361">clock · scope · conflicts · grant</text>
 <rect x="384" y="190" width="56" height="20" fill="#DCE3F5"></rect>
 <rect x="448" y="190" width="56" height="20" fill="#DCE3F5"></rect>
 <rect x="512" y="190" width="56" height="20" fill="#DCE3F5"></rect>

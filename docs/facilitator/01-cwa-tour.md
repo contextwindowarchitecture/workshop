@@ -43,5 +43,5 @@ Running `after.py` in the examples checkout writes a run directory under `runs/`
 - Participants read `tour.py reveal` first. The predict sheet is the point; say it twice.
 - Participants expect 02 to be excluded. It is the most important exercise of the day: nothing happened, and that is the design.
 - `python3 ../shared/siblings.py examples` prints a path only when the sibling exists; otherwise it prints how to clone it and exits 1.
-- The inspector needs the TypeScript assembler built (`dist/`) and `pnpm`, not `npm`. The demo README covers both.
+- The inspector runs only the assemblers it finds and marks the rest "not built": TypeScript needs `../assembler-typescript` built (`dist/`), Go and Rust need their checkouts and toolchains. It needs `pnpm`, not `npm`. The demo README covers both.
 - Participants ask why the demo expectations are "unreviewed". Because they are, and reviewing one is a worthwhile contribution. Do not pretend otherwise.

@@ -12,7 +12,7 @@ Every lab runs without a model. The committed snapshots, traces, payloads and re
 | Node | 22 or later, with pnpm 12 via `corepack enable` | W1 and W9 module B, for the demo inspector and harness only |
 | A browser | current | W0, W6 and the inspector |
 
-Nothing else. Go, Rust and containers are not required by any workshop in this repository.
+Nothing else. No lab needs Go, Rust or containers. Go and Rust only let W1's inspector run the Go and Rust assemblers beside the Python one; a facilitator can project it instead.
 
 ## 2. Sibling checkouts
 
@@ -23,6 +23,9 @@ The workshops do not vendor the examples, the assemblers or the website. They ex
   workshop/                    this repository
   contextwindowarchitecture/   the specification
   assembler-python/            the reference assembler
+  assembler-typescript/        optional; W1 part 4's inspector, built so dist/ exists
+  assembler-go/                optional; W1 part 4's inspector, needs Go
+  assembler-rust/              optional; W1 part 4's inspector, needs Rust
   assembler-demo/              inspector, adapters, MCP servers, scenarios
   examples/                    Fernway: the help-center bot and agent the labs build on
   website/                     optional; the live site at contextwindowarchitecture.io works too
