@@ -42,7 +42,7 @@ These apply to every workshop and are not repeated below.
 
 ### W0. Context engineering foundations: the prompt is compiled output
 
-- **Format**: 90 minutes self-paced or as a talk plus guided browser lab. No local toolchain.
+- **Format**: 90 minutes self-paced or as a talk plus guided browser lab. A browser and a text editor; no local toolchain.
 - **Audience**: anyone shipping or planning an LLM feature. No prerequisites.
 - **Objectives**
   - Name the seven reproducible failure modes of string-built prompts: authority inversion, instruction-shaped evidence, stale-as-current, memory that never expires, displacement under budget, redundant re-reading, missing trigger.
@@ -50,16 +50,16 @@ These apply to every workshop and are not repeated below.
   - Introduce the six terms a learner needs before anything else: item, slot, snapshot, assembler, profile, trace.
   - State rule zero: language guidance goes in context, enforceable invariants go outside the model (R-5).
 - **Goals**
-  - Run the landing-page assembly demo through the budget squeeze and the "remove a slot" controls, and reproduce each failure mode once.
-  - Paste your own system prompt into the Start-page migrator, read the "% tokens with no owner" figure, and export `items.cwa.yaml`.
+  - Run the Assembler page's live assembly simulator through the budget squeeze, the "remove a slot" controls and the unassembled blob of each of its seven systems, and reproduce each failure mode once.
+  - Split your own system prompt into pieces by hand, give each piece one slot and that slot's authority, name the pieces with no owner, and write them as `items.cwa.yaml` from the module's template.
 - **Outcomes**
   - Can explain in two minutes why a model request should be assembled from typed slots rather than concatenated.
   - Leaves with a slot inventory of one real prompt they own.
 - **Calls to action**
-  - Bring the exported `items.cwa.yaml` to W1 and W3.
-  - Read the Start page's six steps and note which ones the team already does.
-- **Covers**: R-1, R-5, R-7 at the level of ideas; no code.
-- **Reuses**: `website/index.html` demo and tour, `website/start.html` migrator, `website/evidence.html`, `site/glossary.json`.
+  - Bring `items.cwa.yaml` to W1 and W3.
+  - Read the home page's harness engineering section for the framework the team uses, and note which of its decisions the team already makes.
+- **Covers**: R-1, R-4, R-5, R-7 at the level of ideas; no code.
+- **Reuses**: `website/index.html` problem, schema and harness sections, `website/assembler.html` live assembly simulator, `website/evidence.html`, `site/glossary.json`, and the Fernway request from W3's `before/app.py` as the sample prompt. The site's Start-page migrator and guided tour were removed; the slot sort is done by hand.
 
 ### W1. The CWA tour: planes, slots, snapshot, trace
 

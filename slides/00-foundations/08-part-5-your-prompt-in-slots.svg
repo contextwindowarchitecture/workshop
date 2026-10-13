@@ -4,14 +4,14 @@
 <foreignObject x="0" y="0" width="1920" height="1080">
 <div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
 <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
-<span>PART 5 · 20 MINUTES · START › MIGRATE</span>
+<span>PART 5 · 25 MINUTES · BY HAND</span>
 <span>08 / 10</span>
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px">
 <h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Your own prompt, in slots</h2>
-<p style="margin: 0; font-size: 28px; color: #2E3540">Try the two samples first, then paste a prompt you own. The migrator proposes; you decide.</p>
+<p style="margin: 0; font-size: 28px; color: #2E3540">No tool sorts it for you. A slot decides who owns a piece and what authority it carries, and wording never settles that (R-7).</p>
 </div>
-<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="560" viewBox="0 0 1680 560" role="img" aria-label="Your prompt goes into the migrator, which runs in your browser and sends nothing. It reports a no-owner share, proposes items with default authority, and exports items.cwa.yaml with TODO markers, which W1 and W3 start from.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="560" viewBox="0 0 1680 560" role="img" aria-label="Your prompt is split into pieces, one job each. Each piece is sorted into one slot with that slot's authority, or marked as having no owner and noted in the worksheet. The pieces with an owner are written as items in items.cwa.yaml, with TODO wherever a source, version or freshness is unknown; W1 and W3 start from it.">
 <defs>
 <marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
 </defs>
@@ -26,38 +26,46 @@
 <rect x="24" y="260" width="160" height="12" fill="#DADFE7"></rect>
 <rect x="24" y="286" width="190" height="12" fill="#DADFE7"></rect>
 <rect x="24" y="312" width="100" height="12" fill="#DADFE7"></rect>
-<text x="0" y="460" font-size="20" font-weight="600">your system prompt</text>
-<text x="0" y="488" font-size="17" fill="#4A5361">or a message array</text>
-<line x1="240" y1="240" x2="330" y2="240" stroke="#11151B" stroke-width="2" marker-end="url(#mg)"></line>
-<rect x="340" y="140" width="300" height="200" fill="#2453C9"></rect>
-<text x="368" y="210" font-size="28" font-weight="600" fill="#FFFFFF">migrator</text>
-<text x="368" y="252" font-size="17" fill="#FFFFFF">runs in your browser</text>
-<text x="368" y="280" font-size="17" fill="#FFFFFF">sends nothing anywhere</text>
-<path d="M 640 200 C 700 200, 700 60, 760 60" fill="none" stroke="#11151B" stroke-width="2" marker-end="url(#mg)"></path>
-<line x1="640" y1="240" x2="760" y2="240" stroke="#11151B" stroke-width="2" marker-end="url(#mg)"></line>
-<path d="M 640 280 C 700 280, 700 420, 760 420" fill="none" stroke="#11151B" stroke-width="2" marker-end="url(#mg)"></path>
-<rect x="770" y="0" width="560" height="130" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
-<text x="796" y="40" font-size="21" font-weight="600">no owner</text>
-<rect x="796" y="62" width="508" height="26" fill="#DCE3F5"></rect>
-<rect x="1100" y="62" width="204" height="26" fill="#C2541D"></rect>
-<text x="796" y="116" font-size="16" fill="#4A5361">share of tokens no rule could assign</text>
-<rect x="770" y="170" width="560" height="140" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
-<text x="796" y="210" font-size="21" font-weight="600">proposed items</text>
-<text x="796" y="246" font-size="17" fill="#2E3540">each with a slot and</text>
-<text x="796" y="272" font-size="17" fill="#2E3540">a default authority</text>
-<rect x="770" y="350" width="560" height="200" fill="#11151B"></rect>
-<text x="796" y="390" font-size="21" font-weight="600" fill="#FFFFFF">items.cwa.yaml</text>
-<text x="796" y="430" font-size="18" fill="#B9C3D6">source:<tspan x="990" fill="#F0A57E">TODO</tspan></text>
-<text x="796" y="462" font-size="18" fill="#B9C3D6">source_version:<tspan x="990" fill="#F0A57E">TODO</tspan></text>
-<text x="796" y="494" font-size="18" fill="#B9C3D6">freshness:<tspan x="990" fill="#F0A57E">TODO</tspan></text>
-<text x="796" y="526" font-size="16" fill="#B9C3D6">and more, for some slots</text>
-<line x1="1330" y1="450" x2="1430" y2="450" stroke="#11151B" stroke-width="2" marker-end="url(#mg)"></line>
-<rect x="1440" y="390" width="240" height="120" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
-<text x="1466" y="440" font-size="22" font-weight="600" fill="#2453C9">save it</text>
-<text x="1466" y="476" font-size="17" fill="#11151B">W1 and W3 start here</text>
+<text x="0" y="460" font-size="20" font-weight="600">your prompt</text>
+<text x="0" y="488" font-size="17" fill="#4A5361">or sample-prompt.md</text>
+<line x1="240" y1="240" x2="300" y2="240" stroke="#11151B" stroke-width="2" marker-end="url(#mg)"></line>
+<rect x="310" y="160" width="220" height="160" fill="#2453C9"></rect>
+<text x="336" y="226" font-size="28" font-weight="600" fill="#FFFFFF">split</text>
+<text x="336" y="264" font-size="17" fill="#FFFFFF">one job per piece</text>
+<line x1="530" y1="240" x2="590" y2="240" stroke="#11151B" stroke-width="2" marker-end="url(#mg)"></line>
+<text x="600" y="30" font-size="21" font-weight="600">sort: one slot, its authority</text>
+<rect x="600" y="50" width="420" height="40" fill="#FFFFFF" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="616" y="77" font-size="17">governance.instructions</text>
+<rect x="600" y="100" width="420" height="40" fill="#FFFFFF" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="616" y="127" font-size="17">governance.output_contract</text>
+<rect x="600" y="150" width="420" height="40" fill="#FFFFFF" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="616" y="177" font-size="17">state.user</text>
+<rect x="600" y="200" width="420" height="40" fill="#FFFFFF" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="616" y="227" font-size="17">interaction.memory</text>
+<rect x="600" y="250" width="420" height="40" fill="#FFFFFF" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="616" y="277" font-size="17">evidence.knowledge</text>
+<rect x="600" y="300" width="420" height="40" fill="#FFFFFF" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="616" y="327" font-size="17">interaction.query</text>
+<rect x="600" y="370" width="420" height="40" fill="#FBF0EA" stroke="#C2541D" stroke-width="2" stroke-dasharray="6 5"></rect>
+<text x="616" y="397" font-size="17" fill="#C2541D">no owner · "the articles below"</text>
+<text x="600" y="446" font-size="16" fill="#4A5361">no owner goes in the worksheet</text>
+<line x1="1020" y1="195" x2="1110" y2="195" stroke="#11151B" stroke-width="2" marker-end="url(#mg)"></line>
+<rect x="1120" y="40" width="560" height="310" fill="#11151B"></rect>
+<text x="1146" y="82" font-size="21" font-weight="600" fill="#FFFFFF">items.cwa.yaml</text>
+<text x="1146" y="124" font-size="18" fill="#B9C3D6">slot:<tspan x="1340" fill="#FFFFFF">state.user</tspan></text>
+<text x="1146" y="156" font-size="18" fill="#B9C3D6">authority:<tspan x="1340" fill="#FFFFFF">state</tspan></text>
+<text x="1146" y="188" font-size="18" fill="#B9C3D6">source:<tspan x="1340" fill="#F0A57E">TODO</tspan></text>
+<text x="1146" y="220" font-size="18" fill="#B9C3D6">source_version:<tspan x="1340" fill="#F0A57E">TODO</tspan></text>
+<text x="1146" y="252" font-size="18" fill="#B9C3D6">freshness:<tspan x="1340" fill="#F0A57E">TODO</tspan></text>
+<text x="1146" y="300" font-size="16" fill="#B9C3D6">one item per piece; each TODO is a gap</text>
+<text x="1146" y="326" font-size="16" fill="#B9C3D6">your app cannot fill today</text>
+<line x1="1400" y1="350" x2="1400" y2="400" stroke="#11151B" stroke-width="2" marker-end="url(#mg)"></line>
+<rect x="1120" y="410" width="560" height="110" fill="#FFFFFF" stroke="#2453C9" stroke-width="3"></rect>
+<text x="1146" y="456" font-size="22" font-weight="600" fill="#2453C9">save it</text>
+<text x="1146" y="492" font-size="17" fill="#11151B">W1 and W3 start here</text>
 </g>
 </svg>
-<div style="font-size: 23px; line-height: 1.45; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #11151B">Checkpoint 5</span> · the no-owner figure, items proposed, <span style="font-family: 'IBM Plex Mono', monospace">TODO</span> markers in the export, and three items whose slot you would change, with the slot you would give them.</div>
+<div style="font-size: 23px; line-height: 1.45; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #11151B">Checkpoint 5</span> · pieces, pieces with no owner, slots used of eleven, <span style="font-family: 'IBM Plex Mono', monospace">TODO</span> markers in your <span style="font-family: 'IBM Plex Mono', monospace">items.cwa.yaml</span>, and the three pieces that were hardest to place.</div>
 </div>
 </foreignObject>
 </svg>

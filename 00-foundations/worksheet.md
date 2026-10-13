@@ -14,9 +14,21 @@ Name or handle: ______________________  Date: ____________
 | Redundant re-reading | |
 | Missing trigger | |
 
-## Checkpoint 2. Three failures the demo prevented
+## Checkpoint 2. What the simulator showed
 
-| Failure mode | What the demo showed | Which decision prevented it (slot, tier, reason, or "refused") |
+| System | Its symptom is which failure mode? |
+| --- | --- |
+| Support agent | |
+| Code review bot | |
+| Clinical triage | |
+| Weekly brief | |
+| Voice ordering | |
+| Incident copilot | |
+| Language tutor | |
+
+The failure mode with no system: ______________________  The control that reproduces it: ______________________
+
+| Failure mode | What the simulator showed | Which decision prevented it (slot, tier, refusal reason, or "refused") |
 | --- | --- | --- |
 | | | |
 | | | |
@@ -47,11 +59,12 @@ Name or handle: ______________________  Date: ____________
 
 ## Checkpoint 5. My prompt in slots
 
-- Share of tokens with no owner: ________
-- Items proposed: ________
-- `TODO` markers in the export: ________
+- Pieces: ________
+- Pieces with no owner: ________  What they were: ______________________________
+- Slots used, of eleven: ________
+- `TODO` markers in my `items.cwa.yaml`: ________
 
-| Item (first words) | Proposed slot | Slot I would give it, and why |
+| Piece (first words) | Slot I chose | Slot I nearly chose, and why I did not |
 | --- | --- | --- |
 | | | |
 | | | |

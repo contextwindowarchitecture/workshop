@@ -23,3 +23,6 @@ tmp/
 # W8 kata work trees, built from the sibling assembler by kata.py
 08-assembler-kata/work/
 08-assembler-kata/.pristine/
+
+# W0 part 5: a participant's own prompt, sorted into items
+00-foundations/items.cwa.yaml

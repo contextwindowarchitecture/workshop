@@ -36,27 +36,31 @@
 </svg>
 <div style="height: 2px; background: #DADFE7"></div>
 <div style="display: flex; gap: 72px; align-items: center">
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="150" viewBox="0 0 760 150" role="img" aria-label="The Start page's six steps: most teams do steps 1 and 6 partly and none of 2 to 5">
-<g font-family="IBM Plex Mono, monospace" font-size="26" font-weight="600">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="150" viewBox="0 0 760 150" role="img" aria-label="The harness loop on the home page: receive input, plan or route, resolve tools, build the request, call the model, parse and act. Stage 04, building the request, is the one an assembler takes over.">
+<g font-family="IBM Plex Mono, monospace">
 <rect x="0" y="20" width="110" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
-<rect x="0" y="75" width="110" height="55" fill="#2453C9"></rect>
-<text x="44" y="62" fill="#11151B">1</text>
-<rect x="130" y="20" width="110" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2" stroke-dasharray="6 5"></rect>
-<text x="174" y="84" fill="#9AA3B0">2</text>
-<rect x="260" y="20" width="110" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2" stroke-dasharray="6 5"></rect>
-<text x="304" y="84" fill="#9AA3B0">3</text>
-<rect x="390" y="20" width="110" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2" stroke-dasharray="6 5"></rect>
-<text x="434" y="84" fill="#9AA3B0">4</text>
-<rect x="520" y="20" width="110" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2" stroke-dasharray="6 5"></rect>
-<text x="564" y="84" fill="#9AA3B0">5</text>
+<text x="16" y="62" font-size="26" font-weight="600" fill="#9AA3B0">01</text>
+<text x="16" y="108" font-size="16" fill="#4A5361">input</text>
+<rect x="130" y="20" width="110" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="146" y="62" font-size="26" font-weight="600" fill="#9AA3B0">02</text>
+<text x="146" y="108" font-size="16" fill="#4A5361">route</text>
+<rect x="260" y="20" width="110" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="276" y="62" font-size="26" font-weight="600" fill="#9AA3B0">03</text>
+<text x="276" y="108" font-size="16" fill="#4A5361">tools</text>
+<rect x="390" y="20" width="110" height="110" fill="#2453C9"></rect>
+<text x="406" y="62" font-size="26" font-weight="600" fill="#FFFFFF">04</text>
+<text x="406" y="108" font-size="16" fill="#FFFFFF">request</text>
+<rect x="520" y="20" width="110" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="536" y="62" font-size="26" font-weight="600" fill="#9AA3B0">05</text>
+<text x="536" y="108" font-size="16" fill="#4A5361">model</text>
 <rect x="650" y="20" width="110" height="110" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
-<rect x="650" y="75" width="110" height="55" fill="#2453C9"></rect>
-<text x="694" y="62" fill="#11151B">6</text>
+<text x="666" y="62" font-size="26" font-weight="600" fill="#9AA3B0">06</text>
+<text x="666" y="108" font-size="16" fill="#4A5361">act</text>
 </g>
 </svg>
 <div style="display: flex; flex-direction: column; gap: 14px; font-size: 24px; line-height: 1.45; max-width: 820px">
-<span><b>The Start page's six steps.</b> Mark which your team already does.</span>
-<span style="color: #2E3540">Most teams do steps 1 and 6 partly, and none of 2 to 5. Then pick a track in the catalog.</span>
+<span><b>Harness engineering, on the home page.</b> Pick the framework you use.</span>
+<span style="color: #2E3540">Your framework runs the loop; the assembler takes over stage 04, where the request is built. Then pick a track in the catalog.</span>
 </div>
 </div>
 </div>

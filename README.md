@@ -10,7 +10,7 @@ Every lab runs without a model: committed snapshots, traces and recorded runs re
 
 | Code | Workshop | Format | Status |
 | --- | --- | --- | --- |
-| [W0](00-foundations/) | Context engineering foundations: the prompt is compiled output | 90 min, browser only | ready |
+| [W0](00-foundations/) | Context engineering foundations: the prompt is compiled output | 90 min, browser and text editor | ready |
 | [W1](01-cwa-tour/) | The CWA tour: planes, slots, snapshot, trace | half day, model-free | ready |
 | [W2](02-producers/) | Building a conformant producer | half day, model-free | ready |
 | [W3](03-integration/) | Integrating CWA into an existing application: the migration (W3a) and the framework seams (W3b, `seams/`) | full day, model-free | ready |

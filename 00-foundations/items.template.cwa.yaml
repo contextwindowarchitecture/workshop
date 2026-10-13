@@ -1,0 +1,59 @@
+# W0 part 5: your prompt, as items.
+#
+# Copy this file to items.cwa.yaml and write one item per piece of your prompt that has an owner.
+# Pieces with no owner go in the worksheet, not here. W1 and W3 start from your items.cwa.yaml.
+#
+# Every item needs the eight minimum fields (spec §2.2, R-2):
+#   id, slot, source, source_version, authority, freshness, trust, body
+# Write TODO for any value your application cannot supply today. Each TODO is a gap, not a mistake.
+#
+# One slot and one authority per item (R-1). The authority comes from the slot, never from the wording (R-7).
+# The defaults below are the published ones, in shared/contract/cwa/contract/slot-defaults.json:
+#
+#   slot                          authority                tier, under budget pressure
+#   governance.instructions       governing                protected
+#   governance.capabilities       governing                protected
+#   governance.examples           governing                droppable
+#   governance.output_contract    governing                protected
+#   state.user                    state                    droppable
+#   state.task                    state                    protected
+#   evidence.knowledge            reference_only           compressible
+#   evidence.tool_results         observation              compressible
+#   interaction.memory            generated                compressible
+#   interaction.history           user, or untrusted for   compressible
+#                                 the model's own turns
+#   interaction.query             user                     protected
+#
+# Some slots need more than the minimum:
+#   interaction.memory    expires: when it stops being true (R-9); source names the turn it came from
+#   evidence.knowledge    relevance: the retriever's score (R-13); one item per chunk, never a blob
+#   interaction.history   lineage: generated on the model's own turns (R-1)
+#   evidence.*, interaction.*
+#                         injection_risk: untrusted_content when the body could carry an injection (R-10)
+#
+# trust is the producer's claim about its source: verified, unverified or untrusted. Only the governance
+# gate reads it, and governance admits verified items alone (R-10).
+#
+# A worked example, from sample-prompt.md:
+#
+#   - id: inst_no_unverified_prices
+#     slot: governance.instructions
+#     authority: governing
+#     source: TODO            # where the rule is kept: a file, a policy record, a CMS entry
+#     source_version: TODO    # which revision of it
+#     freshness: TODO         # when that revision took effect, as a timestamp
+#     trust: verified
+#     body: "Never quote a price, plan limit or setting that does not appear in the articles you were given."
+#
+#   - id: mem_team_plan
+#     slot: interaction.memory
+#     authority: generated
+#     source: TODO            # the turn this was summarised from
+#     source_version: TODO
+#     freshness: TODO
+#     expires: TODO           # nothing says when this stops being true, and the account line says Business
+#     trust: unverified
+#     injection_risk: untrusted_content
+#     body: "Their workspace is on the Team plan."
+
+items: []

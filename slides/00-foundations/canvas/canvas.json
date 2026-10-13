@@ -12,11 +12,11 @@
     "Planes.dc.html": {"x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "05 Part 2 Four planes"},
     "Evidence.dc.html": {"x": 4000, "y": 1200, "w": 1920, "h": 1080, "title": "06 Part 3 The evidence"},
     "Words.dc.html": {"x": 0, "y": 2400, "w": 1920, "h": 1080, "title": "07 Part 4 Six words"},
-    "Migrator.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Part 5 Your prompt in slots"},
+    "Sort.dc.html": {"x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "08 Part 5 Your prompt in slots"},
     "RuleZero.dc.html": {"x": 4000, "y": 2400, "w": 1920, "h": 1080, "title": "09 Part 6 Rule zero"},
     "Close.dc.html": {"x": 0, "y": 3600, "w": 1920, "h": 1080, "title": "10 Close"}
   },
-  "order": ["Main.dc.html", "Agenda.dc.html", "Failures.dc.html", "Squeeze.dc.html", "Planes.dc.html", "Evidence.dc.html", "Words.dc.html", "Migrator.dc.html", "RuleZero.dc.html", "Close.dc.html"],
+  "order": ["Main.dc.html", "Agenda.dc.html", "Failures.dc.html", "Squeeze.dc.html", "Planes.dc.html", "Evidence.dc.html", "Words.dc.html", "Sort.dc.html", "RuleZero.dc.html", "Close.dc.html"],
   "notes": {},
   "designSystems": []
 }

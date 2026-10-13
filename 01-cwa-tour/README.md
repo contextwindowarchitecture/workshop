@@ -163,9 +163,9 @@ Section 6.1 of the specification lists nine tests a trace enables. Eight of them
 uv run tour.py checklist
 ```
 
-Tick each one off against the command you ran. Then take the `items.cwa.yaml` you exported in W0 and, for each of your own items, write which of these tests would catch its most likely failure.
+Tick each one off against the command you ran. Then take the `items.cwa.yaml` you wrote in W0 and, for each of your own items, write which of these tests would catch its most likely failure.
 
-**Checkpoint 6.** The checklist has eight ticks and the W0 export has a test named beside each item.
+**Checkpoint 6.** The checklist has eight ticks and your W0 `items.cwa.yaml` has a test named beside each item.
 
 ## After this workshop
 

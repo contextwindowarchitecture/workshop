@@ -4,53 +4,54 @@
 <foreignObject x="0" y="0" width="1920" height="1080">
 <div xmlns="http://www.w3.org/1999/xhtml" style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 80px 120px; background: #F4F5F7; color: #11151B; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px">
 <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 22px; letter-spacing: 0.08em; color: #4A5361">
-<span>PART 2 · 25 MINUTES · THE LIVE DEMO, SUPPORT AGENT TAB</span>
+<span>PART 2 · 20 MINUTES · THE SIMULATOR, SUPPORT AGENT TAB</span>
 <span>04 / 10</span>
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px">
 <h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Reproduce the failures, watch them not happen</h2>
-<p style="margin: 0; font-size: 28px; color: #2E3540">The demo is illustrative, but every control maps to a decision a real assembler records.</p>
+<p style="margin: 0; font-size: 28px; color: #2E3540">The simulator is illustrative, but every control maps to a decision a real assembler records.</p>
 </div>
 <div style="display: flex; gap: 72px; align-items: flex-start">
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640" role="img" aria-label="Budget squeeze: at 2k everything fits; at 1k droppable items go and compressible items are shortened; squeezed further, protected content cannot fit and the demo refuses">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640" style="flex-shrink: 0" role="img" aria-label="Budget squeeze on the Support agent: at 4k everything fits; at 2k user facts and knowledge are dropped and tool results and history are compressed while the protected slots are untouched; at 1k no evidence item is left and the simulator refuses with evidence_required">
 <g font-family="IBM Plex Mono, monospace">
-<text x="0" y="28" font-size="24" font-weight="600" fill="#11151B">2k</text>
-<text x="340" y="28" font-size="24" font-weight="600" fill="#11151B">1k</text>
-<text x="680" y="28" font-size="24" font-weight="600" fill="#11151B">squeeze</text>
-<rect x="0" y="50" width="300" height="480" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<text x="0" y="28" font-size="24" font-weight="600" fill="#11151B">4k</text>
+<text x="340" y="28" font-size="24" font-weight="600" fill="#11151B">2k</text>
+<text x="680" y="28" font-size="24" font-weight="600" fill="#11151B">1k</text>
+<rect x="0" y="50" width="300" height="470" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
 <rect x="16" y="66" width="268" height="56" fill="#2453C9"></rect>
 <text x="30" y="100" font-size="17" fill="#FFFFFF">instructions</text>
-<rect x="16" y="132" width="268" height="90" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
-<text x="30" y="182" font-size="17" fill="#11151B">compressible</text>
-<rect x="16" y="232" width="268" height="70" fill="#DADFE7"></rect>
-<text x="30" y="272" font-size="17" fill="#11151B">droppable</text>
-<rect x="16" y="312" width="268" height="70" fill="#DADFE7"></rect>
-<text x="30" y="352" font-size="17" fill="#11151B">droppable</text>
-<rect x="16" y="392" width="268" height="60" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
-<text x="30" y="428" font-size="17" fill="#11151B">compressible</text>
-<rect x="16" y="462" width="268" height="52" fill="#2453C9"></rect>
-<text x="30" y="494" font-size="17" fill="#FFFFFF">query</text>
-<rect x="340" y="50" width="300" height="480" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
+<rect x="16" y="132" width="268" height="50" fill="#DADFE7"></rect>
+<text x="30" y="163" font-size="17" fill="#11151B">user facts</text>
+<rect x="16" y="192" width="268" height="80" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="30" y="238" font-size="17" fill="#11151B">knowledge</text>
+<rect x="16" y="282" width="268" height="70" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="30" y="323" font-size="17" fill="#11151B">tool results</text>
+<rect x="16" y="362" width="268" height="80" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="30" y="408" font-size="17" fill="#11151B">history</text>
+<rect x="16" y="452" width="268" height="52" fill="#2453C9"></rect>
+<text x="30" y="484" font-size="17" fill="#FFFFFF">query</text>
+<rect x="340" y="50" width="300" height="470" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
 <rect x="356" y="66" width="268" height="56" fill="#2453C9"></rect>
 <text x="370" y="100" font-size="17" fill="#FFFFFF">instructions</text>
 <rect x="356" y="132" width="268" height="44" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
-<text x="370" y="160" font-size="17" fill="#11151B">~ shorter version</text>
-<rect x="356" y="186" width="268" height="36" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
-<text x="370" y="210" font-size="17" fill="#11151B">~ shorter version</text>
-<rect x="356" y="232" width="268" height="52" fill="#2453C9"></rect>
-<text x="370" y="264" font-size="17" fill="#FFFFFF">query</text>
-<text x="356" y="330" font-size="17" fill="#C2541D">- droppable, dropped</text>
-<text x="356" y="358" font-size="17" fill="#C2541D">- droppable, dropped</text>
+<text x="370" y="160" font-size="17" fill="#11151B">~ tool results, summary</text>
+<rect x="356" y="186" width="268" height="44" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
+<text x="370" y="214" font-size="17" fill="#11151B">~ history, summary</text>
+<rect x="356" y="240" width="268" height="52" fill="#2453C9"></rect>
+<text x="370" y="272" font-size="17" fill="#FFFFFF">query</text>
+<text x="356" y="338" font-size="17" fill="#C2541D">- user facts, dropped</text>
+<text x="356" y="366" font-size="17" fill="#C2541D">- knowledge, dropped</text>
 <rect x="680" y="50" width="300" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
 <rect x="696" y="66" width="268" height="56" fill="#2453C9"></rect>
 <text x="710" y="100" font-size="17" fill="#FFFFFF">instructions</text>
 <rect x="696" y="132" width="268" height="52" fill="#2453C9"></rect>
 <text x="710" y="164" font-size="17" fill="#FFFFFF">query</text>
 <rect x="696" y="194" width="268" height="40" fill="none" stroke="#C2541D" stroke-width="2" stroke-dasharray="6 5"></rect>
-<text x="710" y="220" font-size="16" fill="#C2541D">will not fit</text>
-<rect x="680" y="290" width="300" height="100" fill="#FBF0EA" stroke="#C2541D" stroke-width="3"></rect>
-<text x="704" y="336" font-size="26" font-weight="600" fill="#C2541D">refused</text>
-<text x="704" y="368" font-size="17" fill="#11151B">rather than answers</text>
+<text x="710" y="220" font-size="16" fill="#C2541D">no evidence left</text>
+<rect x="680" y="290" width="300" height="130" fill="#FBF0EA" stroke="#C2541D" stroke-width="3"></rect>
+<text x="704" y="334" font-size="26" font-weight="600" fill="#C2541D">refused</text>
+<text x="704" y="368" font-size="17" fill="#11151B">evidence_required</text>
+<text x="704" y="398" font-size="17" fill="#11151B">retrieve narrower (R-12)</text>
 <rect x="0" y="574" width="28" height="28" fill="#2453C9"></rect>
 <text x="40" y="596" font-size="19" fill="#11151B">protected</text>
 <rect x="200" y="574" width="28" height="28" fill="#DCE3F5" stroke="#2453C9" stroke-width="1.5"></rect>
@@ -60,13 +61,12 @@
 </g>
 </svg>
 <div style="display: flex; flex-direction: column; gap: 26px; flex-grow: 1; font-size: 23px; line-height: 1.4">
-<div style="display: flex; gap: 18px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">1</span><span><b>Budget squeeze.</b> 2k to 1k, then until it refuses.</span></div>
-<div style="display: flex; gap: 18px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">2</span><span><b>Remove a slot.</b> Each in turn; the query last.</span></div>
-<div style="display: flex; gap: 18px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">3</span><span><b>The bad panel.</b> One blob, no assembler. Find the imperative sentence in the retrieved text.</span></div>
-<div style="display: flex; gap: 18px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">4</span><span><b>Planes.</b> Read the four questions.</span></div>
-<div style="display: flex; gap: 18px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #4A5361">5</span><span style="color: #2E3540">Time left? The guided tour, sixteen stops.</span></div>
+<div style="display: flex; gap: 18px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">1</span><span><b>Budget squeeze.</b> 8k down to 1k. Note what goes, and the reason it refuses.</span></div>
+<div style="display: flex; gap: 18px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">2</span><span><b>Remove a slot.</b> Each in turn; the instructions and the query last.</span></div>
+<div style="display: flex; gap: 18px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">3</span><span><b>The unassembled blob.</b> On all seven systems: match each symptom to a failure mode.</span></div>
+<div style="display: flex; gap: 18px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2453C9">4</span><span><b>Planes.</b> Read the four questions, then switch to Slots.</span></div>
 <div style="height: 2px; background: #DADFE7"></div>
-<div style="font-size: 22px; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #11151B">Checkpoint 2</span> · for three failure modes, what the demo showed and which decision prevented it. Use its words: a slot, a tier, a reason, or "refused".</div>
+<div style="font-size: 22px; color: #2E3540"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #11151B">Checkpoint 2</span> · match the seven systems, then for three failure modes, what the simulator showed and which decision prevented it. Use its words: a slot, a tier, a refusal reason, or "refused".</div>
 </div>
 </div>
 </div>
