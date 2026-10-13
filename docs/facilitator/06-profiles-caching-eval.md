@@ -6,7 +6,7 @@ Module: [06-profiles-caching-eval/README.md](../../06-profiles-caching-eval/READ
 
 | Minutes | Part | What you do |
 | --- | --- | --- |
-| 0 to 15 | Framing | "CWA takes no position on where items go." The six-step protocol on one slide. Open the Placement page's explorer once. |
+| 0 to 15 | Framing | "CWA takes no position on where items go." The six-step protocol on one slide. Show the Placement page's [evaluation protocol](https://contextwindowarchitecture.io/evidence.html#evaluate) once. |
 | 15 to 35 | Part 1 | `profiles.py diff` on the projector: same items, three hashes. |
 | 35 to 80 | Lab B | Reuse. Have them predict which profile reuses most before running `compare`. Then the cache-reuse test in `tests/test_reuse.py`, read aloud. |
 | 80 to 95 | Break | |

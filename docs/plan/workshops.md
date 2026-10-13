@@ -186,7 +186,7 @@ These apply to every workshop and are not repeated below.
   - Teach what caching owns: history rendered in the order said, the `cwa-message-blocks/v1` renderer, breakpoints as structure not text, the cache-reuse test.
   - Teach the registry lock: a profile's digest excludes its evaluation object, content changes without a version bump fail to load, deployment mode returns only evaluated profiles.
 - **Goals**
-  - Diff two profiles in the profile explorer and export both.
+  - Diff two candidate profiles with `profiles.py diff` and read what differs.
   - Render the same frozen conversation under a cache-first profile across two turns and prove the leading bytes match.
   - Run a small evaluation across two profiles on one local model, write the evaluation object with suite, date, result and artifact location, and lock the registry.
   - Attempt to deploy an unevaluated profile and read the refusal.
@@ -195,7 +195,7 @@ These apply to every workshop and are not repeated below.
 - **Calls to action**
   - Contribute the evaluated profile through the About page's contribution path.
 - **Covers**: R-7, R-19, R-20, R-21, R-23.
-- **Reuses**: `website/evidence.html` explorer and protocol, `examples/profiles.json`, `conformance/registry/`, `examples/05-production/policy/registry.lock.json`, `conformance/cases/blocks-*`.
+- **Reuses**: `website/evidence.html` evidence and protocol, `examples/profiles.json`, `conformance/registry/`, `examples/05-production/policy/registry.lock.json`, `conformance/cases/blocks-*`.
 
 ### W7. Production: snapshot store, telemetry, evals and the promotion gate
 

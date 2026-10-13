@@ -6,7 +6,7 @@ Half a day, self-paced, model-free. You leave with one evaluated profile whose e
 
 - Python 3.12 or later and [uv](https://docs.astral.sh/uv/). `uv sync` installs the reference assembler and the OpenAI SDK. The live part of the suite is optional and needs an endpoint.
 - W1. W3a or W4 helps: this is that application, with three candidate placements for its route.
-- Open [worksheet.md](worksheet.md) beside this file. The website's Placement page has the explorer and the evidence; this module runs the same experiments locally.
+- Open [worksheet.md](worksheet.md) beside this file. The website's [Placement](https://contextwindowarchitecture.io/evidence.html) page has the evidence, the profile format and the evaluation protocol; this module runs the experiments locally.
 
 Conference cut (90 minutes): part 1 and Lab B.
 
