@@ -27,7 +27,7 @@ uv sync
 uv run agent.py --script scripts/01-status-check.json --user u_ada "Is there an incident in our region right now?"
 ```
 
-The model is scripted, so the run is the same every time and needs no endpoint: it reads the account, polls the status, polls again, answers. Four inferences, four snapshots, four traces. On the third, `obs:2` is superseded by `obs:3`: same call, newer observation (R-25). Then replay the committed run without any model:
+The model is scripted, so the run is the same every time and needs no endpoint: it reads the account, polls the status, polls again, answers. Four inferences, four snapshots, four traces. The third polls again, and in the fourth snapshot `obs:2` is superseded by `obs:3`: same call, newer observation (R-25). Then replay the committed run without any model:
 
 ```sh
 uv run agent.py --replay scenarios/01-status-check/run.json

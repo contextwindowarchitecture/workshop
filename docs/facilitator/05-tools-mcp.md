@@ -7,7 +7,7 @@ Module: [05-tools-mcp/README.md](../../05-tools-mcp/README.md). Half a day self-
 | Minutes | Part | What you do |
 | --- | --- | --- |
 | 0 to 10 | Framing | Proposal, grant, guard: three words on one slide, and "a tool result is an observation, not permission." |
-| 10 to 35 | Part 1 | Run the status check. Four tables; point at `obs:2 superseded_by obs:3` on turn 3 and at the four digests. Replay the committed run. |
+| 10 to 35 | Part 1 | Run the status check. Four tables; point at `obs:2` superseded by `obs:3` in turn 4's table, after turn 3's second poll, and at the four digests. Replay the committed run. |
 | 35 to 85 | Lab A | The guard. At 75 minutes run the wrong-workspace script with a participant's guard on the projector. |
 | 85 to 100 | Break | |
 | 100 to 140 | Lab B | The policy. Ask the room what happens if `delete_workspace` is granted to Owners "because Ada is the Owner". |

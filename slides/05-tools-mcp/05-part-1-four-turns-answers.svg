@@ -11,7 +11,7 @@
 <h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Four turns, four snapshots</h2>
 <p style="margin: 0; font-size: 28px; color: #2E3540">"Is there an incident in our region right now?" A scripted model, so the run is the same every time.</p>
 </div>
-<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Four inferences: read the account, poll the status, poll again, answer. Each has its own snapshot, trace and digest. On turn three obs:2 is superseded by obs:3.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Four inferences: read the account, poll the status, poll again, answer. Each has its own snapshot, trace and digest. Turn three polls again, and in turn four's snapshot obs:3 supersedes obs:2.">
 <defs>
 <marker id="p5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#11151B"></path></marker>
 </defs>
@@ -39,8 +39,8 @@
 <rect x="884" y="124" width="342" height="44" fill="#F4F5F7"></rect><text x="900" y="152" font-size="16" fill="#11151B">digest 3</text>
 <text x="884" y="240" font-size="18" font-weight="600" fill="#11151B">polls again</text>
 <rect x="884" y="270" width="342" height="64" fill="#EEF1F8" stroke="#2453C9" stroke-width="1.5"></rect>
-<text x="900" y="298" font-size="15" fill="#11151B">obs:2 superseded</text>
-<text x="900" y="320" font-size="15" fill="#11151B">by obs:3 (R-25)</text>
+<text x="900" y="298" font-size="15" fill="#11151B">its obs:3 supersedes obs:2</text>
+<text x="900" y="320" font-size="15" fill="#11151B">in snapshot 4 (R-25)</text>
 </g>
 <line x1="1250" y1="180" x2="1280" y2="180" stroke="#11151B" stroke-width="2" marker-end="url(#p5)"></line>
 <g>
