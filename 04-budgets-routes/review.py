@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -29,8 +30,9 @@ def main(argv: list[str]) -> int:
     p.add_argument("--impl", choices=["labs", "solution"], default=None)
     p.add_argument("--only", help="an article id, such as refunds")
     args = p.parse_args(argv)
+    which = args.impl or os.environ.get("CWA_W4_IMPL") or "labs"  # a reviewer reads their own list unless told otherwise
     table = json.loads(SUMMARIES.read_text(encoding="utf-8"))
-    review = json.loads(impl.path("reviewed.json", args.impl).read_text(encoding="utf-8"))
+    review = json.loads(impl.path("reviewed.json", which).read_text(encoding="utf-8"))
     approved, rejected = set(review["approved"]), review.get("rejected", {})
     for chunk in corpus.chunks():
         if args.only and chunk.article != args.only:
@@ -40,7 +42,7 @@ def main(argv: list[str]) -> int:
             continue
         status = "APPROVED" if chunk.id in approved else f"REJECTED: {rejected.get(chunk.id, '')}" if chunk.id in rejected else "undecided"
         print(f"{chunk.id}  [{status}]\n  paragraph: {chunk.text}\n  summary:   {entry['body']}\n")
-    print(f"{len(approved)} approved, {len(rejected)} rejected ({impl.name(args.impl)}/reviewed.json)")
+    print(f"{len(approved)} approved, {len(rejected)} rejected ({impl.name(which)}/reviewed.json)")
     return 0
 
 

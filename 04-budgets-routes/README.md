@@ -54,7 +54,7 @@ uv run python -m app.app --impl labs --budget 500 --conversation scenarios/05-un
 
 The second command is the point of the lab, run before you finish it: with everything approved and a tight budget, the roles paragraph is swapped for a summary that says admins can change billing. The paragraph says they cannot. The trace shows a faithful swap of a variant that was not. Scenario `05-unreviewed` commits that payload.
 
-One more thing to notice: the exact FAQ copy and the data-export paragraph share a hash, so one summary covers both and approving either id approves the text. And in scenario `04-recovery`, the refusal's recovery action is `precompute_summary` rather than `retrieve_narrower` because one omitted evidence item had no variant, and it had none because its summary was rejected in review. The review decision changed the recovery action.
+One more thing to notice: the exact FAQ copy and the data-export paragraph share a hash, so one summary covers both and approving either id approves the text. And in scenario `04-recovery`, the refusal's recovery action is `precompute_summary` rather than `retrieve_narrower` because two omitted evidence items had no variant, and they had none because their summaries were rejected in review. The review decision changed the recovery action.
 
 **Checkpoint 2.** The worksheet's Lab A lines: the four ids, their reasons, and what scenario 05's payload says that its paragraph does not.
 
@@ -79,7 +79,7 @@ uv run --extra calibrate calibrate.py
 uv run --extra calibrate calibrate.py --stop-rule
 ```
 
-The first counts every text the large route renders with `estimate-utf8/v1` and with tiktoken's `cl100k_base`, prints the worst ratio and recommends a margin. On this corpus the ratios run from 0.82 on the instructions to 1.005 on the account and article text, so the script recommends 6% and the 15% in the routes table is generous for this tokenizer. On code, logs or another language the estimate can undercount by far more, which is why the pasted-log conversation is worth running through the script with `--encoding o200k_base` too. The second shows the two rules for an application tokenizer: under its own id it works and the trace names it; under a published id the assembler stops before assembly, because a trace that says `estimate-utf8/v1` must mean that count (R-16).
+The first counts every text the large route renders with `estimate-utf8/v1` and with tiktoken's `cl100k_base`, prints the worst ratio and recommends a margin. On this corpus the ratios run from 0.82 on the instructions to 1.005 on the account and article text, so the script recommends 6% and the 15% in the routes table is generous for this tokenizer. On code, logs or another language the estimate can undercount by far more. Run the pasted-log conversation through the script, `calibrate.py --conversation scenarios/03-pasted-log/conversation.json`, with `cl100k_base` and with `--encoding o200k_base`: the worst ratio is about 1.32 either way, the script recommends 38%, and the 15% in the routes table no longer covers the error. The second shows the two rules for an application tokenizer: under its own id it works and the trace names it; under a published id the assembler stops before assembly, because a trace that says `estimate-utf8/v1` must mean that count (R-16).
 
 **Checkpoint 4.** The worst ratio you measured, the margin you would set for this model, and why a tokenizer can never be passed under a published id.
 

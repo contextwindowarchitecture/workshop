@@ -3,6 +3,7 @@
     uv run calibrate.py                                  # estimate-utf8/v1 against tiktoken's cl100k_base on this route's texts
     uv run --extra calibrate calibrate.py                # same, installing tiktoken first
     uv run calibrate.py --encoding o200k_base            # another OpenAI encoding
+    uv run calibrate.py --conversation scenarios/03-pasted-log/conversation.json   # one conversation's texts instead
     uv run calibrate.py --stop-rule                      # show the published-id stop rule (R-16)
 
 estimate-utf8/v1 counts UTF-8 bytes divided by four, rounded up. It is portable and needs no vocabulary, and it is
@@ -77,6 +78,7 @@ def main(argv: list[str]) -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--encoding", default="cl100k_base")
     p.add_argument("--stop-rule", action="store_true")
+    p.add_argument("--conversation", help="measure this conversation's texts instead of the four sample questions")
     args = p.parse_args(argv)
     try:
         tok = Tiktoken(args.encoding)
@@ -87,7 +89,7 @@ def main(argv: list[str]) -> int:
         stop_rule(tok)
         return 0
     worst, rows = 0.0, []
-    for request in TEXTS:
+    for request in [Request.load(args.conversation)] if args.conversation else TEXTS:
         for text in payload_texts(context.snapshot(request, "account-help")):
             e, t = estimate(text), tok.count(text)
             ratio = t / e if e else 1.0
