@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Every repository check in one run, in the order a facilitator or CI runs them.
 
-    python3 shared/tools/check_all.py            # everything: contract, lint, links, glossary, scenarios, tests (both modes), invariants
-    python3 shared/tools/check_all.py --quick    # the fast ones only: contract, lint, links, glossary, scenarios
+    python3 shared/tools/check_all.py            # everything: contract, lint, links, glossary, site links, scenarios, tests (both modes), invariants
+    python3 shared/tools/check_all.py --quick    # the fast ones only: contract, lint, links, glossary, site links, scenarios
 
 Each step is one of the scripts beside this one, run as a subprocess with its own output shown, and the summary at the
-end says which passed. The glossary check needs the website sibling and the invariants need 11-benchmarking's
-environment; both report "skip" when their prerequisite is missing rather than failing the run. Standard library only.
+end says which passed. The glossary and site-link checks need the website sibling and the invariants need
+11-benchmarking's environment; they report "skip" when their prerequisite is missing rather than failing the run. Standard library only.
 """
 
 from __future__ import annotations
@@ -42,8 +42,10 @@ def main(argv: list[str]) -> int:
     results.append(("relative links resolve", *step("relative links resolve", [py, str(TOOLS / "check_links.py")])))
     if sibling("website").is_dir():
         results.append(("glossary current", *step("glossary current", [py, str(TOOLS / "glossary.py"), "--check"])))
+        results.append(("site links resolve", *step("site links resolve", [py, str(TOOLS / "check_site_links.py")])))
     else:
         results.append(("glossary current", "skip (website sibling not checked out)", 0.0))
+        results.append(("site links resolve", "skip (website sibling not checked out)", 0.0))
     results.append(("committed scenarios current", *step("committed scenarios current", [py, str(TOOLS / "check_scenarios.py")])))
     if not args.quick:
         results.append(("every suite passes (solution)", *step("every suite passes (solution)", [py, str(TOOLS / "run_tests.py")])))

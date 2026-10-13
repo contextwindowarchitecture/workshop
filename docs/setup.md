@@ -83,6 +83,7 @@ python3 shared/tools/vendor_contract.py --verify    # contract intact
 python3 shared/tools/lint_no_assemble.py            # no participant code assembles or patches a payload
 python3 shared/tools/check_links.py                 # every relative link in the Markdown resolves
 python3 shared/tools/glossary.py --check            # the glossary matches the website sibling
+python3 shared/tools/check_site_links.py            # every link into the site names a page and an anchor it has; --live checks the deployed site
 python3 shared/tools/check_scenarios.py             # every workshop's committed scenarios still assemble to the same bytes
 python3 shared/tools/run_tests.py                   # every module's suite in its own environment; --labs proves the stubs fail
 cd 11-benchmarking && uv run invariants.py          # every committed snapshot replays and validates

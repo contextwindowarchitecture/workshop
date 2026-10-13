@@ -1,8 +1,9 @@
 # Model-free checks: the vendored contract matches its lock, no participant code assembles or patches a payload,
-# every relative link resolves, the glossary is current against the website sibling, every workshop that has
-# committed scenarios still assembles them to the same bytes, every module's suite passes with the solution and fails
-# with the stubs, and every committed snapshot holds the invariants. Siblings are cloned beside the checkout at the
-# refs shared/contract/pins.json names, which is the layout participants use. No model is called.
+# every relative link resolves, the glossary is current against the website sibling, every link into the site names a
+# page and an anchor the sibling has, every workshop that has committed scenarios still assembles them to the same
+# bytes, every module's suite passes with the solution and fails with the stubs, and every committed snapshot holds
+# the invariants. Siblings are cloned beside the checkout at the refs shared/contract/pins.json names, which is the
+# layout participants use. No model is called.
 # shared/tools/check_all.py runs the same steps locally.
 name: ci
 
@@ -45,6 +46,9 @@ jobs:
       - name: glossary is current
         working-directory: workshop
         run: python3 shared/tools/glossary.py --check
+      - name: every link into the site names a page and an anchor it has
+        working-directory: workshop
+        run: python3 shared/tools/check_site_links.py
       - name: every committed scenario still assembles to the same bytes
         working-directory: workshop
         run: python3 shared/tools/check_scenarios.py
