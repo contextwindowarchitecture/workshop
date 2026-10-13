@@ -46,7 +46,7 @@ Related: `trust`, `injection-risk`, `conflict-group`, `governance`
 
 What a producer hands over for one call: its candidate items and one row per entry it suppressed, with a reason. The application binds the batch to the producer identity it authenticated; a snapshot holds at most one batch per producer.
 
-Where: [the batch](https://contextwindowarchitecture.io/producers.html#kinds)
+Where: [Spec §4](https://contextwindowarchitecture.io/spec.html#s4)
 
 Related: `producer`, `snapshot`, `exclusion`
 
@@ -64,7 +64,7 @@ Related: `tier`, `tokenizer`, `refusal`
 
 The application's versioned allow-list of tools per route and user, and the only producer for governance.capabilities. Adapters propose tool specifications; the policy admits the ones this user may use; the application's tool guard still enforces each call.
 
-Where: [producer kinds](https://contextwindowarchitecture.io/producers.html#kinds)
+Where: [Spec §3](https://contextwindowarchitecture.io/spec.html#s3)
 
 Related: `producer`, `governance`, `rule-zero`, `mcp`
 
@@ -146,7 +146,7 @@ Related: `plane`, `chunk`, `placement`, `injection-risk`
 
 An item left out of the payload, recorded in the trace with a reason code such as missing_field:relevance, out_of_scope or over_budget, and the stage that decided it, producer or assembler.
 
-Where: [admission failures](https://contextwindowarchitecture.io/producers.html#failures)
+Where: [Spec §4](https://contextwindowarchitecture.io/spec.html#s4)
 
 Related: `admission`, `trace`, `refusal`
 
@@ -212,7 +212,7 @@ One governed piece of context in a slot: a policy, a retrieved chunk, a tool obs
 
 > A model call is assembled from items.
 
-Where: [the minimum item](https://contextwindowarchitecture.io/producers.html#minimum)
+Where: [Spec §2](https://contextwindowarchitecture.io/spec.html#s2)
 
 Related: `slot`, `authority`, `freshness`, `producer`, `admission`
 
@@ -230,7 +230,7 @@ Related: `variant`, `item`
 
 The Model Context Protocol, a transport for tools and resources. Under CWA an MCP adapter's results become evidence items with freshness and authority, and its tool specifications are proposed to the capability policy, never placed by the adapter itself.
 
-Where: [producer kinds](https://contextwindowarchitecture.io/producers.html#kinds)
+Where: [Spec §3](https://contextwindowarchitecture.io/spec.html#s3)
 
 Related: `producer`, `capability-policy`, `evidence-plane`
 
@@ -250,7 +250,7 @@ The rendered request the model receives: each item's text in the role its render
 
 > It hands the payload to the model with each text in the platform role its renderer assigns, text assigned none in a single user message, where the query alone is the live turn, and no text of its own.
 
-Where: [an assembled request on the wire](https://contextwindowarchitecture.io/start.html#wire)
+Where: [the live assembly](https://contextwindowarchitecture.io/assembler.html#assemble)
 
 Related: `renderer`, `profile`, `trace`, `refusal`
 
@@ -290,7 +290,7 @@ Anything that emits candidate items into a slot: a retriever, a memory store, an
 
 > A conformant producer emits only items that meet section 2's rules for an item (R-1, R-2), which admission checks, plus the MUSTs aimed at producers
 
-Where: [producer kinds](https://contextwindowarchitecture.io/producers.html#kinds)
+Where: [Spec §1](https://contextwindowarchitecture.io/spec.html#s1)
 
 Related: `item`, `batch`, `assembler`, `application`, `mcp`, `capability-policy`
 
@@ -334,7 +334,7 @@ Related: `conformance`
 
 One kind of request an application serves, such as support chat, code review or a weekly brief. Each route has a versioned route policy and a placement profile of its own.
 
-Where: [producer kinds](https://contextwindowarchitecture.io/producers.html#kinds)
+Where: [Spec §5](https://contextwindowarchitecture.io/spec.html#s5)
 
 Related: `route-policy`, `profile`
 
@@ -450,7 +450,7 @@ The producer's own claim about its source: verified, unverified or untrusted. On
 
 > Among admitted items, trust and injection_risk never change which items may; they act only at admission (R-10).
 
-Where: [the minimum item](https://contextwindowarchitecture.io/producers.html#minimum)
+Where: [Spec §2](https://contextwindowarchitecture.io/spec.html#s2)
 
 Related: `authority`, `injection-risk`, `admission`
 
