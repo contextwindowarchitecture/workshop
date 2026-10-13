@@ -63,8 +63,8 @@ uv run pytest                            # the solution, and the before app's fa
 | `01-ada-export` | everything pasted, revoked and expired memories included | two producer-reported rows, the exact FAQ copy excluded, a replayable digest |
 | `02-ben-plan-conflict` | "Business plan" and "Team plan" with equal standing | `fact:plan` decided by policy, the memory `conflict_lost`, the account protected |
 | `03-off-topic` | five irrelevant paragraphs sent anyway | refused `evidence_required`, recovery `request_context`, nothing sent |
-| `04-long-conversation` | the last six messages whatever their size | the oldest turns `over_budget` under the history cap, the query never dropped |
-| `05-memory-leak` | a producer bug ships another user's memories | each leaked memory `out_of_scope`, the leak visible by producer |
+| `04-long-conversation` | the last six messages whatever their size | the oldest turn `over_budget` under the history cap, the query never dropped |
+| `05-memory-leak` | nothing on a memory says whose it is, so a store that ignored the user would ship another user's memories unseen | each leaked memory `out_of_scope`, the leak visible by producer |
 
 ## Checkpoints
 

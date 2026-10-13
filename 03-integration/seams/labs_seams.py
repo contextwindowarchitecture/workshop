@@ -17,12 +17,12 @@ from langchain_core.messages import BaseMessage
 
 
 def agents_input(payload: bytes) -> tuple[list[dict[str, Any]], None]:
-    raise NotImplementedError("labs/seams.py: agents_input")
+    raise NotImplementedError("labs_seams.py: agents_input")
 
 
 def langgraph_messages(payload: bytes) -> list[BaseMessage]:
-    raise NotImplementedError("labs/seams.py: langgraph_messages")
+    raise NotImplementedError("labs_seams.py: langgraph_messages")
 
 
 def claude_agent_options(payload: bytes, reserved_output: int) -> dict[str, Any]:
-    raise NotImplementedError("labs/seams.py: claude_agent_options")
+    raise NotImplementedError("labs_seams.py: claude_agent_options")

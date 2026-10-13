@@ -33,5 +33,5 @@ CWA_W3B_IMPL=labs uv run pytest -q 2>&1 | tail -1                   # 14 fail: t
 - Participants keep the agent's `instructions` "for safety" and add the system entries after it. The sentinel test catches it; ask what authority the instructions string has.
 - Participants pass `state["messages"]` plus the payload. The payload already holds the admitted history; the duplicate is the displacement W1 showed.
 - Participants split the joined system message back apart to make the hashes match. The seam adds a separator; say so and compare against the join, as `expected_for` does.
-- Participants want to run the Claude Agent SDK live. It spawns a Claude Code process and needs credentials; the mapping is the lab, and the SDK's `--verbatim_prompts`-style options are the reading.
+- Participants want to run the Claude Agent SDK live. It spawns a Claude Code process and needs credentials; the mapping is the lab.
 - Framework upgrades move hooks. `scenarios/proof.json` and the pins in `pyproject.toml` are there so the build says so before a participant does.

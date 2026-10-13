@@ -12,7 +12,7 @@ A framework owns the loop: tool calls, retries, handoffs, streaming, checkpoints
 
 ## Part 1. The seam in five frameworks (30 minutes)
 
-The Assembler page's [framework picker](https://contextwindowarchitecture.io/assembler.html#harness) names the seam for each. Python here; the others are call-outs.
+The Assembler page's [framework picker](https://contextwindowarchitecture.io/assembler.html#harness) has five entries, with LangChain and LangGraph sharing one, and names a seam for each. The table below is this module's own and goes further in two places: LangChain's `create_agent` gets its own row, and for the Claude Agent SDK it names the two places the SDK takes text, where the picker points at the system prompt, CLAUDE.md and the tool results. Python here; the others are call-outs.
 
 | Framework | Where the seam is | Verdict |
 | --- | --- | --- |
@@ -39,7 +39,7 @@ uv run pytest
 
 Read [common.py](common.py): `assemble_context()` is W3a's freeze and assemble, unchanged. `texts_of()` is what a payload says the model should get. Nothing in this module builds context; it only hands it over.
 
-**Checkpoint 2.** The two hashes for one scenario, and why the middleware column says `same, joined`.
+**Checkpoint 2.** The two hashes for one scenario, from [scenarios/proof.json](scenarios/proof.json): the payload's texts and what one framework received. Then why the middleware column says `same, joined`.
 
 ## Part 3. The lab: three seams (60 minutes)
 

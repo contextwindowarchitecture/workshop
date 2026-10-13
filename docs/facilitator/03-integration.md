@@ -1,6 +1,6 @@
 # W3a run sheet
 
-Module: [03-integration/README.md](../../03-integration/README.md). A full day self-paced; six hours instructor-led; pairs with W1 as the one-day "migrate your app" offering when participants have done W2 beforehand, which is also its conference cut: W1's tour in the morning and parts 1 to 3 of this module in the afternoon, the guards and the lock left as homework. Model-free; no siblings; `uv sync` installs the assembler and the OpenAI SDK only.
+Module: [03-integration/README.md](../../03-integration/README.md). A full day self-paced; six hours instructor-led; pairs with W1 as the one-day "migrate your app" offering when participants have done W2 beforehand, which is also its conference cut: W1's tour in the morning and steps 1 to 3 of this module in the afternoon, the rest left as homework. Model-free; no siblings; `uv sync` installs the assembler and the OpenAI SDK only.
 
 ## Timing, instructor-led
 
@@ -30,7 +30,7 @@ uv run python -m before.app --conversation scenarios/03-off-topic/conversation.j
 - **Step 1.** Instructions: `governance.instructions`, governing, source the file and its version. Account line: `state.user`, state, the accounts table rows and their versions. Memories: `interaction.memory`, generated, the turn each came from. Articles: `evidence.knowledge`, reference_only, the article and its version. Messages: `interaction.history`, user for the user's and untrusted for the model's. Question: `interaction.query`, user. The two "never" sentences are enforceable: a check on amounts against the evidence sent, a check for other workspace names. "Cite every article" is partly enforceable; "keep answers short" is guidance.
 - **Step 3.** The memory store reports `revoked` because it knows the row is revoked and never sends it (R-14). The assembler records `conflict_lost` because resolving a declared group is admission's job and the producer could not know what the account would say (R-11). Facts come from the producers because only they know what their items assert.
 - **Step 4.** Digest and hash from their own run; `missing_field:relevance`.
-- **Step 5.** Threshold 3.0 is where off-topic questions score below and on-topic chunks score above on this corpus; history cap 300 tokens drops the oldest turns of the long conversation and keeps the query; margin 15% covers the estimate tokenizer's error against most model tokenizers; `budget.input` is 8192 minus 1024.
+- **Step 5.** Threshold 3.0 is where off-topic questions score below and on-topic chunks score above on this corpus; history cap 300 tokens drops the oldest turn of the long conversation and keeps the query; margin 15% covers the estimate tokenizer's error against most model tokenizers; `budget.input` is 8192 minus 1024.
 - **Step 6.** Both guards pass. The price guard blocks "$24" when only "$12" was sent; the workspace guard blocks "Larkspur Design" for Ada.
 - **Done.** `parser: true` is not applicable on a chat route with no downstream parser. Profile evaluation is open: the profile is version 1 and `unevaluated`, so it cannot be deployed under R-19 until W6's work is done.
 

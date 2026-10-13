@@ -31,7 +31,7 @@
 <rect x="570" y="316" width="540" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
 <text x="594" y="356" font-size="20" font-weight="600" fill="#11151B">history cap</text>
 <text x="594" y="404" font-size="34" font-weight="600" fill="#11151B">300 tokens</text>
-<text x="594" y="448" font-size="15" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">Drops the oldest turns of the long conversation</text>
+<text x="594" y="448" font-size="15" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">Drops the oldest turn of the long conversation</text>
 <text x="594" y="472" font-size="15" fill="#2E3540" font-family="IBM Plex Sans, sans-serif">and keeps the query.</text>
 <rect x="1140" y="316" width="540" height="200" fill="#FFFFFF" stroke="#11151B" stroke-width="1.5"></rect>
 <text x="1164" y="356" font-size="20" font-weight="600" fill="#11151B">tokenizer margin</text>

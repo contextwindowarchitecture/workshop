@@ -30,13 +30,13 @@
 <text x="380" y="206">"Business plan" and "Team plan"</text><text x="380" y="232">with equal standing</text>
 <text x="380" y="316">five irrelevant paragraphs</text><text x="380" y="342">sent anyway</text>
 <text x="380" y="426">the last six messages,</text><text x="380" y="452">whatever their size</text>
-<text x="380" y="536">a producer bug ships another</text><text x="380" y="562">user's memories</text>
+<text x="380" y="536">no scope on a memory: a leak would</text><text x="380" y="562">ship another user's, unseen</text>
 </g>
 <g font-family="IBM Plex Sans, sans-serif" font-size="19" fill="#11151B">
 <text x="1020" y="96">two producer-reported rows, the exact FAQ</text><text x="1020" y="122">copy excluded, a replayable digest</text>
 <text x="1020" y="206"><tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">fact:plan</tspan> decided by policy, the memory</text><text x="1020" y="232"><tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">conflict_lost</tspan>, the account protected</text>
 <text x="1020" y="316">refused <tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">evidence_required</tspan>, recovery</text><text x="1020" y="342"><tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">request_context</tspan>, nothing sent</text>
-<text x="1020" y="426">oldest turns <tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">over_budget</tspan> under the history</text><text x="1020" y="452">cap; the query never dropped</text>
+<text x="1020" y="426">the oldest turn <tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">over_budget</tspan> under the history</text><text x="1020" y="452">cap; the query never dropped</text>
 <text x="1020" y="536">each leaked memory <tspan font-family="IBM Plex Mono, monospace" fill="#2453C9">out_of_scope</tspan>,</text><text x="1020" y="562">the leak visible by producer</text>
 </g>
 <g stroke="#DADFE7" stroke-width="1.5">

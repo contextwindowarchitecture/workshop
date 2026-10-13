@@ -19,7 +19,7 @@ What to notice, with W0's failure modes beside you:
 | Instruction-shaped evidence | a help-centre paragraph with an imperative in it would be pasted next to the instructions |
 | Displacement under budget | the last six messages, whatever their size; the articles, whatever the budget |
 | Missing trigger | the question is the last user message, by convention only |
-| Redundant re-reading | the whole system string changes whenever any part does, so nothing is cache-stable |
-| Authority inversion | "Never quote a price" is a sentence the model reads, and nothing enforces it |
+| Redundant re-reading | the articles change with every question and sit in the system string ahead of the conversation, so everything after them is new to a prompt cache on every call |
+| Authority inversion | the account line, the memories and the articles are pasted into the system message, so each carries the instructions' standing |
 
 And what it cannot do: say what it sent, say what it left out, replay a request, or refuse when the help centre has nothing to say. The off-topic conversation sends five irrelevant paragraphs and hopes.

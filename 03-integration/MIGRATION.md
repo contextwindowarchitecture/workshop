@@ -14,7 +14,7 @@ Nothing changes in the code yet. **Tests:** none.
 
 In `after/context.py`, write `snapshot(request)` and `assemble(document)`. The snapshot has `assembly_time` (the request's `asked_at`), `scope` (tenant, user, session), `budget`, `profile`, `route_policy`, `tokenizer`, `renderer`, `batches` and `conflicts`. It can be built with placeholder policy files and empty batches first; it will be rejected, and the problems the assembler lists are your to-do list.
 
-In `after/app.py`, replace `build_request()` so it returns `(document, result)` by freezing and assembling, add `provider_request(result)` that returns `provider.request_for(payload, model, reserved_output)` or `None` on a refusal, and make `main()` print the decisions and send the provider request.
+In `after/app.py`, replace `build_request()` so it returns `(document, result)` by freezing and assembling, add `provider_request(result)` that returns `provider.request_for(payload, model, reserved_output)` or `None` on a refusal, and make `main()` print the decisions and send the provider request. Give `main()` a `--replay SNAPSHOT` option too, which re-assembles a stored snapshot and prints its decisions: step 4 uses it.
 
 **Tests:** `test_build_request_freezes_and_assembles`, `test_the_same_snapshot_renders_the_same_bytes`.
 
