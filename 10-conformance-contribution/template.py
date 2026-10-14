@@ -1,4 +1,5 @@
-"""Lab A, your case: a copy of generate.py with the table emptied. Keep the derivation, change the table.
+"""Lab A, your case: a copy of generate.py with the table emptied. Change the table; the derivation below is the
+example's (one fact group, a refusal, no payload), so keep it for a conflict defect and rewrite it for any other.
 
 Worked example: a conformance case written the way the specification's generators write theirs, from a
 table of intended outcomes, never from an assembler's output.

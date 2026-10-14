@@ -52,11 +52,13 @@ When this module was written the published corpus had no group with two leaders 
 Pick a defect from [08-assembler-kata/defects/manifest.json](../08-assembler-kata/defects/manifest.json) (ten, each with the rule it breaks, the line it changes and the published cases that catch it) or `uncovered.json`. Read the rule it breaks in the vendored `conformance/README.md`. Then:
 
 ```sh
-cp template.py my_case.py          # the derivation from generate.py with the table emptied; set DEFAULT_ID to an id of your own
+cp template.py my_case.py          # generate.py with the table emptied; set DEFAULT_ID to an id of your own
 uv run my_case.py                  # -> cases/<your id>/
 uv run verify.py --case <your id> --defect <the defect>
 uv run verify.py --case <your id> --all-defects
 ```
+
+The derivation in the template is the worked example's: one fact group, a refusal, and no `expected.payload.txt`. It serves a conflict defect as it stands. For any other defect, change `snapshot()` and `expected_trace()` to say what your table intends, and when your case assembles, have `files()` write the expected payload too, derived from the table like the trace.
 
 Three things must hold. The reference passes: your table says what the rules say. Your defect fails: the case reaches the line the defect changes. Most other defects do not trip it: the case is about one thing. A case that the reference fails is either wrong or a finding; read the trace before deciding which, and if it is a finding, Lab C's issue template is for it.
 
@@ -90,12 +92,12 @@ The project takes three kinds of issue, each with a template in `.github/ISSUE_T
 | A change to the specification | SPEC.md, a schema, the contract data or conformance/README.md | what should change, naming R-n or the section and what it says now; why, with a snapshot or trace that shows it |
 | An implementation to list | help listing an assembler | the repository; what you need |
 
-Questions go to Discussions. A change to what a requirement means is agreed in an issue before a diff. A pull request needs the checks green, derived text regenerated rather than edited, cases regenerated from their generators, a `CHANGES.md` bullet when a rule changes, and a `Signed-off-by` line on every commit (`git commit -s`). Maintainers squash-merge.
+Questions go to Discussions. A change to what a requirement means is agreed in an issue before a diff. A pull request needs the checks green, derived text regenerated rather than edited, cases regenerated from their generators, a `CHANGES.md` bullet for any change to the specification, a new case included, and a `Signed-off-by` line on every commit (`git commit -s`). Maintainers squash-merge.
 
 Two drafts to write, in [drafts/](drafts/):
 
 - [case-addition.md](drafts/case-addition.md): the pull request description for a case. A worked draft for the example is there; write yours for your case, or, if Part 4 showed the corpus already covers your defect, write the case-problem issue that says whether the published case isolates it.
-- [spec-change.md](drafts/spec-change.md): a change proposal in the spec-change template. The worked example proposes allowing an object for a profile's `evaluation.result`, which W4 and W6 found cannot hold a suite's result without flattening it to a string. It is written to be argued with, and its last section argues with it. Then write your own, for something a module of this repository made you want to change.
+- [spec-change.md](drafts/spec-change.md): a change proposal in the spec-change template. The worked example proposes allowing an object for a profile's `evaluation.result`, which W6 and W7 found cannot hold a suite's result without flattening it to a string. It is written to be argued with, and its last section argues with it. Then write your own, for something a module of this repository made you want to change.
 
 When a draft is ready to go, `uv run upstream.py --into <your fork of the specification> --case <your id>` copies the case into that checkout's `conformance/cases/` and prints the remaining steps: the checker, the generator move, the `CHANGES.md` bullet, the listed assemblers, the signed commit. It never touches git, and it is the only step of this module that leaves this repository.
 
