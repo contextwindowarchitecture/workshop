@@ -37,5 +37,6 @@ If an OTLP backend is available (Jaeger's all-in-one container is the quickest),
 - Participants put the question or the answer in a span "for context". The test catches the question; say why the answer is no better.
 - Participants grade by reading the answer and nothing else. The failing case exists to show why that is not enough.
 - `--force-scripted` is for the lab's mechanism; make sure nobody leaves thinking a scripted suite evaluates a profile for a model.
+- A second `evals.py promote` is refused with "the results are for a different profile": the first promotion set `model_family`, which the profile's digest covers. Run the suite again, then promote.
 - The store file persists between runs; `store.py runs` will show everything the room has done. Clear it before and after.
 - Every run starts the MCP server as a subprocess; a venue that blocks that breaks the module.

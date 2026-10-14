@@ -9,7 +9,7 @@
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px">
 <h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The deployment gate refuses three ways</h2>
-<p style="margin: 0; font-size: 28px; color: #2E3540">Run it first with nothing promoted. Promote with <span style="font-family: 'IBM Plex Mono', monospace">--force-scripted</span>, run again, then try another model.</p>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Run it first with nothing promoted. Promote your own suite with <span style="font-family: 'IBM Plex Mono', monospace">--force-scripted</span> for the model you run, run again, then name another model.</p>
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" width="1680" height="560" viewBox="0 0 1680 560" role="img" aria-label="A deployment run passes three checks in order before it serves; each failing check refuses the run.">
 <defs>

@@ -28,6 +28,6 @@ The three things a successful promotion writes: ______________________, ________
 
 ## Checkpoint 4. The gate and the outcomes
 
-Gate refusals, in the order I hit them: 1. ______________________ 2. ______________________ 3. ______________________
+Gate refusals, in the order the gate checks them: 1. ______________________ 2. ______________________ 3. ______________________
 
 Outcome I changed: ______________________ from ______________ to ______________ because ______________________________
