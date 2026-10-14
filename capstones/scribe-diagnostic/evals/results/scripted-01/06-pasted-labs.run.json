@@ -32,7 +32,7 @@
         "profile": {
           "spec": "cwa/draft",
           "id": "c1-consult-messages",
-          "version": 1,
+          "version": 2,
           "route": "consult",
           "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c1-consult/v1",
@@ -565,7 +565,7 @@
       "trace": {
         "profile": {
           "id": "c1-consult-messages",
-          "version": 1
+          "version": 2
         },
         "budget": {
           "input": 2560,
@@ -594,7 +594,7 @@
           "route_policy_version": "c1-consult/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-messages/v1",
-          "snapshot_digest": "e85614a4550b004b4785f4792917166ef0659860e073fa83d331c1ab913ca35c"
+          "snapshot_digest": "eff2c7fa10b71f4c1aec76912d1130add05727714461dad39b30c29b4ee2a4b9"
         },
         "defaults_filled": []
       },
@@ -618,7 +618,7 @@
         "profile": {
           "spec": "cwa/draft",
           "id": "c1-consult-messages",
-          "version": 1,
+          "version": 2,
           "route": "consult",
           "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c1-consult/v1",
@@ -1151,7 +1151,7 @@
       "trace": {
         "profile": {
           "id": "c1-consult-messages",
-          "version": 1
+          "version": 2
         },
         "budget": {
           "input": 14784,
@@ -1282,7 +1282,7 @@
           "route_policy_version": "c1-consult/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-messages/v1",
-          "snapshot_digest": "9b40a4fb69e757fac6ee30302a8b9a065d588d5472b3c164d3f93068bbb3e4d1"
+          "snapshot_digest": "fd9149c96d25bd5df7fe0551a9ced90c0a9942b2520179b7171c9429ca14c1bb"
         },
         "defaults_filled": []
       },

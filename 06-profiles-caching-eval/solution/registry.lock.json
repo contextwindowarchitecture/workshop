@@ -3,7 +3,12 @@
     {
       "id": "cache-first",
       "version": 1,
-      "sha256": "9c33e0e16eb6c393e863bccb072dce54fa63da2e52a60e5ffd01ea9f2585b8bd"
+      "sha256": "db5e428e4e1d78cbe47185850156aad0b0c34421c6847ad26f1eac8c007e723c"
+    },
+    {
+      "id": "cache-first",
+      "version": 2,
+      "sha256": "6efc94ed27ba51c37354f81b98129244a7f6b743ebeddc77cfc9337aa2f84d4c"
     },
     {
       "id": "evidence-first",

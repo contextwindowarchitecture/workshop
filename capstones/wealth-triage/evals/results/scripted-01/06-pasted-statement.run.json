@@ -32,7 +32,7 @@
         "profile": {
           "spec": "cwa/draft",
           "id": "c3-portfolio-blocks",
-          "version": 1,
+          "version": 2,
           "route": "portfolio",
           "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c3-portfolio/v1",
@@ -618,7 +618,7 @@
       "trace": {
         "profile": {
           "id": "c3-portfolio-blocks",
-          "version": 1
+          "version": 2
         },
         "budget": {
           "input": 3496,
@@ -675,7 +675,7 @@
           "route_policy_version": "c3-portfolio/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-message-blocks/v1",
-          "snapshot_digest": "be8b93cc67515b449478aa7cbf2b29994d3b459dd250d1c965bf14cec6de9f08"
+          "snapshot_digest": "cd4bb6513b020c8fc1ee724b47e6cbff42a3946e29afb76fb90a0ae2ce136e50"
         },
         "defaults_filled": []
       },
@@ -699,7 +699,7 @@
         "profile": {
           "spec": "cwa/draft",
           "id": "c3-portfolio-blocks",
-          "version": 1,
+          "version": 2,
           "route": "portfolio",
           "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c3-portfolio/v1",
@@ -1285,7 +1285,7 @@
       "trace": {
         "profile": {
           "id": "c3-portfolio-blocks",
-          "version": 1
+          "version": 2
         },
         "budget": {
           "input": 14784,
@@ -1444,7 +1444,7 @@
           "route_policy_version": "c3-portfolio/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-message-blocks/v1",
-          "snapshot_digest": "fd5c4bab2cd4246eda4553128f42f84165126ead0401ba6ca533ef81b225a8b8"
+          "snapshot_digest": "660a61a4fd4ff33737889e4246bba740ed526aa89b3b206b943e9a8b9a97ca2a"
         },
         "defaults_filled": []
       },

@@ -1,7 +1,7 @@
 {
   "spec": "cwa/draft",
   "id": "c1-scribe-messages",
-  "version": 1,
+  "version": 2,
   "route": "scribe",
   "model_family": "Qwen3.6-35B-A3B",
   "route_policy_version": "c1-scribe/v1",

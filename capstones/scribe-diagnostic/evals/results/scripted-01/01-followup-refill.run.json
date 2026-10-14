@@ -32,7 +32,7 @@
         "profile": {
           "spec": "cwa/draft",
           "id": "c1-scribe-messages",
-          "version": 1,
+          "version": 2,
           "route": "scribe",
           "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c1-scribe/v1",
@@ -778,7 +778,7 @@
       "trace": {
         "profile": {
           "id": "c1-scribe-messages",
-          "version": 1
+          "version": 2
         },
         "budget": {
           "input": 2560,
@@ -985,7 +985,7 @@
           "route_policy_version": "c1-scribe/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-messages/v1",
-          "snapshot_digest": "7a9fa54ae869c1d7cd15ed97de2bd164e693cd972a1f620242747c1354c5792b"
+          "snapshot_digest": "04692c0247a23aafc29bcec296e2e49d61727ca1c0891e3134455f7585541494"
         },
         "defaults_filled": []
       },

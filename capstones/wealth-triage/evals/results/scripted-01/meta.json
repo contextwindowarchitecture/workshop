@@ -2,18 +2,18 @@
   "suite": "c3-wealth-triage/v1",
   "model": "scripted",
   "live": false,
-  "date": "2026-10-11",
+  "date": "2026-10-13",
   "impl": "solution",
   "profiles": {
     "portfolio": {
       "id": "c3-portfolio-blocks",
-      "version": 1,
-      "sha256": "9bc3228b5548027f8688c499281bd0d2359c62251bc6ab7acd447ca4a7c9ae9f"
+      "version": 2,
+      "sha256": "858547a68eb119597b7f468e67bcea66aa99e66ce1f7bc337e29590b41c90dc6"
     },
     "triage": {
       "id": "c3-triage-blocks",
-      "version": 1,
-      "sha256": "856408964412ef3482468f463021e7fd475d284c9250c07bcafebc5736fd9362"
+      "version": 2,
+      "sha256": "3dcc0cefc3fe0770406581c52c757d7c57dc2d5e773fa1d038f7405f732356e4"
     }
   },
   "cases": [

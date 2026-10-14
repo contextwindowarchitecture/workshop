@@ -26,7 +26,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from cwa.registry import lock, profile_digest
+from cwa.registry import RegistryError, lock, profile_digest
 
 import agent
 import impl
@@ -133,11 +133,22 @@ def promote(results: Path, model_family: str) -> list[str]:
         problems.append("the results come from scripted models; a profile is evaluated for a model only by a live run (R-19)")
     if problems:
         return problems
-    profile["model_family"] = model_family
-    profile["evaluation"] = {"status": "evaluated", "suite": graded["suite"], "date": graded["date"], "result": graded["result"],
-                             "artifact": str((results / "report.json").resolve().relative_to(HERE))}
-    PROFILE.write_text(json.dumps(profile, indent=2) + "\n", encoding="utf-8")
-    pinned = lock([profile], [json.loads(ROUTE.read_text(encoding="utf-8"))])
+    return write_promoted(profile, model_family, graded["suite"], graded["date"], graded["result"], results)
+
+
+def write_promoted(profile: dict[str, Any], model_family: str, suite: str, when: str, result: str, results: Path) -> list[str]:
+    """Write the profile as evaluated for model_family and pin it beside what the lock already holds. Naming a new model
+    family is a change of model target, so the promoted profile is the next version (R-20); the same family again
+    changes only the evaluation and keeps it."""
+    promoted = {**profile, "version": profile["version"] + (1 if profile["model_family"] != model_family else 0), "model_family": model_family,
+                "evaluation": {"status": "evaluated", "suite": suite, "date": when, "result": result,
+                               "artifact": str((results / "report.json").resolve().relative_to(HERE))}}
+    existing = json.loads(LOCK.read_text(encoding="utf-8")) if LOCK.exists() else None
+    try:
+        pinned = lock([promoted], [json.loads(ROUTE.read_text(encoding="utf-8"))], existing=existing)
+    except RegistryError as error:
+        return error.problems
+    PROFILE.write_text(json.dumps(promoted, indent=2) + "\n", encoding="utf-8")
     LOCK.write_text(json.dumps(pinned, indent=2) + "\n", encoding="utf-8")
     return []
 
@@ -177,15 +188,13 @@ def main(argv: list[str]) -> int:
         problems = [x for x in problems if "scripted" not in x]
         if not problems:
             graded = report(Path(args.results))
-            profile = json.loads(PROFILE.read_text(encoding="utf-8"))
-            profile["model_family"] = args.model_family
-            profile["evaluation"] = {"status": "evaluated", "suite": graded["suite"], "date": graded["date"], "result": graded["result"] + " (scripted models; not a live evaluation)", "artifact": str((Path(args.results) / "report.json").resolve().relative_to(HERE))}
-            PROFILE.write_text(json.dumps(profile, indent=2) + "\n", encoding="utf-8")
-            LOCK.write_text(json.dumps(lock([profile], [json.loads(ROUTE.read_text(encoding="utf-8"))]), indent=2) + "\n", encoding="utf-8")
+            problems = write_promoted(json.loads(PROFILE.read_text(encoding="utf-8")), args.model_family, graded["suite"], graded["date"],
+                                      graded["result"] + " (scripted models; not a live evaluation)", Path(args.results))
     if problems:
         print("not promoted:\n  " + "\n  ".join(problems))
         return 1
-    print(f"promoted: {PROFILE.relative_to(HERE)} is evaluated and {LOCK.relative_to(HERE)} pins it")
+    profile = json.loads(PROFILE.read_text(encoding="utf-8"))
+    print(f"promoted: {PROFILE.relative_to(HERE)} is {profile['id']} v{profile['version']}, evaluated for {profile['model_family']}, and {LOCK.relative_to(HERE)} pins it")
     return 0
 
 

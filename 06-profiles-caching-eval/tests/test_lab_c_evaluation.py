@@ -18,7 +18,9 @@ def test_exactly_one_profile_is_promoted_with_a_reproducible_artifact(which):
     assert chosen["model_family"], "a promoted profile names the model family it was evaluated for (R-19)"
     assert ev["suite"] == evaluate.SUITE and ev["date"] and ev["artifact"]
     artifact = json.loads((impl.HERE / ev["artifact"]).read_text(encoding="utf-8"))
-    assert artifact["profile"] == {"id": chosen["id"], "version": chosen["version"]}
+    assert artifact["profile"]["id"] == chosen["id"]
+    assert artifact["profile"]["version"] in (chosen["version"] - 1, chosen["version"]), \
+        "promotion for a new model family writes the next version of the profile the suite ran (R-20)"
     fresh = evaluate.run(chosen, False, None)["result"]
     stored = artifact["result"]
     assert {k: v for k, v in fresh.items() if k != "grounded_answers"} == {k: v for k, v in stored.items() if k != "grounded_answers"}, "the artifact must reproduce"

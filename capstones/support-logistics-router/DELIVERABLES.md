@@ -21,4 +21,4 @@ uv run evals.py run --impl skeleton --label team-a
 uv run evals.py promote evals/results/team-a --model-family <model> --force-scripted
 ```
 
-Definition of done: the gate is green against `skeleton/`, the suite report says every case passed, the three route profiles are evaluated with the report as artifact, and `policy/registry.lock.json` pins them. If a model is available, the live suite replaces the scripted one before promotion.
+Definition of done: the gate is green against `skeleton/`, the suite report says every case passed, the three route profiles are evaluated with the report as artifact, each at the next version because promotion names a model family (R-20), and `policy/registry.lock.json` pins them. If a model is available, the live suite replaces the scripted one before promotion.

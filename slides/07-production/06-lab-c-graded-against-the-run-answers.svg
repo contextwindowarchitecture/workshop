@@ -48,7 +48,7 @@
 <text x="562" y="492" font-size="18" fill="#11151B">2 · the results are scripted</text>
 <rect x="1080" y="444" width="600" height="150" fill="#2453C9"></rect>
 <text x="1102" y="480" font-size="16" fill="#FFFFFF">a success writes:</text>
-<text x="1102" y="512" font-size="15" fill="#FFFFFF">the profile’s model_family</text>
+<text x="1102" y="512" font-size="15" fill="#FFFFFF">the profile’s model_family, as its next version</text>
 <text x="1102" y="538" font-size="15" fill="#FFFFFF">its evaluation object, pointing at the report</text>
 <text x="1102" y="564" font-size="15" fill="#FFFFFF">the registry lock</text>
 <text x="0" y="566" font-size="15" fill="#4A5361">--force-scripted exists for the mechanism; it writes</text>

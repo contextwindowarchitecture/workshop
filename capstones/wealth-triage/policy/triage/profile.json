@@ -1,7 +1,7 @@
 {
   "spec": "cwa/draft",
   "id": "c3-triage-blocks",
-  "version": 1,
+  "version": 2,
   "route": "triage",
   "model_family": "Qwen3.6-35B-A3B",
   "route_policy_version": "c3-triage/v1",

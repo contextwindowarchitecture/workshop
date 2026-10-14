@@ -5,8 +5,9 @@
     uv run registry.py deploy cache-first   # what a deployment gets: an evaluated profile, or a refusal
 
 A profile's digest covers everything but its evaluation object, so changing its placement without a version bump
-changes it. Promotion changes it too, because it sets model_family, which the digest covers: lock after promoting. A route policy's digest covers the whole policy. The lock never
-rewrites an entry; a new version is a new entry. A deployment asks for a profile with deployment=True and gets only an
+changes it. Promotion sets model_family, which the digest covers, so it writes the next version of the profile (R-20):
+lock after promoting. A route policy's digest covers the whole policy. The lock never rewrites an entry; a new version
+is a new entry. A deployment asks for a profile with deployment=True and gets only an
 evaluated one.
 """
 

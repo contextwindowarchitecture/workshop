@@ -32,7 +32,7 @@
         "profile": {
           "spec": "cwa/draft",
           "id": "c1-consult-messages",
-          "version": 1,
+          "version": 2,
           "route": "consult",
           "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c1-consult/v1",
@@ -565,7 +565,7 @@
       "trace": {
         "profile": {
           "id": "c1-consult-messages",
-          "version": 1
+          "version": 2
         },
         "budget": {
           "input": 2560,
@@ -624,7 +624,7 @@
           "route_policy_version": "c1-consult/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-messages/v1",
-          "snapshot_digest": "4b316d7735746746ee1ea08841f0b2f02dc1cd987102064e689140f0daf84016"
+          "snapshot_digest": "0288c1a02047ff7b4e0fcd1a18bef9470e09882ae7e6591b9984c63c1f0eb5d1"
         },
         "defaults_filled": [],
         "recovery": {

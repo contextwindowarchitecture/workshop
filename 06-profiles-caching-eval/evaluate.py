@@ -178,10 +178,13 @@ def main(argv: list[str]) -> int:
     document = json.loads(file.read_text(encoding="utf-8"))
     for entry in document["profiles"]:
         if entry["id"] == profile["id"] and entry["version"] == profile["version"]:
+            if entry["model_family"] != args.model_family:
+                entry["version"] += 1  # a new model target is a new version; evaluation alone keeps it (R-20)
             entry["model_family"] = args.model_family
             entry["evaluation"] = {"status": "evaluated", "suite": SUITE, "date": record["date"], "result": summarize(record["result"]), "artifact": str(path.relative_to(HERE))}
+            promoted = entry
     file.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"{profile['id']} v{profile['version']} is evaluated for {args.model_family} on {SUITE}; now lock the registry: uv run registry.py lock")
+    print(f"{profile['id']} v{promoted['version']} is evaluated for {args.model_family} on {SUITE}; now lock the registry: uv run registry.py lock")
     if not record["live"]["ran"]:
         print("note: the live part did not run, so the artifact's grounded_answers is null; the structural result is what this promotion rests on")
     return 0

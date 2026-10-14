@@ -32,7 +32,7 @@
         "profile": {
           "spec": "cwa/draft",
           "id": "c3-triage-blocks",
-          "version": 1,
+          "version": 2,
           "route": "triage",
           "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c3-triage/v1",
@@ -606,7 +606,7 @@
       "trace": {
         "profile": {
           "id": "c3-triage-blocks",
-          "version": 1
+          "version": 2
         },
         "budget": {
           "input": 3496,
@@ -763,7 +763,7 @@
           "route_policy_version": "c3-triage/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-message-blocks/v1",
-          "snapshot_digest": "a00cf1df2903e60ced4ad312e93acc24de0c89070f2a6b579c519ead48973899"
+          "snapshot_digest": "15df7df90b3ba298b5f6f6dc53d5d417f58b4dce6cfc320cbd26d4f52370e6df"
         },
         "defaults_filled": []
       },

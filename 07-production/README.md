@@ -87,7 +87,7 @@ Refused: nothing has been promoted. Promote your own suite from Lab C with `--fo
 uv run evals.py promote evals/results/mine --model-family scripted:status-resolved --force-scripted
 ```
 
-Run the deployment again and it serves: the route policy and profile now come from the registry. Promote for any other model family and the same run is refused, because a deployment runs only the model its profile was evaluated for. To promote a second time, run the suite again first: promotion sets `model_family`, which changes the profile's digest, so the old results no longer match it. Then read [outcomes.py](outcomes.py) against the six refusal codes and the three recovery actions, and change one mapping you disagree with.
+Run the deployment again and it serves: the route policy and profile now come from the registry. Promote for any other model family and the same run is refused, because a deployment runs only the model its profile was evaluated for. To promote a second time, run the suite again first: promotion sets `model_family`, a new model target, so it writes the profile's next version (v1 becomes v2, and a second family v3), and the old results are for the version before (R-20). The lock keeps every version it pinned. Then read [outcomes.py](outcomes.py) against the six refusal codes and the three recovery actions, and change one mapping you disagree with.
 
 **Checkpoint 4.** The gate's three refusals in order, and the outcome you changed and why.
 

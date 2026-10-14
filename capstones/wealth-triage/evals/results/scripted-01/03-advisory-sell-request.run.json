@@ -32,7 +32,7 @@
         "profile": {
           "spec": "cwa/draft",
           "id": "c3-portfolio-blocks",
-          "version": 1,
+          "version": 2,
           "route": "portfolio",
           "model_family": "Qwen3.6-35B-A3B",
           "route_policy_version": "c3-portfolio/v1",
@@ -618,7 +618,7 @@
       "trace": {
         "profile": {
           "id": "c3-portfolio-blocks",
-          "version": 1
+          "version": 2
         },
         "budget": {
           "input": 3496,
@@ -778,7 +778,7 @@
           "route_policy_version": "c3-portfolio/v1",
           "tokenizer": "estimate-utf8/v1",
           "renderer": "cwa-message-blocks/v1",
-          "snapshot_digest": "a1a9c8686ffbab04ecadadcb148c1b1d277a2e25a4e8a627e59b4990de791b01"
+          "snapshot_digest": "0cc578b4ae24fa71c8728b0aeded9abf71eda016ecea2d4434befdda6564049f"
         },
         "defaults_filled": []
       },

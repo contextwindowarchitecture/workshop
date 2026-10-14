@@ -1,7 +1,7 @@
 {
   "profile": {
     "id": "cache-first",
-    "version": 1
+    "version": 2
   },
   "budget": {
     "input": 7168,
@@ -147,7 +147,7 @@
     "route_policy_version": "w6/v1",
     "tokenizer": "estimate-utf8/v1",
     "renderer": "cwa-message-blocks/v1",
-    "snapshot_digest": "4a0458842aafcf46b237ca875f2b08be8b1817d3b77e27592d86bca0e6d384a4"
+    "snapshot_digest": "0d168819bd2d88be400c842558d9ac52e600308bd415d1dea70eaca0b588e386"
   },
   "defaults_filled": []
 }

@@ -86,7 +86,7 @@
     {
       "spec": "cwa/draft",
       "id": "cache-first",
-      "version": 1,
+      "version": 2,
       "route": "account-help",
       "model_family": "gpt-oss:20b",
       "route_policy_version": "w6/v1",

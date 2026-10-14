@@ -2,18 +2,18 @@
   "suite": "c1-scribe-diagnostic/v1",
   "model": "scripted",
   "live": false,
-  "date": "2026-10-11",
+  "date": "2026-10-13",
   "impl": "solution",
   "profiles": {
     "scribe": {
       "id": "c1-scribe-messages",
-      "version": 1,
-      "sha256": "d50fd151809a4f2c12d2691528c2388c1e3ec634ab4a76d801f5a1efbfd3a52a"
+      "version": 2,
+      "sha256": "c92c8bbf481d84503f7aed9d962d0c9ddc819977279df7c58c4b41cc5937d225"
     },
     "consult": {
       "id": "c1-consult-messages",
-      "version": 1,
-      "sha256": "c8ef1757a8fb3ea21a08075fcb6cb8130d40bd896bf069be5c2624c5ccb99d04"
+      "version": 2,
+      "sha256": "41524d0ca55bc5a5cec727028c0872d3bc6d38e7cbfbdee822a257aa36f2d0e6"
     }
   },
   "cases": [

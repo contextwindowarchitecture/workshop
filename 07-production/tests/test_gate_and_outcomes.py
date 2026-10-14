@@ -35,6 +35,7 @@ def test_the_gate_refuses_without_a_lock_and_with_an_unevaluated_profile(tmp_pat
     (tmp_path / "policy" / "registry.lock.json").write_text(json.dumps(lock([profile], [policy])))
     with pytest.raises(RegistryError, match="unevaluated"):
         run.pinned("gpt-oss:20b")
+    profile["version"] += 1  # promotion names a model family: a new model target, a new version (R-20)
     profile["model_family"] = "gpt-oss:20b"
     profile["evaluation"] = {"status": "evaluated", "suite": "s", "date": "2026-10-01", "result": "5/5", "artifact": "a"}
     (tmp_path / "policy" / "profile.json").write_text(json.dumps(profile))

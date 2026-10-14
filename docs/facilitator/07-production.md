@@ -29,7 +29,7 @@ If an OTLP backend is available (Jaeger's all-in-one container is the quickest),
 
 - **Checkpoint 1.** Three snapshots. `obs:1` superseded by `obs:2` on turn 3. `no-supersede` changes one inference, `obs:1` from excluded to included; `history-tight` changes nothing because the stored runs had no history.
 - **Checkpoint 2.** The solution's keys: profile, route policy, snapshot digest, payload hash, input tokens, budget, refused, recovery, included, compressed, excluded with reasons, conflicts, defaults filled. The linking value is the snapshot digest.
-- **Checkpoint 3.** Any two cases that meet the test. The failing case cannot be promoted because a case fails and because the results are scripted. A successful promotion writes the profile's `model_family`, its evaluation object pointing at the report, and the registry lock.
+- **Checkpoint 3.** Any two cases that meet the test. The failing case cannot be promoted because a case fails and because the results are scripted. A successful promotion writes the profile's `model_family`, as its next version because a new model target is a new version (R-20); its evaluation object pointing at the report; and the registry lock, which keeps the versions it already pinned.
 - **Checkpoint 4.** No lock; unevaluated profile; wrong model. Any outcome change with a reason; the one most often changed is `evidence_required` with `retrieve_narrower`, which some teams prefer to send to the user as needs-info rather than retry silently.
 
 ## Stumbles
@@ -37,6 +37,6 @@ If an OTLP backend is available (Jaeger's all-in-one container is the quickest),
 - Participants put the question or the answer in a span "for context". The test catches the question; say why the answer is no better.
 - Participants grade by reading the answer and nothing else. The failing case exists to show why that is not enough.
 - `--force-scripted` is for the lab's mechanism; make sure nobody leaves thinking a scripted suite evaluates a profile for a model.
-- A second `evals.py promote` is refused with "the results are for a different profile": the first promotion set `model_family`, which the profile's digest covers. Run the suite again, then promote.
+- A second `evals.py promote` is refused with "the results are for a different profile": the first promotion wrote the profile's next version with `model_family` set, and the results name the version they ran. Run the suite again, then promote; a new family is the version after that, and the lock pins both.
 - The store file persists between runs; `store.py runs` will show everything the room has done. Clear it before and after.
 - Every run starts the MCP server as a subprocess; a venue that blocks that breaks the module.

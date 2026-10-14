@@ -22,7 +22,7 @@ def registry(which):
 def test_the_lock_loads_and_pins_every_profile_and_the_policy(which):
     reg, profiles = registry(which)
     pinned = json.loads(impl.path("registry.lock.json", which).read_text(encoding="utf-8"))
-    assert {(p["id"], p["version"]) for p in pinned["profiles"]} == {(p["id"], p["version"]) for p in profiles}
+    assert {(p["id"], p["version"]) for p in profiles} <= {(p["id"], p["version"]) for p in pinned["profiles"]}  # earlier versions stay pinned
     assert reg.route_policy("account-help", "w6/v1")["version"] == "w6/v1"
 
 

@@ -22,7 +22,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from cwa.registry import lock, profile_digest
+from cwa.registry import RegistryError, lock, profile_digest
 
 import app
 import common
@@ -137,14 +137,22 @@ def promote(results: Path, model_family: str, force_scripted: bool = False) -> l
             problems.append(f"the results are for another version of the {route} profile; run the suite again")
     if problems:
         return problems
-    for route, profile in profiles.items():
-        profile["model_family"] = model_family
-        profile["evaluation"] = {"status": "evaluated", "suite": graded["suite"], "date": graded["date"],
-                                 "result": graded["result"] + ("" if graded["live"] else " (scripted drafts; not a live evaluation)"),
-                                 "artifact": str((results / "report.json").resolve().relative_to(HERE))}
+    evaluation = {"status": "evaluated", "suite": graded["suite"], "date": graded["date"],
+                  "result": graded["result"] + ("" if graded["live"] else " (scripted drafts; not a live evaluation)"),
+                  "artifact": str((results / "report.json").resolve().relative_to(HERE))}
+    # A new model family is a new model target, so the promoted profile is the next version; the same family again
+    # changes only the evaluation and keeps it (R-20). The lock keeps every version it already pinned.
+    promoted = {route: {**profile, "version": profile["version"] + (1 if profile["model_family"] != model_family else 0),
+                        "model_family": model_family, "evaluation": evaluation} for route, profile in profiles.items()}
+    path = common.POLICY / "registry.lock.json"
+    existing = json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+    try:
+        pinned = lock(list(promoted.values()), [common.policy(r, "route-policy.json") for r in promoted], existing=existing)
+    except RegistryError as error:
+        return error.problems
+    for route, profile in promoted.items():
         (common.POLICY / route / "profile.json").write_text(json.dumps(profile, indent=2) + "\n", encoding="utf-8")
-    policies = [common.policy(r, "route-policy.json") for r in profiles]
-    (common.POLICY / "registry.lock.json").write_text(json.dumps(lock(list(profiles.values()), policies), indent=2) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(pinned, indent=2) + "\n", encoding="utf-8")
     return []
 
 
@@ -183,7 +191,8 @@ def main(argv: list[str]) -> int:
     if problems:
         print("not promoted:\n  " + "\n  ".join(problems))
         return 1
-    print("promoted: the three route profiles are evaluated and policy/registry.lock.json pins them")
+    versions = ", ".join(f"{p['id']} v{p['version']}" for p in (common.policy(r, "profile.json") for r in sorted(set(common.routes()["intents"].values()))))
+    print(f"promoted: the three route profiles are evaluated ({versions}) and policy/registry.lock.json pins them")
     return 0
 
 
