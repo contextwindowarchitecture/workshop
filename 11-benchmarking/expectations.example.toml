@@ -1,4 +1,4 @@
-# Two constructs from this repository's committed scenarios, written as the examples bench writes its expectations.toml.
+# Two constructs from this repository's committed scenarios, written as the examples gallery writes its expectations.toml.
 # A key names the scenario; the comment names the CWA decision the case exercises and the trace row that records it.
 # Phrases match anywhere in the answer, ignoring case. These are patterns, so each entry also says what it would miss.
 #

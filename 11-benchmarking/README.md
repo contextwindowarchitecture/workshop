@@ -7,19 +7,19 @@ CWA makes a claim that can be tested in two halves. The first half is about the 
 ## What you leave with
 
 - The invariants run over every snapshot this repository commits, which is the model-free half of any CWA benchmark.
-- A committed fourteen-model run of the examples bench read from its files: invariants first, then the measures that depend on the model, with the range across repeats beside the average.
+- A committed fourteen-model run of the examples gallery read from its files: invariants first, then the measures that depend on the model, with the range across repeats beside the average.
 - A committed Domain 2 run of the viability benchmark read from its files: eleven ways of building the same conversation's context and two uncapped controls, side by side, with the column that tells a payload failure from a model failure.
-- One construct of your own, written as an expectation the bench could grade.
+- One construct of your own, written as an expectation the gallery could grade.
 
 ## Part 1. Two families, three kinds of result (30 minutes)
 
 | Family | What it holds constant | What varies | Where |
 | --- | --- | --- | --- |
-| The examples bench | one application (Fernway), its committed scenarios, the assembler at its pin | fourteen models on OpenRouter, ten repeats | `examples/bench` |
+| The examples gallery | one application (Fernway), its committed scenarios, the assembler at its pin | fourteen models on OpenRouter, ten repeats | `examples/gallery` |
 | The viability benchmark, Domain 1 | the specification at its pin | four assemblers, treated as black boxes through the adapter protocol | `benchmark/domain1` |
 | The viability benchmark, Domain 2 | one model, its settings, the facts, the user's turns, the budget, the counter, the grader | the way the payload is built: eleven arms, from "concatenate everything" to the CWA pipeline, and two uncapped controls | `benchmark/domain2` |
 
-The bench separates three kinds of result, and the distinction carries to any benchmark of a context architecture:
+The gallery calls itself a showcase, not a benchmark: three to six cases per example is a smoke test, the checks are patterns, and it ranks no model. It still separates three kinds of result, and the distinction carries to any benchmark of a context architecture:
 
 | Kind | Holds for | A failure means |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ The bench separates three kinds of result, and the distinction carries to any be
 | Construct measures: grounding, conflict adherence, exclusion respect, resistance to injected text, allowed actions | one model at a time | how that model used the context it was given |
 | The application's own eval suite | one model, graded by the application's gate | what W7's gate would have said |
 
-[meaning.py](https://github.com/contextwindowarchitecture/examples/blob/main/bench/meaning.py) in the bench writes, for every page of numbers, what it says about CWA, and for every number, the one thing it is evidence of, or plainly that it is the model's or the host's doing. Read it before any table.
+[meaning.py](https://github.com/contextwindowarchitecture/examples/blob/main/gallery/meaning.py) in the gallery writes, for every page of numbers, what it says about CWA, and for every number, the one thing it is evidence of, or plainly that it is the model's or the host's doing. Read it before any table.
 
 **Checkpoint 1.** Which kind of result is a `payload_sent` failure, and what you would do about it. Which kind is a model citing an article it was not sent.
 
@@ -35,13 +35,13 @@ The bench separates three kinds of result, and the distinction carries to any be
 
 ```sh
 uv sync
-uv run invariants.py          # every committed snapshot in W1 to W7, W9, W10 and the capstone
+uv run invariants.py          # every committed snapshot in W1 to W7, W9, W10 and the capstones
 uv run pytest
 ```
 
 [invariants.py](invariants.py) walks the repository for every committed snapshot, wherever its module keeps it: a `snapshot.json` beside a trace, a run record with `inferences`, an eval recording with `attempts`. For each it assembles twice and compares (R-23), validates the trace against the published schema (R-21), and, where a trace was committed beside it, compares the fresh trace with the recorded one. A snapshot committed with a `rejected.json` is expected to be rejected with the recorded problems: W1's two-batches exercise is one, and a rejection is an invariant too (R-5).
 
-One hundred and eleven snapshots at the time of writing, none failing. Break one on purpose: edit a committed trace in W2's scenarios and run again, then `git checkout` it. Then read the per-module table and notice which modules commit traces beside their snapshots and which commit only the snapshot: the `recorded` column counts only the first kind.
+One hundred and sixty-four snapshots at the time of writing, none failing. Break one on purpose: edit a committed trace in W2's scenarios and run again, then `git checkout` it. Then read the per-module table and notice which modules commit traces beside their snapshots and which commit only the snapshot: the `recorded` column counts only the first kind.
 
 **Checkpoint 2.** The snapshot count, the one expected rejection, and the module whose snapshots have no recorded trace to compare with.
 
@@ -49,18 +49,18 @@ One hundred and eleven snapshots at the time of writing, none failing. Break one
 
 ```sh
 export CWA_SIBLINGS_ROOT=..               # wherever the siblings are
-uv run bench_read.py                      # the newest graded run under examples/bench/results
+uv run bench_read.py                      # the newest graded run under examples/gallery/results
 uv run bench_read.py --measure grounding  # one measure by model, with the lowest and highest repeat
 uv run bench_read.py --measure evals
 ```
 
 The committed run of 2026-10-05 has fourteen models, 2,380 jobs, and spent $9.44 of a $30 cap. Its invariants pass 5,460 of 5,460: the same context went to every model in 01 to 03, every request carried the rendered payload, every snapshot replayed. That line comes first because nothing after it means anything if it does not hold.
 
-Then the measures. Read the table across before down. `conflict`, `excluded` and `refusal` are at or near their ceiling for every model: the cases show the construct at work and are too gentle to rank capable models, which the bench's README says of itself. `claims` (does the agent say it enabled the webhook exactly when it did) and `evals` (05's own gate) are where the models spread. `--measure grounding` shows the second thing a single number hides: the average and the range across ten repeats. Several models average 0.996 with a worst repeat of 0.958; a suite run once reports whichever repeat it got.
+Then the measures. Read the table across before down. `conflict`, `excluded` and `refusal` are at or near their ceiling for every model: the cases show the construct at work and are too gentle to rank capable models, which the gallery's README says of itself. `claims` (does the agent say it enabled the webhook exactly when it did) and `evals` (05's own gate) are where the models spread. `--measure grounding` shows the second thing a single number hides: the average and the range across ten repeats. Several models average 0.996 with a worst repeat of 0.958; a suite run once reports whichever repeat it got.
 
-What is CWA's in this table and what is not. The invariants are CWA's. That 01 to 03 gave every model the same snapshot is CWA's (R-23). Grounding can be measured at all because every article has an id and user content is marked, never elevated (R-10, R-13): that is CWA's. Which model cites better, reasons longer or costs more is the model's and the host's, and the bench's tokens and cost pages say so number by number: the assembler's count is right by its own tokenizer, and a model's own count can be several times it, which is what `margin_percent` (R-16) exists to cover and what a run like this measures after the fact.
+What is CWA's in this table and what is not. The invariants are CWA's. That 01 to 03 gave every model the same snapshot is CWA's (R-23). Grounding can be measured at all because every article has an id and user content is marked, never elevated (R-10, R-13): that is CWA's. Which model cites better, reasons longer or costs more is the model's and the host's, and the gallery's tokens and cost pages say so number by number: the assembler's count is right by its own tokenizer, and a model's own count can be several times it, which is what `margin_percent` (R-16) exists to cover and what a run like this measures after the fact.
 
-With the examples' environments synced, two more commands in `examples/bench` are worth running: `uv run grade.py results/<run-id>` regrades a run from its files, with no model, after the expectations change; `uv run serve.py` serves the viewer that lays the same numbers out by construct. Neither sends anything.
+With the examples' environments synced, two more commands in `examples/gallery` are worth running: `uv run grade.py results/<run-id>` regrades a run from its files, with no model, after the expectations change; `uv run serve.py` serves the viewer, the showcase, which sets two models side by side and keeps the same numbers by construct under the hood. Neither sends anything.
 
 **Checkpoint 3.** The invariants line. The two measures where the models spread. One model's grounding average and its worst repeat, and what a gate that runs its suite once would have seen.
 
@@ -102,20 +102,20 @@ The committed run is a pilot-size replay (`size = pilot`, every call a cache hit
 
 Read the two tables together and the finding is the same in both. The gain comes from the state the application writes from what the user said, which CWA gives a protected place every budget keeps. Model-written state is level with pinned truncation: its interval straddles zero. History alone in CWA's format gains nothing. The assembler was exact throughout: 220,608 assemblies on four assemblers, every one equal to the prediction and clean under Domain 1's audit, which is the invariant half holding while the model half is measured.
 
-Domain 1 is the invariant half at scale, with no model anywhere: 65 cases and 25 rejections on all four assemblers, 4,900 of 4,900 decisions identical across fifteen environment cells and seven platforms, 10,000 fuzzed snapshots agreeing, and a trace auditor that never assembles yet catches 1,616 of 1,626 deliberately broken traces. Its five findings became conformance cases, which is W10's subject. Running either domain yourself means `uv sync` at the benchmark root and `uv run cwabench setup` to build the four adapters, which needs the Go, Rust and Node toolchains; the committed runs are why this module does not.
+Domain 1 is the invariant half at scale, with no model anywhere: 65 cases and 25 rejections on all four assemblers, 4,900 of 4,900 decisions identical on the host, across fourteen environment cells and on seven platform variants, 10,000 fuzzed snapshots agreeing, and a trace auditor that never assembles yet catches 1,616 of 1,626 deliberately broken traces. The five defects it found during development were fixed upstream, and the specification adopted four new conformance cases from them and changed a fifth, which is W10's subject. Running either domain yourself means `uv sync` at the benchmark root and `uv run cwabench setup` to build the four adapters, which needs the Go, Rust and Node toolchains; the committed runs are why this module does not.
 
 **Checkpoint 4.** The fair baseline and why. The gap between `cwa-state` and `truncate-pinned` in the pilot and in the published run. Whether `cwa-state-x` beats the baseline, and how you know. What `truncate-pinned`'s fact-in-payload share says about where its errors come from.
 
 ## Part 5. Lab D: one construct of your own (45 minutes)
 
-A construct is a CWA decision a case exercises, and an expectation is how a grader with no model tells whether the model respected it. The bench's [expectations.toml](https://github.com/contextwindowarchitecture/examples/blob/main/bench/expectations.toml) writes each as a table keyed by case, with a comment naming the decision: `answer.mentions_any`, `grounding.must_cite`, `conflict.winner` and `conflict.loser`, `excluded.mentions_none`, `untrusted.must_not_attempt`, `actions.must_call` and `must_not_call`.
+A construct is a CWA decision a case exercises, and an expectation is how a grader with no model tells whether the model respected it. The gallery's [expectations.toml](https://github.com/contextwindowarchitecture/examples/blob/main/gallery/expectations.toml) writes each as a table keyed by case, with a comment naming the decision: `answer.mentions_any`, `grounding.must_cite`, `conflict.winner` and `conflict.loser`, `excluded.mentions_none`, `untrusted.must_not_attempt`, `actions.must_call` and `must_not_call`.
 
-[expectations.example.toml](expectations.example.toml) writes two for scenarios this repository commits, in the bench's format. Write a third for a scenario from your own module, or from the capstone you built. The questions to answer before the phrases:
+[expectations.example.toml](expectations.example.toml) writes two for scenarios this repository commits, in the gallery's format. Write a third for a scenario from your own module, or from the capstone you built. The questions to answer before the phrases:
 
 1. Which decision in the trace does the case exercise? Name the row: a `below_threshold` exclusion, a `conflict_lost`, a `superseded_by`, a compressed variant.
 2. What would an answer look like if the model ignored that decision? That is the phrase for `mentions_none` or `loser`.
 3. What would it look like if the model respected it? That is `must_cite`, `winner` or `mentions_any`.
-4. What phrasing would the pattern miss? Write it down beside the expectation; the bench's checks are patterns and say so.
+4. What phrasing would the pattern miss? Write it down beside the expectation; the gallery's checks are patterns and say so.
 
 **Checkpoint 5.** Your construct, its trace row, its expectation, and the phrasing it would miss.
 
@@ -123,9 +123,9 @@ A construct is a CWA decision a case exercises, and an expectation is how a grad
 
 ```
 invariants.py              every committed snapshot in the repository: replay, schema, recorded trace, expected rejection
-bench_read.py              a committed examples-bench run from summary.json: invariants, measures by model, range across repeats
+bench_read.py              a committed examples-gallery run from summary.json: invariants, measures by model, range across repeats
 domain2_read.py            a committed Domain 2 run from suites/S2/summary.json: arms, intervals, fact in payload
-expectations.example.toml  two constructs written as expectations the bench could grade
+expectations.example.toml  two constructs written as expectations the gallery could grade
 tests/                     the invariants over the repository, and the readers' arithmetic
 ```
 

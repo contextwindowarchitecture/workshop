@@ -3,11 +3,11 @@
     uv run invariants.py            # every workshop's committed snapshots: replays, schema, recorded hashes
     uv run invariants.py --json     # the same as a document
 
-The examples bench separates two kinds of result. Invariants hold for every model, and a failure is a bug in the
+The examples gallery separates two kinds of result. Invariants hold for every model, and a failure is a bug in the
 application or the assembler: the request sent equals the payload, a refusal sends nothing, every snapshot replays to
 the same bytes, and the same question gives every model the same snapshot. Construct measures say how a model used the
 context it was given, and vary by model. This script runs the invariants a repository can check without a model over
-the snapshots W1 to W7, W9 and the capstone committed: a replay of each (R-23), its trace against the published schema
+the snapshots W1 to W7, W9, W10 and the capstones committed: a replay of each (R-23), its trace against the published schema
 (R-21), and, where a trace or payload was committed beside it, the recorded hash against the fresh one.
 """
 

@@ -22,7 +22,7 @@ a{color:#2453C9}a:hover{color:#1A3D96}
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px">
 <h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">The model-free half, over this repository</h2>
-<p style="margin: 0; font-size: 28px; color: #2E3540">Every committed snapshot in W1 to W7, W9, W10 and the capstone, wherever its module keeps it.</p>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Every committed snapshot in W1 to W7, W9, W10 and the capstones, wherever its module keeps it.</p>
 </div>
 <svg width="1680" height="640" viewBox="0 0 1680 640" role="img" aria-label="invariants.py finds snapshots in three shapes, then for each assembles twice and compares, validates the trace against the schema, compares with a recorded trace where one was committed, and checks an expected rejection. Below, the exercise and checkpoint 2.">
 <defs>
@@ -71,7 +71,7 @@ class Component extends DCLogic {
     const s = this.props.showAnswers ?? false;
     return {
       ink: s ? '#11151B' : '#9AA3B0',
-      c1: s ? '111 at the time of writing, 0 failing' : '?',
+      c1: s ? '164 at the time of writing, 0 failing' : '?',
       c2: s ? 'W1’s 12-two-batches' : '?',
       c3: s ? 'W10: expected.trace.json is not read, so 0/0' : '?'
     };

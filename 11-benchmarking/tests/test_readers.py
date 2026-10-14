@@ -23,10 +23,10 @@ def test_by_model_sums_measures_over_jobs():
     assert bench_read.repeats(summary, "answer") == {"m": [0.5, 1.0]}
 
 
-@pytest.mark.skipif(siblings.sibling("examples") is None or not (siblings.sibling("examples") / "bench" / "results").exists(),
-                    reason="the examples sibling with a graded bench run is not checked out")
+@pytest.mark.skipif(siblings.sibling("examples") is None or not (siblings.sibling("examples") / "gallery" / "results").exists(),
+                    reason="the examples sibling with a graded gallery run is not checked out")
 def test_committed_bench_run_holds_every_invariant():
-    results = siblings.sibling("examples") / "bench" / "results"
+    results = siblings.sibling("examples") / "gallery" / "results"
     summary = bench_read.load(bench_read.runs(results)[-1])
     table = bench_read.by_model(summary)
     assert all(row["invariant"][0] == row["invariant"][1] for row in table.values())

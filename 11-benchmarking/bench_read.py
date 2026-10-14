@@ -1,6 +1,6 @@
-"""Read a committed examples-bench run from its files, with no model: invariants first, then the construct measures.
+"""Read a committed examples-gallery run from its files, with no model: invariants first, then the construct measures.
 
-    uv run bench_read.py                      # the newest run under the examples sibling's bench/results
+    uv run bench_read.py                      # the newest run under the examples sibling's gallery/results
     uv run bench_read.py --run <run-id>       # a particular run
     uv run bench_read.py --measure grounding  # one measure by model, with the range across repeats
 
@@ -58,7 +58,7 @@ def main(argv: list[str]) -> int:
     p.add_argument("--run")
     p.add_argument("--measure")
     args = p.parse_args(argv)
-    results = require("examples") / "bench" / "results"
+    results = require("examples") / "gallery" / "results"
     available = runs(results)
     if not available:
         print(f"no graded runs under {results}")

@@ -297,20 +297,20 @@ The word "adapter" names four different things around an assembler. Each is one 
 - **Format**: half day.
 - **Audience**: evaluation engineers, technical leaders deciding adoption.
 - **Objectives**
-  - Teach the two benchmark families: the examples bench (one application, fourteen models, constructs mapped to requirements, invariants that must never fail) and the viability benchmark (Domain 1 black-box assembler determinism and fuzzing, Domain 2 long-horizon conversation arms).
+  - Teach the two benchmark families: the examples gallery (one application, fourteen models, constructs mapped to requirements, invariants that must never fail) and the viability benchmark (Domain 1 black-box assembler determinism and fuzzing, Domain 2 long-horizon conversation arms).
   - Teach the interpretation layer: which numbers are evidence about CWA, which are the model's doing, which are the host's.
   - Teach the headline finding and its limits: application-written state scores 0.97 to 0.99 against 0.82 for pinned truncation, model-written state is about level, history format alone gains nothing.
   - Teach cost planning before any run, and tokenizer margin measurement across models.
 - **Goals**
   - Replay a committed Domain 2 run with no GPU and read the arms.
-  - Regrade a committed examples-bench run from files with no model and read the construct table.
+  - Regrade a committed examples-gallery run from files with no model and read the construct table.
   - Design one new arm or construct and write its expectation.
 - **Outcomes**
   - Can run, read and critique a CWA benchmark and tell which claims it supports.
 - **Calls to action**
   - Add one construct from your own domain to the expectations file and run it on one model.
 - **Covers**: R-13, R-16, R-19, R-23 as measured properties.
-- **Reuses**: `examples/bench`, `cwa-extended/benchmark` and `benchmark-ui`.
+- **Reuses**: `examples/gallery`, `cwa-extended/benchmark` and `benchmark-ui`.
 
 ### Capstones: build a conformant application in a domain
 

@@ -28,6 +28,10 @@ def main(argv: list[str]) -> int:
     p.add_argument("--run")
     args = p.parse_args(argv)
     results = require("benchmark") / "domain2" / "results" / "d2"
+    if not (results / "index.json").exists():
+        print(f"no Domain 2 run under {results}: the benchmark commits its model cache, not its results.\n"
+              "Replay one at the benchmark root (uv run cwabench --domain 2 run), or read the published table in its docs/domain2.md.")
+        return 1
     index = json.loads((results / "index.json").read_text(encoding="utf-8"))
     run_id = args.run or index["latest"]
     run = results / run_id
@@ -35,6 +39,9 @@ def main(argv: list[str]) -> int:
     s2 = json.loads((run / "suites" / "S2" / "summary.json").read_text(encoding="utf-8"))
     config = (run / "config.toml").read_text(encoding="utf-8") if (run / "config.toml").exists() else ""
     size = next((line.split("=")[1].split("#")[0].strip().strip('"') for line in config.splitlines() if line.strip().startswith("size")), "?")
+    command = json.loads((run / "manifest.json").read_text(encoding="utf-8")).get("command", []) if (run / "manifest.json").exists() else []
+    if "--size" in command[:-1]:
+        size = command[command.index("--size") + 1]  # the command line overrides config.toml's default
     model = s2.get("model", {})
     print(f"run {run_id}: {top['status']}; size {size}; model {model.get('model')} in {model.get('mode')} mode, {model.get('cache_hits', 0)} cache hits of {model.get('calls', 0)} calls")
     print("S2 scripted conversations, every arm on the same probes. Aptitude is the share of probes answered right.\n")
