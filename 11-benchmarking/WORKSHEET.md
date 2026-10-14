@@ -21,7 +21,7 @@ Name or handle: ______________________  Date: ____________
 ## Checkpoint 4. Eleven arms
 
 - The fair baseline is ______________________ because ______________________________________________
-- `cwa-state` minus `truncate-pinned` at 8,192: pilot ______  published ______
+- `cwa-state` minus `truncate-pinned`: at 8,192 ______  at 16,384 ______
 - `cwa-state-x` beats the baseline: yes / no / cannot say, because its interval ______________________
 - `truncate-pinned` had the fact in the payload ______% of the time, so the rest of its errors came from ______________________
 

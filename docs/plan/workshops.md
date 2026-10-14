@@ -299,10 +299,10 @@ The word "adapter" names four different things around an assembler. Each is one 
 - **Objectives**
   - Teach the two benchmark families: the examples gallery (one application, fourteen models, constructs mapped to requirements, invariants that must never fail) and the viability benchmark (Domain 1 black-box assembler determinism and fuzzing, Domain 2 long-horizon conversation arms).
   - Teach the interpretation layer: which numbers are evidence about CWA, which are the model's doing, which are the host's.
-  - Teach the headline finding and its limits: application-written state scores 0.97 to 0.99 against 0.82 for pinned truncation, model-written state is about level, history format alone gains nothing.
+  - Teach the headline finding and its limits: application-written state scores 0.97 to 0.99 against 0.82 for pinned truncation, model-written state is about level, history format alone is slightly worse.
   - Teach cost planning before any run, and tokenizer margin measurement across models.
 - **Goals**
-  - Replay a committed Domain 2 run with no GPU and read the arms.
+  - Read the recorded Domain 2 run, vendored here, with no GPU, and read the arms.
   - Regrade a committed examples-gallery run from files with no model and read the construct table.
   - Design one new arm or construct and write its expectation.
 - **Outcomes**

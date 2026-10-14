@@ -52,8 +52,8 @@
 </g>
 <g>
 <rect x="1278" y="424" width="402" height="196" fill="#FFFFFF" stroke="#2453C9" stroke-width="2"></rect>
-<text x="1300" y="474" font-size="26" font-weight="600" fill="#2453C9">+0.009</text>
-<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="1300" y="510">model-written state against</text><text x="1300" y="532">pinned truncation, [−0.025, +0.040]</text></g>
+<text x="1300" y="474" font-size="26" font-weight="600" fill="#2453C9">−0.002</text>
+<g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#2E3540"><text x="1300" y="510">model-written state against</text><text x="1300" y="532">pinned truncation, [−0.033, +0.028]</text></g>
 <text x="1300" y="596" font-size="15" font-weight="600" fill="#2453C9">model</text>
 </g>
 </g>

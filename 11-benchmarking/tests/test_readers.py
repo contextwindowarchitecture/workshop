@@ -30,3 +30,14 @@ def test_committed_bench_run_holds_every_invariant():
     summary = bench_read.load(bench_read.runs(results)[-1])
     table = bench_read.by_model(summary)
     assert all(row["invariant"][0] == row["invariant"][1] for row in table.values())
+
+
+def test_the_vendored_domain2_run_reads_as_published():
+    import domain2_read
+    run_id, s2, size = domain2_read.load_vendored()
+    assert (run_id, s2["status"], size) == ("20261012T052348Z-4a0ea5d", "pass", "recorded")
+    at = {row["arm"]: row for row in s2["by_arm"] if str(row.get("tier")) == "8192"}
+    assert round(at["truncate-pinned"]["aptitude"], 3) == 0.823
+    assert round(at["cwa-state"]["paired"]["difference"], 3) == 0.147
+    straddles = at["cwa-state-x"]["paired"]["interval"]
+    assert straddles["low"] < 0 < straddles["high"], "model-written state is level with pinned truncation"

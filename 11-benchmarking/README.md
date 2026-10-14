@@ -1,6 +1,6 @@
 # W11. Benchmarking CWA: does it help, and what does the number mean
 
-Half a day. For evaluation engineers and the leads deciding whether to adopt. Model-free throughout: every number here is read from runs the sibling repositories committed, and the one thing this module computes itself needs no model either. Lab A runs here alone; Labs B and C read the `examples` and `benchmark` siblings ([docs/setup.md](../docs/setup.md), `CWA_SIBLINGS_ROOT`, and `CWA_SIBLING_BENCHMARK` when the benchmark is checked out elsewhere).
+Half a day. For evaluation engineers and the leads deciding whether to adopt. Model-free throughout: every number here is read from committed runs, and the one thing this module computes itself needs no model either. Labs A and C run here alone; Lab C reads the benchmark's recorded Domain 2 run, vendored under [data/domain2/](data/domain2/) because the benchmark commits its model cache and not its results. Lab B reads the `examples` sibling ([docs/setup.md](../docs/setup.md), `CWA_SIBLINGS_ROOT`).
 
 CWA makes a claim that can be tested in two halves. The first half is about the assembler and needs no model: the same snapshot gives the same bytes (R-23), the request sent is the payload (R-5), a refusal sends nothing (R-17). The second half is about what a model does with context assembled that way, and every number in it is a statistical estimate about one model on one task. The discipline this module teaches is to keep the halves apart, and to say of every number which half it belongs to.
 
@@ -8,7 +8,7 @@ CWA makes a claim that can be tested in two halves. The first half is about the 
 
 - The invariants run over every snapshot this repository commits, which is the model-free half of any CWA benchmark.
 - A committed fourteen-model run of the examples gallery read from its files: invariants first, then the measures that depend on the model, with the range across repeats beside the average.
-- A committed Domain 2 run of the viability benchmark read from its files: eleven ways of building the same conversation's context and two uncapped controls, side by side, with the column that tells a payload failure from a model failure.
+- The recorded Domain 2 run of the viability benchmark, vendored here and read from its files: eleven ways of building the same conversation's context and two uncapped controls, side by side, with the column that tells a payload failure from a model failure.
 - One construct of your own, written as an expectation the gallery could grade.
 
 ## Part 1. Two families, three kinds of result (30 minutes)
@@ -67,8 +67,7 @@ With the examples' environments synced, two more commands in `examples/gallery` 
 ## Part 4. Lab C: eleven ways to build the same context (60 minutes)
 
 ```sh
-export CWA_SIBLING_BENCHMARK=../cwa-extended/benchmark   # when the benchmark is not under the root
-uv run domain2_read.py                                   # the latest committed Domain 2 run, S2 by arm
+uv run domain2_read.py            # the recorded Domain 2 run of 2026-10-12, S2 by arm, vendored here
 ```
 
 Domain 2 asks one question: over a long conversation, does a model given CWA-assembled context keep doing the task where a model given conventionally assembled context degrades, with everything else held equal? The model, its settings, the facts, the user's turns, the budget, the token counter and the grader are the same in every arm. Only the way the payload is built changes:
@@ -86,25 +85,25 @@ Domain 2 asks one question: over a long conversation, does a model given CWA-ass
 | `cwa-memory`, `cwa-pipeline` | `cwa-state` with recent turns as history and older facts as memory; the second adds supersession and deduplication |
 | `cwa-format` | `window`'s exact selection, rendered as CWA renders it: the format control |
 
-The reader prints, for each arm and budget, the share of probes answered right, the 95% interval from a bootstrap over conversations, and the share of probes whose needed fact was in the payload at all. The last column is the one to learn: a wrong answer with the fact absent is the payload's failure, and with the fact present it is the model's.
+The reader prints, for each arm and budget, the share of probes answered right, the 95% interval from a bootstrap over conversations, the paired difference from `truncate-pinned` on the same probes with its interval, and the share of probes whose needed fact was in the payload at all. The last column is the one to learn: a wrong answer with the fact absent is the payload's failure, and with the fact present it is the model's.
 
-The committed run is a pilot-size replay (`size = pilot`, every call a cache hit, so no model ran), and its intervals are wide. The published result, from the recorded sizes at 8,192 tokens, is in the benchmark's [docs/domain2.md](https://github.com/contextwindowarchitecture/benchmark/blob/main/docs/domain2.md):
+The run is the one the benchmark's [docs/domain2.md](https://github.com/contextwindowarchitecture/benchmark/blob/main/docs/domain2.md) reports: recorded size, 3,888 probes an arm, three samples at temperature 0 on one model served by vLLM. At 8,192 tokens it reads:
 
 | Arm | Aptitude | vs `truncate-pinned` | Fact in payload |
 | --- | --- | --- | --- |
-| `concat` | 0.633 | −0.190 | 69% |
-| `truncate-pinned` | 0.824 | | 90% |
-| `summary` | 0.855 | +0.032 | 93% |
-| `cwa-history` | 0.799 | −0.025 | 86% |
-| `cwa-state-x` | 0.833 | +0.009 [−0.025, +0.040] | 94% |
-| `cwa-state` | 0.972 | +0.148 | 100% |
+| `concat` | 0.631 | −0.192 | 69% |
+| `truncate-pinned` | 0.823 | | 90% |
+| `summary` | 0.862 | +0.039 | 93% |
+| `cwa-history` | 0.797 | −0.026 [−0.045, −0.007] | 86% |
+| `cwa-state-x` | 0.821 | −0.002 [−0.033, +0.028] | 95% |
+| `cwa-state` | 0.970 | +0.147 | 100% |
 | `cwa-memory`, `cwa-pipeline` | 0.989 | +0.166 | 100% |
 
-Read the two tables together and the finding is the same in both. The gain comes from the state the application writes from what the user said, which CWA gives a protected place every budget keeps. Model-written state is level with pinned truncation: its interval straddles zero. History alone in CWA's format gains nothing. The assembler was exact throughout: 220,608 assemblies on four assemblers, every one equal to the prediction and clean under Domain 1's audit, which is the invariant half holding while the model half is measured.
+The gain comes from the state the application writes from what the user said, which CWA gives a protected place every budget keeps. Model-written state is level with pinned truncation: its interval straddles zero. History alone in CWA's format is slightly worse than pinned truncation, because CWA's rendering costs tokens and fewer turns fit. Read the 16,384 rows too: once the budget holds the whole conversation, truncation sends everything and the gap narrows, and `cwa-state-x` falls behind. The assembler was exact throughout: 220,608 assemblies on four assemblers, every one equal to the prediction and clean under Domain 1's audit, which is the invariant half holding while the model half is measured.
 
-Domain 1 is the invariant half at scale, with no model anywhere: 65 cases and 25 rejections on all four assemblers, 4,900 of 4,900 decisions identical on the host, across fourteen environment cells and on seven platform variants, 10,000 fuzzed snapshots agreeing, and a trace auditor that never assembles yet catches 1,616 of 1,626 deliberately broken traces. The five defects it found during development were fixed upstream, and the specification adopted four new conformance cases from them and changed a fifth, which is W10's subject. Running either domain yourself means `uv sync` at the benchmark root and `uv run cwabench setup` to build the four adapters, which needs the Go, Rust and Node toolchains; the committed runs are why this module does not.
+Domain 1 is the invariant half at scale, with no model anywhere: 65 cases and 25 rejections on all four assemblers, 4,900 of 4,900 decisions identical on the host, across fourteen environment cells and on seven platform variants, 10,000 fuzzed snapshots agreeing, and a trace auditor that never assembles yet catches 1,616 of 1,626 deliberately broken traces. The five defects it found during development were fixed upstream, and the specification adopted four new conformance cases from them and changed a fifth, which is W10's subject. Running either domain yourself means `uv sync` at the benchmark root and `uv run cwabench setup` to build the four adapters, which needs the Go, Rust and Node toolchains; the committed and vendored runs are why this module does not.
 
-**Checkpoint 4.** The fair baseline and why. The gap between `cwa-state` and `truncate-pinned` in the pilot and in the published run. Whether `cwa-state-x` beats the baseline, and how you know. What `truncate-pinned`'s fact-in-payload share says about where its errors come from.
+**Checkpoint 4.** The fair baseline and why. The gap between `cwa-state` and `truncate-pinned` at 8,192 tokens and at 16,384. Whether `cwa-state-x` beats the baseline, and how you know. What `truncate-pinned`'s fact-in-payload share says about where its errors come from.
 
 ## Part 5. Lab D: one construct of your own (45 minutes)
 
@@ -124,7 +123,8 @@ A construct is a CWA decision a case exercises, and an expectation is how a grad
 ```
 invariants.py              every committed snapshot in the repository: replay, schema, recorded trace, expected rejection
 bench_read.py              a committed examples-gallery run from summary.json: invariants, measures by model, range across repeats
-domain2_read.py            a committed Domain 2 run from suites/S2/summary.json: arms, intervals, fact in payload
+domain2_read.py            the vendored Domain 2 run, or one under the benchmark sibling: arms, intervals, paired differences, fact in payload
+data/domain2/              the recorded Domain 2 run's S2 summary and manifest, vendored from the benchmark
 expectations.example.toml  two constructs written as expectations the gallery could grade
 tests/                     the invariants over the repository, and the readers' arithmetic
 ```

@@ -1,0 +1,3989 @@
+{
+  "$schema": "cwa-bench-d2/suite-summary/v1",
+  "run_id": "20261012T052348Z-4a0ea5d",
+  "suite": "S2",
+  "title": "Scripted conversations",
+  "status": "pass",
+  "started_at": "2026-10-12T07:06:37.007Z",
+  "finished_at": "2026-10-12T07:45:39.041Z",
+  "requirements": [],
+  "corpora": [
+    {
+      "id": "vt",
+      "count": 60
+    },
+    {
+      "id": "fr",
+      "count": 60
+    },
+    {
+      "id": "cc",
+      "count": 60
+    },
+    {
+      "id": "ip",
+      "count": 63
+    }
+  ],
+  "adapters": [],
+  "metrics": [
+    {
+      "id": "s2.call_errors",
+      "label": "Model calls that failed or missed the cache",
+      "suite": "S2",
+      "arm": null,
+      "family": null,
+      "tier": null,
+      "unit": "count",
+      "value": 0,
+      "numerator": null,
+      "denominator": null,
+      "target": 0,
+      "status": "pass",
+      "description": ""
+    },
+    {
+      "id": "s2.payload_problems",
+      "label": "CWA and baseline payloads unequal to S1's",
+      "suite": "S2",
+      "arm": null,
+      "family": null,
+      "tier": null,
+      "unit": "count",
+      "value": 0,
+      "numerator": null,
+      "denominator": null,
+      "target": 0,
+      "status": "pass",
+      "description": ""
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "control-full",
+      "family": null,
+      "tier": "control",
+      "unit": "rate",
+      "value": 0.9951131687242798,
+      "numerator": 3869,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.988397,
+        "high": 0.999754,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "control-full",
+      "family": null,
+      "tier": "control",
+      "unit": "rate",
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "control-full",
+      "family": null,
+      "tier": "control",
+      "unit": "rate",
+      "value": 0.6736111111111112,
+      "numerator": 679,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "control-concat",
+      "family": null,
+      "tier": "control",
+      "unit": "rate",
+      "value": 0.9745370370370371,
+      "numerator": 3789,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.958245,
+        "high": 0.987045,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "control-concat",
+      "family": null,
+      "tier": "control",
+      "unit": "rate",
+      "value": 0.010802469135802469,
+      "numerator": 42,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "control-concat",
+      "family": null,
+      "tier": "control",
+      "unit": "rate",
+      "value": 0.6666666666666666,
+      "numerator": 672,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "concat",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.6306584362139918,
+      "numerator": 2452,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.597802,
+        "high": 0.666667,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "concat",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.02700617283950617,
+      "numerator": 105,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "concat",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.670995670995671,
+      "numerator": 465,
+      "denominator": 693,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "concat",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8958333333333334,
+      "numerator": 3483,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.87,
+        "high": 0.920863,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "concat",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.050411522633744855,
+      "numerator": 196,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "concat",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.6746031746031746,
+      "numerator": 680,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "truncate",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.8179012345679012,
+      "numerator": 3180,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.784409,
+        "high": 0.851977,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "truncate",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.05375514403292181,
+      "numerator": 209,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "truncate",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.46130952380952384,
+      "numerator": 465,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "truncate",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8958333333333334,
+      "numerator": 3483,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.87,
+        "high": 0.920863,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "truncate",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.050411522633744855,
+      "numerator": 196,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "truncate",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.6746031746031746,
+      "numerator": 680,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "truncate-pinned",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.8225308641975309,
+      "numerator": 3198,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.788547,
+        "high": 0.856457,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "truncate-pinned",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.049639917695473254,
+      "numerator": 193,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "truncate-pinned",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.6696428571428571,
+      "numerator": 675,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "truncate-pinned",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8958333333333334,
+      "numerator": 3483,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.87,
+        "high": 0.920863,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "truncate-pinned",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.050411522633744855,
+      "numerator": 196,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "truncate-pinned",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.6746031746031746,
+      "numerator": 680,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "window",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.5277777777777778,
+      "numerator": 2052,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.483524,
+        "high": 0.57314,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "window",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.004629629629629629,
+      "numerator": 18,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "window",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.7033730158730159,
+      "numerator": 709,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "window",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.5277777777777778,
+      "numerator": 2052,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.483524,
+        "high": 0.57314,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "window",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.004629629629629629,
+      "numerator": 18,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "window",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.7033730158730159,
+      "numerator": 709,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "summary",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.8616255144032922,
+      "numerator": 3350,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.825597,
+        "high": 0.897213,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "summary",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.012602880658436214,
+      "numerator": 49,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "summary",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.6865079365079365,
+      "numerator": 692,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "summary",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8616255144032922,
+      "numerator": 3350,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.825597,
+        "high": 0.897213,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "summary",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.012602880658436214,
+      "numerator": 49,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "summary",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.6865079365079365,
+      "numerator": 692,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-history",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.7965534979423868,
+      "numerator": 3097,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.758723,
+        "high": 0.831019,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-history",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.03420781893004115,
+      "numerator": 133,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-history",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.8591269841269841,
+      "numerator": 866,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-history",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8852880658436214,
+      "numerator": 3442,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.86057,
+        "high": 0.907534,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-history",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.04989711934156379,
+      "numerator": 194,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-history",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8978174603174603,
+      "numerator": 905,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-state",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.9696502057613169,
+      "numerator": 3770,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.959343,
+        "high": 0.978974,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-state",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.02417695473251029,
+      "numerator": 94,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-state",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.875,
+      "numerator": 882,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-state",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.9675925925925926,
+      "numerator": 3762,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.955795,
+        "high": 0.97832,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-state",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.024434156378600823,
+      "numerator": 95,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-state",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8968253968253969,
+      "numerator": 904,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-state-x",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.8209876543209876,
+      "numerator": 3192,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.779574,
+        "high": 0.860172,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-state-x",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.0367798353909465,
+      "numerator": 143,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-state-x",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.8581349206349206,
+      "numerator": 865,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-state-x",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8343621399176955,
+      "numerator": 3244,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.794734,
+        "high": 0.872829,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-state-x",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.04089506172839506,
+      "numerator": 159,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-state-x",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8650793650793651,
+      "numerator": 872,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-memory",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.988940329218107,
+      "numerator": 3845,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.98191,
+        "high": 0.995001,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-memory",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.0051440329218107,
+      "numerator": 20,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-memory",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.8065476190476191,
+      "numerator": 813,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-memory",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.988940329218107,
+      "numerator": 3845,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.98191,
+        "high": 0.995001,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-memory",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.0051440329218107,
+      "numerator": 20,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-memory",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8065476190476191,
+      "numerator": 813,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-pipeline",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.988940329218107,
+      "numerator": 3845,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.98191,
+        "high": 0.995001,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-pipeline",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.0051440329218107,
+      "numerator": 20,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-pipeline",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.8065476190476191,
+      "numerator": 813,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-pipeline",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.988940329218107,
+      "numerator": 3845,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.98191,
+        "high": 0.995001,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-pipeline",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.0051440329218107,
+      "numerator": 20,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-pipeline",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.8065476190476191,
+      "numerator": 813,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-format",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.5285493827160493,
+      "numerator": 2055,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.482249,
+        "high": 0.574778,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-format",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.0038580246913580245,
+      "numerator": 15,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-format",
+      "family": null,
+      "tier": "8192",
+      "unit": "rate",
+      "value": 0.7787698412698413,
+      "numerator": 785,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    },
+    {
+      "id": "s2.aptitude",
+      "label": "Correct answers",
+      "suite": "S2",
+      "arm": "cwa-format",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.5285493827160493,
+      "numerator": 2055,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": "All probes and samples; the interval is a cluster bootstrap over conversations",
+      "interval": {
+        "low": 0.482249,
+        "high": 0.574778,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      }
+    },
+    {
+      "id": "s2.stale_rate",
+      "label": "Answers giving an earlier value",
+      "suite": "S2",
+      "arm": "cwa-format",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.0038580246913580245,
+      "numerator": 15,
+      "denominator": 3888,
+      "target": null,
+      "status": "info",
+      "description": ""
+    },
+    {
+      "id": "s2.instruction_persistence",
+      "label": "Answers that follow the IP rule",
+      "suite": "S2",
+      "arm": "cwa-format",
+      "family": null,
+      "tier": "16384",
+      "unit": "rate",
+      "value": 0.7787698412698413,
+      "numerator": 785,
+      "denominator": 1008,
+      "target": null,
+      "status": "info",
+      "description": "IP conversations; an overflow, which reaches no model, is left out"
+    }
+  ],
+  "files": {
+    "results": "suites/S2/grades.jsonl",
+    "findings": "findings.jsonl"
+  },
+  "model": {
+    "model": "qwen3.6-35b-a3b-fp8",
+    "endpoint_host": "127.0.0.1:8000",
+    "mode": "llm",
+    "params": {
+      "temperature": 0,
+      "max_tokens": 512,
+      "seed": 7,
+      "extra_body": {
+        "top_p": 1.0,
+        "top_k": -1,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "repetition_penalty": 1.0,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      }
+    },
+    "cache": "/workspace/cwa/cwa-extended/benchmark/domain2/model-cache",
+    "cache_entries": 78949,
+    "context_limit": 262144,
+    "server": {
+      "id": "qwen3.6-35b-a3b-fp8",
+      "object": "model",
+      "created": 1791791139,
+      "owned_by": "vllm",
+      "root": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "parent": null,
+      "max_model_len": 262144,
+      "permission": [
+        {
+          "id": "modelperm-88f199048d5930ec",
+          "object": "model_permission",
+          "created": 1791791139,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ]
+    },
+    "concurrency": 128,
+    "calls": 42705,
+    "endpoint_calls": 37950,
+    "cache_hits": 4755,
+    "excluded_by_gate": {}
+  },
+  "by_arm": [
+    {
+      "arm": "control-full",
+      "tier": "control",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3869,
+        "stale": 0,
+        "distractor": 0,
+        "wrong": 19,
+        "unparsed": 0,
+        "overflow": 0
+      },
+      "aptitude": 0.9951131687242798,
+      "interval": {
+        "low": 0.988397,
+        "high": 0.999754,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3869
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 243
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1213
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2413
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 960,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 941,
+          "stale": 0
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 1008,
+          "stale": 0
+        },
+        "vt": {
+          "n": 960,
+          "correct": 960,
+          "stale": 0
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 679,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 7
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 212
+          },
+          "100": {
+            "n": 630,
+            "compliant": 425
+          }
+        }
+      },
+      "paired": null
+    },
+    {
+      "arm": "control-concat",
+      "tier": "control",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3789,
+        "stale": 42,
+        "distractor": 3,
+        "wrong": 54,
+        "unparsed": 0,
+        "overflow": 0
+      },
+      "aptitude": 0.9745370370370371,
+      "interval": {
+        "low": 0.958245,
+        "high": 0.987045,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3789
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 243
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1190
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2356
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 960,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 906,
+          "stale": 0
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 983,
+          "stale": 25
+        },
+        "vt": {
+          "n": 960,
+          "correct": 940,
+          "stale": 17
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 672,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 0
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 210
+          },
+          "100": {
+            "n": 630,
+            "compliant": 420
+          }
+        }
+      },
+      "paired": null
+    },
+    {
+      "arm": "concat",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 2452,
+        "stale": 105,
+        "distractor": 17,
+        "wrong": 99,
+        "unparsed": 0,
+        "overflow": 1215
+      },
+      "aptitude": 0.6306584362139918,
+      "interval": {
+        "low": 0.597802,
+        "high": 0.666667,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 2673,
+          "correct": 2452
+        },
+        "absent": {
+          "n": 1215,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1119
+        },
+        "100": {
+          "n": 2430,
+          "correct": 1112
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 654,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 541,
+          "stale": 20
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 622,
+          "stale": 66
+        },
+        "vt": {
+          "n": 960,
+          "correct": 635,
+          "stale": 19
+        }
+      },
+      "persistence": {
+        "n": 693,
+        "compliant": 465,
+        "by_rule": {
+          "brackets": {
+            "n": 231,
+            "compliant": 231
+          },
+          "signoff": {
+            "n": 231,
+            "compliant": 231
+          },
+          "uppercase": {
+            "n": 231,
+            "compliant": 3
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 213
+          },
+          "100": {
+            "n": 315,
+            "compliant": 210
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.191872,
+        "interval": {
+          "low": -0.223577,
+          "high": -0.158954,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "concat",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3483,
+        "stale": 196,
+        "distractor": 23,
+        "wrong": 186,
+        "unparsed": 0,
+        "overflow": 0
+      },
+      "aptitude": 0.8958333333333334,
+      "interval": {
+        "low": 0.87,
+        "high": 0.920863,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3483
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1119
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2143
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 948,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 751,
+          "stale": 23
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 885,
+          "stale": 118
+        },
+        "vt": {
+          "n": 960,
+          "correct": 899,
+          "stale": 55
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 680,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 8
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 213
+          },
+          "100": {
+            "n": 630,
+            "compliant": 425
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": 0.0,
+        "interval": {
+          "low": 0.0,
+          "high": 0.0,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "truncate",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3180,
+        "stale": 209,
+        "distractor": 50,
+        "wrong": 295,
+        "unparsed": 154,
+        "overflow": 0
+      },
+      "aptitude": 0.8179012345679012,
+      "interval": {
+        "low": 0.784409,
+        "high": 0.851977,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3507,
+          "correct": 3180
+        },
+        "absent": {
+          "n": 381,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1119
+        },
+        "100": {
+          "n": 2430,
+          "correct": 1840
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 871,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 541,
+          "stale": 20
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 893,
+          "stale": 110
+        },
+        "vt": {
+          "n": 960,
+          "correct": 875,
+          "stale": 79
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 465,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 231
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 231
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 3
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 213
+          },
+          "100": {
+            "n": 630,
+            "compliant": 210
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.00463,
+        "interval": {
+          "low": -0.012759,
+          "high": 0.00327,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "truncate",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3483,
+        "stale": 196,
+        "distractor": 23,
+        "wrong": 186,
+        "unparsed": 0,
+        "overflow": 0
+      },
+      "aptitude": 0.8958333333333334,
+      "interval": {
+        "low": 0.87,
+        "high": 0.920863,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3483
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1119
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2143
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 948,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 751,
+          "stale": 23
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 885,
+          "stale": 118
+        },
+        "vt": {
+          "n": 960,
+          "correct": 899,
+          "stale": 55
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 680,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 8
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 213
+          },
+          "100": {
+            "n": 630,
+            "compliant": 425
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": 0.0,
+        "interval": {
+          "low": 0.0,
+          "high": 0.0,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "truncate-pinned",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3198,
+        "stale": 193,
+        "distractor": 73,
+        "wrong": 405,
+        "unparsed": 19,
+        "overflow": 0
+      },
+      "aptitude": 0.8225308641975309,
+      "interval": {
+        "low": 0.788547,
+        "high": 0.856457,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3507,
+          "correct": 3198
+        },
+        "absent": {
+          "n": 381,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1119
+        },
+        "100": {
+          "n": 2430,
+          "correct": 1858
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 873,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 541,
+          "stale": 20
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 880,
+          "stale": 123
+        },
+        "vt": {
+          "n": 960,
+          "correct": 904,
+          "stale": 50
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 675,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 3
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 213
+          },
+          "100": {
+            "n": 630,
+            "compliant": 420
+          }
+        }
+      },
+      "paired": null
+    },
+    {
+      "arm": "truncate-pinned",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3483,
+        "stale": 196,
+        "distractor": 23,
+        "wrong": 186,
+        "unparsed": 0,
+        "overflow": 0
+      },
+      "aptitude": 0.8958333333333334,
+      "interval": {
+        "low": 0.87,
+        "high": 0.920863,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3483
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1119
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2143
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 948,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 751,
+          "stale": 23
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 885,
+          "stale": 118
+        },
+        "vt": {
+          "n": 960,
+          "correct": 899,
+          "stale": 55
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 680,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 8
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 213
+          },
+          "100": {
+            "n": 630,
+            "compliant": 425
+          }
+        }
+      },
+      "paired": null
+    },
+    {
+      "arm": "window",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 2052,
+        "stale": 18,
+        "distractor": 403,
+        "wrong": 1063,
+        "unparsed": 352,
+        "overflow": 0
+      },
+      "aptitude": 0.5277777777777778,
+      "interval": {
+        "low": 0.483524,
+        "high": 0.57314,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 2121,
+          "correct": 2052
+        },
+        "absent": {
+          "n": 1767,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 667
+        },
+        "100": {
+          "n": 2430,
+          "correct": 1164
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 400,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 147,
+          "stale": 9
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 771,
+          "stale": 9
+        },
+        "vt": {
+          "n": 960,
+          "correct": 734,
+          "stale": 0
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 709,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 302
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 71
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 225
+          },
+          "100": {
+            "n": 630,
+            "compliant": 442
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.294753,
+        "interval": {
+          "low": -0.329148,
+          "high": -0.260892,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "window",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 2052,
+        "stale": 18,
+        "distractor": 403,
+        "wrong": 1063,
+        "unparsed": 352,
+        "overflow": 0
+      },
+      "aptitude": 0.5277777777777778,
+      "interval": {
+        "low": 0.483524,
+        "high": 0.57314,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 2121,
+          "correct": 2052
+        },
+        "absent": {
+          "n": 1767,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 667
+        },
+        "100": {
+          "n": 2430,
+          "correct": 1164
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 400,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 147,
+          "stale": 9
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 771,
+          "stale": 9
+        },
+        "vt": {
+          "n": 960,
+          "correct": 734,
+          "stale": 0
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 709,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 302
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 71
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 225
+          },
+          "100": {
+            "n": 630,
+            "compliant": 442
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.368056,
+        "interval": {
+          "low": -0.412756,
+          "high": -0.322124,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "summary",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3350,
+        "stale": 49,
+        "distractor": 139,
+        "wrong": 307,
+        "unparsed": 43,
+        "overflow": 0
+      },
+      "aptitude": 0.8616255144032922,
+      "interval": {
+        "low": 0.825597,
+        "high": 0.897213,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3624,
+          "correct": 3311
+        },
+        "absent": {
+          "n": 264,
+          "correct": 39
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1052
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2077
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 883,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 583,
+          "stale": 41
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 967,
+          "stale": 6
+        },
+        "vt": {
+          "n": 960,
+          "correct": 917,
+          "stale": 2
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 692,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 20
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 219
+          },
+          "100": {
+            "n": 630,
+            "compliant": 431
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": 0.039095,
+        "interval": {
+          "low": 0.009701,
+          "high": 0.069395,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "summary",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3350,
+        "stale": 49,
+        "distractor": 139,
+        "wrong": 307,
+        "unparsed": 43,
+        "overflow": 0
+      },
+      "aptitude": 0.8616255144032922,
+      "interval": {
+        "low": 0.825597,
+        "high": 0.897213,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3624,
+          "correct": 3311
+        },
+        "absent": {
+          "n": 264,
+          "correct": 39
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 221
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1052
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2077
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 883,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 583,
+          "stale": 41
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 967,
+          "stale": 6
+        },
+        "vt": {
+          "n": 960,
+          "correct": 917,
+          "stale": 2
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 692,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 20
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 42
+          },
+          "50": {
+            "n": 315,
+            "compliant": 219
+          },
+          "100": {
+            "n": 630,
+            "compliant": 431
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.034208,
+        "interval": {
+          "low": -0.063988,
+          "high": -0.003649,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-history",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3097,
+        "stale": 133,
+        "distractor": 85,
+        "wrong": 482,
+        "unparsed": 91,
+        "overflow": 0
+      },
+      "aptitude": 0.7965534979423868,
+      "interval": {
+        "low": 0.758723,
+        "high": 0.831019,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3339,
+          "correct": 3097
+        },
+        "absent": {
+          "n": 549,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 222
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1068
+        },
+        "100": {
+          "n": 2430,
+          "correct": 1807
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 825,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 443,
+          "stale": 8
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 942,
+          "stale": 58
+        },
+        "vt": {
+          "n": 960,
+          "correct": 887,
+          "stale": 67
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 866,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 194
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 51
+          },
+          "50": {
+            "n": 315,
+            "compliant": 267
+          },
+          "100": {
+            "n": 630,
+            "compliant": 548
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.025977,
+        "interval": {
+          "low": -0.044731,
+          "high": -0.007318,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-history",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3442,
+        "stale": 194,
+        "distractor": 24,
+        "wrong": 205,
+        "unparsed": 23,
+        "overflow": 0
+      },
+      "aptitude": 0.8852880658436214,
+      "interval": {
+        "low": 0.86057,
+        "high": 0.907534,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3816,
+          "correct": 3442
+        },
+        "absent": {
+          "n": 72,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 222
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1092
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2128
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 942,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 731,
+          "stale": 9
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 916,
+          "stale": 84
+        },
+        "vt": {
+          "n": 960,
+          "correct": 853,
+          "stale": 101
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 905,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 233
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 51
+          },
+          "50": {
+            "n": 315,
+            "compliant": 270
+          },
+          "100": {
+            "n": 630,
+            "compliant": 584
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.010545,
+        "interval": {
+          "low": -0.033644,
+          "high": 0.012112,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-state",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3770,
+        "stale": 94,
+        "distractor": 3,
+        "wrong": 13,
+        "unparsed": 8,
+        "overflow": 0
+      },
+      "aptitude": 0.9696502057613169,
+      "interval": {
+        "low": 0.959343,
+        "high": 0.978974,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3770
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 243
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1199
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2328
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 957,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 939,
+          "stale": 0
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 980,
+          "stale": 28
+        },
+        "vt": {
+          "n": 960,
+          "correct": 894,
+          "stale": 66
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 882,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 210
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 59
+          },
+          "50": {
+            "n": 315,
+            "compliant": 260
+          },
+          "100": {
+            "n": 630,
+            "compliant": 563
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": 0.147119,
+        "interval": {
+          "low": 0.111813,
+          "high": 0.182978,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-state",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3762,
+        "stale": 95,
+        "distractor": 9,
+        "wrong": 15,
+        "unparsed": 7,
+        "overflow": 0
+      },
+      "aptitude": 0.9675925925925926,
+      "interval": {
+        "low": 0.955795,
+        "high": 0.97832,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3762
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 243
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1199
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2320
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 954,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 937,
+          "stale": 1
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 987,
+          "stale": 21
+        },
+        "vt": {
+          "n": 960,
+          "correct": 884,
+          "stale": 73
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 904,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 232
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 59
+          },
+          "50": {
+            "n": 315,
+            "compliant": 262
+          },
+          "100": {
+            "n": 630,
+            "compliant": 583
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": 0.071759,
+        "interval": {
+          "low": 0.046414,
+          "high": 0.099126,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-state-x",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3192,
+        "stale": 143,
+        "distractor": 58,
+        "wrong": 443,
+        "unparsed": 49,
+        "overflow": 3
+      },
+      "aptitude": 0.8209876543209876,
+      "interval": {
+        "low": 0.779574,
+        "high": 0.860172,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3681,
+          "correct": 3171
+        },
+        "absent": {
+          "n": 207,
+          "correct": 21
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 192
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1004
+        },
+        "100": {
+          "n": 2430,
+          "correct": 1996
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 929,
+          "stale": 6
+        },
+        "fr": {
+          "n": 960,
+          "correct": 422,
+          "stale": 49
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 950,
+          "stale": 34
+        },
+        "vt": {
+          "n": 960,
+          "correct": 891,
+          "stale": 54
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 865,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 193
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 56
+          },
+          "50": {
+            "n": 315,
+            "compliant": 260
+          },
+          "100": {
+            "n": 630,
+            "compliant": 549
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.001543,
+        "interval": {
+          "low": -0.032783,
+          "high": 0.028047,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-state-x",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3244,
+        "stale": 159,
+        "distractor": 55,
+        "wrong": 363,
+        "unparsed": 67,
+        "overflow": 0
+      },
+      "aptitude": 0.8343621399176955,
+      "interval": {
+        "low": 0.794734,
+        "high": 0.872829,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3855,
+          "correct": 3241
+        },
+        "absent": {
+          "n": 33,
+          "correct": 3
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 192
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1020
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2032
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 941,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 479,
+          "stale": 54
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 940,
+          "stale": 44
+        },
+        "vt": {
+          "n": 960,
+          "correct": 884,
+          "stale": 61
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 872,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 200
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 56
+          },
+          "50": {
+            "n": 315,
+            "compliant": 267
+          },
+          "100": {
+            "n": 630,
+            "compliant": 549
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.061471,
+        "interval": {
+          "low": -0.095936,
+          "high": -0.030495,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-memory",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3845,
+        "stale": 20,
+        "distractor": 3,
+        "wrong": 16,
+        "unparsed": 4,
+        "overflow": 0
+      },
+      "aptitude": 0.988940329218107,
+      "interval": {
+        "low": 0.98191,
+        "high": 0.995001,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3845
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 243
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1199
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2403
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 960,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 940,
+          "stale": 0
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 992,
+          "stale": 13
+        },
+        "vt": {
+          "n": 960,
+          "correct": 953,
+          "stale": 7
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 813,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 141
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 59
+          },
+          "50": {
+            "n": 315,
+            "compliant": 239
+          },
+          "100": {
+            "n": 630,
+            "compliant": 515
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": 0.166409,
+        "interval": {
+          "low": 0.13381,
+          "high": 0.200775,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-memory",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3845,
+        "stale": 20,
+        "distractor": 3,
+        "wrong": 16,
+        "unparsed": 4,
+        "overflow": 0
+      },
+      "aptitude": 0.988940329218107,
+      "interval": {
+        "low": 0.98191,
+        "high": 0.995001,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3845
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 243
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1199
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2403
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 960,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 940,
+          "stale": 0
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 992,
+          "stale": 13
+        },
+        "vt": {
+          "n": 960,
+          "correct": 953,
+          "stale": 7
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 813,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 141
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 59
+          },
+          "50": {
+            "n": 315,
+            "compliant": 239
+          },
+          "100": {
+            "n": 630,
+            "compliant": 515
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": 0.093107,
+        "interval": {
+          "low": 0.068565,
+          "high": 0.119351,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-pipeline",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3845,
+        "stale": 20,
+        "distractor": 3,
+        "wrong": 16,
+        "unparsed": 4,
+        "overflow": 0
+      },
+      "aptitude": 0.988940329218107,
+      "interval": {
+        "low": 0.98191,
+        "high": 0.995001,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3845
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 243
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1199
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2403
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 960,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 940,
+          "stale": 0
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 992,
+          "stale": 13
+        },
+        "vt": {
+          "n": 960,
+          "correct": 953,
+          "stale": 7
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 813,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 141
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 59
+          },
+          "50": {
+            "n": 315,
+            "compliant": 239
+          },
+          "100": {
+            "n": 630,
+            "compliant": 515
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": 0.166409,
+        "interval": {
+          "low": 0.13381,
+          "high": 0.200775,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-pipeline",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 3845,
+        "stale": 20,
+        "distractor": 3,
+        "wrong": 16,
+        "unparsed": 4,
+        "overflow": 0
+      },
+      "aptitude": 0.988940329218107,
+      "interval": {
+        "low": 0.98191,
+        "high": 0.995001,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 3888,
+          "correct": 3845
+        },
+        "absent": {
+          "n": 0,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 243
+        },
+        "50": {
+          "n": 1215,
+          "correct": 1199
+        },
+        "100": {
+          "n": 2430,
+          "correct": 2403
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 960,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 940,
+          "stale": 0
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 992,
+          "stale": 13
+        },
+        "vt": {
+          "n": 960,
+          "correct": 953,
+          "stale": 7
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 813,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 336
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 141
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 59
+          },
+          "50": {
+            "n": 315,
+            "compliant": 239
+          },
+          "100": {
+            "n": 630,
+            "compliant": 515
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": 0.093107,
+        "interval": {
+          "low": 0.068565,
+          "high": 0.119351,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-format",
+      "tier": "8192",
+      "n": 3888,
+      "verdicts": {
+        "correct": 2055,
+        "stale": 15,
+        "distractor": 342,
+        "wrong": 1163,
+        "unparsed": 313,
+        "overflow": 0
+      },
+      "aptitude": 0.5285493827160493,
+      "interval": {
+        "low": 0.482249,
+        "high": 0.574778,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 2121,
+          "correct": 2055
+        },
+        "absent": {
+          "n": 1767,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 222
+        },
+        "50": {
+          "n": 1215,
+          "correct": 663
+        },
+        "100": {
+          "n": 2430,
+          "correct": 1170
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 399,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 146,
+          "stale": 6
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 779,
+          "stale": 9
+        },
+        "vt": {
+          "n": 960,
+          "correct": 731,
+          "stale": 0
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 785,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 321
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 128
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 51
+          },
+          "50": {
+            "n": 315,
+            "compliant": 245
+          },
+          "100": {
+            "n": 630,
+            "compliant": 489
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.293981,
+        "interval": {
+          "low": -0.329295,
+          "high": -0.259772,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    },
+    {
+      "arm": "cwa-format",
+      "tier": "16384",
+      "n": 3888,
+      "verdicts": {
+        "correct": 2055,
+        "stale": 15,
+        "distractor": 342,
+        "wrong": 1163,
+        "unparsed": 313,
+        "overflow": 0
+      },
+      "aptitude": 0.5285493827160493,
+      "interval": {
+        "low": 0.482249,
+        "high": 0.574778,
+        "level": 0.95,
+        "method": "cluster-bootstrap/conversation",
+        "resamples": 2000
+      },
+      "given": {
+        "present": {
+          "n": 2121,
+          "correct": 2055
+        },
+        "absent": {
+          "n": 1767,
+          "correct": 0
+        }
+      },
+      "by_turns": {
+        "10": {
+          "n": 243,
+          "correct": 222
+        },
+        "50": {
+          "n": 1215,
+          "correct": 663
+        },
+        "100": {
+          "n": 2430,
+          "correct": 1170
+        }
+      },
+      "by_family": {
+        "cc": {
+          "n": 960,
+          "correct": 399,
+          "stale": 0
+        },
+        "fr": {
+          "n": 960,
+          "correct": 146,
+          "stale": 6
+        },
+        "ip": {
+          "n": 1008,
+          "correct": 779,
+          "stale": 9
+        },
+        "vt": {
+          "n": 960,
+          "correct": 731,
+          "stale": 0
+        }
+      },
+      "persistence": {
+        "n": 1008,
+        "compliant": 785,
+        "by_rule": {
+          "brackets": {
+            "n": 336,
+            "compliant": 321
+          },
+          "signoff": {
+            "n": 336,
+            "compliant": 336
+          },
+          "uppercase": {
+            "n": 336,
+            "compliant": 128
+          }
+        },
+        "by_turns": {
+          "10": {
+            "n": 63,
+            "compliant": 51
+          },
+          "50": {
+            "n": 315,
+            "compliant": 245
+          },
+          "100": {
+            "n": 630,
+            "compliant": 489
+          }
+        }
+      },
+      "paired": {
+        "reference": "truncate-pinned",
+        "n": 3888,
+        "difference": -0.367284,
+        "interval": {
+          "low": -0.413032,
+          "high": -0.322029,
+          "level": 0.95,
+          "method": "cluster-bootstrap/conversation",
+          "resamples": 2000
+        }
+      }
+    }
+  ]
+}

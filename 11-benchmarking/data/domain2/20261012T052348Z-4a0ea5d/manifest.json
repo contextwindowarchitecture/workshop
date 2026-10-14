@@ -1,0 +1,186 @@
+{
+  "$schema": "cwa-bench-d2/manifest/v1",
+  "run_id": "20261012T052348Z-4a0ea5d",
+  "status": "pass",
+  "started_at": "2026-10-12T05:23:48.843Z",
+  "finished_at": "2026-10-12T08:29:08.981Z",
+  "command": [
+    "/workspace/cwa/cwa-extended/benchmark/.venv/bin/cwabench",
+    "--domain",
+    "2",
+    "run",
+    "--model",
+    "llm",
+    "--no-frames",
+    "--no-build",
+    "--concurrency",
+    "128",
+    "--workers",
+    "16",
+    "--size",
+    "recorded",
+    "--suites",
+    "S0,S1,S2,S3,S4,S5,S7"
+  ],
+  "harness": {
+    "name": "cwa-bench-d2",
+    "version": "0.1.0",
+    "source_digest": "3a136c22b9c985857602bc629e23da2d75133073f40a7363825d0555852edcb0",
+    "python": "3.14.4"
+  },
+  "config": {
+    "path": "/workspace/cwa/cwa-extended/benchmark/domain2/domain2.toml",
+    "sha256": "4a0ea5dd62e767313679e67c70db274c727151f2510a8eb1664ddca577dbba5b",
+    "copy": "config.toml"
+  },
+  "contract": {
+    "path": "/workspace/cwa/contextwindowarchitecture",
+    "pinned": "16de4be0534583f135a597171c927d42c87ee82c",
+    "commit": "16de4be0534583f135a597171c927d42c87ee82c",
+    "dirty": false,
+    "remote": "https://github.com/contextwindowarchitecture/contextwindowarchitecture",
+    "repository": "contextwindowarchitecture/contextwindowarchitecture",
+    "spec_draft": "2026-10-07"
+  },
+  "adapters": {
+    "python": {
+      "available": true,
+      "error": null,
+      "language": "Python",
+      "implementation": {
+        "name": "contextwindowarchitecture-assembler",
+        "version": "0.0.1",
+        "language": "python"
+      },
+      "checkout": "/workspace/cwa/assembler-python",
+      "commit": "31f82710fdfb766b06f194b9224e26670d10c07c",
+      "dirty": false,
+      "remote": "https://github.com/contextwindowarchitecture/assembler-python",
+      "repository": "contextwindowarchitecture/assembler-python",
+      "command": [
+        "/workspace/cwa/cwa-extended/benchmark/domain1/.build/python-venv/bin/python",
+        "/workspace/cwa/cwa-extended/benchmark/domain1/adapters/python_adapter.py"
+      ],
+      "toolchain": "Python 3.14.4",
+      "stale_artifacts": [],
+      "build": [],
+      "timing": {
+        "command": [
+          "/workspace/cwa/cwa-extended/benchmark/domain1/.build/python-venv/bin/python",
+          "/workspace/cwa/cwa-extended/benchmark/domain1/adapters/timing/python_timing.py"
+        ],
+        "error": null
+      }
+    },
+    "typescript": {
+      "available": true,
+      "error": null,
+      "language": "TypeScript",
+      "implementation": {
+        "name": "@contextwindowarchitecture/assembler",
+        "version": "0.0.1",
+        "language": "TypeScript"
+      },
+      "checkout": "/workspace/cwa/assembler-typescript",
+      "commit": "c533e4455073a27a2d5a4c65a3ddd62effa3795e",
+      "dirty": false,
+      "remote": "https://github.com/contextwindowarchitecture/assembler-typescript",
+      "repository": "contextwindowarchitecture/assembler-typescript",
+      "command": [
+        "/opt/node/bin/node",
+        "/workspace/cwa/cwa-extended/benchmark/domain1/adapters/typescript_adapter.mjs"
+      ],
+      "toolchain": "v24.20.0",
+      "stale_artifacts": [],
+      "build": [],
+      "timing": {
+        "command": [
+          "/opt/node/bin/node",
+          "/workspace/cwa/cwa-extended/benchmark/domain1/adapters/timing/typescript_timing.mjs"
+        ],
+        "error": null
+      }
+    },
+    "go": {
+      "available": true,
+      "error": null,
+      "language": "Go",
+      "implementation": {
+        "name": "github.com/contextwindowarchitecture/assembler-go",
+        "version": "0.0.1",
+        "language": "Go"
+      },
+      "checkout": "/workspace/cwa/assembler-go",
+      "commit": "fdd7e2fc74e53cdcd5da43541ee2959a6a68c98d",
+      "dirty": false,
+      "remote": "https://github.com/contextwindowarchitecture/assembler-go",
+      "repository": "contextwindowarchitecture/assembler-go",
+      "command": [
+        "/workspace/cwa/cwa-extended/benchmark/domain1/.build/bin/cwa-adapter-go"
+      ],
+      "toolchain": "go version go1.27.0 linux/amd64",
+      "stale_artifacts": [],
+      "build": [],
+      "timing": {
+        "command": [
+          "/workspace/cwa/cwa-extended/benchmark/domain1/.build/bin/cwa-timing-go"
+        ],
+        "error": null
+      }
+    },
+    "rust": {
+      "available": true,
+      "error": null,
+      "language": "Rust",
+      "implementation": {
+        "language": "Rust",
+        "name": "contextwindowarchitecture-assembler",
+        "version": "0.0.1"
+      },
+      "checkout": "/workspace/cwa/assembler-rust",
+      "commit": "92b4d6f04f9d339d0925676ddbd30a2770a4d385",
+      "dirty": false,
+      "remote": "https://github.com/contextwindowarchitecture/assembler-rust",
+      "repository": "contextwindowarchitecture/assembler-rust",
+      "command": [
+        "/workspace/cwa/cwa-extended/benchmark/domain1/.build/rust-target/release/examples/adapter"
+      ],
+      "toolchain": "rustc 1.99.0 (b940084d7 2026-09-28)",
+      "stale_artifacts": [],
+      "build": [],
+      "timing": {
+        "command": [
+          "/workspace/cwa/cwa-extended/benchmark/domain1/.build/rust-target/release/cwabench-timing"
+        ],
+        "error": null
+      }
+    }
+  },
+  "host": {
+    "system": "Linux",
+    "release": "7.0.0-1014-aws",
+    "machine": "x86_64",
+    "cpus": 16,
+    "platform": "Linux-7.0.0-1014-aws-x86_64-with-glibc2.43"
+  },
+  "host_suspended_seconds": 0.0,
+  "env_cells": [
+    "baseline"
+  ],
+  "container": null,
+  "seed": null,
+  "suites": [
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S7"
+  ],
+  "settings": {
+    "timeout_s": 60.0,
+    "concurrency": 16
+  },
+  "ci": null
+}

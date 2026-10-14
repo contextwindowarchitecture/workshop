@@ -30,7 +30,7 @@ The workshops do not vendor the examples, the assemblers or the website. They ex
   examples/                    Fernway: the help-center bot and agent the labs build on
   website/                     optional; the live site at contextwindowarchitecture.io works too
   integrations/                W9 module D only
-  benchmark/                   W11 only; its committed Domain 1 and 2 runs are read, nothing is run
+  benchmark/                   optional; W11 vendors the Domain 2 run it reads, and reads another only with --sibling
 ```
 
 The root is the parent of this repository by default. To put the siblings anywhere else, set one environment variable to an absolute or relative path:
