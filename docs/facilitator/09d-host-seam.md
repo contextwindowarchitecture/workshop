@@ -25,7 +25,7 @@ CWA_W9D_IMPL=labs uv run pytest -q 2>&1 | tail -1     # 8 fail: the stubs
 
 - **Checkpoint 1.** maintainer-a: `interaction.history`, `user`. The bot: `interaction.history`, `untrusted`, `lineage: generated`. The reporter and drive-by-1: `evidence.tool_results`, `observation`. The hidden instruction is in `obs:issue/7811/0-body@newcontrib`; the model sees it escaped (`&lt;!-- AI agents ...`) inside `<external_content>`, which the agent definition names as material.
 - **Checkpoint 2.** Usually the thread split (the bot has permission `write` but is checked first) or memory (expiry compared as instants, the expired entry reported with stage `producer`). The digest check catches any body or eligibility string; the committed snapshot diff names it.
-- **Checkpoint 3.** v1 dropped `run:review/18990#F1` (high severity) and kept `claude_test.go`; v2 dropped `claude_test.go` and the docs diff and kept F1. v1's `fitting_order` omits `interaction.memory` first; v2 removes that step and adds `tier_upgrades: {interaction.memory: protected}`.
+- **Checkpoint 3.** v1 dropped `run:review/18990#F1` (high severity) and the docs diff, and kept `claude_test.go`; v2 dropped `claude_test.go` and the docs diff and kept F1. v1's `fitting_order` omits `interaction.memory` first; v2 removes that step and adds `tier_upgrades: {interaction.memory: protected}`.
 - **Checkpoint 4.** `evidence_required`, recovery `precompute_summary`. A good comment names the reason, says the diff items need precomputed summaries, lists what was dropped for budget (every diff and the current CI run), and the budget and policy version. Span: `cwa.refused true`, `cwa.refused.reason evidence_required`, `cwa.recovery.action precompute_summary`, the snapshot digest.
 
 ## Stumbles

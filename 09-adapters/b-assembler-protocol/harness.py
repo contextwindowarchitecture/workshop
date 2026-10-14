@@ -172,7 +172,7 @@ def main(argv: list[str]) -> int:
         for label, outcome in outcomes:
             verdict, why = judge_case(case, outcome)
             print(f"{verdict:<8} {label}" + (f"  ({why})" if why else ""))
-        hashes = {(o.trace or {}).get("result", {}) and o.trace["result"]["hash"] for _, o in outcomes}
+        hashes = {(o.kind, ((o.trace or {}).get("result") or {}).get("hash")) for _, o in outcomes}  # an error never agrees with a payload
         if len(outcomes) > 1:
             print("agree" if len(hashes) == 1 else "DISAGREE: the adapters produced different payloads")
         return 0

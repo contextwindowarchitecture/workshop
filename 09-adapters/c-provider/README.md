@@ -50,7 +50,14 @@ The tests check what adapters get wrong: a system entry merged into the user tur
 
 ## Part 3. Breakpoints as structure (30 minutes)
 
-Run the Anthropic mapping in the solution with and without a breakpoint and diff the texts: identical. The breakpoint is a `cache_control` marker on one block; it changes what the provider caches and nothing the model reads. Then read W6's cache-reuse measurement again: that is the renderer's half of the bargain, a stable prefix at block boundaries; this is the adapter's half, marking the boundary without adding a byte.
+Run the Anthropic mapping in the solution with and without a breakpoint, and diff the two requests:
+
+```sh
+uv run send.py --anthropic
+uv run send.py --anthropic --breakpoint-after turn:17
+```
+
+The text hashes are identical, and the diff is one marker. The breakpoint is a `cache_control` marker on one block; it changes what the provider caches and nothing the model reads. Then read W6's cache-reuse measurement again: that is the renderer's half of the bargain, a stable prefix at block boundaries; this is the adapter's half, marking the boundary without adding a byte.
 
 **Checkpoint 3.** The block you placed the breakpoint after and why that one.
 
@@ -66,5 +73,5 @@ R-7 (roles), R-16 (count and margin), R-17 (nothing sent on a refusal), §1 (the
 ## Files
 
 - `labs/provider.py`: the lab. `solution/provider.py`: finished, with the Anthropic mapping as reading. `impl.py`: the `CWA_W9C_IMPL` switch.
-- `payloads.py`: the example snapshot under both renderers and refused. `send.py`: adapt, hash, optionally send.
+- `payloads.py`: the example snapshot under both renderers and refused. `send.py`: adapt, hash, optionally send; `--anthropic` for part 3.
 - `tests/`: the handoff tests.

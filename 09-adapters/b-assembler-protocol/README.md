@@ -25,7 +25,7 @@ uv run harness.py run ../../shared/contract/cwa/conformance/cases/required-slot-
 uv run harness.py run ../../shared/contract/cwa/conformance/rejections/producer-in-two-batches/snapshot.json
 ```
 
-Assembled, refused, rejected: the harness reports the exit it saw, the digest, and the hash or the refusal reason. Then the whole suite through the solution's adapter:
+Assembled, refused, rejected: the harness reports the outcome it read from the exit code and stdout, the digest, and the hash or the refusal reason. To see the exit code and the two streams themselves, pipe a snapshot to the adapter directly: `uv run --quiet python solution/adapter.py < <snapshot.json>; echo $?`. Then the whole suite through the solution's adapter:
 
 ```sh
 uv run harness.py conformance

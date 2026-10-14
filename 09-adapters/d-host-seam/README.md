@@ -40,7 +40,7 @@ Left out, with the reason each row carries: the expired run summary (reported by
 ```sh
 export CWA_W9D_IMPL=labs
 uv run after.py --compare      # not written yet
-uv run pytest                  # six tests of the triage briefing fail until the port agrees
+uv run pytest                  # eight fail: six of the triage briefing until the port agrees, one each for Labs 2 and 3
 ```
 
 Write the seven functions in [labs/producers.py](labs/producers.py) against the Go originals in `integrations/fullsend/briefing/governance.go` and `triage.go` (the docstring lists them). [briefing.py](briefing.py) is the shared half: `new_item()` fills the eight required fields and sets trust from authority, `batch()` binds the producer identity outside the items, `freeze()` builds the snapshot with the Go package's constants, so a correct port has the same digest. The fixture [fixtures/issue-7811.json](fixtures/issue-7811.json) is the forge read; the registry holds the route policy and profile.
@@ -61,7 +61,7 @@ When the digest agrees, every field agrees: the bodies, the sources, the version
 
 ## Part 3. Lab 2: a scorer over traces (30 minutes)
 
-The Go integration committed two versions of the security review under the same budget pressure. Route v1 shed memory first and lost `run:review/18990#F1`, a high-severity prior finding, as an `over_budget` row. Nothing failed; the briefing went out without it. Route v2 protects memory and sheds the docs and test diffs instead. Both traces are in [expected/](expected/).
+The Go integration committed two versions of the security review under the same budget pressure. Route v1 shed memory first and lost `run:review/18990#F1`, a high-severity prior finding, as an `over_budget` row. Nothing failed; the briefing went out without it. Route v2 protects memory and sheds the test diff instead; both versions shed the docs diff. Both traces are in [expected/](expected/).
 
 Write `dropped_high_severity()` in [labs/score.py](labs/score.py): the ids of prior findings fitting left out. It reads the snapshot for the bodies and the trace for the decisions. Run it over both traces. The point is not the five lines; it is that a policy mistake is a query over traces, run on every run, before anyone reads what the model did.
 

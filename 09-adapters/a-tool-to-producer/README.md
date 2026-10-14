@@ -31,9 +31,9 @@ uv sync
 uv run run.py --user u_ada --calls account,status,status "Is there an incident in our region right now?"
 ```
 
-Six producers ran: the route's instructions, the capability policy, and the three adapters plus the conversation. Read the table from the top. Three tools render in the `tools` channel, offered by the capability policy, not by the MCP adapter. Two observations are included and one is excluded as `superseded`: the status was polled twice and the route's `supersede: source` kept the newer poll (R-25). The memory store reported an expired and a revoked memory at stage `producer`. Three chunks fell below the threshold.
+Six producers ran: the route's instructions, the capability policy, and the three adapters plus the conversation. Read the table from the top. Three tools render in the `tools` channel, offered by the capability policy, not by the MCP adapter. Two observations are included and one is excluded as `superseded`: the status was polled twice and the route's `supersede: source` kept the newer poll (R-25). The memory store reported an expired and a revoked memory at stage `producer`. Eight chunks fell below the threshold: none of the help centre answers an incident question.
 
-Run it again with `--payload` and find the two observations inside the user message, escaped, with `obs:3` saying the incident is resolved and `obs:2` nowhere.
+Run it again with `--payload` and find the two observations inside the user message, each in its own `<observation>` wrapper, with `obs:3` saying the incident is resolved and `obs:2` nowhere.
 
 **Checkpoint 1.** In the worksheet: which producer put the tools in front of the model, and which item was superseded by which.
 
