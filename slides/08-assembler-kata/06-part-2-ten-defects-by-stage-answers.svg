@@ -9,7 +9,7 @@
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px">
 <h2 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Ten one-line defects, by stage</h2>
-<p style="margin: 0; font-size: 28px; color: #2E3540">Each breaks at least one published case. Two share a case, which passes only when both are fixed.</p>
+<p style="margin: 0; font-size: 28px; color: #2E3540">Each breaks at least one published case. Three cases are reached by two, and pass only when both are fixed.</p>
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" width="1680" height="600" viewBox="0 0 1680 600" role="img" aria-label="Ten defects: tokenizer, deduplication, supersession, source diversity, render order, string ordering, fitting's margin, and three in admission.">
 <g font-family="IBM Plex Mono, monospace">

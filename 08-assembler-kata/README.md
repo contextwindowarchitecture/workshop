@@ -12,7 +12,7 @@ Conference cut (two hours): parts 1 and 2 with the first four defects.
 
 ## The form
 
-Four assemblers exist, in Python, TypeScript, Go and Rust, and all pass the published cases ([docs/assemblers.md](../docs/assemblers.md) lays them side by side). The goal of this module is not a fifth; it is contributors to the four. So the kata is a repair: a copy of the Python reference with ten one-line defects injected, each in a different stage, each breaking at least one published conformance case. You find each by reading the case and the normative text, fix it, and prove the fix with the report. Nothing here is a toy: the copy is the real assembler, the cases are the real cases, and the discipline is the port's own `AGENTS.md`.
+Four assemblers exist, in Python, TypeScript, Go and Rust, and all pass the published cases ([docs/assemblers.md](../docs/assemblers.md) lays them side by side). The goal of this module is not a fifth; it is contributors to the four. So the kata is a repair: a copy of the Python reference with ten one-line defects injected across eight stages, each breaking at least one published conformance case. You find each by reading the case and the normative text, fix it, and prove the fix with the report. Nothing here is a toy: the copy is the real assembler, the cases are the real cases, and the discipline is the port's own `AGENTS.md`.
 
 ```sh
 python3 kata.py build        # copy the sibling at its pin into work/, inject, install
@@ -23,7 +23,7 @@ python3 kata.py status       # 65 cases, 25 rejections, and which fail
 
 ## Part 1. The pipeline and the four exits (30 minutes)
 
-Read the port's `docs/DESIGN.md` far enough to name the stages in order and the modules that hold them: validate and snapshot checks (`snapshot.py`), admit (`admission.py`), conflicts (`conflicts.py`), supersede, dedupe, diversity (their own modules), refusals and fitting (`fitting.py`, `model.py`), render (`render/`), trace (`trace.py`). Then the four exits: assembled, refused, rejected, stopped on a published-id override. Then the shape of a case: `snapshot.json` in, `expected.payload.txt` and `expected.trace.json` out, and the pass rule, byte for byte and field for field.
+Read the port's `docs/DESIGN.md` far enough to name the stages in order and the modules that hold them: validate and snapshot checks (`snapshot.py`), admit (`admission.py`), conflicts (`conflicts.py`), supersede, dedupe, diversity (their own modules), refusals (`assemble.py`) and fitting (`fitting.py`, `model.py`), render (`render/`), trace (`trace.py`). Then the four exits: assembled, refused, rejected, stopped on a published-id override. Then the shape of a case: `snapshot.json` in, `expected.payload.txt` and `expected.trace.json` out, and the pass rule, byte for byte and field for field.
 
 **Checkpoint 1.** The worksheet's stage table, module per stage.
 
@@ -42,7 +42,7 @@ Each failing case names its rules and describes what it checks. Work one case at
 5. `python3 kata.py status` again. Some cases are reached by two defects and pass only when both are fixed; the hint says so.
 6. Only after the case passes, `python3 kata.py reveal <id>` to compare your fix with the line that was changed.
 
-The ten, by stage: tokenizer, deduplication, supersession, source diversity, render order, string ordering, fitting's margin, and three in admission. Two share a case.
+The ten, by stage: tokenizer, deduplication, supersession, source diversity, render order, string ordering, fitting's margin, and three in admission. Three cases are each reached by two of them: `admission-reasons`, `supersede-exemptions` and `diversity-exemptions`.
 
 **Checkpoint 2.** The worksheet's repair log: case, stage, the test you wrote, the line you changed. Ten rows.
 

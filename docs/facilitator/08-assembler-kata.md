@@ -10,7 +10,7 @@ Module: [08-assembler-kata/README.md](../../08-assembler-kata/README.md). A full
 | 15 to 45 | Part 1 | The stages and their modules, from DESIGN.md. The four exits. One case directory opened and read aloud. |
 | 45 to 150 | Part 2, first half | Repairs. Insist on the failing test before the fix; walk the room and ask to see the red run. |
 | 150 to 165 | Break | |
-| 165 to 270 | Part 2, second half | The harder ones: string ordering (UTF-16), the margin rounding, and the two defects that share `admission-reasons`. |
+| 165 to 270 | Part 2, second half | The harder ones: string ordering (UTF-16), the margin rounding, and the cases two defects share. |
 | 270 to 315 | Lunch or long break | |
 | 315 to 375 | Part 3 | `check`, the port's own suite, `status.json`, the listing. Then the uncovered defect, as the bridge to W10. |
 | 375 to 390 | Close | Which of the four repositories each participant will open an issue in. |
@@ -27,8 +27,8 @@ The first `uv sync` inside `work/` fetches the assembler's dependencies; warm th
 
 ## Checkpoint answers
 
-- **Checkpoint 1.** snapshot.py; admission.py; conflicts.py; supersede.py; dedupe.py; diversity.py; fitting.py and model.py; render/; trace.py. Exits: assembled, refused, rejected, stopped on a published tokenizer or renderer id.
-- **Checkpoint 2.** `kata.py reveal <case>` after each repair. The cases reached by two defects: `admission-reasons` (expiry boundary and the missing scope key). Expect the string-ordering defect to take longest: the failing case is `ordering-astral-ids`, and the fix is one encoding name.
+- **Checkpoint 1.** snapshot.py; admission.py; conflicts.py; supersede.py; dedupe.py; diversity.py; assemble.py for the refusals, fitting.py and model.py for fitting; render/; trace.py. Exits: assembled, refused, rejected, stopped on a published tokenizer or renderer id.
+- **Checkpoint 2.** `kata.py reveal <case>` after each repair. The cases reached by two defects: `admission-reasons` (expiry boundary and the missing scope key), `supersede-exemptions` (deduplication and supersession) and `diversity-exemptions` (supersession and source diversity). Expect the string-ordering defect to take longest: the failing case is `ordering-astral-ids`, and the fix is one encoding name.
 - **Checkpoint 3.** The report test (`test_report.py`), the status test (`test_status.py`) and the conformance suite with its `PENDING` set. Any requirement row from `status.json`. For the uncovered defect: a fact group with two leaders from the top producer, different freshness, and `freshness_tiebreak` absent or false, whose expected trace is `escalated` and whose route says surface or refuse.
 
 ## Stumbles

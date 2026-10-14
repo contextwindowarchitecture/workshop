@@ -35,7 +35,7 @@
 <rect x="830" y="220" width="850" height="120" fill="#FBF0EA" stroke="#C2541D" stroke-width="3"></rect>
 <text x="854" y="262" font-size="20" font-weight="600" fill="#C2541D">work/</text>
 <text x="854" y="294" font-size="16" fill="#11151B">the copy, ten one-line defects injected, installed</text>
-<text x="854" y="320" font-size="15" fill="#4A5361">each in a different stage, each breaking at least one case</text>
+<text x="854" y="320" font-size="15" fill="#4A5361">across eight stages, each breaking at least one case</text>
 <rect x="830" y="392" width="850" height="120" fill="#FFFFFF" stroke="#11151B" stroke-width="2"></rect>
 <text x="854" y="434" font-size="20" font-weight="600" fill="#11151B">.pristine/</text>
 <text x="854" y="466" font-size="16" fill="#11151B">the unmodified copy, for kata.py diff</text>
