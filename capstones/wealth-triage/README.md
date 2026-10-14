@@ -32,7 +32,7 @@ CWA_C3_IMPL=skeleton uv run pytest
 
 | Case | What happens | What to look at |
 | --- | --- | --- |
-| 01-holdings-question | The ledger's 1,000 units are reported; the vendor's 1,200 lose the fact group | `conflict_lost` on the vendor estimate; `place_trade` withheld on an advisory account |
+| 01-holdings-question | The ledger's 1,000 units are reported; the vendor's 1,200 lose the fact group | `conflict_lost` on the vendor estimate; `place_trade` not offered on an advisory account (`capability_not_allowed`) |
 | 02-vendor-figure-in-answer | The scripted draft reports 1,200 | `figures_match_ledger` withholds it: the application holds figures to the ledger |
 | 03-advisory-sell-request | A sell on an advisory account; the draft queues an order anyway | `cap:place_trade` is `capability_not_allowed` at the producer; `actions_were_offered` withholds the draft |
 | 04-self-directed-sell | The same sell on a self-directed account with a clear screen | the tool is offered, the order is within the ledger, queued for confirmation |

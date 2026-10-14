@@ -10,7 +10,7 @@ Harbor Street Family Practice wants an assistant in the consulting room rebuilt 
 
 ## What is given
 
-- `data/`: two patients, two clinicians, three encounters, the monitor's readings, five prior notes with hand-written summaries, five guideline articles, the EHR's three tool specifications and the intent rules. One prior note recorded a blood pressure that today's monitor contradicts; one transcript carries a relayed request for an opioid; one clinician is a nurse.
+- `data/`: two patients, two clinicians, three encounters, the monitor's readings, five prior notes with hand-written summaries, five guideline articles, the EHR's three tool specifications and the intent rules. One prior note recorded a blood pressure that today's monitor contradicts, and one clinician is a nurse. The transcripts are the cases' conversations in `evals/cases/`, and `02-transcript-injection`'s carries a relayed request for an opioid.
 - `policy/`: two routes (`scribe`, `consult`), each a route policy, a profile, instructions and a contract; the capability policy; a routes table with a small and a large tier and an escalate table.
 - `app.py`: the orchestrator. It selects the route, freezes a snapshot per attempt, escalates on a protected-content refusal, hands the payload to the drafter unchanged, parses the route's contract, reads the trace to learn which reading the route decided on, runs the screens, queues actions for signature only when they pass, and writes the outcome. It calls the modules you write and never assembles.
 - `evals.py`, `evals/cases/`: six gate cases with scripted drafts and expectations, and the runner that records, grades and promotes.

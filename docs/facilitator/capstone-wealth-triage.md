@@ -25,7 +25,7 @@ CWA_C3_IMPL=skeleton uv run pytest -q 2>&1 | tail -1     # fails: the stubs rais
 - Granting `place_trade` by mandate alone. The policy's `max_risk` is part of the grant; case 05's client is self-directed and still gets no trading tool.
 - Reading the ledger too late in the day. The morning batch is 08:30; the route ages `state.task` at an hour, and a request after 09:30 sees `stale_state` and a moot conflict. Say so when teams write their own cases.
 - Making the trade guard check the vendor's units. The guard holds to the ledger because the route did.
-- Lowering `min_relevance` until every question retrieves something. Show case 06's fraud paragraph under the cap and ask what a threshold is for.
+- Lowering `min_relevance` until every question retrieves something. At the given 1.5, case 06, a fees question, already sends two fraud paragraphs (scores 3.66 and 2.78) beside the fees article. Show them in the trace and ask what a threshold is for.
 - Expecting cache reuse of 100%. The articles and the query change every turn by design; the measure is the stable prefix, not the whole payload.
 
 ## After the day

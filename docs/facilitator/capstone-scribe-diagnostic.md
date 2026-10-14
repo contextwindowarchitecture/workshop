@@ -24,8 +24,8 @@ CWA_C1_IMPL=skeleton uv run pytest -q 2>&1 | tail -1     # fails: the stubs rais
 - Making the clinician's turns in the transcript `user`. The speech-to-text engine labelled them; nothing authenticated them. Only the typed request is the user's.
 - Scoping notes to the encounter. Prior notes are from other encounters by definition; the scope's task is the patient, and the routes table says why.
 - Letting the drafter's actions run. The orchestrator queues them for signature only after the screens pass, and never executes them; teams who "just call the tool" have left R-5.
-- Reading the telemetry too early. A reading older than 300 seconds is `stale_state`, the conflict goes moot, and the vitals guard has nothing to hold the draft to. The fixture's readings are two minutes before each request.
-- Raising `min_relevance` to make case 05 refuse and breaking case 04's citation. The threshold is a route decision with a cost on both sides; show the trace for each and let the team choose, then write the what-if note.
+- Reading the telemetry too early. A reading older than 300 seconds is `stale_state`, the conflict goes moot, and the vitals guard has nothing to hold the draft to. The fixture's readings are one or two minutes before each request.
+- Raising `min_relevance` when case 05 answers. The given 3.0 already refuses it (the best paragraph for gout, the first of metformin prescribing, scores 2.58 under `common.bm25`), so an answer means the team's `guidelines` producer is not passing that score through as `relevance`. And the threshold is per route: case 05 is on `consult`, while on `scribe` anything above 3.36 drops case 04's one citation. For the reviewed policy change, show the trace for each side and let the team choose, then write the what-if note.
 
 ## After the day
 
